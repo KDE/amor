@@ -1,76 +1,371 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN" "dtd/kdex.dtd" [
   <!ENTITY kappname "&amor;">
-  <!ENTITY % English "INCLUDE">
   <!ENTITY % addindex "IGNORE">
-  
-  
+  <!ENTITY % English "INCLUDE">
 ]>
 
 <book lang="&language;">
-
 <bookinfo>
 <title>The &amor; Handbook</title>
 
 <authorgroup>
 <author>
-<firstname></firstname>
-<othername></othername>
-<surname></surname>
+<firstname>Karl</firstname>
+<surname>Garrison</surname>
 <affiliation>
-<address><email></email></address>
+<address><email>karl@indy.rr.com</email></address>
 </affiliation>
 </author>
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 
+<copyright>
+<year>2001</year>
+<holder>Karl Garrison</holder>
+</copyright>
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<!-- Date and version information of the documentation
-Don't forget to include this last date and this last revision number, we
-need them for translation coordination !
-Please respect the format of the date (DD/MM/YYYY) and of the version
-(Major.minor.lesser), it could be used by automation scripts -->
-
-<date>2001-01-20</date>
-<releaseinfo>0.00.00</releaseinfo>
-
-<!-- Abstract about this handbook -->
+<date>2001-07-20</date>
+<releaseinfo>2.20.00</releaseinfo>
 
 <abstract>
 <para>
-&amor; is part of the kdetoys package.
+&amor; is a small animation which sits on top of your active window.
 </para>
 </abstract>
 
-
 <keywordset>
 <keyword>KDE</keyword>
-<keyword>Kapp</keyword>
+<keyword>kdetoys</keyword>
+<keyword>amor</keyword>
+<keyword>helper</keyword>
+<keyword>assistant</keyword>
 </keywordset>
 
 </bookinfo>
 
 <chapter id="introduction">
 <title>Introduction</title>
-<para>Sorry, but the documentation for &amor; was not finished when &kde; was installed on this computer.</para> 
-<para>If you need help, please check <ulink url="http://www.kde.org">The KDE Website</ulink> for updates, or by submitting your question to <ulink url="mailto:kde-user@kde.org">The &kde; User Mailing list</ulink>.</para>
-<para><emphasis>The &kde; Team</emphasis></para>
+
+<sect1 id="whats-amor">
+<title>What's &amor;?</title>
+<para>
+&amor; is an acronym which stands for Amusing Misuse of Resources.  It is
+actually an animation which sits on top of your active window.  In its default
+configuration, &amor; takes the form of a yellow spot which performs many
+tricks.  &amor; also has many different themes which change the appearance
+and behavior of the animation.
+</para>
+
+<note><para>Since &amor; works with the &kde; window manager &kwin;, the
+application will only work from within &kde;.  It is possible that &amor;
+would work from within another &kde;-compliant window manager, but none are
+known to work at the time of this writing.</para></note>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title>Configuration</title>
+<sect1 id="configuring-amor">
+<title>Configuring &amor;</title>
+<para>To configure &amor;, click on the animation using your &RMB;.  A menu
+will appear containing three items:
+<guimenuitem><accel>O</accel>ptions...</guimenuitem>,
+<guimenuitem><accel>A</accel>bout...</guimenuitem>, and
+<guimenuitem><accel>Q</accel>uit</guimenuitem>.  Choose
+<guimenuitem><accel>O</accel>ptions...</guimenuitem> to configure &amor;
+</para>
+</sect1>
+
+<sect1 id="general-options">
+<title>General Options</title>
+<para>The following settings for &amor; can be changed from the Options
+dialog:</para>
+<variablelist>
+<varlistentry><term><guilabel>Theme</guilabel></term>
+<listitem><para>This determines the appearance and behavior of &amor;.
+Themes are described in the next section.</para></listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Offset</guilabel></term>
+<listitem><para>This slider controls where the animation appears in
+relation to the top of the active window.  The default middle setting will
+place the animation right above the window titlebar, whereas setting the
+slider all the way to the top or bottom will result in the animation
+appearing a fair distance above or below the titlebar, respectively.</para>
+<tip><para>Setting this slider to a lower setting will allow the
+animation to be visible even when the active window is maximized.</para>
+</tip></listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Always on top</guilabel></term>
+<listitem><para>Checking this option will cause the animation to always
+appear in front of any existing windows on the screen, including the
+panel.</para></listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Show random tips</guilabel></term>
+<listitem><para>If checked, the animation will display various
+&kde;-related tips at random intervals.</para></listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Allow application tips</guilabel></term>
+<listitem><para>Any &kde; application can be designed to display helpful
+tips via &amor;.  If this option is checked, and an appropriate
+application is the active window, the animation will display tips for that
+application.</para>
+<note><para>At the time of this writing, no &kde; applications make use of
+this functionality.</para></note></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="amor-themes">
+<title>&amor; Themes</title>
+<para>&amor; comes with many built-in themes, which change the appearance and
+behavior of the animation.  In addition, it is possible to create new
+&amor; themes.  The built-in themes for &amor; are described in the table
+below</para>
+
+<table>
+<title>Available &amor; Themes</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry>Theme</entry>
+<entry>Description</entry>
+</row>
+</thead>
+<tbody>
+
+<row>
+<entry><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="spot.png"/>
+</imageobject>
+<textobject><para>Multi-talented Spot</para></textobject>
+<caption><para>Multi-talented Spot</para></caption>
+</mediaobject></entry>
+<entry><para>This is the default theme for &amor;, and also the one with
+the most <quote>tricks</quote>.  This theme was created by Martin R.
+Jones.  The jet-pack, beaming, and fire animations were contributed by
+Mark Grant.</para></entry>
+</row>
+
+<row>
+<entry><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="ghost.png"></imagedata>
+</imageobject>
+<textobject><para>Spooky Ghost</para></textobject>
+<caption><para>Spooky Ghost</para></caption>
+</mediaobject></entry>
+<entry><para>A ghost theme based-on the &kde;
+<application>ghostview</application> icon.  Spooky Ghost was created by
+Martin R. Jones.</para></entry>
+</row>
+
+<row>
+<entry><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="eyes.png"></imagedata>
+</imageobject>
+<textobject><para>Crazy Eyes</para></textobject>
+<caption><para>Crazy Eyes</para></caption>
+</mediaobject></entry>
+<entry><para>This theme consists of a moving pair of eyes, and was created
+by Jean-Claude Dumas.</para></entry>
+</row>
+
+<row>
+<entry><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="bonhomme.png"></imagedata>
+</imageobject>
+<textobject><para>Bonhomme</para></textobject>
+<caption><para>Bonhomme</para></caption>
+</mediaobject></entry>
+<entry><para>A stick-figure animation, created by Jean-Claude
+Dumas.</para></entry>
+</row>
+
+<row>
+<entry><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="neko.png"></imagedata>
+</imageobject>
+<textobject><para>Neko</para></textobject>
+<caption><para>Neko</para></caption>
+</mediaobject></entry>
+<entry><para>Neko is a cat theme by Chris Spiegel.  The graphics are
+originally from <application>Oneko</application>, which was written by
+Masayuki Koba.</para>
+<note><para><application>Oneko</application> is a small application which
+features a cat chasing the mouse cursor.  The application appears to no
+longer be maintained, but the
+<ulink url="ftp://sunsite.unc.edu/pub/Linux/X11/demos/oneko-1.1b.tar.gz">
+<citetitle>source code</citetitle></ulink> from the last version is still
+available.</para></note></entry>
+</row>
+
+<row>
+<entry><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="pingus.png"></imagedata>
+</imageobject>
+<textobject><para>Tux</para></textobject>
+<caption><para>Tux</para></caption>
+</mediaobject></entry>
+<entry><para>This theme features Tux, the &Linux; mascot.  The actual
+graphics come from a <application>Lemmings</application>-style game
+called <ulink url="http://pingus.seul.org/">
+<application>Pingus</application></ulink>.  The Tux theme was created by
+Frank Pieczynski.</para></entry>
+</row>
+
+<row>
+<entry><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="worm.png"></imagedata>
+</imageobject>
+<textobject><para>Little Worm</para></textobject>
+<caption><para>Little Worm</para></caption>
+</mediaobject></entry>
+<entry><para>A small inchworm theme.  Created by Bartosz Trudnowski for
+his wife.</para></entry>
+</row>
+
+<row>
+<entry><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="billy.png"></imagedata>
+</imageobject>
+<textobject><para>Little Billy</para></textobject>
+<caption><para>Little Billy</para></caption>
+</mediaobject></entry>
+<entry><para>A static image taken from the game
+<ulink url="http://www.xbill.org/"><application>XBill</application>
+</ulink>.</para></entry>
+</row>
+
+<row>
+<entry><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="bsd.png"></imagedata>
+</imageobject>
+<textobject><para>BSD Mascot</para></textobject>
+<caption><para>BSD Mascot</para></caption>
+</mediaobject></entry>
+<entry><para>A static image of Chuck, the FreeBSD daemon.</para></entry>
+</row>
+
+<row>
+<entry><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="tux.png"></imagedata>
+</imageobject>
+<textobject><para>Unanimated Tux</para></textobject>
+<caption><para>Unanimated Tux</para></caption>
+</mediaobject></entry>
+<entry><para>An unanimated version of the Tux theme.</para></entry>
+</row>
+
+<row>
+<entry><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="tao.png"></imagedata>
+</imageobject>
+<textobject><para>Tao</para></textobject>
+<caption><para>Tao</para></caption>
+</mediaobject></entry>
+<entry><para>The Tao theme is an animated Yin Yang symbol.  This theme was
+created by Daniel Pfeiffer <email>occitan@esperanto.org</email>, and was
+inspired by his Tai Chi practice.</para></entry>
+</row>
+
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title>Credits and License</title>
+
+<para>&amor;</para>
+
+<para>Program copyright 1999-2001 Martin R. Jones <email>mjones@kde.org
+</email></para>
+
+<para>Documentation copyright 2001 Karl Garrison <email>karl@indy.rr.com
+</email></para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 
 &underFDL;
 &underGPL;
-
 </chapter>
 
-&documentation.index; 
+<appendix id="installation">
+<title>Installation</title>
+<sect1 id="getting-amor">
+<title>How to obtain &amor;</title>
+<para>
+&amor; is part of the <ulink url="http://www.kde.org/">&kde;</ulink>
+Project.  &amor; can be found in the kdetoys package on the
+<ulink url="ftp://ftp.kde.org/pub/kde/">main &FTP; site</ulink> of the
+&kde; project, or one of its many
+<ulink url="http://www.kde.org/mirrors.html">mirrors</ulink>.</para>
+</sect1>
+
+<sect1 id="amor-requirements">
+<title>Requirements</title>
+
+<para>You will need to have the kdelibs package installed in order to
+successfully compile the kdetoys package that contains &amor;.  The
+kdelibs package may be found at the same location as the kdetoys
+package.</para>
+</sect1>
+
+<sect1 id="compilation">
+<title>Compilation and Installation</title>
+
+<para>In order to compile and install &amor; on your system, type the
+following in the top-level kdetoys directory in the kdetoys
+distribution:</para>
+
+<screen width="40">
+<prompt>%</prompt> <userinput><command>./configure</command></userinput>
+<prompt>%</prompt> <userinput><command>make</command></userinput>
+</screen>
+
+<para>At this point, you can either install the entire kdetoys package,
+or just install &amor;.  To install only &amor;, first change to the amor
+directory.  To install the entire package, remain in the kdetoys
+directory.</para>
+
+<para>In either case, you will likely need to become <systemitem class="username">root</systemitem> before
+installing.  Once you have become <systemitem class="username">root</systemitem>, type the following:</para>
+
+<screen width="40">
+<prompt>#</prompt> <userinput><command>make</command> <option>install</option></userinput>
+</screen>
+
+<para>Compiling and installing the required kdelibs package follows the
+same process.  If you encounter any problems compiling or installing
+&amor;, help may be obtained from the
+<ulink url="http://www.kde.org/mailinglists.html">&kde; mailing lists
+</ulink> or from the Usenet newsgroup: comp.windows.x.kde.</para>
+</sect1>
+</appendix>
+
 </book>
 <!--
 Local Variables:
 mode: sgml
-sgml-minimize-attributes: nil
-sgml-general-insert-case: lower
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
 End:
 -->
-
