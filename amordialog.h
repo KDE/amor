@@ -10,7 +10,7 @@
 
 #include <qdialog.h>
 #include <qlistbox.h>
-#include <qlist.h>
+#include <qptrlist.h>
 #include <qmultilineedit.h>
 #include "amorconfig.h"
 #include <kdialogbase.h>

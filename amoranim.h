@@ -14,7 +14,7 @@
 
 #include <stdlib.h>
 #include <unistd.h>
-#include <qarray.h>
+#include <qmemarray.h>
 #include <qdict.h>
 #include <qstringlist.h>
 #include <kconfigbase.h>
@@ -57,9 +57,9 @@ protected:
 protected:
     unsigned int   mCurrent;        // current frame in sequence
     QStringList    mSequence;       // sequence of images to display
-    QArray<int>    mDelay;          // delay between frames
-    QArray<QPoint> mHotspot;        // the hotspot in a frame
-    QArray<int>    mMovement;       // the distance to move between frames
+    QMemArray<int>    mDelay;          // delay between frames
+    QMemArray<QPoint> mHotspot;        // the hotspot in a frame
+    QMemArray<int>    mMovement;       // the distance to move between frames
     int            mTotalMovement;  // the total distance this animation moves
     QSize          mMaximumSize;    // the maximum size of any frame
 };
