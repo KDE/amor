@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+<!-- <!ENTITY kdeoptions SYSTEM "kdeoptions.docbook"> -->
+<!-- <!ENTITY qtoptions SYSTEM "qtoptions.docbook"> -->
+<!ENTITY % English "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<date>March 7, 2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle><command>amor</command></refentrytitle>
+<manvolnum>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname><command>amor</command></refname>
+<refpurpose>A &kde; creature for your desktop</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis>
+<command>amor</command>
+<group><option>KDE Generic Options</option></group>
+<group><option>Qt Generic Options</option></group>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title>Description</title>
+
+<para><acronym>AMOR</acronym> stands for <quote>Amusing Misuse Of
+Resources</quote>.  It provides several different characters who
+prance around your X screen doing tricks and giving you tips.</para>
+
+<para>&amor; is part of the &kde; toys package.</para>
+
+</refsect1>
+
+<refsect1>
+<title>Options</title>
+
+<para>&amor; is configured graphically, and does not have any
+commandline options other than the standard &kde; and &Qt;
+options.</para>
+
+</refsect1>
+
+<refsect1>
+<title>See Also</title>
+
+<para>Within &kde; you can enter
+<userinput>help:/amor</userinput> in &konqueror; to see the
+comprehensive user manual.</para>
+
+</refsect1>
+
+<refsect1>
+<title>Bugs</title>
+
+<para>&amor; currently only works with the &kwin; window manager.</para>
+</refsect1>
+
+<refsect1>
+<title>Authors</title>
+<para>&amor; was written by <personname><firstname>Martin</firstname><othername>R.</othername><surname>Jones</surname></personname> <email>mjones@kde.org</email>. 
+ This manual page was prepared by <personname><firstname>Ben</firstname><surname>Burton</surname></personname> <email>bab@debian.org</email> for the Debian GNU/Linux system (but may be used by others).</para>
+</refsect1>
+
+</refentry>
