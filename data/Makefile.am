@@ -8,7 +8,7 @@ amordir = $(kde_datadir)/amor
 
 install-data-local:
 	-rm -f $(DESTDIR)$(amordir)/tips
-	$(LN_S) $(amordir)/tips-en $(DESTDIR)$(datadir)/tips
+	$(LN_S) $(amordir)/tips-en $(DESTDIR)$(amordir)/tips
 
 uninstall-local:
 	-rm -f $(DESTDIR)$(amordir)/tips
