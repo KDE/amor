@@ -11,7 +11,6 @@
 #include <qpainter.h>
 #include <kapplication.h>
 #include <ksimpleconfig.h>
-
 #include "amordialog.h"
 #include "amordialog.moc"
 #include "version.h"
@@ -39,7 +38,7 @@ AmorDialog::AmorDialog()
 
     mThemeListBox = new QListBox(themeBox);
     connect(mThemeListBox,SIGNAL(highlighted(int)),SLOT(slotHighlighted(int)));
-    mThemeListBox->setMinimumSize( fontMetrics().maxWidth()*20,  
+    mThemeListBox->setMinimumSize( fontMetrics().maxWidth()*20,
 				   fontMetrics().lineSpacing()*6 );
 
     mAboutEdit = new QMultiLineEdit(themeBox);
@@ -204,6 +203,7 @@ void AmorDialog::slotCancel()
 {
     // restore offset
     KConfig *config = kapp->config();
+    KConfigGroupSaver cs(config, "General");
     emit offsetChanged(config->readNumEntry("Offset"));
     reject();
 }
