@@ -9,7 +9,7 @@
 #include <unistd.h>
 #include <time.h>
 
-#include <qpopupmenu.h>
+#include <kpopupmenu.h>
 #include <qtimer.h>
 
 #include <klocale.h>
@@ -23,6 +23,8 @@
 #include "amor.moc"
 #include "amorpm.h"
 #include "amorbubble.h"
+#include "amorwidget.h"
+#include "amordialog.h"
 #include "version.h"
 #include <kdebug.h>
 #include <X11/Xlib.h>
@@ -407,7 +409,8 @@ void Amor::slotMouseClicked(const QPoint &pos)
 
     if (!mMenu)
     {
-        mMenu = new QPopupMenu();
+        mMenu = new KPopupMenu();
+	mMenu->insertTitle("Amor"); // I really don't want this i18n'ed
         mMenu->insertItem(i18n("&Options..."), this, SLOT(slotConfigure()));
         mMenu->insertItem(i18n("&About..."), this, SLOT(slotAbout()));
         mMenu->insertSeparator();

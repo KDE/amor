@@ -15,15 +15,17 @@
 #include <qwidget.h>
 
 #include "amoranim.h"
-#include "amorwidget.h"
-#include "amorbubble.h"
 #include "amortips.h"
 #include "amorconfig.h"
-#include "amordialog.h"
 #include "AmorIface.h"
+
+class AmorDialog;
+class AmorBubble;
+class AmorWidget;
 
 class QTimer;
 class KWinModule;
+class KPopupMenu;
 
 //---------------------------------------------------------------------------
 //
@@ -86,7 +88,7 @@ private:
     QTimer           *mStackTimer; // Restacking timer
     QTimer           *mBubbleTimer;// Bubble tip timer
     AmorDialog       *mAmorDialog; // Setup dialog
-    QPopupMenu       *mMenu;       // Our menu
+    KPopupMenu       *mMenu;       // Our menu
     time_t           mActiveTime;  // The time an active event occurred
     QPoint           mCursPos;     // The last recorded position of the pointer
     QString          mTipText;     // Text to display in a bubble when possible
