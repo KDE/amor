@@ -86,7 +86,7 @@ const char *AmorTips::tip()
 {
     if (mTips.count())
     {
-        return mTips.at(random()%mTips.count());
+        return mTips.at(kapp->random()%mTips.count());
     }
 
     return "No tip";

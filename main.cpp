@@ -6,16 +6,24 @@
 //
 #include <stdlib.h>
 #include <time.h>
+
 #include <kconfig.h>
-#include "amor.h"
 #include <kapp.h>
 #include <kwinmodule.h>
+#include <klocale.h>
+#include <kcmdlineargs.h>
+
+#include "version.h"
+#include "amor.h"
+
+
+static const char *description = I18N_NOOP("KDE creature for your desktop.");
 
 int main(int argc, char *argv[])
 {
-    KApplication app(argc, argv, "amor");
+    KCmdLineArgs::init(argc, argv, "amor", description, AMOR_VERSION );
 
-    srandom(time(0));
+    KApplication app;
 
     // session management
     AmorSessionWidget *sessionWidget = new AmorSessionWidget;

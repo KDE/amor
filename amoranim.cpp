@@ -204,7 +204,7 @@ AmorAnim *AmorThemeManager::random(const char *group)
 
     if (animGroup)
     {
-        return animGroup->at(::random()%animGroup->count());
+        return animGroup->at(kapp->random()%animGroup->count());
     }
 
     return 0;

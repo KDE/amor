@@ -235,7 +235,7 @@ void Amor::selectAnimation(State state)
 //                mTargetRect = KWM::geometry(mTargetWin, true);
                 if (mCurrAnim->frame())
                 {
-                    mPosition = (random() %
+                    mPosition = (kapp->random() %
                         (mTargetRect.width() - mCurrAnim->frame()->width())) +
                          mCurrAnim->hotspot().x();
                 }
@@ -457,7 +457,7 @@ void Amor::slotTimeout()
     // a helpful tip.
     if (mCurrAnim == mBaseAnim && mCurrAnim->frameNum() == 0)
     {
-        if (random()%TIP_FREQUENCY == 1 && mConfig.mTips && !mBubble)
+        if (kapp->random()%TIP_FREQUENCY == 1 && mConfig.mTips && !mBubble)
         {
             showBubble(mTips.tip());
         }
