@@ -2,6 +2,7 @@
 [Config]
 PixmapPath=ghost
 Description=Spooky Ghost
+Description[af]=onheilspellende spook
 Description[da]=Farligt spøgelse
 Description[de]=Kleines Gespenst
 Description[es]=El fantasma Spooky
@@ -15,6 +16,7 @@ Description[ru]=Призрак
 Description[sl]=Strašljivi duh
 Description[sv]=Skrämmande spöke
 About=By Martin R. Jones\nBased on an icon by the KDE artist team.
+About[af]=deur martin r. jones\nbased op 'n icop deur die kde kunstenaar span.
 About[az]=Martin R. Jones tərəfindən\nBased on an icon by the KDE artist team.
 About[da]=Ved Martin R. Jones\nBaseret på en ikon af KDE's kunstnerhold.
 About[de]=Von Martin R. Jones\nNach einem Symbol der KDE-Artists

@@ -6,9 +6,11 @@
 [Config]
 PixmapPath=b
 Description=Bonhomme
+Description[af]=bonhomme
 Description[nl]=Sneeuwpop
 Description[ru]=Человечек
 About=By Jean-Claude Dumas
+About[af]=deur jean-claude dumas
 About[az]=Jean-Claude Dumas tərəfindən
 About[da]=Af Jean-Claude Dumas
 About[de]=Von Jean-Claude Dumas

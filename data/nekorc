@@ -5,9 +5,11 @@
 [Config]
 PixmapPath=neko
 Description=Neko
+Description[af]=neko
 Description[fr]=Néko
 Description[ru]=Мур-мяу
 About=Artwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegel
+About[af]=kunswerk van oneko deur masayuki koba\namor'd deur chris spiegel
 About[az]=Masayuki Kobanın sənət abidəsi\nAMOR'd by Chris Spiegel
 About[da]=Kunstværk fra oneko ved Masayuki Koba\nAMOR'd ved Chris Spiegel
 About[de]=Zeichnung nach oneko von Masayuki Koba\nIn AMOR umgesetzt von Chris Spiegel

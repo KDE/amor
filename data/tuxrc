@@ -3,6 +3,7 @@
 PixmapPath=static
 Static=true
 Description=Unanimated Tux
+Description[af]=ongeanimeerde tux
 Description[bg]=Неанимиран Tux
 Description[da]=Ikke animeret Tux
 Description[de]=Tux ohne Animationen
@@ -17,6 +18,7 @@ Description[ru]=Пингвин-тормоз
 Description[sl]=Neanimiran Tux
 Description[sv]=Tux utan animering
 About=Static window sitter
+About[af]=statiese venster sitter
 About[az]=Statik pəncərə mürəbbiyəsi
 About[da]=Statisk vinduespasser
 About[de]=Statischer Fenstersitzer
