@@ -19,6 +19,7 @@ Description[ru]=Пингвин-тормоз
 Description[sl]=Neanimiran Tux
 Description[sv]=Tux utan animering
 Description[xxx]=xx
+Description[zh_TW.Big5]=靜態企鵝
 About=Static window sitter
 About[af]=statiese venster sitter
 About[ara]=قاعدة النوافذ الساكنة
@@ -36,6 +37,7 @@ About[ru]=Сидит и ничего не делает
 About[sl]=Statično okno
 About[sv]=Statisk fönstervakt
 About[xxx]=xx
+About[zh_TW.Big5]=靜態視窗作者
 Icon=tux.png
 
 [Base]

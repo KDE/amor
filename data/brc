@@ -27,6 +27,7 @@ About[ru]=Автор - Jean-Claude Dumas
 About[sl]=Od Jean-Claudea Dumasa
 About[sv]=Av Jean-Claude Dumas
 About[xxx]=xx
+About[zh_TW.Big5]=由 Jean-Claude Dumas 所寫作開發
 Icon=b-f.xpm
 Base=Base
 Sequences=WalkRight,WalkLeft,Pof,Drib,Col,ColRight,ColLeft,Hop,Sa,Hi
