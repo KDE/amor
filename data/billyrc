@@ -32,7 +32,6 @@ Description[th]=บิลลี่ตัวจ้อย
 Description[tr]=Küçük Billy
 Description[uk]=Маленький Біллі
 Description[ven]=Billy Mutuku
-Description[xx]=xx
 About=Static window sitter\nGraphic from http://www.xbill.org/
 About[af]=Statiese venster sitter\nGraphic van http://www.xbill.org/
 About[ar]=قاعدة النوافذ الساكنة \nالرسوم من http://www.xbill.org
@@ -63,7 +62,6 @@ About[tr]=Statik pencere bakıcısı\nGrafikler http://www.xbill.org/ 'tan
 About[uk]=Натурщик статичного вікна\nГрафіка з http://www.xbill.org/
 About[ven]=Tshidzuli tsha window isa tshimbili\nGirafu ubva http://www.xbill.org/
 About[xh]=Isibambo sewindow esingashukumi\nUmzobo http://www.xbill.org/
-About[xx]=xx
 Icon=billy.png
 
 [Base]
