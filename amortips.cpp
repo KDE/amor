@@ -30,11 +30,14 @@
 #include <kstandarddirs.h>
 #include <klocale.h>
 #include <qfile.h>
+#include <qregexp.h>
+#include <kdebug.h>
 
 //---------------------------------------------------------------------------
 //
 AmorTips::AmorTips()
 {
+    KGlobal::locale()->insertCatalogue("ktip"); // For ktip tip translations
 }
 
 //---------------------------------------------------------------------------
@@ -95,33 +98,26 @@ bool AmorTips::readKTips()
     QFile f(fname);
     if (f.open(IO_ReadOnly))
     {
-	QTextStream ts(&f);
+	// Reading of tips must be exactly as in KTipDatabase::loadTips for translation
+	QString content = f.readAll();
+	const QRegExp rx("\\n+");
 
-	QString line, tag, tip;
-	bool inTip = false;
-	while (!ts.eof())
+	int pos = -1;
+	while ((pos = content.find("<html>", pos + 1, false)) != -1)
 	{
-	    line = ts.readLine();
-	    tag = line.stripWhiteSpace().lower();
-
-	    if (tag == "<html>")
+	    QString tip = content
+		.mid(pos + 6, content.find("</html>", pos, false) - pos - 6)
+		.replace(rx, "\n");
+	    if (!tip.endsWith("\n"))
+		tip += "\n";
+	    if (tip.startsWith("\n"))
+		tip = tip.mid(1);
+	    if (tip.isEmpty())
 	    {
-		inTip = true;
-		tip = QString::null;
+		kdDebug() << "Empty tip found! Skipping! " << pos << endl;
 		continue;
 	    }
-
-	    if (inTip)
-	    {
-		if (tag == "</html>")
-		{
-		    mTips.append(tip);
-		    inTip = false;
-		}
-		else
-		    tip.append(line).append("\n");
-	    }
-
+	    mTips.append(tip);
 	}
 
 	f.close();
