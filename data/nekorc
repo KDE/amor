@@ -5,13 +5,16 @@
 [Config]
 PixmapPath=neko
 Description=Neko
+Description[fr]=Néko
 About=Artwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegel
 About[az]=Masayuki Kobanın sənət abidəsi\nAMOR'd by Chris Spiegel
 About[da]=Kunstværk fra oneko ved Masayuki Koba\nAMOR'd ved Chris Spiegel
 About[de]=Zeichnung nach oneko von Masayuki Koba\nIn AMOR umgesetzt von Chris Spiegel
 About[es]=Diseño de oneko por Masayuki Koba\nAMOR'd por Chris Spiegel
-About[he]=הבוק יקויאסאמ תאמ oneko ךותמ תונמאה תודובע\nלגיפש סירכ ידי לע AMOR-ל םאתוה
+About[fr]=Travail artistique de Oneko par Masayuki Koba\nAdapté pour AMOR par Chris Spiegel.
+About[he]=עבודות האמנות מתוך oneko מאת מאסאיוקי קובה\nהותאם ל-AMOR על ידי כריס שפיגל
 About[hu]=Masayuki Koba onekója alapján\nAz AMOR-verziót Chris Spiegel készítette
+About[nl]=Kunst van oneko door Masayuki Koba\nge-AMOR'd door Chris Spiegel
 About[sl]=Umetniško delo iz oneko izdelal Masayuki Koba\niz AMOR pa Chris Spiegel
 About[sv]=Grafik från oneko av Masayuki Koba\nTill AMOR av Chris Spiegel
 Icon=sit.xpm
