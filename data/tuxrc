@@ -29,6 +29,7 @@ Description[sv]=Tux utan animering
 Description[th]=ตุ๊กซ์ที่เคลื่อนไหวไม่ได้
 Description[tr]=Penguen
 Description[uk]=Неоживлений Tux
+Description[ven]=Tux i songo itwaho zwazwipuka
 Description[xh]=Okungaphiliswanga Tux
 Description[xx]=xx
 About=Static window sitter
@@ -56,6 +57,7 @@ About[sv]=Statisk fönstervakt
 About[th]=นั่งเล่นบนหน้าต่าง
 About[tr]=Statik pencere bakıcı
 About[uk]=Статична прикраса для вікна
+About[ven]=Tshidzuli tsha window yo imaho
 About[xx]=xx
 Icon=tux.png
 
