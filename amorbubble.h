@@ -12,7 +12,7 @@
 #include <config.h>
 #endif
 
-#include <kapp.h>
+#include <kapplication.h>
 #include <qwidget.h>
 #include <qbitmap.h>
 
