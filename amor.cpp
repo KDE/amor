@@ -277,9 +277,12 @@ void Amor::selectAnimation(State state)
 		{
 		    if (mCurrAnim->frame())
 		    {
-			mPosition = (kapp->random() %
-			    (mTargetRect.width() - mCurrAnim->frame()->width())) +
-			     mCurrAnim->hotspot().x();
+		        if (mTargetRect.width() == mCurrAnim->frame()->width())
+			    mPosition = mCurrAnim->hotspot().x();
+			else
+			    mPosition = ( kapp->random() %
+					  (mTargetRect.width() - mCurrAnim->frame()->width()) )
+					 + mCurrAnim->hotspot().x();
 		    }
 		    else
 		    {
