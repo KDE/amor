@@ -3,7 +3,37 @@
 PixmapPath=static
 Static=true
 Description=BSD Mascot
+Description[da]=BSD Maskot
+Description[de]=BSD-Maskottchen
+Description[es]=Mascota de BSD
+Description[he]=BSD עימק
+Description[hu]=BSD kabalafigura
+Description[is]=BSD dýrið
+Description[ja]=BSD マスコット
+Description[lv]=BSD Talismans
+Description[nl]=BSD Mascotte
+Description[pt_BR]=Mascote do BSD
+Description[pt]=Mascote do BSD
+Description[ru]=BSD-шник
+Description[sk]=Maskot BSD
+Description[sl]=Maskota BSD
+Description[sv]=BSD-maskot
 About=Static window sitter
+About[da]=Statisk vinduespasser
+About[de]=Statischer Fenstersitzer
+About[es]=Niñera de ventana estática
+About[he]=יטטס ןולח רמוש
+About[hu]=Statikus ablakdíszítés
+About[is]=Pössun á fasta glugga
+About[ja]=ウィンドウに腰かけるアクセサリ
+About[lv]=Statisks loga modelis
+About[nl]=Statische venster oppasser
+About[pt_BR]=Boneco estático em cima da janela
+About[pt]=Boneco estático em cima da janela
+About[ru]=Сидит и ничего не делает
+About[sk]=Statická ozdoba okna
+About[sl]=Statično okno
+About[sv]=Statisk fönstervakt
 Icon=bsd.png
 
 [Base]

@@ -2,7 +2,21 @@
 [Config]
 PixmapPath=tao
 Description=Tao
+Description[he]=ואט
+Description[ru]=Дао
 About=By Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang symbol inspired by my Tai Chi practice.
+About[da]=Af Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang symbol inspireret af mine Tai Chi øvelser.
+About[de]=Von Daniel Pfeiffer <occitan@esperanto.org>\nYin/Yang-Symbol inspiriert von meinen Tai-Chi-Übungen
+About[es]=Por Daniel Pfeiffer <occitan@esperanto.org>\nEl símbolo Yin Yang inspirado por mi práctica de Tai Chi.
+About[he]=<occitan@esperanto.org> רפפ לאינד תאמ\n.ילש י'צ יאטה ינומיאמ החקלנ גנאי-ןייה למסל הארשהה
+About[hu]=Készítette Daniel Pfeiffer <occitan@esperanto.org>\nA Yin Yang szimbólumot a Tai Chi tanulmányozása ihlette.
+About[is]=By Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang merkið kom til af áhuga mínum á Tai Chi.
+About[lv]=No Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang simbols inspirēts no manas Tai Chi prakses.
+About[nl]=Door Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang symbool geïnspireerd op mijn Tai Chi lessen.
+About[ru]=Автор - Daniel Pfeiffer <occitan@esperanto.org>\nСимвол инь-ян - результат вдохновения от моей практики тайцзи.
+About[sk]=Vytvoril Daniel Pfeiffer <occitan@esperanto.org>\nSymbol Yin Yang inšpirovaný mojou skúsenosťou s Tai Chi.
+About[sl]=Od Daniela Pfeifferja <occitan@esperanto.org>\nZa simbol jin-jang sem dobil navdih pri vadbi tai chija.
+About[sv]=Av Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang symbol inspirerad av att utöva Tai Chi.
 Icon=yy.xpm
 Base=Base
 Sequences=Left,Right,Turn
