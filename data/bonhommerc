@@ -6,6 +6,7 @@
 [Config]
 PixmapPath=pics/animated/bonhomme
 Description=Bonhomme
+Description[bg]=Тао
 Description[et]=Kriipsu-Juku
 Description[hi]=बॉनहॉम
 Description[lv]=KauluVīrs
