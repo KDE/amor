@@ -28,9 +28,7 @@
 // Constructor
 //
 AmorDialog::AmorDialog()
-    : KDialogBase(0, "amordlg", false, QString::null,
-		  KDialogBase::Ok | KDialogBase::Cancel,
-		  KDialogBase::Ok )
+    : KDialogBase(0, "amordlg", false, i18n("Options"), Ok|Cancel, Ok )
 {
     mConfig.read();
     QVBox *mainwidget = makeVBoxMainWidget();
@@ -42,47 +40,48 @@ AmorDialog::AmorDialog()
     themeBox->setSpacing(spacingHint());
 
     QLabel *label = new QLabel(i18n("Theme:"), themeBox);
-    label->setFixedHeight(label->sizeHint().height());
+    //label->setFixedHeight(label->sizeHint().height());
 
     mThemeListBox = new QListBox(themeBox);
     connect(mThemeListBox,SIGNAL(highlighted(int)),SLOT(slotHighlighted(int)));
-    mThemeListBox->setMinimumSize(200, 70);
+    mThemeListBox->setMinimumSize( fontMetrics().maxWidth()*20,  fontMetrics().lineSpacing()*6 );
 
     mAboutEdit = new QMultiLineEdit(themeBox);
     mAboutEdit->setReadOnly(true);
-    mAboutEdit->setMinimumHeight(60);
+    mAboutEdit->setMinimumHeight( fontMetrics().lineSpacing()*4 );
 
     themeBox->setStretchFactor(mThemeListBox, 4);
     themeBox->setStretchFactor(mAboutEdit, 1);
 
     // Animation offset
     QVBox *offsetBox = new QVBox(hb);
+    offsetBox->setSpacing(spacingHint());
     label = new QLabel(i18n("Offset:"), offsetBox);
 
-    label->setFixedSize(label->sizeHint());
+    //label->setFixedSize(label->sizeHint());
 
     QSlider *slider = new QSlider(-40, 40, 5, mConfig.mOffset,
                                     QSlider::Vertical, offsetBox);
     connect(slider, SIGNAL(valueChanged(int)), SLOT(slotOffset(int)));
-    slider->setFixedWidth(slider->sizeHint().width());
+    //slider->setFixedWidth(slider->sizeHint().width());
 
     // Always on top
     QCheckBox *checkBox = new QCheckBox(i18n("Always on top"), mainwidget);
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotOnTop(bool)));
-    checkBox->setFixedHeight(checkBox->sizeHint().height());
+    //checkBox->setFixedHeight(checkBox->sizeHint().height());
     checkBox->setChecked(mConfig.mOnTop);
 
     checkBox = new QCheckBox(i18n("Show random tips"), mainwidget);
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotRandomTips(bool)));
-    checkBox->setFixedHeight(checkBox->sizeHint().height());
+    //checkBox->setFixedHeight(checkBox->sizeHint().height());
     checkBox->setChecked(mConfig.mTips);
 
-    connect(this, SIGNAL(okClicked()), SLOT(slotOk()));
-    connect(this, SIGNAL(cancelClicked()), SLOT(slotCancel()));
+    //connect(this, SIGNAL(okClicked()), SLOT(slotOk()));
+    //connect(this, SIGNAL(cancelClicked()), SLOT(slotCancel()));
 
     readThemes();
 
-    adjustSize();
+    //adjustSize();
 }
 
 //---------------------------------------------------------------------------
