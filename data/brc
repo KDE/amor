@@ -6,6 +6,7 @@
 [Config]
 PixmapPath=b
 Description=Bonhomme
+Description[cs]=Mužíček
 Description[ru]=Добрячок
 Description[sr]=Kosturko
 Description[th]=มนุษย์ลายเส้น
@@ -16,6 +17,7 @@ About[af]=Deur Jean-Claude Dumas
 About[ar]=من جان كلود دوماس
 About[az]=Jean-Claude Dumas tərəfindən
 About[bs]=Autor: Jean-Claude Dumas
+About[cs]=Autor Jean-Claude Dumas
 About[da]=Af Jean-Claude Dumas
 About[de]=Von Jean-Claude Dumas
 About[el]=Από τον Jean-Claude Dumas
