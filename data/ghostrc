@@ -3,6 +3,7 @@
 PixmapPath=ghost
 Description=Spooky Ghost
 Description[af]=onheilspellende spook
+Description[bs]=Strašni duh
 Description[de]=Kleines Gespenst
 Description[el]=Στοιχειωμένο Φάντασμα
 Description[eo]=Hantema spirito
@@ -26,6 +27,7 @@ About=By Martin R. Jones\nBased on an icon by the KDE artist team.
 About[af]=deur martin r. jones\nBased op 'n ikoon deur die kde kunstenaar span.
 About[ar]=من مارتن ر. جونز\nمبنية على أيقونة من فريق رسامي KDE
 About[az]=Martin R. Jones tərəfindən\nBased on an icon by the KDE artist team.
+About[bs]=Autor Martin R. Jones\nBazirano na ikoni koju je napravio KDE tim umjetnika.
 About[de]=Von Martin R. Jones\nNach einem Symbol der KDE-Artists
 About[el]=Από τον Martin R. Jones\nΒασισμένο σε ένα εικονίδιο της καλλιτεχνικής ομάδας του KDE.
 About[eo]=De Martin R. Jones\nbazita sur piktogramo de la KDE-artistaro.
