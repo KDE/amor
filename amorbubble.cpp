@@ -11,8 +11,8 @@
 #include <qpainter.h>
 #include <ktextbrowser.h>
 #include <qtooltip.h>
-#include <kapp.h>
-#include <kstddirs.h>
+#include <kapplication.h>
+#include <kstandarddirs.h>
 #include <kdebug.h>
 #include <klocale.h>
 #include <X11/Xlib.h>

@@ -5,7 +5,7 @@
 // Copyright (c) 1999 Martin R. Jones <mjones@kde.org>
 //
 
-#include <kapp.h>
+#include <kapplication.h>
 #include "amorconfig.h"
 #include <kconfig.h>
 

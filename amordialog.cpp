@@ -12,7 +12,7 @@
 #include <qslider.h>
 #include <qdir.h>
 #include <qpainter.h>
-#include <kapp.h>
+#include <kapplication.h>
 #include <ksimpleconfig.h>
 
 #include "amordialog.h"
@@ -21,7 +21,7 @@
 #include <klocale.h>
 #include <qvbox.h>
 #include <kglobal.h>
-#include <kstddirs.h>
+#include <kstandarddirs.h>
 
 //---------------------------------------------------------------------------
 //

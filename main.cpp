@@ -9,7 +9,7 @@
 #include <time.h>
 
 #include <kconfig.h>
-#include <kuniqueapp.h>
+#include <kuniqueapplication.h>
 #include <klocale.h>
 #include <kcmdlineargs.h>
 #include <kaboutdata.h>

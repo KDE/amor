@@ -17,7 +17,7 @@
 #include <kmessagebox.h>
 #include <kwin.h>
 #include <kwinmodule.h>
-#include <kapp.h>
+#include <kapplication.h>
 
 #include "amor.h"
 #include "amor.moc"
