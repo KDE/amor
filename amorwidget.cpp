@@ -16,7 +16,7 @@
 // Constructor
 //
 AmorWidget::AmorWidget()
-	: QWidget(0, 0, WStyle_Customize | WStyle_NoBorder ),
+	: QWidget(0, 0, WStyle_Customize | WStyle_NoBorder | WX11BypassWM ),
       mPixmap(0)
 {
     setBackgroundMode( NoBackground );

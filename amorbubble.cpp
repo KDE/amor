@@ -26,7 +26,7 @@
 // Constructor
 //
 AmorBubble::AmorBubble()
-	: QWidget(0, 0, WStyle_Customize | WStyle_NoBorder )
+	: QWidget(0, 0, WStyle_Customize | WStyle_NoBorder | WX11BypassWM )
 {
     mOriginX = 0;
     mOriginY = 0;
