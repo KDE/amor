@@ -1,0 +1,3 @@
+if test "x$kde_use_qt_mac" = "xyes"; then
+	DO_NOT_COMPILE="$DO_NOT_COMPILE amor"
+fi
