@@ -3,6 +3,7 @@
 PixmapPath=static
 Static=true
 Description=Little Billy
+Description[af]=klein billy
 Description[ar]=بيل الصغير
 Description[bg]=Малкия Били
 Description[bs]=Mali Billy
@@ -27,6 +28,7 @@ Description[tr]=Küçük İbo
 Description[uk]=Маленький Біллі
 Description[xx]=xx
 About=Static window sitter\nGraphic from http://www.xbill.org/
+About[af]=statiese venster sitter\nGraphic van http://www.xbill.org/
 About[ar]=قاعدة النوافذ الساكنة \nالرسوم من http://www.xbill.org
 About[az]=Statik pəncərə mürəbbiyəsi\nQrafikalar http://www.xbill.org/
 About[bs]=Statički window sitter\nGrafika iz http://www.xbill.org/

@@ -2,6 +2,7 @@
 [Config]
 PixmapPath=worm
 Description=Little worm
+Description[af]=klein wurm
 Description[ar]=دودة صغيرة
 Description[bg]=Малкото червейче
 Description[bs]=Mali crv
@@ -30,6 +31,7 @@ Description[uk]=Хробачок
 Description[xx]=xx
 Description[zh_CN]=小虫虫
 About=By Bartosz Trudnowski\nMade for my wife
+About[af]=deur bartosz trudnowski\nMade vir my vrou
 About[ar]=من بارتوسز ترودنوفسكي
 About[az]=Bartosz Trudnowski tərəfindən\nHəyat yoldaşıma
 About[bs]=Autor Bartosz Trudnowski\nNapravljeno za moju ženu

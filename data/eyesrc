@@ -4,6 +4,7 @@
 [Config]
 PixmapPath=eyes
 Description=Crazy Eyes
+Description[af]=mal oë
 Description[ar]=عيون مجنونة
 Description[bs]=Lude oči
 Description[cs]=Voči šílený
@@ -30,6 +31,7 @@ Description[tr]=Çılgın Gözler
 Description[uk]=Шалені очі
 Description[xx]=xx
 About=By Jean-Claude Dumas
+About[af]=deur Jean-Claude dumas
 About[ar]=من جان كلود دوماس
 About[az]=Jean-Claude Dumas tərəfindən
 About[bs]=Autor: Jean-Claude Dumas
