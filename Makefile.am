@@ -29,7 +29,7 @@ METASOURCES = amor.moc amorwidget.moc amordialog.moc amorbubble.moc
 messages:
 	$(XGETTEXT) $(amor_SOURCES) -o $(podir)/amor.pot
 
-appsdir = $(kde_appsdir)/Games
+appsdir = $(kde_appsdir)/Toys
 apps_DATA = amor.kdelnk
 
 KDE_ICON = amor
