@@ -2,6 +2,7 @@
 [Config]
 PixmapPath=pingu
 Description=Tux
+Description[bg]=Тукс
 Description[eo]=Tuĉjo
 Description[he]=טקס
 Description[mk]=Пингвин
@@ -14,6 +15,7 @@ About=By Frank Pieczynski\nBased on graphics of the game "pingus".
 About[af]=Deur Frank Pieczynski\nBased op grafieka van die speletjie "pingus".
 About[ar]=من فرانك بيسزينسكي\nمبنية على رسومات لعبة "pingus".
 About[az]=Frank Pieczynski tərəfindən\n"Pingus" oyunu qrafikaları əsasında.
+About[bg]=От Франк Пиезински\nПо графики от играта "пингус".
 About[bs]=Autor Frank Pieczynski\nBazirano na slikama iz igre "pingus".
 About[ca]=Per Frank Pieczynski\nBasat en els gràfics del joc "pingus".
 About[cs]=Autor Frank Pieczynski\nNa základě grafiky hry "pingus".
