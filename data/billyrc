@@ -30,6 +30,7 @@ Description[tr]=Küçük İbo
 Description[uk]=Маленький Біллі
 Description[ven]=Billy Mutuku
 Description[xx]=xx
+Description[zu]=Billy Omncane
 About=Static window sitter\nGraphic from http://www.xbill.org/
 About[af]=statiese venster sitter\nGraphic van http://www.xbill.org/
 About[ar]=قاعدة النوافذ الساكنة \nالرسوم من http://www.xbill.org
@@ -58,6 +59,7 @@ About[tr]=Statik pencere bakıcısı\nGrafikler http://www.xbill.org/ 'tan
 About[uk]=Натурщик статичного вікна\nГрафіка з http://www.xbill.org/
 About[ven]=Tshidzuli tsha window isa tshimbili\nGirafu ubva http://www.xbill.org/
 About[xx]=xx
+About[zu]=Iwindi elishintshayo lokumhlali \nGraphic from http://www.xbill.org/
 Icon=billy.png
 
 [Base]

@@ -32,6 +32,7 @@ Description[tr]=Penguen
 Description[uk]=Неоживлений Tux
 Description[ven]=Tux i songo itwaho zwazwipuka
 Description[xx]=xx
+Description[zu]=Okungenazilwane Tux
 About=Static window sitter
 About[af]=statiese venster sitter
 About[ar]=قاعدة النوافذ الساكنة
@@ -59,6 +60,7 @@ About[tr]=Statik pencere bakıcı
 About[uk]=Статична прикраса для вікна
 About[ven]=Tshidzuli tsha window yo imaho
 About[xx]=xx
+About[zu]=Umhlali wewindi elinyakazayo
 Icon=tux.png
 
 [Base]
