@@ -1,4 +1,4 @@
-SUBDIRS = pics
+# SUBDIRS = pics
 
 amor_DATA = blobrc ghostrc eyesrc bonhommerc nekorc pingurc wormrc tips-en \
 	    billyrc bsdrc tuxrc taorc
