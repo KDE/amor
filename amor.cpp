@@ -8,15 +8,19 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <time.h>
-#include <ksimpleconfig.h>
+
 #include <qmessagebox.h>
+#include <qpopupmenu.h>
+
+#include <klocale.h>
+#include <ksimpleconfig.h>
+#include <kmessagebox.h>
+
 #include "amor.h"
 #include "amor.moc"
 #include "amorpm.h"
 #include "amorbubble.h"
 #include "version.h"
-#include <klocale.h>
-#include <qpopupmenu.h>
 
 #define SLEEP_TIMEOUT   180     // Animation sleeps after SLEEP_TIMEOUT seconds
                                 // of mouse inactivity.
@@ -145,9 +149,7 @@ bool Amor::readConfig()
     // read selected theme
     if (!mTheme.setTheme(mConfig.mTheme))
     {
-        QMessageBox::critical(0, i18n("Amor"),
-                             i18n("Error reading theme: ") + mConfig.mTheme,
-			     i18n("OK"));
+        KMessageBox::error(0, i18n("Error reading theme: ") + mConfig.mTheme);
         return false;
     }
 
@@ -159,9 +161,7 @@ bool Amor::readConfig()
     {
         if (mTheme.readGroup(groups[i]) == false)
         {
-            QMessageBox::critical(0, i18n("Amor"),
-			     i18n("Error reading group: ") + groups[i],
-			     i18n("OK"));
+            KMessageBox::error(0, i18n("Error reading group: ") + groups[i]);
             return false;
         }
     }
@@ -491,7 +491,7 @@ void Amor::slotOffsetChanged(int off)
 //
 void Amor::slotAbout()
 {
-    QString about = i18n("Amor  Version ") + QString(AMOR_VERSION) + "\n\n" +
+    QString about = i18n("Amor Version %1\n\n").arg(AMOR_VERSION) +
                 i18n("Amusing Misuse Of Resources\n\n") +
                 i18n("Copyright (c) 1999 Martin R. Jones <mjones@kde.org>\n") +
                 "\nhttp://www.powerup.com.au/~mjones/amor/";
