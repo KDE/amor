@@ -28,7 +28,6 @@ Description[sv]=Lilla Billy
 Description[tr]=Küçük İbo
 Description[uk]=Маленький Біллі
 Description[xx]=xx
-Description[zh_TW]=小比利
 About=Static window sitter\nGraphic from http://www.xbill.org/
 About[af]=statiese venster sitter\nGraphic van http://www.xbill.org/
 About[ar]=قاعدة النوافذ الساكنة \nالرسوم من http://www.xbill.org
@@ -56,7 +55,6 @@ About[tr]=Statik pencere bakıcısı\nGrafikler http://www.xbill.org/ 'tan
 About[uk]=Натурщик статичного вікна\nГрафіка з http://www.xbill.org/
 About[vi]=Sitter cửa sổ tĩnh \nGraphic từ http://www.xbill.org/
 About[xx]=xx
-About[zh_TW]=靜態視窗作者\nGraphic from http://www.xbill.org/
 Icon=billy.png
 
 [Base]
