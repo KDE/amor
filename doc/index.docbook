@@ -12,11 +12,7 @@
 
 <authorgroup>
 <author>
-<firstname>Karl</firstname>
-<surname>Garrison</surname>
-<affiliation>
-<address><email>karl@indy.rr.com</email></address>
-</affiliation>
+&Karl.Garrison; &Karl.Garrison.mail;
 </author>
 </authorgroup>
 
@@ -24,13 +20,13 @@
 
 <copyright>
 <year>2001</year>
-<holder>Karl Garrison</holder>
+<holder>&Karl.Garrison;</holder>
 </copyright>
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2001-07-20</date>
-<releaseinfo>2.20.00</releaseinfo>
+<date>2003-09-16</date>
+<releaseinfo>2.2</releaseinfo>
 
 <abstract>
 <para>
@@ -147,9 +143,8 @@ below</para>
 <caption><para>Multi-talented Spot</para></caption>
 </mediaobject></entry>
 <entry><para>This is the default theme for &amor;, and also the one with
-the most <quote>tricks</quote>.  This theme was created by Martin R.
-Jones.  The jet-pack, beaming, and fire animations were contributed by
-Mark Grant.</para></entry>
+the most <quote>tricks</quote>.  This theme was created by &Martin.R.Jones;.  The jet-pack, beaming, and fire animations were contributed by
+<personname><firstname>Mark</firstname><surname>Grant</surname></personname>.</para></entry>
 </row>
 
 <row>
@@ -162,7 +157,7 @@ Mark Grant.</para></entry>
 </mediaobject></entry>
 <entry><para>A ghost theme based-on the &kde;
 <application>ghostview</application> icon.  Spooky Ghost was created by
-Martin R. Jones.</para></entry>
+&Martin.R.Jones;.</para></entry>
 </row>
 
 <row>
@@ -174,7 +169,7 @@ Martin R. Jones.</para></entry>
 <caption><para>Crazy Eyes</para></caption>
 </mediaobject></entry>
 <entry><para>This theme consists of a moving pair of eyes, and was created
-by Jean-Claude Dumas.</para></entry>
+by <personname><firstname>Jean-Claude</firstname><surname>Dumas</surname></personname>.</para></entry>
 </row>
 
 <row>
@@ -185,8 +180,7 @@ by Jean-Claude Dumas.</para></entry>
 <textobject><para>Bonhomme</para></textobject>
 <caption><para>Bonhomme</para></caption>
 </mediaobject></entry>
-<entry><para>A stick-figure animation, created by Jean-Claude
-Dumas.</para></entry>
+<entry><para>A stick-figure animation, created by <personname><firstname>Jean-Claude</firstname><surname>Dumas</surname></personname>.</para></entry>
 </row>
 
 <row>
@@ -197,9 +191,9 @@ Dumas.</para></entry>
 <textobject><para>Neko</para></textobject>
 <caption><para>Neko</para></caption>
 </mediaobject></entry>
-<entry><para>Neko is a cat theme by Chris Spiegel.  The graphics are
+<entry><para>Neko is a cat theme by <personname><firstname>Chris</firstname><surname>Spiegel</surname></personname>.  The graphics are
 originally from <application>Oneko</application>, which was written by
-Masayuki Koba.</para>
+<personname><firstname>Masayuki</firstname><surname>Koba</surname></personname>.</para>
 <note><para><application>Oneko</application> is a small application which
 features a cat chasing the mouse cursor.  The application appears to no
 longer be maintained, but the
@@ -220,7 +214,7 @@ available.</para></note></entry>
 graphics come from a <application>Lemmings</application>-style game
 called <ulink url="http://pingus.seul.org/">
 <application>Pingus</application></ulink>.  The Tux theme was created by
-Frank Pieczynski.</para></entry>
+<personname><firstname>Frank</firstname><surname>Pieczynski</surname></personname>.</para></entry>
 </row>
 
 <row>
@@ -231,7 +225,7 @@ Frank Pieczynski.</para></entry>
 <textobject><para>Little Worm</para></textobject>
 <caption><para>Little Worm</para></caption>
 </mediaobject></entry>
-<entry><para>A small inchworm theme.  Created by Bartosz Trudnowski for
+<entry><para>A small inchworm theme.  Created by <personname><firstname>Bartosz</firstname><surname>Trudnowski</surname></personname> for
 his wife.</para></entry>
 </row>
 
@@ -256,7 +250,7 @@ his wife.</para></entry>
 <textobject><para>BSD Mascot</para></textobject>
 <caption><para>BSD Mascot</para></caption>
 </mediaobject></entry>
-<entry><para>A static image of Chuck, the FreeBSD daemon.</para></entry>
+<entry><para>A static image of Beastie, the FreeBSD daemon.</para></entry>
 </row>
 
 <row>
@@ -279,7 +273,7 @@ his wife.</para></entry>
 <caption><para>Tao</para></caption>
 </mediaobject></entry>
 <entry><para>The Tao theme is an animated Yin Yang symbol.  This theme was
-created by Daniel Pfeiffer <email>occitan@esperanto.org</email>, and was
+created by <personname><firstname>Daniel</firstname><surname>Pfeiffer</surname></personname> <email>occitan@esperanto.org</email>, and was
 inspired by his Tai Chi practice.</para></entry>
 </row>
 
@@ -295,11 +289,11 @@ inspired by his Tai Chi practice.</para></entry>
 
 <para>&amor;</para>
 
-<para>Program copyright 1999-2001 Martin R. Jones <email>mjones@kde.org
-</email></para>
+<para>Program Copyright &copy; 1999-2001 &Martin.R.Jones;
+&Martin.R.Jones.mail;</para>
 
-<para>Documentation copyright 2001 Karl Garrison <email>karl@indy.rr.com
-</email></para>
+<para>Documentation Copyright &copy; 2001 &Karl.Garrison;
+&Karl.Garrison.mail;</para>
 
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 
@@ -307,31 +301,7 @@ inspired by his Tai Chi practice.</para></entry>
 &underGPL;
 </chapter>
 
-<appendix id="installation">
-<title>Installation</title>
-<sect1 id="getting-amor">
-<title>How to obtain &amor;</title>
-
-&install.intro.documentation;
-
-</sect1>
-
-<sect1 id="amor-requirements">
-<title>Requirements</title>
-
-<para>You will need to have the kdelibs package installed in order to
-successfully compile the kdetoys package that contains &amor;.  The
-kdelibs package may be found at the same location as the kdetoys
-package.</para>
-</sect1>
-
-<sect1 id="compilation">
-<title>Compilation and Installation</title>
-
-&install.compile.documentation;
-
-</sect1>
-</appendix>
+&documentation.index;
 
 </book>
 
