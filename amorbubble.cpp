@@ -114,6 +114,10 @@ void AmorBubble::calcGeometry()
         mArrowVert = Bottom;
     }
 
+    // Check for negative vertical bubble position (top of the screen)
+    if ( ypos < 0 )
+       ypos = 0;
+
     setGeometry(xpos, ypos, w, h);
     mBrowser->setGeometry( mBound );
 
