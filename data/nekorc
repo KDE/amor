@@ -8,7 +8,7 @@ Description=Neko
 About=Artwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegel
 Icon=sit.xpm
 Base=Base
-Sequences=RightScratch,LeftScratch,RunRight,RunLeft,Yawn,RightLick,LeftLick,Claw,JumpRight,JumpLeft,Tail
+Sequences=RightScratch,LeftScratch,RunRight,RunLeft,Yawn,RightLick,LeftLick,Claw,JumpRight,JumpLeft
 Focus=Start
 Blur=End
 Destroy=DropOut
@@ -16,13 +16,6 @@ Sleep=Snooze
 Wake=Surprise
 
 [Base]
-Sequence=sit.xpm
-Movement=0
-Delay=4000
-HotspotX=16
-HotspotY=29
-
-[Tail]
 Sequence=tail.xpm,sit.xpm,tail.xpm,sit.xpm,tail.xpm,sit.xpm,tail.xpm,sit.xpm,tail.xpm,sit.xpm,tail.xpm,sit.xpm
 Movement=0,0,0,0,0,0,0,0,0,0,0,0
 Delay=200,200,200,200,200,200,200,200,200,200,200,200
@@ -124,7 +117,7 @@ HotspotX=16,16,16,16,16,16,16,16,16,16,16
 HotspotY=29,29,29,29,29,29,29,29,29,29,29
 
 [LeftLick]
-Sequence=lick2.xpm,sitleft.xpm,lick2.xpm,sitleft.xpm,lick2.xpm,sitleft.xpm,lick2.xpm,sitleft.xpm,lick2.xpm,sitleft.xpm,lick2.xpm
+Sequence=lick2.xpm,sit.xpm,lick2.xpm,sit.xpm,lick2.xpm,sit.xpm,lick2.xpm,sit.xpm,lick2.xpm,sit.xpm,lick2.xpm
 Movement=0,0,0,0,0,0,0,0,0,0,0
 Delay=100,100,100,100,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16,16,16
