@@ -16,6 +16,7 @@
 #include <unistd.h>
 #include <qarray.h>
 #include <qdict.h>
+#include <qstringlist.h>
 #include <kconfigbase.h>
 #include <ksimpleconfig.h>
 
@@ -55,7 +56,7 @@ protected:
 
 protected:
     unsigned int   mCurrent;        // current frame in sequence
-    QStrList       mSequence;       // sequence of images to display
+    QStringList    mSequence;       // sequence of images to display
     QArray<int>    mDelay;          // delay between frames
     QArray<QPoint> mHotspot;        // the hotspot in a frame
     QArray<int>    mMovement;       // the distance to move between frames
@@ -76,10 +77,10 @@ public:
     AmorThemeManager();
     virtual ~AmorThemeManager();
 
-    bool setTheme(const char *file);
-    bool readGroup(const char *seq);
+    bool setTheme(const QString & file);
+    bool readGroup(const QString & seq);
 
-    AmorAnim *random(const char *group);
+    AmorAnim *random(const QString & group);
 
     QSize maximumSize() const { return mMaximumSize; }
 

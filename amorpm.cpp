@@ -35,7 +35,7 @@ AmorPixmapManager::~AmorPixmapManager()
 // Returns:
 //   pointer to pixmap if loaded successfully, 0 otherwise.
 //
-const QPixmap *AmorPixmapManager::load(const char *img)
+const QPixmap *AmorPixmapManager::load(const QString & img)
 {
     QPixmap *pixmap = mPixmaps.find(img);
 

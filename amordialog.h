@@ -55,8 +55,8 @@ protected:
 protected:
     QListBox *mThemeListBox;
     QMultiLineEdit *mAboutEdit;
-    QStrList mThemes;
-    QStrList mThemeAbout;
+    QStringList mThemes;
+    QStringList mThemeAbout;
     AmorConfig mConfig;
 };
 
@@ -67,7 +67,7 @@ protected:
 class AmorListBoxItem : public QListBoxItem
 {
 public:
-    AmorListBoxItem(const char *s, const QPixmap& p)
+    AmorListBoxItem(const QString & s, const QPixmap& p)
         : QListBoxItem(), mPixmap(p)
         { setText(s); }
 

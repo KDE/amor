@@ -144,8 +144,8 @@ void AmorDialog::addTheme(const QString& file)
 //
 void AmorDialog::slotHighlighted(int index)
 {
-    mConfig.mTheme = mThemes.at(index);
-    mAboutEdit->setText(mThemeAbout.at(index));
+    mConfig.mTheme = *mThemes.at(index);
+    mAboutEdit->setText(*mThemeAbout.at(index));
 }
 
 //---------------------------------------------------------------------------

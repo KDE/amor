@@ -185,7 +185,7 @@ bool Amor::readConfig()
 //
 void Amor::showBubble(const QString& msg)
 {
-    if (msg)
+    if (!msg.isNull())
     {
         if (!mBubble)
         {

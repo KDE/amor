@@ -42,7 +42,7 @@ const QPixmap *AmorAnim::frame()
     const QPixmap *pixmap = 0;
 
     if (validFrame())
-        pixmap = AmorPixmapManager::manager()->pixmap(mSequence.at(mCurrent));
+        pixmap = AmorPixmapManager::manager()->pixmap(*mSequence.at(mCurrent));
 
     return pixmap;
 }
@@ -56,11 +56,14 @@ void AmorAnim::readConfig(KConfigBase &config)
 {
     // Read the list of frames to display and load them into the pixmap
     // manager.
-    int frames = config.readListEntry("Sequence",mSequence);
-    for (int i = 0; i < frames; i++)
+    mSequence = config.readListEntry("Sequence");
+    int frames = mSequence.count();
+    for ( QStringList::Iterator it = mSequence.begin();
+          it != mSequence.end();
+          ++it )
     {
         const QPixmap *pixmap =
-                        AmorPixmapManager::manager()->load(mSequence.at(i));
+                        AmorPixmapManager::manager()->load(*it);
         if (pixmap)
             mMaximumSize = mMaximumSize.expandedTo(pixmap->size());
     }
@@ -97,7 +100,7 @@ void AmorAnim::readConfig(KConfigBase &config)
     if (mTotalMovement >= 0)
     {
         const QPixmap *lastFrame =
-                    AmorPixmapManager::manager()->pixmap(mSequence.getLast());
+                    AmorPixmapManager::manager()->pixmap(mSequence.last());
         if (lastFrame)
         {
             mTotalMovement += (lastFrame->width() - lastHotspot.x());
@@ -128,7 +131,7 @@ AmorThemeManager::~AmorThemeManager()
 
 //---------------------------------------------------------------------------
 //
-bool AmorThemeManager::setTheme(const char *file)
+bool AmorThemeManager::setTheme(const QString & file)
 {
     mPath = locate("appdata", file);
 
@@ -168,7 +171,7 @@ bool AmorThemeManager::setTheme(const char *file)
 //
 // Select an animimation randomly from a group
 //
-AmorAnim *AmorThemeManager::random(const char *group)
+AmorAnim *AmorThemeManager::random(const QString & group)
 {
     AmorAnimationGroup *animGroup = mAnimations.find(group);
 
@@ -182,7 +185,7 @@ AmorAnim *AmorThemeManager::random(const char *group)
 //
 // Read an animation group.
 //
-bool AmorThemeManager::readGroup(const char *seq)
+bool AmorThemeManager::readGroup(const QString & seq)
 {
     AmorPixmapManager::manager()->setPixmapDir(mPath);
 

@@ -29,8 +29,8 @@ public:
         { mPixmapDir = dir; }
     void reset()
         { mPixmapDir = "."; mPixmaps.clear(); }
-    const QPixmap *load(const char *img);
-    const QPixmap *pixmap(const char *img) const
+    const QPixmap *load(const QString & img);
+    const QPixmap *pixmap(const QString & img) const
         { return mPixmaps.find(img); }
 
     static AmorPixmapManager *manager();
