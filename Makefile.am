@@ -27,12 +27,11 @@ noinst_HEADERS = amor.h amorwidget.h amoranim.h amorpm.h amordialog.h\
 
 METASOURCES = AUTO
 
-messages: tips.cpp
-	$(XGETTEXT) tips.cpp *.cpp -o $(podir)/amor.pot
-
-tips.cpp: data/tips-en
+messages: 
 	perl ./preparetips > tips.cpp
-	
+	$(XGETTEXT) tips.cpp *.cpp -o $(podir)/amor.pot
+	rm -f tips.cpp
+
 appsdir = $(kde_appsdir)/Toys
 apps_DATA = amor.desktop
 
