@@ -27,6 +27,7 @@
 #include "amordialog.h"
 #include "version.h"
 #include <X11/Xlib.h>
+#include <kdebug.h>
 
 #define SLEEP_TIMEOUT   180     // Animation sleeps after SLEEP_TIMEOUT seconds
                                 // of mouse inactivity.
@@ -51,7 +52,7 @@ Amor::Amor() : QObject(), DCOPObject( "AmorIface" )
 {
     mAmor = 0;
     mBubble = 0;
-
+    mForceHideAmorWidget = false;
     if (readConfig())
     {
         mTargetWin   = 0;
@@ -99,6 +100,15 @@ Amor::Amor() : QObject(), DCOPObject( "AmorIface" )
             selectAnimation(Focus);
             mTimer->start(0, true);
         }
+	if (!connectDCOPSignal(0,0, "KDE_stop_screensaver()", "screenSaverStopped()",false))
+		kdDebug(10000) << "Could not attach signal...KDE_stop_screensaver()" << endl;
+	else
+		kdDebug(10000) << "attached dcop signals..." << endl;
+
+	if (!connectDCOPSignal(0,0, "KDE_start_screensaver()", "screenSaverStarted()",false))
+		kdDebug(10000) << "Could not attach signal...KDE_start_screensaver()" << endl;
+	else
+		kdDebug(10000) << "attached dcop signals..." << endl;
 
         KStartupInfo::appStarted();
     }
@@ -117,6 +127,21 @@ Amor::~Amor()
     delete mWin;
     delete mAmor;
     delete mBubble;
+}
+
+void Amor::screenSaverStopped()
+{
+    kdDebug(10000)<<"void Amor::screenSaverStopped() \n";
+    mAmor->show();
+    mForceHideAmorWidget = false;
+}
+
+void Amor::screenSaverStarted()
+{
+    kdDebug(10000)<<"void Amor::screenSaverStarted() \n";
+    mAmor->hide();
+    mTimer->stop();
+    mForceHideAmorWidget = true;
 }
 
 //---------------------------------------------------------------------------
@@ -153,6 +178,7 @@ void Amor::reset()
     mState      = Normal;
 
     mAmor = new AmorWidget();
+    mForceHideAmorWidget = false;
     connect(mAmor, SIGNAL(mouseClicked(const QPoint &)),
                     SLOT(slotMouseClicked(const QPoint &)));
     connect(mAmor, SIGNAL(dragged(const QPoint &, bool)),
@@ -462,6 +488,8 @@ void Amor::slotCursorTimeout()
 //
 void Amor::slotTimeout()
 {
+    if ( mForceHideAmorWidget )
+        return;
     if (!mTheme.isStatic())
 	mPosition += mCurrAnim->movement();
     mAmor->setPixmap(mCurrAnim->frame());

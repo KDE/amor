@@ -39,6 +39,8 @@ public:
     virtual ~Amor();
 
     virtual void showTip(QString tip);
+    virtual void screenSaverStopped();
+    virtual void screenSaverStarted();
 
     void reset();
 
@@ -96,6 +98,7 @@ private:
     AmorTips         mTips;        // Tips to display in the bubble
 
     AmorConfig       mConfig;      // Configuration parameters
+    bool             mForceHideAmorWidget;
 };
 
 //---------------------------------------------------------------------------

@@ -11,6 +11,9 @@ public:
 
 k_dcop:
     virtual void showTip(QString tip) = 0;
+    virtual void screenSaverStopped() = 0;
+    virtual void screenSaverStarted() = 0;
+
 };
 
 #endif
