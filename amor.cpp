@@ -116,7 +116,7 @@ Amor::~Amor()
 //
 void Amor::showTip( QString tip )
 {
-    if ( mConfig.mTips )
+    if ( mConfig.mAppTips )
     {
 	if ( mCurrAnim == mBaseAnim || mCurrAnim->frameNum() == 0 )
 	    showBubble( tip );
@@ -458,7 +458,7 @@ void Amor::slotTimeout()
     // a helpful tip.
     if (mCurrAnim == mBaseAnim && mCurrAnim->frameNum() == 0)
     {
-	if ( !mTipText.isEmpty() && mConfig.mTips )
+	if ( !mTipText.isEmpty() && mConfig.mAppTips )
 	{
 	    showBubble( mTipText );
 	    mTipText = QString();

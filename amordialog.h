@@ -44,6 +44,7 @@ protected slots:
     void slotHighlighted(int);
     void slotOnTop(bool);
     void slotRandomTips(bool);
+    void slotApplicationTips(bool);
     void slotOffset(int);
     void slotOk();
     void slotCancel();

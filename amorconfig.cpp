@@ -19,6 +19,7 @@ AmorConfig::AmorConfig()
     mOffset = 0;
     mTheme = "blobrc";
     mTips = false;
+    mAppTips = true;
 }
 
 //---------------------------------------------------------------------------
@@ -30,10 +31,11 @@ void AmorConfig::read()
     KConfig *config = kapp->config();
     KConfigGroupSaver cs(config, "General");
 
-    mOnTop = config->readBoolEntry("OnTop");
-    mOffset = config->readNumEntry("Offset");
+    mOnTop = config->readBoolEntry("OnTop", false);
+    mOffset = config->readNumEntry("Offset", 0);
     mTheme = config->readEntry("Theme", "blobrc");
-    mTips  = config->readBoolEntry("Tips");
+    mTips  = config->readBoolEntry("Tips", false);
+    mAppTips  = config->readBoolEntry("ApplicationTips", true);
 }
 
 //---------------------------------------------------------------------------
@@ -49,6 +51,7 @@ void AmorConfig::write()
     config->writeEntry("Offset", mOffset);
     config->writeEntry("Theme", mTheme);
     config->writeEntry("Tips", mTips);
+    config->writeEntry("ApplicationTips", mAppTips);
 
     config->sync();
 }

@@ -30,6 +30,7 @@ public:
     bool     mOnTop;
     int      mOffset;
     bool     mTips;
+    bool     mAppTips;
 };
 
 #endif // AMORCONFIG_H 

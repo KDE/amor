@@ -71,6 +71,10 @@ AmorDialog::AmorDialog()
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotRandomTips(bool)));
     checkBox->setChecked(mConfig.mTips);
 
+    checkBox = new QCheckBox(i18n("Allow application tips"), mainwidget);
+    connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotApplicationTips(bool)));
+    checkBox->setChecked(mConfig.mAppTips);
+
     readThemes();
 }
 
@@ -174,6 +178,15 @@ void AmorDialog::slotOnTop(bool onTop)
 void AmorDialog::slotRandomTips(bool tips)
 {
     mConfig.mTips = tips;
+}
+
+//---------------------------------------------------------------------------
+//
+// User toggled application tips
+//
+void AmorDialog::slotApplicationTips(bool tips)
+{
+    mConfig.mAppTips = tips;
 }
 
 //---------------------------------------------------------------------------
