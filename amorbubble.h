@@ -16,6 +16,8 @@
 #include <qwidget.h>
 #include <qbitmap.h>
 
+class QTextBrowser;
+
 //---------------------------------------------------------------------------
 //
 // AmorBubble displays a message in a shaped window
@@ -47,6 +49,7 @@ protected:
     QBitmap mMask;              // shape mask
     VertPos mArrowVert;         // vertical position of the arrow
     HorzPos mArrowHorz;         // horizontal position of the arrow
+    QTextBrowser *mBrowser;	// displays the message
 };
 
 #endif // AMORBUBBLE_H

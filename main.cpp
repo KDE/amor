@@ -5,10 +5,11 @@
 // Copyright (c) 1999 Martin R. Jones <mjones@kde.org>
 //
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
 
 #include <kconfig.h>
-#include <kapp.h>
+#include <kuniqueapp.h>
 #include <klocale.h>
 #include <kcmdlineargs.h>
 #include <kaboutdata.h>
@@ -27,7 +28,11 @@ int main(int argc, char *argv[])
     aboutData.addAuthor("Martin R. Jones",0, "mjones@kde.org");
     KCmdLineArgs::init( argc, argv, &aboutData );
 
-    KApplication app;
+    if (!KUniqueApplication::start()) {
+	fprintf(stderr, "%s is already running!\n", aboutData.appName());
+	exit(0);
+    }
+    KUniqueApplication app;
 
     // session management
     AmorSessionWidget *sessionWidget = new AmorSessionWidget;

@@ -47,7 +47,7 @@
 //
 // Constructor
 //
-Amor::Amor() : QObject()
+Amor::Amor() : QObject(), DCOPObject( "AmorIface" )
 {
     mAmor = 0;
     mBubble = 0;
@@ -114,6 +114,19 @@ Amor::~Amor()
     delete mWin;
     delete mAmor;
     delete mBubble;
+}
+
+//---------------------------------------------------------------------------
+//
+void Amor::showTip( QString tip )
+{
+    if ( mConfig.mTips )
+    {
+	if ( mCurrAnim == mBaseAnim || mCurrAnim->frameNum() == 0 )
+	    showBubble( tip );
+	else
+	    mTipText = tip;
+    }
 }
 
 //---------------------------------------------------------------------------
@@ -239,8 +252,6 @@ void Amor::selectAnimation(State state)
             mTargetWin = mNextTarget;
             if (mTargetWin != None)
             {
-//                mTargetRect = windowGeometry(mTargetWin);
-//                mTargetRect = KWM::geometry(mTargetWin, true);
                 mTargetRect = KWin::info(mTargetWin).frameGeometry;
                 if (mCurrAnim->frame())
                 {
@@ -441,6 +452,12 @@ void Amor::slotCursorTimeout()
 //
 void Amor::slotTimeout()
 {
+    if ( mBubble )
+    {
+	mTimer->start(100, true);
+	return;
+    }
+
     mPosition += mCurrAnim->movement();
     mAmor->setPixmap(mCurrAnim->frame());
     mAmor->move(mPosition + mTargetRect.x() - mCurrAnim->hotspot().x(),
@@ -455,7 +472,12 @@ void Amor::slotTimeout()
     // a helpful tip.
     if (mCurrAnim == mBaseAnim && mCurrAnim->frameNum() == 0)
     {
-        if (kapp->random()%TIP_FREQUENCY == 1 && mConfig.mTips && !mBubble)
+	if ( !mTipText.isEmpty() && mConfig.mTips )
+	{
+	    showBubble( mTipText );
+	    mTipText = QString();
+	}
+	else if (kapp->random()%TIP_FREQUENCY == 1 && mConfig.mTips && !mBubble)
         {
             showBubble(mTips.tip());
         }

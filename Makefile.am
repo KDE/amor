@@ -10,7 +10,9 @@ bin_PROGRAMS = 	amor
 
 # Which sources should be compiled for amor.
 amor_SOURCES	= amordialog.cpp amor.cpp amorwidget.cpp main.cpp amoranim.cpp amorpm.cpp\
-                  amorbubble.cpp amorconfig.cpp amortips.cpp
+                  amorbubble.cpp amorconfig.cpp amortips.cpp AmorIface.skel
+
+include_HEADERS = AmorIface.h
 
 # the library search path
 amor_LDFLAGS = $(all_libraries) $(KDE_RPATH)

@@ -11,7 +11,9 @@
 #include <kglobal.h>
 #include <kstddirs.h>
 #include <klocale.h>
+#include <kdebug.h>
 #include <qfile.h>
+#include <qtextstream.h>
 
 //---------------------------------------------------------------------------
 //
@@ -26,13 +28,15 @@ AmorTips::AmorTips()
 //
 bool AmorTips::setFile(const QString& file)
 {
+    bool rv = false;
+
     QString path( locate("appdata", file) );
     if(path.length() && read(path))
-    {
-        return true;
-    }
+        rv = true;
 
-    return false;
+    rv |= readKTips();
+
+    return rv;
 }
 
 //---------------------------------------------------------------------------
@@ -61,6 +65,57 @@ QString AmorTips::tip()
 
 //---------------------------------------------------------------------------
 //
+// Read the tips from ktip's file
+//
+bool AmorTips::readKTips()
+{
+    QString fname;
+
+    fname = locate("data", QString("kdewizard/tips"));
+
+    if (fname.isEmpty())
+	return false;
+
+    QFile f(fname);
+    if (f.open(IO_ReadOnly))
+    {
+	QTextStream ts(&f);
+
+	QString line, tag, tip;
+	bool inTip = false;
+	while (!ts.eof())
+	{
+	    line = ts.readLine();
+	    tag = line.stripWhiteSpace().lower();
+
+	    if (tag == "<html>")
+	    {
+		inTip = true;
+		tip = QString::null;
+		continue;
+	    }
+
+	    if (inTip)
+	    {
+		if (tag == "</html>")
+		{
+		    mTips.append(tip);
+		    inTip = false;
+		}
+		else
+		    tip.append(line).append("\n");
+	    }
+
+	}
+
+	f.close();
+    }
+
+    return true;
+}
+
+//---------------------------------------------------------------------------
+//
 // Read all tips from the specified file.
 //
 bool AmorTips::read(const QString& path)
@@ -74,7 +129,7 @@ bool AmorTips::read(const QString& path)
             readTip(file);
         }
 
-		return true;
+	return true;
     }
 
     return false;

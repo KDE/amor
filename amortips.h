@@ -29,6 +29,7 @@ public:
     QString tip();
 
 protected:
+    bool readKTips();
     bool read(const QString& file);
     bool readTip(QFile &file);
 

@@ -20,6 +20,7 @@
 #include "amortips.h"
 #include "amorconfig.h"
 #include "amordialog.h"
+#include "AmorIface.h"
 
 class QTimer;
 class KWinModule;
@@ -28,12 +29,14 @@ class KWinModule;
 //
 // Amor handles window manager input and animation selection and updates.
 //
-class Amor : public QObject
+class Amor : public QObject, virtual public AmorIface
 {
     Q_OBJECT
 public:
     Amor();
     virtual ~Amor();
+
+    virtual void showTip(QString tip);
 
     void reset();
 
@@ -85,6 +88,7 @@ private:
     QPopupMenu       *mMenu;       // Our menu
     time_t           mActiveTime;  // The time an active event occurred
     QPoint           mCursPos;     // The last recorded position of the pointer
+    QString          mTipText;     // Text to display in a bubble when possible
     AmorBubble       *mBubble;     // Text bubble
     AmorTips         mTips;        // Tips to display in the bubble
 

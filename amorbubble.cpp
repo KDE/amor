@@ -9,12 +9,17 @@
 #include <amorbubble.moc>
 #include <qbitmap.h>
 #include <qpainter.h>
+#include <qtextbrowser.h>
+#include <qtooltip.h>
 #include <kapp.h>
+#include <kstddirs.h>
+#include <kdebug.h>
+#include <klocale.h>
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>
 
-#define ARROW_WIDTH     8
-#define ARROW_HEIGHT    10
+#define ARROW_WIDTH     10
+#define ARROW_HEIGHT    12
 #define BORDER_SIZE     4
 #define BUBBLE_OFFSET   16
 
@@ -27,6 +32,18 @@ AmorBubble::AmorBubble()
 {
     mOriginX = 0;
     mOriginY = 0;
+    mBrowser = new QTextBrowser( this );
+    mBrowser->setFrameStyle( QFrame::NoFrame | QFrame::Plain );
+    mBrowser->setMargin( 0 );
+    mBrowser->setPaper( QToolTip::palette().active().brush( QColorGroup::Background ) );
+    mBrowser->setVScrollBarMode( QTextBrowser::AlwaysOff );
+    mBrowser->setHScrollBarMode( QTextBrowser::AlwaysOff );
+
+    mBrowser->mimeSourceFactory()->addFilePath(KGlobal::dirs()->findResourceDir("data", "kdewizard/pics")+"kdewizard/pics/");
+    QStringList icons = KGlobal::dirs()->resourceDirs("icon");
+    QStringList::Iterator it;
+    for (it = icons.begin(); it != icons.end(); ++it)
+	mBrowser->mimeSourceFactory()->addFilePath(*it);
 }
 
 //---------------------------------------------------------------------------
@@ -44,7 +61,13 @@ AmorBubble::~AmorBubble()
 //
 void AmorBubble::setMessage(const QString& message)
 {
-    mMessage = message;
+    mMessage = QString( "<html>%1</html>" ).arg( i18n( message.latin1() ) );
+    // hacks because heightForWidth() doesn't work.
+    setGeometry( -1000, 0, 300, 1000 );
+    show();
+    mBrowser->setGeometry( 0, 0, 250, 1000 );
+    mBrowser->setText( mMessage );
+    hide();
     calcGeometry();
 }
 
@@ -54,15 +77,13 @@ void AmorBubble::setMessage(const QString& message)
 //
 void AmorBubble::calcGeometry()
 {
-    QPainter painter(this);
-    mBound = painter.boundingRect(0, 0, 200, 400, WordBreak, mMessage);
-
-    // enforce minimum size
-    mBound = mBound.unite(QRect(0, 0, 80, 20));
+    mBound = QRect( 0, 0, 250, 0 );
+//    mBound.setHeight( mBrowser->heightForWidth( mBound.width() ) );
+    mBound.setHeight( mBrowser->contentsHeight() );
     mBound.moveBy(ARROW_WIDTH+BORDER_SIZE, BORDER_SIZE);
 
     // initialise the default geometry of the bubble
-    int w = mBound.width() + BORDER_SIZE * 2 + ARROW_WIDTH * 2;
+    int w = mBound.width() + BORDER_SIZE * 2 + ARROW_WIDTH;
     int h = mBound.height() + BORDER_SIZE * 2;
     int xpos = mOriginX + BUBBLE_OFFSET;
     int ypos = mOriginY - BORDER_SIZE - ARROW_HEIGHT / 2;
@@ -77,6 +98,7 @@ void AmorBubble::calcGeometry()
         // source on right
         xpos = mOriginX - w - BUBBLE_OFFSET;
         mArrowHorz = Right;
+	mBound.moveBy( -ARROW_WIDTH, 0 );
     }
 
     if (mOriginY + h > kapp->desktop()->height())
@@ -87,6 +109,7 @@ void AmorBubble::calcGeometry()
     }
 
     setGeometry(xpos, ypos, w, h);
+    mBrowser->setGeometry( mBound );
 
     // create and apply the shape mask
     mMask.resize(w, h);
@@ -108,18 +131,21 @@ void AmorBubble::drawBubble(QPainter &p)
 {
     QPointArray pointArray(3);
 
+    int left = ARROW_WIDTH;
+
     if (mArrowHorz == Left)
     {
-        pointArray.setPoint(0, ARROW_WIDTH, 0);
-        pointArray.setPoint(1, 0, -2);
-        pointArray.setPoint(2, ARROW_WIDTH, ARROW_HEIGHT);
+        pointArray.setPoint(0, ARROW_WIDTH+1, 0);
+        pointArray.setPoint(1, 0, -3);
+        pointArray.setPoint(2, ARROW_WIDTH+1, ARROW_HEIGHT);
     }
     else
     {
         pointArray.setPoint(0, 0, 0);
-        pointArray.setPoint(1, ARROW_WIDTH, -2);
+        pointArray.setPoint(1, ARROW_WIDTH+1, -3);
         pointArray.setPoint(2, 0, ARROW_HEIGHT);
         pointArray.translate(width() - ARROW_WIDTH - 1, 0);
+	left = 0;
     }
 
     if (mArrowVert == Top)
@@ -131,14 +157,14 @@ void AmorBubble::drawBubble(QPainter &p)
         pointArray.translate(0, height() - BORDER_SIZE - ARROW_HEIGHT / 2);
     }
 
-    p.drawRoundRect(ARROW_WIDTH, 0, width() - ARROW_WIDTH*2, height(), 20, 20);
+    p.drawRoundRect(left, 0, width() - ARROW_WIDTH, height(), 10, 20);
 
     QPen pen(p.pen());
     p.setPen(NoPen);
     p.drawPolygon(pointArray);
 
     p.setPen(pen);
-    p.drawPolyline(pointArray);
+    p.drawPolyline(pointArray, 0, 3);
 }
 
 //---------------------------------------------------------------------------
@@ -149,9 +175,8 @@ void AmorBubble::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
     painter.setPen(black);
-    painter.setBrush(yellow);
+    painter.setBrush( QToolTip::palette().active().brush( QColorGroup::Background ) );
     drawBubble(painter);
-    painter.drawText(mBound, AlignVCenter | WordBreak, mMessage);
 }
 
 //---------------------------------------------------------------------------
