@@ -290,7 +290,7 @@ void Amor::selectAnimation(State state)
             mTargetWin = mNextTarget;
             if (mTargetWin != None)
             {
-                mTargetRect = KWin::info(mTargetWin).frameGeometry;
+                mTargetRect = KWin::windowInfo(mTargetWin).frameGeometry();
 		if ( mTheme.isStatic() )
 		{
 		    if ( mConfig.mStaticPos < 0 )
