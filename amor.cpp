@@ -29,7 +29,6 @@
 
 #define SLEEP_TIMEOUT   180     // Animation sleeps after SLEEP_TIMEOUT seconds
                                 // of mouse inactivity.
-#define BUBBLE_TIMEOUT  4000    // Minimum milliseconds to display a tip
 #define TIPS_FILE       "tips"  // Display tips in TIP_FILE-LANG, e.g "tips-en"
 #define TIP_FREQUENCY   20      // Frequency tips are displayed small == more
                                 // often.
@@ -82,9 +81,6 @@ Amor::Amor() : QObject(), DCOPObject( "AmorIface" )
 
         mStackTimer = new QTimer(this);
         connect(mStackTimer, SIGNAL(timeout()), SLOT(restack()));
-
-        mBubbleTimer = new QTimer(this);
-        connect(mBubbleTimer, SIGNAL(timeout()), SLOT(hideBubble()));
 
         time(&mActiveTime);
         mCursPos = QCursor::pos();
@@ -164,8 +160,6 @@ bool Amor::readConfig()
     // Read user preferences
     mConfig.read();
 
-//    mConfig.mOnTop = true;       // XXX until normal mode is fixed
-
     if (mConfig.mTips)
     {
         mTips.setFile(TIPS_FILE);
@@ -213,8 +207,6 @@ void Amor::showBubble(const QString& msg)
         mBubble->setOrigin(mAmor->x()+mAmor->width()/2,
                            mAmor->y()+mAmor->height()/2);
         mBubble->setMessage(msg);
-        mBubble->show();
-        mBubbleTimer->start(BUBBLE_TIMEOUT + msg.length() * 30, TRUE);
     }
 }
 
@@ -295,7 +287,7 @@ void Amor::selectAnimation(State state)
             // is not the base, otherwise select the base.  This makes us
             // alternate between the base animation and a random
             // animination.
-            if (mCurrAnim == mBaseAnim && !mBubble)
+            if (mCurrAnim == mBaseAnim && (!mBubble || !mBubble->isVisible() ) )
             {
                 mCurrAnim = mTheme.random(ANIM_NORMAL);
             }
@@ -452,12 +444,6 @@ void Amor::slotCursorTimeout()
 //
 void Amor::slotTimeout()
 {
-    if ( mBubble )
-    {
-	mTimer->start(100, true);
-	return;
-    }
-
     mPosition += mCurrAnim->movement();
     mAmor->setPixmap(mCurrAnim->frame());
     mAmor->move(mPosition + mTargetRect.x() - mCurrAnim->hotspot().x(),
@@ -477,7 +463,8 @@ void Amor::slotTimeout()
 	    showBubble( mTipText );
 	    mTipText = QString();
 	}
-	else if (kapp->random()%TIP_FREQUENCY == 1 && mConfig.mTips && !mBubble)
+	else if (kapp->random()%TIP_FREQUENCY == 1 && mConfig.mTips &&
+		( !mBubble || !mBubble->isVisible() ) )
         {
             showBubble(mTips.tip());
         }
@@ -487,7 +474,10 @@ void Amor::slotTimeout()
 
     if (!mCurrAnim->next())
     {
-        selectAnimation(mState);
+	if ( mBubble && mBubble->isVisible() )
+	    mCurrAnim->reset();
+	else
+	    selectAnimation(mState);
     }
 }
 

@@ -22,6 +22,7 @@
 #define ARROW_HEIGHT    12
 #define BORDER_SIZE     4
 #define BUBBLE_OFFSET   16
+#define BUBBLE_TIMEOUT  4000    // Minimum milliseconds to display a tip
 
 //---------------------------------------------------------------------------
 //
@@ -38,12 +39,16 @@ AmorBubble::AmorBubble()
     mBrowser->setPaper( QToolTip::palette().active().brush( QColorGroup::Background ) );
     mBrowser->setVScrollBarMode( QTextBrowser::AlwaysOff );
     mBrowser->setHScrollBarMode( QTextBrowser::AlwaysOff );
+    mBrowser->viewport()->installEventFilter( this );
 
     mBrowser->mimeSourceFactory()->addFilePath(KGlobal::dirs()->findResourceDir("data", "kdewizard/pics")+"kdewizard/pics/");
     QStringList icons = KGlobal::dirs()->resourceDirs("icon");
     QStringList::Iterator it;
     for (it = icons.begin(); it != icons.end(); ++it)
 	mBrowser->mimeSourceFactory()->addFilePath(*it);
+
+    mBubbleTimer = new QTimer(this);
+    connect(mBubbleTimer, SIGNAL(timeout()), SLOT(hide()));
 }
 
 //---------------------------------------------------------------------------
@@ -67,8 +72,8 @@ void AmorBubble::setMessage(const QString& message)
     show();
     mBrowser->setGeometry( 0, 0, 250, 1000 );
     mBrowser->setText( mMessage );
-    hide();
     calcGeometry();
+    mBubbleTimer->start(BUBBLE_TIMEOUT + message.length() * 30, TRUE);
 }
 
 //---------------------------------------------------------------------------
@@ -188,3 +193,25 @@ void AmorBubble::mouseReleaseEvent(QMouseEvent *)
     hide();
 }
 
+//---------------------------------------------------------------------------
+//
+bool AmorBubble::eventFilter( QObject *, QEvent *e )
+{
+    switch ( e->type() )
+    {
+	case QEvent::Enter:
+	    mBubbleTimer->stop();
+	    break;
+	case QEvent::Leave:
+	    if ( isVisible() )
+		mBubbleTimer->start( 1000, true );
+	    break;
+	case QEvent::MouseButtonRelease:
+	    hide();
+	    break;
+	default:
+	    break;
+    }
+
+    return false;
+}

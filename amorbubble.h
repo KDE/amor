@@ -17,6 +17,7 @@
 #include <qbitmap.h>
 
 class QTextBrowser;
+class QTimer;
 
 //---------------------------------------------------------------------------
 //
@@ -40,6 +41,7 @@ protected:
     void drawBubble(QPainter &p);
     virtual void paintEvent(QPaintEvent *);
     virtual void mouseReleaseEvent(QMouseEvent *);
+    virtual bool eventFilter( QObject *, QEvent * );
 
 protected:
     QString mMessage;           // message to display
@@ -50,6 +52,7 @@ protected:
     VertPos mArrowVert;         // vertical position of the arrow
     HorzPos mArrowHorz;         // horizontal position of the arrow
     QTextBrowser *mBrowser;	// displays the message
+    QTimer *mBubbleTimer;	// hide timer
 };
 
 #endif // AMORBUBBLE_H
