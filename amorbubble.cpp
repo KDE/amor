@@ -9,7 +9,7 @@
 #include <amorbubble.moc>
 #include <qbitmap.h>
 #include <qpainter.h>
-#include <qtextbrowser.h>
+#include <ktextbrowser.h>
 #include <qtooltip.h>
 #include <kapp.h>
 #include <kstddirs.h>
@@ -33,9 +33,12 @@ AmorBubble::AmorBubble()
 {
     mOriginX = 0;
     mOriginY = 0;
-    mBrowser = new QTextBrowser( this );
+    mBrowser = new KTextBrowser( this );
     mBrowser->setFrameStyle( QFrame::NoFrame | QFrame::Plain );
     mBrowser->setMargin( 0 );
+    QColorGroup clgrp = mBrowser->colorGroup();
+    clgrp.setColor(QColorGroup::Text, Qt::black);
+    mBrowser->setPaperColorGroup( clgrp );
     mBrowser->setPaper( QToolTip::palette().active().brush( QColorGroup::Background ) );
     mBrowser->setVScrollBarMode( QTextBrowser::AlwaysOff );
     mBrowser->setHScrollBarMode( QTextBrowser::AlwaysOff );
