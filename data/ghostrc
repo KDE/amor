@@ -2,7 +2,26 @@
 [Config]
 PixmapPath=ghost
 Description=Spooky Ghost
+Description[da]=Farligt spøgelse
+Description[de]=Kleines Gespenst
+Description[es]=El fantasma Spooky
+Description[he]=םיאפר חור
+Description[hu]=Kis szellem
+Description[pt_BR]=Fantasma Assustador
+Description[pt]=Fantasma Assustador
+Description[sl]=Strašljivi duh
+Description[sv]=Skrämmande spöke
 About=By Martin R. Jones\nBased on an icon by the KDE artist team.
+About[az]=Martin R. Jones tərəfindən\nBased on an icon by the KDE artist team.
+About[da]=Ved Martin R. Jones\nBaseret på en ikon af KDE's kunstnerhold.
+About[de]=Von Martin R. Jones\nNach einem Symbol der KDE-Artists
+About[es]=Por Martin R. Jones\nBasado en un icono por el equipo artístico de KDE.
+About[he]=סנו'ג .ר ןיטרמ תאמ\n.KDE לש םינמאה תווצ תאמ למס לע ססובמ
+About[hu]=Készítette Martin R. Jones\nA KDE grafikuscsapat által készített egyik ikon alapján.
+About[pt_BR]=De Martin R. Jones\nBaseado num ícone da equipa de artistas do KDE.
+About[pt]=De Martin R. Jones\nBaseado num ícone da equipa de artistas do KDE.
+About[sl]=Od Martina R. Jonesa\nTemelji na ikoni ekipe umetnikov KDE.
+About[sv]=Av Martin R. Jones\nBaserad på en ikon av KDE:s artistgrupp.
 Icon=ghost_1.xpm
 Sequences=Base,GlideLeft,GlideRight,EyesLeft,EyesRight
 Focus=ZoomIn

@@ -7,6 +7,17 @@
 PixmapPath=b
 Description=Bonhomme
 About=By Jean-Claude Dumas
+About[az]=Jean-Claude Dumas tərəfindən
+About[da]=Af Jean-Claude Dumas
+About[de]=Von Jean-Claude Dumas
+About[es]=Por Jean-Claude Dumas
+About[he]=אמוד דולק-ןא'ז תאמ
+About[hu]=Készítette Jean-Claude Dumas
+About[pt_BR]=De Jean-Claude Dumas
+About[pt]=De Jean-Claude Dumas
+About[sl]=Od Jean-Claudea Dumasa
+About[sv]=Av Jean-Claude Dumas
+About[uk]=Автор: Jean-Claude Dumas
 Icon=b-f.xpm
 Base=Base
 Sequences=WalkRight,WalkLeft,Pof,Drib,Col,ColRight,ColLeft,Hop,Sa,Hi

@@ -3,7 +3,25 @@
 PixmapPath=static
 Static=true
 Description=Little Billy
+Description[da]=Lille Billy
+Description[es]=Pequeño Billy
+Description[he]=ןטקה יליב
+Description[hu]=Billy fiú
+Description[pt_BR]=Pequeno Billy
+Description[pt]=Pequeno Billy
+Description[sl]=Mali Billy
+Description[sv]=Lilla Billy
+Description[uk]=Маленький Біллі
 About=Static window sitter\nGraphic from http://www.xbill.org/
+About[az]=Statik pəncərə mürəbbiyəsi\nQrafikalar http://www.xbill.org/
+About[da]=Statisk vinduesoppasser\nGrafik fra http://www.xbill.org/
+About[de]=Statischer Fenstersitzer\nGraphik von http://www.xbill.org/
+About[es]=Niñera de ventanas estática \nGráfica de http://www.xbill.org/
+About[he]=יטטס ןולח רמוש\nhttp://www.xbill.org/ ךותמ הקיפרג
+About[hu]=Billy ül az ablakban\nA grafika a http://www.xbill.org/-ról származik
+About[sl]=Statično okno\nGrafika z http://www.xbill.org/
+About[sv]=Statisk fönstervakt\nGrafik från http://www.xbill.org/
+About[uk]=Натурщик статичного вікна\nГрафіка з http://www.xbill.org/
 Icon=billy.png
 
 [Base]

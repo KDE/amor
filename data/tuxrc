@@ -3,7 +3,26 @@
 PixmapPath=static
 Static=true
 Description=Unanimated Tux
+Description[da]=Ikke animeret Tux
+Description[de]=Tux ohne Animationen
+Description[es]=Tux inanimado
+Description[he]=השפנה אלל סקט
+Description[hu]=Tux (nem animált)
+Description[pt_BR]=Tux Não-Animado
+Description[pt]=Tux Não-Animado
+Description[sl]=Neanimiran Tux
+Description[sv]=Tux utan animering
 About=Static window sitter
+About[az]=Statik pəncərə mürəbbiyəsi
+About[da]=Statisk vinduespasser
+About[de]=Statischer Fenstersitzer
+About[es]=Niñera de ventana estática
+About[he]=יטטס ןולח רמוש
+About[hu]=Statikus ablakdíszítés
+About[pt_BR]=Boneco estático em cima da janela
+About[pt]=Boneco estático em cima da janela
+About[sl]=Statično okno
+About[sv]=Statisk fönstervakt
 Icon=tux.png
 
 [Base]
