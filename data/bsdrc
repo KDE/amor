@@ -1,0 +1,13 @@
+# KDE Config File
+[Config]
+PixmapPath=static
+Static=true
+Description=BSD Mascot
+About=Static window sitter
+Icon=bsd.png
+
+[Base]
+Sequence=bsd.png
+HotspotX=25
+HotspotY=54
+

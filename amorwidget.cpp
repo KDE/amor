@@ -20,6 +20,7 @@ AmorWidget::AmorWidget()
       mPixmap(0)
 {
     setBackgroundMode( NoBackground );
+    dragging = false;
 }
 
 //---------------------------------------------------------------------------
@@ -62,8 +63,39 @@ void AmorWidget::paintEvent(QPaintEvent *)
 //
 // The user clicked on the widget
 //
+void AmorWidget::mousePressEvent(QMouseEvent *me)
+{
+    clickPos = me->globalPos();
+}
+
+//---------------------------------------------------------------------------
+//
+// The user moved the mouse
+//
+void AmorWidget::mouseMoveEvent(QMouseEvent *me)
+{
+    if ( me->state() == LeftButton ) {
+	if ( !dragging && (clickPos-me->globalPos()).manhattanLength() > 3 )
+	    dragging = true;
+	if ( dragging ) {
+	    emit dragged( me->globalPos() - clickPos, false );
+	    clickPos = me->globalPos();
+	}
+    }
+}
+
+//---------------------------------------------------------------------------
+//
+// The user clicked on the widget
+//
 void AmorWidget::mouseReleaseEvent(QMouseEvent *me)
 {
-    emit mouseClicked(me->globalPos());
+    if ( dragging )
+	emit dragged( me->globalPos() - clickPos, true );
+    else if ( me->state() == RightButton )
+	emit mouseClicked(clickPos);
+
+    clickPos = QPoint();
+    dragging = false;
 }
 

@@ -1,0 +1,13 @@
+# KDE Config File
+[Config]
+PixmapPath=static
+Static=true
+Description=Little Billy
+About=Static window sitter\nGraphic from http://www.xbill.org/
+Icon=billy.png
+
+[Base]
+Sequence=billy.png
+HotspotX=14
+HotspotY=40
+

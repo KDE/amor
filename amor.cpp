@@ -74,6 +74,8 @@ Amor::Amor() : QObject(), DCOPObject( "AmorIface" )
         mAmor = new AmorWidget();
         connect(mAmor, SIGNAL(mouseClicked(const QPoint &)),
                         SLOT(slotMouseClicked(const QPoint &)));
+        connect(mAmor, SIGNAL(dragged(const QPoint &, bool)),
+                        SLOT(slotWidgetDragged(const QPoint &, bool)));
         mAmor->resize(mTheme.maximumSize());
 
         mTimer = new QTimer(this);
@@ -148,6 +150,8 @@ void Amor::reset()
     mAmor = new AmorWidget();
     connect(mAmor, SIGNAL(mouseClicked(const QPoint &)),
                     SLOT(slotMouseClicked(const QPoint &)));
+    connect(mAmor, SIGNAL(dragged(const QPoint &, bool)),
+		    SLOT(slotWidgetDragged(const QPoint &, bool)));
     mAmor->resize(mTheme.maximumSize());
 }
 
@@ -172,17 +176,28 @@ bool Amor::readConfig()
         return false;
     }
 
-    const char *groups[] = { ANIM_BASE, ANIM_NORMAL, ANIM_FOCUS, ANIM_BLUR,
-                            ANIM_DESTROY, ANIM_SLEEP, ANIM_WAKE, 0 };
-
-    // Read all the standard animation groups
-    for (int i = 0; groups[i]; i++)
+    if ( !mTheme.isStatic() )
     {
-        if (mTheme.readGroup(groups[i]) == false)
-        {
-            KMessageBox::error(0, i18n("Error reading group: ") + groups[i]);
-            return false;
-        }
+	const char *groups[] = { ANIM_BASE, ANIM_NORMAL, ANIM_FOCUS, ANIM_BLUR,
+				ANIM_DESTROY, ANIM_SLEEP, ANIM_WAKE, 0 };
+
+	// Read all the standard animation groups
+	for (int i = 0; groups[i]; i++)
+	{
+	    if (mTheme.readGroup(groups[i]) == false)
+	    {
+		KMessageBox::error(0, i18n("Error reading group: ") + groups[i]);
+		return false;
+	    }
+	}
+    }
+    else
+    {
+	if ( mTheme.readGroup( ANIM_BASE ) == false )
+	{
+	    KMessageBox::error(0, i18n("Error reading group: ") + ANIM_BASE);
+	    return false;
+	}
     }
 
     // Get the base animation
@@ -245,16 +260,30 @@ void Amor::selectAnimation(State state)
             if (mTargetWin != None)
             {
                 mTargetRect = KWin::info(mTargetWin).frameGeometry;
-                if (mCurrAnim->frame())
-                {
-                    mPosition = (kapp->random() %
-                        (mTargetRect.width() - mCurrAnim->frame()->width())) +
-                         mCurrAnim->hotspot().x();
-                }
-                else
-                {
-                    mPosition = mTargetRect.width()/2;
-                }
+		if ( mTheme.isStatic() )
+		{
+		    if ( mConfig.mStaticPos < 0 )
+			mPosition = mTargetRect.width() + mConfig.mStaticPos;
+		    else
+			mPosition = mConfig.mStaticPos;
+		    if ( mPosition >= mTargetRect.width() )
+			mPosition = mTargetRect.width()-1;
+		    else if ( mPosition < 0 )
+			mPosition = 0;
+		}
+		else
+		{
+		    if (mCurrAnim->frame())
+		    {
+			mPosition = (kapp->random() %
+			    (mTargetRect.width() - mCurrAnim->frame()->width())) +
+			     mCurrAnim->hotspot().x();
+		    }
+		    else
+		    {
+			mPosition = mTargetRect.width()/2;
+		    }
+		}
             }
             else
             {
@@ -362,26 +391,6 @@ void Amor::restack()
 
 //---------------------------------------------------------------------------
 //
-QRect Amor::windowGeometry(WId win)
-{
-    QRect rect;
-    XWindowAttributes attr;
-    if (XGetWindowAttributes(qt_xdisplay(), win, &attr))
-    {
-        int x, y;
-        Window child;
-        XTranslateCoordinates(qt_xdisplay(), win, qt_xrootwin(),
-                              0, 0, &x, &y, &child);
-        rect.setRect(x, y, attr.width, attr.height);
-    }
-
-    kdDebug(10000) << "Window geometry: " << rect.x() << ", " << rect.y() << ", " << rect.width() << " x " << rect.height() << endl;
-
-    return rect;
-}
-
-//---------------------------------------------------------------------------
-//
 // The user clicked on our animation.
 //
 void Amor::slotMouseClicked(const QPoint &pos)
@@ -444,7 +453,8 @@ void Amor::slotCursorTimeout()
 //
 void Amor::slotTimeout()
 {
-    mPosition += mCurrAnim->movement();
+    if (!mTheme.isStatic())
+	mPosition += mCurrAnim->movement();
     mAmor->setPixmap(mCurrAnim->frame());
     mAmor->move(mPosition + mTargetRect.x() - mCurrAnim->hotspot().x(),
                  mTargetRect.y() - mCurrAnim->hotspot().y() + mConfig.mOffset);
@@ -470,7 +480,10 @@ void Amor::slotTimeout()
         }
     }
 
-    mTimer->start(mCurrAnim->delay(), true);
+    if (mTheme.isStatic())
+	mTimer->start(mState == Normal ? 10000 : 50, true);
+    else
+	mTimer->start(mCurrAnim->delay(), true);
 
     if (!mCurrAnim->next())
     {
@@ -533,6 +546,35 @@ void Amor::slotAbout()
                 i18n("Copyright (c) 1999 Martin R. Jones <mjones@kde.org>\n") +
                 "\nhttp://www.powerup.com.au/~mjones/amor/";
     KMessageBox::about(0, about, i18n("About Amor"));
+}
+
+//---------------------------------------------------------------------------
+//
+// Widget dragged
+//
+void Amor::slotWidgetDragged( const QPoint &delta, bool release )
+{
+    if (mCurrAnim->frame())
+    {
+	int newPosition = mPosition + delta.x();
+	if (mCurrAnim->totalMovement() + newPosition > mTargetRect.width())
+	    newPosition = mTargetRect.width() - mCurrAnim->totalMovement();
+	else if (mCurrAnim->totalMovement() + newPosition < 0)
+	    newPosition = -mCurrAnim->totalMovement();
+	mPosition = newPosition;
+        mAmor->move(mPosition + mTargetRect.x() - mCurrAnim->hotspot().x(),
+                 mAmor->y());
+
+	if ( mTheme.isStatic() && release ) {
+	    // static animations save the new position as preferred.
+	    int savePos = mPosition;
+	    if ( savePos > mTargetRect.width()/2 )
+		savePos -= (mTargetRect.width()+1);
+
+	    mConfig.mStaticPos = savePos;
+	    mConfig.write();
+	}
+    }
 }
 
 //---------------------------------------------------------------------------
@@ -636,7 +678,6 @@ void Amor::slotWindowChange(WId win)
     else
     {
         // The size or position of the window has changed.
-//        mTargetRect = windowGeometry(mTargetWin);
         mTargetRect = info.frameGeometry;
 
         // make sure the animation is still on the window.

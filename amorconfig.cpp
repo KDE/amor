@@ -20,6 +20,7 @@ AmorConfig::AmorConfig()
     mTheme = "blobrc";
     mTips = false;
     mAppTips = true;
+    mStaticPos = 20;
 }
 
 //---------------------------------------------------------------------------
@@ -36,6 +37,7 @@ void AmorConfig::read()
     mTheme = config->readEntry("Theme", "blobrc");
     mTips  = config->readBoolEntry("Tips", false);
     mAppTips  = config->readBoolEntry("ApplicationTips", true);
+    mStaticPos  = config->readNumEntry("StaticPosition", 20);
 }
 
 //---------------------------------------------------------------------------
@@ -52,6 +54,7 @@ void AmorConfig::write()
     config->writeEntry("Theme", mTheme);
     config->writeEntry("Tips", mTips);
     config->writeEntry("ApplicationTips", mAppTips);
+    config->writeEntry("StaticPosition", mStaticPos);
 
     config->sync();
 }

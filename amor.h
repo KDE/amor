@@ -54,6 +54,7 @@ protected slots:
     void slotConfigChanged();
     void slotOffsetChanged(int);
     void slotAbout();
+    void slotWidgetDragged( const QPoint &delta, bool release );
     void restack();
     void hideBubble();
 
@@ -67,7 +68,6 @@ protected:
     AmorAnim *randomAnimation(QList<AmorAnim> &animList);
     void selectAnimation(State state=Normal);
     void active();
-    QRect windowGeometry(WId);
 
 private:
     KWinModule       *mWin;

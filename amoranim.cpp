@@ -97,7 +97,7 @@ void AmorAnim::readConfig(KConfigBase &config)
 
     // Add the overlap of the last frame to the total movement.
     const QPoint &lastHotspot = mHotspot[mHotspot.size()-1];
-    if (mTotalMovement >= 0)
+    if (mTotalMovement > 0)
     {
         const QPixmap *lastFrame =
                     AmorPixmapManager::manager()->pixmap(mSequence.last());
@@ -106,7 +106,7 @@ void AmorAnim::readConfig(KConfigBase &config)
             mTotalMovement += (lastFrame->width() - lastHotspot.x());
         }
     }
-    else
+    else if (mTotalMovement < 0)
     {
         mTotalMovement -= lastHotspot.x();
     }
@@ -159,6 +159,8 @@ bool AmorThemeManager::setTheme(const QString & file)
         mPath += pixmapPath;
     }
 
+    mStatic = mConfig->readBoolEntry("Static", false);
+
     mMaximumSize.setWidth(0);
     mMaximumSize.setHeight(0);
 
@@ -173,7 +175,12 @@ bool AmorThemeManager::setTheme(const QString & file)
 //
 AmorAnim *AmorThemeManager::random(const QString & group)
 {
-    AmorAnimationGroup *animGroup = mAnimations.find(group);
+    QString grp( group );
+
+    if (mStatic)
+	grp = "Base";
+
+    AmorAnimationGroup *animGroup = mAnimations.find(grp);
 
     if (animGroup) {
 	int idx = kapp->random()%animGroup->count();

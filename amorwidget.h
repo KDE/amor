@@ -30,13 +30,18 @@ public:
 
 signals:
     void mouseClicked(const QPoint &pos);
+    void dragged( const QPoint &delta, bool release );
 
 protected:
     void paintEvent(QPaintEvent *);
+    void mousePressEvent(QMouseEvent *);
+    void mouseMoveEvent(QMouseEvent *);
     void mouseReleaseEvent(QMouseEvent *);
 
 protected:
     const QPixmap *mPixmap;
+    QPoint clickPos;
+    bool dragging;
 };
 
 #endif // AMORWIDGET_H 

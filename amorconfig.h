@@ -31,6 +31,7 @@ public:
     int      mOffset;
     bool     mTips;
     bool     mAppTips;
+    int      mStaticPos;
 };
 
 #endif // AMORCONFIG_H 

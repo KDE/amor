@@ -79,6 +79,8 @@ public:
 
     bool setTheme(const QString & file);
     bool readGroup(const QString & seq);
+    bool isStatic() const
+	{ return mStatic; }
 
     AmorAnim *random(const QString & group);
 
@@ -89,6 +91,7 @@ protected:
     KSimpleConfig     *mConfig;
     QSize             mMaximumSize; // The largest pixmap used
     QDict<AmorAnimationGroup> mAnimations; // list of animation groups
+    bool              mStatic;	    // static image
 };
 
 #endif // AMORANIM_H 

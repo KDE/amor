@@ -1,0 +1,13 @@
+# KDE Config File
+[Config]
+PixmapPath=static
+Static=true
+Description=Unanimated Tux
+About=Static window sitter
+Icon=tux.png
+
+[Base]
+Sequence=tux.png
+HotspotX=25
+HotspotY=54
+
