@@ -9,7 +9,6 @@
 #include <unistd.h>
 #include <time.h>
 
-#include <qmessagebox.h>
 #include <qpopupmenu.h>
 
 #include <klocale.h>
@@ -533,11 +532,7 @@ void Amor::slotAbout()
                 i18n("Amusing Misuse Of Resources\n\n") +
                 i18n("Copyright (c) 1999 Martin R. Jones <mjones@kde.org>\n") +
                 "\nhttp://www.powerup.com.au/~mjones/amor/";
-    QMessageBox mb;
-    mb.setText(about);
-    mb.setCaption(i18n("About Amor"));
-    mb.setIcon(QMessageBox::Information);
-    mb.show();
+    KMessageBox::about(0, about, i18n("About Amor"));
 }
 
 //---------------------------------------------------------------------------
