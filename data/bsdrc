@@ -19,7 +19,7 @@ Description[sk]=Maskot FreeBSD
 Description[sv]=FreeBSD-maskot
 Description[tr]=FreeBSD Maskotu
 Description[xx]=xx
-Description[zh_TW.Big5]=FreeBSD 吉祥物
+Description[zh_TW]=FreeBSD 吉祥物
 About=Static window sitter
 About[af]=statiese venster sitter
 About[ar]=قاعدة النوافذ الساكنة
@@ -46,7 +46,8 @@ About[sv]=Statisk fönstervakt
 About[uk]=Статична прикраса для вікна
 About[xh]=Umhlaleli ongatshintshiyo we window
 About[xx]=xx
-About[zh_TW.Big5]=靜態視窗作者
+About[zh_TW]=靜態視窗作者
+About[zu]=Umhlaleli ongashintshiyo we windi
 Icon=bsd.png
 
 [Base]

@@ -29,7 +29,8 @@ Description[tr]=Küçük İbo
 Description[uk]=Маленький Біллі
 Description[xh]=Inkonkxa encinane enomqheba wocingo estyenziswa njengeketile
 Description[xx]=xx
-Description[zh_TW.Big5]=小比利
+Description[zh_TW]=小比利
+Description[zu]=U Billy Omncane
 About=Static window sitter\nGraphic from http://www.xbill.org/
 About[af]=statiese venster sitter\ngraphic van http://www.xbill.org/
 About[ar]=قاعدة النوافذ الساكنة \nالرسوم من http://www.xbill.org
@@ -53,7 +54,8 @@ About[sv]=Statisk fönstervakt\nGrafik från http://www.xbill.org/
 About[uk]=Натурщик статичного вікна\nГрафіка з http://www.xbill.org/
 About[xh]=Umhlaleli ongatshintshiyo we window\nUmzobo osuka kwi http://www.xbill.org/
 About[xx]=xx
-About[zh_TW.Big5]=靜態視窗作者\nGraphic from http://www.xbill.org/
+About[zh_TW]=靜態視窗作者\nGraphic from http://www.xbill.org/
+About[zu]=Umhlaleli ongashintshiyo we windi\nUdwebi osuka kwi http://www.xbill.org/
 Icon=billy.png
 
 [Base]
