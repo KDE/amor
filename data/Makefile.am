@@ -1,6 +1,6 @@
 SUBDIRS = blob ghost eyes b neko pingu worm
 
-data_DATA = blobrc ghostrc eyesrc brc nekorc pingurc wormrc tips-en tips-fr
+data_DATA = blobrc ghostrc eyesrc brc nekorc pingurc wormrc tips-en 
 
 # This is where it will all be installed
 datadir = $(kde_datadir)/amor
