@@ -18,6 +18,7 @@
 #include <kstartupinfo.h>
 #include <kwin.h>
 #include <kwinmodule.h>
+#include <kiconloader.h>
 
 #include "amor.h"
 #include "amor.moc"
@@ -441,10 +442,10 @@ void Amor::slotMouseClicked(const QPoint &pos)
     {
         mMenu = new KPopupMenu();
 	mMenu->insertTitle("Amor"); // I really don't want this i18n'ed
-        mMenu->insertItem(i18n("&Options..."), this, SLOT(slotConfigure()));
+        mMenu->insertItem(SmallIcon("configure"),i18n("&Options..."), this, SLOT(slotConfigure()));
         mMenu->insertItem(i18n("&About"), this, SLOT(slotAbout()));
         mMenu->insertSeparator();
-        mMenu->insertItem(i18n("&Quit"), kapp, SLOT(quit()));
+        mMenu->insertItem(SmallIcon("exit"),i18n("&Quit"), kapp, SLOT(quit()));
     }
 
     mMenu->exec(pos);
