@@ -13,6 +13,7 @@
 #include <klocale.h>
 #include <kcmdlineargs.h>
 #include <kaboutdata.h>
+#include <dcopclient.h>
 
 #include "version.h"
 #include "amor.h"
@@ -39,6 +40,8 @@ int main(int argc, char *argv[])
     app.setTopWidget(sessionWidget);
 
     new Amor();
+
+    app.dcopClient()->setDefaultObject( "AmorIface" );
 
     return app.exec();
 }
