@@ -518,7 +518,7 @@ void Amor::slotTimeout()
     }
 
     if (mTheme.isStatic())
-	mTimer->start(mState == Normal ? 10000 : 0, true);
+	mTimer->start(((mState == Normal) || (mState == Sleeping)) ? 10000 : 100, true);
     else
 	mTimer->start(mCurrAnim->delay(), true);
 
