@@ -19,6 +19,7 @@ AmorWidget::AmorWidget()
 	: QWidget(0, 0, WStyle_Customize | WStyle_NoBorder ),
       mPixmap(0)
 {
+    setBackgroundMode( NoBackground );
 }
 
 //---------------------------------------------------------------------------
@@ -54,9 +55,7 @@ void AmorWidget::setPixmap(const QPixmap *pixmap)
 void AmorWidget::paintEvent(QPaintEvent *)
 {
     if (mPixmap)
-    {
         bitBlt( this, 0, 0, mPixmap );
-    }
 }
 
 //---------------------------------------------------------------------------

@@ -146,7 +146,7 @@ bool Amor::readConfig()
     // Read user preferences
     mConfig.read();
     
-    mConfig.mOnTop = true;       // XXX until normal mode is fixed
+//    mConfig.mOnTop = true;       // XXX until normal mode is fixed
 
     if (mConfig.mTips)
     {
@@ -328,28 +328,30 @@ void Amor::restack()
 
     debug("restacking");
 
+    Window sibling = mTargetWin;
     Window dw, parent = None, *wins;
-    unsigned int nwins = 0;
 
-    // We must use the target window's parent as our sibling.
-    // Is there a faster way to get parent window than XQueryTree?
-    if (XQueryTree(qt_xdisplay(), mTargetWin, &dw, &parent, &wins, &nwins))
-    {
-        if (nwins)
+    do {
+        unsigned int nwins = 0;
+
+        // We must use the target window's parent as our sibling.
+        // Is there a faster way to get parent window than XQueryTree?
+        if (XQueryTree(qt_xdisplay(), sibling, &dw, &parent, &wins, &nwins))
         {
-            XFree(wins);
+            if (nwins)
+            {
+                XFree(wins);
+            }
         }
-    }
 
-    if (parent != None)
-    {
-      debug("Parent = %ld", parent);
-    }
+        if (parent != None && parent != dw )
+            sibling = parent;
+    } while ( parent != None && parent != dw );
 
     // Set animation's stacking order to be above the window manager's
     // decoration of target window.
     XWindowChanges values;
-    values.sibling = parent != None ? parent : mTargetWin;
+    values.sibling = sibling;
     values.stack_mode = Above;
     XConfigureWindow(qt_xdisplay(), mAmor->winId(), CWSibling | CWStackMode,
                      &values);

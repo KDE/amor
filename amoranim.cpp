@@ -8,10 +8,8 @@
 #include <stdlib.h>
 #include <kconfig.h>
 #include <kapp.h>
-#if QT_VERSION >= 199
 #include <kglobal.h>
 #include <kstddirs.h>
-#endif
 #include "amoranim.h"
 #include "amorpm.h"
 
@@ -44,9 +42,7 @@ const QPixmap *AmorAnim::frame()
     const QPixmap *pixmap = 0;
 
     if (validFrame())
-    {
         pixmap = AmorPixmapManager::manager()->pixmap(mSequence.at(mCurrent));
-    }
 
     return pixmap;
 }
@@ -66,9 +62,7 @@ void AmorAnim::readConfig(KConfigBase &config)
         const QPixmap *pixmap =
                         AmorPixmapManager::manager()->load(mSequence.at(i));
         if (pixmap)
-        {
             mMaximumSize = mMaximumSize.expandedTo(pixmap->size());
-        }
     }
 
     // Read the delays between frames.
@@ -76,9 +70,7 @@ void AmorAnim::readConfig(KConfigBase &config)
     int entries = config.readListEntry("Delay",list);
     mDelay.resize(frames);
     for (int i = 0; i < entries && i < frames; i++)
-    {
         mDelay[i] = atoi(list.at(i));
-    }
 
     // Read the distance to move between frames and calculate the total
     // distance that this aniamtion moves from its starting position.
@@ -94,15 +86,11 @@ void AmorAnim::readConfig(KConfigBase &config)
     entries = config.readListEntry("HotspotX",list);
     mHotspot.resize(frames);
     for (int i = 0; i < entries && i < frames; i++)
-    {
         mHotspot[i].setX(atoi(list.at(i)));
-    }
 
     entries = config.readListEntry("HotspotY",list);
     for (int i = 0; i < entries && i < frames; i++)
-    {
         mHotspot[i].setY(atoi(list.at(i)));
-    }
 
     // Add the overlap of the last frame to the total movement.
     const QPoint &lastHotspot = mHotspot[mHotspot.size()-1];
@@ -135,33 +123,17 @@ AmorThemeManager::AmorThemeManager()
 AmorThemeManager::~AmorThemeManager()
 {
     if (mConfig)
-    {
         delete mConfig;
-    }
 }
 
 //---------------------------------------------------------------------------
 //
 bool AmorThemeManager::setTheme(const char *file)
 {
-#if QT_VERSION >= 199
     mPath = locate("appdata", file);
-#else
-    mPath = KApplication::localkdedir().copy();
-    mPath += "/share/apps/amor/";
-    mPath += file;
 
-    if (access(mPath, R_OK))
-    {
-        mPath = KApplication::kde_datadir().copy();
-        mPath += "/amor/";
-        mPath += file;
-    }
-#endif
     if (mConfig)
-    {
         delete mConfig;
-    }
 
     mConfig = new KSimpleConfig(mPath, true);
     mConfig->setGroup("Config");
@@ -170,9 +142,7 @@ bool AmorThemeManager::setTheme(const char *file)
     // pixmap manager.
     QString pixmapPath = mConfig->readEntry("PixmapPath");
     if (pixmapPath.isEmpty())
-    {
         return false;
-    }
 
     if (pixmapPath[0] == '/')
     {
@@ -203,9 +173,7 @@ AmorAnim *AmorThemeManager::random(const char *group)
     AmorAnimationGroup *animGroup = mAnimations.find(group);
 
     if (animGroup)
-    {
         return animGroup->at(kapp->random()%animGroup->count());
-    }
 
     return 0;
 }
@@ -250,9 +218,7 @@ bool AmorThemeManager::readGroup(const char *seq)
 
     // Couldn't read any entries at all
     if (entries == 0)
-    {
         return false;
-    }
 
     mAnimations.insert(seq, animList);
 
