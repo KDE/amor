@@ -265,29 +265,25 @@ void Amor::showMessage( QString message )
 //
 void Amor::reset()
 {
-    mTimer->stop();
+    hideBubble();
+
+    mAmor->setPixmap(0L);	// get rid of your old copy of the pixmap
 
     AmorPixmapManager::manager()->reset();
     mTips.reset();
-    delete mAmor;
 
-    mTipsQueue.clear();
+//    mTipsQueue.clear();	Why had I chosen to clean the tips queue? insane!
 
     readConfig();
 
-    mTargetWin  = 0;
-    mNextTarget = 0;
     mCurrAnim   = mBaseAnim;
     mPosition   = mCurrAnim->hotspot().x();
     mState      = Normal;
 
-    mAmor = new AmorWidget();
-    mForceHideAmorWidget = false;
-    connect(mAmor, SIGNAL(mouseClicked(const QPoint &)),
-                    SLOT(slotMouseClicked(const QPoint &)));
-    connect(mAmor, SIGNAL(dragged(const QPoint &, bool)),
-		    SLOT(slotWidgetDragged(const QPoint &, bool)));
-    mAmor->resize(mTheme.maximumSize());
+    mAmor->resize(mTheme.maximumSize()); 
+    mCurrAnim->reset();
+
+    mTimer->start(0, true);
 }
 
 //---------------------------------------------------------------------------

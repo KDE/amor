@@ -43,7 +43,7 @@
 // Constructor
 //
 AmorDialog::AmorDialog()
-    : KDialogBase(0, "amordlg", false, i18n("Options"), Ok|Cancel, Ok )
+    : KDialogBase(0, "amordlg", false, i18n("Options"), Ok|Apply|Cancel, Ok )
 {
     mConfig.read();
     QVBox *mainwidget = makeVBoxMainWidget();
@@ -84,7 +84,7 @@ AmorDialog::AmorDialog()
 
     checkBox = new QCheckBox(i18n("Show random tips"), mainwidget);
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotRandomTips(bool)));
-    checkBox->setChecked(mConfig.mTips);
+    checkBox->setChecked(mConfig.mTips); // always keep this one after the connect, or the QList would not be grayed when it should
 
     checkBox = new QCheckBox(i18n("Use a random character"), mainwidget);
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotRandomTheme(bool)));
@@ -205,6 +205,7 @@ void AmorDialog::slotRandomTips(bool tips)
 //
 void AmorDialog::slotRandomTheme(bool randomTheme)
 {
+    mThemeListBox->setEnabled(!randomTheme);
     mConfig.mRandomTheme = randomTheme;
 }
 
@@ -226,6 +227,16 @@ void AmorDialog::slotOk()
     mConfig.write();
     emit changed();
     accept();
+}
+
+//---------------------------------------------------------------------------
+//
+// User clicked Ok
+//
+void AmorDialog::slotApply()
+{
+    mConfig.write();
+    emit changed();
 }
 
 //---------------------------------------------------------------------------

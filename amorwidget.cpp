@@ -56,15 +56,18 @@ AmorWidget::~AmorWidget()
 //
 void AmorWidget::setPixmap(const QPixmap *pixmap)
 {
-    if (pixmap)
+    mPixmap = pixmap;
+
+    if (mPixmap)
     {
-        mPixmap = pixmap;
         if (mPixmap->mask())
         {
             XShapeCombineMask( x11Display(), winId(), ShapeBounding, 0, 0,
                                 mPixmap->mask()->handle(), ShapeSet );
             repaint(false);
         }
+    
+	update();
     }
 }
 
@@ -76,6 +79,8 @@ void AmorWidget::paintEvent(QPaintEvent *)
 {
     if (mPixmap)
         bitBlt( this, 0, 0, mPixmap );
+    else
+	erase();
 }
 
 //---------------------------------------------------------------------------

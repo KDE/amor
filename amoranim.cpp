@@ -96,7 +96,7 @@ void AmorAnim::readConfig(KConfigBase &config)
     // distance that this aniamtion moves from its starting position.
     entries = config.readListEntry("Movement",list);
     mMovement.resize(frames);
-    for (int i = 0; i < entries; i++)
+    for (int i = 0; i < entries && i < frames; i++)
     {
         mMovement[i] = atoi(list.at(i));
         mTotalMovement += mMovement[i];

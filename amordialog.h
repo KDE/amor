@@ -67,6 +67,7 @@ protected slots:
     void slotApplicationTips(bool);
     void slotOffset(int);
     void slotOk();
+    void slotApply();
     void slotCancel();
 
 protected:
