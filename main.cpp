@@ -12,6 +12,7 @@
 #include <kwinmodule.h>
 #include <klocale.h>
 #include <kcmdlineargs.h>
+#include <kaboutdata.h>
 
 #include "version.h"
 #include "amor.h"
@@ -21,8 +22,12 @@ static const char *description = I18N_NOOP("KDE creature for your desktop.");
 
 int main(int argc, char *argv[])
 {
-    KCmdLineArgs::init(argc, argv, "amor", description, AMOR_VERSION );
-
+    KAboutData aboutData( "amor", I18N_NOOP("amor"),
+        AMOR_VERSION, description, KAboutData::License_GPL,
+        "(c) 1999, Martin R. Jones");
+    aboutData.addAuthor("Martin R. Jones",0, "mjones@kde.org");
+    KCmdLineArgs::init( argc, argv, &aboutData );
+    
     KApplication app;
 
     // session management
