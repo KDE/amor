@@ -32,8 +32,7 @@ messages:
 	$(XGETTEXT) tips.cpp *.cpp -o $(podir)/amor.pot
 	rm -f tips.cpp
 
-appsdir = $(kde_appsdir)/Toys
-apps_DATA = amor.desktop
+xdg_apps_DATA = amor.desktop
 
 KDE_ICON = amor
 
