@@ -93,7 +93,7 @@ QueueItem::QueueItem(itemType ty, QString te, int ti)
     if (nesting) // malformed html
     {
 #ifdef DEBUG_AMOR
-	kdDebug(15000) << "QueueItem::QueueItem(): Malformed HTML!" << endl;
+	kdDebug(10000) << "QueueItem::QueueItem(): Malformed HTML!" << endl;
 #endif
 	effectiveLength = te.length();
     }
@@ -460,7 +460,7 @@ void Amor::selectAnimation(State state)
                 mTimer->stop();
             }
             mAmor->hide();
-
+	    
             restack();
             mState = Normal;
             break;
@@ -633,6 +633,7 @@ void Amor::slotTimeout()
 {
     if ( mForceHideAmorWidget )
         return;
+
     if (!mTheme.isStatic())
 	mPosition += mCurrAnim->movement();
     mAmor->setPixmap(mCurrAnim->frame());
@@ -658,7 +659,7 @@ void Amor::slotTimeout()
     }
 
     if (mTheme.isStatic())
-	mTimer->start(mState == Normal ? 10000 : 0, true);
+	mTimer->start((mState == Normal) || (mState == Sleeping) ? 1000 : 100, true);
     else
 	mTimer->start(mCurrAnim->delay(), true);
 
@@ -935,7 +936,7 @@ void Amor::slotBubbleTimeout()
     // has the queue item been displayed for long enough?
     QueueItem *first = mTipsQueue.head();
 #ifdef DEBUG_AMOR
-    if (!first)	kdDebug(15000) << "Amor::slotBubbleTimeout(): empty queue!" << endl;
+    if (!first)	kdDebug(10000) << "Amor::slotBubbleTimeout(): empty queue!" << endl;
 #endif
     if ((first->time() > BUBBLE_TIME_STEP) && (mBubble->isVisible()))
     {
