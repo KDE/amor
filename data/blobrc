@@ -2,6 +2,7 @@
 [Config]
 PixmapPath=blob
 Description=Multi-Talented Spot
+Description[af]=Multi-Talented spot
 Description[bs]=Više-talentirana tačka
 Description[da]=Plet med multitalent
 Description[de]=Das Multi-Talent

@@ -2,6 +2,7 @@
 [Config]
 PixmapPath=worm
 Description=Little Worm
+Description[af]=klein wurm
 Description[bs]=Mali crv
 Description[da]=Lille orm
 Description[de]=Kleiner Wurm
