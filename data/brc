@@ -6,6 +6,7 @@
 [Config]
 PixmapPath=b
 Description=Bonhomme
+Description[bg]=Добродетелност
 Description[cs]=Mužíček
 Description[et]=Kriipsu-Juku
 Description[pl]=Dobry człowiek
