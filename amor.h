@@ -45,6 +45,7 @@ public slots:
     void slotWindowRemove(WId);
     void slotStackingChanged();
     void slotWindowChange(WId);
+    void slotDesktopChange(int);
 
 protected slots:
     void slotMouseClicked(const QPoint &pos);

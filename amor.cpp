@@ -70,6 +70,8 @@ Amor::Amor() : QObject(), DCOPObject( "AmorIface" )
                 this, SLOT(slotStackingChanged()));
         connect(mWin, SIGNAL(windowChanged(WId)),
                 this, SLOT(slotWindowChange(WId)));
+        connect(mWin, SIGNAL(currentDesktopChanged(int)),
+                this, SLOT(slotDesktopChange(int)));
 
         mAmor = new AmorWidget();
         connect(mAmor, SIGNAL(mouseClicked(const QPoint &)),
@@ -358,7 +360,7 @@ void Amor::restack()
         return;
     }
 
-    kdDebug(10000) << "restacking" << endl;
+//    kdDebug(10000) << "restacking" << endl;
 
     Window sibling = mTargetWin;
     Window dw, parent = None, *wins;
@@ -583,7 +585,7 @@ void Amor::slotWidgetDragged( const QPoint &delta, bool release )
 //
 void Amor::slotWindowActivate(WId win)
 {
-    kdDebug(10000) << "Window activated" << endl;
+//    kdDebug(10000) << "Window activated:" << win << endl;
 
     mTimer->stop();
     mNextTarget = win;
@@ -602,7 +604,8 @@ void Amor::slotWindowActivate(WId win)
     else if (mNextTarget)
     {
         // We are setting focus to a new window
-        mState = Focus;
+        if (mState != Focus )
+	    selectAnimation(Focus);
         mTimer->start(0, true);
     }
     else
@@ -619,7 +622,7 @@ void Amor::slotWindowActivate(WId win)
 //
 void Amor::slotWindowRemove(WId win)
 {
-    kdDebug(10000) << "Window removed" << endl;
+//    kdDebug(10000) << "Window removed" << endl;
     if (win == mTargetWin)
     {
         // This is an active event that affects the target window
@@ -637,7 +640,7 @@ void Amor::slotWindowRemove(WId win)
 //
 void Amor::slotStackingChanged()
 {
-    kdDebug(10000) << "Stacking changed" << endl;
+//    kdDebug(10000) << "Stacking changed" << endl;
 
     // This is an active event that affects the target window
     time(&mActiveTime);
@@ -668,7 +671,7 @@ void Amor::slotWindowChange(WId win)
     if (info.isIconified() ||
         info.mappingState == NET::Withdrawn)
     {
-        kdDebug(10000) << "Iconic" << endl;
+//        kdDebug(10000) << "Iconic" << endl;
         // The target window has been iconified
         selectAnimation(Destroy);
         mTargetWin = None;
@@ -695,6 +698,20 @@ void Amor::slotWindowChange(WId win)
                      mConfig.mOffset);
         }
     }
+}
+
+//---------------------------------------------------------------------------
+//
+// Changed to a different desktop
+//
+void Amor::slotDesktopChange(int)
+{
+//    kdDebug(10000) << "Desktop change" << endl;
+    mNextTarget = None;
+    mTargetWin = None;
+    selectAnimation( Normal );
+    mTimer->stop();
+    mAmor->hide();
 }
 
 //===========================================================================
