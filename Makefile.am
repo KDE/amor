@@ -28,7 +28,7 @@ noinst_HEADERS = amor.h amorwidget.h amoranim.h amorpm.h amordialog.h\
 METASOURCES = AUTO
 
 messages: tips.cpp
-	$(XGETTEXT) tips.cpp $(amor_SOURCES) -o $(podir)/amor.pot
+	$(XGETTEXT) tips.cpp *.cpp -o $(podir)/amor.pot
 
 tips.cpp: data/tips-en
 	perl ./preparetips > tips.cpp
