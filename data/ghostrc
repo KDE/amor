@@ -3,7 +3,7 @@
 PixmapPath=ghost
 Description=Spooky Ghost
 Description[af]=Onheilspellende Spook
-Description[bg]=Призрачен Дух
+Description[bg]=Призрачен дух
 Description[bs]=Strašni duh
 Description[cs]=Strašidelný duch
 Description[cy]=Bwgan Arwsydus
@@ -40,6 +40,7 @@ About=By Martin R. Jones\nBased on an icon by the KDE artist team.
 About[af]=Deur Martin R. Jones\nBased op 'n ikoon Deur die Kde kunstenaar span.
 About[ar]=من مارتن ر. جونز\nمبنية على أيقونة من فريق رسامي KDE
 About[az]=Martin R. Jones tərəfindən\nBased on an icon by the KDE artist team.
+About[bg]=Автор Мартин Р. Джоунс\nБазирано на икона от КДЕ
 About[bs]=Autor Martin R. Jones\nBazirano na ikoni koju je napravio KDE tim umjetnika.
 About[cs]=Autor Martin R. Jones\nNa základě ikony z KDE
 About[da]=Af Martin R. Jones\nBaseret på et ikon af KDE's kunstnerhold.

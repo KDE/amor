@@ -5,6 +5,7 @@
 [Config]
 PixmapPath=neko
 Description=Neko
+Description[bg]=Неко
 Description[et]=Hiirepüüdja
 Description[ru]=Неко
 Description[th]=เน็คโก้
@@ -14,6 +15,7 @@ About=Artwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegel
 About[af]=Kunswerk van oneko deur Masayuki Koba\Namor'd deur Chris Spiegel
 About[ar]=عمل فني من أونيكو و من تصميم ماياسوكي كوبا\n نقلت الى Amor عن طريق كريس شبيغل
 About[az]=Masayuki Kobanın sənət abidəsi\nAMOR'd by Chris Spiegel
+About[bg]=Автор Масияки Коба\nАдаптация от Крис Шпигел
 About[bs]=Artwork iz oneko-a koji je napravio Masayuki Koba\nAMORovao Chris Spiegel
 About[cs]=Grafika z programu oneko, Masayuki Koba\nPřevod: Chris Spiegel
 About[da]=Billedmateriale fra oneko af Masayuki Koba\nAMOR'et af Chris Spiegel

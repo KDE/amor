@@ -2,6 +2,7 @@
 [Config]
 PixmapPath=tao
 Description=Tao
+Description[bg]=Тао
 Description[he]=טאו
 Description[ru]=Дао
 Description[th]=เต๋า
@@ -10,6 +11,7 @@ About=By Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang symbol inspired by my
 About[af]=Deur Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang simbool geïnspireer Deur my Tai Chi oefening.
 About[ar]=من تصميم دانييل فايفر <occitan@esperanto.org>
 About[az]=Daniel Pfeiffer <occitan@esperanto.org> tərəfindən\nYin Yang symbol inspired by my Tai Chi practice.
+About[bg]=Автор Даниел Пфайфар <occitan@esperanto.org>\nИдеята за символа идва от хобито на автора
 About[bs]=Autor Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang simbol inspirisan mojim prakticiranjem Tai Chi.
 About[cs]=Autor Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang symbol inspirován mým cvičením Taiči
 About[da]=Af Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang-symbol inspireret fra mine Tai Chi-øvelser.
