@@ -2,6 +2,7 @@
 [KDE Desktop Entry]
 Name=AMOR
 Name[it]=DSDR (AMOR)
+Name[ko]=아모르
 Exec=amor
 Icon=amor
 Type=Application
@@ -23,6 +24,7 @@ Comment[hu]=Erőforrás-fogyasztó program :)
 Comment[is]=amor:  Skemmtileg leið til að sóa reiknikrafti tölvunnar
 Comment[it]=Divertente spreco di risorse (Amusing Misuse Of Resources)
 Comment[ja]=驚くべきリソースの無駄使い
+Comment[ko]=재미있는 장난 꾸러기
 Comment[lt]=Linksmas piktnaudžiavimas ištekliais
 Comment[lv]=Uzjautrinoša Resursu Izšķērdēšana
 Comment[nl]=grappig misbruik van systeemmiddelen
@@ -38,7 +40,7 @@ Comment[sl]=Zanimivo zapravljanje virov
 Comment[sr]=Zabavna zloupotreba resursa :)
 Comment[sv]=Nöjsamt missbruk av resurser
 Comment[ta]=ÅÇí¸Ç¢ý ¾ÅÈ¡É ÀÂýÀ¡Î
-Comment[tr]=E�lenceli Kaynak Savurganl���
+Comment[tr]=Eğlenceli Kaynak Savurganlığı
 Comment[uk]=Дивне недоцільне використання ресурсів
 Comment[zh_CN.GB2312]=有趣的资源乱用
 Terminal=0
