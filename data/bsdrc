@@ -3,6 +3,8 @@
 PixmapPath=static
 Static=true
 Description=FreeBSD Mascot
+Description[da]=FreeBSD Maskot
+Description[he]=הקמיע של BSD
 About=Static window sitter
 About[az]=Statik pəncərə mürəbbiyəsi
 About[da]=Statisk vinduespasser
