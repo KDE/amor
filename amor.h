@@ -65,10 +65,10 @@ protected:
     enum State { Focus, Blur, Normal, Sleeping, Waking, Destroy };
 
     bool readConfig();
-    void readGroupConfig(KConfigBase &config, QList<AmorAnim> &animList,
+    void readGroupConfig(KConfigBase &config, QPtrList<AmorAnim> &animList,
                             const char *seq);
     void showBubble(const QString& msg);
-    AmorAnim *randomAnimation(QList<AmorAnim> &animList);
+    AmorAnim *randomAnimation(QPtrList<AmorAnim> &animList);
     void selectAnimation(State state=Normal);
     void active();
 

@@ -65,7 +65,7 @@ protected:
 };
 
 //---------------------------------------------------------------------------
-typedef QList<AmorAnim> AmorAnimationGroup;
+typedef QPtrList<AmorAnim> AmorAnimationGroup;
 
 //---------------------------------------------------------------------------
 //
