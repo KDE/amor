@@ -4,6 +4,7 @@ PixmapPath=static
 Static=true
 Description=FreeBSD Mascot
 Description[ara]=شعار BSD
+Description[az]=FreeBSD Gəlinciyi
 Description[da]=FreeBSD-maskot
 Description[he]=הקמיע של BSD
 Description[hu]=FreeBSD kabalafigura
