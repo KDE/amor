@@ -17,6 +17,7 @@
 #include <klocale.h>
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>
+#include <qtimer.h>
 
 #define ARROW_WIDTH     10
 #define ARROW_HEIGHT    12
@@ -38,7 +39,8 @@ AmorBubble::AmorBubble()
     mBrowser->setMargin( 0 );
     QColorGroup clgrp = mBrowser->colorGroup();
     clgrp.setColor(QColorGroup::Text, Qt::black);
-    mBrowser->setPaperColorGroup( clgrp );
+    //Laurent QTextBrowser didn't have this function FIX me
+    //mBrowser->setPaperColorGroup( clgrp );
     mBrowser->setPaper( QToolTip::palette().active().brush( QColorGroup::Background ) );
     mBrowser->setVScrollBarMode( QTextBrowser::AlwaysOff );
     mBrowser->setHScrollBarMode( QTextBrowser::AlwaysOff );
