@@ -158,7 +158,7 @@ void AmorBubble::paintEvent(QPaintEvent *)
 //
 // The user clicked on the widget
 //
-void AmorBubble::mouseReleaseEvent(QMouseEvent *me)
+void AmorBubble::mouseReleaseEvent(QMouseEvent *)
 {
     hide();
 }
