@@ -48,7 +48,7 @@
 //
 // Constructor
 //
-Amor::Amor() : QObject(), DCOPObject( "AmorIface" )
+Amor::Amor() : DCOPObject( "AmorIface" ), QObject()
 {
     mAmor = 0;
     mBubble = 0;
