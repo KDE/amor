@@ -26,9 +26,8 @@ noinst_HEADERS = amor.h amorwidget.h amoranim.h amorpm.h amordialog.h\
 # just to make sure, automake makes them 
 METASOURCES = amor.moc amorwidget.moc amordialog.moc amorbubble.moc
 
-# make messages.po. Move this one to $(podir)/ and "make merge" in po
 messages:
-	$(XGETTEXT) -C -kI18N_NOOP -ki18n -x $(includedir)/kde.pot $(amor_SOURCES) && mv messages.po $(podir)/amor.pot
+	$(XGETTEXT) $(amor_SOURCES) -o $(podir)/amor.pot
 
 appsdir = $(kde_appsdir)/Games
 apps_DATA = amor.kdelnk
