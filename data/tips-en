@@ -34,6 +34,6 @@ If you leave KDE applications open when you logout, they will be restarted autom
 %
 The KDE file manager is also a web browser and an FTP client.
 %
-Applications can display messages and tips in a Amor bubble using the showMessage() and
+Applications can display messages and tips in an Amor bubble using the showMessage() and
 showTip() DCOP calls
 %
