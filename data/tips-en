@@ -14,8 +14,6 @@ It's not a bug. It's a misfeature.
 %
 Help stamp out and abolish redundancy.
 %
-According to the latest official figures, 43% of all statistics are totally worthless.
-%
 To maximize a window vertically, click the maximize button with the middle mouse button.
 %
 You can use Alt+Tab to switch between applications.
@@ -36,5 +34,6 @@ If you leave KDE applications open when you logout, they will be restarted autom
 %
 The KDE file manager is also a web browser and an FTP client.
 %
-Applications can display messages and tips in a Amor bubble using the showMessage() 
-and showTip() DCOP calls
+Applications can display messages and tips in a Amor bubble using the showMessage() and
+showTip() DCOP calls
+%
