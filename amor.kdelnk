@@ -1,10 +1,18 @@
 # KDE Config File 
 [KDE Desktop Entry]
 Name=AMOR
+Name[sr]=OKLOP (armor)
 Exec=amor
-Icon=amor.xpm
+Icon=amor
 Type=Application
 #DocPath=amor/amor.html
 Comment=Amusing Misuse Of Resources
+Comment[ca]=Mal ús divertit de recursos
+Comment[eo]=Amuza MisuzO de Rimedoj
+Comment[fi]=Resurssien turhakäyttöä
+Comment[hu]=Erõforrás fogyasztó program :)
+Comment[mi]=Erõforrás fogyasztó program :)
+Comment[sr]=Zabavna zloupotreba resursa :)
+Comment[sv]=Nöjsamt missbruk av resurser
 Terminal=0
-MiniIcon=amor.xpm
+MiniIcon=amor
