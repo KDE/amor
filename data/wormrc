@@ -2,6 +2,7 @@
 [Config]
 PixmapPath=worm
 Description=Little Worm
+Description[bs]=Mali crv
 Description[hu]=kukac
 Description[pt_BR]=Pequeno Verme
 Description[sv]=Lilla masken
