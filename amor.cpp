@@ -145,8 +145,9 @@ bool Amor::readConfig()
     // read selected theme
     if (!mTheme.setTheme(mConfig.mTheme))
     {
-        QMessageBox::critical(0, "Amor",
-                             i18n("Error reading theme: ") + mConfig.mTheme);
+        QMessageBox::critical(0, i18n("Amor"),
+                             i18n("Error reading theme: ") + mConfig.mTheme,
+			     i18n("OK"));
         return false;
     }
 
@@ -158,8 +159,9 @@ bool Amor::readConfig()
     {
         if (mTheme.readGroup(groups[i]) == false)
         {
-            QMessageBox::critical(0, "Amor", i18n("Error reading group: ") +
-                             QString(groups[i]));
+            QMessageBox::critical(0, i18n("Amor"),
+			     i18n("Error reading group: ") + groups[i],
+			     i18n("OK"));
             return false;
         }
     }
