@@ -2,6 +2,7 @@
 [Config]
 PixmapPath=blob
 Description=Multi-Talented Spot
+Description[ar]=نقطة متعددة المواهب 
 Description[bg]=Всезнайко
 Description[bs]=Više-talentirana tačka
 Description[ca]=Anunci multi-dotat
