@@ -6,10 +6,10 @@
 //
 
 #include <stdlib.h>
-#include <kapp.h>
+#include <kapplication.h>
 #include "amortips.h"
 #include <kglobal.h>
-#include <kstddirs.h>
+#include <kstandarddirs.h>
 #include <klocale.h>
 #include <kdebug.h>
 #include <qfile.h>
