@@ -123,8 +123,7 @@ AmorThemeManager::AmorThemeManager()
 //
 AmorThemeManager::~AmorThemeManager()
 {
-    if (mConfig)
-        delete mConfig;
+    delete mConfig;
 }
 
 //---------------------------------------------------------------------------
@@ -133,8 +132,7 @@ bool AmorThemeManager::setTheme(const QString & file)
 {
     mPath = locate("appdata", file);
 
-    if (mConfig)
-        delete mConfig;
+    delete mConfig;
 
     mConfig = new KSimpleConfig(mPath, true);
     mConfig->setGroup("Config");
