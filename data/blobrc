@@ -2,13 +2,15 @@
 [Config]
 PixmapPath=blob
 Description=Multi-Talented Spot
+Description[hu]=Spot
+Description[sv]=Punkt med många talanger
 About=By Martin R. Jones\nJet pack, beam and fire animations by Mark Grant
 About[af]=deur martin r. jones\nJet pak, straal en vuur animasie deur merk toegestaan
 About[ar]=من مارتن ر. جونز\nJet pack, الضوء, و النار من تصميم مارك غرانت
 About[az]=Martin R. Jones tərəfindən\nJet pack, beam and fire animations by Mark Grant
 About[bs]=Autor: Martin R. Jones\nAnimacije mlaznog ranca, zrake i pucanja napravio Mark Grant
 About[da]=Af Martin R. Jones\nJetpack, stråle- og brandanimationer af Mark Grant
-About[el]=Από τον Martin R. Jones\nJet pack, beam και fire animations από τον Mark Grant
+About[el]=Από τον Martin R. Jones\n Jet pack, beam και fire animations από τον Mark Grant
 About[eo]=De Martin R. Jones\nĴetpako, radiado kaj fajrospektakleto de Mark Grant
 About[fi]=Tehnyt Martin R. Jones\nAnimaatiot Mark Grant
 About[he]=מאת מרטין ר. ג'ונס\nאנימציות תעופה, שיגור והתלקחות מאת מארק גרנט

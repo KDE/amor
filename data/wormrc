@@ -2,13 +2,15 @@
 [Config]
 PixmapPath=worm
 Description=Little Worm
+Description[hu]=kukac
+Description[sv]=Lilla masken
 About=By Bartosz Trudnowski\nMade for my wife
 About[af]=deur bartosz trudnowski\nMade vir my vrou
 About[ar]=من بارتوسز ترودنوفسكي
 About[az]=Bartosz Trudnowski tərəfindən\nHəyat yoldaşıma
 About[bs]=Autor Bartosz Trudnowski\nNapravljeno za moju ženu
 About[da]=Af Bartosz Trudnowski\nLavet til min kone
-About[el]=Από τον Bartosz Trudnowski\nΦτιάχτηκε για τη σύζυγό μου
+About[el]=Από τον Bartosz Trudnowski\n Φτιάχτηκε για τη σύζυγό μου
 About[eo]=De Bartosz Trudnowski\nFarita por mia edzino
 About[fi]=Tehnyt Bartosz Trudnowski\nTehty vaimolleni
 About[he]=מאת ברטוש טרודנובסקי\nנעשה עבור אישתי
