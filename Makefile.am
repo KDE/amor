@@ -23,14 +23,13 @@ amor_LDADD  = $(LIB_KDEUI)
 noinst_HEADERS = amor.h amorwidget.h amoranim.h amorpm.h amordialog.h\
                  amorbubble.h amorconfig.h amortips.h
 
-# just to make sure, automake makes them 
-METASOURCES = amor.moc amorwidget.moc amordialog.moc amorbubble.moc
+METASOURCES = AUTO
 
 messages:
 	$(XGETTEXT) $(amor_SOURCES) -o $(podir)/amor.pot
 
 appsdir = $(kde_appsdir)/Toys
-apps_DATA = amor.kdelnk
+apps_DATA = amor.desktop
 
 KDE_ICON = amor
 
