@@ -7,6 +7,7 @@ Description[da]=FreeBSD Maskot
 Description[he]=הקמיע של BSD
 Description[hu]=FreeBSD kabalafigura
 Description[nl]=FreeBSD Mascotte
+Description[xxx]=xx
 About=Static window sitter
 About[af]=statiese venster sitter
 About[az]=Statik pəncərə mürəbbiyəsi
@@ -22,6 +23,7 @@ About[pt_BR]=Boneco estático em cima da janela
 About[ru]=Сидит и ничего не делает
 About[sl]=Statično okno
 About[sv]=Statisk fönstervakt
+About[xxx]=xx
 Icon=bsd.png
 
 [Base]

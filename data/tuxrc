@@ -17,6 +17,7 @@ Description[pt_BR]=Tux Não-Animado
 Description[ru]=Пингвин-тормоз
 Description[sl]=Neanimiran Tux
 Description[sv]=Tux utan animering
+Description[xxx]=xx
 About=Static window sitter
 About[af]=statiese venster sitter
 About[az]=Statik pəncərə mürəbbiyəsi
@@ -32,6 +33,7 @@ About[pt_BR]=Boneco estático em cima da janela
 About[ru]=Сидит и ничего не делает
 About[sl]=Statično okno
 About[sv]=Statisk fönstervakt
+About[xxx]=xx
 Icon=tux.png
 
 [Base]

@@ -16,6 +16,7 @@ Description[pt_BR]=Pequeno Billy
 Description[ru]=Мини-Билли
 Description[sl]=Mali Billy
 Description[sv]=Lilla Billy
+Description[xxx]=xx
 About=Static window sitter\nGraphic from http://www.xbill.org/
 About[af]=statiese venster sitter\ngraphic van http://www.xbill.org/
 About[az]=Statik pəncərə mürəbbiyəsi\nQrafikalar http://www.xbill.org/
@@ -29,6 +30,7 @@ About[nl]=Statische venster oppasser\nAfbeelding van http://www.xbill.org/
 About[ru]=Сидит молча\nГрафика от http://www.xbill.org/
 About[sl]=Statično okno\nGrafika z http://www.xbill.org/
 About[sv]=Statisk fönstervakt\nGrafik från http://www.xbill.org/
+About[xxx]=xx
 Icon=billy.png
 
 [Base]
