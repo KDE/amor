@@ -483,7 +483,7 @@ void Amor::slotTimeout()
     }
 
     if (mTheme.isStatic())
-	mTimer->start(mState == Normal ? 10000 : 50, true);
+	mTimer->start(mState == Normal ? 10000 : 0, true);
     else
 	mTimer->start(mCurrAnim->delay(), true);
 
@@ -687,7 +687,18 @@ void Amor::slotWindowChange(WId win)
         if (mCurrAnim->frame())
         {
             hideBubble();
-            if (mPosition > mTargetRect.width() -
+	    if (mTheme.isStatic())
+	    {
+		if ( mConfig.mStaticPos < 0 )
+		    mPosition = mTargetRect.width() + mConfig.mStaticPos;
+		else
+		    mPosition = mConfig.mStaticPos;
+		if ( mPosition >= mTargetRect.width() )
+		    mPosition = mTargetRect.width()-1;
+		else if ( mPosition < 0 )
+		    mPosition = 0;
+	    }
+            else if (mPosition > mTargetRect.width() -
                     (mCurrAnim->frame()->width() - mCurrAnim->hotspot().x()))
             {
                 mPosition = mTargetRect.width() -
