@@ -109,5 +109,5 @@ HotspotY=30,30,30,30,30,30,30,30,30,30,30,30,30
 Sequence=salut.xpm,salut1.xpm
 Movement=0,0
 Delay=4000,300
-HotSpotX=16,16
-HotSpotY=30,30
+HotspotX=16,16
+HotspotY=30,30

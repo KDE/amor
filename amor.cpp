@@ -10,6 +10,7 @@
 #include <time.h>
 
 #include <qpopupmenu.h>
+#include <qtimer.h>
 
 #include <klocale.h>
 #include <ksimpleconfig.h>
@@ -60,9 +61,6 @@ Amor::Amor() : QObject()
         mCurrAnim    = mBaseAnim;
         mPosition    = mCurrAnim->hotspot().x();
         mState       = Normal;
-        mResizeId    = 0;
-        mCursId      = 0;
-        mBubbleId    = 0;
 
         mWin = new KWinModule;
         connect(mWin, SIGNAL(activeWindowChanged(WId)),
@@ -82,9 +80,17 @@ Amor::Amor() : QObject()
         mTimer = new QTimer(this);
         connect(mTimer, SIGNAL(timeout()), SLOT(slotTimeout()));
 
+        mStackTimer = new QTimer(this);
+        connect(mStackTimer, SIGNAL(timeout()), SLOT(restack()));
+
+        mBubbleTimer = new QTimer(this);
+        connect(mBubbleTimer, SIGNAL(timeout()), SLOT(hideBubble()));
+
         time(&mActiveTime);
         mCursPos = QCursor::pos();
-        mCursId = startTimer(200);
+        mCursorTimer = new QTimer(this);
+        connect(mCursorTimer, SIGNAL(timeout()), SLOT(slotCursorTimeout()));
+	mCursorTimer->start( 500 );
 
         if (mWin->activeWindow())
         {
@@ -195,7 +201,7 @@ void Amor::showBubble(const QString& msg)
                            mAmor->y()+mAmor->height()/2);
         mBubble->setMessage(msg);
         mBubble->show();
-        mBubbleId = startTimer(BUBBLE_TIMEOUT + msg.length() * 30);
+        mBubbleTimer->start(BUBBLE_TIMEOUT + msg.length() * 30, TRUE);
     }
 }
 
@@ -205,11 +211,6 @@ void Amor::showBubble(const QString& msg)
 //
 void Amor::hideBubble()
 {
-    if (mBubbleId)
-    {
-        killTimer(mBubbleId);
-        mBubbleId = 0;
-    }
     if (mBubble)
     {
         delete mBubble;
@@ -378,46 +379,6 @@ QRect Amor::windowGeometry(WId win)
 
 //---------------------------------------------------------------------------
 //
-// Handle various timer events.
-//
-void Amor::timerEvent(QTimerEvent *te)
-{
-    if (te->timerId() == mResizeId)
-    {
-        killTimer(mResizeId);
-        mResizeId = 0;
-        restack();
-    }
-    else if (te->timerId() == mCursId)
-    {
-        QPoint currPos = QCursor::pos();
-        QPoint diff = currPos - mCursPos;
-        time_t now = time(0);
-
-        if (abs(diff.x()) > 1 || abs(diff.y()) > 1)
-        {
-            if (mState == Sleeping)
-            {
-                // Set waking immediatedly
-                selectAnimation(Waking);
-            }
-            mActiveTime = now;
-            mCursPos = currPos;
-        }
-        else if (mState != Sleeping && now - mActiveTime > SLEEP_TIMEOUT)
-        {
-            // The next animation will become sleeping
-            mState = Sleeping;
-        }
-    }
-    else if (te->timerId() == mBubbleId)
-    {
-        hideBubble();
-    }
-}
-
-//---------------------------------------------------------------------------
-//
 // The user clicked on our animation.
 //
 void Amor::slotMouseClicked(const QPoint &pos)
@@ -444,6 +405,33 @@ void Amor::slotMouseClicked(const QPoint &pos)
     if (restartTimer)
     {
         mTimer->start(1000, true);
+    }
+}
+
+//---------------------------------------------------------------------------
+//
+// Check cursor position
+//
+void Amor::slotCursorTimeout()
+{
+    QPoint currPos = QCursor::pos();
+    QPoint diff = currPos - mCursPos;
+    time_t now = time(0);
+
+    if (abs(diff.x()) > 1 || abs(diff.y()) > 1)
+    {
+	if (mState == Sleeping)
+	{
+	    // Set waking immediatedly
+	    selectAnimation(Waking);
+	}
+	mActiveTime = now;
+	mCursPos = currPos;
+    }
+    else if (mState != Sleeping && now - mActiveTime > SLEEP_TIMEOUT)
+    {
+	// The next animation will become sleeping
+	mState = Sleeping;
     }
 }
 
@@ -602,7 +590,7 @@ void Amor::slotStackingChanged()
 
     // We seem to get this signal before the window has been restacked,
     // so we just schedule a restack.
-    mResizeId = startTimer(20);
+    mStackTimer->start( 20, TRUE );
 }
 
 //---------------------------------------------------------------------------
@@ -611,7 +599,7 @@ void Amor::slotStackingChanged()
 //
 void Amor::slotWindowChange(WId win)
 {
-    kdDebug(10000) << "Window changed" << endl;
+//    kdDebug(10000) << "Window changed" << endl;
 
     if (win != mTargetWin)
     {

@@ -175,8 +175,10 @@ AmorAnim *AmorThemeManager::random(const QString & group)
 {
     AmorAnimationGroup *animGroup = mAnimations.find(group);
 
-    if (animGroup)
-        return animGroup->at(kapp->random()%animGroup->count());
+    if (animGroup) {
+	int idx = kapp->random()%animGroup->count();
+        return animGroup->at( idx );
+    }
 
     return 0;
 }

@@ -177,15 +177,15 @@ HotspotY=30,30,30,30,30,30,30,30,30,30,30,30,30,30,26,26
 Sequence=blob_r_turn1.xpm,blob_r_turn2.xpm,blob_r_turn3.xpm,blob_r_turn4.xpm,blob_jet1.xpm,blob_jet2.xpm,blob_jet3.xpm,blob_jet4.xpm,blob_jet3.xpm,blob_jet4.xpm,blob_jet3.xpm,blob_jet2.xpm,blob_r_turn4.xpm,blob_r_turn3.xpm,blob_r_turn2.xpm,blob_r_turn1.xpm
 Movement=0,0,0,0,0,8,16,20,20,20,16,16,8,0,0,0
 Delay=100,100,100,200,200,200,200,200,200,200,200,200,200,100,100,100,100
-HotSpotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
-HotSpotY=28,28,28,28,28,32,38,44,44,44,44,38,32,28,28,28,28
+HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+HotspotY=28,28,28,28,28,32,38,44,44,44,44,38,32,28,28,28,28
 
 [JetLeft]
 Sequence=blob_l_turn1.xpm,blob_l_turn2.xpm,blob_l_turn3.xpm,blob_l_turn4.xpm,blob_l_jet1.xpm,blob_l_jet2.xpm,blob_l_jet3.xpm,blob_l_jet4.xpm,blob_l_jet3.xpm,blob_l_jet4.xpm,blob_l_jet3.xpm,blob_l_jet2.xpm,blob_l_turn4.xpm,blob_l_turn3.xpm,blob_l_turn2.xpm,blob_l_turn1.xpm
 Movement=0,0,0,0,0,-8,-16,-20,-20,-20,-16,-16,-8,0,0,0
 Delay=100,100,100,200,200,200,200,200,200,200,200,200,200,100,100,100,100
-HotSpotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
-HotSpotY=28,28,28,28,28,32,38,44,44,44,44,38,32,28,28,28,28
+HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+HotspotY=28,28,28,28,28,32,38,44,44,44,44,38,32,28,28,28,28
 
 [BeamDown]
 Sequence=blob_BeamDown1.xpm,blob_BeamDown2.xpm,blob_BeamDown3.xpm,blob_BeamDown4.xpm,blob_BeamDown5.xpm,blob_BeamDown6.xpm,blob_BeamDown7.xpm,blob_BeamDown8.xpm,blob_BeamDown9.xpm

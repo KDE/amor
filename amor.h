@@ -12,7 +12,6 @@
 #include <config.h>
 #endif
 
-#include <qtimer.h>
 #include <qwidget.h>
 
 #include "amoranim.h"
@@ -22,6 +21,7 @@
 #include "amorconfig.h"
 #include "amordialog.h"
 
+class QTimer;
 class KWinModule;
 
 //---------------------------------------------------------------------------
@@ -46,10 +46,13 @@ public slots:
 protected slots:
     void slotMouseClicked(const QPoint &pos);
     void slotTimeout();
+    void slotCursorTimeout();
     void slotConfigure();
     void slotConfigChanged();
     void slotOffsetChanged(int);
     void slotAbout();
+    void restack();
+    void hideBubble();
 
 protected:
     enum State { Focus, Blur, Normal, Sleeping, Waking, Destroy };
@@ -58,14 +61,10 @@ protected:
     void readGroupConfig(KConfigBase &config, QList<AmorAnim> &animList,
                             const char *seq);
     void showBubble(const QString& msg);
-    void hideBubble();
     AmorAnim *randomAnimation(QList<AmorAnim> &animList);
     void selectAnimation(State state=Normal);
-    void restack();
     void active();
     QRect windowGeometry(WId);
-
-    virtual void timerEvent(QTimerEvent *);
 
 private:
     KWinModule       *mWin;
@@ -79,14 +78,14 @@ private:
     int              mPosition;    // The position of the animation
     State            mState;       // The current state of the animation
     QTimer           *mTimer;      // Frame timer
+    QTimer           *mCursorTimer;// Cursor timer
+    QTimer           *mStackTimer; // Restacking timer
+    QTimer           *mBubbleTimer;// Bubble tip timer
     AmorDialog       *mAmorDialog; // Setup dialog
     QPopupMenu       *mMenu;       // Our menu
-    int              mResizeId;    // Resize timer Id
     time_t           mActiveTime;  // The time an active event occurred
     QPoint           mCursPos;     // The last recorded position of the pointer
-    int              mCursId;      // Pointer position timer id
     AmorBubble       *mBubble;     // Text bubble
-    int              mBubbleId;    // Bubble text timer Id
     AmorTips         mTips;        // Tips to display in the bubble
 
     AmorConfig       mConfig;      // Configuration parameters
