@@ -68,6 +68,7 @@ protected:
     virtual void timerEvent(QTimerEvent *);
 
 private:
+    KWinModule       *mWin;
     WId              mTargetWin;   // The window that the animations sits on
     QRect            mTargetRect;  // The goemetry of the target window
     WId              mNextTarget;  // The window that will become the target

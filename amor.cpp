@@ -16,6 +16,7 @@
 #include <ksimpleconfig.h>
 #include <kmessagebox.h>
 #include <kwin.h>
+#include <kwinmodule.h>
 #include <kapp.h>
 
 #include "amor.h"
@@ -64,6 +65,16 @@ Amor::Amor() : QObject()
         mCursId      = 0;
         mBubbleId    = 0;
 
+        mWin = new KWinModule;
+        connect(mWin, SIGNAL(activeWindowChanged(WId)),
+                this, SLOT(slotWindowActivate(WId)));
+        connect(mWin, SIGNAL(windowRemoved(WId)),
+                this, SLOT(slotWindowRemove(WId)));
+        connect(mWin, SIGNAL(stackingOrderChanged()),
+                this, SLOT(slotStackingChanged()));
+        connect(mWin, SIGNAL(windowChanged(WId)),
+                this, SLOT(slotWindowChange(WId)));
+
         mAmor = new AmorWidget();
         connect(mAmor, SIGNAL(mouseClicked(const QPoint &)),
                         SLOT(slotMouseClicked(const QPoint &)));
@@ -76,9 +87,9 @@ Amor::Amor() : QObject()
         mCursPos = QCursor::pos();
         mCursId = startTimer(200);
 
-        if (KWin::activeWindow())
+        if (mWin->activeWindow())
         {
-            mNextTarget = KWin::activeWindow();
+            mNextTarget = mWin->activeWindow();
             selectAnimation(Focus);
             mTimer->start(0, true);
         }
@@ -95,6 +106,7 @@ Amor::Amor() : QObject()
 //
 Amor::~Amor()
 {
+    delete mWin;
     delete mAmor;
     delete mBubble;
 }
@@ -133,6 +145,8 @@ bool Amor::readConfig()
 {
     // Read user preferences
     mConfig.read();
+    
+    mConfig.mOnTop = true;       // XXX until normal mode is fixed
 
     if (mConfig.mTips)
     {
@@ -225,8 +239,9 @@ void Amor::selectAnimation(State state)
             mTargetWin = mNextTarget;
             if (mTargetWin != None)
             {
-                mTargetRect = windowGeometry(mTargetWin);
+//                mTargetRect = windowGeometry(mTargetWin);
 //                mTargetRect = KWM::geometry(mTargetWin, true);
+                mTargetRect = KWin::info(mTargetWin).frameGeometry;
                 if (mCurrAnim->frame())
                 {
                     mPosition = (kapp->random() %
@@ -609,8 +624,10 @@ void Amor::slotWindowChange(WId win)
     // This is an active event that affects the target window
     time(&mActiveTime);
 
-    if (KWin::windowState(mTargetWin) == KWin::IconicState ||
-        KWin::windowState(mTargetWin) == KWin::WithdrawnState)
+    KWin::Info info = KWin::info( mTargetWin );
+
+    if (info.isIconified() ||
+        info.mappingState == NET::Withdrawn)
     {
         debug("Iconic");
         // The target window has been iconified
@@ -622,7 +639,8 @@ void Amor::slotWindowChange(WId win)
     else
     {
         // The size or position of the window has changed.
-        mTargetRect = windowGeometry(mTargetWin);
+//        mTargetRect = windowGeometry(mTargetWin);
+        mTargetRect = info.frameGeometry;
 
         // make sure the animation is still on the window.
         if (mCurrAnim->frame())

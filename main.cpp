@@ -9,7 +9,6 @@
 
 #include <kconfig.h>
 #include <kapp.h>
-#include <kwinmodule.h>
 #include <klocale.h>
 #include <kcmdlineargs.h>
 #include <kaboutdata.h>
@@ -34,17 +33,7 @@ int main(int argc, char *argv[])
     AmorSessionWidget *sessionWidget = new AmorSessionWidget;
     app.setTopWidget(sessionWidget);
 
-    KWinModule *winModule = new KWinModule;
-
     Amor *amor = new Amor();
-    QObject::connect(winModule, SIGNAL(windowActivate(WId)),
-                    amor,     SLOT(slotWindowActivate(WId)));
-    QObject::connect(winModule, SIGNAL(windowRemove(WId)),
-                    amor,     SLOT(slotWindowRemove(WId)));
-    QObject::connect(winModule, SIGNAL(stackingOrderChanged()),
-                    amor,     SLOT(slotStackingChanged()));
-    QObject::connect(winModule, SIGNAL(windowChange(WId)),
-                    amor,     SLOT(slotWindowChange(WId)));
 
     return app.exec();
 }
