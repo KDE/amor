@@ -49,6 +49,7 @@ public:
     bool     mOnTop;
     int      mOffset;
     bool     mTips;
+    bool     mRandomTheme;
     bool     mAppTips;
     int      mStaticPos;
 };

@@ -86,6 +86,10 @@ AmorDialog::AmorDialog()
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotRandomTips(bool)));
     checkBox->setChecked(mConfig.mTips);
 
+    checkBox = new QCheckBox(i18n("Use a random character"), mainwidget);
+    connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotRandomTheme(bool)));
+    checkBox->setChecked(mConfig.mRandomTheme);
+
     checkBox = new QCheckBox(i18n("Allow application tips"), mainwidget);
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotApplicationTips(bool)));
     checkBox->setChecked(mConfig.mAppTips);
@@ -193,6 +197,15 @@ void AmorDialog::slotOnTop(bool onTop)
 void AmorDialog::slotRandomTips(bool tips)
 {
     mConfig.mTips = tips;
+}
+
+//---------------------------------------------------------------------------
+//
+// User toggled random character
+//
+void AmorDialog::slotRandomTheme(bool randomTheme)
+{
+    mConfig.mRandomTheme = randomTheme;
 }
 
 //---------------------------------------------------------------------------

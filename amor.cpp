@@ -39,6 +39,7 @@
 #include <kstartupinfo.h>
 #include <kwin.h>
 #include <kwinmodule.h>
+#include <kstandarddirs.h>
 
 #include "amor.h"
 #include "amor.moc"
@@ -301,6 +302,14 @@ bool Amor::readConfig()
         mTips.setFile(TIPS_FILE);
     }
 
+    // Select a random theme if user requested it
+	if (mConfig.mRandomTheme)
+	{
+		QStringList files(KGlobal::dirs()->findAllResources("appdata", "*rc"));
+		int randomTheme = kapp->random() % files.count();
+		mConfig.mTheme = (QString)*files.at(randomTheme);
+	}
+	
     // read selected theme
     if (!mTheme.setTheme(mConfig.mTheme))
     {

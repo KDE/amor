@@ -55,6 +55,7 @@ void AmorConfig::read()
     mOffset = config->readNumEntry("Offset", 0);
     mTheme = config->readEntry("Theme", "blobrc");
     mTips  = config->readBoolEntry("Tips", false);
+    mRandomTheme  = config->readBoolEntry("RandomTheme", false);
     mAppTips  = config->readBoolEntry("ApplicationTips", true);
     mStaticPos  = config->readNumEntry("StaticPosition", 20);
 }
@@ -72,6 +73,7 @@ void AmorConfig::write()
     config->writeEntry("Offset", mOffset);
     config->writeEntry("Theme", mTheme);
     config->writeEntry("Tips", mTips);
+    config->writeEntry("RandomTheme", mRandomTheme);
     config->writeEntry("ApplicationTips", mAppTips);
     config->writeEntry("StaticPosition", mStaticPos);
 

@@ -63,6 +63,7 @@ protected slots:
     void slotHighlighted(int);
     void slotOnTop(bool);
     void slotRandomTips(bool);
+    void slotRandomTheme(bool);
     void slotApplicationTips(bool);
     void slotOffset(int);
     void slotOk();
