@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=AMOR
 Name[af]=Amor
+Name[ar]=برنامج AMOR
 Name[bg]=Amor
 Name[fi]=Amor
 Name[fo]=Amor
@@ -17,6 +18,7 @@ Type=Application
 DocPath=amor/index.html
 GenericName=Amusing Misuse of Resources
 GenericName[af]=Amusante Misbruik van Hulpbronne
+GenericName[ar]=استعمال خاطئ ومضحك للمصادر
 GenericName[bg]=Хабене на системни ресурси
 GenericName[bs]=Zabavno trošenje resursa
 GenericName[ca]=Malbaratament alegre de recursos
