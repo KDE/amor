@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
         AMOR_VERSION, description, KAboutData::License_GPL,
         "(c) 1999, Martin R. Jones");
     aboutData.addAuthor("Martin R. Jones",0, "mjones@kde.org");
-    aboutData.addCredit("Gerardo Puga", I18N_NOOP("Current maintainer"), "gpuga@gioia.ing.unlp.edu.ar"); 
+    aboutData.addAuthor("Gerardo Puga", I18N_NOOP("Current maintainer"), "gpuga@gioia.ing.unlp.edu.ar"); 
     KCmdLineArgs::init( argc, argv, &aboutData );
 
     if (!KUniqueApplication::start()) {

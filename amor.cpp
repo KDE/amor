@@ -40,6 +40,8 @@
 #include <kwin.h>
 #include <kwinmodule.h>
 #include <kstandarddirs.h>
+#include <khelpmenu.h>
+#include <kiconloader.h>
 
 #include "amor.h"
 #include "amor.moc"
@@ -579,12 +581,14 @@ void Amor::slotMouseClicked(const QPoint &pos)
 
     if (!mMenu)
     {
+        KHelpMenu* help = new KHelpMenu(0, KGlobal::instance()->aboutData(), false);
+        KPopupMenu* helpMnu = help->menu();
         mMenu = new KPopupMenu();
-	mMenu->insertTitle("Amor"); // I really don't want this i18n'ed
-        mMenu->insertItem(i18n("&Options..."), this, SLOT(slotConfigure()));
-        mMenu->insertItem(i18n("&About"), this, SLOT(slotAbout()));
+        mMenu->insertTitle("Amor"); // I really don't want this i18n'ed
+        mMenu->insertItem(SmallIcon("configure"), i18n("&Configure..."), this, SLOT(slotConfigure()));
         mMenu->insertSeparator();
-        mMenu->insertItem(i18n("&Quit"), kapp, SLOT(quit()));
+        mMenu->insertItem(SmallIcon("help"), i18n("&Help"), helpMnu);
+        mMenu->insertItem(SmallIcon("exit"), i18n("&Quit"), kapp, SLOT(quit()));
     }
 
     mMenu->exec(pos);
