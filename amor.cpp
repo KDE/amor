@@ -11,6 +11,7 @@
 
 #include <kpopupmenu.h>
 #include <qtimer.h>
+#include <qcursor.h>
 
 #include <klocale.h>
 #include <kmessagebox.h>
