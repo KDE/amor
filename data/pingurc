@@ -1,6 +1,6 @@
 # KDE Config File
 [Config]
-PixmapPath=pingu
+PixmapPath=pics/animated/pingu
 Description=Tux
 Description[bg]=Тюкс
 Description[eo]=Tuĉjo
@@ -68,7 +68,7 @@ About[xh]=Ngu Frank Pieczynski\nyamelene nemizobo yomdlalo "pingus".
 About[xx]=xxBy Frank Pieczynski\nBased on graphics of the game "pingus".xx
 About[zh_CN]=作者：Frank Pieczynski\n基于“pingus”游戏中的图形。
 About[zu]=Ngu Frank Pieczynski\nIsekelwe emidwebeni yomdlalo "pingus".
-Icon=pinguin.png
+Icon=../../preview/tux.png
 Base=Base
 Sequences=WalkLeft,WalkRight,Float,Tumble,Dig,BashLeft,BashRight
 Focus=FallUp

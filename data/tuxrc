@@ -1,6 +1,6 @@
 # KDE Config File
 [Config]
-PixmapPath=static
+PixmapPath=pics/static
 Static=true
 Description=Unanimated Tux
 Description[af]=Ongeanimeerde Tux
@@ -99,7 +99,7 @@ About[uk]=Статична прикраса для вікна
 About[ven]=Tshidzuli tsha window yo imaho
 About[xx]=xxStatic window sitterxx
 About[zh_CN]=窗口静坐者
-Icon=tux.png
+Icon=../preview/tux.png
 
 [Base]
 Sequence=tux.png

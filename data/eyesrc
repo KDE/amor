@@ -2,7 +2,7 @@
 #
 # This by jead@iname.com. Do whatever you want with it. C'est ca qui est ca. :)
 [Config]
-PixmapPath=eyes
+PixmapPath=pics/animated/eyes
 Description=Crazy Eyes
 Description[af]=Mal Oë
 Description[ar]=عيون مجنونة
@@ -104,7 +104,7 @@ About[wa]=Sicrît pa Jean-Claude Dumas
 About[xh]=Ngu Jean-Claude Dumas
 About[xx]=xxBy Jean-Claude Dumasxx
 About[zh_CN]=作者：Jean-Claude Dumas
-Icon=eye_1.png
+Icon=../../preview/eyes.png
 Sequences=Base,GlideLeft,GlideRight,EyesLeft,EyesRight,Blink,Sourcils,Hyp
 Focus=Rotr,UnMelt
 Blur=Rotl,Melt

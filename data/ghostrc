@@ -1,6 +1,6 @@
 # KDE Config File
 [Config]
-PixmapPath=ghost
+PixmapPath=pics/animated/ghost
 Description=Spooky Ghost
 Description[af]=Onheilspellende Spook
 Description[bg]=Призрачен Дух
@@ -100,7 +100,7 @@ About[ven]=Nga Martin R. Jones\nZwo di sendeka nga aikhonu nga tshigwada tsha vh
 About[xh]= Martin R. Jones\nYamelene kwiqhosa leqela labazobi be KDE.
 About[xx]=xxBy Martin R. Jones\nBased on an icon by the KDE artist team.xx
 About[zh_CN]=作者：Martin R. Jones\n基于 KDE 艺术组制作的一个图标。
-Icon=ghost_1.png
+Icon=../../preview/ghost.png
 Sequences=Base,GlideLeft,GlideRight,EyesLeft,EyesRight
 Focus=ZoomIn
 Blur=ZoomOut,Melt

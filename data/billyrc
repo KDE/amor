@@ -1,6 +1,6 @@
 # KDE Config File
 [Config]
-PixmapPath=static
+PixmapPath=pics/static
 Static=true
 Description=Little Billy
 Description[af]=Klein Billy
@@ -101,7 +101,7 @@ About[ven]=Tshidzuli tsha window isa tshimbili\nGirafu ubva http://www.xbill.org
 About[xh]=Isibambo sewindow esingashukumi\nUmzobo http://www.xbill.org/
 About[xx]=xxStatic window sitter\nGraphic from http://www.xbill.org/xx
 About[zh_CN]=窗口静坐者\n图形来自 http://www.xbill.org/
-Icon=billy.png
+Icon=../preview/billy.png
 
 [Base]
 Sequence=billy.png

@@ -1,6 +1,6 @@
 # KDE Config File
 [Config]
-PixmapPath=static
+PixmapPath=pics/static
 Static=true
 Description=FreeBSD Mascot
 Description[af]=Freebsd Gelukbringer
@@ -101,7 +101,7 @@ About[uk]=Статична прикраса для вікна
 About[ven]=Tshidzuli tsha window yo imaho
 About[xx]=xxStatic window sitterxx
 About[zh_CN]=窗口静坐者
-Icon=bsd.png
+Icon=../preview/bsd.png
 
 [Base]
 Sequence=bsd.png

@@ -1,6 +1,6 @@
 # KDE Config File
 [Config]
-PixmapPath=tao
+PixmapPath=pics/animated/tao
 Description=Tao
 Description[bg]=Тао
 Description[he]=טאו
@@ -59,7 +59,7 @@ About[xh]=By Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang iphawu ikhuthazis
 About[xx]=xxBy Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang symbol inspired by my Tai Chi practice.xx
 About[zh_CN]=作者：Daniel Pfeiffer <occitan@esperanto.org>\n我从太极锻炼中得到灵感的阴阳符号。
 About[zu]=Ngu Daniel Pfeiffer <occitan@esperanto.org>\nUphawu lwe-Yin Yang olugqugquzelwe ukwenza kwami i-Tai Chi.
-Icon=yy.png
+Icon=../../preview/tao.png
 Base=Base
 Sequences=Left,Right,Turn
 Focus=Grow

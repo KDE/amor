@@ -1,6 +1,6 @@
 # KDE Config File
 [Config]
-PixmapPath=blob
+PixmapPath=pics/animated/blob
 Description=Multi-Talented Spot
 Description[ar]=نقطة متعددة المواهب 
 Description[bg]=Всезнайко
@@ -95,7 +95,7 @@ About[ven]=Nga Martin R. Jones\nJet pack, beam na zwa zwipuka zwamulilo nga Mark
 About[xh]=Ngu Martin R. Jones\nJet pack, umqadi nomlilo wophiliso ngu Mark Grant
 About[xx]=xxBy Martin R. Jones\nJet pack, beam and fire animations by Mark Grantxx
 About[zh_CN]=作者：Martin R. Jones\nJet pack、光束和火焰动画作者为：Mark Grant
-Icon=blob.png
+Icon=../../preview/blob.png
 Base=Base
 Sequences=Blink,BounceLeft,BounceRight,Hair,Ears,Girl,ShuffleLeft,ShuffleRight,Glasses,RollLeft,RollRight,UpsideDown,FadeLeft,FadeRight,JetRight,JetLeft,Fire
 Focus=ZoomIn,DropIn,FadeIn,BeamDown
