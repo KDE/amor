@@ -6,7 +6,6 @@
 [Config]
 PixmapPath=b
 Description=Bonhomme
-Description[af]=bonhomme
 Description[cs]=Mužíček
 Description[lv]=Bonhomma
 Description[ru]=Добрячок
@@ -15,7 +14,7 @@ Description[uk]=Іграшковий чоловічок
 Description[wa]=Boulome
 Description[xx]=xx
 About=By Jean-Claude Dumas
-About[af]=deur Jean-Claude dumas
+About[af]=Deur Jean-Claude Dumas
 About[ar]=من جان كلود دوماس
 About[az]=Jean-Claude Dumas tərəfindən
 About[bs]=Autor: Jean-Claude Dumas

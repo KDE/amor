@@ -5,11 +5,10 @@
 [Config]
 PixmapPath=neko
 Description=Neko
-Description[af]=neko
 Description[ru]=Неко
 Description[xx]=xx
 About=Artwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegel
-About[af]=kunswerk van oneko deur masayuki koba\namor'd deur chris spiegel
+About[af]=Kunswerk van oneko deur Masayuki Koba\Namor'd deur Chris Spiegel
 About[ar]=عمل فني من أونيكو و من تصميم ماياسوكي كوبا\n نقلت الى Amor عن طريق كريس شبيغل
 About[az]=Masayuki Kobanın sənət abidəsi\nAMOR'd by Chris Spiegel
 About[bs]=Artwork iz oneko-a koji je napravio Masayuki Koba\nAMORovao Chris Spiegel

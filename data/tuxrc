@@ -3,7 +3,7 @@
 PixmapPath=static
 Static=true
 Description=Unanimated Tux
-Description[af]=ongeanimeerde tux
+Description[af]=Ongeanimeerde Tux
 Description[ar]=Tux غير متحرك
 Description[bg]=Неанимиран Tux
 Description[bs]=Neanimirani Tux
@@ -35,7 +35,7 @@ Description[ven]=Tux i songo itwaho zwazwipuka
 Description[xx]=xx
 Description[zu]=Okungenazilwane Tux
 About=Static window sitter
-About[af]=statiese venster sitter
+About[af]=Statiese venster sitter
 About[ar]=قاعدة النوافذ الساكنة
 About[az]=Statik pəncərə mürəbbiyəsi
 About[bs]=Statički window sitter
