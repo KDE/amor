@@ -26,17 +26,10 @@ AmorTips::AmorTips()
 //
 bool AmorTips::setFile(const QString& file)
 {
-    QStringList list = KGlobal::locale()->languageList();
-    list.append("default");
-    QStringList::ConstIterator it = list.begin();
-
-    for (it = list.begin(); it != list.end(); it++)
+    QString path( locate("appdata", file) );
+    if(path.length() && read(path))
     {
-        QString path( locate("appdata", file + "-" + *it) );
-        if (path.length() && read(path))
-        {
-            return true;
-        }
+        return true;
     }
 
     return false;
@@ -59,10 +52,11 @@ QString AmorTips::tip()
 {
     if (mTips.count())
     {
-        return *mTips.at(kapp->random() % mTips.count());
+        QString tip = *mTips.at(kapp->random() % mTips.count());
+		return i18n(tip.utf8());
     }
 
-    return QString::fromLatin1("No tip");
+    return i18n("No tip");
 }
 
 //---------------------------------------------------------------------------
@@ -79,6 +73,8 @@ bool AmorTips::read(const QString& path)
         {
             readTip(file);
         }
+
+		return true;
     }
 
     return false;

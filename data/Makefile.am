@@ -6,8 +6,8 @@ data_DATA = blobrc ghostrc eyesrc brc nekorc pingurc wormrc tips-en
 datadir = $(kde_datadir)/amor
 
 install-data-local:
-	-rm -f $(datadir)/tips-default
-	$(LN_S) tips-en $(DESTDIR)$(datadir)/tips-default
+	-rm -f $(datadir)/tips
+	$(LN_S) $(datadir)/tips-en $(DESTDIR)$(datadir)/tips
 
 uninstall-local:
-	-rm -f $(datadir)/tips-default
+	-rm -f $(datadir)/tips
