@@ -15,6 +15,7 @@
 
 #include <klocale.h>
 #include <kmessagebox.h>
+#include <kstartupinfo.h>
 #include <kwin.h>
 #include <kwinmodule.h>
 
@@ -98,6 +99,8 @@ Amor::Amor() : QObject(), DCOPObject( "AmorIface" )
             selectAnimation(Focus);
             mTimer->start(0, true);
         }
+
+        KStartupInfo::appStarted();
     }
     else
     {
