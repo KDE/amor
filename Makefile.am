@@ -33,19 +33,5 @@ messages:
 appsdir = $(kde_appsdir)/Games
 apps_DATA = amor.kdelnk
 
-kde_icon_DATA = amor.xpm
-
-# just install datas here. Use install-exec-data for scripts and etc.
-# the binary itself is already installed from automake
-# use mkinstalldirs, not "install -d"
-# don't install a list of file. Just one file per install.
-# if you have more of them, create a subdirectory with an extra Makefile 
-install-data-local: 
-	$(mkinstalldirs) $(kde_minidir)
-	$(INSTALL_DATA) $(srcdir)/mini-amor.xpm $(kde_minidir)/amor.xpm
-
-# remove ALL you have installed in install-data-local or install-exec-local
-uninstall-local:
-	-rm -f $(kde_minidir)/amor.xpm
-
+KDE_ICON = amor
 
