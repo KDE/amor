@@ -55,7 +55,7 @@ About[ven]=Nga Jean-Claude Dumas
 About[wa]=Sicrît pa Jean-Claude Dumas
 About[xh]=Ngu Jean-Claude Dumas
 About[zh_CN]=作者：Jean-Claude Dumas
-Icon=b-f.xpm
+Icon=b-f.png
 Base=Base
 Sequences=WalkRight,WalkLeft,Pof,Drib,Col,ColRight,ColLeft,Hop,Sa,Hi
 Focus=Go,Col
@@ -63,98 +63,98 @@ Blur=UnGo,Col
 Destroy=DropOut
 
 [Base]
-Sequence=b-f.xpm,b-f2.xpm,b-f.xpm,b-f2.xpm,b-f.xpm,b-f2.xpm,b-f.xpm,b-f1.xpm,b-f.xpm,b-f2.xpm,b-f.xpm,b-f2.xpm,b-f.xpm,b-f2.xpm
+Sequence=b-f.png,b-f2.png,b-f.png,b-f2.png,b-f.png,b-f2.png,b-f.png,b-f1.png,b-f.png,b-f2.png,b-f.png,b-f2.png,b-f.png,b-f2.png
 Movement=0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Delay=300,300,300,300,300,300,300,300,300,300,300,300,300,300
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30,30,30,30,30,30,30
 
 [Go]
-Sequence=bgo7.xpm,bgo6.xpm,bgo5.xpm,bgo4.xpm,bgo3.xpm,bgo2.xpm,bgo1.xpm,b-f.xpm
+Sequence=bgo7.png,bgo6.png,bgo5.png,bgo4.png,bgo3.png,bgo2.png,bgo1.png,b-f.png
 Movement=0,0,0,0,0,0,0,0
 Delay=200,200,200,200,200,200,200,200
 HotspotX=16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30
 
 [UnGo]
-Sequence=b-f.xpm,bgo1.xpm,bgo2.xpm,bgo3.xpm,bgo4.xpm,bgo5.xpm,bgo6.xpm,bgo7.xpm,
+Sequence=b-f.png,bgo1.png,bgo2.png,bgo3.png,bgo4.png,bgo5.png,bgo6.png,bgo7.png,
 Movement=0,0,0,0,0,0,0,0
 Delay=150,150,150,150,150,150,150,150
 HotspotX=16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30
 
 [Pof]
-Sequence=bpof1.xpm,bpof1.xpm,bpof1.xpm,bpof2.xpm,bpof3.xpm,bpof4.xpm,bpof5.xpm,bpof6.xpm,bpof6.xpm,bpof1.xpm,bpof1.xpm,bpof1.xpm,bpof2.xpm,bpof3.xpm,bpof4.xpm,bpof5.xpm,bpof6.xpm,bpof6.xpm
+Sequence=bpof1.png,bpof1.png,bpof1.png,bpof2.png,bpof3.png,bpof4.png,bpof5.png,bpof6.png,bpof6.png,bpof1.png,bpof1.png,bpof1.png,bpof2.png,bpof3.png,bpof4.png,bpof5.png,bpof6.png,bpof6.png
 Movement=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Delay=200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
 
 [Drib]
-Sequence=bdrib1.xpm,bdrib2.xpm,bdrib3.xpm,bdrib4.xpm,bdrib5.xpm,bdrib6.xpm,bdrib7.xpm,bdrib6.xpm,bdrib5.xpm,bdrib4.xpm,bdrib3.xpm,bdrib4.xpm,bdrib5.xpm,bdrib6.xpm,bdrib7.xpm,bdrib6.xpm,bdrib5.xpm,bdrib4.xpm,bdrib3.xpm,bdrib4.xpm,bdrib5.xpm,bdrib6.xpm,bdrib7.xpm,bdrib6.xpm,bdrib5.xpm,bdrib4.xpm,bdrib3.xpm,bdrib2.xpm,bdrib1
+Sequence=bdrib1.png,bdrib2.png,bdrib3.png,bdrib4.png,bdrib5.png,bdrib6.png,bdrib7.png,bdrib6.png,bdrib5.png,bdrib4.png,bdrib3.png,bdrib4.png,bdrib5.png,bdrib6.png,bdrib7.png,bdrib6.png,bdrib5.png,bdrib4.png,bdrib3.png,bdrib4.png,bdrib5.png,bdrib6.png,bdrib7.png,bdrib6.png,bdrib5.png,bdrib4.png,bdrib3.png,bdrib2.png,bdrib1
 Movement=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Delay=300,300,100,100,100,100,50,100,100,100,100,100,100,100,100,50,100,100,100,100,100,100,100,100,50,100,100,300,300
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
 
 [WalkLeft]
-Sequence=b4-r.xpm,b3-r.xpm,b2-r.xpm,b1-r.xpm,b2-r.xpm,b3-r.xpm,b4-r.xpm,b3-r.xpm,b2-r.xpm,b1-r.xpm,b2-r.xpm,b3-r.xpm,b4-r.xpm,b3-r.xpm,b2-r.xpm,b1-r.xpm,b2-r.xpm,b3-r.xpm,b4-r.xpm
+Sequence=b4-r.png,b3-r.png,b2-r.png,b1-r.png,b2-r.png,b3-r.png,b4-r.png,b3-r.png,b2-r.png,b1-r.png,b2-r.png,b3-r.png,b4-r.png,b3-r.png,b2-r.png,b1-r.png,b2-r.png,b3-r.png,b4-r.png
 Movement=-4,-4,-4,-4,-4,-4,-4,-4,-4,-4,-4,-4,-4,-4,-4,-4,-4,-4,-4
 Delay=200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
 
 [WalkRight]
-Sequence=b4.xpm,b3.xpm,b2.xpm,b1.xpm,b2.xpm,b3.xpm,b4.xpm,b3.xpm,b2.xpm,b1.xpm,b2.xpm,b3.xpm,b4.xpm,b3.xpm,b2.xpm,b1.xpm,b2.xpm,b3.xpm,b4.xpm
+Sequence=b4.png,b3.png,b2.png,b1.png,b2.png,b3.png,b4.png,b3.png,b2.png,b1.png,b2.png,b3.png,b4.png,b3.png,b2.png,b1.png,b2.png,b3.png,b4.png
 Movement=4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 Delay=200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
 
 [DropOut]
-Sequence=bdrop.xpm,bdrop.xpm,bdrop.xpm,bdrop.xpm,bdrop.xpm,bdrop.xpm,bdrop.xpm,bdrop.xpm
+Sequence=bdrop.png,bdrop.png,bdrop.png,bdrop.png,bdrop.png,bdrop.png,bdrop.png,bdrop.png
 Movement=0,0,0,0,0,0,0,0
 Delay=150,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16
 HotspotY=0,-25,-50,-100,-250,-500,-750,-1000
 
 [Col]
-Sequence=bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm
+Sequence=bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png
 Movement=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Delay=50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
 
 [ColLeft]
-Sequence=bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm
+Sequence=bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png
 Movement=0,0,0,0,0,0,0,0,-150,0,0,0,0,0,0,0
 Delay=50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
 
 [ColRight]
-Sequence=bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm,bcol1.xpm,bcol2.xpm
+Sequence=bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png,bcol1.png,bcol2.png
 Movement=0,0,0,0,0,0,0,0,-150,0,0,0,0,0,0,0
 Delay=50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
 
 [Hop]
-Sequence=b-f.xpm,bh1.xpm,bdrop.xpm,bh1.xpm,b-f.xpm,bh1.xpm,bdrop.xpm,bh1.xpm,b-f.xpm,bh1.xpm,bdrop.xpm,bh1.xpm
+Sequence=b-f.png,bh1.png,bdrop.png,bh1.png,b-f.png,bh1.png,bdrop.png,bh1.png,b-f.png,bh1.png,bdrop.png,bh1.png
 Movement=0,0,0,0,0,0,0,0,0,0,0,0
 Delay=150,150,150,150,150,150,150,150,150,150,150,150
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=30,40,60,40,30,40,60,40,30,40,60,40
 
 [Sa]
-Sequence=sa1.xpm,sa2.xpm,sa2a.xpm,sa2b.xpm,sa2c.xpm,sa2a.xpm,sa2b.xpm,sa2c.xpm,sa2a.xpm,sa2b.xpm,sa2c.xpm,sa2.xpm,sa1.xpm
+Sequence=sa1.png,sa2.png,sa2a.png,sa2b.png,sa2c.png,sa2a.png,sa2b.png,sa2c.png,sa2a.png,sa2b.png,sa2c.png,sa2.png,sa1.png
 Movement=0,0,0,0,0,0,0,0,0,0,0,0,0
 Delay=300,300,200,200,200,200,200,200,200,200,200,300,300
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30,30,30,30,30,30
 
 [Hi]
-Sequence=salut.xpm,salut1.xpm
+Sequence=salut.png,salut1.png
 Movement=0,0
 Delay=4000,300
 HotspotX=16,16

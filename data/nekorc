@@ -48,7 +48,7 @@ About[uk]=Праця від oneko, автор: Masayuki Koba\nАдаптован
 About[ven]=Mushumo wa zwanda ubva kha oneko nga Masayuki Koba\nAMOR'd nga Chris Spiegel
 About[xh]=Artwork esuka oneko ngu Masayuki Koba\nAMOR'd ngo Chris Spiegel
 About[zh_CN]=艺术作者为 oneko 小组的 Masayuki Koba\nAMOR'd 作者为 Chris Spiegel
-Icon=sit.xpm
+Icon=sit.png
 Base=Base
 Sequences=RightScratch,LeftScratch,RunRight,RunLeft,Yawn,RightLick,LeftLick,Claw,JumpRight,JumpLeft
 Focus=Start
@@ -58,70 +58,70 @@ Sleep=Snooze
 Wake=Surprise
 
 [Base]
-Sequence=tail.xpm,sit.xpm,tail.xpm,sit.xpm,tail.xpm,sit.xpm,tail.xpm,sit.xpm,tail.xpm,sit.xpm,tail.xpm,sit.xpm
+Sequence=tail.png,sit.png,tail.png,sit.png,tail.png,sit.png,tail.png,sit.png,tail.png,sit.png,tail.png,sit.png
 Movement=0,0,0,0,0,0,0,0,0,0,0,0
 Delay=200,200,200,200,200,200,200,200,200,200,200,200
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=29,29,29,29,29,29,29,29,29,29,29,29
 
 [JumpRight]
-Sequence=jump1.xpm,jump2.xpm,run2.xpm,jump3.xpm,jump4.xpm
+Sequence=jump1.png,jump2.png,run2.png,jump3.png,jump4.png
 Movement=10,10,10,10,10
 Delay=200,200,200,200,200
 HotspotX=16,16,16,16,16
 HotspotY=34,40,44,34,29
 
 [JumpLeft]
-Sequence=jumpl1.xpm,jumpl2.xpm,run4.xpm,jumpl3.xpm,jumpl4.xpm
+Sequence=jumpl1.png,jumpl2.png,run4.png,jumpl3.png,jumpl4.png
 Movement=-10,-10,-10,-10,-10
 Delay=200,200,200,200,200
 HotspotX=16,16,16,16,16
 HotspotY=34,40,44,34,29
 
 [Claw]
-Sequence=claw1.xpm,claw2.xpm,claw1.xpm,claw2.xpm,claw1.xpm,claw2.xpm,claw1.xpm,claw2.xpm
+Sequence=claw1.png,claw2.png,claw1.png,claw2.png,claw1.png,claw2.png,claw1.png,claw2.png
 Movement=0,0,0,0,0,0,0,0
 Delay=200,200,200,200,200,200,200,200
 HotspotX=16,16,16,16,16,16,16,16
 HotspotY=17,17,17,17,17,17,17,17
 
 [Snooze]
-Sequence=sleep1.xpm,sleep2.xpm
+Sequence=sleep1.png,sleep2.png
 Movement=0,0
 Delay=450,450
 HotspotX=16,16
 HotspotY=29,29
 
 [Surprise]
-Sequence=surprise.xpm
+Sequence=surprise.png
 Movement=0
 Delay=600
 HotspotX=16
 HotspotY=29
 
 [RightScratch]
-Sequence=scratch1.xpm,scratch2.xpm,scratch1.xpm,scratch2.xpm,scratch1.xpm,scratch2.xpm,scratch1.xpm,scratch2.xpm,scratch1.xpm,scratch2.xpm,scratch1.xpm,scratch2.xpm
+Sequence=scratch1.png,scratch2.png,scratch1.png,scratch2.png,scratch1.png,scratch2.png,scratch1.png,scratch2.png,scratch1.png,scratch2.png,scratch1.png,scratch2.png
 Movement=0,0,0,0,0,0,0,0,0,0,0,0,
 Delay=100,100,100,100,100,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=29,29,29,29,29,29,29,29,29,29,29,29
 
 [LeftScratch]
-Sequence=scratch3.xpm,scratch4.xpm,scratch3.xpm,scratch4.xpm,scratch3.xpm,scratch4.xpm,scratch3.xpm,scratch4.xpm,scratch3.xpm,scratch4.xpm,scratch3.xpm,scratch4.xpm
+Sequence=scratch3.png,scratch4.png,scratch3.png,scratch4.png,scratch3.png,scratch4.png,scratch3.png,scratch4.png,scratch3.png,scratch4.png,scratch3.png,scratch4.png
 Movement=0,0,0,0,0,0,0,0,0,0,0,0,
 Delay=100,100,100,100,100,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=29,29,29,29,29,29,29,29,29,29,29,29
 
 [RunRight]
-Sequence=run2.xpm,run1.xpm,run2.xpm,run1.xpm,run2.xpm,run1.xpm,run2.xpm,run1.xpm,run2.xpm,run1.xpm,run2.xpm,run1.xpm
+Sequence=run2.png,run1.png,run2.png,run1.png,run2.png,run1.png,run2.png,run1.png,run2.png,run1.png,run2.png,run1.png
 Movement=10,10,10,10,10,10,10,10,10,10,10,10
 Delay=100,100,100,100,100,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=29,29,29,29,29,29,29,29,29,29,29,29
 
 [RunLeft]
-Sequence=run4.xpm,run3.xpm,run4.xpm,run3.xpm,run4.xpm,run3.xpm,run4.xpm,run3.xpm,run4.xpm,run3.xpm,run4.xpm,run3.xpm
+Sequence=run4.png,run3.png,run4.png,run3.png,run4.png,run3.png,run4.png,run3.png,run4.png,run3.png,run4.png,run3.png
 Movement=-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10
 Delay=100,100,100,100,100,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16
@@ -131,35 +131,35 @@ HotspotY=29,29,29,29,29,29,29,29,29,29,29,29
 # they don't stay on for the desired delay .. ??  Anyway, this
 # seems to work OK
 [End]
-Sequence=surprise.xpm,surprise.xpm,surprise.xpm,surprise.xpm
+Sequence=surprise.png,surprise.png,surprise.png,surprise.png
 Movement=0,0,0,0
 Delay=400,400,400,400
 HotspotX=16,16,16,16
 HotspotY=29,29,29,29
 
 [Start]
-Sequence=yawn.xpm,yawn.xpm,yawn.xpm,yawn.xpm
+Sequence=yawn.png,yawn.png,yawn.png,yawn.png
 Movement=0,0,0,0
 Delay=400,400,400,400
 HotspotX=16,16,16,16
 HotspotY=29,29,29,29
 
 [Yawn]
-Sequence=yawn.xpm
+Sequence=yawn.png
 Movement=0
 Delay=1600
 HotspotX=16
 HotspotY=29
 
 [RightLick]
-Sequence=lick.xpm,sit.xpm,lick.xpm,sit.xpm,lick.xpm,sit.xpm,lick.xpm,sit.xpm,lick.xpm,sit.xpm,lick.xpm
+Sequence=lick.png,sit.png,lick.png,sit.png,lick.png,sit.png,lick.png,sit.png,lick.png,sit.png,lick.png
 Movement=0,0,0,0,0,0,0,0,0,0,0
 Delay=100,100,100,100,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16,16,16
 HotspotY=29,29,29,29,29,29,29,29,29,29,29
 
 [LeftLick]
-Sequence=lick2.xpm,sit.xpm,lick2.xpm,sit.xpm,lick2.xpm,sit.xpm,lick2.xpm,sit.xpm,lick2.xpm,sit.xpm,lick2.xpm
+Sequence=lick2.png,sit.png,lick2.png,sit.png,lick2.png,sit.png,lick2.png,sit.png,lick2.png,sit.png,lick2.png
 Movement=0,0,0,0,0,0,0,0,0,0,0
 Delay=100,100,100,100,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16,16,16
@@ -167,7 +167,7 @@ HotspotY=29,29,29,29,29,29,29,29,29,29,29
 
 # Values shamelessly stolen from Bonhomme, by Jean-Claude Dumas .. :)
 [DropOut]
-Sequence=surprise.xpm,surprise.xpm,surprise.xpm,surprise.xpm,surprise.xpm,surprise.xpm,surprise.xpm,surprise.xpm
+Sequence=surprise.png,surprise.png,surprise.png,surprise.png,surprise.png,surprise.png,surprise.png,surprise.png
 Movement=0,0,0,0,0,0,0,0
 Delay=150,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16

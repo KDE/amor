@@ -1,12 +1,12 @@
 # Add all your pic files here
-amor_DATA = yy-1.xpm yy-2.xpm yy-3.xpm yy-4.xpm yy-5.xpm yy-6.xpm yy-7.xpm \
-	    yy-8.xpm yy-9.xpm yy.xpm yy105.xpm yy120.xpm yy135.xpm yy15.xpm \
-	    yy150.xpm yy165.xpm yy180.xpm yy195.xpm yy210.xpm yy225.xpm \
-	    yy240.xpm yy255.xpm yy270.xpm yy285.xpm yy30.xpm yy300.xpm \
-	    yy315.xpm yy330.xpm yy345.xpm yy45.xpm yy60.xpm yy75.xpm \
-	    yy90.xpm yyx10.xpm yyx12.xpm yyx14.xpm yyx16.xpm yyx18.xpm \
-	    yyx20.xpm yyx22.xpm yyx24.xpm yyx26.xpm yyx28.xpm yyx30.xpm \
-	    yyx6.xpm yyx8.xpm
+amor_DATA = yy-1.png yy-2.png yy-3.png yy-4.png yy-5.png yy-6.png yy-7.png \
+	    yy-8.png yy-9.png yy.png yy105.png yy120.png yy135.png yy15.png \
+	    yy150.png yy165.png yy180.png yy195.png yy210.png yy225.png \
+	    yy240.png yy255.png yy270.png yy285.png yy30.png yy300.png \
+	    yy315.png yy330.png yy345.png yy45.png yy60.png yy75.png \
+	    yy90.png yyx10.png yyx12.png yyx14.png yyx16.png yyx18.png \
+	    yyx20.png yyx22.png yyx24.png yyx26.png yyx28.png yyx30.png \
+	    yyx6.png yyx8.png
 
 # This is where it will all be installed
 amordir = $(kde_datadir)/amor/tao

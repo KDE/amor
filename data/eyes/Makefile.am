@@ -1,10 +1,10 @@
 # Add all your pic files here
-amor_DATA = eye_1.xpm eye_2.xpm eye_b.xpm eye_d.xpm eye_e.xpm\
-            eye_h1.xpm eye_h2.xpm eye_h3.xpm eye_h4.xpm eye_l.xpm\
-            eye_m1.xpm eye_m2.xpm eye_m3.xpm eye_m4.xpm eye_m5.xpm\
-            eye_m6.xpm eye_m7.xpm eye_s1.xpm eye_s2.xpm eye_s3.xpm\
-            eye_s4.xpm eye_u.xpm eye_z1.xpm eye_z2.xpm eye_z3.xpm\
-            eye_z4.xpm eye_z5.xpm
+amor_DATA = eye_1.png eye_2.png eye_b.png eye_d.png eye_e.png \
+            eye_h1.png eye_h2.png eye_h3.png eye_h4.png eye_l.png \
+            eye_m1.png eye_m2.png eye_m3.png eye_m4.png eye_m5.png \
+            eye_m6.png eye_m7.png eye_s1.png eye_s2.png eye_s3.png \
+            eye_s4.png eye_u.png eye_z1.png eye_z2.png eye_z3.png \
+            eye_z4.png eye_z5.png
 
 # This is where it will all be installed
 amordir = $(kde_datadir)/amor/eyes

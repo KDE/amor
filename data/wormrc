@@ -70,7 +70,7 @@ About[uk]=Автор: Bartosz Trudnowski\nЗроблено моєю жінкою
 About[ven]=Nga Bartosz Trudnowski\nZwo itelwa musadzi wanga
 About[xh]=Ngu Bartosz Trudnowski\nYenzelwe inkosikazi yam
 About[zh_CN]=作者：Bartosz Trudnowski\n为我妻子而作
-Icon=w-b1.xpm
+Icon=w-b1.png
 Base=Base
 Sequences=MoveLeft,MoveRight,Eyes,Eye,BigEyes,Angry,Wobble,Love
 #Sequences=MoveLeft,MoveRight
@@ -80,91 +80,91 @@ Destroy=DropOut
 Sleep=Zzz
 
 [Base]
-Sequence=w-b1.xpm
+Sequence=w-b1.png
 Movement=0
 Delay=2000
 HotspotX=16
 HotspotY=29
 
 [Eyes]
-Sequence=w-b1.xpm,w-b1.xpm,w-b1.xpm,w-b1.xpm,w-b2.xpm,w-b1.xpm,w-b2.xpm,w-b1.xpm,w-b1.xpm,w-b1.xpm,w-b1.xpm,w-b2.xpm,w-b1.xpm,w-b1.xpm,w-b1.xpm,w-b1.xpm
+Sequence=w-b1.png,w-b1.png,w-b1.png,w-b1.png,w-b2.png,w-b1.png,w-b2.png,w-b1.png,w-b1.png,w-b1.png,w-b1.png,w-b2.png,w-b1.png,w-b1.png,w-b1.png,w-b1.png
 Movement=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Delay=300,300,300,300,150,150,150,300,300,300,300,100,300,300,300,300
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29
 
 [Dig]
-Sequence=w-d1.xpm,w-d2.xpm,w-d3.xpm,w-d4.xpm,w-d5.xpm
+Sequence=w-d1.png,w-d2.png,w-d3.png,w-d4.png,w-d5.png
 Movement=0,0,0,0,0
 Delay=100,100,100,100,200
 HotspotX=16,16,16,16,16
 HotspotY=29,29,29,29,29
 
 [Up]
-Sequence=w-d5.xpm,w-u1.xpm,w-u2.xpm,w-u3.xpm,w-b1.xpm
+Sequence=w-d5.png,w-u1.png,w-u2.png,w-u3.png,w-b1.png
 Movement=0,0,0,0,0
 Delay=100,100,100,100,300
 HotspotX=16,16,16,16,16
 HotspotY=29,29,29,29,29
 
 [DropOut]
-Sequence=w-b1.xpm,w-dr1.xpm,w-dr1.xpm,w-dr1.xpm,w-dr1.xpm,w-dr1.xpm,w-dr1.xpm,w-dr1.xpm
+Sequence=w-b1.png,w-dr1.png,w-dr1.png,w-dr1.png,w-dr1.png,w-dr1.png,w-dr1.png,w-dr1.png
 Movement=0,0,0,0,0,0,0,0
 Delay=150,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16
 HotspotY=29,-25,-50,-100,-250,-500,-750,-1000
 
 [Zzz]
-Sequence=w-s1.xpm,w-s2.xpm,w-s3.xpm,w-s2.xpm,w-s3.xpm,w-s1.xpm
+Sequence=w-s1.png,w-s2.png,w-s3.png,w-s2.png,w-s3.png,w-s1.png
 Movement=0,0,0,0,0,0
 Delay=300,200,200,200,200,300
 HotspotX=16,16,16,16,16,16
 HotspotY=29,29,29,29,29,29
 
 [Eye]
-Sequence=w-b1.xpm,w-e1.xpm,w=b1.xpm
+Sequence=w-b1.png,w-e1.png,w=b1.png
 Movement=0,0,0
 Delay=300,300,300
 HotspotX=16,16,16
 HotspotY=29,29,29
 
 [MoveLeft]
-Sequence=w-ml0.xpm,w-ml1.xpm,w-ml2.xpm,w-ml3.xpm,w-ml2.xpm,w-ml1.xpm,w-ml2.xpm,w-ml3.xpm,w-ml2.xpm,w-ml1.xpm,w-ml0.xpm
+Sequence=w-ml0.png,w-ml1.png,w-ml2.png,w-ml3.png,w-ml2.png,w-ml1.png,w-ml2.png,w-ml3.png,w-ml2.png,w-ml1.png,w-ml0.png
 Movement=0,0,0,0,-4,-3,0,0,-4,-3,0
 Delay=100,200,200,200,200,200,200,200,200,200,100
 HotspotX=16,26,26,26,26,26,26,26,26,26,16
 HotspotY=29,29,29,29,29,29,29,29,29,29,29
 
 [MoveRight]
-Sequence=w-mr0.xpm,w-mr1.xpm,w-mr2.xpm,w-mr3.xpm,w-mr2.xpm,w-mr1.xpm,w-mr2.xpm,w-mr3.xpm,w-mr2.xpm,w-mr1.xpm,w-mr0.xpm
+Sequence=w-mr0.png,w-mr1.png,w-mr2.png,w-mr3.png,w-mr2.png,w-mr1.png,w-mr2.png,w-mr3.png,w-mr2.png,w-mr1.png,w-mr0.png
 Movement=0,0,0,0,4,3,0,0,4,3,0
 Delay=100,200,200,200,200,200,200,200,200,200,100
 HotspotX=16,6,6,6,6,6,6,6,6,6,16
 HotspotY=29,29,29,29,29,29,29,29,29,29,29
 
 [BigEyes]
-Sequence=w-b1.xpm,w-be1.xpm,w-be2.xpm,w-be3.xpm,w-be4.xpm,w-be3.xpm,w-be2.xpm,w-be1.xpm,w-b1.xpm
+Sequence=w-b1.png,w-be1.png,w-be2.png,w-be3.png,w-be4.png,w-be3.png,w-be2.png,w-be1.png,w-b1.png
 Movement=0,0,0,0,0,0,0,0,0
 Delay=300,150,150,200,300,200,150,150,300
 HotspotX=16,16,16,16,16,16,16,16,16
 HotspotY=29,29,29,29,29,29,29,29,29
 
 [Angry]
-Sequence=w-a1.xpm,w-a2.xpm,w-a1.xpm,w-a2.xpm,w-a1.xpm,w-a2.xpm
+Sequence=w-a1.png,w-a2.png,w-a1.png,w-a2.png,w-a1.png,w-a2.png
 Movement=0,0,0,0,0,0
 Delay=150,150,150,150,150,150
 HotspotX=16,16,16,16,16,16
 HotspotY=29,29,29,29,29,29
 
 [Wobble]
-Sequence=w-b1.xpm,w-wl1.xpm,w-wl2.xpm,w-wl1.xpm,w-b1.xpm,w-wl1.xpm,w-wl2.xpm,w-wl1.xpm,w-b1.xpm,w-wr1.xpm,w-wr2.xpm,w-wr1.xpm,w-b1.xpm,w-wr1.xpm,w-wr2.xpm,w-wr1.xpm,w-b1.xpm
+Sequence=w-b1.png,w-wl1.png,w-wl2.png,w-wl1.png,w-b1.png,w-wl1.png,w-wl2.png,w-wl1.png,w-b1.png,w-wr1.png,w-wr2.png,w-wr1.png,w-b1.png,w-wr1.png,w-wr2.png,w-wr1.png,w-b1.png
 Movement=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Delay=300,150,150,150,150,150,150,150,300,150,150,150,150,150,150,150,300
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29
 
 [Love]
-Sequence=w-l1.xpm,w-l2.xpm,w-l3.xpm,w-l1.xpm,w-l2.xpm,w-l3.xpm
+Sequence=w-l1.png,w-l2.png,w-l3.png,w-l1.png,w-l2.png,w-l3.png
 Movement=0,0,0,0,0,0
 Delay=200,200,200,200,200,200
 HotspotX=16,16,16,16,16,16

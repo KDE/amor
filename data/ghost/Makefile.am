@@ -1,8 +1,8 @@
 # Add all your pic files here
-amor_DATA = ghost_1.xpm ghost_2.xpm ghost_z1.xpm ghost_z2.xpm ghost_z3.xpm\
-            ghost_z4.xpm ghost_z5.xpm ghost_e.xpm\
-            ghost_m1.xpm ghost_m2.xpm ghost_m3.xpm ghost_m4.xpm ghost_m5.xpm\
-            ghost_m6.xpm ghost_m7.xpm
+amor_DATA = ghost_1.png ghost_2.png ghost_z1.png ghost_z2.png ghost_z3.png \
+            ghost_z4.png ghost_z5.png ghost_e.png \
+            ghost_m1.png ghost_m2.png ghost_m3.png ghost_m4.png ghost_m5.png \
+            ghost_m6.png ghost_m7.png
 
 # This is where it will all be installed
 amordir = $(kde_datadir)/amor/ghost

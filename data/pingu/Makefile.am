@@ -1,31 +1,31 @@
 # Add all your pic files here
-amor_DATA = pinguin.xpm \
-            walk_l1.xpm walk_l2.xpm walk_l3.xpm walk_l4.xpm walk_l5.xpm \
-            walk_l6.xpm walk_l7.xpm walk_l8.xpm \
-            walk_r1.xpm walk_r2.xpm walk_r3.xpm walk_r4.xpm walk_r5.xpm \
-            walk_r6.xpm walk_r7.xpm walk_r8.xpm \
-            floater1.xpm floater2.xpm floater3.xpm floater4.xpm \
-            floater5.xpm floater6.xpm floater7.xpm floater8.xpm \
-            faller1.xpm faller2.xpm faller3.xpm faller4.xpm \
-            faller5.xpm faller6.xpm faller7.xpm faller8.xpm \
-            tumble1.xpm tumble2.xpm tumble3.xpm tumble4.xpm \
-            tumble5.xpm tumble6.xpm tumble7.xpm tumble8.xpm \
-            bomber1.xpm bomber2.xpm bomber3.xpm bomber4.xpm \
-            bomber5.xpm bomber6.xpm bomber7.xpm bomber8.xpm \
-            bomber9.xpm bomber10.xpm bomber11.xpm bomber12.xpm \
-            bomber13.xpm bomber14.xpm bomber15.xpm bomber16.xpm \
-            digger1.xpm digger2.xpm digger3.xpm digger4.xpm \
-            digger5.xpm digger6.xpm digger7.xpm digger8.xpm \
-            digger9.xpm digger10.xpm digger11.xpm digger12.xpm \
-            digger13.xpm digger14.xpm \
-            bash_l1.xpm bash_l2.xpm bash_l3.xpm bash_l4.xpm \
-            bash_l5.xpm bash_l6.xpm bash_l7.xpm bash_l8.xpm \
-            bash_l9.xpm bash_l10.xpm bash_l11.xpm bash_l12.xpm \
-            bash_r1.xpm bash_r2.xpm bash_r3.xpm bash_r4.xpm \
-            bash_r5.xpm bash_r6.xpm bash_r7.xpm bash_r8.xpm \
-            bash_r9.xpm bash_r10.xpm bash_r11.xpm bash_r12.xpm \
-            blocker1.xpm blocker2.xpm blocker3.xpm blocker4.xpm \
-            blocker5.xpm blocker6.xpm
+amor_DATA = pinguin.png \
+            walk_l1.png walk_l2.png walk_l3.png walk_l4.png walk_l5.png \
+            walk_l6.png walk_l7.png walk_l8.png \
+            walk_r1.png walk_r2.png walk_r3.png walk_r4.png walk_r5.png \
+            walk_r6.png walk_r7.png walk_r8.png \
+            floater1.png floater2.png floater3.png floater4.png \
+            floater5.png floater6.png floater7.png floater8.png \
+            faller1.png faller2.png faller3.png faller4.png \
+            faller5.png faller6.png faller7.png faller8.png \
+            tumble1.png tumble2.png tumble3.png tumble4.png \
+            tumble5.png tumble6.png tumble7.png tumble8.png \
+            bomber1.png bomber2.png bomber3.png bomber4.png \
+            bomber5.png bomber6.png bomber7.png bomber8.png \
+            bomber9.png bomber10.png bomber11.png bomber12.png \
+            bomber13.png bomber14.png bomber15.png bomber16.png \
+            digger1.png digger2.png digger3.png digger4.png \
+            digger5.png digger6.png digger7.png digger8.png \
+            digger9.png digger10.png digger11.png digger12.png \
+            digger13.png digger14.png \
+            bash_l1.png bash_l2.png bash_l3.png bash_l4.png \
+            bash_l5.png bash_l6.png bash_l7.png bash_l8.png \
+            bash_l9.png bash_l10.png bash_l11.png bash_l12.png \
+            bash_r1.png bash_r2.png bash_r3.png bash_r4.png \
+            bash_r5.png bash_r6.png bash_r7.png bash_r8.png \
+            bash_r9.png bash_r10.png bash_r11.png bash_r12.png \
+            blocker1.png blocker2.png blocker3.png blocker4.png \
+            blocker5.png blocker6.png
 
 # This is where it will all be installed
 amordir = $(kde_datadir)/amor/pingu

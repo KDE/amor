@@ -54,7 +54,7 @@ About[hr]=Autor: Martin R. Jones\nBazirano na KDE ikoni
 About[hu]=Készítette: Martin R. Jones\nA KDE grafikus csapatának egy ikonján alapul.
 About[is]=By Martin R. Jones\nByggt Ã¡ tÃ¡knmynd eftir KDE listamannahÃ³pinn
 About[it]=Di Martin R. Jones.\nBasato su un'icona del team di artisti di KDE.
-About[ja]=By Martin R. Jones\nアイコン by KDE アーティストチーム
+About[ja]=By Martin R. Jones\nアイコン by KDE アーティストチー�
 About[nb]=Av Martin R. Jones\nBasert på et ikon fra kunstnerlaget til KDE.
 About[nl]=Door Martin R. Jones\nGebaseerd op een pictogram van het KDE Artist Team.
 About[nn]=Av Martin R. Jones\nBasert på eit ikon frå kunstnarlaget til KDE.
@@ -73,63 +73,63 @@ About[uk]=Автор: Martin R. Jones\nЗроблено з піктограми 
 About[ven]=Nga Martin R. Jones\nZwo di sendeka nga aikhonu nga tshigwada tsha vhamvumvusi vha KDE.
 About[xh]= Martin R. Jones\nYamelene kwiqhosa leqela labazobi be KDE.
 About[zh_CN]=作者：Martin R. Jones\n基于 KDE 艺术组制作的一个图标。
-Icon=ghost_1.xpm
+Icon=ghost_1.png
 Sequences=Base,GlideLeft,GlideRight,EyesLeft,EyesRight
 Focus=ZoomIn
 Blur=ZoomOut,Melt
 Destroy=ZoomOut
 
 [Base]
-Sequence=ghost_1.xpm,ghost_2.xpm,ghost_1.xpm,ghost_2.xpm,ghost_1.xpm,ghost_2.xpm,ghost_1.xpm,ghost_2.xpm,ghost_1.xpm,ghost_2.xpm
+Sequence=ghost_1.png,ghost_2.png,ghost_1.png,ghost_2.png,ghost_1.png,ghost_2.png,ghost_1.png,ghost_2.png,ghost_1.png,ghost_2.png
 Movement=0,0,0,0,0,0,0,0,0,0
 Delay=300,300,300,300,300,300,300,300,300,300
 HotspotX=16,16,16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30,30,30
 
 [ZoomIn]
-Sequence=ghost_z1.xpm,ghost_z2.xpm,ghost_z3.xpm,ghost_z4.xpm,ghost_z5.xpm,ghost_2.xpm
+Sequence=ghost_z1.png,ghost_z2.png,ghost_z3.png,ghost_z4.png,ghost_z5.png,ghost_2.png
 Movement=0,0,0,0,0,0
 Delay=100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30
 
 [ZoomOut]
-Sequence=ghost_1.xpm,ghost_z5.xpm,ghost_z4.xpm,ghost_z3.xpm,ghost_z2.xpm,ghost_z1.xpm
+Sequence=ghost_1.png,ghost_z5.png,ghost_z4.png,ghost_z3.png,ghost_z2.png,ghost_z1.png
 Movement=0,0,0,0,0,0
 Delay=100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30
 
 [Melt]
-Sequence=ghost_m1.xpm,ghost_m2.xpm,ghost_m3.xpm,ghost_m4.xpm,ghost_m5.xpm,ghost_m6.xpm,ghost_m7.xpm,ghost_d3.xpm
+Sequence=ghost_m1.png,ghost_m2.png,ghost_m3.png,ghost_m4.png,ghost_m5.png,ghost_m6.png,ghost_m7.png,ghost_d3.png
 Movement=0,0,0,0,0,0,0,0
 Delay=100,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30
 
 [EyesRight]
-Sequence=ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm
+Sequence=ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png
 Movement=0,0,0,0,12,12,12,12,0,0,0
 Delay=100,100,100,300,100,100,100,300,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16,16,16
 HotspotY=25,20,15,10,10,10,10,10,15,20,25
 
 [EyesLeft]
-Sequence=ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm,ghost_e.xpm
+Sequence=ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png,ghost_e.png
 Movement=0,0,0,0,-12,-12,-12,-12,0,0,0
 Delay=100,100,100,300,100,100,100,300,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16,16,16
 HotspotY=25,20,15,10,10,10,10,10,15,20,25
 
 [GlideLeft]
-Sequence=ghost_1.xpm,ghost_2.xpm,ghost_1.xpm,ghost_2.xpm,ghost_1.xpm,ghost_2.xpm
+Sequence=ghost_1.png,ghost_2.png,ghost_1.png,ghost_2.png,ghost_1.png,ghost_2.png
 Movement=-4,-4,-4,-4,-4,-4
 Delay=300,300,300,300,300,300
 HotspotX=16,16,16,16,16,16
 HotspotY=30,31,30,31,30,31
 
 [GlideRight]
-Sequence=ghost_1.xpm,ghost_2.xpm,ghost_1.xpm,ghost_2.xpm,ghost_1.xpm,ghost_2.xpm
+Sequence=ghost_1.png,ghost_2.png,ghost_1.png,ghost_2.png,ghost_1.png,ghost_2.png
 Movement=4,4,4,4,4,4
 Delay=300,300,300,300,300,300
 HotspotX=16,16,16,16,16,16

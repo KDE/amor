@@ -13,7 +13,7 @@ Description[fi]=Monitaitoinen piste
 Description[fr]=Point à talents multiples
 Description[he]=פרצוף כישרוני
 Description[hu]=Spot
-Description[it]=Macchia con molte abilità
+Description[it]=Macchia con molte abilit�
 Description[ja]=マルチタレントスポット
 Description[nb]=Flekk med mange talenter
 Description[nl]=Multi-getalenteerde stip
@@ -68,7 +68,7 @@ About[uk]=Автор: Martin R. Jones\nСтрумінь, промені та о�
 About[ven]=Nga Martin R. Jones\nJet pack, beam na zwa zwipuka zwamulilo nga Mark Grant
 About[xh]=Ngu Martin R. Jones\nJet pack, umqadi nomlilo wophiliso ngu Mark Grant
 About[zh_CN]=作者：Martin R. Jones\nJet pack、光束和火焰动画作者为：Mark Grant
-Icon=blob.xpm
+Icon=blob.png
 Base=Base
 Sequences=Blink,BounceLeft,BounceRight,Hair,Ears,Girl,ShuffleLeft,ShuffleRight,Glasses,RollLeft,RollRight,UpsideDown,FadeLeft,FadeRight,JetRight,JetLeft,Fire
 Focus=ZoomIn,DropIn,FadeIn,BeamDown
@@ -78,189 +78,189 @@ Sleep=Snooze
 Wake=Blink
 
 [Base]
-Sequence=blob.xpm
+Sequence=blob.png
 Movement=0
 Delay=4000
 HotspotX=16
 HotspotY=28
 
 [ZoomIn]
-Sequence=blob_z3.xpm,blob_z2.xpm,blob_z1.xpm
+Sequence=blob_z3.png,blob_z2.png,blob_z1.png
 Movement=0,0,0
 Delay=100,100,100
 HotspotX=16,16,16
 HotspotY=28,28,28
 
 [ZoomOut]
-Sequence=blob_z1.xpm,blob_z2.xpm,blob_z3.xpm
+Sequence=blob_z1.png,blob_z2.png,blob_z3.png
 Movement=0,0,0
 Delay=100,100,100
 HotspotX=16,16,16
 HotspotY=28,28,28
 
 [DropIn]
-Sequence=blob_ex1.xpm,blob_ex1.xpm,blob_ex1.xpm,blob_ex1.xpm,blob_ex1.xpm
+Sequence=blob_ex1.png,blob_ex1.png,blob_ex1.png,blob_ex1.png,blob_ex1.png
 Movement=0,0,0,0,0
 Delay=150,100,100,100,100
 HotspotX=16,16,16,16,16
 HotspotY=750,500,250,100,50
 
 [DropOut]
-Sequence=blob_ex1.xpm,blob_ex1.xpm,blob_ex1.xpm,blob_ex1.xpm,blob_ex1.xpm,blob_ex1.xpm,blob_ex1.xpm,blob_ex1.xpm
+Sequence=blob_ex1.png,blob_ex1.png,blob_ex1.png,blob_ex1.png,blob_ex1.png,blob_ex1.png,blob_ex1.png,blob_ex1.png
 Movement=0,0,0,0,0,0,0,0
 Delay=150,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16
 HotspotY=0,-25,-50,-100,-250,-500,-750,-1000
 
 [Snooze]
-Sequence=blob_sl4.xpm,blob_sl1.xpm,blob_sl2.xpm,blob_sl3.xpm
+Sequence=blob_sl4.png,blob_sl1.png,blob_sl2.png,blob_sl3.png
 Movement=0,0,0,0
 Delay=1000,500,500,500
 HotspotX=16,16,16,16
 HotspotY=28,28,28,28
 
 [Blink]
-Sequence=blob_b1.xpm,blob_b2.xpm,blob_b1.xpm
+Sequence=blob_b1.png,blob_b2.png,blob_b1.png
 Movement=0,0,0
 Delay=100,100,100
 HotspotX=16,16,16
 HotspotY=28,28,28
 
 [BounceLeft]
-Sequence=blob_b1.xpm,blob.xpm,blob.xpm,blob.xpm,blob_b1.xpm
+Sequence=blob_b1.png,blob.png,blob.png,blob.png,blob_b1.png
 Movement=0,-8,-8,-8,-8
 Delay=100,100,100,100,100
 HotspotX=16,16,16,16,16
 HotspotY=28,36,38,36,28
 
 [BounceRight]
-Sequence=blob_b1.xpm,blob.xpm,blob.xpm,blob.xpm,blob_b1.xpm
+Sequence=blob_b1.png,blob.png,blob.png,blob.png,blob_b1.png
 Movement=0,8,8,8,8
 Delay=100,100,100,100,100
 HotspotX=16,16,16,16,16
 HotspotY=28,36,38,36,28
 
 [Hair]
-Sequence=blob_h1.xpm,blob_h2.xpm,blob_h3.xpm,blob_h2.xpm,blob_h1.xpm
+Sequence=blob_h1.png,blob_h2.png,blob_h3.png,blob_h2.png,blob_h1.png
 Movement=0,0,0,0,0
 Delay=200,200,2000,200,200
 HotspotX=16,16,16,16,16
 HotspotY=28,28,28,28,28
 
 [Ears]
-Sequence=blob_e1.xpm
+Sequence=blob_e1.png
 Movement=0
 Delay=3000
 HotspotX=16
 HotspotY=28
 
 [Girl]
-Sequence=blob_g1.xpm,blob_g2.xpm,blob_g1.xpm
+Sequence=blob_g1.png,blob_g2.png,blob_g1.png
 Movement=0,0,0
 Delay=800,200,800
 HotspotX=16,16,16
 HotspotY=28,28,28
 
 [ShuffleLeft]
-Sequence=blob_s1.xpm,blob_s2.xpm,blob_s3.xpm,blob_s2.xpm,blob_s3.xpm,blob_s2.xpm,blob_s3.xpm,blob_s2.xpm,blob_s1.xpm
+Sequence=blob_s1.png,blob_s2.png,blob_s3.png,blob_s2.png,blob_s3.png,blob_s2.png,blob_s3.png,blob_s2.png,blob_s1.png
 Movement=0,-4,-4,-4,-4,-4,-4,-4,0
 Delay=200,200,200,200,200,200,200,200,200
 HotspotX=16,16,16,16,16,16,16,16,16
 HotspotY=29,32,32,32,32,32,32,32,29
 
 [ShuffleRight]
-Sequence=blob_s1.xpm,blob_s2.xpm,blob_s3.xpm,blob_s2.xpm,blob_s3.xpm,blob_s2.xpm,blob_s3.xpm,blob_s2.xpm,blob_s1.xpm
+Sequence=blob_s1.png,blob_s2.png,blob_s3.png,blob_s2.png,blob_s3.png,blob_s2.png,blob_s3.png,blob_s2.png,blob_s1.png
 Movement=0,4,4,4,4,4,4,4,0
 Delay=200,200,200,200,200,200,200,200,200
 HotspotX=16,16,16,16,16,16,16,16,16
 HotspotY=29,32,32,32,32,32,32,32,29
 
 [Glasses]
-Sequence=blob_gl1.xpm,blob_gl2.xpm,blob_gl3.xpm,blob_gl2.xpm,blob_gl1.xpm
+Sequence=blob_gl1.png,blob_gl2.png,blob_gl3.png,blob_gl2.png,blob_gl1.png
 Movement=0,0,0,0,0
 Delay=150,150,3000,150,150
 HotspotX=16,16,16,16,16
 HotspotY=28,28,28,28,28
 
 [RollLeft]
-Sequence=blob_r315.xpm,blob_r270.xpm,blob_r225.xpm,blob_r180.xpm,blob_r135.xpm,blob_r90.xpm,blob_r45.xpm,blob.xpm
+Sequence=blob_r315.png,blob_r270.png,blob_r225.png,blob_r180.png,blob_r135.png,blob_r90.png,blob_r45.png,blob.png
 Movement=-4,-4,-4,-4,-4,-4,-4,-4
 Delay=100,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16
 HotspotY=28,28,28,28,28,28,28,28
 
 [RollRight]
-Sequence=blob_r45.xpm,blob_r90.xpm,blob_r135.xpm,blob_r180.xpm,blob_r225.xpm,blob_r270.xpm,blob_r315.xpm,blob.xpm
+Sequence=blob_r45.png,blob_r90.png,blob_r135.png,blob_r180.png,blob_r225.png,blob_r270.png,blob_r315.png,blob.png
 Movement=4,4,4,4,4,4,4,4
 Delay=100,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16
 HotspotY=28,28,28,28,28,28,28,28
 
 [UpsideDown]
-Sequence=blob_r45.xpm,blob_r90.xpm,blob_r135.xpm,blob_r180.xpm,blob_r225.xpm,blob_r270.xpm,blob_r315.xpm,blob.xpm
+Sequence=blob_r45.png,blob_r90.png,blob_r135.png,blob_r180.png,blob_r225.png,blob_r270.png,blob_r315.png,blob.png
 Movement=0,0,0,0,0,0,0,0
 Delay=100,100,100,3000,100,100,100,100
 HotspotX=10,6,10,16,22,28,22,16
 HotspotY=26,18,10,6,10,18,26,28
 
 [FadeIn]
-Sequence=blob_f3.xpm,blob_f2.xpm,blob_f1.xpm
+Sequence=blob_f3.png,blob_f2.png,blob_f1.png
 Movement=0,0,0
 Delay=100,100,100
 HotspotX=16,16,16
 HotspotY=28,28,28
 
 [FadeOut]
-Sequence=blob_f1.xpm,blob_f2.xpm,blob_f3.xpm
+Sequence=blob_f1.png,blob_f2.png,blob_f3.png
 Movement=0,0,0
 Delay=100,100,100
 HotspotX=16,16,16
 HotspotY=28,28,28
 
 [FadeLeft]
-Sequence=blob_f1.xpm,blob_f2.xpm,blob_f3.xpm,blob.xpm,blob_f3.xpm,blob_f2.xpm,blob_f1.xpm
+Sequence=blob_f1.png,blob_f2.png,blob_f3.png,blob.png,blob_f3.png,blob_f2.png,blob_f1.png
 Movement=0,0,0,-100,0,0,0
 Delay=100,100,100,500,100,100,100
 HotspotX=16,16,16,2000,16,16,16
 HotspotY=28,28,28,28,28,28,28
 
 [FadeRight]
-Sequence=blob_f1.xpm,blob_f2.xpm,blob_f3.xpm,blob.xpm,blob_f3.xpm,blob_f2.xpm,blob_f1.xpm
+Sequence=blob_f1.png,blob_f2.png,blob_f3.png,blob.png,blob_f3.png,blob_f2.png,blob_f1.png
 Movement=0,0,0,100,0,0,0
 Delay=100,100,100,500,100,100,100
 HotspotX=16,16,16,2000,16,16,16
 HotspotY=28,28,28,28,28,28,28
 
 [Fire]
-Sequence=blob_fire2.xpm,blob_fire3.xpm,blob_fire4.xpm,blob_fire5.xpm,blob_fire6.xpm,blob_fire5.xpm,blob_fire6.xpm,blob_fire5.xpm,blob_fire6.xpm,blob_fire5.xpm,blob_fire6.xpm,blob_fire7.xpm,blob_fire8.xpm,blob_fire9.xpm,blob_fire10.xpm,blob_fire11.xpm
+Sequence=blob_fire2.png,blob_fire3.png,blob_fire4.png,blob_fire5.png,blob_fire6.png,blob_fire5.png,blob_fire6.png,blob_fire5.png,blob_fire6.png,blob_fire5.png,blob_fire6.png,blob_fire7.png,blob_fire8.png,blob_fire9.png,blob_fire10.png,blob_fire11.png
 Movement=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Delay=600,400,300,200,200,200,200,200,200,200,200,200,200,200,200,3000
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=30,30,30,30,30,30,30,30,30,30,30,30,30,30,26,26
 
 [JetRight]
-Sequence=blob_r_turn1.xpm,blob_r_turn2.xpm,blob_r_turn3.xpm,blob_r_turn4.xpm,blob_jet1.xpm,blob_jet2.xpm,blob_jet3.xpm,blob_jet4.xpm,blob_jet3.xpm,blob_jet4.xpm,blob_jet3.xpm,blob_jet2.xpm,blob_r_turn4.xpm,blob_r_turn3.xpm,blob_r_turn2.xpm,blob_r_turn1.xpm
+Sequence=blob_r_turn1.png,blob_r_turn2.png,blob_r_turn3.png,blob_r_turn4.png,blob_jet1.png,blob_jet2.png,blob_jet3.png,blob_jet4.png,blob_jet3.png,blob_jet4.png,blob_jet3.png,blob_jet2.png,blob_r_turn4.png,blob_r_turn3.png,blob_r_turn2.png,blob_r_turn1.png
 Movement=0,0,0,0,0,8,16,20,20,20,16,16,8,0,0,0
 Delay=100,100,100,200,200,200,200,200,200,200,200,200,200,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=28,28,28,28,28,32,38,44,44,44,44,38,32,28,28,28,28
 
 [JetLeft]
-Sequence=blob_l_turn1.xpm,blob_l_turn2.xpm,blob_l_turn3.xpm,blob_l_turn4.xpm,blob_l_jet1.xpm,blob_l_jet2.xpm,blob_l_jet3.xpm,blob_l_jet4.xpm,blob_l_jet3.xpm,blob_l_jet4.xpm,blob_l_jet3.xpm,blob_l_jet2.xpm,blob_l_turn4.xpm,blob_l_turn3.xpm,blob_l_turn2.xpm,blob_l_turn1.xpm
+Sequence=blob_l_turn1.png,blob_l_turn2.png,blob_l_turn3.png,blob_l_turn4.png,blob_l_jet1.png,blob_l_jet2.png,blob_l_jet3.png,blob_l_jet4.png,blob_l_jet3.png,blob_l_jet4.png,blob_l_jet3.png,blob_l_jet2.png,blob_l_turn4.png,blob_l_turn3.png,blob_l_turn2.png,blob_l_turn1.png
 Movement=0,0,0,0,0,-8,-16,-20,-20,-20,-16,-16,-8,0,0,0
 Delay=100,100,100,200,200,200,200,200,200,200,200,200,200,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 HotspotY=28,28,28,28,28,32,38,44,44,44,44,38,32,28,28,28,28
 
 [BeamDown]
-Sequence=blob_BeamDown1.xpm,blob_BeamDown2.xpm,blob_BeamDown3.xpm,blob_BeamDown4.xpm,blob_BeamDown5.xpm,blob_BeamDown6.xpm,blob_BeamDown7.xpm,blob_BeamDown8.xpm,blob_BeamDown9.xpm
+Sequence=blob_BeamDown1.png,blob_BeamDown2.png,blob_BeamDown3.png,blob_BeamDown4.png,blob_BeamDown5.png,blob_BeamDown6.png,blob_BeamDown7.png,blob_BeamDown8.png,blob_BeamDown9.png
 Movement=0,0,0,0,0,0,0,0,0
 Delay=100,100,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16
 HotspotY=28,28,28,28,28,28,28,28,28
 
 [BeamUp]
-Sequence=blob_BeamUp1.xpm,blob_BeamUp2.xpm,blob_BeamUp3.xpm,blob_BeamUp4.xpm,blob_BeamUp5.xpm,blob_BeamUp6.xpm,blob_BeamUp7.xpm,blob_BeamUp8.xpm,blob_BeamUp9.xpm,blob_BeamUp10.xpm
+Sequence=blob_BeamUp1.png,blob_BeamUp2.png,blob_BeamUp3.png,blob_BeamUp4.png,blob_BeamUp5.png,blob_BeamUp6.png,blob_BeamUp7.png,blob_BeamUp8.png,blob_BeamUp9.png,blob_BeamUp10.png
 Movement=0,0,0,0,0,0,0,0,0,0
 Delay=100,100,100,100,100,100,100,100,100,100
 HotspotX=16,16,16,16,16,16,16,16,16,16
