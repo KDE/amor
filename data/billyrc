@@ -3,7 +3,37 @@
 PixmapPath=static
 Static=true
 Description=Little Billy
+Description[ar]=بيل الصغير
+Description[bg]=Малкия Били
+Description[bs]=Mali Billy
+Description[eo]=Malgranda Bilĉjo
+Description[fi]=Pieni Billy
+Description[he]=בילי הקטן
+Description[lt]=Mažasis Bilas
+Description[pt_BR]=Pequeno Billy
+Description[ro]=Micuţul Billy
+Description[sk]=Malý Billy
+Description[sl]=Mali Billy
+Description[sr]=Mali Bili
+Description[tr]=Küçük İbo
+Description[uk]=Маленький Біллі
+Description[xx]=xx
 About=Static window sitter\nGraphic from http://www.xbill.org/
+About[ar]=قاعدة النوافذ الساكنة \nالرسوم من http://www.xbill.org
+About[az]=Statik pəncərə mürəbbiyəsi\nQrafikalar http://www.xbill.org/
+About[bs]=Statički window sitter\nGrafika iz http://www.xbill.org/
+About[de]=Statischer Fenstersitzer\nGraphik von http://www.xbill.org/
+About[eo]=Moviĝema fenestrosidulo\nGrafiko de http://www.xbill.org/
+About[fi]=Staattinen ikkunalla istuja\nGrafiikat osoitteesta http://www.xbill.org/
+About[he]=שומר חלון סטטי\nגרפיקה מתוך /http://www.xbill.org
+About[lt]=Nejudantis sėdėtojas ant lango\nGrafika iš http://www.xbill.org/
+About[pt_BR]=Janela Estática\nGráfica de http://www.xbill.org/
+About[sk]=Statická ozdoba okna\nGrafika z http://www.xbill.org/
+About[sl]=Statično okno\nGrafika z http://www.xbill.org/
+About[sr]=Statični prozor siter\nGrafika je sa adrese http://www.xbill.org/
+About[tr]=Statik pencere bakıcısı\nGrafikler http://www.xbill.org/ 'tan
+About[uk]=Натурщик статичного вікна\nГрафіка з http://www.xbill.org/
+About[xx]=xx
 Icon=billy.png
 
 [Base]
