@@ -24,7 +24,7 @@
 #include "amorpm.h"
 #include "amorbubble.h"
 #include "version.h"
-
+#include <kdebug.h>
 #include <X11/Xlib.h>
 
 #define SLEEP_TIMEOUT   180     // Animation sleeps after SLEEP_TIMEOUT seconds
@@ -145,7 +145,7 @@ bool Amor::readConfig()
 {
     // Read user preferences
     mConfig.read();
-    
+
 //    mConfig.mOnTop = true;       // XXX until normal mode is fixed
 
     if (mConfig.mTips)
@@ -326,7 +326,7 @@ void Amor::restack()
         return;
     }
 
-    debug("restacking");
+    kdDebug(10000) << "restacking" << endl;
 
     Window sibling = mTargetWin;
     Window dw, parent = None, *wins;
@@ -372,7 +372,7 @@ QRect Amor::windowGeometry(WId win)
         rect.setRect(x, y, attr.width, attr.height);
     }
 
-    debug("Window geometry: %d, %d, %d x %d", rect.x(), rect.y(), rect.width(), rect.height());
+    kdDebug(10000) << "Window geometry: " << rect.x() << ", " << rect.y() << ", " << rect.width() << " x " << rect.height() << endl;
 
     return rect;
 }
@@ -546,7 +546,7 @@ void Amor::slotAbout()
 //
 void Amor::slotWindowActivate(WId win)
 {
-    debug("Window activated");
+    kdDebug(10000) << "Window activated" << endl;
 
     mTimer->stop();
     mNextTarget = win;
@@ -582,7 +582,7 @@ void Amor::slotWindowActivate(WId win)
 //
 void Amor::slotWindowRemove(WId win)
 {
-    debug("Window removed");
+    kdDebug(10000) << "Window removed" << endl;
     if (win == mTargetWin)
     {
         // This is an active event that affects the target window
@@ -600,7 +600,7 @@ void Amor::slotWindowRemove(WId win)
 //
 void Amor::slotStackingChanged()
 {
-    debug("Stacking changed");
+    kdDebug(10000) << "Stacking changed" << endl;
 
     // This is an active event that affects the target window
     time(&mActiveTime);
@@ -616,7 +616,7 @@ void Amor::slotStackingChanged()
 //
 void Amor::slotWindowChange(WId win)
 {
-    debug("Window changed");
+    kdDebug(10000) << "Window changed" << endl;
 
     if (win != mTargetWin)
     {
@@ -631,7 +631,7 @@ void Amor::slotWindowChange(WId win)
     if (info.isIconified() ||
         info.mappingState == NET::Withdrawn)
     {
-        debug("Iconic");
+        kdDebug(10000) << "Iconic" << endl;
         // The target window has been iconified
         selectAnimation(Destroy);
         mTargetWin = None;

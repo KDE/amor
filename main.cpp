@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     AmorSessionWidget *sessionWidget = new AmorSessionWidget;
     app.setTopWidget(sessionWidget);
 
-    Amor *amor = new Amor();
+    new Amor();
 
     return app.exec();
 }
