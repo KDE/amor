@@ -105,7 +105,7 @@ void AmorDialog::addTheme(const QString& file)
 
     config.setGroup("Config");
 
-    QString pixmapPath = config.readEntry("PixmapPath");
+    QString pixmapPath = config.readPathEntry("PixmapPath");
     if (pixmapPath.isEmpty())
     {
         return;

@@ -141,7 +141,7 @@ bool AmorThemeManager::setTheme(const QString & file)
 
     // Get the directory where the pixmaps are stored and tell the
     // pixmap manager.
-    QString pixmapPath = mConfig->readEntry("PixmapPath");
+    QString pixmapPath = mConfig->readPathEntry("PixmapPath");
     if (pixmapPath.isEmpty())
         return false;
 
