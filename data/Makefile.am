@@ -6,4 +6,8 @@ data_DATA = blobrc ghostrc eyesrc brc tips-en
 datadir = $(kde_datadir)/amor
 
 install-data-local:
-	(cd $(datadir) && ln -fs tips-en tips-default)
+	-rm -f $(datadir)/tips-default
+	$(LN_S) tips-en $(datadir)/tips-default
+
+uninstall-local:
+	-rm -f $(datadir)/tips-default
