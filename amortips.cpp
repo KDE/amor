@@ -10,6 +10,7 @@
 #include "amortips.h"
 #if QT_VERSION >= 199
 #include <kglobal.h>
+#include <kstddirs.h>
 #endif
 #include <klocale.h>
 #include <qfile.h>
@@ -34,17 +35,8 @@ bool AmorTips::setFile(const char *file)
 
     for (it = list.begin(); it != list.end(); it++)
     {
-        QString path =  KApplication::localkdedir();
-        path += "/share/apps/amor/";
-        path += file + QString("-") + *it;
-        if (read(path))
-        {
-            return true;
-        }
-        path =  KApplication::kde_datadir().copy();
-        path += "/amor/";
-        path += file + QString("-") + *it;
-        if (read(path))
+        QString path( locate("appdata", QString(file) + "-" + *it) );
+        if (path.length() && read(path.ascii()))
         {
             return true;
         }

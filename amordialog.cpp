@@ -19,6 +19,10 @@
 #include "amordialog.moc"
 #include "version.h"
 #include <klocale.h>
+#if QT_VERSION >= 199
+#include <kglobal.h>
+#include <kstddirs.h>
+#endif
 
 //---------------------------------------------------------------------------
 //
@@ -116,6 +120,24 @@ AmorDialog::~AmorDialog()
 //
 void AmorDialog::readThemes()
 {
+#if QT_VERSION >= 199
+    QStringList dirs(KGlobal::dirs()->getResourceDirs("appdata"));
+    for (QStringList::ConstIterator it1 = dirs.end();
+         it1 != dirs.begin();)
+    {
+       it1--;
+       QDir dir(*it1, "*rc");
+       if (dir.isReadable())
+       {
+          QStringList list = dir.entryList();
+          for (QStringList::ConstIterator it2 = list.begin(); it2 != list.end();
+it2++)  
+          {
+               addTheme(*it1, *it2);
+          }
+       }
+    }	
+#else
     // read global themes
     QString path = KApplication::localkdedir().copy();
     path += "/share/apps/amor";
@@ -123,11 +145,6 @@ void AmorDialog::readThemes()
     QDir dir(path, "*rc");
     if (dir.isReadable())
     {
-#if QT_VERSION >= 199
-        QStringList list = dir.entryList();
-        for (QStringList::ConstIterator it = list.begin(); it != list.end(); it++)  
-            addTheme(path, *it);
-#else
         const QStrList *list = dir.entryList();
 
         QStrListIterator it( *list );
@@ -135,7 +152,6 @@ void AmorDialog::readThemes()
         {
             addTheme(path, it.current());
         }
-#endif
     }
 
     // read local themes
@@ -145,11 +161,6 @@ void AmorDialog::readThemes()
     dir.setPath(path);
     if (dir.isReadable())
     {
-#if QT_VERSION >= 199
-        QStringList list = dir.entryList();
-        for (QStringList::ConstIterator it = list.begin(); it != list.end(); it++)
-            addTheme(path, *it);
-#else
         const QStrList *list = dir.entryList();
 
         QStrListIterator it( *list );
@@ -157,8 +168,8 @@ void AmorDialog::readThemes()
         {
             addTheme(path, it.current());
         }
-#endif
     }
+#endif
 }
 
 //---------------------------------------------------------------------------

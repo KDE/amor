@@ -8,6 +8,10 @@
 #include <stdlib.h>
 #include <kconfig.h>
 #include <kapp.h>
+#if QT_VERSION >= 199
+#include <kglobal.h>
+#include <kstddirs.h>
+#endif
 #include "amoranim.h"
 #include "amorpm.h"
 
@@ -140,6 +144,9 @@ AmorThemeManager::~AmorThemeManager()
 //
 bool AmorThemeManager::setTheme(const char *file)
 {
+#if QT_VERSION >= 199
+    mPath = locate("appdata", file);
+#else
     mPath = KApplication::localkdedir().copy();
     mPath += "/share/apps/amor/";
     mPath += file;
@@ -150,7 +157,7 @@ bool AmorThemeManager::setTheme(const char *file)
         mPath += "/amor/";
         mPath += file;
     }
-
+#endif
     if (mConfig)
     {
         delete mConfig;
