@@ -21,7 +21,7 @@
 #include <klocale.h>
 #include <qvbox.h>
 #include <kglobal.h>
-#include <kstandarddirs.h>
+#include <kstddirs.h>
 
 //---------------------------------------------------------------------------
 //

@@ -7,9 +7,9 @@
 
 #include <stdlib.h>
 #include <kconfig.h>
-#include <kapplication.h>
+#include <kapp.h>
 #include <kglobal.h>
-#include <kstandarddirs.h>
+#include <kstddirs.h>
 #include "amoranim.h"
 #include "amorpm.h"
 
