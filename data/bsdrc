@@ -2,16 +2,16 @@
 [Config]
 PixmapPath=static
 Static=true
-Description=BSD Mascot
-Description[da]=BSD Maskot
-Description[de]=BSD-Maskottchen
+Description=FreeBSD Mascot
+Description[da]=FreeBSD Maskot
+Description[de]=FreeBSD-Maskottchen
 Description[es]=Mascota de BSD
-Description[he]=BSD עימק
-Description[hu]=BSD kabalafigura
-Description[pt_BR]=Mascote do BSD
-Description[pt]=Mascote do BSD
-Description[sl]=Maskota BSD
-Description[sv]=BSD-maskot
+Description[he]=FreeBSD עימק
+Description[hu]=FreeBSD kabalafigura
+Description[pt_BR]=Mascote do FreeBSD
+Description[pt]=Mascote do FreeBSD
+Description[sl]=Maskota FreeBSD
+Description[sv]=FreeBSD-maskot
 About=Static window sitter
 About[az]=Statik pəncərə mürəbbiyəsi
 About[da]=Statisk vinduespasser
