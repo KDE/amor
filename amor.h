@@ -14,7 +14,6 @@
 
 #include <qtimer.h>
 #include <qwidget.h>
-#include <kwmmapp.h>
 
 #include "amoranim.h"
 #include "amorwidget.h"
@@ -22,6 +21,8 @@
 #include "amortips.h"
 #include "amorconfig.h"
 #include "amordialog.h"
+
+class KWinModule;
 
 //---------------------------------------------------------------------------
 //
@@ -31,10 +32,16 @@ class Amor : public QObject
 {
     Q_OBJECT
 public:
-    Amor(KWMModuleApplication &app);
+    Amor();
     virtual ~Amor();
 
     void reset();
+
+public slots:
+    void slotWindowActivate(WId);
+    void slotWindowRemove(WId);
+    void slotStackingChanged();
+    void slotWindowChange(WId);
 
 protected slots:
     void slotMouseClicked(const QPoint &pos);
@@ -43,11 +50,6 @@ protected slots:
     void slotConfigChanged();
     void slotOffsetChanged(int);
     void slotAbout();
-    void slotWindowActivate(Window);
-    void slotWindowRemove(Window);
-    void slotRaise(Window);
-    void slotLower(Window);
-    void slotWindowChange(Window);
 
 protected:
     enum State { Focus, Blur, Normal, Sleeping, Waking, Destroy };
@@ -62,14 +64,14 @@ protected:
     void selectAnimation(State state=Normal);
     void restack();
     void active();
+    QRect windowGeometry(WId);
 
     virtual void timerEvent(QTimerEvent *);
 
 private:
-    KWMModuleApplication  &mApp;
-    Window           mTargetWin;   // The window that the animations sits on
+    WId              mTargetWin;   // The window that the animations sits on
     QRect            mTargetRect;  // The goemetry of the target window
-    Window           mNextTarget;  // The window that will become the target
+    WId              mNextTarget;  // The window that will become the target
     AmorWidget       *mAmor;       // The widget displaying the animation
     AmorThemeManager mTheme;       // Animations used by current theme
     AmorAnim         *mBaseAnim;   // The base animation

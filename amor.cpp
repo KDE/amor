@@ -15,12 +15,15 @@
 #include <klocale.h>
 #include <ksimpleconfig.h>
 #include <kmessagebox.h>
+#include <kapp.h>
 
 #include "amor.h"
 #include "amor.moc"
 #include "amorpm.h"
 #include "amorbubble.h"
 #include "version.h"
+
+#include <X11/Xlib.h>
 
 #define SLEEP_TIMEOUT   180     // Animation sleeps after SLEEP_TIMEOUT seconds
                                 // of mouse inactivity.
@@ -42,25 +45,13 @@
 //
 // Constructor
 //
-Amor::Amor(KWMModuleApplication &app)
-    : QObject(), mApp(app)
+Amor::Amor() : QObject()
 {
     mAmor = 0;
     mBubble = 0;
 
     if (readConfig())
     {
-        connect(&app, SIGNAL(windowActivate(Window)),
-                SLOT(slotWindowActivate(Window)));
-        connect(&app, SIGNAL(windowRemove(Window)),
-                SLOT(slotWindowRemove(Window)));
-        connect(&app, SIGNAL(windowRaise(Window)),
-                SLOT(slotRaise(Window)));
-        connect(&app, SIGNAL(windowLower(Window)),
-                SLOT(slotLower(Window)));
-        connect(&app, SIGNAL(windowChange(Window)),
-                SLOT(slotWindowChange(Window)));
-
         mTargetWin   = 0;
         mNextTarget  = 0;
         mAmorDialog  = 0;
@@ -86,7 +77,7 @@ Amor::Amor(KWMModuleApplication &app)
     }
     else
     {
-        mApp.quit();
+        kapp->quit();
     }
 }
 
@@ -232,7 +223,8 @@ void Amor::selectAnimation(State state)
             mTargetWin = mNextTarget;
             if (mTargetWin != None)
             {
-                mTargetRect = KWM::geometry(mTargetWin, true);
+                mTargetRect = windowGeometry(mTargetWin);
+//                mTargetRect = KWM::geometry(mTargetWin, true);
                 if (mCurrAnim->frame())
                 {
                     mPosition = (random() %
@@ -337,6 +329,26 @@ void Amor::restack()
     values.stack_mode = Above;
     XConfigureWindow(qt_xdisplay(), mAmor->winId(), CWSibling | CWStackMode,
                      &values);
+}
+
+//---------------------------------------------------------------------------
+//
+QRect Amor::windowGeometry(WId win)
+{
+    QRect rect;
+    XWindowAttributes attr;
+    if (XGetWindowAttributes(qt_xdisplay(), win, &attr))
+    {
+        int x, y;
+        Window child;
+        XTranslateCoordinates(qt_xdisplay(), win, qt_xrootwin(),
+                              0, 0, &x, &y, &child);
+        rect.setRect(x, y, attr.width, attr.height);
+    }
+
+    debug("Window geometry: %d, %d, %d x %d", rect.x(), rect.y(), rect.width(), rect.height());
+
+    return rect;
 }
 
 //---------------------------------------------------------------------------
@@ -506,8 +518,10 @@ void Amor::slotAbout()
 //
 // Focus changed to a different window
 //
-void Amor::slotWindowActivate(Window win)
+void Amor::slotWindowActivate(WId win)
 {
+    debug("Window activated");
+
     mTimer->stop();
     mNextTarget = win;
 
@@ -540,8 +554,9 @@ void Amor::slotWindowActivate(Window win)
 //
 // Window removed
 //
-void Amor::slotWindowRemove(Window win)
+void Amor::slotWindowRemove(WId win)
 {
+    debug("Window removed");
     if (win == mTargetWin)
     {
         // This is an active event that affects the target window
@@ -555,48 +570,28 @@ void Amor::slotWindowRemove(Window win)
 
 //---------------------------------------------------------------------------
 //
-// Window raised
+// Window stacking changed
 //
-void Amor::slotRaise(Window win)
+void Amor::slotStackingChanged()
 {
-    // If the target window is raised in normal mode,
-    // or any window is raised in OnTop mode then schedule a restack.
-    if (win == mTargetWin || mConfig.mOnTop)
-    {
-        // This is an active event that affects the target window
-        time(&mActiveTime);
+    debug("Stacking changed");
 
-        // We seem to get this signal before the window has been restacked,
-        // so we just schedule a restack.
-        mResizeId = startTimer(20);
-    }
-}
+    // This is an active event that affects the target window
+    time(&mActiveTime);
 
-//---------------------------------------------------------------------------
-//
-// Window lowered
-//
-void Amor::slotLower(Window win)
-{
-    // If the target window is raised and we're not in OnTop mode then
-    // schedule a restack.
-    if (win == mTargetWin && !mConfig.mOnTop)
-    {
-        // This is an active event that affects the target window
-        time(&mActiveTime);
-
-        // We seem to get this signal before the window has been restacked,
-        // so we just schedule a restack.
-        mResizeId = startTimer(20);
-    }
+    // We seem to get this signal before the window has been restacked,
+    // so we just schedule a restack.
+    mResizeId = startTimer(20);
 }
 
 //---------------------------------------------------------------------------
 //
 // Properties of a window changed
 //
-void Amor::slotWindowChange(Window win)
+void Amor::slotWindowChange(WId win)
 {
+    debug("Window changed");
+
     if (win != mTargetWin)
     {
         return;
@@ -605,6 +600,7 @@ void Amor::slotWindowChange(Window win)
     // This is an active event that affects the target window
     time(&mActiveTime);
 
+    /*
     if (KWM::isIconified(mTargetWin))
     {
         // The target window has been iconified
@@ -613,9 +609,10 @@ void Amor::slotWindowChange(Window win)
         mTimer->start(0, true);
     }
     else
+    */
     {
         // The size or position of the window has changed.
-        mTargetRect = KWM::geometry(mTargetWin, true);
+        mTargetRect = windowGeometry(mTargetWin);
 
         // make sure the animation is still on the window.
         if (mCurrAnim->frame())
