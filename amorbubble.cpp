@@ -66,7 +66,7 @@ AmorBubble::~AmorBubble()
 //
 void AmorBubble::setMessage(const QString& message)
 {
-    mMessage = QString( "<html>%1</html>" ).arg( i18n( message.utf8().data() ) );
+    mMessage = QString( "<html>%1</html>" ).arg( message );
     // hacks because heightForWidth() doesn't work.
     setGeometry( -1000, 0, 300, 1000 );
     show();
