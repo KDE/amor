@@ -1,6 +1,6 @@
 # SUBDIRS = pics
 
-amor_DATA = blobrc ghostrc eyesrc bonhommerc nekorc pingurc wormrc tips-en \
+amor_DATA = blobrc ghostrc eyesrc nekorc pingurc wormrc tips-en \
 	    billyrc bsdrc tuxrc taorc
 
 # This is where it will all be installed
