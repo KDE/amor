@@ -3,6 +3,7 @@
 PixmapPath=pingu
 Description=Tux
 Description[he]=טקס
+Description[ru]=Наш пингвин
 About=By Frank Pieczynski\nBased on graphics of the game "pingus".
 About[az]=Frank Pieczynski tərəfindən\n"Pingus" oyunu qrafikaları əsasında.
 About[da]=Ved Frank Pieczynski\nBaseret på grafik fra spillet "pingus".
@@ -14,6 +15,7 @@ About[hu]=Készítette Frank Pieczynski\nA "pingus" nevű játék grafikája ala
 About[nl]=Door Frank Pieczynski\nGebaseerd on afbeeldingen van het spel "pingus".
 About[pt]=De Frank Pieczynski\nBaseado nas imagens do jogo "pingus".
 About[pt_BR]=De Frank Pieczynski\nBaseado nas imagens do jogo "pingus".
+About[ru]=Автор - Frank Pieczynski\nНа основе графики игры "pingus".
 About[sl]=Od Franka Pieczynskega\nTemelji na grafiki igre "pingus".
 About[sv]=Av Frank Pieczynski\nBaserad på grafik från spelet "pingus".
 Icon=pinguin.xpm
