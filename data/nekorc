@@ -5,9 +5,11 @@
 [Config]
 PixmapPath=neko
 Description=Neko
+Description[et]=Hiirepüüdja
 Description[ru]=Неко
 Description[th]=เน็คโก้
 Description[tr]=Mırnav
+Description[zh_CN]=Neko小猫咪
 About=Artwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegel
 About[af]=Kunswerk van oneko deur Masayuki Koba\Namor'd deur Chris Spiegel
 About[ar]=عمل فني من أونيكو و من تصميم ماياسوكي كوبا\n نقلت الى Amor عن طريق كريس شبيغل
@@ -18,6 +20,7 @@ About[de]=Zeichnungen des oneko von Masayuki Koba\nAuf AMOR portiert von Chris S
 About[el]=Καλλιτεχνική εργασία από το oneko από τον Masayuki Koba\n Προσαρμογή στο AMOR από τον Chris Spiegel
 About[eo]=Artaĵo de Masayuki Koba\nAMOR-ita de Chris Spiegel
 About[es]=Arte de oneko por Masayuki Koba\nAMORizado por Chris Spiegel
+About[et]=Hiirepüüdja graafika: Masayuki Koba\nAMOR'ile kohandas: Chris Spiegel
 About[fi]=Kuvat oneko ohjelmasta, tehnyt Masayuki Koba\nAMOR muokkaus Chris Spiegel
 About[fr]=Travail d'artiste basé sur oneko de Masayuki Koba\nAMORé par Chris Spiegel
 About[he]=עבודות האמנות מתוך oneko מאת מאסאיוקי קובה\nהותאם ל-AMOR על ידי כריס שפיגל
@@ -42,6 +45,7 @@ About[tr]=Çizimler Masayuki Koba\nArmor'a geçiş Chris Spiegel
 About[uk]=Праця від oneko, автор: Masayuki Koba\nАдаптовано до AMOR - Chris Spiegel
 About[ven]=Mushumo wa zwanda ubva kha oneko nga Masayuki Koba\nAMOR'd nga Chris Spiegel
 About[xh]=Artwork esuka oneko ngu Masayuki Koba\nAMOR'd ngo Chris Spiegel
+About[zh_CN]=艺术作者为 oneko 小组的 Masayuki Koba\nAMOR'd 作者为 Chris Spiegel
 Icon=sit.xpm
 Base=Base
 Sequences=RightScratch,LeftScratch,RunRight,RunLeft,Yawn,RightLick,LeftLick,Claw,JumpRight,JumpLeft

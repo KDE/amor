@@ -13,6 +13,7 @@ Description[de]=FreeBSD-Maskottchen
 Description[el]=Η μασκότ του FreeBSD
 Description[eo]=Simbolbesto de FreeBSD
 Description[es]=Mascota de FreeBSD
+Description[et]=FreeBSD maskott
 Description[fi]=FreeBSD maskotti
 Description[fr]=Mascotte FreeBSD
 Description[he]=הקמיע של BSD
@@ -43,6 +44,7 @@ About[da]=Statisk vinduessitter
 About[de]=Statischer Fenstersitzer
 About[eo]=Moviĝema fenestrosidulo
 About[es]=Cuidador estático de ventanas
+About[et]=Liikumatu aknahoidja
 About[fi]=Staattinen ikkunalla istuja
 About[fr]=Surveillant de fenêtres statique
 About[he]=שומר חלון סטטי
@@ -65,6 +67,7 @@ About[th]=นั่งเล่นบนหน้าต่าง
 About[tr]=Statik pencere bakıcı
 About[uk]=Статична прикраса для вікна
 About[ven]=Tshidzuli tsha window yo imaho
+About[zh_CN]=窗口静坐者
 Icon=bsd.png
 
 [Base]
