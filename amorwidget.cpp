@@ -5,8 +5,8 @@
 // Copyright (c) 1999 Martin R. Jones <mjones@kde.org>
 //
 
-#include <amorwidget.h>
-#include <amorwidget.moc>
+#include "amorwidget.h"
+#include "amorwidget.moc"
 #include <qbitmap.h>
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>

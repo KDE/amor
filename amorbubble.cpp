@@ -5,8 +5,8 @@
 // Copyright (c) 1999 Martin R. Jones <mjones@kde.org>
 //
 
-#include <amorbubble.h>
-#include <amorbubble.moc>
+#include "amorbubble.h"
+#include "amorbubble.moc"
 #include <qpainter.h>
 #include <ktextbrowser.h>
 #include <qtooltip.h>
