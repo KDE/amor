@@ -121,7 +121,7 @@ AmorDialog::~AmorDialog()
 void AmorDialog::readThemes()
 {
 #if QT_VERSION >= 199
-    QStringList dirs(KGlobal::dirs()->getResourceDirs("appdata"));
+    QStringList dirs(KGlobal::dirs()->resourceDirs("appdata"));
     for (QStringList::ConstIterator it1 = dirs.end();
          it1 != dirs.begin();)
     {
@@ -270,7 +270,7 @@ void AmorDialog::slotOk()
 void AmorDialog::slotCancel()
 {
     // restore offset
-    KConfig *config = kapp->getConfig();
+    KConfig *config = kapp->config();
     emit offsetChanged(config->readNumEntry("Offset"));
     reject();
 }
