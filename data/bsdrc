@@ -3,7 +3,7 @@
 PixmapPath=static
 Static=true
 Description=FreeBSD Mascot
-Description[af]=freebsd gelukbringer
+Description[af]=Freebsd Gelukbringer
 Description[ar]=شعار BSD
 Description[az]=FreeBSD Gəlinciyi
 Description[bs]=FreeBSD maskota
@@ -33,7 +33,7 @@ Description[ven]=Mascot ya BSD dza mahala
 Description[xx]=xx
 Description[zh_CN]=FreeBSD 吉祥物
 About=Static window sitter
-About[af]=statiese venster sitter
+About[af]=Statiese venster sitter
 About[ar]=قاعدة النوافذ الساكنة
 About[az]=Statik pəncərə mürəbbiyəsi
 About[bs]=Statički window sitter
