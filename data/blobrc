@@ -29,7 +29,6 @@ About[pt_BR]=De Martin R. Jones\nAnimações do foguete, apontar e disparar anim
 About[ru]=Автор Martin R. Jones\nОгонь, лучи и анимация - Mark Grant
 About[sl]=Od Martina R. Jonesa\nAnimacije izdelal Mark Grant
 About[sv]=Av Martin R. Jones\nJetmotor-, stråle- och eldanimering av Mark Grant
-About[uk]=Автор: Martin R. Jones\nСтрумінь, проміні та оживлення вогню: Mark Grant
 Icon=blob.xpm
 Base=Base
 Sequences=Blink,BounceLeft,BounceRight,Hair,Ears,Girl,ShuffleLeft,ShuffleRight,Glasses,RollLeft,RollRight,UpsideDown,FadeLeft,FadeRight,JetRight,JetLeft,Fire
