@@ -5,12 +5,12 @@
 // Copyright (c) 1999 Martin R. Jones <mjones@kde.org>
 //
 
-#ifndef AMORBUBBLE_H 
-#define AMORBUBBLE_H 
+#ifndef AMORBUBBLE_H
+#define AMORBUBBLE_H
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
-#endif 
+#endif
 
 #include <kapp.h>
 #include <qwidget.h>
@@ -28,7 +28,7 @@ public:
 	virtual ~AmorBubble();
 
     void setOrigin(int x, int y) { mOriginX = x; mOriginY = y; }
-    void setMessage(QString message);
+    void setMessage(const QString& message);
 
 protected:
     enum VertPos { Top, Bottom };
@@ -49,5 +49,5 @@ protected:
     HorzPos mArrowHorz;         // horizontal position of the arrow
 };
 
-#endif // AMORBUBBLE_H 
+#endif // AMORBUBBLE_H
 

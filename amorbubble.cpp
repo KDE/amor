@@ -42,7 +42,7 @@ AmorBubble::~AmorBubble()
 // Set the message to display in the bubble.  Causes the geometry of the
 // widget to be recalculated.
 //
-void AmorBubble::setMessage(QString message)
+void AmorBubble::setMessage(const QString& message)
 {
     mMessage = message;
     calcGeometry();

@@ -27,18 +27,12 @@ int main(int argc, char *argv[])
         "(c) 1999, Martin R. Jones");
     aboutData.addAuthor("Martin R. Jones",0, "mjones@kde.org");
     KCmdLineArgs::init( argc, argv, &aboutData );
-    
+
     KApplication app;
 
     // session management
     AmorSessionWidget *sessionWidget = new AmorSessionWidget;
     app.setTopWidget(sessionWidget);
-
-#warning fix session management    
-#if 0    
-    app.enableSessionManagement(true);
-    app.setWmCommand(argv[0]);
-#endif    
 
     KWinModule *winModule = new KWinModule;
 
@@ -52,6 +46,6 @@ int main(int argc, char *argv[])
     QObject::connect(winModule, SIGNAL(windowChange(WId)),
                     amor,     SLOT(slotWindowChange(WId)));
 
-	  return app.exec();
+    return app.exec();
 }
 

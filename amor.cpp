@@ -95,14 +95,8 @@ Amor::Amor() : QObject()
 //
 Amor::~Amor()
 {
-    if (mAmor)
-    {
-        delete mAmor;
-    }
-    if (mBubble)
-    {
-        delete mBubble;
-    }
+    delete mAmor;
+    delete mBubble;
 }
 
 //---------------------------------------------------------------------------
@@ -175,7 +169,7 @@ bool Amor::readConfig()
 //
 // Show the bubble text
 //
-void Amor::showBubble(const char *msg)
+void Amor::showBubble(const QString& msg)
 {
     if (msg)
     {
@@ -188,7 +182,7 @@ void Amor::showBubble(const char *msg)
                            mAmor->y()+mAmor->height()/2);
         mBubble->setMessage(msg);
         mBubble->show();
-        mBubbleId = startTimer(BUBBLE_TIMEOUT + strlen(msg) * 30);
+        mBubbleId = startTimer(BUBBLE_TIMEOUT + msg.length() * 30);
     }
 }
 
@@ -655,7 +649,7 @@ AmorSessionWidget::AmorSessionWidget()
     // saveYourself() signal from the session manager
     connect(kapp, SIGNAL(saveYourself()), SLOT(wm_saveyourself()));
 }
- 
+
 void AmorSessionWidget::wm_saveyourself()
 {
     // no action required currently.

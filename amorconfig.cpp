@@ -28,6 +28,7 @@ AmorConfig::AmorConfig()
 void AmorConfig::read()
 {
     KConfig *config = kapp->config();
+    KConfigGroupSaver cs(config, "General");
 
     mOnTop = config->readBoolEntry("OnTop");
     mOffset = config->readNumEntry("Offset");
@@ -42,6 +43,7 @@ void AmorConfig::read()
 void AmorConfig::write()
 {
     KConfig *config = kapp->config();
+    KConfigGroupSaver cs(config, "General");
 
     config->writeEntry("OnTop", mOnTop);
     config->writeEntry("Offset", mOffset);

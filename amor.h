@@ -5,12 +5,12 @@
 // Copyright (c) 1999 Martin R. Jones <mjones@kde.org>
 //
 
-#ifndef AMOR_H 
-#define AMOR_H 
+#ifndef AMOR_H
+#define AMOR_H
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
-#endif 
+#endif
 
 #include <qtimer.h>
 #include <qwidget.h>
@@ -55,10 +55,9 @@ protected:
     enum State { Focus, Blur, Normal, Sleeping, Waking, Destroy };
 
     bool readConfig();
-    bool readThemeConfig(const char *file);
     void readGroupConfig(KConfigBase &config, QList<AmorAnim> &animList,
                             const char *seq);
-    void showBubble(const char *msg);
+    void showBubble(const QString& msg);
     void hideBubble();
     AmorAnim *randomAnimation(QList<AmorAnim> &animList);
     void selectAnimation(State state=Normal);
@@ -104,5 +103,5 @@ public slots:
     void wm_saveyourself();
 };
 
-#endif // AMOR_H 
+#endif // AMOR_H
 

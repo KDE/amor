@@ -26,45 +26,20 @@ AmorTips::AmorTips()
 // Set the file containing tips.  This reads all tips into memory at the
 // moment - need to make more efficient.
 //
-bool AmorTips::setFile(const char *file)
+bool AmorTips::setFile(const QString& file)
 {
-#if QT_VERSION >= 199
     QStringList list = KGlobal::locale()->languageList();
     list.append("default");
     QStringList::ConstIterator it = list.begin();
 
     for (it = list.begin(); it != list.end(); it++)
     {
-        QString path( locate("appdata", QString(file) + "-" + *it) );
-        if (path.length() && read(path.ascii()))
+        QString path( locate("appdata", file + "-" + *it) );
+        if (path.length() && read(path))
         {
             return true;
         }
     }
-
-#else
-    QStrList list = klocale->languageList();
-    list.append("default");
-    QStrListIterator it(list);
-
-    for (; it.current(); ++it)
-    {
-        QString path =  KApplication::localkdedir().copy();
-        path += "/share/apps/amor/";
-        path += file + QString("-") + it.current();
-        if (read(path))
-        {
-            return true;
-        }
-        path =  KApplication::kde_datadir().copy();
-        path += "/amor/";
-        path += file + QString("-") + it.current();
-        if (read(path))
-        {
-            return true;
-        }
-    }
-#endif
 
     return false;
 }
@@ -82,21 +57,21 @@ void AmorTips::reset()
 //
 // Get a tip randomly from the list
 //
-const char *AmorTips::tip()
+QString AmorTips::tip()
 {
     if (mTips.count())
     {
-        return mTips.at(kapp->random()%mTips.count());
+        return *mTips.at(kapp->random() % mTips.count());
     }
 
-    return "No tip";
+    return QString::fromLatin1("No tip");
 }
 
 //---------------------------------------------------------------------------
 //
 // Read all tips from the specified file.
 //
-bool AmorTips::read(const char *path)
+bool AmorTips::read(const QString& path)
 {
     QFile file(path);
 
@@ -125,7 +100,7 @@ bool AmorTips::readTip(QFile &file)
         file.readLine(buffer, 1024);
         if (buffer[0] != '%')
         {
-            tip += buffer;
+            tip += QString::fromLocal8Bit(buffer);
         }
     }
 
