@@ -154,7 +154,7 @@ Mark Grant.</para></entry>
 <row>
 <entry><mediaobject>
 <imageobject>
-<imagedata format="PNG" fileref="ghost.png"></imagedata>
+<imagedata format="PNG" fileref="ghost.png"/>
 </imageobject>
 <textobject><para>Spooky Ghost</para></textobject>
 <caption><para>Spooky Ghost</para></caption>
@@ -167,7 +167,7 @@ Martin R. Jones.</para></entry>
 <row>
 <entry><mediaobject>
 <imageobject>
-<imagedata format="PNG" fileref="eyes.png"></imagedata>
+<imagedata format="PNG" fileref="eyes.png"/>
 </imageobject>
 <textobject><para>Crazy Eyes</para></textobject>
 <caption><para>Crazy Eyes</para></caption>
@@ -179,7 +179,7 @@ by Jean-Claude Dumas.</para></entry>
 <row>
 <entry><mediaobject>
 <imageobject>
-<imagedata format="PNG" fileref="bonhomme.png"></imagedata>
+<imagedata format="PNG" fileref="bonhomme.png"/>
 </imageobject>
 <textobject><para>Bonhomme</para></textobject>
 <caption><para>Bonhomme</para></caption>
@@ -191,7 +191,7 @@ Dumas.</para></entry>
 <row>
 <entry><mediaobject>
 <imageobject>
-<imagedata format="PNG" fileref="neko.png"></imagedata>
+<imagedata format="PNG" fileref="neko.png"/>
 </imageobject>
 <textobject><para>Neko</para></textobject>
 <caption><para>Neko</para></caption>
@@ -210,7 +210,7 @@ available.</para></note></entry>
 <row>
 <entry><mediaobject>
 <imageobject>
-<imagedata format="PNG" fileref="pingus.png"></imagedata>
+<imagedata format="PNG" fileref="pingus.png"/>
 </imageobject>
 <textobject><para>Tux</para></textobject>
 <caption><para>Tux</para></caption>
@@ -225,7 +225,7 @@ Frank Pieczynski.</para></entry>
 <row>
 <entry><mediaobject>
 <imageobject>
-<imagedata format="PNG" fileref="worm.png"></imagedata>
+<imagedata format="PNG" fileref="worm.png"/>
 </imageobject>
 <textobject><para>Little Worm</para></textobject>
 <caption><para>Little Worm</para></caption>
@@ -237,7 +237,7 @@ his wife.</para></entry>
 <row>
 <entry><mediaobject>
 <imageobject>
-<imagedata format="PNG" fileref="billy.png"></imagedata>
+<imagedata format="PNG" fileref="billy.png"/>
 </imageobject>
 <textobject><para>Little Billy</para></textobject>
 <caption><para>Little Billy</para></caption>
@@ -250,7 +250,7 @@ his wife.</para></entry>
 <row>
 <entry><mediaobject>
 <imageobject>
-<imagedata format="PNG" fileref="bsd.png"></imagedata>
+<imagedata format="PNG" fileref="bsd.png"/>
 </imageobject>
 <textobject><para>BSD Mascot</para></textobject>
 <caption><para>BSD Mascot</para></caption>
@@ -261,7 +261,7 @@ his wife.</para></entry>
 <row>
 <entry><mediaobject>
 <imageobject>
-<imagedata format="PNG" fileref="tux.png"></imagedata>
+<imagedata format="PNG" fileref="tux.png"/>
 </imageobject>
 <textobject><para>Unanimated Tux</para></textobject>
 <caption><para>Unanimated Tux</para></caption>
@@ -272,7 +272,7 @@ his wife.</para></entry>
 <row>
 <entry><mediaobject>
 <imageobject>
-<imagedata format="PNG" fileref="tao.png"></imagedata>
+<imagedata format="PNG" fileref="tao.png"/>
 </imageobject>
 <textobject><para>Tao</para></textobject>
 <caption><para>Tao</para></caption>
