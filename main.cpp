@@ -6,6 +6,7 @@
 //
 #include <stdlib.h>
 #include <time.h>
+#include <kconfig.h>
 #include "amor.h"
 #include <kwmmapp.h>
 
