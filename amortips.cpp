@@ -9,9 +9,9 @@
 #include <kapp.h>
 #include "amortips.h"
 #if QT_VERSION >= 199
-#include <klocale.h>
-#endif
 #include <kglobal.h>
+#endif
+#include <klocale.h>
 #include <qfile.h>
 
 //---------------------------------------------------------------------------
