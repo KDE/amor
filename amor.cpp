@@ -15,6 +15,7 @@
 #include <klocale.h>
 #include <ksimpleconfig.h>
 #include <kmessagebox.h>
+#include <kwin.h>
 #include <kapp.h>
 
 #include "amor.h"
@@ -74,6 +75,13 @@ Amor::Amor() : QObject()
         time(&mActiveTime);
         mCursPos = QCursor::pos();
         mCursId = startTimer(200);
+
+        if (KWin::activeWindow())
+        {
+            mNextTarget = KWin::activeWindow();
+            selectAnimation(Focus);
+            mTimer->start(0, true);
+        }
     }
     else
     {
@@ -309,7 +317,9 @@ void Amor::restack()
         return;
     }
 
-    Window dw, parent, *wins;
+    debug("restacking");
+
+    Window dw, parent = None, *wins;
     unsigned int nwins = 0;
 
     // We must use the target window's parent as our sibling.
@@ -320,6 +330,11 @@ void Amor::restack()
         {
             XFree(wins);
         }
+    }
+
+    if (parent != None)
+    {
+      debug("Parent = %ld", parent);
     }
 
     // Set animation's stacking order to be above the window manager's
@@ -539,7 +554,7 @@ void Amor::slotWindowActivate(WId win)
     else if (mNextTarget)
     {
         // We are setting focus to a new window
-        selectAnimation(Focus);
+        mState = Focus;
         mTimer->start(0, true);
     }
     else
@@ -600,16 +615,17 @@ void Amor::slotWindowChange(WId win)
     // This is an active event that affects the target window
     time(&mActiveTime);
 
-    /*
-    if (KWM::isIconified(mTargetWin))
+    if (KWin::windowState(mTargetWin) == KWin::IconicState ||
+        KWin::windowState(mTargetWin) == KWin::WithdrawnState)
     {
+        debug("Iconic");
         // The target window has been iconified
         selectAnimation(Destroy);
+        mTargetWin = None;
         mTimer->stop();
         mTimer->start(0, true);
     }
     else
-    */
     {
         // The size or position of the window has changed.
         mTargetRect = windowGeometry(mTargetWin);
