@@ -52,6 +52,8 @@ public:
     void setOrigin(int x, int y) { mOriginX = x; mOriginY = y; }
     void setMessage(const QString& message);
 
+    bool mouseWithin() { return mMouseWithin; }    
+
 protected:
     enum VertPos { Top, Bottom };
     enum HorzPos { Left, Right };
@@ -71,7 +73,10 @@ protected:
     VertPos mArrowVert;         // vertical position of the arrow
     HorzPos mArrowHorz;         // horizontal position of the arrow
     QTextBrowser *mBrowser;	// displays the message
-    QTimer *mBubbleTimer;	// hide timer
+
+// GP    QTimer *mBubbleTimer;	// hide timer
+
+    bool mMouseWithin;		// GP: the mouse pointer is inside the bubble
 };
 
 #endif // AMORBUBBLE_H

@@ -1,1 +1,1 @@
-#define AMOR_VERSION   "2.2"
+#define AMOR_VERSION   "2.3"

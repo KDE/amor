@@ -52,6 +52,9 @@ AmorBubble::AmorBubble()
     mBrowser = new KTextBrowser( this );
     mBrowser->setFrameStyle( QFrame::NoFrame | QFrame::Plain );
     mBrowser->setMargin( 0 );
+
+    mBrowser->setWrapPolicy(QTextEdit::AtWordOrDocumentBoundary); // GP: too long to fit in one line?
+
     QColorGroup clgrp = mBrowser->colorGroup();
     clgrp.setColor(QColorGroup::Text, Qt::black);
     //Laurent QTextBrowser didn't have this function FIX me
@@ -67,8 +70,10 @@ AmorBubble::AmorBubble()
     for (it = icons.begin(); it != icons.end(); ++it)
 	mBrowser->mimeSourceFactory()->addFilePath(*it);
 
-    mBubbleTimer = new QTimer(this);
-    connect(mBubbleTimer, SIGNAL(timeout()), SLOT(hide()));
+// GP    mBubbleTimer = new QTimer(this);
+// GP    connect(mBubbleTimer, SIGNAL(timeout()), SLOT(hide()));
+
+    mMouseWithin = false;
 }
 
 //---------------------------------------------------------------------------
@@ -93,7 +98,7 @@ void AmorBubble::setMessage(const QString& message)
     mBrowser->setGeometry( 0, 0, 250, 1000 );
     mBrowser->setText( mMessage );
     calcGeometry();
-    mBubbleTimer->start(BUBBLE_TIMEOUT + message.length() * 30, TRUE);
+// GP    mBubbleTimer->start(BUBBLE_TIMEOUT + message.length() * 30, TRUE);
 }
 
 //---------------------------------------------------------------------------
@@ -223,15 +228,22 @@ bool AmorBubble::eventFilter( QObject *, QEvent *e )
 {
     switch ( e->type() )
     {
+
+// GP	case QEvent::Enter:
+// GP	    mBubbleTimer->stop();
+// GP	    break;
+// GP	case QEvent::Leave:
+// GP	    if ( isVisible() )
+// GP		mBubbleTimer->start( 1000, true );
+// GP	    break;
 	case QEvent::Enter:
-	    mBubbleTimer->stop();
+	    mMouseWithin = true;
 	    break;
 	case QEvent::Leave:
-	    if ( isVisible() )
-		mBubbleTimer->start( 1000, true );
+	    mMouseWithin = false;
 	    break;
 	case QEvent::MouseButtonRelease:
-	    hide();
+	    hide();				// GP This is the only reason a bubble might posibly be created but hidden
 	    break;
 	default:
 	    break;

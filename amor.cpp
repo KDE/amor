@@ -28,6 +28,8 @@
 #include <unistd.h>
 #include <time.h>
 
+#include <kdebug.h>
+
 #include <kpopupmenu.h>
 #include <qtimer.h>
 #include <qcursor.h>
@@ -64,7 +66,34 @@
 #define ANIM_WAKE       "Wake"
 
 //---------------------------------------------------------------------------
+// QueueItem
+// Constructor
 //
+
+QueueItem::QueueItem(itemType ty, QString te, int ti)
+{
+    // if the time field was not given, calculate one based on the type 
+    // and lenght of the item
+
+    if (ti == -1)
+    {
+	switch (ty)  {
+	    case Talk : // shorter times
+			ti = 1500 + 45 * te.length();
+			break;
+	    case Tip  : // longer times
+			ti = 4000 + 30 * te.length();
+			break;
+	}
+    }
+
+    iType = ty;
+    iText = te;
+    iTime = ti;
+}
+
+//---------------------------------------------------------------------------
+// AMOR
 // Constructor
 //
 Amor::Amor() : DCOPObject( "AmorIface" ), QObject()
@@ -89,8 +118,8 @@ Amor::Amor() : DCOPObject( "AmorIface" ), QObject()
                 this, SLOT(slotWindowRemove(WId)));
         connect(mWin, SIGNAL(stackingOrderChanged()),
                 this, SLOT(slotStackingChanged()));
-        connect(mWin, SIGNAL(windowChanged(WId)),
-                this, SLOT(slotWindowChange(WId)));
+        connect(mWin, SIGNAL(windowChanged(WId, const unsigned long *)),
+                this, SLOT(slotWindowChange(WId, const unsigned long *)));
         connect(mWin, SIGNAL(currentDesktopChanged(int)),
                 this, SLOT(slotDesktopChange(int)));
 
@@ -106,6 +135,9 @@ Amor::Amor() : DCOPObject( "AmorIface" ), QObject()
 
         mStackTimer = new QTimer(this);
         connect(mStackTimer, SIGNAL(timeout()), SLOT(restack()));
+    
+	mBubbleTimer = new QTimer(this);
+	connect(mBubbleTimer, SIGNAL(timeout()), SLOT(slotBubbleTimeout()));
 
         time(&mActiveTime);
         mCursPos = QCursor::pos();
@@ -129,7 +161,9 @@ Amor::Amor() : DCOPObject( "AmorIface" ), QObject()
 	else
 		kdDebug(10000) << "attached dcop signals..." << endl;
 
-        KStartupInfo::appStarted();
+	mTipsQueue.setAutoDelete(true);
+
+	KStartupInfo::appStarted();
     }
     else
     {
@@ -153,6 +187,8 @@ void Amor::screenSaverStopped()
     kdDebug(10000)<<"void Amor::screenSaverStopped() \n";
     mAmor->show();
     mForceHideAmorWidget = false;
+
+    mTimer->start(0, true);
 }
 
 void Amor::screenSaverStarted()
@@ -161,20 +197,37 @@ void Amor::screenSaverStarted()
     mAmor->hide();
     mTimer->stop();
     mForceHideAmorWidget = true;
+
+    // GP: hide the bubble (if there's any) leaving any current message in the queue
+    hideBubble();
 }
 
 //---------------------------------------------------------------------------
 //
 void Amor::showTip( QString tip )
 {
-    if ( mConfig.mAppTips )
+    if (mTipsQueue.count() < 5) // GP: start dropping tips if the queue is too long
+        mTipsQueue.enqueue(new QueueItem(QueueItem::Tip, tip));
+
+    if (mState == Sleeping)
     {
-	if ( mCurrAnim == mBaseAnim || mCurrAnim->frameNum() == 0 )
-	    showBubble( tip );
-	else
-	    mTipText = tip;
+	selectAnimation(Waking);	// Set waking immediatedly
+	mTimer->start(0, true);
     }
 }
+
+void Amor::talk( QString sentence )
+{
+    if (mTipsQueue.count() < 5) // GP: start dropping tips if the queue is too long
+        mTipsQueue.enqueue(new QueueItem(QueueItem::Talk, sentence));
+
+    if (mState == Sleeping)
+    {
+	selectAnimation(Waking);	// Set waking immediatedly
+	mTimer->start(0, true);
+    }
+}
+
 
 //---------------------------------------------------------------------------
 //
@@ -187,6 +240,8 @@ void Amor::reset()
     AmorPixmapManager::manager()->reset();
     mTips.reset();
     delete mAmor;
+
+    mTipsQueue.clear();
 
     readConfig();
 
@@ -260,9 +315,9 @@ bool Amor::readConfig()
 //
 // Show the bubble text
 //
-void Amor::showBubble(const QString& msg)
+void Amor::showBubble()
 {
-    if (!msg.isNull())
+    if (!mTipsQueue.isEmpty())
     {
         if (!mBubble)
         {
@@ -271,7 +326,9 @@ void Amor::showBubble(const QString& msg)
 
         mBubble->setOrigin(mAmor->x()+mAmor->width()/2,
                            mAmor->y()+mAmor->height()/2);
-        mBubble->setMessage(msg);
+        mBubble->setMessage(mTipsQueue.head()->text());
+
+	mBubbleTimer->start(mTipsQueue.head()->time(), true);
     }
 }
 
@@ -279,10 +336,25 @@ void Amor::showBubble(const QString& msg)
 //
 // Hide the bubble text if visible
 //
-void Amor::hideBubble()
+void Amor::hideBubble(bool forceDequeue)
 {
     if (mBubble)
     {
+        // GP: stop mBubbleTimer to avoid deleting the first element, just in case we are changing windows
+	// or something before the tip was shown long enough
+        mBubbleTimer->stop();
+
+	// GP: the first message on the queue should be taken off for a 
+	// number of reasons: a) forceDequeue == true, only when called 
+	// from slotBubbleTimeout; b) the bubble is not visible ; c) 
+	// the bubble is visible, but there's Tip being displayed. The 
+	// latter is to keep backwards compatibility and because 
+	// carrying around a tip bubble when switching windows quickly is really 
+	// annoyying
+	if (forceDequeue || !mBubble->isVisible() || 
+	    (mTipsQueue.head()->type() == QueueItem::Tip)) /* there's always an item in the queue here */
+	    mTipsQueue.dequeue();
+
         delete mBubble;
         mBubble = 0;
     }
@@ -345,6 +417,7 @@ void Amor::selectAnimation(State state)
                 mTimer->stop();
             }
             mAmor->hide();
+
             restack();
             mState = Normal;
             break;
@@ -369,7 +442,8 @@ void Amor::selectAnimation(State state)
             // is not the base, otherwise select the base.  This makes us
             // alternate between the base animation and a random
             // animination.
-            if (mCurrAnim == mBaseAnim && (!mBubble || !mBubble->isVisible() ) )
+// GP:      if (mCurrAnim == mBaseAnim && (!mBubble || !mBubble->isVisible() ) )
+	    if (mCurrAnim == mBaseAnim && !mBubble)
             {
                 mCurrAnim = mTheme.random(ANIM_NORMAL);
             }
@@ -484,6 +558,8 @@ void Amor::slotCursorTimeout()
     QPoint diff = currPos - mCursPos;
     time_t now = time(0);
 
+    if (mForceHideAmorWidget) return; // we're hidden, do nothing
+
     if (abs(diff.x()) > 1 || abs(diff.y()) > 1)
     {
 	if (mState == Sleeping)
@@ -496,8 +572,9 @@ void Amor::slotCursorTimeout()
     }
     else if (mState != Sleeping && now - mActiveTime > SLEEP_TIMEOUT)
     {
-	// The next animation will become sleeping
-	mState = Sleeping;
+	// GP: can't go to sleep if there are tips in the queue
+	if (mTipsQueue.isEmpty())
+	    mState = Sleeping;	// The next animation will become sleeping
     }
 }
 
@@ -520,19 +597,16 @@ void Amor::slotTimeout()
         restack();
     }
 
-    // At the start of a base animation, we can randomly display
-    // a helpful tip.
-    if (mCurrAnim == mBaseAnim && mCurrAnim->frameNum() == 0)
+    if (mCurrAnim == mBaseAnim && mCurrAnim->validFrame())
     {
-	if ( !mTipText.isEmpty() && mConfig.mAppTips )
-	{
-	    showBubble( mTipText );
-	    mTipText = QString();
-	}
-	else if (kapp->random()%TIP_FREQUENCY == 1 && mConfig.mTips &&
-		( !mBubble || !mBubble->isVisible() ) )
+	// GP: Application tips/messages can be shown in any frame number; amor tips are 
+	// only displayed on the first frame of mBaseAnim (the old way of doing this).
+	if ( !mTipsQueue.isEmpty() && !mBubble &&  mConfig.mAppTips)
+	    showBubble();
+	else if (kapp->random()%TIP_FREQUENCY == 1 && mConfig.mTips && !mBubble && !mCurrAnim->frameNum())
         {
-            showBubble(mTips.tip());
+	    mTipsQueue.enqueue(new QueueItem(QueueItem::Tip, mTips.tip())); 
+	    showBubble();
         }
     }
 
@@ -543,7 +617,7 @@ void Amor::slotTimeout()
 
     if (!mCurrAnim->next())
     {
-	if ( mBubble && mBubble->isVisible() )
+	if ( mBubble )
 	    mCurrAnim->reset();
 	else
 	    selectAnimation(mState);
@@ -567,7 +641,7 @@ void Amor::slotConfigure()
     mAmorDialog->show();
 }
 
-//---------------------------------------------------------------------------
+//--------------------------------------------------------------------------
 //
 // Configuration changed.
 //
@@ -599,7 +673,9 @@ void Amor::slotAbout()
 {
     QString about = i18n("Amor Version %1\n\n").arg(AMOR_VERSION) +
                 i18n("Amusing Misuse Of Resources\n\n") +
-                i18n("Copyright (c) 1999 Martin R. Jones <mjones@kde.org>\n") +
+                i18n("Copyright (c) 1999 Martin R. Jones <mjones@kde.org>\n\n") +
+		i18n("Original Author: Martin R. Jones <mjones@kde.org>\n") +
+		i18n("Current Maintainer: Gerardo Puga <gpuga@gioia.ing.unlp.edu.ar>\n" ) +
                 "\nhttp://www.powerup.com.au/~mjones/amor/";
     KMessageBox::about(0, about, i18n("About Amor"));
 }
@@ -639,7 +715,7 @@ void Amor::slotWidgetDragged( const QPoint &delta, bool release )
 //
 void Amor::slotWindowActivate(WId win)
 {
-//    kdDebug(10000) << "Window activated:" << win << endl;
+    kdDebug(10000) << "Window activated:" << win << endl;
 
     mTimer->stop();
     mNextTarget = win;
@@ -660,7 +736,7 @@ void Amor::slotWindowActivate(WId win)
         // We are setting focus to a new window
         if (mState != Focus )
 	    selectAnimation(Focus);
-        mTimer->start(0, true);
+	mTimer->start(0, true);
     }
     else
     {
@@ -676,7 +752,8 @@ void Amor::slotWindowActivate(WId win)
 //
 void Amor::slotWindowRemove(WId win)
 {
-//    kdDebug(10000) << "Window removed" << endl;
+    kdDebug(10000) << "Window removed" << endl;
+
     if (win == mTargetWin)
     {
         // This is an active event that affects the target window
@@ -694,7 +771,7 @@ void Amor::slotWindowRemove(WId win)
 //
 void Amor::slotStackingChanged()
 {
-//    kdDebug(10000) << "Stacking changed" << endl;
+    kdDebug(10000) << "Stacking changed" << endl;
 
     // This is an active event that affects the target window
     time(&mActiveTime);
@@ -708,9 +785,9 @@ void Amor::slotStackingChanged()
 //
 // Properties of a window changed
 //
-void Amor::slotWindowChange(WId win)
+void Amor::slotWindowChange(WId win, const unsigned long * properties)
 {
-//    kdDebug(10000) << "Window changed" << endl;
+    kdDebug(10000) << "Window changed" << endl;
 
     if (win != mTargetWin)
     {
@@ -731,8 +808,11 @@ void Amor::slotWindowChange(WId win)
         mTargetWin = None;
         mTimer->stop();
         mTimer->start(0, true);
+
+	return;
     }
-    else
+    
+    if (*properties && (NET::WMMoveResize))
     {
         // The size or position of the window has changed.
         mTargetRect = info.frameGeometry;
@@ -762,6 +842,8 @@ void Amor::slotWindowChange(WId win)
                      mTargetRect.y() - mCurrAnim->hotspot().y() +
                      mConfig.mOffset);
         }
+
+	return;
     }
 }
 
@@ -769,14 +851,40 @@ void Amor::slotWindowChange(WId win)
 //
 // Changed to a different desktop
 //
-void Amor::slotDesktopChange(int)
+void Amor::slotDesktopChange(int desktop)
 {
-//    kdDebug(10000) << "Desktop change" << endl;
+    // GP: signal currentDesktopChanged seem to be emitted even if you 
+    // change to the very same desktop you are in.
+    if (mWin->currentDesktop() == desktop)
+	return;
+
+    kdDebug(10000) << "Desktop change" << endl;
+
     mNextTarget = None;
     mTargetWin = None;
     selectAnimation( Normal );
     mTimer->stop();
     mAmor->hide();
+}
+
+// GP ===========================================================================
+
+void Amor::slotBubbleTimeout()
+{
+    // do not do anything if the mouse pointer is in the bubble
+    if (mBubble->mouseWithin())
+    {
+	mBubbleTimer->start(500, true);	// GP: Try again later
+	return;	
+    }
+    
+    // are there any other tips pending?
+    if (mTipsQueue.count() > 1)
+    {
+	mTipsQueue.dequeue();
+	showBubble();	// shows the next item in the queue
+    } else
+	hideBubble(true); // hideBubble calls dequeue() for itself.
 }
 
 //===========================================================================

@@ -32,6 +32,7 @@
 #endif
 
 #include <qwidget.h>
+#include <qptrqueue.h>
 
 #include "amoranim.h"
 #include "amortips.h"
@@ -46,6 +47,23 @@ class QTimer;
 class KWinModule;
 class KPopupMenu;
 
+class QueueItem {
+public:
+
+    enum itemType { Talk , Tip };
+    
+    QueueItem(itemType ty, QString te, int ti = -1);
+
+    itemType	type() { return iType; }
+    QString	text() { return iText; };
+    int		time() { return iTime; };
+
+private:
+    itemType	iType;
+    QString 	iText;
+    int		iTime;
+};
+
 //---------------------------------------------------------------------------
 //
 // Amor handles window manager input and animation selection and updates.
@@ -58,6 +76,7 @@ public:
     virtual ~Amor();
 
     virtual void showTip(QString tip);
+    virtual void talk(QString sentence);
     virtual void screenSaverStopped();
     virtual void screenSaverStarted();
 
@@ -67,7 +86,7 @@ public slots:
     void slotWindowActivate(WId);
     void slotWindowRemove(WId);
     void slotStackingChanged();
-    void slotWindowChange(WId);
+    void slotWindowChange(WId, const unsigned long * properties);
     void slotDesktopChange(int);
 
 protected slots:
@@ -80,7 +99,9 @@ protected slots:
     void slotAbout();
     void slotWidgetDragged( const QPoint &delta, bool release );
     void restack();
-    void hideBubble();
+    void hideBubble(bool forceDequeue = false);
+
+    void slotBubbleTimeout(); // GP
 
 protected:
     enum State { Focus, Blur, Normal, Sleeping, Waking, Destroy };
@@ -88,7 +109,7 @@ protected:
     bool readConfig();
     void readGroupConfig(KConfigBase &config, QPtrList<AmorAnim> &animList,
                             const char *seq);
-    void showBubble(const QString& msg);
+    void showBubble();
     AmorAnim *randomAnimation(QPtrList<AmorAnim> &animList);
     void selectAnimation(State state=Normal);
     void active();
@@ -107,7 +128,7 @@ private:
     QTimer           *mTimer;      // Frame timer
     QTimer           *mCursorTimer;// Cursor timer
     QTimer           *mStackTimer; // Restacking timer
-    QTimer           *mBubbleTimer;// Bubble tip timer
+    QTimer           *mBubbleTimer;// Bubble tip timer (GP: I didn't create this one, it had no use when I found it)
     AmorDialog       *mAmorDialog; // Setup dialog
     KPopupMenu       *mMenu;       // Our menu
     time_t           mActiveTime;  // The time an active event occurred
@@ -118,6 +139,8 @@ private:
 
     AmorConfig       mConfig;      // Configuration parameters
     bool             mForceHideAmorWidget;
+
+    QPtrQueue<QueueItem> mTipsQueue; // GP: tips queue
 };
 
 //---------------------------------------------------------------------------
