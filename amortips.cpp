@@ -8,10 +8,8 @@
 #include <stdlib.h>
 #include <kapp.h>
 #include "amortips.h"
-#if QT_VERSION >= 199
 #include <kglobal.h>
 #include <kstddirs.h>
-#endif
 #include <klocale.h>
 #include <qfile.h>
 
@@ -100,7 +98,7 @@ bool AmorTips::readTip(QFile &file)
         file.readLine(buffer, 1024);
         if (buffer[0] != '%')
         {
-            tip += QString::fromLocal8Bit(buffer);
+            tip += QString::fromUtf8(buffer);
         }
     }
 
