@@ -3,6 +3,7 @@
 PixmapPath=worm
 Description=Little worm
 Description[af]=klein wurm
+Description[ara]=دودة صغيرة
 Description[bg]=Малкото червейче
 Description[da]=Lille orm
 Description[de]=Kleiner Wurm
@@ -19,6 +20,7 @@ Description[sv]=Lilla masken
 Description[xxx]=xx
 About=By Bartosz Trudnowski\nMade for my wife
 About[af]=deur bartosz trudnowski\nmade vir my vrou
+About[ara]=من بارتوسز ترودنوفسكي
 About[az]=Bartosz Trudnowski tərəfindən\nHəyat yoldaşıma
 About[da]=Af Bartosz Trudnowski\nLavet til min kone
 About[de]=Von Bartosz Trudnowski\nFür meine Frau
