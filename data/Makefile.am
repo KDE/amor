@@ -7,7 +7,7 @@ datadir = $(kde_datadir)/amor
 
 install-data-local:
 	-rm -f $(datadir)/tips-default
-	$(LN_S) tips-en $(datadir)/tips-default
+	$(LN_S) tips-en $(DESTDIR)$(datadir)/tips-default
 
 uninstall-local:
 	-rm -f $(datadir)/tips-default
