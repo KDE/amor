@@ -53,7 +53,7 @@ AmorBubble::AmorBubble()
     mBrowser->setFrameStyle( QFrame::NoFrame | QFrame::Plain );
     mBrowser->setMargin( 0 );
 
-    mBrowser->setWrapPolicy(QTextEdit::AtWordOrDocumentBoundary); // GP: too long to fit in one line?
+    mBrowser->setWrapPolicy(QTextEdit::AtWordOrDocumentBoundary); // too long to fit in one line?
 
     QColorGroup clgrp = mBrowser->colorGroup();
     clgrp.setColor(QColorGroup::Text, Qt::black);
@@ -69,9 +69,6 @@ AmorBubble::AmorBubble()
     QStringList::Iterator it;
     for (it = icons.begin(); it != icons.end(); ++it)
 	mBrowser->mimeSourceFactory()->addFilePath(*it);
-
-// GP    mBubbleTimer = new QTimer(this);
-// GP    connect(mBubbleTimer, SIGNAL(timeout()), SLOT(hide()));
 
     mMouseWithin = false;
 }
@@ -98,7 +95,6 @@ void AmorBubble::setMessage(const QString& message)
     mBrowser->setGeometry( 0, 0, 250, 1000 );
     mBrowser->setText( mMessage );
     calcGeometry();
-// GP    mBubbleTimer->start(BUBBLE_TIMEOUT + message.length() * 30, TRUE);
 }
 
 //---------------------------------------------------------------------------
@@ -191,7 +187,8 @@ void AmorBubble::drawBubble(QPainter &p)
         pointArray.translate(0, height() - BORDER_SIZE - ARROW_HEIGHT / 2);
     }
 
-    p.drawRoundRect(left, 0, width() - ARROW_WIDTH, height(), 10, 20);
+//    p.drawRoundRect(left, 0, width() - ARROW_WIDTH, height(), 10, 20);
+    p.drawRect(left, 0, width() - ARROW_WIDTH, height());
 
     QPen pen(p.pen());
     p.setPen(NoPen);

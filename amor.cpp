@@ -33,6 +33,7 @@
 #include <kpopupmenu.h>
 #include <qtimer.h>
 #include <qcursor.h>
+#include <qvaluelist.h>
 
 #include <klocale.h>
 #include <kmessagebox.h>
@@ -235,7 +236,7 @@ void Amor::screenSaverStarted()
 //
 void Amor::showTip( QString tip )
 {
-    if (mTipsQueue.count() < 5) // GP: start dropping tips if the queue is too long
+    if (mTipsQueue.count() < 5 && !mForceHideAmorWidget) // start dropping tips if the queue is too long
         mTipsQueue.enqueue(new QueueItem(QueueItem::Tip, tip));
 
     if (mState == Sleeping)
@@ -245,11 +246,18 @@ void Amor::showTip( QString tip )
     }
 }
 
+
 void Amor::showMessage( QString message )
 {
-    //  never drop any notice, it might be important
+    showMessage(message, -1);
+}
 
-    mTipsQueue.enqueue(new QueueItem(QueueItem::Talk, message));
+void Amor::showMessage( QString message , int msec )
+{
+    // FIXME: What should be done about messages and tips while the screensaver is on?
+    if (mForceHideAmorWidget) return; // do not show messages sent while in the screensaver
+
+    mTipsQueue.enqueue(new QueueItem(QueueItem::Talk, message, msec));
 
     if (mState == Sleeping)
     {
@@ -425,6 +433,25 @@ void Amor::selectAnimation(State state)
             if (mTargetWin != None)
             {
                 mTargetRect = KWin::windowInfo(mTargetWin).frameGeometry();
+
+		// if the animation falls outside of the working area, 
+		// then relocate it so that is inside the desktop again
+		QRect desktopArea = mWin->workArea();
+		mInDesktopBottom = false;
+
+		if (mTargetRect.y() - mCurrAnim->hotspot().y() + mConfig.mOffset <
+		    desktopArea.y())
+		{
+		    // relocate the animation at the bottom of the screen
+		    mTargetRect = QRect(desktopArea.x(), 
+				  desktopArea.y() + desktopArea.height(),
+				  desktopArea.width(), 0);
+
+		    // we'll relocate the animation in the desktop 
+		    // frame, so do not add the offset to its vertical position
+		    mInDesktopBottom = true;
+		}
+
 		if ( mTheme.isStatic() )
 		{
 		    if ( mConfig.mStaticPos < 0 )
@@ -485,7 +512,6 @@ void Amor::selectAnimation(State state)
             // is not the base, otherwise select the base.  This makes us
             // alternate between the base animation and a random
             // animination.
-// GP:      if (mCurrAnim == mBaseAnim && (!mBubble || !mBubble->isVisible() ) )
 	    if (mCurrAnim == mBaseAnim && !mBubble)
             {
                 mCurrAnim = mTheme.random(ANIM_NORMAL);
@@ -637,8 +663,8 @@ void Amor::slotTimeout()
     if (!mTheme.isStatic())
 	mPosition += mCurrAnim->movement();
     mAmor->setPixmap(mCurrAnim->frame());
-    mAmor->move(mPosition + mTargetRect.x() - mCurrAnim->hotspot().x(),
-                 mTargetRect.y() - mCurrAnim->hotspot().y() + mConfig.mOffset);
+    mAmor->move(mTargetRect.x() + mPosition - mCurrAnim->hotspot().x(),
+                 mTargetRect.y() - mCurrAnim->hotspot().y() + (!mInDesktopBottom?mConfig.mOffset:0));
     if (!mAmor->isVisible())
     {
         mAmor->show();
@@ -709,7 +735,7 @@ void Amor::slotOffsetChanged(int off)
     if (mCurrAnim->frame())
     {
         mAmor->move(mPosition + mTargetRect.x() - mCurrAnim->hotspot().x(),
-                 mTargetRect.y() - mCurrAnim->hotspot().y() + mConfig.mOffset);
+                 mTargetRect.y() - mCurrAnim->hotspot().y() + (!mInDesktopBottom?mConfig.mOffset:0));
     }
 }
 
@@ -742,7 +768,7 @@ void Amor::slotWidgetDragged( const QPoint &delta, bool release )
 	else if (mCurrAnim->totalMovement() + newPosition < 0)
 	    newPosition = -mCurrAnim->totalMovement();
 	mPosition = newPosition;
-        mAmor->move(mPosition + mTargetRect.x() - mCurrAnim->hotspot().x(),
+        mAmor->move(mTargetRect.x() + mPosition - mCurrAnim->hotspot().x(),
                  mAmor->y());
 
 	if ( mTheme.isStatic() && release ) {
@@ -874,8 +900,27 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
         kdDebug(10000) << "Target window moved or resized" << endl;
 #endif
 
-        // The size or position of the window has changed.
-        mTargetRect = info.frameGeometry;
+        QRect newTargetRect = KWin::windowInfo(mTargetWin).frameGeometry();
+
+	// if the change in the window caused the animation to fall 
+	// out of the working area of the desktop, or if the animation 
+	// didn't fall in the working area before but it does now, then
+	//  refocus on the current window so that the animation is 
+	// relocated.
+	QRect desktopArea = mWin->workArea();
+
+	bool fitsInWorkArea = !(newTargetRect.y() - mCurrAnim->hotspot().y() + mConfig.mOffset < desktopArea.y()); 
+	if ((!fitsInWorkArea && !mInDesktopBottom) || (fitsInWorkArea && mInDesktopBottom))
+	{
+	    mNextTarget = mTargetWin;
+	    selectAnimation(Blur);
+	    mTimer->start(0, true);
+
+	    return;
+	}
+
+	if (!mInDesktopBottom)
+	    mTargetRect = newTargetRect;
 
         // make sure the animation is still on the window.
         if (mCurrAnim->frame())
@@ -895,12 +940,10 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
             else if (mPosition > mTargetRect.width() -
                     (mCurrAnim->frame()->width() - mCurrAnim->hotspot().x()))
             {
-                mPosition = mTargetRect.width() -
-                    (mCurrAnim->frame()->width() - mCurrAnim->hotspot().x());
+                mPosition = mTargetRect.width() - (mCurrAnim->frame()->width() - mCurrAnim->hotspot().x());
             }
-            mAmor->move(mPosition + mTargetRect.x() - mCurrAnim->hotspot().x(),
-                     mTargetRect.y() - mCurrAnim->hotspot().y() +
-                     mConfig.mOffset);
+            mAmor->move(mTargetRect.x() + mPosition - mCurrAnim->hotspot().x(),
+                     mTargetRect.y() - mCurrAnim->hotspot().y() + (!mInDesktopBottom?mConfig.mOffset:0));
         }
 
 	return;

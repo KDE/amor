@@ -1,0 +1,15 @@
+As of 04/14/04...
+
+ - find a way to use round bubbles without using Painter.drawRoundRect, 
+because you can only specify the relative roundness of the corners. The corners
+should have a fixed radius.
+
+ - What should be done about messages that arrive while the screensaver 
+is on?.
+
+ - Clean up the messages queue. Why is the default timing for messages 
+and tips calculated in class queueItem instead of in class Amor?
+
+ - Reduce the delay between a showMessage is received and the bubble is 
+actually shown.
+

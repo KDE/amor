@@ -74,9 +74,7 @@ protected:
     HorzPos mArrowHorz;         // horizontal position of the arrow
     QTextBrowser *mBrowser;	// displays the message
 
-// GP    QTimer *mBubbleTimer;	// hide timer
-
-    bool mMouseWithin;		// GP: the mouse pointer is inside the bubble
+    bool mMouseWithin;		// the mouse pointer is inside the bubble
 };
 
 #endif // AMORBUBBLE_H

@@ -79,6 +79,7 @@ public:
 
     virtual void showTip(QString tip);
     virtual void showMessage(QString message);
+    virtual void showMessage(QString message, int msec);
     virtual void screenSaverStopped();
     virtual void screenSaverStarted();
 
@@ -103,7 +104,7 @@ protected slots:
     void restack();
     void hideBubble(bool forceDequeue = false);
 
-    void slotBubbleTimeout(); // GP
+    void slotBubbleTimeout();
 
 protected:
     enum State { Focus, Blur, Normal, Sleeping, Waking, Destroy };
@@ -138,6 +139,8 @@ private:
     QString          mTipText;     // Text to display in a bubble when possible
     AmorBubble       *mBubble;     // Text bubble
     AmorTips         mTips;        // Tips to display in the bubble
+    bool	     mInDesktopBottom; // the animation is not on top of the 
+				       // title bar, but at the bottom of the desktop
 
     AmorConfig       mConfig;      // Configuration parameters
     bool             mForceHideAmorWidget;
