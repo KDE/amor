@@ -1,5 +1,5 @@
 # Add all your pic files here
-data_DATA = blob.xpm blob_b1.xpm blob_b2.xpm blob_e1.xpm blob_ex1.xpm\
+amor_DATA = blob.xpm blob_b1.xpm blob_b2.xpm blob_e1.xpm blob_ex1.xpm\
             blob_g1.xpm blob_g2.xpm blob_gl1.xpm blob_gl2.xpm blob_gl3.xpm\
             blob_h1.xpm blob_h2.xpm blob_h3.xpm\
             blob_s1.xpm blob_s2.xpm blob_s3.xpm\
@@ -24,4 +24,4 @@ data_DATA = blob.xpm blob_b1.xpm blob_b2.xpm blob_e1.xpm blob_ex1.xpm\
             blob_BeamUp10.xpm
 
 # This is where it will all be installed
-datadir = $(kde_datadir)/amor/blob
+amordir = $(kde_datadir)/amor/blob

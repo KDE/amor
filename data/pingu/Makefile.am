@@ -1,5 +1,5 @@
 # Add all your pic files here
-data_DATA = pinguin.xpm \
+amor_DATA = pinguin.xpm \
             walk_l1.xpm walk_l2.xpm walk_l3.xpm walk_l4.xpm walk_l5.xpm \
             walk_l6.xpm walk_l7.xpm walk_l8.xpm \
             walk_r1.xpm walk_r2.xpm walk_r3.xpm walk_r4.xpm walk_r5.xpm \
@@ -28,4 +28,4 @@ data_DATA = pinguin.xpm \
             blocker5.xpm blocker6.xpm
 
 # This is where it will all be installed
-datadir = $(kde_datadir)/amor/pingu
+amordir = $(kde_datadir)/amor/pingu

@@ -1,5 +1,5 @@
 # Add all your pic files here
-data_DATA = eye_1.xpm eye_2.xpm eye_b.xpm eye_d.xpm eye_e.xpm\
+amor_DATA = eye_1.xpm eye_2.xpm eye_b.xpm eye_d.xpm eye_e.xpm\
             eye_h1.xpm eye_h2.xpm eye_h3.xpm eye_h4.xpm eye_l.xpm\
             eye_m1.xpm eye_m2.xpm eye_m3.xpm eye_m4.xpm eye_m5.xpm\
             eye_m6.xpm eye_m7.xpm eye_s1.xpm eye_s2.xpm eye_s3.xpm\
@@ -7,4 +7,4 @@ data_DATA = eye_1.xpm eye_2.xpm eye_b.xpm eye_d.xpm eye_e.xpm\
             eye_z4.xpm eye_z5.xpm
 
 # This is where it will all be installed
-datadir = $(kde_datadir)/amor/eyes
+amordir = $(kde_datadir)/amor/eyes
