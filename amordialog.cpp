@@ -204,6 +204,7 @@ void AmorDialog::slotCancel()
 {
     // restore offset
     KConfig *config = kapp->config();
+    KConfigGroupSaver cs(config, "General");
     emit offsetChanged(config->readNumEntry("Offset"));
     reject();
 }
