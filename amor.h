@@ -58,6 +58,8 @@ public:
     QString	text() { return iText; };
     int		time() { return iTime; };
 
+    void	setTime(int newTime) { if (iTime > 0) iTime = newTime; };
+
 private:
     itemType	iType;
     QString 	iText;
@@ -76,7 +78,7 @@ public:
     virtual ~Amor();
 
     virtual void showTip(QString tip);
-    virtual void talk(QString sentence);
+    virtual void showMessage(QString message);
     virtual void screenSaverStopped();
     virtual void screenSaverStarted();
 

@@ -50,11 +50,15 @@
 #include <X11/Xlib.h>
 #include <kdebug.h>
 
+// #define DEBUG_AMOR
+
 #define SLEEP_TIMEOUT   180     // Animation sleeps after SLEEP_TIMEOUT seconds
                                 // of mouse inactivity.
 #define TIPS_FILE       "tips"  // Display tips in TIP_FILE-LANG, e.g "tips-en"
 #define TIP_FREQUENCY   20      // Frequency tips are displayed small == more
                                 // often.
+
+#define BUBBLE_TIME_STEP 250
 
 // Standard animation groups
 #define ANIM_BASE       "Base"
@@ -73,16 +77,32 @@
 QueueItem::QueueItem(itemType ty, QString te, int ti)
 {
     // if the time field was not given, calculate one based on the type 
-    // and lenght of the item
+    // and length of the item
+    int effectiveLength = 0, nesting = 0;
+
+    // discard html code from the lenght count
+    for (unsigned int i = 0; i < te.length(); i++)
+    {
+	if (te[i] == '<')	nesting++;
+	else if (te[i] == '>')	nesting--;
+	else if (!nesting)	effectiveLength++;
+    }
+    if (nesting) // malformed html
+    {
+#ifdef DEBUG_AMOR
+	kdDebug(15000) << "QueueItem::QueueItem(): Malformed HTML!" << endl;
+#endif
+	effectiveLength = te.length();
+    }
 
     if (ti == -1)
     {
 	switch (ty)  {
 	    case Talk : // shorter times
-			ti = 1500 + 45 * te.length();
+			ti = 1500 + 45 * effectiveLength;
 			break;
 	    case Tip  : // longer times
-			ti = 4000 + 30 * te.length();
+			ti = 4000 + 30 * effectiveLength;
 			break;
 	}
     }
@@ -184,7 +204,10 @@ Amor::~Amor()
 
 void Amor::screenSaverStopped()
 {
+#ifdef DEBUG_AMOR
     kdDebug(10000)<<"void Amor::screenSaverStopped() \n";
+#endif
+
     mAmor->show();
     mForceHideAmorWidget = false;
 
@@ -193,7 +216,10 @@ void Amor::screenSaverStopped()
 
 void Amor::screenSaverStarted()
 {
+#ifdef DEBUG_AMOR
     kdDebug(10000)<<"void Amor::screenSaverStarted() \n";
+#endif
+
     mAmor->hide();
     mTimer->stop();
     mForceHideAmorWidget = true;
@@ -216,10 +242,11 @@ void Amor::showTip( QString tip )
     }
 }
 
-void Amor::talk( QString sentence )
+void Amor::showMessage( QString message )
 {
-    if (mTipsQueue.count() < 5) // GP: start dropping tips if the queue is too long
-        mTipsQueue.enqueue(new QueueItem(QueueItem::Talk, sentence));
+    //  never drop any notice, it might be important
+
+    mTipsQueue.enqueue(new QueueItem(QueueItem::Talk, message));
 
     if (mState == Sleeping)
     {
@@ -319,6 +346,10 @@ void Amor::showBubble()
 {
     if (!mTipsQueue.isEmpty())
     {
+#ifdef DEBUG_AMOR
+    kdDebug(10000) << "Amor::showBubble(): Displaying tips bubble." << endl;
+#endif
+
         if (!mBubble)
         {
             mBubble = new AmorBubble;
@@ -328,7 +359,8 @@ void Amor::showBubble()
                            mAmor->y()+mAmor->height()/2);
         mBubble->setMessage(mTipsQueue.head()->text());
 
-	mBubbleTimer->start(mTipsQueue.head()->time(), true);
+//	mBubbleTimer->start(mTipsQueue.head()->time(), true);
+	mBubbleTimer->start(BUBBLE_TIME_STEP, true);
     }
 }
 
@@ -340,6 +372,10 @@ void Amor::hideBubble(bool forceDequeue)
 {
     if (mBubble)
     {
+#ifdef DEBUG_AMOR
+    kdDebug(10000) << "Amor::hideBubble(): Hiding tips bubble" << endl;
+#endif
+
         // GP: stop mBubbleTimer to avoid deleting the first element, just in case we are changing windows
 	// or something before the tip was shown long enough
         mBubbleTimer->stop();
@@ -485,7 +521,9 @@ void Amor::restack()
         return;
     }
 
-//    kdDebug(10000) << "restacking" << endl;
+#ifdef DEBUG_AMOR
+    kdDebug(10000) << "restacking" << endl;
+#endif
 
     Window sibling = mTargetWin;
     Window dw, parent = None, *wins;
@@ -715,7 +753,9 @@ void Amor::slotWidgetDragged( const QPoint &delta, bool release )
 //
 void Amor::slotWindowActivate(WId win)
 {
+#ifdef DEBUG_AMOR
     kdDebug(10000) << "Window activated:" << win << endl;
+#endif
 
     mTimer->stop();
     mNextTarget = win;
@@ -752,7 +792,9 @@ void Amor::slotWindowActivate(WId win)
 //
 void Amor::slotWindowRemove(WId win)
 {
+#ifdef DEBUG_AMOR
     kdDebug(10000) << "Window removed" << endl;
+#endif
 
     if (win == mTargetWin)
     {
@@ -771,7 +813,9 @@ void Amor::slotWindowRemove(WId win)
 //
 void Amor::slotStackingChanged()
 {
+#ifdef DEBUG_AMOR
     kdDebug(10000) << "Stacking changed" << endl;
+#endif
 
     // This is an active event that affects the target window
     time(&mActiveTime);
@@ -787,7 +831,6 @@ void Amor::slotStackingChanged()
 //
 void Amor::slotWindowChange(WId win, const unsigned long * properties)
 {
-    kdDebug(10000) << "Window changed" << endl;
 
     if (win != mTargetWin)
     {
@@ -802,7 +845,10 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
     if (info.isIconified() ||
         info.mappingState == NET::Withdrawn)
     {
-//        kdDebug(10000) << "Iconic" << endl;
+#ifdef DEBUG_AMOR
+        kdDebug(10000) << "Target window iconified" << endl;
+#endif
+
         // The target window has been iconified
         selectAnimation(Destroy);
         mTargetWin = None;
@@ -812,8 +858,12 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
 	return;
     }
     
-    if (*properties && (NET::WMMoveResize))
+    if (properties[0] & NET::WMGeometry) 
     {
+#ifdef DEBUG_AMOR
+        kdDebug(10000) << "Target window moved or resized" << endl;
+#endif
+
         // The size or position of the window has changed.
         mTargetRect = info.frameGeometry;
 
@@ -853,12 +903,14 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
 //
 void Amor::slotDesktopChange(int desktop)
 {
-    // GP: signal currentDesktopChanged seem to be emitted even if you 
+    // GP: signal currentDesktopChanged seems to be emitted even if you 
     // change to the very same desktop you are in.
     if (mWin->currentDesktop() == desktop)
 	return;
 
+#ifdef DEBUG_AMOR
     kdDebug(10000) << "Desktop change" << endl;
+#endif
 
     mNextTarget = None;
     mTargetWin = None;
@@ -871,10 +923,23 @@ void Amor::slotDesktopChange(int desktop)
 
 void Amor::slotBubbleTimeout()
 {
+    // has the queue item been displayed for long enough?
+    QueueItem *first = mTipsQueue.head();
+#ifdef DEBUG_AMOR
+    if (!first)	kdDebug(15000) << "Amor::slotBubbleTimeout(): empty queue!" << endl;
+#endif
+    if ((first->time() > BUBBLE_TIME_STEP) && (mBubble->isVisible()))
+    {
+    	first->setTime(first->time() - BUBBLE_TIME_STEP);
+	mBubbleTimer->start(BUBBLE_TIME_STEP, true);
+	return;
+    }
+
     // do not do anything if the mouse pointer is in the bubble
     if (mBubble->mouseWithin())
     {
-	mBubbleTimer->start(500, true);	// GP: Try again later
+	first->setTime(500);		// show this item for another 500ms
+	mBubbleTimer->start(BUBBLE_TIME_STEP, true);
 	return;	
     }
     
