@@ -18,8 +18,11 @@ int main(int argc, char *argv[])
 
     // session management
     app.setTopWidget(new AmorSessionWidget);
+#warning fix session management    
+#if 0    
     app.enableSessionManagement(true);
     app.setWmCommand(argv[0]);
+#endif    
 
     Amor amor(app);
 
