@@ -1,0 +1,10 @@
+# KDE Config File 
+[KDE Desktop Entry]
+Name=AMOR
+Exec=amor
+Icon=amor.xpm
+Type=Application
+#DocPath=amor/amor.html
+Comment=Amusing Misuse Of Resources
+Terminal=0
+MiniIcon=amor.xpm
