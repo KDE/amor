@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include <time.h>
 
-#include <kconfig.h>
 #include <kuniqueapplication.h>
 #include <klocale.h>
 #include <kcmdlineargs.h>

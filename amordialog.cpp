@@ -5,12 +5,9 @@
 // Copyright (c) 1999 Martin R. Jones <mjones@kde.org>
 //
 
-#include <qlayout.h>
-#include <qpushbutton.h>
 #include <qcheckbox.h>
 #include <qlabel.h>
 #include <qslider.h>
-#include <qdir.h>
 #include <qpainter.h>
 #include <kapplication.h>
 #include <ksimpleconfig.h>
@@ -20,7 +17,6 @@
 #include "version.h"
 #include <klocale.h>
 #include <qvbox.h>
-#include <kglobal.h>
 #include <kstandarddirs.h>
 
 //---------------------------------------------------------------------------

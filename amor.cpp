@@ -13,11 +13,9 @@
 #include <qtimer.h>
 
 #include <klocale.h>
-#include <ksimpleconfig.h>
 #include <kmessagebox.h>
 #include <kwin.h>
 #include <kwinmodule.h>
-#include <kapplication.h>
 
 #include "amor.h"
 #include "amor.moc"
@@ -26,7 +24,6 @@
 #include "amorwidget.h"
 #include "amordialog.h"
 #include "version.h"
-#include <kdebug.h>
 #include <X11/Xlib.h>
 
 #define SLEEP_TIMEOUT   180     // Animation sleeps after SLEEP_TIMEOUT seconds

@@ -8,12 +8,9 @@
 #include <stdlib.h>
 #include <kapplication.h>
 #include "amortips.h"
-#include <kglobal.h>
 #include <kstandarddirs.h>
 #include <klocale.h>
-#include <kdebug.h>
 #include <qfile.h>
-#include <qtextstream.h>
 
 //---------------------------------------------------------------------------
 //

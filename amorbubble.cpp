@@ -7,14 +7,10 @@
 
 #include <amorbubble.h>
 #include <amorbubble.moc>
-#include <qbitmap.h>
 #include <qpainter.h>
 #include <ktextbrowser.h>
 #include <qtooltip.h>
-#include <kapplication.h>
 #include <kstandarddirs.h>
-#include <kdebug.h>
-#include <klocale.h>
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>
 #include <qtimer.h>
