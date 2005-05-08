@@ -45,6 +45,7 @@ GenericName[sr]=Створење на екрану
 GenericName[sr@Latn]=Stvorenje na ekranu
 GenericName[sv]=Varelse på skärmen
 GenericName[uk]=Екранна істота
+GenericName[zh_CN]=屏幕创作
 Terminal=false
 X-DCOP-ServiceType=Unique
 Categories=Qt;KDE;Amusement;
