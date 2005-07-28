@@ -29,13 +29,19 @@
 #include <qlabel.h>
 #include <qslider.h>
 #include <qpainter.h>
+//Added by qt3to4:
+#include <QPixmap>
+#include <QHBoxLayout>
+#include <Q3VBox>
+//Added by qt3to4:
+#include <QVBoxLayout>
 #include <kapplication.h>
 #include <ksimpleconfig.h>
 #include "amordialog.h"
 #include "amordialog.moc"
 #include "version.h"
 #include <klocale.h>
-#include <qvbox.h>
+
 #include <kstandarddirs.h>
 
 //---------------------------------------------------------------------------
@@ -46,35 +52,41 @@ AmorDialog::AmorDialog()
     : KDialogBase(0, "amordlg", false, i18n("Options"), Ok|Apply|Cancel, Ok )
 {
     mConfig.read();
-    QVBox *mainwidget = makeVBoxMainWidget();
+    Q3VBox *mainwidget = makeVBoxMainWidget();
 
-    QHBox *hb = new QHBox(mainwidget);
+    QWidget *hb = new QWidget(mainwidget);
+    QHBoxLayout *hboxLayout1 = new QHBoxLayout(hb);
+    hb->setLayout(hboxLayout1);
 
     // Theme list
-    QVBox *themeBox = new QVBox(hb);
-    themeBox->setSpacing(spacingHint());
+    QWidget *themeBox = new QWidget(hb);
+    QVBoxLayout *vboxLayout2 = new QVBoxLayout(themeBox);
+    themeBox->setLayout(vboxLayout2);
+    vboxLayout2->setSpacing(spacingHint());
 
     QLabel *label = new QLabel(i18n("Theme:"), themeBox);
 
-    mThemeListBox = new QListBox(themeBox);
+    mThemeListBox = new Q3ListBox(themeBox);
     connect(mThemeListBox,SIGNAL(highlighted(int)),SLOT(slotHighlighted(int)));
     mThemeListBox->setMinimumSize( fontMetrics().maxWidth()*20,
 				   fontMetrics().lineSpacing()*6 );
 
-    mAboutEdit = new QMultiLineEdit(themeBox);
+    mAboutEdit = new Q3MultiLineEdit(themeBox);
     mAboutEdit->setReadOnly(true);
     mAboutEdit->setMinimumHeight( fontMetrics().lineSpacing()*4 );
 
-    themeBox->setStretchFactor(mThemeListBox, 4);
-    themeBox->setStretchFactor(mAboutEdit, 1);
+    vboxLayout2->setStretchFactor(mThemeListBox, 4);
+    vboxLayout2->setStretchFactor(mAboutEdit, 1);
 
     // Animation offset
-    QVBox *offsetBox = new QVBox(hb);
-    offsetBox->setSpacing(spacingHint());
+    QWidget *offsetBox = new QWidget(hb);
+    QVBoxLayout *vboxLayout3 = new QVBoxLayout(offsetBox);
+    offsetBox->setLayout(vboxLayout3);
+    vboxLayout3->setSpacing(spacingHint());
     label = new QLabel(i18n("Offset:"), offsetBox);
 
     QSlider *slider = new QSlider(-40, 40, 5, mConfig.mOffset,
-                                    QSlider::Vertical, offsetBox);
+                                    Qt::Vertical, offsetBox);
     connect(slider, SIGNAL(valueChanged(int)), SLOT(slotOffset(int)));
 
     // Always on top
@@ -167,8 +179,8 @@ void AmorDialog::addTheme(const QString& file)
 //
 void AmorDialog::slotHighlighted(int index)
 {
-    mConfig.mTheme = *mThemes.at(index);
-    mAboutEdit->setText(*mThemeAbout.at(index));
+    mConfig.mTheme = mThemes.at(index);
+    mAboutEdit->setText(mThemeAbout.at(index));
 }
 
 //---------------------------------------------------------------------------
@@ -268,12 +280,12 @@ void AmorListBoxItem::paint( QPainter *p )
     p->drawText( mPixmap.width() + 5, yPos, text() );
 }
 
-int AmorListBoxItem::height(const QListBox *lb ) const
+int AmorListBoxItem::height(const Q3ListBox *lb ) const
 {
     return QMAX( mPixmap.height(), lb->fontMetrics().lineSpacing() + 1 );
 }
 
-int AmorListBoxItem::width(const QListBox *lb ) const
+int AmorListBoxItem::width(const Q3ListBox *lb ) const
 {
     return mPixmap.width() + lb->fontMetrics().width( text() ) + 6;
 }

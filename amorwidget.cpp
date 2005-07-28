@@ -27,6 +27,10 @@
 #include "amorwidget.h"
 #include "amorwidget.moc"
 #include <qbitmap.h>
+//Added by qt3to4:
+#include <QPixmap>
+#include <QMouseEvent>
+#include <QPaintEvent>
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>
 
@@ -35,10 +39,10 @@
 // Constructor
 //
 AmorWidget::AmorWidget()
-	: QWidget(0, 0, WStyle_Customize | WStyle_NoBorder | WX11BypassWM ),
+	: QWidget(0, 0, Qt::WStyle_Customize | Qt::WStyle_NoBorder | Qt::WX11BypassWM ),
       mPixmap(0)
 {
-    setBackgroundMode( NoBackground );
+    setBackgroundMode( Qt::NoBackground );
     dragging = false;
 }
 
@@ -60,10 +64,10 @@ void AmorWidget::setPixmap(const QPixmap *pixmap)
 
     if (mPixmap)
     {
-        if (mPixmap->mask())
+        if (!mPixmap->mask().isNull())
         {
             XShapeCombineMask( x11Display(), winId(), ShapeBounding, 0, 0,
-                                mPixmap->mask()->handle(), ShapeSet );
+                                mPixmap->mask().handle(), ShapeSet );
             repaint(false);
         }
     
@@ -98,7 +102,7 @@ void AmorWidget::mousePressEvent(QMouseEvent *me)
 //
 void AmorWidget::mouseMoveEvent(QMouseEvent *me)
 {
-    if ( me->state() == LeftButton ) {
+    if ( me->state() == Qt::LeftButton ) {
 	if ( !dragging && (clickPos-me->globalPos()).manhattanLength() > 3 )
 	    dragging = true;
 	if ( dragging ) {
@@ -116,7 +120,7 @@ void AmorWidget::mouseReleaseEvent(QMouseEvent *me)
 {
     if ( dragging )
 	emit dragged( me->globalPos() - clickPos, true );
-    else if ( me->state() == RightButton )
+    else if ( me->state() == Qt::RightButton )
 	emit mouseClicked(clickPos);
 
     clickPos = QPoint();

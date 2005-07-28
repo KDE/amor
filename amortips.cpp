@@ -75,7 +75,7 @@ QString AmorTips::tip()
 {
     if (mTips.count())
     {
-        QString tip = *mTips.at(kapp->random() % mTips.count());
+        QString tip = mTips.at(kapp->random() % mTips.count());
 		return i18n(tip.utf8());
     }
 
@@ -96,7 +96,7 @@ bool AmorTips::readKTips()
 	return false;
 
     QFile f(fname);
-    if (f.open(IO_ReadOnly))
+    if (f.open(QIODevice::ReadOnly))
     {
 	// Reading of tips must be exactly as in KTipDatabase::loadTips for translation
 	QString content = f.readAll();
@@ -134,7 +134,7 @@ bool AmorTips::read(const QString& path)
 {
     QFile file(path);
 
-    if (file.open(IO_ReadOnly))
+    if (file.open(QIODevice::ReadOnly))
     {
         while (!file.atEnd())
         {

@@ -31,7 +31,7 @@
 #include <config.h>
 #endif 
 
-#include <qdict.h>
+#include <q3dict.h>
 #include <qpixmap.h>
 
 //---------------------------------------------------------------------------
@@ -56,7 +56,7 @@ public:
 
 public:
     QString        mPixmapDir;           // get pixmaps from here
-    QDict<QPixmap> mPixmaps;             // list of pixmaps
+    Q3Dict<QPixmap> mPixmaps;             // list of pixmaps
     static AmorPixmapManager *mManager; // static pointer to instance
 };
 

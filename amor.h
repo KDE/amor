@@ -32,7 +32,10 @@
 #endif
 
 #include <qwidget.h>
-#include <qptrqueue.h>
+#include <q3ptrqueue.h>
+//Added by qt3to4:
+#include <QList>
+#include <QList>
 
 #include "amoranim.h"
 #include "amortips.h"
@@ -110,10 +113,10 @@ protected:
     enum State { Focus, Blur, Normal, Sleeping, Waking, Destroy };
 
     bool readConfig();
-    void readGroupConfig(KConfigBase &config, QPtrList<AmorAnim> &animList,
+    void readGroupConfig(KConfigBase &config, QList<AmorAnim> &animList,
                             const char *seq);
     void showBubble();
-    AmorAnim *randomAnimation(QPtrList<AmorAnim> &animList);
+    AmorAnim *randomAnimation(QList<AmorAnim> &animList);
     void selectAnimation(State state=Normal);
     void active();
 
@@ -145,7 +148,7 @@ private:
     AmorConfig       mConfig;      // Configuration parameters
     bool             mForceHideAmorWidget;
 
-    QPtrQueue<QueueItem> mTipsQueue; // GP: tips queue
+    Q3PtrQueue<QueueItem> mTipsQueue; // GP: tips queue
 };
 
 //---------------------------------------------------------------------------

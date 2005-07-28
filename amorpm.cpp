@@ -25,6 +25,8 @@
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
 #include "amorpm.h"
+//Added by qt3to4:
+#include <QPixmap>
 
 // static
 AmorPixmapManager *AmorPixmapManager::mManager = 0;

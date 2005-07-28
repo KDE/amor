@@ -33,9 +33,12 @@
 
 #include <stdlib.h>
 #include <unistd.h>
-#include <qmemarray.h>
-#include <qdict.h>
+
+#include <q3dict.h>
 #include <qstringlist.h>
+//Added by qt3to4:
+#include <QPixmap>
+#include <Q3PtrList>
 #include <kconfigbase.h>
 #include <ksimpleconfig.h>
 
@@ -74,17 +77,17 @@ protected:
     void readConfig(KConfigBase &config);
 
 protected:
-    unsigned int   mCurrent;        // current frame in sequence
+    int   mCurrent;        // current frame in sequence
     QStringList    mSequence;       // sequence of images to display
-    QMemArray<int>    mDelay;          // delay between frames
-    QMemArray<QPoint> mHotspot;        // the hotspot in a frame
-    QMemArray<int>    mMovement;       // the distance to move between frames
+    QVector<int>    mDelay;          // delay between frames
+    QVector<QPoint> mHotspot;        // the hotspot in a frame
+    QVector<int>    mMovement;       // the distance to move between frames
     int            mTotalMovement;  // the total distance this animation moves
     QSize          mMaximumSize;    // the maximum size of any frame
 };
 
 //---------------------------------------------------------------------------
-typedef QPtrList<AmorAnim> AmorAnimationGroup;
+typedef Q3PtrList<AmorAnim> AmorAnimationGroup;
 
 //---------------------------------------------------------------------------
 //
@@ -109,7 +112,7 @@ protected:
     QString           mPath;
     KSimpleConfig     *mConfig;
     QSize             mMaximumSize; // The largest pixmap used
-    QDict<AmorAnimationGroup> mAnimations; // list of animation groups
+    Q3Dict<AmorAnimationGroup> mAnimations; // list of animation groups
     bool              mStatic;	    // static image
 };
 

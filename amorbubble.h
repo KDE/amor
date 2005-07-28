@@ -34,8 +34,12 @@
 #include <kapplication.h>
 #include <qwidget.h>
 #include <qbitmap.h>
+//Added by qt3to4:
+#include <QMouseEvent>
+#include <QEvent>
+#include <QPaintEvent>
 
-class QTextBrowser;
+class Q3TextBrowser;
 class QTimer;
 
 //---------------------------------------------------------------------------
@@ -72,7 +76,7 @@ protected:
     QBitmap mMask;              // shape mask
     VertPos mArrowVert;         // vertical position of the arrow
     HorzPos mArrowHorz;         // horizontal position of the arrow
-    QTextBrowser *mBrowser;	// displays the message
+    Q3TextBrowser *mBrowser;	// displays the message
 
     bool mMouseWithin;		// the mouse pointer is inside the bubble
 };

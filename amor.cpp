@@ -33,7 +33,7 @@
 #include <kpopupmenu.h>
 #include <qtimer.h>
 #include <qcursor.h>
-#include <qvaluelist.h>
+#include <q3valuelist.h>
 
 #include <klocale.h>
 #include <kmessagebox.h>
@@ -53,7 +53,7 @@
 #include "version.h"
 #include <X11/Xlib.h>
 #include <kdebug.h>
-
+#include <QX11Info>
 // #define DEBUG_AMOR
 
 #define SLEEP_TIMEOUT   180     // Animation sleeps after SLEEP_TIMEOUT seconds
@@ -85,7 +85,7 @@ QueueItem::QueueItem(itemType ty, QString te, int ti)
     int effectiveLength = 0, nesting = 0;
 
     // discard html code from the lenght count
-    for (unsigned int i = 0; i < te.length(); i++)
+    for (int i = 0; i < te.length(); i++)
     {
 	if (te[i] == '<')	nesting++;
 	else if (te[i] == '>')	nesting--;
@@ -313,7 +313,7 @@ bool Amor::readConfig()
 	{
 		QStringList files(KGlobal::dirs()->findAllResources("appdata", "*rc"));
 		int randomTheme = kapp->random() % files.count();
-		mConfig.mTheme = (QString)*files.at(randomTheme);
+		mConfig.mTheme = files.at(randomTheme);
 	}
 	
     // read selected theme
@@ -566,7 +566,7 @@ void Amor::restack()
 
         // We must use the target window's parent as our sibling.
         // Is there a faster way to get parent window than XQueryTree?
-        if (XQueryTree(qt_xdisplay(), sibling, &dw, &parent, &wins, &nwins))
+        if (XQueryTree(QX11Info::display(), sibling, &dw, &parent, &wins, &nwins))
         {
             if (nwins)
             {
@@ -583,7 +583,7 @@ void Amor::restack()
     XWindowChanges values;
     values.sibling = sibling;
     values.stack_mode = Above;
-    XConfigureWindow(qt_xdisplay(), mAmor->winId(), CWSibling | CWStackMode,
+    XConfigureWindow(QX11Info::display(), mAmor->winId(), CWSibling | CWStackMode,
                      &values);
 }
 

@@ -27,6 +27,13 @@
 #include "amorbubble.h"
 #include "amorbubble.moc"
 #include <qpainter.h>
+//Added by qt3to4:
+#include <QPaintEvent>
+#include <Q3PointArray>
+#include <QEvent>
+#include <Q3Frame>
+#include <QMouseEvent>
+#include <QDesktopWidget>
 #include <ktextbrowser.h>
 #include <qtooltip.h>
 #include <kstandarddirs.h>
@@ -45,23 +52,23 @@
 // Constructor
 //
 AmorBubble::AmorBubble()
-	: QWidget(0, 0, WStyle_Customize | WStyle_NoBorder | WX11BypassWM )
+	: QWidget(0, 0, Qt::WStyle_Customize | Qt::WStyle_NoBorder | Qt::WX11BypassWM )
 {
     mOriginX = 0;
     mOriginY = 0;
     mBrowser = new KTextBrowser( this );
-    mBrowser->setFrameStyle( QFrame::NoFrame | QFrame::Plain );
+    mBrowser->setFrameStyle( Q3Frame::NoFrame | Q3Frame::Plain );
     mBrowser->setMargin( 0 );
 
-    mBrowser->setWrapPolicy(QTextEdit::AtWordOrDocumentBoundary); // too long to fit in one line?
+    mBrowser->setWrapPolicy(Q3TextEdit::AtWordOrDocumentBoundary); // too long to fit in one line?
 
     QColorGroup clgrp = mBrowser->colorGroup();
     clgrp.setColor(QColorGroup::Text, Qt::black);
     //Laurent QTextBrowser didn't have this function FIX me
     //mBrowser->setPaperColorGroup( clgrp );
     mBrowser->setPaper( QToolTip::palette().active().brush( QColorGroup::Background ) );
-    mBrowser->setVScrollBarMode( QTextBrowser::AlwaysOff );
-    mBrowser->setHScrollBarMode( QTextBrowser::AlwaysOff );
+    mBrowser->setVScrollBarMode( Q3TextBrowser::AlwaysOff );
+    mBrowser->setHScrollBarMode( Q3TextBrowser::AlwaysOff );
     mBrowser->viewport()->installEventFilter( this );
 
     mBrowser->mimeSourceFactory()->addFilePath(KGlobal::dirs()->findResourceDir("data", "kdewizard/pics")+"kdewizard/pics/");
@@ -143,10 +150,10 @@ void AmorBubble::calcGeometry()
 
     // create and apply the shape mask
     mMask.resize(w, h);
-    mMask.fill(color0);
+    mMask.fill(Qt::color0);
     QPainter maskPainter(&mMask);
-    maskPainter.setPen(color1);
-    maskPainter.setBrush(color1);
+    maskPainter.setPen(Qt::color1);
+    maskPainter.setBrush(Qt::color1);
     drawBubble(maskPainter);
     XShapeCombineMask( x11Display(), winId(), ShapeBounding, 0, 0,
                        mMask.handle(), ShapeSet );
@@ -159,7 +166,7 @@ void AmorBubble::calcGeometry()
 //
 void AmorBubble::drawBubble(QPainter &p)
 {
-    QPointArray pointArray(3);
+    Q3PointArray pointArray(3);
 
     int left = ARROW_WIDTH;
 
@@ -191,7 +198,7 @@ void AmorBubble::drawBubble(QPainter &p)
     p.drawRect(left, 0, width() - ARROW_WIDTH, height());
 
     QPen pen(p.pen());
-    p.setPen(NoPen);
+    p.setPen(Qt::NoPen);
     p.drawPolygon(pointArray);
 
     p.setPen(pen);
@@ -205,7 +212,7 @@ void AmorBubble::drawBubble(QPainter &p)
 void AmorBubble::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
-    painter.setPen(black);
+    painter.setPen(Qt::black);
     painter.setBrush( QToolTip::palette().active().brush( QColorGroup::Background ) );
     drawBubble(painter);
 }

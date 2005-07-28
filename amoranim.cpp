@@ -29,6 +29,9 @@
 #include <kstandarddirs.h>
 #include "amoranim.h"
 #include "amorpm.h"
+//Added by qt3to4:
+#include <Q3StrList>
+#include <QPixmap>
 
 //---------------------------------------------------------------------------
 //
@@ -59,7 +62,7 @@ const QPixmap *AmorAnim::frame()
     const QPixmap *pixmap = 0;
 
     if (validFrame())
-        pixmap = AmorPixmapManager::manager()->pixmap(*mSequence.at(mCurrent));
+        pixmap = AmorPixmapManager::manager()->pixmap(mSequence.at(mCurrent));
 
     return pixmap;
 }
@@ -86,7 +89,7 @@ void AmorAnim::readConfig(KConfigBase &config)
     }
 
     // Read the delays between frames.
-    QStrList list;
+    Q3StrList list;
     int entries = config.readListEntry("Delay",list);
     mDelay.resize(frames);
     for (int i = 0; i < entries && i < frames; i++)
@@ -218,7 +221,7 @@ bool AmorThemeManager::readGroup(const QString & seq)
 
     // Read the list of available animations.
     mConfig->setGroup("Config");
-    QStrList list;
+    Q3StrList list;
     int entries = mConfig->readListEntry(seq, list);
 
     // Read each individual animation
