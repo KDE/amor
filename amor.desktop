@@ -50,6 +50,7 @@ GenericName[sv]=Varelse på skärmen
 GenericName[ta]=திரையில் உருவாக்கி
 GenericName[tr]=Ekranda Gezinen Yaratık
 GenericName[xx]=xxOn-Screen Creaturexx
+GenericName[zh_CN]=屏幕涂鸦
 Terminal=false
 X-DCOP-ServiceType=Unique
 Categories=Qt;KDE;Amusement;
