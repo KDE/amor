@@ -604,13 +604,17 @@ void Amor::slotMouseClicked(const QPoint &pos)
     if (!mMenu)
     {
         KHelpMenu* help = new KHelpMenu(0, KGlobal::instance()->aboutData(), false);
-        KPopupMenu* helpMnu = help->menu();
-        mMenu = new KPopupMenu();
-        mMenu->insertTitle("Amor"); // I really don't want this i18n'ed
-        mMenu->insertItem(SmallIcon("configure"), i18n("&Configure..."), this, SLOT(slotConfigure()));
-        mMenu->insertSeparator();
-        mMenu->insertItem(SmallIcon("help"), i18n("&Help"), helpMnu);
-        mMenu->insertItem(SmallIcon("exit"), i18n("&Quit"), kapp, SLOT(quit()));
+        KPopupMenu* helpMenu = help->menu();
+	#warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)
+        helpMenu->setIcon(SmallIcon("help"));
+        ((QMenu *)helpMenu)->setTitle(i18n("&Help")); // Workaround a compat deprecated code
+
+        mMenu = new KPopupMenu(0);
+        mMenu->addTitle("Amor"); // I really don't want this i18n'ed
+        mMenu->addAction(SmallIcon("configure"), i18n("&Configure..."), this, SLOT(slotConfigure()));
+        mMenu->addSeparator();
+        mMenu->addMenu(helpMenu);
+        mMenu->addAction(SmallIcon("exit"), i18n("&Quit"), kapp, SLOT(quit()));
     }
 
     mMenu->exec(pos);
@@ -876,10 +880,10 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
     // This is an active event that affects the target window
     time(&mActiveTime);
 
-    KWin::Info info = KWin::info( mTargetWin );
+    NET::MappingState mappingState = KWin::windowInfo( mTargetWin ).mappingState();
 
-    if (info.isIconified() ||
-        info.mappingState == NET::Withdrawn)
+    if (mappingState == NET::Iconic ||
+        mappingState == NET::Withdrawn)
     {
 #ifdef DEBUG_AMOR
         kdDebug(10000) << "Target window iconified" << endl;
