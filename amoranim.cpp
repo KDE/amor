@@ -173,7 +173,7 @@ bool AmorThemeManager::setTheme(const QString & file)
     else
     {
         // relative to config file.
-        mPath.truncate(mPath.findRev('/')+1);
+        mPath.truncate(mPath.lastIndexOf('/')+1);
         mPath += pixmapPath;
     }
 

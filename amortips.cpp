@@ -76,7 +76,7 @@ QString AmorTips::tip()
     if (mTips.count())
     {
         QString tip = mTips.at(kapp->random() % mTips.count());
-		return i18n(tip.utf8());
+		return i18n(tip.toUtf8());
     }
 
     return i18n("No tip");
