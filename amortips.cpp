@@ -37,7 +37,7 @@
 //
 AmorTips::AmorTips()
 {
-    KGlobal::locale()->insertCatalogue("ktip"); // For ktip tip translations
+    KGlobal::locale()->insertCatalog("ktip"); // For ktip tip translations
 }
 
 //---------------------------------------------------------------------------

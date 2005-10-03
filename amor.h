@@ -48,7 +48,7 @@ class AmorWidget;
 
 class QTimer;
 class KWinModule;
-class KPopupMenu;
+class KMenu;
 
 class QueueItem {
 public:
@@ -136,7 +136,7 @@ private:
     QTimer           *mStackTimer; // Restacking timer
     QTimer           *mBubbleTimer;// Bubble tip timer (GP: I didn't create this one, it had no use when I found it)
     AmorDialog       *mAmorDialog; // Setup dialog
-    KPopupMenu       *mMenu;       // Our menu
+    KMenu       *mMenu;       // Our menu
     time_t           mActiveTime;  // The time an active event occurred
     QPoint           mCursPos;     // The last recorded position of the pointer
     QString          mTipText;     // Text to display in a bubble when possible

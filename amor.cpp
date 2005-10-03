@@ -30,7 +30,7 @@
 
 #include <kdebug.h>
 
-#include <kpopupmenu.h>
+#include <kmenu.h>
 #include <qtimer.h>
 #include <qcursor.h>
 #include <q3valuelist.h>
@@ -604,12 +604,12 @@ void Amor::slotMouseClicked(const QPoint &pos)
     if (!mMenu)
     {
         KHelpMenu* help = new KHelpMenu(0, KGlobal::instance()->aboutData(), false);
-        KPopupMenu* helpMenu = help->menu();
+        KMenu* helpMenu = help->menu();
 	#warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)
         helpMenu->setIcon(SmallIcon("help"));
         ((QMenu *)helpMenu)->setTitle(i18n("&Help")); // Workaround a compat deprecated code
 
-        mMenu = new KPopupMenu(0);
+        mMenu = new KMenu(0);
         mMenu->addTitle("Amor"); // I really don't want this i18n'ed
         mMenu->addAction(SmallIcon("configure"), i18n("&Configure..."), this, SLOT(slotConfigure()));
         mMenu->addSeparator();

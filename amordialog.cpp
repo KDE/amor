@@ -29,11 +29,9 @@
 #include <qlabel.h>
 #include <qslider.h>
 #include <qpainter.h>
-//Added by qt3to4:
 #include <QPixmap>
 #include <QHBoxLayout>
 #include <Q3VBox>
-//Added by qt3to4:
 #include <QVBoxLayout>
 #include <kapplication.h>
 #include <ksimpleconfig.h>
@@ -41,7 +39,7 @@
 #include "amordialog.moc"
 #include "version.h"
 #include <klocale.h>
-
+#include <kvbox.h>
 #include <kstandarddirs.h>
 
 //---------------------------------------------------------------------------
@@ -52,7 +50,7 @@ AmorDialog::AmorDialog()
     : KDialogBase(0, "amordlg", false, i18n("Options"), Ok|Apply|Cancel, Ok )
 {
     mConfig.read();
-    Q3VBox *mainwidget = makeVBoxMainWidget();
+    KVBox *mainwidget = makeVBoxMainWidget();
 
     QWidget *hb = new QWidget(mainwidget);
     QHBoxLayout *hboxLayout1 = new QHBoxLayout(hb);
