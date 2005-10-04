@@ -25,7 +25,7 @@
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
 #include <stdlib.h>
-#include <kapplication.h>
+#include <krandom.h>
 #include "amortips.h"
 #include <kstandarddirs.h>
 #include <klocale.h>
@@ -75,7 +75,7 @@ QString AmorTips::tip()
 {
     if (mTips.count())
     {
-        QString tip = mTips.at(kapp->random() % mTips.count());
+        QString tip = mTips.at(KRandom::random() % mTips.count());
 		return i18n(tip.toUtf8());
     }
 

@@ -25,7 +25,7 @@
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
 #include <stdlib.h>
-#include <kapplication.h>
+#include <krandom.h>
 #include <kstandarddirs.h>
 #include "amoranim.h"
 #include "amorpm.h"
@@ -201,7 +201,7 @@ AmorAnim *AmorThemeManager::random(const QString & group)
     AmorAnimationGroup *animGroup = mAnimations.find(grp);
 
     if (animGroup) {
-	int idx = kapp->random()%animGroup->count();
+	int idx = KRandom::random()%animGroup->count();
         return animGroup->at( idx );
     }
 

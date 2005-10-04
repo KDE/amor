@@ -31,7 +31,7 @@
 #include <config.h>
 #endif
 
-#include <q3strlist.h>
+#include <qstringlist.h>
 class QFile;
 
 //---------------------------------------------------------------------------

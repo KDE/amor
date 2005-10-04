@@ -43,6 +43,7 @@
 #include <kstandarddirs.h>
 #include <khelpmenu.h>
 #include <kiconloader.h>
+#include <krandom.h>
 
 #include "amor.h"
 #include "amor.moc"
@@ -312,7 +313,7 @@ bool Amor::readConfig()
 	if (mConfig.mRandomTheme)
 	{
 		QStringList files(KGlobal::dirs()->findAllResources("appdata", "*rc"));
-		int randomTheme = kapp->random() % files.count();
+		int randomTheme = KRandom::random() % files.count();
 		mConfig.mTheme = files.at(randomTheme);
 	}
 	
@@ -470,7 +471,7 @@ void Amor::selectAnimation(State state)
 		        if (mTargetRect.width() == mCurrAnim->frame()->width())
 			    mPosition = mCurrAnim->hotspot().x();
 			else
-			    mPosition = ( kapp->random() %
+			    mPosition = ( KRandom::random() %
 					  (mTargetRect.width() - mCurrAnim->frame()->width()) )
 					 + mCurrAnim->hotspot().x();
 		    }
@@ -681,7 +682,7 @@ void Amor::slotTimeout()
 	// only displayed on the first frame of mBaseAnim (the old way of doing this).
 	if ( !mTipsQueue.isEmpty() && !mBubble &&  mConfig.mAppTips)
 	    showBubble();
-	else if (kapp->random()%TIP_FREQUENCY == 1 && mConfig.mTips && !mBubble && !mCurrAnim->frameNum())
+	else if (KRandom::random()%TIP_FREQUENCY == 1 && mConfig.mTips && !mBubble && !mCurrAnim->frameNum())
         {
 	    mTipsQueue.enqueue(new QueueItem(QueueItem::Tip, mTips.tip())); 
 	    showBubble();
