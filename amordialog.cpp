@@ -280,7 +280,7 @@ void AmorListBoxItem::paint( QPainter *p )
 
 int AmorListBoxItem::height(const Q3ListBox *lb ) const
 {
-    return QMAX( mPixmap.height(), lb->fontMetrics().lineSpacing() + 1 );
+    return qMax( mPixmap.height(), lb->fontMetrics().lineSpacing() + 1 );
 }
 
 int AmorListBoxItem::width(const Q3ListBox *lb ) const
