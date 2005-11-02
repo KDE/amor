@@ -89,17 +89,17 @@ void AmorAnim::readConfig(KConfigBase &config)
     }
 
     // Read the delays between frames.
-    Q3StrList list;
-    int entries = config.readListEntry("Delay",list);
-    mDelay.resize(frames);
-    for (int i = 0; i < entries && i < frames; i++)
+    QStringList list;
+    list = config.readListEntry("Delay");
+	mDelay.resize(list.count());
+    for (int i = 0; i < list.count() && i < frames; i++)
         mDelay[i] = atoi(list.at(i));
 
     // Read the distance to move between frames and calculate the total
     // distance that this aniamtion moves from its starting position.
-    entries = config.readListEntry("Movement",list);
+    list = config.readListEntry("Movement",list);
     mMovement.resize(frames);
-    for (int i = 0; i < entries && i < frames; i++)
+    for (int i = 0; i < list.count() && i < frames; i++)
     {
         mMovement[i] = atoi(list.at(i));
         mTotalMovement += mMovement[i];
@@ -221,20 +221,20 @@ bool AmorThemeManager::readGroup(const QString & seq)
 
     // Read the list of available animations.
     mConfig->setGroup("Config");
-    Q3StrList list;
-    int entries = mConfig->readListEntry(seq, list);
+    QStringList list;
+    list = mConfig->readListEntry(seq);
 
     // Read each individual animation
-    for (int i = 0; i < entries; i++)
+    for (int i = 0; i < list.count(); i++)
     {
         mConfig->setGroup(list.at(i));
         AmorAnim *anim = new AmorAnim(*mConfig);
         animList->append(anim);
         mMaximumSize = mMaximumSize.expandedTo(anim->maximumSize());
     }
-
+	int entries = list.count();
     // If no animations were available for this group, just add the base anim
-    if (entries == 0)
+    if ( entries == 0)
     {
         mConfig->setGroup("Base");
         AmorAnim *anim = new AmorAnim(*mConfig);
@@ -247,7 +247,7 @@ bool AmorThemeManager::readGroup(const QString & seq)
     }
 
     // Couldn't read any entries at all
-    if (entries == 0)
+    if ( entries == 0)
         return false;
 
     mAnimations.insert(seq, animList);

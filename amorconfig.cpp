@@ -50,15 +50,15 @@ AmorConfig::AmorConfig()
 void AmorConfig::read()
 {
     KConfig *config = KGlobal::config();
-    KConfigGroupSaver cs(config, "General");
+    KConfigGroup cs(config, "General");
 
-    mOnTop = config->readBoolEntry("OnTop", false);
-    mOffset = config->readNumEntry("Offset", 0);
-    mTheme = config->readEntry("Theme", "blobrc");
-    mTips  = config->readBoolEntry("Tips", false);
-    mRandomTheme  = config->readBoolEntry("RandomTheme", false);
-    mAppTips  = config->readBoolEntry("ApplicationTips", true);
-    mStaticPos  = config->readNumEntry("StaticPosition", 20);
+    mOnTop = cs.readBoolEntry("OnTop", false);
+    mOffset = cs.readNumEntry("Offset", 0);
+    mTheme = cs.readEntry("Theme", "blobrc");
+    mTips  = cs.readBoolEntry("Tips", false);
+    mRandomTheme  = cs.readBoolEntry("RandomTheme", false);
+    mAppTips  = cs.readBoolEntry("ApplicationTips", true);
+    mStaticPos  = cs.readNumEntry("StaticPosition", 20);
 }
 
 //---------------------------------------------------------------------------
@@ -68,15 +68,15 @@ void AmorConfig::read()
 void AmorConfig::write()
 {
     KConfig *config = KGlobal::config();
-    KConfigGroupSaver cs(config, "General");
+    KConfigGroup cs(config, "General");
 
-    config->writeEntry("OnTop", mOnTop);
-    config->writeEntry("Offset", mOffset);
-    config->writeEntry("Theme", mTheme);
-    config->writeEntry("Tips", mTips);
-    config->writeEntry("RandomTheme", mRandomTheme);
-    config->writeEntry("ApplicationTips", mAppTips);
-    config->writeEntry("StaticPosition", mStaticPos);
+    cs.writeEntry("OnTop", mOnTop);
+    cs.writeEntry("Offset", mOffset);
+    cs.writeEntry("Theme", mTheme);
+    cs.writeEntry("Tips", mTips);
+    cs.writeEntry("RandomTheme", mRandomTheme);
+    cs.writeEntry("ApplicationTips", mAppTips);
+    cs.writeEntry("StaticPosition", mStaticPos);
 
     config->sync();
 }

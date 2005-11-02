@@ -258,8 +258,8 @@ void AmorDialog::slotCancel()
 {
     // restore offset
     KConfig *config = KGlobal::config();
-    KConfigGroupSaver cs(config, "General");
-    emit offsetChanged(config->readNumEntry("Offset"));
+    KConfigGroup cs(config, "General");
+    emit offsetChanged(cs.readNumEntry("Offset"));
     reject();
 }
 
