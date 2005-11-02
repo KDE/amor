@@ -27,6 +27,7 @@
 #include <kapplication.h>
 #include "amorconfig.h"
 #include <kconfig.h>
+#include <kglobal.h>
 
 //---------------------------------------------------------------------------
 //
@@ -48,7 +49,7 @@ AmorConfig::AmorConfig()
 //
 void AmorConfig::read()
 {
-    KConfig *config = kapp->config();
+    KConfig *config = KGlobal::config();
     KConfigGroupSaver cs(config, "General");
 
     mOnTop = config->readBoolEntry("OnTop", false);
@@ -66,7 +67,7 @@ void AmorConfig::read()
 //
 void AmorConfig::write()
 {
-    KConfig *config = kapp->config();
+    KConfig *config = KGlobal::config();
     KConfigGroupSaver cs(config, "General");
 
     config->writeEntry("OnTop", mOnTop);

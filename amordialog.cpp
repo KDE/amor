@@ -41,6 +41,7 @@
 #include <klocale.h>
 #include <kvbox.h>
 #include <kstandarddirs.h>
+#include <kglobal.h>
 
 //---------------------------------------------------------------------------
 //
@@ -256,7 +257,7 @@ void AmorDialog::slotApply()
 void AmorDialog::slotCancel()
 {
     // restore offset
-    KConfig *config = kapp->config();
+    KConfig *config = KGlobal::config();
     KConfigGroupSaver cs(config, "General");
     emit offsetChanged(config->readNumEntry("Offset"));
     reject();
