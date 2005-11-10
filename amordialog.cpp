@@ -31,7 +31,6 @@
 #include <qpainter.h>
 #include <QPixmap>
 #include <QHBoxLayout>
-#include <Q3VBox>
 #include <QVBoxLayout>
 #include <kapplication.h>
 #include <ksimpleconfig.h>
