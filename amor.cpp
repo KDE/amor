@@ -309,12 +309,15 @@ bool Amor::readConfig()
     }
 
     // Select a random theme if user requested it
-	if (mConfig.mRandomTheme)
-	{
-		QStringList files(KGlobal::dirs()->findAllResources("appdata", "*rc"));
-		int randomTheme = kapp->random() % files.count();
-		mConfig.mTheme = (QString)*files.at(randomTheme);
-	}
+    if (mConfig.mRandomTheme)
+    {
+        QStringList files;
+        
+        // Store relative paths into files to avoid storing absolute pathnames.
+        KGlobal::dirs()->findAllResources("appdata", "*rc", false, false, files);
+        int randomTheme = kapp->random() % files.count();
+        mConfig.mTheme = (QString)*files.at(randomTheme);
+    }
 	
     // read selected theme
     if (!mTheme.setTheme(mConfig.mTheme))

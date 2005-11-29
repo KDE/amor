@@ -111,7 +111,12 @@ AmorDialog::~AmorDialog()
 //
 void AmorDialog::readThemes()
 {
-    QStringList files(KGlobal::dirs()->findAllResources("appdata", "*rc"));
+    QStringList files;
+
+    // Non-recursive search for theme files, with the relative paths stored
+    // in files so that absolute paths are not used.
+    KGlobal::dirs()->findAllResources("appdata", "*rc", false, false, files);
+
     for (QStringList::ConstIterator it = files.begin();
 	 it != files.end();
 	 it++)
@@ -124,7 +129,7 @@ void AmorDialog::readThemes()
 //
 void AmorDialog::addTheme(const QString& file)
 {
-    KSimpleConfig config(file, true);
+    KSimpleConfig config(locate("appdata", file), true);
 
     config.setGroup("Config");
 
