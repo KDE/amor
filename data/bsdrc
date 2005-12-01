@@ -53,7 +53,6 @@ Description[tr]=FreeBSD Maskotu
 Description[uk]=Талісман FreeBSD
 Description[uz]=FreeBSD тумори
 Description[ven]=Mascot ya BSD dza mahala
-Description[xx]=xxFreeBSD Mascotxx
 Description[zh_CN]=FreeBSD 吉祥物
 About=Static window sitter
 About[af]=Statiese venster sitter
@@ -104,7 +103,6 @@ About[th]=นั่งเล่นบนหน้าต่าง
 About[tr]=Statik pencere bakıcı
 About[uk]=Статична прикраса для вікна
 About[ven]=Tshidzuli tsha window yo imaho
-About[xx]=xxStatic window sitterxx
 About[zh_CN]=窗口静坐者
 Icon=../preview/bsd.png
 

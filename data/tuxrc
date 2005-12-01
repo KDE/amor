@@ -51,7 +51,6 @@ Description[uk]=Неоживлений Tux
 Description[uz]=Анимациясиз Такс
 Description[ven]=Tux i songo itwaho zwazwipuka
 Description[xh]=Okungaphiliswanga Tux
-Description[xx]=xxUnanimated Tuxxx
 Description[zh_CN]=没有动画的 Tux 小企鹅
 About=Static window sitter
 About[af]=Statiese venster sitter
@@ -102,7 +101,6 @@ About[th]=นั่งเล่นบนหน้าต่าง
 About[tr]=Statik pencere bakıcı
 About[uk]=Статична прикраса для вікна
 About[ven]=Tshidzuli tsha window yo imaho
-About[xx]=xxStatic window sitterxx
 About[zh_CN]=窗口静坐者
 Icon=../preview/tux.png
 
