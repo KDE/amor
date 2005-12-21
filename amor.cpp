@@ -186,7 +186,6 @@ Amor::Amor() : DCOPObject( "AmorIface" ), QObject()
 	else
 		kdDebug(10000) << "attached dcop signals..." << endl;
 
-	mTipsQueue.setAutoDelete(true);
 
 	KStartupInfo::appStarted();
     }
@@ -202,6 +201,8 @@ Amor::Amor() : DCOPObject( "AmorIface" ), QObject()
 //
 Amor::~Amor()
 {
+	qDeleteAll(mTipsQueue);
+	mTipsQueue.clear();
     delete mWin;
     delete mAmor;
     delete mBubble;

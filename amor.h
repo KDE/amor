@@ -32,9 +32,8 @@
 #endif
 
 #include <qwidget.h>
-#include <q3ptrqueue.h>
+#include <qqueue.h>
 //Added by qt3to4:
-#include <QList>
 #include <QList>
 
 #include "amoranim.h"
@@ -148,7 +147,7 @@ private:
     AmorConfig       mConfig;      // Configuration parameters
     bool             mForceHideAmorWidget;
 
-    Q3PtrQueue<QueueItem> mTipsQueue; // GP: tips queue
+    QQueue<QueueItem*> mTipsQueue; // GP: tips queue
 };
 
 //---------------------------------------------------------------------------
