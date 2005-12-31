@@ -14,9 +14,9 @@
 <author>
 &Karl.Garrison; &Karl.Garrison.mail;
 </author>
-</authorgroup>
 
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
 
 <copyright>
 <year>2001</year>
@@ -296,7 +296,6 @@ inspired by his Tai Chi practice.</para></entry>
 &Karl.Garrison.mail;</para>
 
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
-
 &underFDL;
 &underGPL;
 </chapter>
