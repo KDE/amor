@@ -52,12 +52,12 @@ void AmorConfig::read()
     KConfig *config = KGlobal::config();
     KConfigGroup cs(config, "General");
 
-    mOnTop = cs.readBoolEntry("OnTop", false);
+    mOnTop = cs.readEntry("OnTop", QVariant(false)).toBool();
     mOffset = cs.readNumEntry("Offset", 0);
     mTheme = cs.readEntry("Theme", "blobrc");
-    mTips  = cs.readBoolEntry("Tips", false);
-    mRandomTheme  = cs.readBoolEntry("RandomTheme", false);
-    mAppTips  = cs.readBoolEntry("ApplicationTips", true);
+    mTips  = cs.readEntry("Tips", QVariant(false)).toBool();
+    mRandomTheme  = cs.readEntry("RandomTheme", QVariant(false)).toBool();
+    mAppTips  = cs.readEntry("ApplicationTips", QVariant(true)).toBool();
     mStaticPos  = cs.readNumEntry("StaticPosition", 20);
 }
 
