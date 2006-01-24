@@ -60,15 +60,16 @@ AmorBubble::AmorBubble()
     mBrowser->setFrameStyle( Q3Frame::NoFrame | Q3Frame::Plain );
     mBrowser->setMargin( 0 );
 
-    mBrowser->setWrapPolicy(Q3TextEdit::AtWordOrDocumentBoundary); // too long to fit in one line?
+    mBrowser->setWordWrapMode(QTextOption::WrapAtWordBoundaryOrAnywhere); // too long to fit in one line?
 
     QColorGroup clgrp = mBrowser->colorGroup();
     clgrp.setColor(QColorGroup::Text, Qt::black);
     //Laurent QTextBrowser didn't have this function FIX me
     //mBrowser->setPaperColorGroup( clgrp );
     mBrowser->setPaper( QToolTip::palette().active().brush( QColorGroup::Background ) );
-    mBrowser->setVScrollBarMode( Q3TextBrowser::AlwaysOff );
-    mBrowser->setHScrollBarMode( Q3TextBrowser::AlwaysOff );
+    mBrowser->setVerticalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
+	
+    mBrowser->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
     mBrowser->viewport()->installEventFilter( this );
 
     mBrowser->mimeSourceFactory()->addFilePath(KGlobal::dirs()->findResourceDir("data", "kdewizard/pics")+"kdewizard/pics/");
