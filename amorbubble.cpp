@@ -24,6 +24,7 @@
 /*
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
+#include <kurl.h>
 #include "amorbubble.h"
 #include "amorbubble.moc"
 #include <qpainter.h>
@@ -40,7 +41,6 @@
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>
 #include <qtimer.h>
-
 #define ARROW_WIDTH     10
 #define ARROW_HEIGHT    12
 #define BORDER_SIZE     4
@@ -57,8 +57,8 @@ AmorBubble::AmorBubble()
     mOriginX = 0;
     mOriginY = 0;
     mBrowser = new KTextBrowser( this );
-    mBrowser->setFrameStyle( Q3Frame::NoFrame | Q3Frame::Plain );
-    mBrowser->setMargin( 0 );
+    mBrowser->setFrameStyle( QFrame::NoFrame | QFrame::Plain );
+    //mBrowser->setMargin( 0 );
 
     mBrowser->setWordWrapMode(QTextOption::WrapAtWordBoundaryOrAnywhere); // too long to fit in one line?
 
@@ -66,18 +66,21 @@ AmorBubble::AmorBubble()
     clgrp.setColor(QColorGroup::Text, Qt::black);
     //Laurent QTextBrowser didn't have this function FIX me
     //mBrowser->setPaperColorGroup( clgrp );
-    mBrowser->setPaper( QToolTip::palette().active().brush( QColorGroup::Background ) );
+    //mBrowser->setPaper( QToolTip::palette().active().brush( QColorGroup::Background ) );
     mBrowser->setVerticalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
 	
     mBrowser->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
     mBrowser->viewport()->installEventFilter( this );
-
-    mBrowser->mimeSourceFactory()->addFilePath(KGlobal::dirs()->findResourceDir("data", "kdewizard/pics")+"kdewizard/pics/");
+#if 0 //I don(t know how to port it
+	QList<KUrl> lst;
+	lst << KUrl(KGlobal::dirs()->findResourceDir("data", "kdewizard/pics")+"kdewizard/pics/");
+	
     QStringList icons = KGlobal::dirs()->resourceDirs("icon");
     QStringList::Iterator it;
     for (it = icons.begin(); it != icons.end(); ++it)
-	mBrowser->mimeSourceFactory()->addFilePath(*it);
-
+		lst << KUrl(*it);
+	mBrowser->createMimeDataFromSelection ()->setUrls(lst);
+#endif
     mMouseWithin = false;
 }
 
@@ -113,7 +116,8 @@ void AmorBubble::calcGeometry()
 {
     mBound = QRect( 0, 0, 250, 0 );
 //    mBound.setHeight( mBrowser->heightForWidth( mBound.width() ) );
-    mBound.setHeight( mBrowser->contentsHeight() );
+#warning "kde4: porting"    
+	//mBound.setHeight( mBrowser->contentsHeight() );
     mBound.moveBy(ARROW_WIDTH+BORDER_SIZE, BORDER_SIZE);
 
     // initialise the default geometry of the bubble
