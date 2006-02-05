@@ -74,7 +74,7 @@ void AmorAnim::readConfig(KConfigBase &config)
 {
     // Read the list of frames to display and load them into the pixmap
     // manager.
-    mSequence = config.readListEntry("Sequence");
+    mSequence = config.readEntry("Sequence",QStringList());
     int frames = mSequence.count();
     for ( QStringList::Iterator it = mSequence.begin();
           it != mSequence.end();
@@ -88,14 +88,14 @@ void AmorAnim::readConfig(KConfigBase &config)
 
     // Read the delays between frames.
     QStringList list;
-    list = config.readListEntry("Delay");
+    list = config.readEntry("Delay",QStringList());
 	mDelay.resize(list.count());
     for (int i = 0; i < list.count() && i < frames; i++)
         mDelay[i] = list.at(i).toInt();
 
     // Read the distance to move between frames and calculate the total
     // distance that this aniamtion moves from its starting position.
-    list = config.readListEntry("Movement",list);
+    list = config.readEntry("Movement",list);
     mMovement.resize(frames);
     for (int i = 0; i < list.count() && i < frames; i++)
     {
@@ -104,12 +104,12 @@ void AmorAnim::readConfig(KConfigBase &config)
     }
 
     // Read the hotspot for each frame.
-    QStringList entries = config.readListEntry("HotspotX",list);
+    QStringList entries = config.readEntry("HotspotX",list);
     mHotspot.resize(frames);
     for (int i = 0; i < entries.count() && i < frames; i++)
         mHotspot[i].setX(list.at(i).toInt());
 
-    entries = config.readListEntry("HotspotY",list);
+    entries = config.readEntry("HotspotY",list);
     for (int i = 0; i < entries.count() && i < frames; i++)
         mHotspot[i].setY(list.at(i).toInt());
 
@@ -221,7 +221,7 @@ bool AmorThemeManager::readGroup(const QString & seq)
     // Read the list of available animations.
     mConfig->setGroup("Config");
     QStringList list;
-    list = mConfig->readListEntry(seq);
+    list = mConfig->readEntry(seq,QStringList());
 
     // Read each individual animation
     for (int i = 0; i < list.count(); i++)
