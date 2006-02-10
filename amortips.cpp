@@ -114,7 +114,7 @@ bool AmorTips::readKTips()
 		tip = tip.mid(1);
 	    if (tip.isEmpty())
 	    {
-		kdDebug() << "Empty tip found! Skipping! " << pos << endl;
+		kDebug() << "Empty tip found! Skipping! " << pos << endl;
 		continue;
 	    }
 	    mTips.append(tip);
