@@ -2,8 +2,10 @@
 [Config]
 PixmapPath=pics/animated/worm
 Description=Little Worm
+Description[fr]=Petit ver de terre
 Description[x-test]=xxLittle Wormxx
 About=By Bartosz Trudnowski\nMade for my wife
+About[fr]=Par Bartosz Trudnowski\nDéveloppé pour ma femme
 About[x-test]=xxBy Bartosz Trudnowski\nMade for my wifexx
 Icon=../../preview/worm.png
 Base=Base

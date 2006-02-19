@@ -7,6 +7,7 @@ PixmapPath=pics/animated/neko
 Description=Neko
 Description[x-test]=xxNekoxx
 About=Artwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegel
+About[fr]=Travail basé sur « oneko » de Masayuki Koba\nAMORé par Chris Spiegel
 About[x-test]=xxArtwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegelxx
 Icon=../../preview/neko.png
 Base=Base

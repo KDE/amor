@@ -5,6 +5,7 @@ Static=true
 Description=Little Billy
 Description[x-test]=xxLittle Billyxx
 About=Static window sitter\nGraphic from http://www.xbill.org/
+About[fr]=Surveillant statique de fenêtres\nDessin de http://www.xbill.org/
 About[x-test]=xxStatic window sitter\nGraphic from http://www.xbill.org/xx
 Icon=../preview/billy.png
 
