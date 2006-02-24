@@ -118,7 +118,7 @@ void AmorBubble::calcGeometry()
 //    mBound.setHeight( mBrowser->heightForWidth( mBound.width() ) );
 #warning "kde4: porting"    
 	//mBound.setHeight( mBrowser->contentsHeight() );
-    mBound.moveBy(ARROW_WIDTH+BORDER_SIZE, BORDER_SIZE);
+    mBound.translate(ARROW_WIDTH+BORDER_SIZE, BORDER_SIZE);
 
     // initialise the default geometry of the bubble
     int w = mBound.width() + BORDER_SIZE * 2 + ARROW_WIDTH;
@@ -136,7 +136,7 @@ void AmorBubble::calcGeometry()
         // source on right
         xpos = mOriginX - w - BUBBLE_OFFSET;
         mArrowHorz = Right;
-	mBound.moveBy( -ARROW_WIDTH, 0 );
+	mBound.translate( -ARROW_WIDTH, 0 );
     }
 
     if (mOriginY + h > kapp->desktop()->height())
