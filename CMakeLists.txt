@@ -24,7 +24,7 @@ kde4_add_dcop_skels(amor_SRCS AmorIface.h )
 
 kde4_add_executable(amor ${amor_SRCS})
 
-target_link_libraries(amor  ${QT_AND_KDECORE_LIBS} kdeui )
+target_link_libraries(amor  ${KDE4_KDECORE_LIBS} kdeui )
 
 install_targets(/bin amor )
 
