@@ -754,7 +754,7 @@ void Amor::slotOffsetChanged(int off)
 //
 void Amor::slotAbout()
 {
-    QString about = i18n("Amor Version %1\n\n", AMOR_VERSION) +
+    QString about = i18n("Amor Version %1\n\n", QString::fromLatin1(AMOR_VERSION)) +
                 i18n("Amusing Misuse Of Resources\n\n") +
                 i18n("Copyright (c) 1999 Martin R. Jones <mjones@kde.org>\n\n") +
 		i18n("Original Author: Martin R. Jones <mjones@kde.org>\n") +
