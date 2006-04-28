@@ -154,7 +154,7 @@ void AmorBubble::calcGeometry()
     mBrowser->setGeometry( mBound );
 
     // create and apply the shape mask
-    mMask.resize(w, h);
+    mMask = QPixmap(w, h);
     mMask.fill(Qt::color0);
     QPainter maskPainter(&mMask);
     maskPainter.setPen(Qt::color1);
