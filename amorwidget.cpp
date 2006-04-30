@@ -42,7 +42,7 @@ AmorWidget::AmorWidget()
 	: QWidget(0, 0, Qt::WStyle_Customize | Qt::WStyle_NoBorder | Qt::WX11BypassWM ),
       mPixmap(0)
 {
-    setBackgroundMode( Qt::NoBackground );
+    setAttribute(Qt::WA_NoSystemBackground, true);
     dragging = false;
 }
 
@@ -70,7 +70,7 @@ void AmorWidget::setPixmap(const QPixmap *pixmap)
                                 mPixmap->mask().handle(), ShapeSet );
             repaint(false);
         }
-    
+
 	update();
     }
 }

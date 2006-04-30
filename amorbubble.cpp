@@ -62,19 +62,19 @@ AmorBubble::AmorBubble()
 
     mBrowser->setWordWrapMode(QTextOption::WrapAtWordBoundaryOrAnywhere); // too long to fit in one line?
 
-    QColorGroup clgrp = mBrowser->colorGroup();
-    clgrp.setColor(QColorGroup::Text, Qt::black);
+    QPalette clgrp = mBrowser->palette();
+    clgrp.setColor(QPalette::Text, Qt::black);
     //Laurent QTextBrowser didn't have this function FIX me
     //mBrowser->setPaperColorGroup( clgrp );
     //mBrowser->setPaper( QToolTip::palette().active().brush( QColorGroup::Background ) );
     mBrowser->setVerticalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
-	
+
     mBrowser->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
     mBrowser->viewport()->installEventFilter( this );
 #if 0 //I don(t know how to port it
 	QList<KUrl> lst;
 	lst << KUrl(KGlobal::dirs()->findResourceDir("data", "kdewizard/pics")+"kdewizard/pics/");
-	
+
     QStringList icons = KGlobal::dirs()->resourceDirs("icon");
     QStringList::Iterator it;
     for (it = icons.begin(); it != icons.end(); ++it)
@@ -116,7 +116,7 @@ void AmorBubble::calcGeometry()
 {
     mBound = QRect( 0, 0, 250, 0 );
 //    mBound.setHeight( mBrowser->heightForWidth( mBound.width() ) );
-#warning "kde4: porting"    
+#warning "kde4: porting"
 	//mBound.setHeight( mBrowser->contentsHeight() );
     mBound.translate(ARROW_WIDTH+BORDER_SIZE, BORDER_SIZE);
 
