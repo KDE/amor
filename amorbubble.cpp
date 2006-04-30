@@ -66,7 +66,7 @@ AmorBubble::AmorBubble()
     clgrp.setColor(QPalette::Text, Qt::black);
     //Laurent QTextBrowser didn't have this function FIX me
     //mBrowser->setPaperColorGroup( clgrp );
-    //mBrowser->setPaper( QToolTip::palette().active().brush( QColorGroup::Background ) );
+    //mBrowser->setPaper( QToolTip::palette().active().brush( QPalette::Background ) );
     mBrowser->setVerticalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
 
     mBrowser->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
@@ -218,7 +218,7 @@ void AmorBubble::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
     painter.setPen(Qt::black);
-    painter.setBrush( QToolTip::palette().active().brush( QColorGroup::Background ) );
+    painter.setBrush( QToolTip::palette().active().brush( QPalette::Background ) );
     drawBubble(painter);
 }
 
