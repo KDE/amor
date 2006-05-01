@@ -103,10 +103,10 @@ bool AmorTips::readKTips()
 	const QRegExp rx("\\n+");
 
 	int pos = -1;
-	while ((pos = content.find("<html>", pos + 1, false)) != -1)
+	while ((pos = content.indexOf("<html>", pos + 1, Qt::CaseInsensitive)) != -1)
 	{
 	    QString tip = content
-		.mid(pos + 6, content.find("</html>", pos, false) - pos - 6)
+		.mid(pos + 6, content.indexOf("</html>", pos, Qt::CaseInsensitive) - pos - 6)
 		.replace(rx, "\n");
 	    if (!tip.endsWith("\n"))
 		tip += "\n";
