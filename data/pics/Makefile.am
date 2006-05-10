@@ -1,1 +1,0 @@
-SUBDIRS = animated preview static
