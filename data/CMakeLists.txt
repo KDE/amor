@@ -1,4 +1,3 @@
-kde4_header()
 
 add_subdirectory( pics ) 
 
@@ -9,7 +8,6 @@ add_subdirectory( pics )
 
 install_files( ${DATA_INSTALL_DIR}/amor FILES blobrc ghostrc eyesrc bonhommerc nekorc pingurc wormrc tips-en  	    billyrc bsdrc tuxrc taorc )
 
-kde4_footer()
 
 
 

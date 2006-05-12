@@ -1,4 +1,3 @@
-kde4_header()
 
 
 
@@ -7,7 +6,6 @@ kde4_header()
 
 install_files( ${DATA_INSTALL_DIR}/amor/pics/static FILES billy.png bsd.png tux.png )
 
-kde4_footer()
 
 
 

@@ -1,4 +1,3 @@
-kde4_header()
 
 add_subdirectory( data ) 
 
@@ -36,7 +35,6 @@ install_files( /include FILES AmorIface.h )
 
 kde4_install_icons( ${ICON_INSTALL_DIR} crystalsvg )
 
-kde4_footer()
 
 
 

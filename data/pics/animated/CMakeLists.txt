@@ -1,4 +1,3 @@
-kde4_header()
 
 add_subdirectory( blob ) 
 add_subdirectory( bonhomme ) 
@@ -15,7 +14,6 @@ add_subdirectory( worm )
 ########### install files ###############
 
 
-kde4_footer()
 
 
 
