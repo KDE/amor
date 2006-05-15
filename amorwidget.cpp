@@ -83,8 +83,6 @@ void AmorWidget::paintEvent(QPaintEvent *)
 {
     if (mPixmap)
         bitBlt( this, 0, 0, mPixmap );
-    else
-	erase();
 }
 
 //---------------------------------------------------------------------------
