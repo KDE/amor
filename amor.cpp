@@ -85,7 +85,7 @@ QueueItem::QueueItem(itemType ty, QString te, int ti)
     // and length of the item
     int effectiveLength = 0, nesting = 0;
 
-    // discard html code from the lenght count
+    // discard html code from the length count
     for (int i = 0; i < te.length(); i++)
     {
 	if (te[i] == '<')	nesting++;
@@ -867,7 +867,7 @@ void Amor::slotStackingChanged()
 
     // We seem to get this signal before the window has been restacked,
     // so we just schedule a restack.
-    mStackTimer->start( 20, TRUE );
+    mStackTimer->start( 20, true );
 }
 
 //---------------------------------------------------------------------------

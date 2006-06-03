@@ -109,7 +109,7 @@ bool AmorTips::readKTips()
 		.mid(pos + 6, content.indexOf("</html>", pos, Qt::CaseInsensitive) - pos - 6)
 		.replace(rx, "\n");
 	    if (!tip.endsWith("\n"))
-		tip += "\n";
+		tip += '\n';
 	    if (tip.startsWith("\n"))
 		tip = tip.mid(1);
 	    if (tip.isEmpty())

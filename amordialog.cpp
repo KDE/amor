@@ -149,7 +149,7 @@ void AmorDialog::addTheme(const QString& file)
         return;
     }
 
-    pixmapPath += "/";
+    pixmapPath += '/';
 
     if (pixmapPath[0] != '/')
     {
