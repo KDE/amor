@@ -614,7 +614,9 @@ void Amor::slotMouseClicked(const QPoint &pos)
     {
         KHelpMenu* help = new KHelpMenu(0, KGlobal::instance()->aboutData(), false);
         KMenu* helpMenu = help->menu();
-	#warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)
+#ifdef __GNUC__
+#warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)
+#endif		
         helpMenu->setIcon(SmallIcon("help"));
         ((QMenu *)helpMenu)->setTitle(i18n("&Help")); // Workaround a compat deprecated code
 

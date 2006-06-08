@@ -116,7 +116,9 @@ void AmorBubble::calcGeometry()
 {
     mBound = QRect( 0, 0, 250, 0 );
 //    mBound.setHeight( mBrowser->heightForWidth( mBound.width() ) );
+#ifdef __GNUC__
 #warning "kde4: porting"
+#endif	
 	//mBound.setHeight( mBrowser->contentsHeight() );
     mBound.translate(ARROW_WIDTH+BORDER_SIZE, BORDER_SIZE);
 

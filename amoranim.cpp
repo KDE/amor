@@ -215,7 +215,9 @@ bool AmorThemeManager::readGroup(const QString & seq)
     AmorPixmapManager::manager()->setPixmapDir(mPath);
 
     AmorAnimationGroup *animList = new AmorAnimationGroup;
+#ifdef __GNUC__
 #warning "kde4: fix autodelete for animList";
+#endif	
 	//animList->setAutoDelete(true);
 
     // Read the list of available animations.
