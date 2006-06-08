@@ -29,7 +29,7 @@
 #include <time.h>
 
 #include <kdebug.h>
-
+#include <dbus/qdbus.h>
 #include <kmenu.h>
 #include <qtimer.h>
 #include <qcursor.h>
@@ -55,6 +55,7 @@
 #include <X11/Xlib.h>
 #include <kdebug.h>
 #include <QX11Info>
+#include "amoradaptor.h"
 // #define DEBUG_AMOR
 
 #define SLEEP_TIMEOUT   180     // Animation sleeps after SLEEP_TIMEOUT seconds
@@ -81,7 +82,7 @@
 
 QueueItem::QueueItem(itemType ty, QString te, int ti)
 {
-    // if the time field was not given, calculate one based on the type 
+    // if the time field was not given, calculate one based on the type
     // and length of the item
     int effectiveLength = 0, nesting = 0;
 
@@ -121,8 +122,10 @@ QueueItem::QueueItem(itemType ty, QString te, int ti)
 // AMOR
 // Constructor
 //
-Amor::Amor() : DCOPObject( "AmorIface" ), QObject()
+Amor::Amor() : QObject()
 {
+    new AmorAdaptor(this);
+    QDBus::sessionBus().registerObject("/Amor", this);
     mAmor = 0;
     mBubble = 0;
     mForceHideAmorWidget = false;
@@ -160,7 +163,7 @@ Amor::Amor() : DCOPObject( "AmorIface" ), QObject()
 
         mStackTimer = new QTimer(this);
         connect(mStackTimer, SIGNAL(timeout()), SLOT(restack()));
-    
+
 	mBubbleTimer = new QTimer(this);
 	connect(mBubbleTimer, SIGNAL(timeout()), SLOT(slotBubbleTimeout()));
 
@@ -176,12 +179,13 @@ Amor::Amor() : DCOPObject( "AmorIface" ), QObject()
             selectAnimation(Focus);
             mTimer->start(0, true);
         }
-	if (!connectDCOPSignal(0,0, "KDE_stop_screensaver()", "screenSaverStopped()",false))
+        if ( !QDBus::sessionBus().connect(QString(), QString(), "org.kde.amor",
+                    "KDE_stop_screensaver", this, SLOT( screenSaverStopped()) ) )
 		kDebug(10000) << "Could not attach signal...KDE_stop_screensaver()" << endl;
 	else
 		kDebug(10000) << "attached dcop signals..." << endl;
 
-	if (!connectDCOPSignal(0,0, "KDE_start_screensaver()", "screenSaverStarted()",false))
+         if ( !QDBus::sessionBus().connect(QString(), QString(), "org.kde.amor", "KDE_start_screensaver", this, SLOT( screenSaverStarted()) ) )
 		kDebug(10000) << "Could not attach signal...KDE_start_screensaver()" << endl;
 	else
 		kDebug(10000) << "attached dcop signals..." << endl;
@@ -290,7 +294,7 @@ void Amor::reset()
     mPosition   = mCurrAnim->hotspot().x();
     mState      = Normal;
 
-    mAmor->resize(mTheme.maximumSize()); 
+    mAmor->resize(mTheme.maximumSize());
     mCurrAnim->reset();
 
     mTimer->start(0, true);
@@ -314,7 +318,7 @@ bool Amor::readConfig()
     if (mConfig.mRandomTheme)
     {
         QStringList files;
-        
+
         // Store relative paths into files to avoid storing absolute pathnames.
         KGlobal::dirs()->findAllResources("appdata", "*rc", false, false, files);
         int randomTheme = KRandom::random() % files.count();
@@ -400,14 +404,14 @@ void Amor::hideBubble(bool forceDequeue)
 	// or something before the tip was shown long enough
         mBubbleTimer->stop();
 
-	// GP: the first message on the queue should be taken off for a 
-	// number of reasons: a) forceDequeue == true, only when called 
-	// from slotBubbleTimeout; b) the bubble is not visible ; c) 
-	// the bubble is visible, but there's Tip being displayed. The 
-	// latter is to keep backwards compatibility and because 
-	// carrying around a tip bubble when switching windows quickly is really 
+	// GP: the first message on the queue should be taken off for a
+	// number of reasons: a) forceDequeue == true, only when called
+	// from slotBubbleTimeout; b) the bubble is not visible ; c)
+	// the bubble is visible, but there's Tip being displayed. The
+	// latter is to keep backwards compatibility and because
+	// carrying around a tip bubble when switching windows quickly is really
 	// annoyying
-	if (forceDequeue || !mBubble->isVisible() || 
+	if (forceDequeue || !mBubble->isVisible() ||
 	    (mTipsQueue.head()->type() == QueueItem::Tip)) /* there's always an item in the queue here */
 	    mTipsQueue.dequeue();
 
@@ -439,7 +443,7 @@ void Amor::selectAnimation(State state)
             {
                 mTargetRect = KWin::windowInfo(mTargetWin).frameGeometry();
 
-		// if the animation falls outside of the working area, 
+		// if the animation falls outside of the working area,
 		// then relocate it so that is inside the desktop again
 		QRect desktopArea = mWin->workArea();
 		mInDesktopBottom = false;
@@ -448,11 +452,11 @@ void Amor::selectAnimation(State state)
 		    desktopArea.y())
 		{
 		    // relocate the animation at the bottom of the screen
-		    mTargetRect = QRect(desktopArea.x(), 
+		    mTargetRect = QRect(desktopArea.x(),
 				  desktopArea.y() + desktopArea.height(),
 				  desktopArea.width(), 0);
 
-		    // we'll relocate the animation in the desktop 
+		    // we'll relocate the animation in the desktop
 		    // frame, so do not add the offset to its vertical position
 		    mInDesktopBottom = true;
 		}
@@ -492,7 +496,7 @@ void Amor::selectAnimation(State state)
                 mTimer->stop();
             }
             mAmor->hide();
-	    
+
             restack();
             mState = Normal;
             break;
@@ -682,13 +686,13 @@ void Amor::slotTimeout()
 
     if (mCurrAnim == mBaseAnim && mCurrAnim->validFrame())
     {
-	// GP: Application tips/messages can be shown in any frame number; amor tips are 
+	// GP: Application tips/messages can be shown in any frame number; amor tips are
 	// only displayed on the first frame of mBaseAnim (the old way of doing this).
 	if ( !mTipsQueue.isEmpty() && !mBubble &&  mConfig.mAppTips)
 	    showBubble();
 	else if (KRandom::random()%TIP_FREQUENCY == 1 && mConfig.mTips && !mBubble && !mCurrAnim->frameNum())
         {
-	    mTipsQueue.enqueue(new QueueItem(QueueItem::Tip, mTips.tip())); 
+	    mTipsQueue.enqueue(new QueueItem(QueueItem::Tip, mTips.tip()));
 	    showBubble();
         }
     }
@@ -902,8 +906,8 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
 
 	return;
     }
-    
-    if (properties[0] & NET::WMGeometry) 
+
+    if (properties[0] & NET::WMGeometry)
     {
 #ifdef DEBUG_AMOR
         kDebug(10000) << "Target window moved or resized" << endl;
@@ -911,14 +915,14 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
 
         QRect newTargetRect = KWin::windowInfo(mTargetWin).frameGeometry();
 
-	// if the change in the window caused the animation to fall 
-	// out of the working area of the desktop, or if the animation 
+	// if the change in the window caused the animation to fall
+	// out of the working area of the desktop, or if the animation
 	// didn't fall in the working area before but it does now, then
-	//  refocus on the current window so that the animation is 
+	//  refocus on the current window so that the animation is
 	// relocated.
 	QRect desktopArea = mWin->workArea();
 
-	bool fitsInWorkArea = !(newTargetRect.y() - mCurrAnim->hotspot().y() + mConfig.mOffset < desktopArea.y()); 
+	bool fitsInWorkArea = !(newTargetRect.y() - mCurrAnim->hotspot().y() + mConfig.mOffset < desktopArea.y());
 	if ((!fitsInWorkArea && !mInDesktopBottom) || (fitsInWorkArea && mInDesktopBottom))
 	{
 	    mNextTarget = mTargetWin;
@@ -965,7 +969,7 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
 //
 void Amor::slotDesktopChange(int desktop)
 {
-    // GP: signal currentDesktopChanged seems to be emitted even if you 
+    // GP: signal currentDesktopChanged seems to be emitted even if you
     // change to the very same desktop you are in.
     if (mWin->currentDesktop() == desktop)
 	return;
@@ -1002,9 +1006,9 @@ void Amor::slotBubbleTimeout()
     {
 	first->setTime(500);		// show this item for another 500ms
 	mBubbleTimer->start(BUBBLE_TIME_STEP, true);
-	return;	
+	return;
     }
-    
+
     // are there any other tips pending?
     if (mTipsQueue.count() > 1)
     {

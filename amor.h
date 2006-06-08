@@ -39,7 +39,6 @@
 #include "amoranim.h"
 #include "amortips.h"
 #include "amorconfig.h"
-#include "AmorIface.h"
 
 class AmorDialog;
 class AmorBubble;
@@ -72,7 +71,7 @@ private:
 //
 // Amor handles window manager input and animation selection and updates.
 //
-class Amor : public QObject, virtual public AmorIface
+class Amor : public QObject
 {
     Q_OBJECT
 public:
@@ -82,12 +81,12 @@ public:
     virtual void showTip(QString tip);
     virtual void showMessage(QString message);
     virtual void showMessage(QString message, int msec);
-    virtual void screenSaverStopped();
-    virtual void screenSaverStarted();
 
     void reset();
 
 public slots:
+    void screenSaverStopped();
+    void screenSaverStarted();
     void slotWindowActivate(WId);
     void slotWindowRemove(WId);
     void slotStackingChanged();

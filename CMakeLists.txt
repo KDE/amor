@@ -6,7 +6,7 @@ add_subdirectory( data )
 
 ########### next target ###############
 
-set(amor_SRCS 
+set(amor_SRCS amoradaptor.cpp 
    amordialog.cpp 
    amor.cpp 
    amorwidget.cpp 
@@ -19,8 +19,6 @@ set(amor_SRCS
 
 kde4_automoc(${amor_SRCS})
 
-kde4_add_dcop_skels(amor_SRCS AmorIface.h )
-
 kde4_add_executable(amor ${amor_SRCS})
 
 target_link_libraries(amor  ${KDE4_KDECORE_LIBS} kdeui )
@@ -31,7 +29,6 @@ install_targets(/bin amor )
 ########### install files ###############
 
 install_files( ${XDG_APPS_DIR} FILES amor.desktop )
-install_files( /include FILES AmorIface.h )
 
 kde4_install_icons( ${ICON_INSTALL_DIR} crystalsvg )
 

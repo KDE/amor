@@ -34,11 +34,10 @@
 #include <klocale.h>
 #include <kcmdlineargs.h>
 #include <kaboutdata.h>
-#include <dcopclient.h>
 
 #include "version.h"
 #include "amor.h"
-
+#include <dbus/qdbus.h>
 
 static const char description[] = I18N_NOOP("KDE creature for your desktop");
 
@@ -48,7 +47,7 @@ int main(int argc, char *argv[])
         AMOR_VERSION, description, KAboutData::License_GPL,
         "(c) 1999, Martin R. Jones");
     aboutData.addAuthor("Martin R. Jones",0, "mjones@kde.org");
-    aboutData.addAuthor("Gerardo Puga", I18N_NOOP("Current maintainer"), "gpuga@gioia.ing.unlp.edu.ar"); 
+    aboutData.addAuthor("Gerardo Puga", I18N_NOOP("Current maintainer"), "gpuga@gioia.ing.unlp.edu.ar");
     KCmdLineArgs::init( argc, argv, &aboutData );
 
     if (!KUniqueApplication::start()) {
@@ -61,10 +60,8 @@ int main(int argc, char *argv[])
     AmorSessionWidget *sessionWidget = new AmorSessionWidget;
     app.setTopWidget(sessionWidget);
 
-    new Amor();
 
-    app.dcopClient()->setDefaultObject( "AmorIface" );
-
+    QDBus::sessionBus().registerObject("/Amor",new Amor() );
     return app.exec();
 }
 
