@@ -47,10 +47,15 @@
 // Constructor
 //
 AmorDialog::AmorDialog()
-    : KDialogBase(0, "amordlg", false, i18n("Options"), Ok|Apply|Cancel, Ok )
+    : KDialog(0)
 {
+    setCaption( i18n("Options") );
+    setButtons( Ok|Apply|Cancel );
+    setDefaultButton( Ok );
+
     mConfig.read();
-    KVBox *mainwidget = makeVBoxMainWidget();
+    KVBox *mainwidget = new KVBox( this );
+    setMainWidget( mainwidget );
 
     QWidget *hb = new QWidget(mainwidget);
     QHBoxLayout *hboxLayout1 = new QHBoxLayout(hb);

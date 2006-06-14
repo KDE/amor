@@ -27,20 +27,19 @@
 #ifndef AMORDIALOG_H
 #define AMORDIALOG_H
 
-#include <qdialog.h>
+#include <kdialog.h>
 #include <q3listbox.h>
 #include <q3ptrlist.h>
 #include <q3multilineedit.h>
 //Added by qt3to4:
 #include <QPixmap>
 #include "amorconfig.h"
-#include <kdialogbase.h>
 
 //---------------------------------------------------------------------------
 //
 // AmorDialog provides a setup dialog.
 //
-class AmorDialog : public KDialogBase
+class AmorDialog : public KDialog
 {
     Q_OBJECT
 
