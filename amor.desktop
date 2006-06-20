@@ -60,6 +60,7 @@ GenericName[tg]=Махлуқ дар экран
 GenericName[tr]=Ekranda Gezinen Yaratık
 GenericName[uk]=Екранна істота
 GenericName[zh_CN]=屏幕涂鸦
+GenericName[zh_TW]=畫面擷取程式
 Terminal=false
 X-DCOP-ServiceType=Unique
 Categories=Qt;KDE;Amusement;
