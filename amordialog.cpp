@@ -159,7 +159,7 @@ void AmorDialog::addTheme(const QString& file)
     if (pixmapPath[0] != '/')
     {
         // relative to config file. We add a / to indicate the dir
-        pixmapPath = locate("appdata", pixmapPath);
+        pixmapPath = KStandardDirs::locate("appdata", pixmapPath);
     }
 
     QString description = config.readEntry("Description");
