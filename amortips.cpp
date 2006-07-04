@@ -49,7 +49,7 @@ bool AmorTips::setFile(const QString& file)
 {
     bool rv = false;
 
-    QString path( locate("appdata", file) );
+    QString path( KStandardDirs::locate("appdata", file) );
     if(path.length() && read(path))
         rv = true;
 
@@ -90,7 +90,7 @@ bool AmorTips::readKTips()
 {
     QString fname;
 
-    fname = locate("data", QString("kdewizard/tips"));
+    fname = KStandardDirs::locate("data", QString("kdewizard/tips"));
 
     if (fname.isEmpty())
 	return false;

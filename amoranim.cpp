@@ -150,7 +150,7 @@ AmorThemeManager::~AmorThemeManager()
 //
 bool AmorThemeManager::setTheme(const QString & file)
 {
-    mPath = locate("appdata", file);
+    mPath = KStandardDirs::locate("appdata", file);
 
     delete mConfig;
 

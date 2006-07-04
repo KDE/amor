@@ -144,7 +144,7 @@ void AmorDialog::readThemes()
 //
 void AmorDialog::addTheme(const QString& file)
 {
-    KSimpleConfig config(locate("appdata", file), true);
+    KSimpleConfig config(KStandardDirs::locate("appdata", file), true);
 
     config.setGroup("Config");
 
