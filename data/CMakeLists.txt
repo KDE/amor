@@ -6,7 +6,7 @@ add_subdirectory( pics )
 
 ########### install files ###############
 
-install_files( ${DATA_INSTALL_DIR}/amor FILES blobrc ghostrc eyesrc bonhommerc nekorc pingurc wormrc tips-en  	    billyrc bsdrc tuxrc taorc )
+install( FILES blobrc ghostrc eyesrc bonhommerc nekorc pingurc wormrc tips-en  	    billyrc bsdrc tuxrc taorc  DESTINATION ${DATA_INSTALL_DIR}/amor)
 
 
 

@@ -25,12 +25,12 @@ kde4_add_executable(amor ${amor_SRCS})
 
 target_link_libraries(amor  ${KDE4_KDECORE_LIBS} kdeui )
 
-install_targets(/bin amor )
+install(TARGETS amor  DESTINATION ${BIN_INSTALL_DIR} )
 
 
 ########### install files ###############
 
-install_files( ${XDG_APPS_DIR} FILES amor.desktop )
+install( FILES amor.desktop  DESTINATION ${XDG_APPS_DIR})
 
 kde4_install_icons( ${ICON_INSTALL_DIR} crystalsvg )
 
