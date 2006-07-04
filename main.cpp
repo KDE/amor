@@ -37,7 +37,7 @@
 
 #include "version.h"
 #include "amor.h"
-#include <dbus/qdbus.h>
+#include <QtDBus>
 
 static const char description[] = I18N_NOOP("KDE creature for your desktop");
 

@@ -6,7 +6,7 @@ add_subdirectory( data )
 
 ########### next target ###############
 
-set(amor_SRCS amoradaptor.cpp 
+set(amor_SRCS
    amordialog.cpp 
    amor.cpp 
    amorwidget.cpp 
@@ -16,6 +16,8 @@ set(amor_SRCS amoradaptor.cpp
    amorbubble.cpp 
    amorconfig.cpp 
    amortips.cpp )
+
+qt4_add_dbus_adaptor( amor_SRCS org.kde.amor.xml amor.h Amor )
 
 kde4_automoc(${amor_SRCS})
 

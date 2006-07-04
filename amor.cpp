@@ -29,7 +29,7 @@
 #include <time.h>
 
 #include <kdebug.h>
-#include <dbus/qdbus.h>
+#include <QtDBus>
 #include <kmenu.h>
 #include <qtimer.h>
 #include <qcursor.h>
