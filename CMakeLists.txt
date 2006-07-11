@@ -1,4 +1,4 @@
-
+project(amor)
 add_subdirectory( data ) 
 
 

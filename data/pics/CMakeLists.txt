@@ -3,15 +3,3 @@ add_subdirectory( animated )
 add_subdirectory( preview ) 
 add_subdirectory( static ) 
 
-
-
-
-########### install files ###############
-
-
-
-
-
-#original Makefile.am contents follow:
-
-#SUBDIRS = animated preview static

@@ -8,15 +8,3 @@ add_subdirectory( pingu )
 add_subdirectory( tao ) 
 add_subdirectory( worm ) 
 
-
-
-
-########### install files ###############
-
-
-
-
-
-#original Makefile.am contents follow:
-
-#SUBDIRS = blob bonhomme eyes ghost neko pingu tao worm
