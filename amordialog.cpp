@@ -58,40 +58,47 @@ AmorDialog::AmorDialog()
     setMainWidget( mainwidget );
 
     QWidget *hb = new QWidget(mainwidget);
-    QHBoxLayout *hboxLayout1 = new QHBoxLayout(hb);
+    QHBoxLayout *hboxLayout1 = new QHBoxLayout;
     hb->setLayout(hboxLayout1);
 
     // Theme list
-    QWidget *themeBox = new QWidget(hb);
+    QWidget *themeBox = new QWidget( mainwidget);
     QVBoxLayout *vboxLayout2 = new QVBoxLayout(themeBox);
     themeBox->setLayout(vboxLayout2);
     vboxLayout2->setSpacing(spacingHint());
+    hboxLayout1->addWidget( themeBox );
 
     QLabel *label = new QLabel(i18n("Theme:"), themeBox);
+    vboxLayout2->addWidget( label );
 
     mThemeListBox = new Q3ListBox(themeBox);
     connect(mThemeListBox,SIGNAL(highlighted(int)),SLOT(slotHighlighted(int)));
     mThemeListBox->setMinimumSize( fontMetrics().maxWidth()*20,
 				   fontMetrics().lineSpacing()*6 );
 
+    vboxLayout2->addWidget( mThemeListBox );
+
     mAboutEdit = new Q3MultiLineEdit(themeBox);
     mAboutEdit->setReadOnly(true);
     mAboutEdit->setMinimumHeight( fontMetrics().lineSpacing()*4 );
+    vboxLayout2->addWidget( mAboutEdit );
 
     vboxLayout2->setStretchFactor(mThemeListBox, 4);
     vboxLayout2->setStretchFactor(mAboutEdit, 1);
 
     // Animation offset
-    QWidget *offsetBox = new QWidget(hb);
+    QWidget *offsetBox = new QWidget( mainwidget);
     QVBoxLayout *vboxLayout3 = new QVBoxLayout(offsetBox);
     offsetBox->setLayout(vboxLayout3);
     vboxLayout3->setSpacing(spacingHint());
     label = new QLabel(i18n("Offset:"), offsetBox);
-
+    hboxLayout1->addLayout(vboxLayout3 );
+    vboxLayout3->addWidget( label );
     QSlider *slider = new QSlider(-40, 40, 5, mConfig.mOffset,
                                     Qt::Vertical, offsetBox);
     connect(slider, SIGNAL(valueChanged(int)), SLOT(slotOffset(int)));
 
+    vboxLayout3->addWidget( slider );
     // Always on top
     QCheckBox *checkBox = new QCheckBox(i18n("Always on top"), mainwidget);
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotOnTop(bool)));
