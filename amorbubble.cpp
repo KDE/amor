@@ -30,7 +30,7 @@
 #include <qpainter.h>
 //Added by qt3to4:
 #include <QPaintEvent>
-#include <Q3PointArray>
+#include <QPolygon>
 #include <QEvent>
 #include <Q3Frame>
 #include <QMouseEvent>
@@ -173,7 +173,7 @@ void AmorBubble::calcGeometry()
 //
 void AmorBubble::drawBubble(QPainter &p)
 {
-    Q3PointArray pointArray(3);
+    QPolygon pointArray(3);
 
     int left = ARROW_WIDTH;
 

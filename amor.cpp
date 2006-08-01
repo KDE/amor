@@ -177,7 +177,8 @@ Amor::Amor() : QObject()
         {
             mNextTarget = mWin->activeWindow();
             selectAnimation(Focus);
-            mTimer->start(0, true);
+            mTimer->setSingleShot(true);
+            mTimer->start(0);
         }
         if ( !QDBus::sessionBus().connect(QString(), QString(), "org.kde.amor",
                     "KDE_stop_screensaver", this, SLOT( screenSaverStopped()) ) )
@@ -221,7 +222,8 @@ void Amor::screenSaverStopped()
     mAmor->show();
     mForceHideAmorWidget = false;
 
-    mTimer->start(0, true);
+    mTimer->setSingleShot(true);
+    mTimer->start(0);
 }
 
 void Amor::screenSaverStarted()
@@ -248,7 +250,8 @@ void Amor::showTip( QString tip )
     if (mState == Sleeping)
     {
 	selectAnimation(Waking);	// Set waking immediatedly
-	mTimer->start(0, true);
+    mTimer->setSingleShot(true);
+	mTimer->start(0);
     }
 }
 
@@ -268,7 +271,8 @@ void Amor::showMessage( QString message , int msec )
     if (mState == Sleeping)
     {
 	selectAnimation(Waking);	// Set waking immediatedly
-	mTimer->start(0, true);
+    mTimer->setSingleShot(true);
+	mTimer->start(0);
     }
 }
 
@@ -297,7 +301,8 @@ void Amor::reset()
     mAmor->resize(mTheme.maximumSize());
     mCurrAnim->reset();
 
-    mTimer->start(0, true);
+    mTimer->setSingleShot(true);
+    mTimer->start(0);
 }
 
 //---------------------------------------------------------------------------
@@ -384,7 +389,8 @@ void Amor::showBubble()
         mBubble->setMessage(mTipsQueue.head()->text());
 
 //	mBubbleTimer->start(mTipsQueue.head()->time(), true);
-	mBubbleTimer->start(BUBBLE_TIME_STEP, true);
+    mBubbleTimer->setSingleShot(true);
+	mBubbleTimer->start(BUBBLE_TIME_STEP);
     }
 }
 
@@ -632,7 +638,9 @@ void Amor::slotMouseClicked(const QPoint &pos)
 
     if (restartTimer)
     {
-        mTimer->start(1000, true);
+
+        mTimer->setSingleShot(true);
+        mTimer->start(1000);
     }
 }
 
@@ -699,11 +707,14 @@ void Amor::slotTimeout()
         }
     }
 
-    if (mTheme.isStatic())
-	mTimer->start((mState == Normal) || (mState == Sleeping) ? 1000 : 100, true);
-    else
-	mTimer->start(mCurrAnim->delay(), true);
-
+    if (mTheme.isStatic()) {
+	    mTimer->setSingleShot(true);
+        mTimer->start((mState == Normal) || (mState == Sleeping) ? 1000 : 100);
+    }
+    else {
+        mTimer->setSingleShot(true);
+	    mTimer->start(mCurrAnim->delay());
+    }
     if (!mCurrAnim->next())
     {
 	if ( mBubble )
@@ -820,14 +831,16 @@ void Amor::slotWindowActivate(WId win)
     {
         // We are losing focus from the current window
         selectAnimation(Blur);
-        mTimer->start(0, true);
+        mTimer->setSingleShot(true);
+        mTimer->start(0);
     }
     else if (mNextTarget)
     {
         // We are setting focus to a new window
         if (mState != Focus )
 	    selectAnimation(Focus);
-	mTimer->start(0, true);
+        mTimer->setSingleShot(true);
+    	mTimer->start(0);
     }
     else
     {
@@ -854,7 +867,8 @@ void Amor::slotWindowRemove(WId win)
 
         selectAnimation(Destroy);
         mTimer->stop();
-        mTimer->start(0, true);
+        mTimer->setSingleShot(true);
+        mTimer->start(0);
     }
 }
 
@@ -873,7 +887,8 @@ void Amor::slotStackingChanged()
 
     // We seem to get this signal before the window has been restacked,
     // so we just schedule a restack.
-    mStackTimer->start( 20, true );
+    mStackTimer->setSingleShot(true);
+    mStackTimer->start( 20);
 }
 
 //---------------------------------------------------------------------------
@@ -904,7 +919,8 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
         selectAnimation(Destroy);
         mTargetWin = None;
         mTimer->stop();
-        mTimer->start(0, true);
+        mTimer->setSingleShot(true);
+        mTimer->start(0);
 
 	return;
     }
@@ -929,7 +945,8 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
 	{
 	    mNextTarget = mTargetWin;
 	    selectAnimation(Blur);
-	    mTimer->start(0, true);
+        mTimer->setSingleShot(true);
+	    mTimer->start(0);
 
 	    return;
 	}
@@ -999,7 +1016,8 @@ void Amor::slotBubbleTimeout()
     if ((first->time() > BUBBLE_TIME_STEP) && (mBubble->isVisible()))
     {
     	first->setTime(first->time() - BUBBLE_TIME_STEP);
-	mBubbleTimer->start(BUBBLE_TIME_STEP, true);
+        mBubbleTimer->setSingleShot(true);
+	mBubbleTimer->start(BUBBLE_TIME_STEP);
 	return;
     }
 
@@ -1007,7 +1025,8 @@ void Amor::slotBubbleTimeout()
     if (mBubble->mouseWithin())
     {
 	first->setTime(500);		// show this item for another 500ms
-	mBubbleTimer->start(BUBBLE_TIME_STEP, true);
+    mBubbleTimer->setSingleShot(true);
+	mBubbleTimer->start(BUBBLE_TIME_STEP);
 	return;
     }
 
