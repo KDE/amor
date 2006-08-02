@@ -447,7 +447,7 @@ void Amor::selectAnimation(State state)
             mTargetWin = mNextTarget;
             if (mTargetWin != None)
             {
-                mTargetRect = KWin::windowInfo(mTargetWin).frameGeometry();
+                mTargetRect = KWin::windowInfo(mTargetWin, NET::WMFrameExtents).frameGeometry();
 
 		// if the animation falls outside of the working area,
 		// then relocate it so that is inside the desktop again
@@ -906,7 +906,7 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
     // This is an active event that affects the target window
     time(&mActiveTime);
 
-    NET::MappingState mappingState = KWin::windowInfo( mTargetWin ).mappingState();
+    NET::MappingState mappingState = KWin::windowInfo( mTargetWin, NET::WMFrameExtents ).mappingState();
 
     if (mappingState == NET::Iconic ||
         mappingState == NET::Withdrawn)
@@ -931,7 +931,7 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
         kDebug(10000) << "Target window moved or resized" << endl;
 #endif
 
-        QRect newTargetRect = KWin::windowInfo(mTargetWin).frameGeometry();
+        QRect newTargetRect = KWin::windowInfo(mTargetWin, NET::WMFrameExtents).frameGeometry();
 
 	// if the change in the window caused the animation to fall
 	// out of the working area of the desktop, or if the animation
