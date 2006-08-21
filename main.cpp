@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
     app.setTopWidget(sessionWidget);
 
 
-    QDBus::sessionBus().registerObject("/Amor",new Amor() );
+    QDBusConnection::sessionBus().registerObject("/Amor",new Amor() );
     return app.exec();
 }
 

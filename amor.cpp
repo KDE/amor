@@ -125,7 +125,7 @@ QueueItem::QueueItem(itemType ty, QString te, int ti)
 Amor::Amor() : QObject()
 {
     new AmorAdaptor(this);
-    QDBus::sessionBus().registerObject("/Amor", this);
+    QDBusConnection::sessionBus().registerObject("/Amor", this);
     mAmor = 0;
     mBubble = 0;
     mForceHideAmorWidget = false;
@@ -180,13 +180,13 @@ Amor::Amor() : QObject()
             mTimer->setSingleShot(true);
             mTimer->start(0);
         }
-        if ( !QDBus::sessionBus().connect(QString(), QString(), "org.kde.amor",
+        if ( !QDBusConnection::sessionBus().connect(QString(), QString(), "org.kde.amor",
                     "KDE_stop_screensaver", this, SLOT( screenSaverStopped()) ) )
 		kDebug(10000) << "Could not attach signal...KDE_stop_screensaver()" << endl;
 	else
 		kDebug(10000) << "attached dcop signals..." << endl;
 
-         if ( !QDBus::sessionBus().connect(QString(), QString(), "org.kde.amor", "KDE_start_screensaver", this, SLOT( screenSaverStarted()) ) )
+         if ( !QDBusConnection::sessionBus().connect(QString(), QString(), "org.kde.amor", "KDE_start_screensaver", this, SLOT( screenSaverStarted()) ) )
 		kDebug(10000) << "Could not attach signal...KDE_start_screensaver()" << endl;
 	else
 		kDebug(10000) << "attached dcop signals..." << endl;
@@ -622,7 +622,7 @@ void Amor::slotMouseClicked(const QPoint &pos)
         KMenu* helpMenu = help->menu();
 #ifdef __GNUC__
 #warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)
-#endif		
+#endif
         helpMenu->setIcon(SmallIcon("help"));
         ((QMenu *)helpMenu)->setTitle(i18n("&Help")); // Workaround a compat deprecated code
 
