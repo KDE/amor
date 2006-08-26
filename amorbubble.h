@@ -27,9 +27,7 @@
 #ifndef AMORBUBBLE_H
 #define AMORBUBBLE_H
 
-#ifdef HAVE_CONFIG_H
 #include <config.h>
-#endif
 
 #include <kapplication.h>
 #include <qwidget.h>

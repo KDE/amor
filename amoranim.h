@@ -27,9 +27,7 @@
 #ifndef AMORANIM_H 
 #define AMORANIM_H 
 
-#ifdef HAVE_CONFIG_H
 #include <config.h>
-#endif 
 
 #include <stdlib.h>
 #include <unistd.h>

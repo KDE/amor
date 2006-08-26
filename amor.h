@@ -27,9 +27,7 @@
 #ifndef AMOR_H
 #define AMOR_H
 
-#ifdef HAVE_CONFIG_H
 #include <config.h>
-#endif
 
 #include <qwidget.h>
 #include <qqueue.h>
