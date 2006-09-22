@@ -184,12 +184,12 @@ Amor::Amor() : QObject()
                     "KDE_stop_screensaver", this, SLOT( screenSaverStopped()) ) )
 		kDebug(10000) << "Could not attach signal...KDE_stop_screensaver()" << endl;
 	else
-		kDebug(10000) << "attached dcop signals..." << endl;
+		kDebug(10000) << "attached dbus signals..." << endl;
 
          if ( !QDBusConnection::sessionBus().connect(QString(), QString(), "org.kde.amor", "KDE_start_screensaver", this, SLOT( screenSaverStarted()) ) )
 		kDebug(10000) << "Could not attach signal...KDE_start_screensaver()" << endl;
 	else
-		kDebug(10000) << "attached dcop signals..." << endl;
+		kDebug(10000) << "attached dbus signals..." << endl;
 
 
 	KStartupInfo::appStarted();
