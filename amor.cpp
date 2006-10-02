@@ -52,9 +52,11 @@
 #include "amorwidget.h"
 #include "amordialog.h"
 #include "version.h"
+#if defined Q_WS_X11
 #include <X11/Xlib.h>
-#include <kdebug.h>
 #include <QX11Info>
+#endif
+#include <kdebug.h>
 #include "amoradaptor.h"
 // #define DEBUG_AMOR
 
@@ -572,7 +574,7 @@ void Amor::restack()
 #ifdef DEBUG_AMOR
     kDebug(10000) << "restacking" << endl;
 #endif
-
+#if defined Q_WS_X11
     Window sibling = mTargetWin;
     Window dw, parent = None, *wins;
 
@@ -600,6 +602,7 @@ void Amor::restack()
     values.stack_mode = Above;
     XConfigureWindow(QX11Info::display(), mAmor->winId(), CWSibling | CWStackMode,
                      &values);
+#endif
 }
 
 //---------------------------------------------------------------------------
