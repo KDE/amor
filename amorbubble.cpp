@@ -32,7 +32,7 @@
 #include <QPaintEvent>
 #include <QPolygon>
 #include <QEvent>
-#include <Q3Frame>
+#include <QFrame>
 #include <QMouseEvent>
 #include <QDesktopWidget>
 #include <ktextbrowser.h>
