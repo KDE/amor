@@ -27,18 +27,18 @@
 
 #include <qcheckbox.h>
 #include <qlabel.h>
+#include <qlistwidget.h>
 #include <qslider.h>
-#include <qpainter.h>
+#include <qtextedit.h>
 #include <QPixmap>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
-#include <kapplication.h>
 #include <ksimpleconfig.h>
 #include "amordialog.h"
 #include "amordialog.moc"
 #include "version.h"
+#include <kicon.h>
 #include <klocale.h>
-#include <kvbox.h>
 #include <kstandarddirs.h>
 #include <kglobal.h>
 
@@ -57,18 +57,22 @@ AmorDialog::AmorDialog()
     QWidget *mainwidget = new QWidget(this);
     setMainWidget( mainwidget );
     QGridLayout *gridLayout = new QGridLayout(mainwidget);
+    gridLayout->setMargin(0);
 
     // Theme list
     QLabel *label = new QLabel(i18n("Theme:"), mainwidget);
     gridLayout->addWidget(label, 0, 0);
 
-    mThemeListBox = new Q3ListBox(mainwidget);
-    connect(mThemeListBox,SIGNAL(highlighted(int)),SLOT(slotHighlighted(int)));
-    mThemeListBox->setMinimumSize( fontMetrics().maxWidth()*20,
+    mThemeListView = new QListWidget(mainwidget);
+    mThemeListView->setIconSize(QSize(32, 32));
+    mThemeListView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    mThemeListView->setAlternatingRowColors(true);
+    connect(mThemeListView,SIGNAL(currentRowChanged(int)),SLOT(slotHighlighted(int)));
+    mThemeListView->setMinimumSize( fontMetrics().maxWidth()*20,
 				   fontMetrics().lineSpacing()*6 );
-    gridLayout->addWidget(mThemeListBox, 1, 0);
+    gridLayout->addWidget(mThemeListView, 1, 0);
 
-    mAboutEdit = new Q3MultiLineEdit(mainwidget);
+    mAboutEdit = new QTextEdit(mainwidget);
     mAboutEdit->setReadOnly(true);
     mAboutEdit->setMinimumHeight( fontMetrics().lineSpacing()*4 );
     gridLayout->addWidget(mAboutEdit, 2, 0);
@@ -164,14 +168,13 @@ void AmorDialog::addTheme(const QString& file)
 
     QPixmap pixmap(pixmapPath);
 
-    AmorListBoxItem *item = new AmorListBoxItem(description, pixmap);
-    mThemeListBox->insertItem(item);
+    QListWidgetItem *item = new QListWidgetItem(KIcon(pixmap), description, mThemeListView);
     mThemes.append(file);
     mThemeAbout.append(about);
 
     if (mConfig.mTheme == file)
     {
-        mThemeListBox->setSelected(mThemeListBox->count()-1, true);
+        mThemeListView->setCurrentItem(item);
     }
 }
 
@@ -181,8 +184,10 @@ void AmorDialog::addTheme(const QString& file)
 //
 void AmorDialog::slotHighlighted(int index)
 {
+    if (index < 0)
+        return;
     mConfig.mTheme = mThemes.at(index);
-    mAboutEdit->setText(mThemeAbout.at(index));
+    mAboutEdit->setPlainText(mThemeAbout.at(index));
 }
 
 //---------------------------------------------------------------------------
@@ -219,7 +224,7 @@ void AmorDialog::slotRandomTips(bool tips)
 //
 void AmorDialog::slotRandomTheme(bool randomTheme)
 {
-    mThemeListBox->setEnabled(!randomTheme);
+    mThemeListView->setEnabled(!randomTheme);
     mConfig.mRandomTheme = randomTheme;
 }
 
@@ -265,30 +270,3 @@ void AmorDialog::slotCancel()
     emit offsetChanged(cs.readEntry("Offset",0));
     reject();
 }
-
-//===========================================================================
-//
-// AmorListBoxItem implements a list box items for selection of themes
-//
-void AmorListBoxItem::paint( QPainter *p )
-{
-    p->drawPixmap( 3, 0, mPixmap );
-    QFontMetrics fm = p->fontMetrics();
-    int yPos;                       // vertical text position
-    if ( mPixmap.height() < fm.height() )
-        yPos = fm.ascent() + fm.leading()/2;
-    else
-        yPos = mPixmap.height()/2 - fm.height()/2 + fm.ascent();
-    p->drawText( mPixmap.width() + 5, yPos, text() );
-}
-
-int AmorListBoxItem::height(const Q3ListBox *lb ) const
-{
-    return qMax( mPixmap.height(), lb->fontMetrics().lineSpacing() + 1 );
-}
-
-int AmorListBoxItem::width(const Q3ListBox *lb ) const
-{
-    return mPixmap.width() + lb->fontMetrics().width( text() ) + 6;
-}
-

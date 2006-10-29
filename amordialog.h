@@ -28,12 +28,10 @@
 #define AMORDIALOG_H
 
 #include <kdialog.h>
-#include <q3listbox.h>
-#include <q3ptrlist.h>
-#include <q3multilineedit.h>
-//Added by qt3to4:
-#include <QPixmap>
 #include "amorconfig.h"
+
+class QListWidget;
+class QTextEdit;
 
 //---------------------------------------------------------------------------
 //
@@ -76,32 +74,11 @@ protected:
     void addTheme(const QString& file);
 
 protected:
-    Q3ListBox *mThemeListBox;
-    Q3MultiLineEdit *mAboutEdit;
+    QListWidget *mThemeListView;
+    QTextEdit *mAboutEdit;
     QStringList mThemes;
     QStringList mThemeAbout;
     AmorConfig mConfig;
-};
-
-//---------------------------------------------------------------------------
-//
-// AmorListBoxItem implements a list box items for selection of themes
-//
-class AmorListBoxItem : public Q3ListBoxItem
-{
-public:
-    AmorListBoxItem(const QString & s, const QPixmap& p)
-        : Q3ListBoxItem(), mPixmap(p)
-        { setText(s); }
-
-protected:
-    virtual void paint(QPainter *);
-    virtual int height(const Q3ListBox *) const;
-    virtual int width(const Q3ListBox *) const;
-    virtual const QPixmap *pixmap() const { return &mPixmap; }
-
-private:
-    QPixmap mPixmap;
 };
 
 #endif // AMORDIALOG_H
