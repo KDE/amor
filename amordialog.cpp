@@ -36,7 +36,6 @@
 #include <ksimpleconfig.h>
 #include "amordialog.h"
 #include "amordialog.moc"
-#include "version.h"
 #include <kicon.h>
 #include <klocale.h>
 #include <kstandarddirs.h>

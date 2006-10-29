@@ -24,8 +24,9 @@
 /*
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
-#include <stdlib.h>
+#include <kconfigbase.h>
 #include <krandom.h>
+#include <ksimpleconfig.h>
 #include <kstandarddirs.h>
 #include "amoranim.h"
 #include "amorpm.h"

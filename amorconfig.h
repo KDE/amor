@@ -27,8 +27,6 @@
 #ifndef AMORCONFIG_H 
 #define AMORCONFIG_H 
 
-#include <config.h>
-
 #include <qstring.h>
 
 //---------------------------------------------------------------------------

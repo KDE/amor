@@ -27,20 +27,15 @@
 #ifndef AMORANIM_H 
 #define AMORANIM_H 
 
-#include <config.h>
-
-#include <stdlib.h>
-#include <unistd.h>
-
 #include <qhash.h>
 #include <qpoint.h>
 #include <qsize.h>
 #include <qstringlist.h>
 #include <QVector>
-#include <kconfigbase.h>
-#include <ksimpleconfig.h>
 
 class QPixmap;
+class KConfigBase;
+class KSimpleConfig;
 
 //---------------------------------------------------------------------------
 //

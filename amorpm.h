@@ -28,7 +28,9 @@
 #define AMORPM_H 
 
 #include <qhash.h>
-#include <qpixmap.h>
+#include <qstring.h>
+
+class QPixmap;
 
 //---------------------------------------------------------------------------
 //

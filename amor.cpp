@@ -28,14 +28,13 @@
 #include <unistd.h>
 #include <time.h>
 
-#include <kdebug.h>
 #include <QtDBus>
 #include <kmenu.h>
 #include <qtimer.h>
 #include <qcursor.h>
-#include <q3valuelist.h>
 
 #include <kapplication.h>
+#include <kdebug.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kstartupinfo.h>
@@ -57,7 +56,6 @@
 #include <X11/Xlib.h>
 #include <QX11Info>
 #endif
-#include <kdebug.h>
 #include "amoradaptor.h"
 // #define DEBUG_AMOR
 
