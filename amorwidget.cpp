@@ -122,7 +122,7 @@ void AmorWidget::mouseReleaseEvent(QMouseEvent *me)
     if ( dragging )
 	emit dragged( me->globalPos() - clickPos, true );
     else if ( me->button() == Qt::RightButton )
-	emit mouseClicked(clickPos);
+	emit mouseClicked(me->globalPos());
 
     clickPos = QPoint();
     dragging = false;
