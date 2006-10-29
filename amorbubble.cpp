@@ -53,7 +53,7 @@
 // Constructor
 //
 AmorBubble::AmorBubble()
-	: QWidget(0, Qt::WStyle_Customize | Qt::WStyle_NoBorder | Qt::WX11BypassWM )
+	: QWidget(0, Qt::WindowTitleHint | Qt::X11BypassWindowManagerHint)
 {
     mOriginX = 0;
     mOriginY = 0;

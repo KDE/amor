@@ -1,6 +1,7 @@
 project(amor)
 add_subdirectory( data ) 
 
+remove_definitions(-DQT3_SUPPORT_WARNINGS -DQT3_SUPPORT)
 
 ########### next target ###############
 

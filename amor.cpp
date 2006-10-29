@@ -627,7 +627,7 @@ void Amor::slotMouseClicked(const QPoint &pos)
 #warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)
 #endif
         helpMenu->setIcon(SmallIcon("help"));
-        ((QMenu *)helpMenu)->setTitle(i18n("&Help")); // Workaround a compat deprecated code
+        helpMenu->setTitle(i18n("&Help"));
 
         mMenu = new KMenu(0);
         mMenu->addTitle("Amor"); // I really don't want this i18n'ed

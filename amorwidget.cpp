@@ -39,7 +39,7 @@
 // Constructor
 //
 AmorWidget::AmorWidget()
-	: QWidget(0, Qt::WStyle_Customize | Qt::WStyle_NoBorder | Qt::WX11BypassWM ),
+	: QWidget(0, Qt::WindowTitleHint | Qt::X11BypassWindowManagerHint),
       mPixmap(0)
 {
     setAttribute(Qt::WA_NoSystemBackground, true);
