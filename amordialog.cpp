@@ -54,67 +54,54 @@ AmorDialog::AmorDialog()
     setDefaultButton( Ok );
 
     mConfig.read();
-    KVBox *mainwidget = new KVBox( this );
+    QWidget *mainwidget = new QWidget(this);
     setMainWidget( mainwidget );
-
-    QWidget *hb = new QWidget(mainwidget);
-    QHBoxLayout *hboxLayout1 = new QHBoxLayout;
-    hb->setLayout(hboxLayout1);
+    QGridLayout *gridLayout = new QGridLayout(mainwidget);
 
     // Theme list
-    QWidget *themeBox = new QWidget( mainwidget);
-    QVBoxLayout *vboxLayout2 = new QVBoxLayout(themeBox);
-    themeBox->setLayout(vboxLayout2);
-    vboxLayout2->setSpacing(spacingHint());
-    hboxLayout1->addWidget( themeBox );
+    QLabel *label = new QLabel(i18n("Theme:"), mainwidget);
+    gridLayout->addWidget(label, 0, 0);
 
-    QLabel *label = new QLabel(i18n("Theme:"), themeBox);
-    vboxLayout2->addWidget( label );
-
-    mThemeListBox = new Q3ListBox(themeBox);
+    mThemeListBox = new Q3ListBox(mainwidget);
     connect(mThemeListBox,SIGNAL(highlighted(int)),SLOT(slotHighlighted(int)));
     mThemeListBox->setMinimumSize( fontMetrics().maxWidth()*20,
 				   fontMetrics().lineSpacing()*6 );
+    gridLayout->addWidget(mThemeListBox, 1, 0);
 
-    vboxLayout2->addWidget( mThemeListBox );
-
-    mAboutEdit = new Q3MultiLineEdit(themeBox);
+    mAboutEdit = new Q3MultiLineEdit(mainwidget);
     mAboutEdit->setReadOnly(true);
     mAboutEdit->setMinimumHeight( fontMetrics().lineSpacing()*4 );
-    vboxLayout2->addWidget( mAboutEdit );
-
-    vboxLayout2->setStretchFactor(mThemeListBox, 4);
-    vboxLayout2->setStretchFactor(mAboutEdit, 1);
+    gridLayout->addWidget(mAboutEdit, 2, 0);
 
     // Animation offset
-    QWidget *offsetBox = new QWidget( mainwidget);
-    QVBoxLayout *vboxLayout3 = new QVBoxLayout(offsetBox);
-    offsetBox->setLayout(vboxLayout3);
-    vboxLayout3->setSpacing(spacingHint());
-    label = new QLabel(i18n("Offset:"), offsetBox);
-    hboxLayout1->addLayout(vboxLayout3 );
-    vboxLayout3->addWidget( label );
-    QSlider *slider = new QSlider(-40, 40, 5, mConfig.mOffset,
-                                    Qt::Vertical, offsetBox);
-    connect(slider, SIGNAL(valueChanged(int)), SLOT(slotOffset(int)));
+    label = new QLabel(i18n("Offset:"), mainwidget);
+    gridLayout->addWidget(label, 0, 1);
 
-    vboxLayout3->addWidget( slider );
+    QSlider *slider = new QSlider(-40, 40, 5, mConfig.mOffset,
+                                    Qt::Vertical, mainwidget);
+    connect(slider, SIGNAL(valueChanged(int)), SLOT(slotOffset(int)));
+    gridLayout->addWidget(slider, 1, 1, 2, 1);
+
     // Always on top
     QCheckBox *checkBox = new QCheckBox(i18n("Always on top"), mainwidget);
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotOnTop(bool)));
     checkBox->setChecked(mConfig.mOnTop);
+    gridLayout->addWidget(checkBox, 3, 0, 1, 2);
 
     checkBox = new QCheckBox(i18n("Show random tips"), mainwidget);
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotRandomTips(bool)));
     checkBox->setChecked(mConfig.mTips); // always keep this one after the connect, or the QList would not be grayed when it should
+    gridLayout->addWidget(checkBox, 4, 0, 1, 2);
 
     checkBox = new QCheckBox(i18n("Use a random character"), mainwidget);
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotRandomTheme(bool)));
     checkBox->setChecked(mConfig.mRandomTheme);
+    gridLayout->addWidget(checkBox, 5, 0, 1, 2);
 
     checkBox = new QCheckBox(i18n("Allow application tips"), mainwidget);
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotApplicationTips(bool)));
     checkBox->setChecked(mConfig.mAppTips);
+    gridLayout->addWidget(checkBox, 6, 0, 1, 2);
 
     readThemes();
 }
