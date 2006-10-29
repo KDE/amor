@@ -136,13 +136,13 @@ AmorThemeManager::AmorThemeManager()
     : mMaximumSize(0, 0)
 {
     mConfig = 0;
-    mAnimations.setAutoDelete(true);
 }
 
 //---------------------------------------------------------------------------
 //
 AmorThemeManager::~AmorThemeManager()
 {
+    qDeleteAll(mAnimations);
     delete mConfig;
 }
 
@@ -180,6 +180,7 @@ bool AmorThemeManager::setTheme(const QString & file)
     mMaximumSize.setWidth(0);
     mMaximumSize.setHeight(0);
 
+    qDeleteAll(mAnimations);
     mAnimations.clear();
 
     return true;
@@ -191,12 +192,10 @@ bool AmorThemeManager::setTheme(const QString & file)
 //
 AmorAnim *AmorThemeManager::random(const QString & group)
 {
-    QString grp( group );
+    QString grp = mStatic ? QLatin1String("Base") : group;
 
-    if (mStatic)
-	grp = "Base";
-
-    AmorAnimationGroup *animGroup = mAnimations.find(grp);
+    QHash<QString, AmorAnimationGroup*>::const_iterator it = mAnimations.find(grp);
+    AmorAnimationGroup *animGroup = it != mAnimations.end() ? *it : 0;
 
     if (animGroup) {
 	int idx = KRandom::random()%animGroup->count();
@@ -251,7 +250,7 @@ bool AmorThemeManager::readGroup(const QString & seq)
     if ( entries == 0)
         return false;
 
-    mAnimations.insert(seq, animList);
+    mAnimations[seq] = animList;
 
     return true;
 }

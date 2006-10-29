@@ -32,13 +32,15 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include <q3dict.h>
+#include <qhash.h>
+#include <qpoint.h>
+#include <qsize.h>
 #include <qstringlist.h>
-//Added by qt3to4:
-#include <QPixmap>
 #include <QVector>
 #include <kconfigbase.h>
 #include <ksimpleconfig.h>
+
+class QPixmap;
 
 //---------------------------------------------------------------------------
 //
@@ -110,7 +112,7 @@ protected:
     QString           mPath;
     KSimpleConfig     *mConfig;
     QSize             mMaximumSize; // The largest pixmap used
-    Q3Dict<AmorAnimationGroup> mAnimations; // list of animation groups
+    QHash<QString, AmorAnimationGroup*> mAnimations; // list of animation groups
     bool              mStatic;	    // static image
 };
 

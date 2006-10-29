@@ -38,7 +38,6 @@ AmorPixmapManager *AmorPixmapManager::mManager = 0;
 AmorPixmapManager::AmorPixmapManager()
     : mPixmapDir(".")
 {
-    mPixmaps.setAutoDelete(true);
 }
 
 //---------------------------------------------------------------------------
@@ -47,6 +46,7 @@ AmorPixmapManager::AmorPixmapManager()
 //
 AmorPixmapManager::~AmorPixmapManager()
 {
+    qDeleteAll(mPixmaps);
 }
 
 //---------------------------------------------------------------------------
@@ -58,7 +58,8 @@ AmorPixmapManager::~AmorPixmapManager()
 //
 const QPixmap *AmorPixmapManager::load(const QString & img)
 {
-    QPixmap *pixmap = mPixmaps.find(img);
+    QHash<QString, QPixmap*>::const_iterator it = mPixmaps.find(img);
+    QPixmap *pixmap = it != mPixmaps.end() ? *it : 0;
 
     if (!pixmap)
     {
@@ -68,7 +69,7 @@ const QPixmap *AmorPixmapManager::load(const QString & img)
 
         if (!pixmap->isNull())
         {
-            mPixmaps.insert(img,pixmap);
+            mPixmaps[img] = pixmap;
         }
         else
         {

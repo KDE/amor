@@ -27,9 +27,7 @@
 #ifndef AMORPM_H 
 #define AMORPM_H 
 
-#include <config.h>
-
-#include <q3dict.h>
+#include <qhash.h>
 #include <qpixmap.h>
 
 //---------------------------------------------------------------------------
@@ -48,13 +46,13 @@ public:
         { mPixmapDir = "."; mPixmaps.clear(); }
     const QPixmap *load(const QString & img);
     const QPixmap *pixmap(const QString & img) const
-        { return mPixmaps.find(img); }
+        { return mPixmaps.contains(img) ? mPixmaps[img] : 0; }
 
     static AmorPixmapManager *manager();
 
 public:
     QString        mPixmapDir;           // get pixmaps from here
-    Q3Dict<QPixmap> mPixmaps;             // list of pixmaps
+    QHash<QString, QPixmap*> mPixmaps;   // list of pixmaps
     static AmorPixmapManager *mManager; // static pointer to instance
 };
 
