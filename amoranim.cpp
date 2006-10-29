@@ -95,7 +95,7 @@ void AmorAnim::readConfig(KConfigBase &config)
 
     // Read the distance to move between frames and calculate the total
     // distance that this aniamtion moves from its starting position.
-    list = config.readEntry("Movement",list);
+    list = config.readEntry("Movement",QStringList());
     mMovement.resize(frames);
     for (int i = 0; i < list.count() && i < frames; i++)
     {
@@ -104,14 +104,14 @@ void AmorAnim::readConfig(KConfigBase &config)
     }
 
     // Read the hotspot for each frame.
-    QStringList entries = config.readEntry("HotspotX",list);
+    QStringList entries = config.readEntry("HotspotX",QStringList());
     mHotspot.resize(frames);
     for (int i = 0; i < entries.count() && i < frames; i++)
-        mHotspot[i].setX(list.at(i).toInt());
+        mHotspot[i].setX(entries.at(i).toInt());
 
-    entries = config.readEntry("HotspotY",list);
+    entries = config.readEntry("HotspotY",QStringList());
     for (int i = 0; i < entries.count() && i < frames; i++)
-        mHotspot[i].setY(list.at(i).toInt());
+        mHotspot[i].setY(entries.at(i).toInt());
 
     // Add the overlap of the last frame to the total movement.
     const QPoint &lastHotspot = mHotspot[mHotspot.size()-1];
