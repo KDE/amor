@@ -27,16 +27,10 @@
 #ifndef AMORBUBBLE_H
 #define AMORBUBBLE_H
 
-#include <config.h>
-
-#include <kapplication.h>
 #include <qwidget.h>
 #include <qbitmap.h>
-//Added by qt3to4:
-#include <QMouseEvent>
-#include <QEvent>
-#include <QPaintEvent>
-#include <QTextBrowser>
+
+class QTextBrowser;
 class QTimer;
 
 //---------------------------------------------------------------------------

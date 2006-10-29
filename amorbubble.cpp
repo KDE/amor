@@ -27,6 +27,7 @@
 #include <kurl.h>
 #include "amorbubble.h"
 #include "amorbubble.moc"
+#include <qapplication.h>
 #include <qpainter.h>
 //Added by qt3to4:
 #include <QPaintEvent>
@@ -134,7 +135,7 @@ void AmorBubble::calcGeometry()
 
     // The actual position of the bubble may change if it is too close to
     // the desktop boundary.
-    if (mOriginX + w > kapp->desktop()->width())
+    if (mOriginX + w > qApp->desktop()->width())
     {
         // source on right
         xpos = mOriginX - w - BUBBLE_OFFSET;
@@ -142,7 +143,7 @@ void AmorBubble::calcGeometry()
 	mBound.translate( -ARROW_WIDTH, 0 );
     }
 
-    if (mOriginY + h > kapp->desktop()->height())
+    if (mOriginY + h > qApp->desktop()->height())
     {
         // source at bottom
         ypos = mOriginY - h + BORDER_SIZE + ARROW_HEIGHT / 2;

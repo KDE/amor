@@ -35,6 +35,7 @@
 #include <qcursor.h>
 #include <q3valuelist.h>
 
+#include <kapplication.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kstartupinfo.h>
