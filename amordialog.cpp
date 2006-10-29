@@ -81,8 +81,10 @@ AmorDialog::AmorDialog()
     label = new QLabel(i18n("Offset:"), mainwidget);
     gridLayout->addWidget(label, 0, 1);
 
-    QSlider *slider = new QSlider(-40, 40, 5, mConfig.mOffset,
-                                    Qt::Vertical, mainwidget);
+    QSlider *slider = new QSlider(Qt::Vertical, mainwidget);
+    slider->setRange(-40, 40);
+    slider->setPageStep(5);
+    slider->setValue(mConfig.mOffset);
     connect(slider, SIGNAL(valueChanged(int)), SLOT(slotOffset(int)));
     gridLayout->addWidget(slider, 1, 1, 2, 1);
 

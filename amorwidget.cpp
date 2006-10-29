@@ -27,10 +27,10 @@
 #include "amorwidget.h"
 #include "amorwidget.moc"
 #include <qbitmap.h>
-//Added by qt3to4:
+#include <QPainter>
 #include <QPixmap>
 #include <QMouseEvent>
-#include <QPaintEvent>
+#include <QX11Info>
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>
 
@@ -66,7 +66,7 @@ void AmorWidget::setPixmap(const QPixmap *pixmap)
     {
         if (!mPixmap->mask().isNull())
         {
-            XShapeCombineMask( x11Display(), winId(), ShapeBounding, 0, 0,
+            XShapeCombineMask( QX11Info::display(), winId(), ShapeBounding, 0, 0,
                                 mPixmap->mask().handle(), ShapeSet );
             repaint();
         }
@@ -82,7 +82,10 @@ void AmorWidget::setPixmap(const QPixmap *pixmap)
 void AmorWidget::paintEvent(QPaintEvent *)
 {
     if (mPixmap)
-        bitBlt( this, 0, 0, mPixmap );
+    {
+        QPainter p(this);
+        p.drawPixmap( 0, 0, *mPixmap );
+    }
 }
 
 //---------------------------------------------------------------------------
@@ -100,7 +103,7 @@ void AmorWidget::mousePressEvent(QMouseEvent *me)
 //
 void AmorWidget::mouseMoveEvent(QMouseEvent *me)
 {
-    if ( me->state() == Qt::LeftButton ) {
+    if ( me->buttons() & Qt::LeftButton ) {
 	if ( !dragging && (clickPos-me->globalPos()).manhattanLength() > 3 )
 	    dragging = true;
 	if ( dragging ) {
@@ -118,7 +121,7 @@ void AmorWidget::mouseReleaseEvent(QMouseEvent *me)
 {
     if ( dragging )
 	emit dragged( me->globalPos() - clickPos, true );
-    else if ( me->state() == Qt::RightButton )
+    else if ( me->button() == Qt::RightButton )
 	emit mouseClicked(clickPos);
 
     clickPos = QPoint();

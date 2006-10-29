@@ -38,6 +38,7 @@
 #include <ktextbrowser.h>
 #include <qtooltip.h>
 #include <kstandarddirs.h>
+#include <QX11Info>
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>
 #include <qtimer.h>
@@ -162,7 +163,7 @@ void AmorBubble::calcGeometry()
     maskPainter.setPen(Qt::color1);
     maskPainter.setBrush(Qt::color1);
     drawBubble(maskPainter);
-    XShapeCombineMask( x11Display(), winId(), ShapeBounding, 0, 0,
+    XShapeCombineMask( QX11Info::display(), winId(), ShapeBounding, 0, 0,
                        mMask.handle(), ShapeSet );
 }
 
@@ -209,7 +210,7 @@ void AmorBubble::drawBubble(QPainter &p)
     p.drawPolygon(pointArray);
 
     p.setPen(pen);
-    p.drawPolyline(pointArray, 0, 3);
+    p.drawPolyline(pointArray);
 }
 
 //---------------------------------------------------------------------------
@@ -220,7 +221,7 @@ void AmorBubble::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
     painter.setPen(Qt::black);
-    painter.setBrush( QToolTip::palette().active().brush( QPalette::Background ) );
+    painter.setBrush( QToolTip::palette().brush( QPalette::Active, QPalette::Background ) );
     drawBubble(painter);
 }
 
