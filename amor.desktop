@@ -11,5 +11,5 @@ GenericName=On-Screen Creature
 GenericName[fr]=Créature sur l'écran
 GenericName[x-test]=xxOn-Screen Creaturexx
 Terminal=false
-X-DCOP-ServiceType=Unique
+X-DBUS-StartupType=Unique
 Categories=Qt;KDE;Amusement;
