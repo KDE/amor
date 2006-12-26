@@ -30,49 +30,8 @@ install(TARGETS amor  DESTINATION ${BIN_INSTALL_DIR} )
 ########### install files ###############
 
 install( FILES amor.desktop  DESTINATION ${XDG_APPS_DIR})
+install( FILES org.kde.amor.xml DESTINATION ${DBUS_INTERFACES_DIR} )
 
 kde4_install_icons( ${ICON_INSTALL_DIR}  )
 
 
-
-
-#original Makefile.am contents follow:
-
-#
-## set the include path for X, qt and KDE
-#INCLUDES= $(all_includes)
-## claim, which subdirectories you want to install
-#SUBDIRS = data
-#
-######## This part is very amor specific
-## you can add here more. This one gets installed 
-#bin_PROGRAMS = 	amor
-#
-## Which sources should be compiled for amor.
-#amor_SOURCES	= amordialog.cpp amor.cpp amorwidget.cpp main.cpp amoranim.cpp amorpm.cpp\
-#                  amorbubble.cpp amorconfig.cpp amortips.cpp AmorIface.skel
-#
-#include_HEADERS = AmorIface.h
-#
-## the library search path
-#amor_LDFLAGS = $(all_libraries) $(KDE_RPATH)
-#
-## the libraries to link against. Be aware of the order. First the libraries,
-## that depend on the following ones.
-#amor_LDADD  = $(LIB_KDEUI)
-#
-## this option you can leave out. Just, if you use "make dist", you need it
-#noinst_HEADERS = amor.h amorwidget.h amoranim.h amorpm.h amordialog.h\
-#                 amorbubble.h amorconfig.h amortips.h
-#
-#METASOURCES = AUTO
-#
-#messages: 
-#	perl ./preparetips > tips.cpp
-#	$(XGETTEXT) tips.cpp *.cpp -o $(podir)/amor.pot
-#	rm -f tips.cpp
-#
-#xdg_apps_DATA = amor.desktop
-#
-#KDE_ICON = amor
-#
