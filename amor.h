@@ -51,7 +51,7 @@ public:
 
     enum itemType { Talk , Tip };
     
-    QueueItem(itemType ty, QString te, int ti = -1);
+    QueueItem(itemType ty, const QString &te, int ti = -1);
 
     itemType	type() { return iType; }
     QString	text() { return iText; };
@@ -76,9 +76,9 @@ public:
     Amor();
     virtual ~Amor();
 
-    virtual void showTip(QString tip);
-    virtual void showMessage(QString message);
-    virtual void showMessage(QString message, int msec);
+    virtual void showTip(const QString &tip);
+    virtual void showMessage(const QString &message);
+    virtual void showMessage(const QString &message, int msec);
 
     void reset();
 

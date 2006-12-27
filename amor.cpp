@@ -81,7 +81,7 @@
 // Constructor
 //
 
-QueueItem::QueueItem(itemType ty, QString te, int ti)
+QueueItem::QueueItem(itemType ty, const QString &te, int ti)
 {
     // if the time field was not given, calculate one based on the type
     // and length of the item
@@ -243,7 +243,7 @@ void Amor::screenSaverStarted()
 
 //---------------------------------------------------------------------------
 //
-void Amor::showTip( QString tip )
+void Amor::showTip( const QString &tip )
 {
     if (mTipsQueue.count() < 5 && !mForceHideAmorWidget) // start dropping tips if the queue is too long
         mTipsQueue.enqueue(new QueueItem(QueueItem::Tip, tip));
@@ -257,12 +257,12 @@ void Amor::showTip( QString tip )
 }
 
 
-void Amor::showMessage( QString message )
+void Amor::showMessage( const QString &message )
 {
     showMessage(message, -1);
 }
 
-void Amor::showMessage( QString message , int msec )
+void Amor::showMessage( const QString &message , int msec )
 {
     // FIXME: What should be done about messages and tips while the screensaver is on?
     if (mForceHideAmorWidget) return; // do not show messages sent while in the screensaver
