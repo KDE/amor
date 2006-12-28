@@ -29,6 +29,8 @@
 
 #include <config.h>
 
+#include <time.h>
+
 #include <qwidget.h>
 #include <qqueue.h>
 //Added by qt3to4:
