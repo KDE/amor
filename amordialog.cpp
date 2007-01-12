@@ -107,7 +107,9 @@ AmorDialog::AmorDialog()
     connect(checkBox, SIGNAL(toggled(bool)), SLOT(slotApplicationTips(bool)));
     checkBox->setChecked(mConfig.mAppTips);
     gridLayout->addWidget(checkBox, 6, 0, 1, 2);
-
+    connect(this,SIGNAL(okClicked()),SLOT(slotOk()));
+    connect(this,SIGNAL(applyClicked()),SLOT(slotApply()));
+    connect(this,SIGNAL(cancelClicked()),SLOT(slotCancel()));
     readThemes();
 }
 
