@@ -4,9 +4,11 @@
 [Config]
 PixmapPath=pics/animated/eyes
 Description=Crazy Eyes
+Description[el]=Τρελά μάτια
 Description[fr]=Yeux fous
 Description[x-test]=xxCrazy Eyesxx
 About=By Jean-Claude Dumas
+About[el]=Από τον Jean-Claude Dumas
 About[fr]=Par Jean-Claude Dumas
 About[x-test]=xxBy Jean-Claude Dumasxx
 Icon=../../preview/eyes.png

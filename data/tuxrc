@@ -3,9 +3,11 @@
 PixmapPath=pics/static
 Static=true
 Description=Unanimated Tux
+Description[el]=Μη κινούμενος Tux
 Description[fr]=Tux (in)animé
 Description[x-test]=xxUnanimated Tuxxx
 About=Static window sitter
+About[el]=Στατικό εικονίδιο
 About[fr]=Surveillant statique de fenêtres
 About[x-test]=xxStatic window sitterxx
 Icon=../preview/tux.png

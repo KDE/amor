@@ -4,6 +4,7 @@ PixmapPath=pics/animated/tao
 Description=Tao
 Description[x-test]=xxTaoxx
 About=By Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang symbol inspired by my Tai Chi practice.
+About[el]=Από τον Daniel Pfeiffer <occitan@esperanto.org>\n Το σύμβολο Yin Yang εμπνευσμένο από την πρακτική μου στο Tai Chi.
 About[fr]=Par Daniel Pfeiffer <occitan@esperanto.org>\nLe symbole Yin Yang est inspiré par ma pratique du Tai Chi.
 About[x-test]=xxBy Daniel Pfeiffer <occitan@esperanto.org>\nYin Yang symbol inspired by my Tai Chi practice.xx
 Icon=../../preview/tao.png

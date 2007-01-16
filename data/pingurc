@@ -4,6 +4,7 @@ PixmapPath=pics/animated/pingu
 Description=Tux
 Description[x-test]=xxTuxxx
 About=By Frank Pieczynski\nBased on graphics of the game "pingus".
+About[el]=Από τον Frank Pieczynski\n Βασισμένο σε γραφικά από το παιχνίδι "pingus".
 About[fr]=Par Frank Pieczynski\nBasé sur les graphismes du jeu « pingus ».
 About[x-test]=xxBy Frank Pieczynski\nBased on graphics of the game "pingus".xx
 Icon=../../preview/tux.png

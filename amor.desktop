@@ -8,6 +8,7 @@ Icon=amor
 Type=Application
 DocPath=amor/index.html
 GenericName=On-Screen Creature
+GenericName[el]=Πλάσμα στην οθόνη
 GenericName[fr]=Créature sur l'écran
 GenericName[x-test]=xxOn-Screen Creaturexx
 Terminal=false

@@ -8,6 +8,7 @@ PixmapPath=pics/animated/bonhomme
 Description=Bonhomme
 Description[x-test]=xxBonhommexx
 About=By Jean-Claude Dumas
+About[el]=Από τον Jean-Claude Dumas
 About[fr]=Par Jean-Claude Dumas
 About[x-test]=xxBy Jean-Claude Dumasxx
 Icon=../../preview/bonhomme.png

@@ -2,9 +2,11 @@
 [Config]
 PixmapPath=pics/animated/blob
 Description=Multi-Talented Spot
+Description[el]=Πολυτάλαντη κουκκίδα
 Description[fr]=Point à talents multiples
 Description[x-test]=xxMulti-Talented Spotxx
 About=By Martin R. Jones\nJet pack, beam and fire animations by Mark Grant
+About[el]=Από τον Martin R. Jones\nJet pack, εφέ κίνησης ακτίνας και φωτιάς από τον Mark Grant
 About[fr]=Par Martin R. Jones\nAnimations du jet et du feu par Mark Grant
 About[x-test]=xxBy Martin R. Jones\nJet pack, beam and fire animations by Mark Grantxx
 Icon=../../preview/blob.png

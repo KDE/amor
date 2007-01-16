@@ -2,9 +2,11 @@
 [Config]
 PixmapPath=pics/animated/ghost
 Description=Spooky Ghost
+Description[el]=Στοιχειωμένο φάντασμα
 Description[fr]=Fantôme
 Description[x-test]=xxSpooky Ghostxx
 About=By Martin R. Jones\nBased on an icon by the KDE artist team.
+About[el]=Από τον Martin R. Jones\n Βασισμένο σε ένα εικονίδιο της καλλιτεχνικής ομάδας του KDE.
 About[fr]=Par Martin R. Jones\nBasé sur une icône de l'équipe artistique de KDE.
 About[x-test]=xxBy Martin R. Jones\nBased on an icon by the KDE artist team.xx
 Icon=../../preview/ghost.png
