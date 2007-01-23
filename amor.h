@@ -27,8 +27,6 @@
 #ifndef AMOR_H
 #define AMOR_H
 
-#include <config.h>
-
 #include <time.h>
 
 #include <qwidget.h>

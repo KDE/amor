@@ -27,8 +27,6 @@
 #ifndef AMORTIPS_H
 #define AMORTIPS_H
 
-#include <config.h>
-
 #include <qstringlist.h>
 class QFile;
 
