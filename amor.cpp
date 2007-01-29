@@ -620,7 +620,7 @@ void Amor::slotMouseClicked(const QPoint &pos)
 
     if (!mMenu)
     {
-        KHelpMenu* help = new KHelpMenu(0, KGlobal::instance()->aboutData(), false);
+        KHelpMenu* help = new KHelpMenu(0, KGlobal::mainComponent().aboutData(), false);
         KMenu* helpMenu = help->menu();
 #ifdef __GNUC__
 #warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)
