@@ -44,7 +44,7 @@ class KSimpleConfig;
 class AmorAnim
 {
 public:
-    AmorAnim(KConfigBase &config);
+    explicit AmorAnim(KConfigBase &config);
     virtual ~AmorAnim();
 
     void reset()
