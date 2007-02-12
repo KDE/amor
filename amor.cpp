@@ -326,7 +326,7 @@ bool Amor::readConfig()
         QStringList files;
 
         // Store relative paths into files to avoid storing absolute pathnames.
-        KGlobal::dirs()->findAllResources("appdata", "*rc", false, false, files);
+        KGlobal::dirs()->findAllResources("appdata", "*rc", KStandardDirs::NoSearchOptions, files);
         int randomTheme = KRandom::random() % files.count();
         mConfig.mTheme = files.at(randomTheme);
     }
