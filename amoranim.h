@@ -35,7 +35,7 @@
 
 class QPixmap;
 class KConfigBase;
-class KSimpleConfig;
+class KConfig;
 
 //---------------------------------------------------------------------------
 //
@@ -105,7 +105,7 @@ public:
 
 protected:
     QString           mPath;
-    KSimpleConfig     *mConfig;
+    KConfig     *mConfig;
     QSize             mMaximumSize; // The largest pixmap used
     QHash<QString, AmorAnimationGroup*> mAnimations; // list of animation groups
     bool              mStatic;	    // static image

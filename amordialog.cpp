@@ -33,7 +33,7 @@
 #include <QPixmap>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
-#include <ksimpleconfig.h>
+#include <kconfig.h>
 #include "amordialog.h"
 #include "amordialog.moc"
 #include <kicon.h>
@@ -146,7 +146,7 @@ void AmorDialog::readThemes()
 //
 void AmorDialog::addTheme(const QString& file)
 {
-    KSimpleConfig config(KStandardDirs::locate("appdata", file), true);
+    KConfig config(KStandardDirs::locate("appdata", file));
 
     config.setGroup("Config");
 

@@ -26,7 +26,7 @@
 */
 #include <kconfigbase.h>
 #include <krandom.h>
-#include <ksimpleconfig.h>
+#include <kconfig.h>
 #include <kstandarddirs.h>
 #include "amoranim.h"
 #include "amorpm.h"
@@ -155,7 +155,7 @@ bool AmorThemeManager::setTheme(const QString & file)
 
     delete mConfig;
 
-    mConfig = new KSimpleConfig(mPath, true);
+    mConfig = new KConfig(mPath, KConfig::OnlyLocal);
     mConfig->setGroup("Config");
 
     // Get the directory where the pixmaps are stored and tell the
