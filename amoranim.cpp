@@ -176,7 +176,7 @@ bool AmorThemeManager::setTheme(const QString & file)
         mPath += pixmapPath;
     }
 
-    mStatic = mConfig->readEntry("Static", QVariant(false)).toBool();
+    mStatic = mConfig->readEntry("Static", false);
 
     mMaximumSize.setWidth(0);
     mMaximumSize.setHeight(0);
