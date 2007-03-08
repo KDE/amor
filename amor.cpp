@@ -625,7 +625,7 @@ void Amor::slotMouseClicked(const QPoint &pos)
 #ifdef __GNUC__
 #warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)
 #endif
-        helpMenu->setIcon(SmallIcon("help"));
+        helpMenu->setIcon(SmallIcon("help-contents"));
         helpMenu->setTitle(i18n("&Help"));
 
         mMenu = new KMenu(0);
@@ -633,7 +633,7 @@ void Amor::slotMouseClicked(const QPoint &pos)
         mMenu->addAction(SmallIcon("configure"), i18n("&Configure..."), this, SLOT(slotConfigure()));
         mMenu->addSeparator();
         mMenu->addMenu(helpMenu);
-        mMenu->addAction(SmallIcon("exit"), i18n("&Quit"), kapp, SLOT(quit()));
+        mMenu->addAction(SmallIcon("application-exit"), i18n("&Quit"), kapp, SLOT(quit()));
     }
 
     mMenu->exec(pos);
