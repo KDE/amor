@@ -221,9 +221,9 @@ bool AmorThemeManager::readGroup(const QString & seq)
 	//animList->setAutoDelete(true);
 
     // Read the list of available animations.
-    mConfig->setGroup("Config");
+    KConfigGroup conf(mConfig, "Config");
     QStringList list;
-    list = mConfig->readEntry(seq,QStringList());
+    list = conf.readEntry(seq,QStringList());
 
     // Read each individual animation
     for (int i = 0; i < list.count(); i++)

@@ -54,10 +54,10 @@ public:
     QueueItem(itemType ty, const QString &te, int ti = -1);
 
     itemType	type() { return iType; }
-    QString	text() { return iText; };
-    int		time() { return iTime; };
+    QString	text() { return iText; }
+    int		time() { return iTime; }
 
-    void	setTime(int newTime) { if (iTime > 0) iTime = newTime; };
+    void	setTime(int newTime) { if (iTime > 0) iTime = newTime; }
 
 private:
     itemType	iType;
@@ -154,7 +154,7 @@ class AmorSessionWidget : public QWidget
     Q_OBJECT
 public:
     AmorSessionWidget();
-    ~AmorSessionWidget() {};
+    ~AmorSessionWidget() {}
 public slots:
     void wm_saveyourself();
 };
