@@ -43,7 +43,7 @@ class AmorBubble;
 class AmorWidget;
 
 class QTimer;
-class KWinModule;
+class KWM;
 class KMenu;
 
 class QueueItem {
@@ -117,7 +117,7 @@ protected:
     void active();
 
 private:
-    KWinModule       *mWin;
+    KWM              *mWin;
     WId              mTargetWin;   // The window that the animations sits on
     QRect            mTargetRect;  // The goemetry of the target window
     WId              mNextTarget;  // The window that will become the target
