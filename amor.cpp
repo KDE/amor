@@ -140,7 +140,7 @@ Amor::Amor() : QObject()
         mPosition    = mCurrAnim->hotspot().x();
         mState       = Normal;
 
-        mWin = new KWM;
+        mWin = KWM::self();
         connect(mWin, SIGNAL(activeWindowChanged(WId)),
                 this, SLOT(slotWindowActivate(WId)));
         connect(mWin, SIGNAL(windowRemoved(WId)),
@@ -209,7 +209,6 @@ Amor::~Amor()
 {
 	qDeleteAll(mTipsQueue);
 	mTipsQueue.clear();
-    delete mWin;
     delete mAmor;
     delete mBubble;
 }
