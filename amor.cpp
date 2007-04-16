@@ -32,7 +32,6 @@
 #include <kmenu.h>
 #include <qtimer.h>
 #include <qcursor.h>
-
 #include <kapplication.h>
 #include <kdebug.h>
 #include <klocale.h>
@@ -197,7 +196,7 @@ Amor::Amor() : QObject()
     }
     else
     {
-        kapp->quit();
+        qApp->quit();
     }
 }
 
