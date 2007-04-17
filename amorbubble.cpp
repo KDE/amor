@@ -24,9 +24,9 @@
 /*
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
-#include <kurl.h>
 #include "amorbubble.h"
 #include "amorbubble.moc"
+
 #include <qapplication.h>
 #include <qpainter.h>
 //Added by qt3to4:
@@ -39,6 +39,7 @@
 #include <ktextbrowser.h>
 #include <qtooltip.h>
 #include <kstandarddirs.h>
+#include <kurl.h>
 #include <QX11Info>
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>

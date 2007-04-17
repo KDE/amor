@@ -25,6 +25,9 @@
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
 
+#include "amordialog.h"
+#include "amordialog.moc"
+
 #include <qcheckbox.h>
 #include <qlabel.h>
 #include <qlistwidget.h>
@@ -34,8 +37,6 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <kconfig.h>
-#include "amordialog.h"
-#include "amordialog.moc"
 #include <kicon.h>
 #include <klocale.h>
 #include <kstandarddirs.h>

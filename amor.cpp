@@ -24,6 +24,15 @@
 /*
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
+#include "amor.h"
+#include "amor.moc"
+#include "amorpm.h"
+#include "amorbubble.h"
+#include "amorwidget.h"
+#include "amordialog.h"
+#include "version.h"
+#include "amoradaptor.h"
+
 #include <stdlib.h>
 #include <unistd.h>
 #include <time.h>
@@ -38,24 +47,15 @@
 #include <kmessagebox.h>
 #include <kstartupinfo.h>
 #include <kwm.h>
-#include <kwm.h>
 #include <kstandarddirs.h>
 #include <khelpmenu.h>
 #include <kiconloader.h>
 #include <krandom.h>
 
-#include "amor.h"
-#include "amor.moc"
-#include "amorpm.h"
-#include "amorbubble.h"
-#include "amorwidget.h"
-#include "amordialog.h"
-#include "version.h"
 #if defined Q_WS_X11
 #include <X11/Xlib.h>
 #include <QX11Info>
 #endif
-#include "amoradaptor.h"
 // #define DEBUG_AMOR
 
 #define SLEEP_TIMEOUT   180     // Animation sleeps after SLEEP_TIMEOUT seconds

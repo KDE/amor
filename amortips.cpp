@@ -24,9 +24,10 @@
 /*
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
+#include "amortips.h"
+
 #include <stdlib.h>
 #include <krandom.h>
-#include "amortips.h"
 #include <kstandarddirs.h>
 #include <klocale.h>
 #include <qfile.h>

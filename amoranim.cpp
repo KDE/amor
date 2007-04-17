@@ -24,12 +24,13 @@
 /*
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
+#include "amoranim.h"
+#include "amorpm.h"
+
 #include <kconfigbase.h>
 #include <krandom.h>
 #include <kconfig.h>
 #include <kstandarddirs.h>
-#include "amoranim.h"
-#include "amorpm.h"
 #include <QPixmap>
 
 //---------------------------------------------------------------------------
