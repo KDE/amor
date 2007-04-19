@@ -28,20 +28,19 @@
 #include "amordialog.h"
 #include "amordialog.moc"
 
-#include <qcheckbox.h>
-#include <qlabel.h>
-#include <qlistwidget.h>
-#include <qslider.h>
-#include <qtextedit.h>
-#include <QPixmap>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
-#include <kconfig.h>
-#include <kicon.h>
-#include <klocale.h>
-#include <kstandarddirs.h>
-#include <kglobal.h>
-#include <kconfiggroup.h>
+#include <QtGui/QCheckBox>
+#include <QtGui/QLabel>
+#include <QtGui/QListWidget>
+#include <QtGui/QSlider>
+#include <QtGui/QTextEdit>
+#include <QtGui/QPixmap>
+#include <QtGui/QHBoxLayout>
+#include <QtGui/QVBoxLayout>
+#include <KConfig>
+#include <KIcon>
+#include <KLocale>
+#include <KStandardDirs>
+#include <KGlobal>
 
 //---------------------------------------------------------------------------
 //
@@ -149,9 +148,9 @@ void AmorDialog::addTheme(const QString& file)
 {
     KConfig config(KStandardDirs::locate("appdata", file));
 
-    config.setGroup("Config");
+    KConfigGroup configGroup( &config, "Config" );
 
-    QString pixmapPath = config.readPathEntry("PixmapPath");
+    QString pixmapPath = configGroup.readPathEntry("PixmapPath");
     if (pixmapPath.isEmpty())
     {
         return;
@@ -165,9 +164,9 @@ void AmorDialog::addTheme(const QString& file)
         pixmapPath = KStandardDirs::locate("appdata", pixmapPath);
     }
 
-    QString description = config.readEntry("Description");
-    QString about = config.readEntry("About", " ");
-    QString pixmapName = config.readEntry("Icon");
+    QString description = configGroup.readEntry("Description");
+    QString about = configGroup.readEntry("About", " ");
+    QString pixmapName = configGroup.readEntry("Icon");
 
     pixmapPath += pixmapName;
 

@@ -27,17 +27,17 @@
 #include "amoranim.h"
 #include "amorpm.h"
 
-#include <kconfigbase.h>
-#include <krandom.h>
-#include <kconfig.h>
-#include <kstandarddirs.h>
-#include <QPixmap>
+#include <KConfigBase>
+#include <KRandom>
+#include <KConfig>
+#include <KStandardDirs>
+#include <QtGui/QPixmap>
 
 //---------------------------------------------------------------------------
 //
 // Constructor
 //
-AmorAnim::AmorAnim(KConfigBase &config)
+AmorAnim::AmorAnim(KConfigGroup &config)
     : mMaximumSize(0, 0)
 {
     mCurrent = 0;
@@ -72,7 +72,7 @@ const QPixmap *AmorAnim::frame()
 // Read a single animation's parameters.  The config class should already
 // have its group set to the animation that is to be read.
 //
-void AmorAnim::readConfig(KConfigBase &config)
+void AmorAnim::readConfig(KConfigGroup &config)
 {
     // Read the list of frames to display and load them into the pixmap
     // manager.
@@ -157,11 +157,11 @@ bool AmorThemeManager::setTheme(const QString & file)
     delete mConfig;
 
     mConfig = new KConfig(mPath, KConfig::OnlyLocal);
-    mConfig->setGroup("Config");
+    KConfigGroup configGroup(mConfig, "Config");
 
     // Get the directory where the pixmaps are stored and tell the
     // pixmap manager.
-    QString pixmapPath = mConfig->readPathEntry("PixmapPath");
+    QString pixmapPath = configGroup.readPathEntry("PixmapPath");
     if (pixmapPath.isEmpty())
         return false;
 
@@ -177,7 +177,7 @@ bool AmorThemeManager::setTheme(const QString & file)
         mPath += pixmapPath;
     }
 
-    mStatic = mConfig->readEntry("Static", false);
+    mStatic = configGroup.readEntry("Static", false);
 
     mMaximumSize.setWidth(0);
     mMaximumSize.setHeight(0);
@@ -229,8 +229,8 @@ bool AmorThemeManager::readGroup(const QString & seq)
     // Read each individual animation
     for (int i = 0; i < list.count(); i++)
     {
-        mConfig->setGroup(list.at(i));
-        AmorAnim *anim = new AmorAnim(*mConfig);
+        KConfigGroup group(mConfig, list.at(i)); 
+        AmorAnim *anim = new AmorAnim(group);
         animList->append(anim);
         mMaximumSize = mMaximumSize.expandedTo(anim->maximumSize());
     }
@@ -238,8 +238,8 @@ bool AmorThemeManager::readGroup(const QString & seq)
     // If no animations were available for this group, just add the base anim
     if ( entries == 0)
     {
-        mConfig->setGroup("Base");
-        AmorAnim *anim = new AmorAnim(*mConfig);
+        KConfigGroup group(mConfig, "Base");
+        AmorAnim *anim = new AmorAnim(group);
         if (anim)
         {
             animList->append(anim);

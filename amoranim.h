@@ -27,14 +27,14 @@
 #ifndef AMORANIM_H 
 #define AMORANIM_H 
 
-#include <qhash.h>
+#include <QtCore/QHash>
 #include <qpoint.h>
 #include <qsize.h>
-#include <qstringlist.h>
+#include <QtCore/QStringList>
 #include <QVector>
 
 class QPixmap;
-class KConfigBase;
+class KConfigGroup;
 class KConfig;
 
 //---------------------------------------------------------------------------
@@ -44,7 +44,7 @@ class KConfig;
 class AmorAnim
 {
 public:
-    explicit AmorAnim(KConfigBase &config);
+    explicit AmorAnim(KConfigGroup &config);
     virtual ~AmorAnim();
 
     void reset()
@@ -69,7 +69,7 @@ public:
     const QPixmap *frame();
 
 protected:
-    void readConfig(KConfigBase &config);
+    void readConfig(KConfigGroup &config);
 
 protected:
     int   mCurrent;        // current frame in sequence

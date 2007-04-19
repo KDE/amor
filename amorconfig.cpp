@@ -26,8 +26,8 @@
 */
 #include "amorconfig.h"
 #include <ksharedconfig.h>
-#include <kglobal.h>
-#include <kconfiggroup.h>
+#include <KGlobal>
+#include <KConfigGroup>
 
 //---------------------------------------------------------------------------
 //

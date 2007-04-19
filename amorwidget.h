@@ -27,7 +27,7 @@
 #ifndef AMORWIDGET_H 
 #define AMORWIDGET_H 
 
-#include <qwidget.h>
+#include <QtGui/QWidget>
 
 class QPixmap;
 

@@ -45,6 +45,7 @@ class AmorWidget;
 class QTimer;
 class KWM;
 class KMenu;
+class KConfigBase;
 
 class QueueItem {
 public:
