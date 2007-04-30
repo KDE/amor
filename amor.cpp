@@ -46,7 +46,7 @@
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kstartupinfo.h>
-#include <kwm.h>
+#include <kwindowsystem.h>
 #include <kstandarddirs.h>
 #include <khelpmenu.h>
 #include <kiconloader.h>
@@ -139,7 +139,7 @@ Amor::Amor() : QObject()
         mPosition    = mCurrAnim->hotspot().x();
         mState       = Normal;
 
-        mWin = KWM::self();
+        mWin = KWindowSystem::self();
         connect(mWin, SIGNAL(activeWindowChanged(WId)),
                 this, SLOT(slotWindowActivate(WId)));
         connect(mWin, SIGNAL(windowRemoved(WId)),
@@ -446,7 +446,7 @@ void Amor::selectAnimation(State state)
             mTargetWin = mNextTarget;
             if (mTargetWin != None)
             {
-                mTargetRect = KWM::windowInfo(mTargetWin, NET::WMFrameExtents).frameGeometry();
+                mTargetRect = KWindowSystem::windowInfo(mTargetWin, NET::WMFrameExtents).frameGeometry();
 
 		// if the animation falls outside of the working area,
 		// then relocate it so that is inside the desktop again
@@ -906,7 +906,7 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
     // This is an active event that affects the target window
     time(&mActiveTime);
 
-    NET::MappingState mappingState = KWM::windowInfo( mTargetWin, NET::WMFrameExtents ).mappingState();
+    NET::MappingState mappingState = KWindowSystem::windowInfo( mTargetWin, NET::WMFrameExtents ).mappingState();
 
     if (mappingState == NET::Iconic ||
         mappingState == NET::Withdrawn)
@@ -931,7 +931,7 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
         kDebug(10000) << "Target window moved or resized" << endl;
 #endif
 
-        QRect newTargetRect = KWM::windowInfo(mTargetWin, NET::WMFrameExtents).frameGeometry();
+        QRect newTargetRect = KWindowSystem::windowInfo(mTargetWin, NET::WMFrameExtents).frameGeometry();
 
 	// if the change in the window caused the animation to fall
 	// out of the working area of the desktop, or if the animation
