@@ -43,7 +43,7 @@ class AmorBubble;
 class AmorWidget;
 
 class QTimer;
-class KWM;
+class KWindowSystem;
 class KMenu;
 class KConfigBase;
 
@@ -118,7 +118,7 @@ protected:
     void active();
 
 private:
-    KWM              *mWin;
+    KWindowSystem    *mWin;
     WId              mTargetWin;   // The window that the animations sits on
     QRect            mTargetRect;  // The goemetry of the target window
     WId              mNextTarget;  // The window that will become the target
