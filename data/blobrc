@@ -2,7 +2,6 @@
 [Config]
 PixmapPath=pics/animated/blob
 Description=Multi-Talented Spot
-Description[ar]=نقطة متعددة المواهب 
 Description[be]=Таленавіты калабок
 Description[ca]=Anunci multi-dotat
 Description[cs]=Talentovaný chlapík
@@ -48,7 +47,6 @@ Description[x-test]=xxMulti-Talented Spotxx
 Description[xh]=Indawo Eneziphiwo Ezininzi
 About=By Martin R. Jones\nJet pack, beam and fire animations by Mark Grant
 About[af]=Deur Martin R. Jones\nJet pak, straal en vuur animasie Deur Merk Toegestaan
-About[ar]=من مارتن ر. جونز\nJet pack, الضوء, و النار من تصميم مارك غرانت
 About[be]=Аўтары Martin R. Jones\nАнімацыі агню, палёту і луча - Mark Grant
 About[ca]=Per Martin R. Jones\nPaquet jet, nau i animacions de foc per Mark Grant
 About[cs]=Autor Martin R. Jones\nAnimace: Mark Grant
