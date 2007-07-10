@@ -18,7 +18,6 @@ set(amor_SRCS
 
 qt4_add_dbus_adaptor( amor_SRCS org.kde.amor.xml amor.h Amor )
 
-kde4_automoc(${amor_SRCS})
 
 kde4_add_executable(amor ${amor_SRCS})
 
