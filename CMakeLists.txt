@@ -28,8 +28,8 @@ install(TARGETS amor  DESTINATION ${BIN_INSTALL_DIR} )
 
 ########### install files ###############
 
-install( FILES amor.desktop  DESTINATION ${XDG_APPS_DIR})
-install( FILES org.kde.amor.xml DESTINATION ${DBUS_INTERFACES_DIR} )
+install( FILES amor.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
+install( FILES org.kde.amor.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
 
 kde4_install_icons( ${ICON_INSTALL_DIR}  )
 
