@@ -5,6 +5,7 @@ Static=true
 Description=Unanimated Tux
 Description[af]=Ongeanimeerde Tux
 Description[be]=Неанімаваны Тукс
+Description[bg]=Неанимиран Тюкс
 Description[ca]=Tux sense animació
 Description[cs]=Neanimovaný Tux
 Description[cy]=Tux heb ei animeddio
@@ -55,6 +56,7 @@ Description[zh_TW]=不動的 Tux
 About=Static window sitter
 About[af]=Statiese venster sitter
 About[be]=Статычны наглядчык вокнаў
+About[bg]=About=Неанимирано дяволче
 About[ca]=Model estàtic de finestra
 About[cs]=Statická ozdoba okna
 About[cy]=Gwarchodydd ffenest sefydlog

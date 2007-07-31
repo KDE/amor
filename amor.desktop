@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=AMOR
 Name[af]=Amor
+Name[bg]=Amor
 Name[fi]=Amor
 Name[fr]=Amor
 Name[ko]=아모르
@@ -16,6 +17,7 @@ Type=Application
 DocPath=amor/index.html
 GenericName=On-Screen Creature
 GenericName[be]=Экранная жывёла
+GenericName[bg]=Усмивка за работното място
 GenericName[ca]=Criatura a la pantalla
 GenericName[cs]=Příšerka na obrazovce
 GenericName[cy]=Creadur Ar-Sgrin

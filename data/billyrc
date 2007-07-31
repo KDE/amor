@@ -5,6 +5,7 @@ Static=true
 Description=Little Billy
 Description[af]=Klein Billy
 Description[be]=Маленькі Біллі
+Description[bg]=Малкият Били
 Description[br]=Billy Bihan
 Description[ca]=Petit Guillem
 Description[cs]=Malý Billy
@@ -54,6 +55,7 @@ Description[zh_TW]=小比利
 About=Static window sitter\nGraphic from http://www.xbill.org/
 About[af]=Statiese venster sitter\nGraphic van http://www.xbill.org/
 About[be]=Статычны наглядчык вокнаў\nГрафіка з http://www.xbill.org/
+About[bg]=About=Неанимирано човече\nГрафиката е взета от http://www.xbill.org/
 About[ca]=Model de finestra estàtica\nGràfic de http://www.xbill.org/
 About[cs]=Statická ozdoba okna\nGrafika z http://www.xbill.org/
 About[cy]=Gwarchodydd ffenest sefydlog\nGraffeg oddiwrth http://www.xbill.org/
