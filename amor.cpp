@@ -96,7 +96,7 @@ QueueItem::QueueItem(itemType ty, const QString &te, int ti)
     if (nesting) // malformed html
     {
 #ifdef DEBUG_AMOR
-	kDebug(10000) << "QueueItem::QueueItem(): Malformed HTML!" << endl;
+	kDebug(10000) << "QueueItem::QueueItem(): Malformed HTML!";
 #endif
 	effectiveLength = te.length();
     }
@@ -182,14 +182,14 @@ Amor::Amor() : QObject()
         }
         if ( !QDBusConnection::sessionBus().connect(QString(), QString(), "org.kde.amor",
                     "KDE_stop_screensaver", this, SLOT( screenSaverStopped()) ) )
-		kDebug(10000) << "Could not attach signal...KDE_stop_screensaver()" << endl;
+		kDebug(10000) << "Could not attach signal...KDE_stop_screensaver()";
 	else
-		kDebug(10000) << "attached dbus signals..." << endl;
+		kDebug(10000) << "attached dbus signals...";
 
          if ( !QDBusConnection::sessionBus().connect(QString(), QString(), "org.kde.amor", "KDE_start_screensaver", this, SLOT( screenSaverStarted()) ) )
-		kDebug(10000) << "Could not attach signal...KDE_start_screensaver()" << endl;
+		kDebug(10000) << "Could not attach signal...KDE_start_screensaver()";
 	else
-		kDebug(10000) << "attached dbus signals..." << endl;
+		kDebug(10000) << "attached dbus signals...";
 
 
 	KStartupInfo::appStarted();
@@ -375,7 +375,7 @@ void Amor::showBubble()
     if (!mTipsQueue.isEmpty())
     {
 #ifdef DEBUG_AMOR
-    kDebug(10000) << "Amor::showBubble(): Displaying tips bubble." << endl;
+    kDebug(10000) << "Amor::showBubble(): Displaying tips bubble.";
 #endif
 
         if (!mBubble)
@@ -402,7 +402,7 @@ void Amor::hideBubble(bool forceDequeue)
     if (mBubble)
     {
 #ifdef DEBUG_AMOR
-    kDebug(10000) << "Amor::hideBubble(): Hiding tips bubble" << endl;
+    kDebug(10000) << "Amor::hideBubble(): Hiding tips bubble";
 #endif
 
         // GP: stop mBubbleTimer to avoid deleting the first element, just in case we are changing windows
@@ -569,7 +569,7 @@ void Amor::restack()
     }
 
 #ifdef DEBUG_AMOR
-    kDebug(10000) << "restacking" << endl;
+    kDebug(10000) << "restacking";
 #endif
 #if defined Q_WS_X11
     Window sibling = mTargetWin;
@@ -816,7 +816,7 @@ void Amor::slotWidgetDragged( const QPoint &delta, bool release )
 void Amor::slotWindowActivate(WId win)
 {
 #ifdef DEBUG_AMOR
-    kDebug(10000) << "Window activated:" << win << endl;
+    kDebug(10000) << "Window activated:" << win;
 #endif
 
     mTimer->stop();
@@ -857,7 +857,7 @@ void Amor::slotWindowActivate(WId win)
 void Amor::slotWindowRemove(WId win)
 {
 #ifdef DEBUG_AMOR
-    kDebug(10000) << "Window removed" << endl;
+    kDebug(10000) << "Window removed";
 #endif
 
     if (win == mTargetWin)
@@ -879,7 +879,7 @@ void Amor::slotWindowRemove(WId win)
 void Amor::slotStackingChanged()
 {
 #ifdef DEBUG_AMOR
-    kDebug(10000) << "Stacking changed" << endl;
+    kDebug(10000) << "Stacking changed";
 #endif
 
     // This is an active event that affects the target window
@@ -912,7 +912,7 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
         mappingState == NET::Withdrawn)
     {
 #ifdef DEBUG_AMOR
-        kDebug(10000) << "Target window iconified" << endl;
+        kDebug(10000) << "Target window iconified";
 #endif
 
         // The target window has been iconified
@@ -928,7 +928,7 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
     if (properties[0] & NET::WMGeometry)
     {
 #ifdef DEBUG_AMOR
-        kDebug(10000) << "Target window moved or resized" << endl;
+        kDebug(10000) << "Target window moved or resized";
 #endif
 
         QRect newTargetRect = KWindowSystem::windowInfo(mTargetWin, NET::WMFrameExtents).frameGeometry();
@@ -994,7 +994,7 @@ void Amor::slotDesktopChange(int desktop)
 	return;
 
 #ifdef DEBUG_AMOR
-    kDebug(10000) << "Desktop change" << endl;
+    kDebug(10000) << "Desktop change";
 #endif
 
     mNextTarget = None;
@@ -1011,7 +1011,7 @@ void Amor::slotBubbleTimeout()
     // has the queue item been displayed for long enough?
     QueueItem *first = mTipsQueue.head();
 #ifdef DEBUG_AMOR
-    if (!first)	kDebug(10000) << "Amor::slotBubbleTimeout(): empty queue!" << endl;
+    if (!first)	kDebug(10000) << "Amor::slotBubbleTimeout(): empty queue!";
 #endif
     if ((first->time() > BUBBLE_TIME_STEP) && (mBubble->isVisible()))
     {
