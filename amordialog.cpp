@@ -32,7 +32,7 @@
 #include <QtGui/QLabel>
 #include <QtGui/QListWidget>
 #include <QtGui/QSlider>
-#include <QtGui/QTextEdit>
+#include <KTextEdit>
 #include <QtGui/QPixmap>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QVBoxLayout>
@@ -72,7 +72,7 @@ AmorDialog::AmorDialog()
 				   fontMetrics().lineSpacing()*6 );
     gridLayout->addWidget(mThemeListView, 1, 0);
 
-    mAboutEdit = new QTextEdit(mainwidget);
+    mAboutEdit = new KTextEdit(mainwidget);
     mAboutEdit->setReadOnly(true);
     mAboutEdit->setMinimumHeight( fontMetrics().lineSpacing()*4 );
     gridLayout->addWidget(mAboutEdit, 2, 0);

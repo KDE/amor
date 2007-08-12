@@ -31,7 +31,7 @@
 #include "amorconfig.h"
 
 class QListWidget;
-class QTextEdit;
+class KTextEdit;
 
 //---------------------------------------------------------------------------
 //
@@ -75,11 +75,10 @@ protected:
 
 protected:
     QListWidget *mThemeListView;
-    QTextEdit *mAboutEdit;
+    KTextEdit *mAboutEdit;
     QStringList mThemes;
     QStringList mThemeAbout;
     AmorConfig mConfig;
 };
 
 #endif // AMORDIALOG_H
-
