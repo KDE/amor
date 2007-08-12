@@ -624,14 +624,14 @@ void Amor::slotMouseClicked(const QPoint &pos)
 #warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)
 #endif
         helpMenu->setIcon(SmallIcon("help-contents"));
-        helpMenu->setTitle(i18n("&Help"));
+        helpMenu->setTitle(i18nc("@action:inmenu Amor", "&Help"));
 
         mMenu = new KMenu(0);
         mMenu->addTitle("Amor"); // I really don't want this i18n'ed
-        mMenu->addAction(SmallIcon("configure"), i18n("&Configure..."), this, SLOT(slotConfigure()));
+        mMenu->addAction(SmallIcon("configure"), i18nc("@action:inmenu Amor", "&Configure..."), this, SLOT(slotConfigure()));
         mMenu->addSeparator();
         mMenu->addMenu(helpMenu);
-        mMenu->addAction(SmallIcon("application-exit"), i18n("&Quit"), kapp, SLOT(quit()));
+        mMenu->addAction(SmallIcon("application-exit"), i18nc("@action:inmenu Amor", "&Quit"), kapp, SLOT(quit()));
     }
 
     mMenu->exec(pos);
@@ -773,9 +773,9 @@ void Amor::slotAbout()
 {
     QString about = i18n("Amor Version %1\n\n", QString::fromLatin1(AMOR_VERSION)) +
                 i18n("Amusing Misuse Of Resources\n\n") +
-                i18n("Copyright (c) 1999 Martin R. Jones <mjones@kde.org>\n\n") +
-		i18n("Original Author: Martin R. Jones <mjones@kde.org>\n") +
-		i18n("Current Maintainer: Gerardo Puga <gpuga@gioia.ing.unlp.edu.ar>\n" ) +
+                i18n("Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n\n") +
+		i18n("Original Author: Martin R. Jones <email>mjones@kde.org</email>\n") +
+		i18n("Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</email>\n" ) +
                 "\nhttp://www.powerup.com.au/~mjones/amor/";
     KMessageBox::about(0, about, i18n("About Amor"));
 }
