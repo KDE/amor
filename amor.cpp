@@ -332,7 +332,7 @@ bool Amor::readConfig()
     // read selected theme
     if (!mTheme.setTheme(mConfig.mTheme))
     {
-        KMessageBox::error(0, i18n("Error reading theme: ") + mConfig.mTheme);
+        KMessageBox::error(0, i18nc("@info:status", "Error reading theme: ") + mConfig.mTheme);
         return false;
     }
 
@@ -346,7 +346,7 @@ bool Amor::readConfig()
 	{
 	    if (mTheme.readGroup(groups[i]) == false)
 	    {
-		KMessageBox::error(0, i18n("Error reading group: ") + groups[i]);
+		KMessageBox::error(0, i18nc("@info:status", "Error reading group: ") + groups[i]);
 		return false;
 	    }
 	}
@@ -355,7 +355,7 @@ bool Amor::readConfig()
     {
 	if ( mTheme.readGroup( ANIM_BASE ) == false )
 	{
-	    KMessageBox::error(0, i18n("Error reading group: ") + ANIM_BASE);
+	    KMessageBox::error(0, i18nc("@info:status", "Error reading group: ") + ANIM_BASE);
 	    return false;
 	}
     }
@@ -771,13 +771,13 @@ void Amor::slotOffsetChanged(int off)
 //
 void Amor::slotAbout()
 {
-    QString about = i18n("Amor Version %1\n\n", QString::fromLatin1(AMOR_VERSION)) +
-                i18n("Amusing Misuse Of Resources\n\n") +
-                i18n("Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n\n") +
-		i18n("Original Author: Martin R. Jones <email>mjones@kde.org</email>\n") +
-		i18n("Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</email>\n" ) +
+    QString about = i18nc("@label:textbox", "Amor Version %1\n\n", QString::fromLatin1(AMOR_VERSION)) +
+                i18nc("@label:textbox", "Amusing Misuse Of Resources\n\n") +
+                i18nc("@label:textbox", "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n\n") +
+		i18nc("@label:textbox", "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n") +
+		i18nc("@label:textbox", "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</email>\n" ) +
                 "\nhttp://www.powerup.com.au/~mjones/amor/";
-    KMessageBox::about(0, about, i18n("About Amor"));
+    KMessageBox::about(0, about, i18nc("@label:textbox", "About Amor"));
 }
 
 //---------------------------------------------------------------------------
