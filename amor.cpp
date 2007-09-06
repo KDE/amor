@@ -37,10 +37,11 @@
 #include <unistd.h>
 #include <time.h>
 
-#include <QtDBus>
+#include <QtDBus/QtDBus>
+#include <QtCore/QTimer>
+#include <QtGui/QCursor>
+
 #include <kmenu.h>
-#include <qtimer.h>
-#include <qcursor.h>
 #include <kapplication.h>
 #include <kdebug.h>
 #include <klocale.h>
@@ -54,7 +55,7 @@
 
 #if defined Q_WS_X11
 #include <X11/Xlib.h>
-#include <QX11Info>
+#include <QtGui/QX11Info>
 #endif
 // #define DEBUG_AMOR
 

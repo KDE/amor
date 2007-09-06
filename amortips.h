@@ -24,10 +24,12 @@
 /*
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
+
 #ifndef AMORTIPS_H
 #define AMORTIPS_H
 
-#include <qstringlist.h>
+#include <QtCore/QStringList>
+
 class QFile;
 
 //---------------------------------------------------------------------------

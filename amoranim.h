@@ -28,10 +28,10 @@
 #define AMORANIM_H 
 
 #include <QtCore/QHash>
-#include <qpoint.h>
-#include <qsize.h>
+#include <QtCore/QPoint>
+#include <QtCore/QSize>
 #include <QtCore/QStringList>
-#include <QVector>
+#include <QtCore/QVector>
 
 class QPixmap;
 class KConfigGroup;

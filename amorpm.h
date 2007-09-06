@@ -24,11 +24,12 @@
 /*
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
+
 #ifndef AMORPM_H 
 #define AMORPM_H 
 
-#include <qhash.h>
-#include <qstring.h>
+#include <QtCore/QHash>
+#include <QtCore/QString>
 
 class QPixmap;
 

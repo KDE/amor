@@ -24,11 +24,12 @@
 /*
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
+
 #ifndef AMORBUBBLE_H
 #define AMORBUBBLE_H
 
-#include <qwidget.h>
-#include <qbitmap.h>
+#include <QtGui/QWidget>
+#include <QtGui/QBitmap>
 
 class QTextBrowser;
 

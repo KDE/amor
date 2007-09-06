@@ -29,10 +29,9 @@
 
 #include <time.h>
 
-#include <qwidget.h>
-#include <qqueue.h>
-//Added by qt3to4:
-#include <QList>
+#include <QtGui/QWidget>
+#include <QtCore/QQueue>
+#include <QtCore/QList>
 
 #include "amoranim.h"
 #include "amortips.h"

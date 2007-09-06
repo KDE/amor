@@ -24,26 +24,29 @@
 /*
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
+
 #include "amorbubble.h"
 #include "amorbubble.moc"
 
-#include <qapplication.h>
-#include <qpainter.h>
-//Added by qt3to4:
-#include <QPaintEvent>
-#include <QPolygon>
-#include <QEvent>
-#include <QFrame>
-#include <QMouseEvent>
-#include <QDesktopWidget>
+#include <QtGui/QApplication>
+#include <QtGui/QPainter>
+#include <QtGui/QPaintEvent>
+#include <QtGui/QPolygon>
+#include <QtCore/QEvent>
+#include <QtGui/QFrame>
+#include <QtGui/QMouseEvent>
+#include <QtGui/QDesktopWidget>
+#include <QtGui/QToolTip>
+#include <QtGui/QX11Info>
+#include <QtCore/QTimer>
+
 #include <ktextbrowser.h>
-#include <qtooltip.h>
 #include <kstandarddirs.h>
 #include <kurl.h>
-#include <QX11Info>
+
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>
-#include <qtimer.h>
+
 #define ARROW_WIDTH     10
 #define ARROW_HEIGHT    12
 #define BORDER_SIZE     4

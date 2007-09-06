@@ -24,13 +24,16 @@
 /*
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
+
 #include "amorwidget.h"
 #include "amorwidget.moc"
-#include <qbitmap.h>
-#include <QPainter>
-#include <QPixmap>
-#include <QMouseEvent>
-#include <QX11Info>
+
+#include <QtGui/QBitmap>
+#include <QtGui/QPainter>
+#include <QtGui/QPixmap>
+#include <QtGui/QMouseEvent>
+#include <QtGui/QX11Info>
+
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>
 

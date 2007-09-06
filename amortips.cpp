@@ -24,14 +24,17 @@
 /*
 ** Bug reports and questions can be sent to kde-devel@kde.org
 */
+
 #include "amortips.h"
 
+#include <QtCore/QFile>
+#include <QtCore/QRegExp>
+
 #include <stdlib.h>
+
 #include <krandom.h>
 #include <kstandarddirs.h>
 #include <klocale.h>
-#include <qfile.h>
-#include <qregexp.h>
 #include <kdebug.h>
 
 //---------------------------------------------------------------------------
