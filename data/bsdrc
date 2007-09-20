@@ -53,6 +53,7 @@ Description[uk]=Талісман FreeBSD
 Description[uz]=FreeBSD тумори
 Description[wa]=Mascote FreeBSD
 Description[x-test]=xxFreeBSD Mascotxx
+Description[zh_CN]=FreeBSD 吉祥物
 About=Static window sitter
 About[af]=Statiese venster sitter
 About[be]=Статычны наглядчык вокнаў
@@ -101,6 +102,7 @@ About[tg]=Нигаҳбонии статикии тиреза
 About[tr]=Statik pencere bakıcı
 About[uk]=Статична прикраса для вікна
 About[x-test]=xxStatic window sitterxx
+About[zh_CN]=窗口静坐者
 Icon=../preview/bsd.png
 
 [Base]
