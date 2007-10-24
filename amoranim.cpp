@@ -157,12 +157,12 @@ bool AmorThemeManager::setTheme(const QString & file)
 
     delete mConfig;
 
-    mConfig = new KConfig(mPath, KConfig::OnlyLocal);
+    mConfig = new KConfig(mPath, KConfig::SimpleConfig);
     KConfigGroup configGroup(mConfig, "Config");
 
     // Get the directory where the pixmaps are stored and tell the
     // pixmap manager.
-    QString pixmapPath = configGroup.readPathEntry("PixmapPath");
+    QString pixmapPath = configGroup.readPathEntry("PixmapPath", QString());
     if (pixmapPath.isEmpty())
         return false;
 
