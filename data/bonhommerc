@@ -7,6 +7,7 @@
 PixmapPath=pics/animated/bonhomme
 Description=Bonhomme
 Description[be]=Пляшучыя чалавечкі
+Description[bn]=বনমি
 Description[cs]=Mužíček
 Description[et]=Kriipsu-Juku
 Description[km]=មនុស្ស​ឆ្អឹង
@@ -27,6 +28,7 @@ About=By Jean-Claude Dumas
 About[af]=Deur Jean-Claude Dumas
 About[be]=Аўтар Jean-Claude Dumas
 About[bg]=About=Автор Жан Клод Дюма
+About[bn]=তৈরি করেছেন জাঁ-ক্ল ডুমাস
 About[br]=Gant Jean-Claude Dumas
 About[ca]=Per Jean-Claude Dumas
 About[cs]=Autor Jean-Claude Dumas
@@ -62,6 +64,7 @@ About[pt]=De Jean-Claude Dumas
 About[pt_BR]=Por Jean-Claude Dumas
 About[ro]=De Jean-Claude Dumas
 About[ru]=Автор - Jean-Claude Dumas
+About[sk]=Vytvoril Jean-Claude Dumas
 About[sl]=Od Jean-Claudea Dumasa
 About[sr]=Од Жана-Клода Диме (Jean-Claude Dumas)
 About[sr@latin]=Od Žana-Kloda Dime (Jean-Claude Dumas)

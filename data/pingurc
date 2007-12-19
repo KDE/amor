@@ -3,6 +3,7 @@
 PixmapPath=pics/animated/pingu
 Description=Tux
 Description[be]=Tукс
+Description[bn]=টাক্স
 Description[eo]=Tuĉjo
 Description[he]=טקס
 Description[ko]=턱스
@@ -21,6 +22,7 @@ About=By Frank Pieczynski\nBased on graphics of the game "pingus".
 About[af]=Deur Frank Pieczynski\nBased op grafieka van die speletjie "pingus".
 About[be]=Аўтар Frank Pieczynski\nЗаснавана на графіцы з гульні "pingus".
 About[bg]=About=Автор Франк Пижински\nБазирано на графика от играта pingus
+About[bn]=তৈরি করেছেন পিসজিনস্কি\n"পিঙ্গাস" দলের গ্রাফিক্সের ওপর ভিত্তি করে।
 About[br]=Gant Frank Pieczynski\nDiazezet war ur skeudenn c'hoari « pingus ».
 About[ca]=Per Frank Pieczynski\nBasat en els gràfics del joc "pingus".
 About[cs]=Autor Frank Pieczynski\nNa základě grafiky hry "pingus".
@@ -57,6 +59,7 @@ About[pt]=De Frank Pieczynski\nBaseado numa imagem do jogo "pingus".
 About[pt_BR]=Por Frank Pieczynski\nBaseado nos gráficos do jogo "pingus".
 About[ro]=De Frank Pieczynski\nBazat pe grafica jocului "pingus".
 About[ru]=Автор - Frank Pieczynski\nНа основе графики игры "pingus".
+About[sk]=Vytvoril Frank Pieczynski\nZaložené na grafike z hry "pingus".
 About[sl]=Od Franka Pieczynskega\nTemelji na grafiki igre "pingus".
 About[sr]=Од Френка Пјечинског (Frank Pieczynski)\nБазирано на графици игре Pingus.
 About[sr@latin]=Od Frenka Pječinskog (Frank Pieczynski)\nBazirano na grafici igre Pingus.
