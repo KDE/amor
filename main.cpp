@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
     KCmdLineArgs::init( argc, argv, &aboutData );
 
     if (!KUniqueApplication::start()) {
-	fprintf(stderr, "%s is already running!\n", aboutData.appName());
+	fprintf(stderr, "%s is already running!\n", qPrintable(aboutData.appName()));
 	exit(0);
     }
     KUniqueApplication app;
