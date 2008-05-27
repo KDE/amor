@@ -23,7 +23,7 @@ kde4_add_executable(amor ${amor_SRCS})
 
 target_link_libraries(amor  ${KDE4_KDEUI_LIBS}  )
 
-install(TARGETS amor  DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS amor  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
 ########### install files ###############
