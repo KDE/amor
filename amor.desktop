@@ -1,5 +1,4 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=AMOR
 Name[af]=Amor
 Name[ar]=برنامج AMOR
@@ -72,4 +71,4 @@ GenericName[zh_CN]=屏幕涂鸦
 GenericName[zh_TW]=畫面擷取程式
 Terminal=false
 X-DCOP-ServiceType=Unique
-Categories=Qt;KDE;Amusement;
+Categories=Qt;KDE;Utility;Amusement;
