@@ -61,11 +61,11 @@ public:
         { return mMaximumSize; }
 
     int delay() const
-        { return (validFrame() ? mDelay[mCurrent] : 100); }
+        { return (validFrame() && mCurrent < mDelay.size() ? mDelay.at(mCurrent) : 100); }
     QPoint hotspot() const
-        { return (validFrame() ? mHotspot[mCurrent] : QPoint(16,16)); }
+        { return (validFrame() && mCurrent < mHotspot.size() ? mHotspot.at(mCurrent) : QPoint(16,16)); }
     int movement() const
-        { return (validFrame() ? mMovement[mCurrent] : 0); }
+        { return (validFrame() && mCurrent < mMovement.size() ? mMovement.at(mCurrent) : 0); }
     const QPixmap *frame();
 
 protected:
