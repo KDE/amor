@@ -136,7 +136,7 @@ void AmorDialog::readThemes()
 
     for (QStringList::ConstIterator it = files.begin();
 	 it != files.end();
-	 it++)
+	 ++it)
       addTheme(*it);
 }
 
