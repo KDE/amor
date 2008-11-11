@@ -134,8 +134,8 @@ void AmorDialog::readThemes()
     // in files so that absolute paths are not used.
     KGlobal::dirs()->findAllResources("appdata", "*rc", KStandardDirs::NoSearchOptions, files);
 
-    for (QStringList::ConstIterator it = files.begin();
-	 it != files.end();
+    for (QStringList::ConstIterator it = files.constBegin();
+	 it != files.constEnd();
 	 ++it)
       addTheme(*it);
 }

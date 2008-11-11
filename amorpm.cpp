@@ -59,8 +59,8 @@ AmorPixmapManager::~AmorPixmapManager()
 //
 const QPixmap *AmorPixmapManager::load(const QString & img)
 {
-    QHash<QString, QPixmap*>::const_iterator it = mPixmaps.find(img);
-    QPixmap *pixmap = it != mPixmaps.end() ? *it : 0;
+    QHash<QString, QPixmap*>::const_iterator it = mPixmaps.constFind(img);
+    QPixmap *pixmap = it != mPixmaps.constEnd() ? *it : 0;
 
     if (!pixmap)
     {

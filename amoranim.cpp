@@ -197,8 +197,8 @@ AmorAnim *AmorThemeManager::random(const QString & group)
 {
     QString grp = mStatic ? QLatin1String("Base") : group;
 
-    QHash<QString, AmorAnimationGroup*>::const_iterator it = mAnimations.find(grp);
-    AmorAnimationGroup *animGroup = it != mAnimations.end() ? *it : 0;
+    QHash<QString, AmorAnimationGroup*>::const_iterator it = mAnimations.constFind(grp);
+    AmorAnimationGroup *animGroup = it != mAnimations.constEnd() ? *it : 0;
 
     if (animGroup) {
 	int idx = KRandom::random()%animGroup->count();
