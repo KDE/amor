@@ -75,4 +75,4 @@ GenericName[zh_CN]=屏幕生物
 GenericName[zh_TW]=畫面擷取程式
 Terminal=false
 X-DBUS-StartupType=Unique
-Categories=Qt;KDE;Amusement;
+Categories=Qt;KDE;Game;Amusement;
