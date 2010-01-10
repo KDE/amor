@@ -9,6 +9,7 @@ Description[bg]=Tux
 Description[bn]=টাক্স
 Description[br]=Tux
 Description[ca]=Tux
+Description[ca@valencia]=Tux
 Description[cs]=Tux
 Description[cy]=Tux
 Description[da]=Tux
@@ -73,6 +74,7 @@ About[bg]=About=Автор Франк Пижински\nБазирано на г
 About[bn]=তৈরি করেছেন পিসজিনস্কি\n"পিঙ্গাস" দলের গ্রাফিক্সের ওপর ভিত্তি করে।
 About[br]=Gant Frank Pieczynski\nDiazezet war ur skeudenn c'hoari « pingus ».
 About[ca]=Per Frank Pieczynski\nBasat en els gràfics del joc "pingus".
+About[ca@valencia]=Per Frank Pieczynski\nBasat en els gràfics del joc "pingus".
 About[cs]=Autor Frank Pieczynski\nNa základě grafiky hry "pingus".
 About[cy]=Gan Frank Pieczynski\nSeiliedig ar raffegau y gêm "pingus".
 About[da]=Af Frank Pieczynski\nBaseret på grafik fra spillet "pingus".

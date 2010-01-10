@@ -8,6 +8,7 @@ Description[be]=Неанімаваны Тукс
 Description[bg]=Неанимиран Тюкс
 Description[bn]=অ্যানিমেশনবিহীন টাক্স
 Description[ca]=Tux sense animació
+Description[ca@valencia]=Tux sense animació
 Description[cs]=Neanimovaný Tux
 Description[cy]=Tux heb ei animeddio
 Description[da]=Uanimeret Tux
@@ -71,6 +72,7 @@ About[be]=Статычны наглядчык вокнаў
 About[bg]=About=Неанимирано дяволче
 About[bn]=উইন্ডোর এক স্থানে স্থির হয়ে বসে থাকে
 About[ca]=Model estàtic de finestra
+About[ca@valencia]=Model estàtic de finestra
 About[cs]=Statická ozdoba okna
 About[cy]=Gwarchodydd ffenest sefydlog
 About[da]=Statisk vinduessitter
