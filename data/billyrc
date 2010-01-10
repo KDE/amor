@@ -9,6 +9,7 @@ Description[bg]=Малкият Били
 Description[bn]=ছোট্ট বিলি
 Description[br]=Billy Bihan
 Description[ca]=Petit Guillem
+Description[ca@valencia]=Petit Guillem
 Description[cs]=Malý Billy
 Description[cy]=Bili Bach
 Description[da]=Lille Billy
@@ -69,6 +70,7 @@ About[be]=Статычны наглядчык вокнаў\nГрафіка з ht
 About[bg]=About=Неанимирано човече\nГрафиката е взета от http://www.xbill.org/
 About[bn]=উইন্ডোর এক স্থানে স্থির হয়ে বসে থাকে\nগ্রাফিক্সের উৎস - http://www.xbill.org/
 About[ca]=Model de finestra estàtica\nGràfic de http://www.xbill.org/
+About[ca@valencia]=Model de finestra estàtica\nGràfic de http://www.xbill.org/
 About[cs]=Statická ozdoba okna\nGrafika z http://www.xbill.org/
 About[cy]=Gwarchodydd ffenest sefydlog\nGraffeg oddiwrth http://www.xbill.org/
 About[da]=Statisk vinduessitter\nGrafik fra http://www.xbill.org/
