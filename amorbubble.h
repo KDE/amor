@@ -31,7 +31,7 @@
 #include <QtGui/QWidget>
 #include <QtGui/QBitmap>
 
-class QTextBrowser;
+class KTextBrowser;
 
 //---------------------------------------------------------------------------
 //
@@ -67,7 +67,7 @@ protected:
     QBitmap mMask;              // shape mask
     VertPos mArrowVert;         // vertical position of the arrow
     HorzPos mArrowHorz;         // horizontal position of the arrow
-    QTextBrowser *mBrowser;	// displays the message
+    KTextBrowser *mBrowser;	// displays the message
 
     bool mMouseWithin;		// the mouse pointer is inside the bubble
 };
