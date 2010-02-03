@@ -1,36 +1,5 @@
-project(amor)
-add_subdirectory( data ) 
-
+project( amor )
 remove_definitions(-DQT3_SUPPORT_WARNINGS -DQT3_SUPPORT)
 
-########### next target ###############
-
-set(amor_SRCS
-   amordialog.cpp 
-   amor.cpp 
-   amorwidget.cpp 
-   main.cpp 
-   amoranim.cpp 
-   amorpm.cpp 
-   amorbubble.cpp 
-   amorconfig.cpp 
-   amortips.cpp )
-
-qt4_add_dbus_adaptor( amor_SRCS org.kde.amor.xml amor.h Amor )
-
-
-kde4_add_executable(amor ${amor_SRCS})
-
-target_link_libraries(amor ${KDE4_KDEUI_LIBS} ${X11_LIBRARIES})
-
-install(TARGETS amor  ${INSTALL_TARGETS_DEFAULT_ARGS} )
-
-
-########### install files ###############
-
-install( FILES amor.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
-install( FILES org.kde.amor.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
-
-kde4_install_icons( ${ICON_INSTALL_DIR}  )
-
-
+add_subdirectory( data )
+add_subdirectory( src )
