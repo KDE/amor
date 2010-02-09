@@ -107,7 +107,7 @@ panel.</para></listitem>
 </varlistentry>
 <varlistentry><term><guilabel>Use random character</guilabel></term>
 <listitem><para>If checked, the theme selection is disabled, it will be
-changed randomlys.</para></listitem>
+changed randomly.</para></listitem>
 </varlistentry>
 <varlistentry><term><guilabel>Allow application tips</guilabel></term>
 <listitem><para>Any &kde; application can be designed to display helpful
@@ -254,7 +254,7 @@ his wife.</para></entry>
 <imagedata format="PNG" fileref="tux.png"/>
 </imageobject></mediaobject>
 </entry>
-<entry><phrase>Unanimated Tu</phrase></entry>
+<entry><phrase>Unanimated Tux</phrase></entry>
 <entry><para>An unanimated version of the Tux theme.</para></entry>
 </row>
 
