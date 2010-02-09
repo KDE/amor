@@ -25,8 +25,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2003-09-16</date>
-<releaseinfo>2.2</releaseinfo>
+<date>2010-02-08</date>
+<releaseinfo>2.3.1 (&kde; 4.4)</releaseinfo>
 
 <abstract>
 <para>
@@ -70,10 +70,10 @@ known to work at the time of this writing.</para></note>
 <title>Configuring &amor;</title>
 <para>To configure &amor;, click on the animation using your &RMB;.  A menu
 will appear containing three items:
-<guimenuitem>Options...</guimenuitem>,
-<guimenuitem>About...</guimenuitem>, and
+<guimenuitem>Configure...</guimenuitem>,
+<guimenuitem>Help...</guimenuitem>, and
 <guimenuitem>Quit</guimenuitem>.  Choose
-<guimenuitem>Options...</guimenuitem> to configure &amor;
+<guimenuitem>Configure...</guimenuitem> to configure &amor;
 </para>
 </sect1>
 
@@ -105,6 +105,10 @@ panel.</para></listitem>
 <listitem><para>If checked, the animation will display various
 &kde;-related tips at random intervals.</para></listitem>
 </varlistentry>
+<varlistentry><term><guilabel>Use random character</guilabel></term>
+<listitem><para>If checked, the theme selection is disabled, it will be
+changed randomly.</para></listitem>
+</varlistentry>
 <varlistentry><term><guilabel>Allow application tips</guilabel></term>
 <listitem><para>Any &kde; application can be designed to display helpful
 tips via &amor;.  If this option is checked, and an appropriate
@@ -125,72 +129,67 @@ below</para>
 
 <table>
 <title>Available &amor; Themes</title>
-<tgroup cols="2">
+<tgroup cols="3">
 <thead>
 <row>
 <entry>Theme</entry>
+<entry>Name</entry>
 <entry>Description</entry>
 </row>
 </thead>
 <tbody>
 
 <row>
-<entry><mediaobject>
-<imageobject>
-<imagedata format="PNG" fileref="spot.png"/>
-</imageobject>
-<textobject><para>Multi-talented Spot</para></textobject>
-<caption><para>Multi-talented Spot</para></caption>
-</mediaobject></entry>
+<entry><mediaobject><imageobject>
+          <imagedata  format="PNG" fileref="spot.png"/>
+        </imageobject></mediaobject>
+</entry>
+<entry><phrase>Multi-Talented Spot</phrase></entry>
 <entry><para>This is the default theme for &amor;, and also the one with
 the most <quote>tricks</quote>.  This theme was created by &Martin.R.Jones;.  The jet-pack, beaming, and fire animations were contributed by
 <personname><firstname>Mark</firstname><surname>Grant</surname></personname>.</para></entry>
 </row>
 
 <row>
-<entry><mediaobject>
-<imageobject>
+<entry>
+<mediaobject><imageobject>
 <imagedata format="PNG" fileref="ghost.png"/>
-</imageobject>
-<textobject><para>Spooky Ghost</para></textobject>
-<caption><para>Spooky Ghost</para></caption>
-</mediaobject></entry>
+</imageobject></mediaobject>
+</entry>
+<entry><phrase>Spooky Ghost</phrase></entry>
 <entry><para>A ghost theme based-on the &kde;
 <application>ghostview</application> icon.  Spooky Ghost was created by
 &Martin.R.Jones;.</para></entry>
 </row>
 
 <row>
-<entry><mediaobject>
-<imageobject>
+<entry>
+<mediaobject><imageobject>
 <imagedata format="PNG" fileref="eyes.png"/>
-</imageobject>
-<textobject><para>Crazy Eyes</para></textobject>
-<caption><para>Crazy Eyes</para></caption>
-</mediaobject></entry>
+</imageobject></mediaobject>
+</entry>
+<entry><phrase>Crazy Eyes</phrase></entry>
 <entry><para>This theme consists of a moving pair of eyes, and was created
 by <personname><firstname>Jean-Claude</firstname><surname>Dumas</surname></personname>.</para></entry>
 </row>
 
 <row>
-<entry><mediaobject>
-<imageobject>
+<entry>
+<mediaobject><imageobject>
 <imagedata format="PNG" fileref="bonhomme.png"/>
-</imageobject>
-<textobject><para>Bonhomme</para></textobject>
-<caption><para>Bonhomme</para></caption>
-</mediaobject></entry>
+</imageobject></mediaobject>
+</entry>
+<entry><phrase>Bonhomme</phrase></entry>
 <entry><para>A stick-figure animation, created by <personname><firstname>Jean-Claude</firstname><surname>Dumas</surname></personname>.</para></entry>
 </row>
 
 <row>
-<entry><mediaobject>
-<imageobject>
+<entry>
+<mediaobject><imageobject>
 <imagedata format="PNG" fileref="neko.png"/>
-</imageobject>
-<textobject><para>Neko</para></textobject>
-<caption><para>Neko</para></caption>
-</mediaobject></entry>
+</imageobject></mediaobject>
+</entry>
+<entry><phrase>Neko</phrase></entry>
 <entry><para>Neko is a cat theme by <personname><firstname>Chris</firstname><surname>Spiegel</surname></personname>.  The graphics are
 originally from <application>Oneko</application>, which was written by
 <personname><firstname>Masayuki</firstname><surname>Koba</surname></personname>.</para>
@@ -203,13 +202,12 @@ available.</para></note></entry>
 </row>
 
 <row>
-<entry><mediaobject>
-<imageobject>
+<entry>
+<mediaobject><imageobject>
 <imagedata format="PNG" fileref="pingus.png"/>
-</imageobject>
-<textobject><para>Tux</para></textobject>
-<caption><para>Tux</para></caption>
-</mediaobject></entry>
+</imageobject></mediaobject>
+</entry>
+<entry><phrase>Tux</phrase></entry>
 <entry><para>This theme features Tux, the &Linux; mascot.  The actual
 graphics come from a <application>Lemmings</application>-style game
 called <ulink url="http://pingus.seul.org/">
@@ -218,65 +216,59 @@ called <ulink url="http://pingus.seul.org/">
 </row>
 
 <row>
-<entry><mediaobject>
-<imageobject>
+<entry>
+<mediaobject><imageobject>
 <imagedata format="PNG" fileref="worm.png"/>
-</imageobject>
-<textobject><para>Little Worm</para></textobject>
-<caption><para>Little Worm</para></caption>
-</mediaobject></entry>
+</imageobject></mediaobject>
+</entry>
+<entry><phrase>Little Worm</phrase></entry>
 <entry><para>A small inchworm theme.  Created by <personname><firstname>Bartosz</firstname><surname>Trudnowski</surname></personname> for
 his wife.</para></entry>
 </row>
 
 <row>
-<entry><mediaobject>
-<imageobject>
+<entry>
+<mediaobject><imageobject>
 <imagedata format="PNG" fileref="billy.png"/>
-</imageobject>
-<textobject><para>Little Billy</para></textobject>
-<caption><para>Little Billy</para></caption>
-</mediaobject></entry>
+</imageobject></mediaobject>
+</entry>
+<entry><phrase>Little Billy</phrase></entry>
 <entry><para>A static image taken from the game
 <ulink url="http://www.xbill.org/"><application>XBill</application>
 </ulink>.</para></entry>
 </row>
 
 <row>
-<entry><mediaobject>
-<imageobject>
+<entry>
+<mediaobject><imageobject>
 <imagedata format="PNG" fileref="bsd.png"/>
-</imageobject>
-<textobject><para>BSD Mascot</para></textobject>
-<caption><para>BSD Mascot</para></caption>
-</mediaobject></entry>
+</imageobject></mediaobject>
+</entry>
+<entry><phrase>FreeBSD Mascot</phrase></entry>
 <entry><para>A static image of Beastie, the FreeBSD daemon.</para></entry>
 </row>
 
 <row>
-<entry><mediaobject>
-<imageobject>
+<entry>
+<mediaobject><imageobject>
 <imagedata format="PNG" fileref="tux.png"/>
-</imageobject>
-<textobject><para>Unanimated Tux</para></textobject>
-<caption><para>Unanimated Tux</para></caption>
-</mediaobject></entry>
+</imageobject></mediaobject>
+</entry>
+<entry><phrase>Unanimated Tux</phrase></entry>
 <entry><para>An unanimated version of the Tux theme.</para></entry>
 </row>
 
 <row>
-<entry><mediaobject>
-<imageobject>
+<entry>
+<mediaobject><imageobject>
 <imagedata format="PNG" fileref="tao.png"/>
-</imageobject>
-<textobject><para>Tao</para></textobject>
-<caption><para>Tao</para></caption>
-</mediaobject></entry>
+</imageobject></mediaobject>
+</entry>
+<entry><phrase>Tao</phrase></entry>
 <entry><para>The Tao theme is an animated Yin Yang symbol.  This theme was
 created by <personname><firstname>Daniel</firstname><surname>Pfeiffer</surname></personname> <email>occitan@esperanto.org</email>, and was
 inspired by his Tai Chi practice.</para></entry>
 </row>
-
 </tbody>
 </tgroup>
 </table>
