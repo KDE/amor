@@ -1,5 +1,6 @@
 /*
  * Copyright 1999 by Martin R. Jones <mjones@kde.org>
+ * Copyright 2010 by Stefan Böhmann <kde@hilefoks.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,15 +19,16 @@
 #ifndef AMOR_H
 #define AMOR_H
 
-#include <time.h>
+#include <ctime>
 
 #include <QtGui/QWidget>
 #include <QtCore/QQueue>
 #include <QtCore/QList>
 
-#include "amoranim.h"
+#include "amoranimation.h"
 #include "amortips.h"
 #include "amorconfig.h"
+#include "amorthememanager.h"
 
 class AmorDialog;
 class AmorBubble;
@@ -36,118 +38,83 @@ class QTimer;
 class KWindowSystem;
 class KMenu;
 class KConfigBase;
+class QueueItem;
 
-class QueueItem {
-public:
 
-    enum itemType { Talk , Tip };
-
-    QueueItem(itemType ty, const QString &te, int ti = -1);
-
-    itemType	type() { return iType; }
-    QString	text() { return iText; }
-    int		time() { return iTime; }
-
-    void	setTime(int newTime) { if (iTime > 0) iTime = newTime; }
-
-private:
-    itemType	iType;
-    QString 	iText;
-    int		iTime;
-};
-
-//---------------------------------------------------------------------------
-//
-// Amor handles window manager input and animation selection and updates.
-//
 class Amor : public QObject
 {
     Q_OBJECT
-public:
-    Amor();
-    virtual ~Amor();
 
-    virtual void showTip(const QString &tip);
-    virtual void showMessage(const QString &message);
-    virtual void showMessage(const QString &message, int msec);
+    public:
+        Amor();
+        virtual ~Amor();
 
-    void reset();
+        virtual void showTip(const QString &tip);
+        virtual void showMessage(const QString &message);
+        virtual void showMessage(const QString &message, int msec);
 
-public slots:
-    void screenSaverStopped();
-    void screenSaverStarted();
-    void slotWindowActivate(WId);
-    void slotWindowRemove(WId);
-    void slotStackingChanged();
-    void slotWindowChange(WId, const unsigned long * properties);
-    void slotDesktopChange(int);
+        void reset();
 
-protected slots:
-    void slotMouseClicked(const QPoint &pos);
-    void slotTimeout();
-    void slotCursorTimeout();
-    void slotConfigure();
-    void slotConfigChanged();
-    void slotOffsetChanged(int);
-    void slotAbout();
-    void slotWidgetDragged( const QPoint &delta, bool release );
-    void restack();
-    void hideBubble(bool forceDequeue = false);
+    public slots:
+        void screenSaverStopped();
+        void screenSaverStarted();
+        void slotWindowActivate(WId);
+        void slotWindowRemove(WId);
+        void slotStackingChanged();
+        void slotWindowChange(WId, const unsigned long * properties);
+        void slotDesktopChange(int);
 
-    void slotBubbleTimeout();
+    protected slots:
+        void slotMouseClicked(const QPoint &pos);
+        void slotTimeout();
+        void slotCursorTimeout();
+        void slotConfigure();
+        void slotConfigChanged();
+        void slotOffsetChanged(int);
+        void slotAbout();
+        void slotWidgetDragged( const QPoint &delta, bool release );
+        void restack();
+        void hideBubble(bool forceDequeue = false);
 
-protected:
-    enum State { Focus, Blur, Normal, Sleeping, Waking, Destroy };
+        void slotBubbleTimeout();
 
-    bool readConfig();
-    void readGroupConfig(KConfigBase &config, QList<AmorAnim> &animList,
-                            const char *seq);
-    void showBubble();
-    AmorAnim *randomAnimation(QList<AmorAnim> &animList);
-    void selectAnimation(State state=Normal);
-    void active();
+    protected:
+        enum State { Focus, Blur, Normal, Sleeping, Waking, Destroy };
 
-private:
-    KWindowSystem    *mWin;
-    WId              mTargetWin;   // The window that the animations sits on
-    QRect            mTargetRect;  // The goemetry of the target window
-    WId              mNextTarget;  // The window that will become the target
-    AmorWidget       *mAmor;       // The widget displaying the animation
-    AmorThemeManager mTheme;       // Animations used by current theme
-    AmorAnim         *mBaseAnim;   // The base animation
-    AmorAnim         *mCurrAnim;   // The currently running animation
-    int              mPosition;    // The position of the animation
-    State            mState;       // The current state of the animation
-    QTimer           *mTimer;      // Frame timer
-    QTimer           *mCursorTimer;// Cursor timer
-    QTimer           *mStackTimer; // Restacking timer
-    QTimer           *mBubbleTimer;// Bubble tip timer (GP: I didn't create this one, it had no use when I found it)
-    AmorDialog       *mAmorDialog; // Setup dialog
-    KMenu       *mMenu;       // Our menu
-    time_t           mActiveTime;  // The time an active event occurred
-    QPoint           mCursPos;     // The last recorded position of the pointer
-    QString          mTipText;     // Text to display in a bubble when possible
-    AmorBubble       *mBubble;     // Text bubble
-    AmorTips         mTips;        // Tips to display in the bubble
-    bool	     mInDesktopBottom; // the animation is not on top of the
-				       // title bar, but at the bottom of the desktop
+        bool readConfig();
+        void readGroupConfig(KConfigBase &config, QList<AmorAnimation> &animList, const char *seq);
+        void showBubble();
+        AmorAnimation *randomAnimation(QList<AmorAnimation> &animList);
+        void selectAnimation(State state=Normal);
+        void active();
 
-    AmorConfig       mConfig;      // Configuration parameters
-    bool             mForceHideAmorWidget;
-
-    QQueue<QueueItem*> mTipsQueue; // GP: tips queue
-};
-
-//---------------------------------------------------------------------------
-
-class AmorSessionWidget : public QWidget
-{
-    Q_OBJECT
-public:
-    AmorSessionWidget();
-    ~AmorSessionWidget() {}
-public slots:
-    void wm_saveyourself();
+    private:
+        KWindowSystem *mWin;
+        WId mTargetWin;                 // The window that the animations sits on
+        QRect mTargetRect;              // The goemetry of the target window
+        WId mNextTarget;                // The window that will become the target
+        AmorWidget *mAmor;              // The widget displaying the animation
+        AmorThemeManager mTheme;        // Animations used by current theme
+        AmorAnimation *mBaseAnim;       // The base animation
+        AmorAnimation *mCurrAnim;       // The currently running animation
+        int mPosition;                  // The position of the animation
+        State mState;                   // The current state of the animation
+        QTimer *mTimer;                 // Frame timer
+        QTimer *mCursorTimer;           // Cursor timer
+        QTimer *mStackTimer;            // Restacking timer
+        QTimer *mBubbleTimer;           // Bubble tip timer (GP: I didn't create this one, it had no use when I found it)
+        AmorDialog *mAmorDialog;        // Setup dialog
+        KMenu *mMenu;                   // Our menu
+        std::time_t mActiveTime;        // The time an active event occurred
+        QPoint mCursPos;                // The last recorded position of the pointer
+        QString mTipText;               // Text to display in a bubble when possible
+        AmorBubble *mBubble;            // Text bubble
+        AmorTips mTips;                 // Tips to display in the bubble
+        bool mInDesktopBottom;          // the animation is not on top of the
+                                        // title bar, but at the bottom of the desktop
+        AmorConfig mConfig;             // Configuration parameters
+        bool mForceHideAmorWidget;
+        QQueue<QueueItem*> mTipsQueue;  // GP: tips queue
 };
 
 

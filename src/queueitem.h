@@ -1,5 +1,6 @@
 /*
  * Copyright 1999 by Martin R. Jones <mjones@kde.org>
+ * Copyright 2010 by Stefan Böhmann <kde@hilefoks.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,50 +16,30 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#ifndef AMORDIALOG_H
-#define AMORDIALOG_H
+#ifndef QUEUEITEM_H
+#define QUEUEITEM_H
 
-#include <kdialog.h>
-#include "amorconfig.h"
-
-class QListWidget;
-class KTextEdit;
+#include <QString>
 
 
-class AmorDialog : public KDialog
+class QueueItem
 {
-    Q_OBJECT
-
     public:
-        AmorDialog(QWidget *parent = 0);
+        enum ItemType { Talk , Tip };
 
-    signals:
-        void changed();
-        void offsetChanged(int);
+        QueueItem(ItemType type, const QString &text, int time = -1);
 
-    protected slots:
-        void slotHighlighted(int);
-        void slotOnTop(bool);
-        void slotRandomTips(bool);
-        void slotRandomTheme(bool);
-        void slotApplicationTips(bool);
-        void slotOffset(int);
-        void slotOk();
-        void slotApply();
-        void slotCancel();
+        ItemType type();
+        QString text();
+        int time();
 
-    protected:
-        void readThemes();
-        void addTheme(const QString& file);
+        void setTime(int newTime);
 
-    protected:
-        QListWidget *mThemeListView;
-        KTextEdit *mAboutEdit;
-        QStringList mThemes;
-        QStringList mThemeAbout;
-        AmorConfig mConfig;
+    private:
+        ItemType m_type;
+        QString m_text;
+        int m_time;
 };
-
 
 #endif
 

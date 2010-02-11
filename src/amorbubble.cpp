@@ -16,7 +16,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 #include "amorbubble.h"
-#include "amorbubble.moc"
 
 #include <QtGui/QApplication>
 #include <QtGui/QPainter>
@@ -43,23 +42,21 @@
 #define BUBBLE_OFFSET   16
 #define BUBBLE_TIMEOUT  4000    // Minimum milliseconds to display a tip
 
-//---------------------------------------------------------------------------
-//
-// Constructor
-//
+
+
 AmorBubble::AmorBubble()
-	: QWidget(0, Qt::WindowTitleHint | Qt::X11BypassWindowManagerHint)
+  : QWidget( 0, Qt::WindowTitleHint | Qt::X11BypassWindowManagerHint ),
+    mOriginX( 0 ),
+    mOriginY( 0 )
 {
-    mOriginX = 0;
-    mOriginY = 0;
     mBrowser = new KTextBrowser( this );
     mBrowser->setFrameStyle( QFrame::NoFrame | QFrame::Plain );
     //mBrowser->setMargin( 0 );
 
-    mBrowser->setWordWrapMode(QTextOption::WrapAtWordBoundaryOrAnywhere); // too long to fit in one line?
+    mBrowser->setWordWrapMode( QTextOption::WrapAtWordBoundaryOrAnywhere ); // too long to fit in one line?
 
     QPalette clgrp = mBrowser->palette();
-    clgrp.setColor(QPalette::Text, Qt::black);
+    clgrp.setColor( QPalette::Text, Qt::black );
     //Laurent QTextBrowser didn't have this function FIX me
     //mBrowser->setPaperColorGroup( clgrp );
     //mBrowser->setPaper( QToolTip::palette().active().brush( QPalette::Background ) );
@@ -68,31 +65,26 @@ AmorBubble::AmorBubble()
     mBrowser->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
     mBrowser->viewport()->installEventFilter( this );
 #if 0 //I don(t know how to port it
-	QList<KUrl> lst;
-	lst << KUrl(KGlobal::dirs()->findResourceDir("data", "kdewizard/pics")+"kdewizard/pics/");
+    QList<KUrl> lst;
+    lst << KUrl(KGlobal::dirs()->findResourceDir("data", "kdewizard/pics")+"kdewizard/pics/");
 
     QStringList icons = KGlobal::dirs()->resourceDirs("icon");
     QStringList::Iterator it;
     for (it = icons.begin(); it != icons.end(); ++it)
-		lst << KUrl(*it);
-	mBrowser->createMimeDataFromSelection ()->setUrls(lst);
+        lst << KUrl(*it);
+    mBrowser->createMimeDataFromSelection ()->setUrls(lst);
 #endif
     mMouseWithin = false;
 }
 
-//---------------------------------------------------------------------------
-//
-// Destructor
-//
-AmorBubble::~AmorBubble()
+
+void AmorBubble::setOrigin(int x, int y)
 {
+    mOriginX = x;
+    mOriginY = y;
 }
 
-//---------------------------------------------------------------------------
-//
-// Set the message to display in the bubble.  Causes the geometry of the
-// widget to be recalculated.
-//
+
 void AmorBubble::setMessage(const QString& message)
 {
     mMessage = QString( "<html>%1</html>" ).arg( message );
@@ -104,18 +96,21 @@ void AmorBubble::setMessage(const QString& message)
     calcGeometry();
 }
 
-//---------------------------------------------------------------------------
-//
-// Calculates the size, position and mask of the bubble
-//
+
+bool AmorBubble::mouseWithin()
+{
+    return mMouseWithin;
+}
+
+
 void AmorBubble::calcGeometry()
 {
     mBound = QRect( 0, 0, 250, 0 );
-//    mBound.setHeight( mBrowser->heightForWidth( mBound.width() ) );
+    //mBound.setHeight( mBrowser->heightForWidth( mBound.width() ) );
 #ifdef __GNUC__
 #warning "kde4: porting"
 #endif
-	//mBound.setHeight( mBrowser->contentsHeight() );
+    //mBound.setHeight( mBrowser->contentsHeight() );
     mBound.translate(ARROW_WIDTH+BORDER_SIZE, BORDER_SIZE);
 
     // initialise the default geometry of the bubble
@@ -129,131 +124,116 @@ void AmorBubble::calcGeometry()
 
     // The actual position of the bubble may change if it is too close to
     // the desktop boundary.
-    if (mOriginX + w > qApp->desktop()->width())
-    {
+    if( mOriginX + w > qApp->desktop()->width() ) {
         // source on right
         xpos = mOriginX - w - BUBBLE_OFFSET;
         mArrowHorz = Right;
-	mBound.translate( -ARROW_WIDTH, 0 );
+        mBound.translate( -ARROW_WIDTH, 0 );
     }
 
-    if (mOriginY + h > qApp->desktop()->height())
-    {
+    if( mOriginY + h > qApp->desktop()->height() ) {
         // source at bottom
         ypos = mOriginY - h + BORDER_SIZE + ARROW_HEIGHT / 2;
         mArrowVert = Bottom;
     }
 
     // Check for negative vertical bubble position (top of the screen)
-    if ( ypos < 0 )
+    if( ypos < 0 ) {
        ypos = 0;
+    }
 
-    setGeometry(xpos, ypos, w, h);
+    setGeometry( xpos, ypos, w, h );
     mBrowser->setGeometry( mBound );
 
     // create and apply the shape mask
-    mMask = QPixmap(w, h);
-    mMask.fill(Qt::color0);
-    QPainter maskPainter(&mMask);
-    maskPainter.setPen(Qt::color1);
-    maskPainter.setBrush(Qt::color1);
-    drawBubble(maskPainter);
-    XShapeCombineMask( QX11Info::display(), winId(), ShapeBounding, 0, 0,
-                       mMask.handle(), ShapeSet );
+    mMask = QPixmap( w, h );
+    mMask.fill( Qt::color0 );
+    QPainter maskPainter( &mMask );
+    maskPainter.setPen( Qt::color1 );
+    maskPainter.setBrush( Qt::color1 );
+    drawBubble( maskPainter );
+    XShapeCombineMask( QX11Info::display(), winId(), ShapeBounding, 0, 0, mMask.handle(), ShapeSet );
 }
 
-//---------------------------------------------------------------------------
-//
-// Draw the bubble that text will be draw into using the current pen
-// as the outline and the current brush as the fill.
-//
-void AmorBubble::drawBubble(QPainter &p)
+
+void AmorBubble::drawBubble(QPainter &painter)
 {
     QPolygon pointArray(3);
-
     int left = ARROW_WIDTH;
 
-    if (mArrowHorz == Left)
-    {
-        pointArray.setPoint(0, ARROW_WIDTH+1, 0);
-        pointArray.setPoint(1, 0, -3);
-        pointArray.setPoint(2, ARROW_WIDTH+1, ARROW_HEIGHT);
+    if( mArrowHorz == Left ) {
+        pointArray.setPoint( 0, ARROW_WIDTH+1, 0 );
+        pointArray.setPoint( 1, 0, -3 );
+        pointArray.setPoint( 2, ARROW_WIDTH+1, ARROW_HEIGHT );
     }
-    else
-    {
-        pointArray.setPoint(0, 0, 0);
-        pointArray.setPoint(1, ARROW_WIDTH+1, -3);
-        pointArray.setPoint(2, 0, ARROW_HEIGHT);
-        pointArray.translate(width() - ARROW_WIDTH - 1, 0);
-	left = 0;
+    else {
+        pointArray.setPoint( 0, 0, 0 );
+        pointArray.setPoint( 1, ARROW_WIDTH+1, -3 );
+        pointArray.setPoint( 2, 0, ARROW_HEIGHT );
+        pointArray.translate( width() - ARROW_WIDTH - 1, 0 );
+        left = 0;
     }
 
-    if (mArrowVert == Top)
-    {
-        pointArray.translate(0, BORDER_SIZE + ARROW_HEIGHT / 2);
+    if( mArrowVert == Top ) {
+        pointArray.translate( 0, BORDER_SIZE + ARROW_HEIGHT / 2 );
     }
-    else
-    {
-        pointArray.translate(0, height() - BORDER_SIZE - ARROW_HEIGHT / 2);
+    else {
+        pointArray.translate( 0, height() - BORDER_SIZE - ARROW_HEIGHT / 2 );
     }
 
-//    p.drawRoundRect(left, 0, width() - ARROW_WIDTH, height(), 10, 20);
-    p.drawRect(left, 0, width() - ARROW_WIDTH, height());
+    //p.drawRoundRect(left, 0, width() - ARROW_WIDTH, height(), 10, 20);
+    painter.drawRect( left, 0, width() - ARROW_WIDTH, height() );
 
-    QPen pen(p.pen());
-    p.setPen(Qt::NoPen);
-    p.drawPolygon(pointArray);
+    QPen pen( painter.pen() );
+    painter.setPen( Qt::NoPen );
+    painter.drawPolygon( pointArray );
 
-    p.setPen(pen);
-    p.drawPolyline(pointArray);
+    painter.setPen( pen );
+    painter.drawPolyline( pointArray );
 }
 
-//---------------------------------------------------------------------------
-//
-// Draw the message in a bubble
-//
-void AmorBubble::paintEvent(QPaintEvent *)
+
+void AmorBubble::paintEvent(QPaintEvent *e)
 {
-    QPainter painter(this);
-    painter.setPen(Qt::black);
+    Q_UNUSED( e );
+
+    QPainter painter( this );
+    painter.setPen( Qt::black );
     painter.setBrush( QToolTip::palette().brush( QPalette::Active, QPalette::Background ) );
-    drawBubble(painter);
+    drawBubble( painter );
 }
 
-//---------------------------------------------------------------------------
-//
-// The user clicked on the widget
-//
-void AmorBubble::mouseReleaseEvent(QMouseEvent *)
+
+void AmorBubble::mouseReleaseEvent(QMouseEvent *e)
 {
+    Q_UNUSED( e );
     hide();
 }
 
-//---------------------------------------------------------------------------
-//
-bool AmorBubble::eventFilter( QObject *, QEvent *e )
-{
-    switch ( e->type() )
-    {
 
-// GP	case QEvent::Enter:
-// GP	    mBubbleTimer->stop();
-// GP	    break;
-// GP	case QEvent::Leave:
-// GP	    if ( isVisible() )
-// GP		mBubbleTimer->start( 1000, true );
-// GP	    break;
-	case QEvent::Enter:
-	    mMouseWithin = true;
-	    break;
-	case QEvent::Leave:
-	    mMouseWithin = false;
-	    break;
-	case QEvent::MouseButtonRelease:
-	    hide();				// GP This is the only reason a bubble might posibly be created but hidden
-	    break;
-	default:
-	    break;
+bool AmorBubble::eventFilter(QObject *obj, QEvent *e)
+{
+    Q_UNUSED( obj );
+
+    switch( e->type() ) {
+// GP   case QEvent::Enter:
+// GP       mBubbleTimer->stop();
+// GP       break;
+// GP   case QEvent::Leave:
+// GP       if( isVisible() )
+// GP           mBubbleTimer->start( 1000, true );
+// GP       break;
+    case QEvent::Enter:
+        mMouseWithin = true;
+        break;
+    case QEvent::Leave:
+        mMouseWithin = false;
+        break;
+    case QEvent::MouseButtonRelease:
+        hide();           // GP This is the only reason a bubble might posibly be created but hidden
+        break;
+    default:
+        break;
     }
 
     return false;

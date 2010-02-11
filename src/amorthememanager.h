@@ -1,5 +1,6 @@
 /*
  * Copyright 1999 by Martin R. Jones <mjones@kde.org>
+ * Copyright 2010 by Stefan Böhmann <kde@hilefoks.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,48 +16,37 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#ifndef AMORDIALOG_H
-#define AMORDIALOG_H
+#ifndef AMORTHEMEMANAGER_H
+#define AMORTHEMEMANAGER_H
 
-#include <kdialog.h>
-#include "amorconfig.h"
+#include <QHash>
+#include <QSize>
 
-class QListWidget;
-class KTextEdit;
+class KConfig;
+class AmorAnimation;
+typedef QList<AmorAnimation*> AmorAnimationGroup;
 
 
-class AmorDialog : public KDialog
+class AmorThemeManager
 {
-    Q_OBJECT
-
     public:
-        AmorDialog(QWidget *parent = 0);
+        AmorThemeManager();
+        virtual ~AmorThemeManager();
 
-    signals:
-        void changed();
-        void offsetChanged(int);
+        bool setTheme(const QString &file);
+        bool readGroup(const QString &seq);
+        bool isStatic() const;
 
-    protected slots:
-        void slotHighlighted(int);
-        void slotOnTop(bool);
-        void slotRandomTips(bool);
-        void slotRandomTheme(bool);
-        void slotApplicationTips(bool);
-        void slotOffset(int);
-        void slotOk();
-        void slotApply();
-        void slotCancel();
+        AmorAnimation *random(const QString &group);
+
+        QSize maximumSize() const;
 
     protected:
-        void readThemes();
-        void addTheme(const QString& file);
-
-    protected:
-        QListWidget *mThemeListView;
-        KTextEdit *mAboutEdit;
-        QStringList mThemes;
-        QStringList mThemeAbout;
-        AmorConfig mConfig;
+        QString mPath;
+        KConfig *mConfig;
+        QSize mMaximumSize;                              // The largest pixmap used
+        QHash<QString, AmorAnimationGroup*> mAnimations; // list of animation groups
+        bool mStatic;	                                 // static image
 };
 
 

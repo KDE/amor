@@ -29,7 +29,6 @@ class AmorWidget : public QWidget
 
     public:
         AmorWidget();
-        virtual ~AmorWidget();
 
         void setPixmap(const QPixmap *pixmap);
 
@@ -44,9 +43,9 @@ class AmorWidget : public QWidget
         void mouseReleaseEvent(QMouseEvent *event);
 
     protected:
-        const QPixmap *mPixmap;
-        QPoint clickPos;
-        bool dragging;
+        const QPixmap *m_pixmap;
+        QPoint m_clickPos;
+        bool m_dragging;
 };
 
 

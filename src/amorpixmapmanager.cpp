@@ -15,55 +15,53 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#include "amorpm.h"
+#include "amorpixmapmanager.h"
 
-#include <QtGui/QPixmap>
+#include <QPixmap>
 
-// static
+
 AmorPixmapManager *AmorPixmapManager::mManager = 0;
 
-//---------------------------------------------------------------------------
-//
-// Constructor
-//
+
 AmorPixmapManager::AmorPixmapManager()
-    : mPixmapDir(".")
+  : mPixmapDir(".")
 {
 }
 
-//---------------------------------------------------------------------------
-//
-// Destructor
-//
+
 AmorPixmapManager::~AmorPixmapManager()
 {
-    qDeleteAll(mPixmaps);
+    qDeleteAll( mPixmaps );
 }
 
-//---------------------------------------------------------------------------
-//
-// Load an image into the image manager
-//
-// Returns:
-//   pointer to pixmap if loaded successfully, 0 otherwise.
-//
-const QPixmap *AmorPixmapManager::load(const QString & img)
+
+void AmorPixmapManager::setPixmapDir(const QString &dir)
 {
-    QHash<QString, QPixmap*>::const_iterator it = mPixmaps.constFind(img);
+    mPixmapDir = dir;
+}
+
+
+void AmorPixmapManager::reset()
+{
+    mPixmapDir = ".";
+    mPixmaps.clear();
+}
+
+
+const QPixmap* AmorPixmapManager::load(const QString & img)
+{
+    QHash<QString, QPixmap*>::const_iterator it = mPixmaps.constFind( img );
     QPixmap *pixmap = it != mPixmaps.constEnd() ? *it : 0;
 
-    if (!pixmap)
-    {
+    if( !pixmap ) {
         // pixmap has not yet been loaded.
-        QString path = mPixmapDir + QString("/") + img;
-        pixmap = new QPixmap(path);
+        QString path = mPixmapDir + QString( "/" ) + img;
+        pixmap = new QPixmap( path );
 
-        if (!pixmap->isNull())
-        {
+        if( !pixmap->isNull() ) {
             mPixmaps[img] = pixmap;
         }
-        else
-        {
+        else {
             delete pixmap;
             pixmap = 0;
         }
@@ -72,15 +70,17 @@ const QPixmap *AmorPixmapManager::load(const QString & img)
     return pixmap;
 }
 
-//---------------------------------------------------------------------------
-//
-// returns a pointer to the pixmap manager.
-//
-AmorPixmapManager *AmorPixmapManager::manager()
+
+const QPixmap* AmorPixmapManager::pixmap(const QString & img) const
 {
-    if (!mManager)
-    {
-        mManager = new AmorPixmapManager();
+    return mPixmaps.contains( img ) ? mPixmaps[ img ] : 0;
+}
+
+
+AmorPixmapManager* AmorPixmapManager::manager()
+{
+    if( !mManager ) {
+        mManager = new AmorPixmapManager;
     }
 
     return mManager;

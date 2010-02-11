@@ -16,109 +16,79 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 #include "amorwidget.h"
-#include "amorwidget.moc"
 
-#include <QtGui/QBitmap>
-#include <QtGui/QPainter>
-#include <QtGui/QPixmap>
-#include <QtGui/QMouseEvent>
-#include <QtGui/QX11Info>
+#include <QBitmap>
+#include <QPainter>
+#include <QMouseEvent>
+#include <QX11Info>
 
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>
 
-//---------------------------------------------------------------------------
-//
-// Constructor
-//
+
 AmorWidget::AmorWidget()
-	: QWidget(0, Qt::WindowTitleHint | Qt::X11BypassWindowManagerHint),
-      mPixmap(0)
+  : QWidget( 0, Qt::WindowTitleHint | Qt::X11BypassWindowManagerHint ),
+    m_pixmap( 0 ),
+    m_dragging( false )
 {
-    setAttribute(Qt::WA_NoSystemBackground, true);
-    dragging = false;
+    setAttribute( Qt::WA_NoSystemBackground, true );
 }
 
-//---------------------------------------------------------------------------
-//
-// Destructor
-//
-AmorWidget::~AmorWidget()
-{
-}
 
-//---------------------------------------------------------------------------
-//
-// Set the pixmap to display
-//
 void AmorWidget::setPixmap(const QPixmap *pixmap)
 {
-    mPixmap = pixmap;
+    m_pixmap = pixmap;
 
-    if (mPixmap)
-    {
-        if (!mPixmap->mask().isNull())
-        {
-            XShapeCombineMask( QX11Info::display(), winId(), ShapeBounding, 0, 0,
-                                mPixmap->mask().handle(), ShapeSet );
+    if( m_pixmap ) {
+        if( !m_pixmap->mask().isNull() ) {
+            XShapeCombineMask( QX11Info::display(), winId(), ShapeBounding, 0, 0, m_pixmap->mask().handle(), ShapeSet );
             repaint();
         }
-
-	update();
+        update();
     }
 }
 
-//---------------------------------------------------------------------------
-//
-// Draw the pixmap
-//
+
 void AmorWidget::paintEvent(QPaintEvent *)
 {
-    if (mPixmap)
-    {
-        QPainter p(this);
-        p.drawPixmap( 0, 0, *mPixmap );
+    if( m_pixmap ) {
+        QPainter p( this );
+        p.drawPixmap( 0, 0, *m_pixmap );
     }
 }
 
-//---------------------------------------------------------------------------
-//
-// The user clicked on the widget
-//
+
 void AmorWidget::mousePressEvent(QMouseEvent *me)
 {
-    clickPos = me->globalPos();
+    m_clickPos = me->globalPos();
 }
 
-//---------------------------------------------------------------------------
-//
-// The user moved the mouse
-//
+
 void AmorWidget::mouseMoveEvent(QMouseEvent *me)
 {
-    if ( me->buttons() & Qt::LeftButton ) {
-	if ( !dragging && (clickPos-me->globalPos()).manhattanLength() > 3 )
-	    dragging = true;
-	if ( dragging ) {
-	    emit dragged( me->globalPos() - clickPos, false );
-	    clickPos = me->globalPos();
-	}
+    if( me->buttons() & Qt::LeftButton ) {
+        if( !m_dragging && ( m_clickPos-me->globalPos() ).manhattanLength() > 3 ) {
+            m_dragging = true;
+        }
+        if( m_dragging ) {
+            emit dragged( me->globalPos() - m_clickPos, false );
+            m_clickPos = me->globalPos();
+        }
     }
 }
 
-//---------------------------------------------------------------------------
-//
-// The user clicked on the widget
-//
+
 void AmorWidget::mouseReleaseEvent(QMouseEvent *me)
 {
-    if ( dragging )
-	emit dragged( me->globalPos() - clickPos, true );
-    else if ( me->button() == Qt::RightButton )
-	emit mouseClicked(me->globalPos());
+    if( m_dragging ) {
+        emit dragged( me->globalPos() - m_clickPos, true );
+    }
+    else if( me->button() == Qt::RightButton ) {
+        emit mouseClicked(me->globalPos());
+    }
 
-    clickPos = QPoint();
-    dragging = false;
+    m_clickPos = QPoint();
+    m_dragging = false;
 }
 
 

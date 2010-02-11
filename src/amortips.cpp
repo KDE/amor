@@ -27,145 +27,122 @@
 #include <klocale.h>
 #include <kdebug.h>
 
-//---------------------------------------------------------------------------
-//
+
+
 AmorTips::AmorTips()
 {
-    KGlobal::locale()->insertCatalog("ktip"); // For ktip tip translations
+    KGlobal::locale()->insertCatalog( "ktip" ); // For ktip tip translations
 }
 
-//---------------------------------------------------------------------------
-//
-// Set the file containing tips.  This reads all tips into memory at the
-// moment - need to make more efficient.
-//
+
 bool AmorTips::setFile(const QString& file)
 {
-    bool rv = false;
+    QString path( KStandardDirs::locate( "appdata", file ) );
 
-    QString path( KStandardDirs::locate("appdata", file) );
-    if(path.length() && read(path))
-        rv = true;
+    bool rv = path.length() && read( path );
 
     rv |= readKTips();
 
     return rv;
 }
 
-//---------------------------------------------------------------------------
-//
-// Clear all tips from memory
-//
+
 void AmorTips::reset()
 {
     mTips.clear();
 }
 
-//---------------------------------------------------------------------------
-//
-// Get a tip randomly from the list
-//
+
 QString AmorTips::tip()
 {
-    if (mTips.count())
-    {
-        QString tip = mTips.at(KRandom::random() % mTips.count());
-		return i18n(tip.toUtf8());
+    if( mTips.count() ) {
+        QString tip = mTips.at( KRandom::random() % mTips.count() );
+        return i18n( tip.toUtf8() );
     }
 
-    return i18n("No tip");
+    return i18n( "No tip" );
 }
 
-//---------------------------------------------------------------------------
-//
-// Read the tips from ktip's file
-//
+
 bool AmorTips::readKTips()
 {
     QString fname;
 
     fname = KStandardDirs::locate("data", QString("kdewizard/tips"));
 
-    if (fname.isEmpty())
-	return false;
+    if( fname.isEmpty() ) {
+        return false;
+    }
 
-    QFile f(fname);
-    if (f.open(QIODevice::ReadOnly))
-    {
-	// Reading of tips must be exactly as in KTipDatabase::loadTips for translation
-	QString content = f.readAll();
-	const QRegExp rx("\\n+");
+    QFile f( fname );
+    if( f.open( QIODevice::ReadOnly ) ) {
+        // Reading of tips must be exactly as in KTipDatabase::loadTips for translation
+        QString content = f.readAll();
+        const QRegExp rx( "\\n+" );
 
-	int pos = -1;
-	while ((pos = content.indexOf("<html>", pos + 1, Qt::CaseInsensitive)) != -1)
-	{
-	    QString tip = content
-		.mid(pos + 6, content.indexOf("</html>", pos, Qt::CaseInsensitive) - pos - 6)
-		.replace(rx, "\n");
-	    if (!tip.endsWith('\n'))
-		tip += '\n';
-	    if (tip.startsWith('\n'))
-		tip = tip.mid(1);
-	    if (tip.isEmpty())
-	    {
-		kDebug() << "Empty tip found! Skipping! " << pos;
-		continue;
-	    }
-	    mTips.append(tip);
-	}
+        int pos = -1;
+        while( ( pos = content.indexOf( "<html>", pos + 1, Qt::CaseInsensitive ) ) != -1 ) {
+            QString tip = content
+                            .mid( pos + 6, content.indexOf("</html>", pos, Qt::CaseInsensitive) - pos - 6 )
+                            .replace( rx, "\n" );
 
-	f.close();
+            if( !tip.endsWith('\n') ) {
+                tip += '\n';
+            }
+
+            if( tip.startsWith( '\n' ) ) {
+                tip = tip.mid( 1 );
+            }
+
+            if( tip.isEmpty() ) {
+                kDebug() << "Empty tip found! Skipping! " << pos;
+                continue;
+            }
+
+            mTips.append( tip );
+        }
+
+        f.close();
     }
 
     return true;
 }
 
-//---------------------------------------------------------------------------
-//
-// Read all tips from the specified file.
-//
+
 bool AmorTips::read(const QString& path)
 {
-    QFile file(path);
+    QFile file( path );
 
-    if (file.open(QIODevice::ReadOnly))
-    {
-        while (!file.atEnd())
-        {
-            readTip(file);
+    if( file.open( QIODevice::ReadOnly ) ) {
+        while( !file.atEnd() ) {
+            readTip( file );
         }
 
-	return true;
+        return true;
     }
 
     return false;
 }
 
-//---------------------------------------------------------------------------
-//
-// Read a single tip.
-//
+
 bool AmorTips::readTip(QFile &file)
 {
     char buffer[1024] = "";
     QString tip;
 
-    while (!file.atEnd() && buffer[0] != '%')
-    {
-        file.readLine(buffer, 1024);
-        if (buffer[0] != '%')
-        {
-            tip += QString::fromUtf8(buffer);
+    while( !file.atEnd() && buffer[0] != '%' ) {
+        file.readLine( buffer, 1024 );
+        if( buffer[0] != '%' ) {
+            tip += QString::fromUtf8( buffer );
         }
     }
 
-    if (!tip.isEmpty())
-    {
-        if (tip[tip.length()-1] == '\n')
-        {
-            tip.truncate(tip.length()-1);
+    if( !tip.isEmpty() ) {
+        if( tip[ tip.length()-1 ] == '\n' ) {
+            tip.truncate( tip.length()-1 );
         }
-        mTips.append(tip);
+        mTips.append( tip );
+
         return true;
     }
 

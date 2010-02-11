@@ -15,43 +15,43 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#include <stdlib.h>
-#include <stdio.h>
-#include <time.h>
+#include "amor.h"
+#include "amorsessionwidget.h"
+#include "version.h"
+
+#include <cstdio>
+
+#include <QtDBus>
 
 #include <kuniqueapplication.h>
 #include <klocale.h>
 #include <kcmdlineargs.h>
 #include <kaboutdata.h>
 
-#include "version.h"
-#include "amor.h"
-
-#include <QtDBus/QtDBus>
 
 static const char description[] = I18N_NOOP("KDE creature for your desktop");
 
 
 int main(int argc, char *argv[])
 {
-    KAboutData aboutData( "amor", 0, ki18n("amor"),
-        AMOR_VERSION, ki18n(description), KAboutData::License_GPL,
-        ki18n("Copyright 1999, Martin R. Jones") );
-    aboutData.addAuthor(ki18n("Martin R. Jones"),KLocalizedString(), "mjones@kde.org");
-    aboutData.addAuthor(ki18n("Gerardo Puga"), ki18n("Current maintainer"), "gpuga@gioia.ing.unlp.edu.ar");
-    KCmdLineArgs::init( argc, argv, &aboutData );
+    KAboutData about( "amor", 0, ki18n( "amor" ), AMOR_VERSION );
+    about.setShortDescription( ki18n( description ) );
+    about.setCopyrightStatement( ki18n( "Copyright 1999, Martin R. Jones" ) );
+    about.addAuthor( ki18n("Martin R. Jones"), KLocalizedString(), "mjones@kde.org" );
+    about.addAuthor( ki18n( "Gerardo Puga" ), KLocalizedString(), "gpuga@gioia.ing.unlp.edu.ar" );
+    about.addAuthor( ki18n( "Stefan Böhmann" ), ki18n("Current maintainer"), "kde@hilefoks.org" );
+    KCmdLineArgs::init( argc, argv, &about );
 
-    if (!KUniqueApplication::start()) {
-        fprintf( stderr, "%s is already running!\n", qPrintable( aboutData.appName() ) );
-        exit(0);
+    if( !KUniqueApplication::start() ) {
+        std::fprintf( stderr, "%s is already running!\n", qPrintable( about.appName() ) );
+        exit( 0 );
     }
+
     KUniqueApplication app;
+    AmorSessionWidget *sessionWidget = new AmorSessionWidget; // session management
+    app.setTopWidget( sessionWidget );
 
-    // session management
-    AmorSessionWidget *sessionWidget = new AmorSessionWidget;
-    app.setTopWidget(sessionWidget);
-
-    QDBusConnection::sessionBus().registerObject("/Amor",new Amor() );
+    QDBusConnection::sessionBus().registerObject( "/Amor",new Amor() );
     return app.exec();
 }
 

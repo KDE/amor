@@ -1,5 +1,6 @@
 /*
  * Copyright 1999 by Martin R. Jones <mjones@kde.org>
+ * Copyright 2010 by Stefan Böhmann <kde@hilefoks.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,8 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#ifndef AMORANIM_H
-#define AMORANIM_H
+#ifndef AMORANIMATION_H
+#define AMORANIMATION_H
 
 #include <QtCore/QHash>
 #include <QtCore/QPoint>
@@ -27,28 +28,22 @@
 class QPixmap;
 class KConfigGroup;
 class KConfig;
-class AmorAnim;
 
-typedef QList<AmorAnim*> AmorAnimationGroup;
-
-
-
-class AmorAnim
+class AmorAnimation
 {
     public:
-        explicit AmorAnim(KConfigGroup &config);
-        virtual ~AmorAnim();
+        explicit AmorAnimation(KConfigGroup &config);
 
-        void reset() { mCurrent = 0; }
-        bool next() { return ++mCurrent < mSequence.count(); }
-        int frameNum() const { return mCurrent; }
-        bool validFrame() const { return mCurrent < mSequence.count(); }
-        int totalMovement() const { return mTotalMovement; }
-        QSize maximumSize() const { return mMaximumSize; }
+        void reset();
+        bool next();
+        int frameNum() const;
+        bool validFrame() const;
+        int totalMovement() const;
+        QSize maximumSize() const;
 
-        int delay() const { return (validFrame() && mCurrent < mDelay.size() ? mDelay.at(mCurrent) : 100); }
-        QPoint hotspot() const { return (validFrame() && mCurrent < mHotspot.size() ? mHotspot.at(mCurrent) : QPoint(16,16)); }
-        int movement() const { return (validFrame() && mCurrent < mMovement.size() ? mMovement.at(mCurrent) : 0); }
+        int delay() const;
+        QPoint hotspot() const;
+        int movement() const;
 
         const QPixmap *frame();
 
@@ -63,30 +58,6 @@ class AmorAnim
         QVector<int> mMovement;   // the distance to move between frames
         int mTotalMovement;       // the total distance this animation moves
         QSize mMaximumSize;       // the maximum size of any frame
-};
-
-
-
-class AmorThemeManager
-{
-    public:
-        AmorThemeManager();
-        virtual ~AmorThemeManager();
-
-        bool setTheme(const QString & file);
-        bool readGroup(const QString & seq);
-        bool isStatic() const { return mStatic; }
-
-        AmorAnim *random(const QString & group);
-
-        QSize maximumSize() const { return mMaximumSize; }
-
-    protected:
-        QString mPath;
-        KConfig *mConfig;
-        QSize mMaximumSize;                              // The largest pixmap used
-        QHash<QString, AmorAnimationGroup*> mAnimations; // list of animation groups
-        bool mStatic;	                                 // static image
 };
 
 

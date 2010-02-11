@@ -16,58 +16,50 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 #include "amorconfig.h"
-#include <ksharedconfig.h>
+
 #include <KGlobal>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
-//---------------------------------------------------------------------------
-//
-// Constructor
-//
+
 AmorConfig::AmorConfig()
+  : mOnTop( false ),
+    mOffset( 0 ),
+    mTheme( "blobrc" ),
+    mTips( false ),
+    mAppTips( true ),
+    mStaticPos( 20 )
 {
-    mOnTop = false;
-    mOffset = 0;
-    mTheme = "blobrc";
-    mTips = false;
-    mAppTips = true;
-    mStaticPos = 20;
 }
 
-//---------------------------------------------------------------------------
-//
-// Read the configuration
-//
+
 void AmorConfig::read()
 {
     KSharedConfig::Ptr config = KGlobal::config();
-    KConfigGroup cs(config, "General");
+    KConfigGroup cs( config, "General" );
 
-    mOnTop = cs.readEntry("OnTop", false);
-    mOffset = cs.readEntry("Offset", 0);
-    mTheme = cs.readEntry("Theme", "blobrc");
-    mTips  = cs.readEntry("Tips", false);
-    mRandomTheme  = cs.readEntry("RandomTheme", false);
-    mAppTips  = cs.readEntry("ApplicationTips", true);
-    mStaticPos  = cs.readEntry("StaticPosition", 20);
+    mOnTop = cs.readEntry( "OnTop", false );
+    mOffset = cs.readEntry( "Offset", 0 );
+    mTheme = cs.readEntry( "Theme", "blobrc" );
+    mTips = cs.readEntry( "Tips", false );
+    mRandomTheme = cs.readEntry( "RandomTheme", false );
+    mAppTips = cs.readEntry( "ApplicationTips", true );
+    mStaticPos = cs.readEntry( "StaticPosition", 20 );
 }
 
-//---------------------------------------------------------------------------
-//
-// Write the configuration
-//
+
 void AmorConfig::write()
 {
     KSharedConfig::Ptr config = KGlobal::config();
-    KConfigGroup cs(config, "General");
+    KConfigGroup cs( config, "General" );
 
-    cs.writeEntry("OnTop", mOnTop);
-    cs.writeEntry("Offset", mOffset);
-    cs.writeEntry("Theme", mTheme);
-    cs.writeEntry("Tips", mTips);
-    cs.writeEntry("RandomTheme", mRandomTheme);
-    cs.writeEntry("ApplicationTips", mAppTips);
-    cs.writeEntry("StaticPosition", mStaticPos);
+    cs.writeEntry( "OnTop", mOnTop );
+    cs.writeEntry( "Offset", mOffset );
+    cs.writeEntry( "Theme", mTheme );
+    cs.writeEntry( "Tips", mTips );
+    cs.writeEntry( "RandomTheme", mRandomTheme );
+    cs.writeEntry( "ApplicationTips", mAppTips );
+    cs.writeEntry( "StaticPosition", mStaticPos );
 
     config->sync();
 }

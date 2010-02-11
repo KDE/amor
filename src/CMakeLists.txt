@@ -1,13 +1,16 @@
 set( amor_SRCS
   main.cpp
+  queueitem.cpp
+  amorsessionwidget.cpp
   amordialog.cpp
   amor.cpp
   amorwidget.cpp
-  amoranim.cpp
-  amorpm.cpp
+  amoranimation.cpp
+  amorthememanager.cpp
+  amorpixmapmanager.cpp
   amorbubble.cpp
   amorconfig.cpp
-  amortips.cpp 
+  amortips.cpp
 )
 
 qt4_add_dbus_adaptor( amor_SRCS org.kde.amor.xml amor.h Amor )

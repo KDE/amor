@@ -1,5 +1,6 @@
 /*
  * Copyright 1999 by Martin R. Jones <mjones@kde.org>
+ * Copyright 2010 by Stefan Böhmann <kde@hilefoks.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,52 +16,24 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#ifndef AMORDIALOG_H
-#define AMORDIALOG_H
+#include "amorsessionwidget.h"
 
-#include <kdialog.h>
-#include "amorconfig.h"
-
-class QListWidget;
-class KTextEdit;
+#include <KApplication>
 
 
-class AmorDialog : public KDialog
+AmorSessionWidget::AmorSessionWidget()
 {
-    Q_OBJECT
-
-    public:
-        AmorDialog(QWidget *parent = 0);
-
-    signals:
-        void changed();
-        void offsetChanged(int);
-
-    protected slots:
-        void slotHighlighted(int);
-        void slotOnTop(bool);
-        void slotRandomTips(bool);
-        void slotRandomTheme(bool);
-        void slotApplicationTips(bool);
-        void slotOffset(int);
-        void slotOk();
-        void slotApply();
-        void slotCancel();
-
-    protected:
-        void readThemes();
-        void addTheme(const QString& file);
-
-    protected:
-        QListWidget *mThemeListView;
-        KTextEdit *mAboutEdit;
-        QStringList mThemes;
-        QStringList mThemeAbout;
-        AmorConfig mConfig;
-};
+    // the only function of this widget is to catch & forward the
+    // saveYourself() signal from the session manager
+    connect( kapp, SIGNAL( saveYourself() ), SLOT( wm_saveyourself() ) );
+}
 
 
-#endif
+void AmorSessionWidget::wm_saveyourself()
+{
+    // no action required currently.
+}
+
 
 // kate: word-wrap off; encoding utf-8; indent-width 4; tab-width 4; line-numbers on; mixed-indent off; remove-trailing-space-save on; replace-tabs-save on; replace-tabs on; space-indent on;
 // vim:set spell et sw=4 ts=4 nowrap cino=l1,cs,U1:

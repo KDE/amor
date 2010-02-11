@@ -28,13 +28,13 @@ struct AmorConfig
     void read();
     void write();
 
-    QString  mTheme;
-    bool     mOnTop;
-    int      mOffset;
-    bool     mTips;
-    bool     mRandomTheme;
-    bool     mAppTips;
-    int      mStaticPos;
+    QString mTheme;
+    bool mOnTop;
+    int mOffset;
+    bool mTips;
+    bool mRandomTheme;
+    bool mAppTips;
+    int mStaticPos;
 };
 
 

@@ -30,12 +30,11 @@ class AmorBubble : public QWidget
 
     public:
         AmorBubble();
-        virtual ~AmorBubble();
 
-        void setOrigin(int x, int y) { mOriginX = x; mOriginY = y; }
-        void setMessage(const QString& message);
+        void setOrigin(int x, int y);
+        void setMessage(const QString &message);
 
-        bool mouseWithin() { return mMouseWithin; }
+        bool mouseWithin();
 
     protected:
         enum VertPos { Top, Bottom };
@@ -43,9 +42,9 @@ class AmorBubble : public QWidget
 
         void calcGeometry();
         void drawBubble(QPainter &p);
-        virtual void paintEvent(QPaintEvent *event);
-        virtual void mouseReleaseEvent(QMouseEvent *event);
-        virtual bool eventFilter( QObject *, QEvent *event);
+        virtual void paintEvent(QPaintEvent *e);
+        virtual void mouseReleaseEvent(QMouseEvent *e);
+        virtual bool eventFilter(QObject *obj, QEvent *e);
 
     protected:
         QString mMessage;       // message to display

@@ -15,48 +15,34 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#ifndef AMORDIALOG_H
-#define AMORDIALOG_H
+#ifndef AMORPIXMAPMANAGER_H
+#define AMORPIXMAPMANAGER_H
 
-#include <kdialog.h>
-#include "amorconfig.h"
+#include <QtCore/QHash>
+#include <QtCore/QString>
 
-class QListWidget;
-class KTextEdit;
+class QPixmap;
 
 
-class AmorDialog : public KDialog
+class AmorPixmapManager
 {
-    Q_OBJECT
+    public:
+        AmorPixmapManager();
+        virtual ~AmorPixmapManager();
+
+        void setPixmapDir(const QString &dir);
+
+        void reset();
+
+        const QPixmap *load(const QString & img);
+        const QPixmap *pixmap(const QString & img) const;
+
+        static AmorPixmapManager* manager();
 
     public:
-        AmorDialog(QWidget *parent = 0);
-
-    signals:
-        void changed();
-        void offsetChanged(int);
-
-    protected slots:
-        void slotHighlighted(int);
-        void slotOnTop(bool);
-        void slotRandomTips(bool);
-        void slotRandomTheme(bool);
-        void slotApplicationTips(bool);
-        void slotOffset(int);
-        void slotOk();
-        void slotApply();
-        void slotCancel();
-
-    protected:
-        void readThemes();
-        void addTheme(const QString& file);
-
-    protected:
-        QListWidget *mThemeListView;
-        KTextEdit *mAboutEdit;
-        QStringList mThemes;
-        QStringList mThemeAbout;
-        AmorConfig mConfig;
+        QString mPixmapDir;                  // get pixmaps from here
+        QHash<QString, QPixmap*> mPixmaps;   // list of pixmaps
+        static AmorPixmapManager *mManager;  // static pointer to instance
 };
 
 
@@ -64,3 +50,4 @@ class AmorDialog : public KDialog
 
 // kate: word-wrap off; encoding utf-8; indent-width 4; tab-width 4; line-numbers on; mixed-indent off; remove-trailing-space-save on; replace-tabs-save on; replace-tabs on; space-indent on;
 // vim:set spell et sw=4 ts=4 nowrap cino=l1,cs,U1:
+
