@@ -423,6 +423,9 @@ void Amor::hideBubble(bool forceDequeue)
 //
 void Amor::selectAnimation(State state)
 {
+    bool changedLocation = true;
+    AmorAnim* oldAnim = mCurrAnim;
+    
     switch (state)
     {
         case Blur:
@@ -434,7 +437,8 @@ void Amor::selectAnimation(State state)
         case Focus:
             hideBubble();
             mCurrAnim = mTheme.random(ANIM_FOCUS);
-            mCurrAnim->reset();
+            if(oldAnim != mCurrAnim)
+                mCurrAnim->reset();
             mTargetWin = mNextTarget;
             if (mTargetWin != None)
             {
@@ -443,11 +447,12 @@ void Amor::selectAnimation(State state)
 		// if the animation falls outside of the working area,
 		// then relocate it so that is inside the desktop again
 		QRect desktopArea = mWin->workArea();
-		mInDesktopBottom = false;
 
 		if (mTargetRect.y() - mCurrAnim->hotspot().y() + mConfig.mOffset <
 		    desktopArea.y())
 		{
+		    if(mInDesktopBottom)
+		        changedLocation = false;
 		    // relocate the animation at the bottom of the screen
 		    mTargetRect = QRect(desktopArea.x(),
 				  desktopArea.y() + desktopArea.height(),
@@ -457,6 +462,8 @@ void Amor::selectAnimation(State state)
 		    // frame, so do not add the offset to its vertical position
 		    mInDesktopBottom = true;
 		}
+                else
+		    mInDesktopBottom = false;
 
 		if ( mTheme.isStatic() )
 		{
@@ -475,7 +482,7 @@ void Amor::selectAnimation(State state)
 		    {
 		        if (mTargetRect.width() == mCurrAnim->frame()->width())
 			    mPosition = mCurrAnim->hotspot().x();
-			else
+			else if(changedLocation)
 			    mPosition = ( KRandom::random() %
 					  (mTargetRect.width() - mCurrAnim->frame()->width()) )
 					 + mCurrAnim->hotspot().x();
@@ -538,7 +545,10 @@ void Amor::selectAnimation(State state)
         mCurrAnim = mBaseAnim;
     }
 
-    mCurrAnim->reset();
+    if(changedLocation)
+        mCurrAnim->reset();
+    else
+        mCurrAnim = oldAnim;
 }
 
 //---------------------------------------------------------------------------
