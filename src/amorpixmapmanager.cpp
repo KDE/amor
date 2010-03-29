@@ -43,7 +43,7 @@ void AmorPixmapManager::setPixmapDir(const QString &dir)
 
 void AmorPixmapManager::reset()
 {
-    mPixmapDir = ".";
+    mPixmapDir = '.';
     mPixmaps.clear();
 }
 
