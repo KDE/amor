@@ -27,8 +27,8 @@
 
 
 AmorThemeManager::AmorThemeManager()
-  : mMaximumSize(0, 0),
-    mConfig( 0 )
+  : mConfig( 0 ),
+    mMaximumSize(0, 0)
 {
 }
 

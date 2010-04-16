@@ -23,10 +23,11 @@
 
 
 AmorConfig::AmorConfig()
-  : mOnTop( false ),
+  : mTheme( "blobrc" ),
+    mOnTop( false ),
     mOffset( 0 ),
-    mTheme( "blobrc" ),
     mTips( false ),
+    mRandomTheme( false ),
     mAppTips( true ),
     mStaticPos( 20 )
 {

@@ -29,9 +29,9 @@
 
 
 AmorAnimation::AmorAnimation(KConfigGroup &config)
-  : mMaximumSize(0, 0),
-    mCurrent( 0 ),
-    mTotalMovement( 0 )
+  : mCurrent( 0 ),
+    mTotalMovement( 0 ),
+    mMaximumSize(0, 0)
 {
     readConfig(config);
 }
