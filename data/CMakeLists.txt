@@ -8,6 +8,7 @@ install( FILES
     eyesrc
     bonhommerc
     nekorc
+    nekokurorc
     pingurc
     wormrc
     billyrc
