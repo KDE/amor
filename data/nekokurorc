@@ -7,7 +7,9 @@
 [Config]
 PixmapPath=pics/animated/neko-kuro
 Description=Neko Kuro
+Description[x-test]=xxNeko Kuroxx
 About=Artwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegel\nKuro (Black) version by Bill Kendrick
+About[x-test]=xxArtwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegel\nKuro (Black) version by Bill Kendrickxx
 Icon=../../preview/neko-kuro.png
 Base=Base
 Sequences=RightScratch,LeftScratch,RunRight,RunLeft,Yawn,RightLick,LeftLick,Claw,JumpRight,JumpLeft
