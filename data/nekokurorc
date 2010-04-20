@@ -7,10 +7,12 @@
 [Config]
 PixmapPath=pics/animated/neko-kuro
 Description=Neko Kuro
+Description[pt]=Neko Kuro
 Description[sv]=Neko Kuro
 Description[uk]=Неко Куро
 Description[x-test]=xxNeko Kuroxx
 About=Artwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegel\nKuro (Black) version by Bill Kendrick
+About[pt]=Criação do oneko de Masayuki Koba\nAMORado por Chris Spiegel\nKuro (Preto) de Bill Kendrick
 About[sv]=Grafik från oneko av Masayuki Koba\nTill Amor av Chris Spiegel\nKuro (svart) version av Bill Kendrick
 About[uk]=Праця від oneko, автор: Masayuki Koba\nАдаптовано до AMOR - Chris Spiegel\nАвтор версії Куро (чорної) — Bill Kendrick
 About[x-test]=xxArtwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegel\nKuro (Black) version by Bill Kendrickxx
