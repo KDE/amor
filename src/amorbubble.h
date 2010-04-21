@@ -18,44 +18,38 @@
 #ifndef AMORBUBBLE_H
 #define AMORBUBBLE_H
 
-#include <QWidget>
-#include <QBitmap>
+#include <QLabel>
+#include <QPoint>
 
-class KTextBrowser;
+class QLabel;
 
 
-class AmorBubble : public QWidget
+class AmorBubble : public QLabel
 {
     Q_OBJECT
 
     public:
         AmorBubble();
 
-        void setOrigin(int x, int y);
-        void setMessage(const QString &message);
+        void setOrigin(int x, int y) { move( x + 10, y - 10= ); }
+        void setMessage(const QString &message) { setText( message ); show(); }
 
-        bool mouseWithin();
-
-    protected:
-        enum VertPos { Top, Bottom };
-        enum HorzPos { Left, Right };
-
-        void calcGeometry();
-        void drawBubble(QPainter &p);
-        virtual void paintEvent(QPaintEvent *e);
-        virtual void mouseReleaseEvent(QMouseEvent *e);
-        virtual bool eventFilter(QObject *obj, QEvent *e);
+        bool mouseWithin() { return m_mouseWithin; }
 
     protected:
-        QString mMessage;       // message to display
-        int mOriginX;           // X origin of bubble arrow
-        int mOriginY;           // Y origin of bubble arrow
-        QRect mBound;           // bounds of the text
-        QBitmap mMask;          // shape mask
-        VertPos mArrowVert;     // vertical position of the arrow
-        HorzPos mArrowHorz;     // horizontal position of the arrow
-        KTextBrowser *mBrowser; // displays the message
-        bool mMouseWithin;      // the mouse pointer is inside the bubble
+        void enterEvent(QEvent *event) { Q_UNUSED( event ); m_mouseWithin = true; }
+        void leaveEvent(QEvent *event) { Q_UNUSED( event ); m_mouseWithin = false; }        
+        void mouseReleaseEvent(QMouseEvent *event) { Q_UNUSED( event ); hide(); }
+
+    protected:        
+        QLabel *m_label;        // displays the message
+        //QPoint m_position;
+        bool m_mouseWithin;      // the mouse pointer is inside the bubble
+        
+        //QRect mBound;           // bounds of the text
+        //QBitmap mMask;          // shape mask
+        //VertPos mArrowVert;     // vertical position of the arrow
+        //HorzPos mArrowHorz;     // horizontal position of the arrow
 };
 
 
