@@ -31,7 +31,7 @@ class AmorBubble : public QLabel
     public:
         AmorBubble();
 
-        void setOrigin(int x, int y) { move( x + 10, y - 10= ); }
+        void setOrigin(int x, int y) { move( x + 10, y - 10 ); }
         void setMessage(const QString &message) { setText( message ); show(); }
 
         bool mouseWithin() { return m_mouseWithin; }
