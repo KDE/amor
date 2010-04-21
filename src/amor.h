@@ -47,11 +47,10 @@ class Amor : public QObject
 
     public:
         Amor();
-        virtual ~Amor();
+        ~Amor();
 
-        virtual void showTip(const QString &tip);
-        virtual void showMessage(const QString &message);
-        virtual void showMessage(const QString &message, int msec);
+        void showTip(const QString &tip);
+        void showMessage(const QString &message, int msec = -1);
 
         void reset();
 
@@ -81,11 +80,8 @@ class Amor : public QObject
         enum State { Focus, Blur, Normal, Sleeping, Waking, Destroy };
 
         bool readConfig();
-        void readGroupConfig(KConfigBase &config, QList<AmorAnimation> &animList, const char *seq);
         void showBubble();
-        AmorAnimation *randomAnimation(QList<AmorAnimation> &animList);
         void selectAnimation(State state=Normal);
-        void active();
 
     private:
         KWindowSystem *mWin;

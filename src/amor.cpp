@@ -188,11 +188,6 @@ void Amor::showTip(const QString &tip)
 }
 
 
-void Amor::showMessage(const QString &message)
-{
-    showMessage( message, -1 );
-}
-
 void Amor::showMessage( const QString &message , int msec )
 {
     // FIXME: What should be done about messages and tips while the screensaver is on?
