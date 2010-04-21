@@ -34,6 +34,8 @@ static const char description[] = I18N_NOOP("KDE creature for your desktop");
 
 int main(int argc, char *argv[])
 {
+    QApplication::setGraphicsSystem( "native" );
+
     KAboutData about( "amor", 0, ki18n( "amor" ), AMOR_VERSION );
     about.setLicense( KAboutData::License_GPL );
     about.setShortDescription( ki18n( description ) );
