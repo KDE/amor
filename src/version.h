@@ -19,7 +19,7 @@
 #define VERSION_H
 
 #ifndef AMOR_VERSION
-#define AMOR_VERSION "2.3.1"
+#define AMOR_VERSION "2.4.0"
 #endif
 
 #endif
