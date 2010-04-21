@@ -35,6 +35,7 @@ static const char description[] = I18N_NOOP("KDE creature for your desktop");
 int main(int argc, char *argv[])
 {
     KAboutData about( "amor", 0, ki18n( "amor" ), AMOR_VERSION );
+    about.setLicense( KAboutData::License_GPL );
     about.setShortDescription( ki18n( description ) );
     about.setCopyrightStatement( ki18n( "Copyright 1999, Martin R. Jones" ) );
     about.addAuthor( ki18n("Martin R. Jones"), KLocalizedString(), "mjones@kde.org" );
