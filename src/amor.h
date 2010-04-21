@@ -71,7 +71,6 @@ class Amor : public QObject
         void slotConfigure();
         void slotConfigChanged();
         void slotOffsetChanged(int);
-        void slotAbout();
         void slotWidgetDragged( const QPoint &delta, bool release );
         void restack();
         void hideBubble(bool forceDequeue = false);

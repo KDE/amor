@@ -634,18 +634,6 @@ void Amor::slotOffsetChanged(int off)
 }
 
 
-void Amor::slotAbout()
-{
-    QString about = i18nc( "@label:textbox", "Amor Version %1\n\n", QString::fromLatin1( AMOR_VERSION ) ) +
-                    i18nc( "@label:textbox", "Amusing Misuse Of Resources\n\n") +
-                    i18nc( "@label:textbox", "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n\n" ) +
-                    i18nc( "@label:textbox", "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n" ) +
-                    i18nc( "@label:textbox", "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</email>\n" ) +
-                            "\nhttp://www.powerup.com.au/~mjones/amor/";
-    KMessageBox::about( 0, about, i18nc( "@label:textbox", "About Amor" ) );
-}
-
-
 void Amor::slotWidgetDragged(const QPoint &delta, bool release)
 {
     if( mCurrAnim->frame() ) {
