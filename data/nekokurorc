@@ -7,6 +7,7 @@
 [Config]
 PixmapPath=pics/animated/neko-kuro
 Description=Neko Kuro
+Description[ca]=Neko Kuro
 Description[cs]=Neko Kuro
 Description[da]=Neko Kuro
 Description[de]=Neko Kuro
@@ -26,6 +27,7 @@ Description[uk]=Неко Куро
 Description[x-test]=xxNeko Kuroxx
 Description[zh_TW]=Neko Kuro
 About=Artwork from oneko by Masayuki Koba\nAMOR'd by Chris Spiegel\nKuro (Black) version by Bill Kendrick
+About[ca]=Treball gràfic de oneko per Masayuki Koba\nAMOR per Chris Spiegel\nVersió del Kuro (Negre) per Bill Kendrick
 About[cs]=Grafika z programu oneko, Masayuki Koba\nAMOR'd: Chris Spiegel\nKuro (černé): Bill Kendrick
 About[da]=Grafik fra oneko af Masayuki Koba\nAMOR'd af Chris Spiegel\nKuro (sort) version af Bill Kendrick
 About[de]=Zeichnungen der Katze (oneko) von Masayuki Koba\nAuf AMOR portiert von Chris Spiegel\nKuro-Version (schwarze Katze) von Bill Kendrick
