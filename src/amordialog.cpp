@@ -108,7 +108,7 @@ void AmorDialog::readThemes()
 
     // Non-recursive search for theme files, with the relative paths stored
     // in files so that absolute paths are not used.
-    KGlobal::dirs()->findAllResources( "appdata", "*rc", KStandardDirs::NoSearchOptions, files );
+    KGlobal::dirs()->findAllResources( "appdata", QLatin1String( "*rc" ), KStandardDirs::NoSearchOptions, files );
 
     for(QStringList::ConstIterator it = files.constBegin(); it != files.constEnd(); ++it) {
         addTheme( *it );
@@ -126,8 +126,8 @@ void AmorDialog::addTheme(const QString& file)
         return;
     }
 
-    pixmapPath += '/';
-    if( pixmapPath[0] != '/' ) {
+    pixmapPath += QLatin1Char( '/' );
+    if( pixmapPath[0] != QLatin1Char( '/' ) ) {
         // relative to config file. We add a / to indicate the dir
         pixmapPath = KStandardDirs::locate("appdata", pixmapPath);
     }

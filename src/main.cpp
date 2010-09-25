@@ -34,7 +34,7 @@ static const char description[] = I18N_NOOP("KDE creature for your desktop");
 
 int main(int argc, char *argv[])
 {
-    QApplication::setGraphicsSystem( "native" );
+    QApplication::setGraphicsSystem( QLatin1String( "native" ) );
 
     KAboutData about( "amor", 0, ki18n( "amor" ), AMOR_VERSION );
     about.setLicense( KAboutData::License_GPL );
@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
     AmorSessionWidget *sessionWidget = new AmorSessionWidget; // session management
     app.setTopWidget( sessionWidget );
 
-    QDBusConnection::sessionBus().registerObject( "/Amor",new Amor() );
+    QDBusConnection::sessionBus().registerObject( QLatin1String( "/Amor" ),new Amor() );
     return app.exec();
 }
 

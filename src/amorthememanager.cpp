@@ -54,11 +54,11 @@ bool AmorThemeManager::setTheme(const QString & file)
         return false;
     }
 
-    if( pixmapPath[0] == '/' ) {
+    if( pixmapPath[0] == QLatin1Char( '/' ) ) {
         mPath = pixmapPath; // absolute path to pixmaps
     }
     else {
-        mPath.truncate( mPath.lastIndexOf( '/' ) + 1 ); // relative to config file
+        mPath.truncate( mPath.lastIndexOf( QLatin1Char( '/' ) ) + 1 ); // relative to config file
         mPath += pixmapPath;
     }
 

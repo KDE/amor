@@ -31,7 +31,7 @@
 
 AmorTips::AmorTips()
 {
-    KGlobal::locale()->insertCatalog( "ktip" ); // For ktip tip translations
+    KGlobal::locale()->insertCatalog( QLatin1String(  "ktip" ) ); // For ktip tip translations
 }
 
 
@@ -68,7 +68,7 @@ bool AmorTips::readKTips()
 {
     QString fname;
 
-    fname = KStandardDirs::locate("data", QString("kdewizard/tips"));
+    fname = KStandardDirs::locate("data", QLatin1String("kdewizard/tips"));
 
     if( fname.isEmpty() ) {
         return false;
@@ -77,20 +77,20 @@ bool AmorTips::readKTips()
     QFile f( fname );
     if( f.open( QIODevice::ReadOnly ) ) {
         // Reading of tips must be exactly as in KTipDatabase::loadTips for translation
-        QString content = f.readAll();
-        const QRegExp rx( "\\n+" );
+        QString content =QLatin1String( f.readAll() );
+        const QRegExp rx( QLatin1String( "\\n+" ) );
 
         int pos = -1;
-        while( ( pos = content.indexOf( "<html>", pos + 1, Qt::CaseInsensitive ) ) != -1 ) {
+        while( ( pos = content.indexOf( QLatin1String( "<html>" ), pos + 1, Qt::CaseInsensitive ) ) != -1 ) {
             QString tip = content
-                            .mid( pos + 6, content.indexOf("</html>", pos, Qt::CaseInsensitive) - pos - 6 )
-                            .replace( rx, "\n" );
+                            .mid( pos + 6, content.indexOf(QLatin1String( "</html>" ), pos, Qt::CaseInsensitive) - pos - 6 )
+                            .replace( rx, QLatin1String( "\n" ) );
 
-            if( !tip.endsWith('\n') ) {
-                tip += '\n';
+            if( !tip.endsWith(QLatin1Char( '\n' )) ) {
+                tip += QLatin1Char( '\n' );
             }
 
-            if( tip.startsWith( '\n' ) ) {
+            if( tip.startsWith( QLatin1Char( '\n' ) ) ) {
                 tip = tip.mid( 1 );
             }
 
@@ -138,7 +138,7 @@ bool AmorTips::readTip(QFile &file)
     }
 
     if( !tip.isEmpty() ) {
-        if( tip[ tip.length()-1 ] == '\n' ) {
+        if( tip[ tip.length()-1 ] == QLatin1Char( '\n' ) ) {
             tip.truncate( tip.length()-1 );
         }
         mTips.append( tip );

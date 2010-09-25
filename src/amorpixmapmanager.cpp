@@ -24,7 +24,7 @@ AmorPixmapManager *AmorPixmapManager::mManager = 0;
 
 
 AmorPixmapManager::AmorPixmapManager()
-  : mPixmapDir(".")
+  : mPixmapDir(QLatin1String( "." ))
 {
 }
 
@@ -43,7 +43,7 @@ void AmorPixmapManager::setPixmapDir(const QString &dir)
 
 void AmorPixmapManager::reset()
 {
-    mPixmapDir = '.';
+    mPixmapDir = QLatin1Char( '.' );
     mPixmaps.clear();
 }
 
@@ -55,7 +55,7 @@ const QPixmap* AmorPixmapManager::load(const QString & img)
 
     if( !pixmap ) {
         // pixmap has not yet been loaded.
-        QString path = mPixmapDir + QString( "/" ) + img;
+        QString path = mPixmapDir + QLatin1String( "/" ) + img;
         pixmap = new QPixmap( path );
 
         if( !pixmap->isNull() ) {

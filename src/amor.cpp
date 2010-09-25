@@ -79,7 +79,7 @@ Amor::Amor()
     mForceHideAmorWidget( false )
 {
     new AmorAdaptor( this );
-    QDBusConnection::sessionBus().registerObject( "/Amor", this );
+    QDBusConnection::sessionBus().registerObject( QLatin1String( "/Amor" ), this );
 
     if( !readConfig() ) {
         qApp->quit();
@@ -128,14 +128,14 @@ Amor::Amor()
         mTimer->start( 0 );
     }
 
-    if( !QDBusConnection::sessionBus().connect( QString(), QString(), "org.kde.amor",
-            "KDE_stop_screensaver", this, SLOT( screenSaverStopped() ) ) )
+    if( !QDBusConnection::sessionBus().connect( QString(), QString(), QLatin1String( "org.kde.amor" ),
+            QLatin1String( "KDE_stop_screensaver" ), this, SLOT( screenSaverStopped() ) ) )
     {
         kDebug(10000) << "Could not attach DBus signal: KDE_stop_screensaver()";
     }
 
-    if( !QDBusConnection::sessionBus().connect( QString(), QString(), "org.kde.amor",
-            "KDE_start_screensaver", this, SLOT( screenSaverStarted() ) ) )
+    if( !QDBusConnection::sessionBus().connect( QString(), QString(), QLatin1String( "org.kde.amor" ),
+            QLatin1String( "KDE_start_screensaver" ), this, SLOT( screenSaverStarted() ) ) )
     {
         kDebug(10000) << "Could not attach DBus signal: KDE_start_screensaver()";
     }
@@ -233,7 +233,7 @@ bool Amor::readConfig()
     mConfig.read();
 
     if( mConfig.mTips ) {
-        mTips.setFile( TIPS_FILE );
+        mTips.setFile(QLatin1String( TIPS_FILE ) );
     }
 
     // Select a random theme if user requested it
@@ -241,7 +241,7 @@ bool Amor::readConfig()
         QStringList files;
 
         // Store relative paths into files to avoid storing absolute pathnames.
-        KGlobal::dirs()->findAllResources( "appdata", "*rc", KStandardDirs::NoSearchOptions, files );
+        KGlobal::dirs()->findAllResources( "appdata", QLatin1String( "*rc" ), KStandardDirs::NoSearchOptions, files );
         int randomTheme = KRandom::random() % files.count();
         mConfig.mTheme = files.at( randomTheme );
     }
@@ -257,21 +257,21 @@ bool Amor::readConfig()
 
         // Read all the standard animation groups
         for(int i = 0; groups[i]; ++i) {
-            if( !mTheme.readGroup( groups[i] ) ) {
-                KMessageBox::error( 0, i18nc( "@info:status", "Error reading group: " ) + groups[i] );
+            if( !mTheme.readGroup(QLatin1String( groups[i] ) ) ) {
+                KMessageBox::error( 0, i18nc( "@info:status", "Error reading group: " ) + QLatin1String( groups[i] ) );
                 return false;
             }
         }
     }
     else {
-        if( !mTheme.readGroup( ANIM_BASE ) ) {
-            KMessageBox::error( 0, i18nc( "@info:status", "Error reading group: " ) + ANIM_BASE );
+        if( !mTheme.readGroup(QLatin1String( ANIM_BASE ) ) ) {
+            KMessageBox::error( 0, i18nc( "@info:status", "Error reading group: " ) + QLatin1String( ANIM_BASE ) );
             return false;
         }
     }
 
     // Get the base animation
-    mBaseAnim = mTheme.random( ANIM_BASE );
+    mBaseAnim = mTheme.random(QLatin1String( ANIM_BASE ) );
 
     return true;
 }
@@ -327,13 +327,13 @@ void Amor::selectAnimation(State state)
     switch( state ) {
     case Blur:
         hideBubble();
-        mCurrAnim = mTheme.random( ANIM_BLUR );
+        mCurrAnim = mTheme.random(QLatin1String( ANIM_BLUR ) );
         mState = Focus;
         break;
 
     case Focus:
         hideBubble();
-        mCurrAnim = mTheme.random( ANIM_FOCUS );
+        mCurrAnim = mTheme.random(QLatin1String( ANIM_FOCUS ) );
         if( oldAnim != mCurrAnim ) {
             mCurrAnim->reset();
         }
@@ -403,16 +403,16 @@ void Amor::selectAnimation(State state)
 
     case Destroy:
         hideBubble();
-        mCurrAnim = mTheme.random( ANIM_DESTROY );
+        mCurrAnim = mTheme.random(QLatin1String( ANIM_DESTROY ) );
         mState = Focus;
         break;
 
     case Sleeping:
-        mCurrAnim = mTheme.random( ANIM_SLEEP );
+        mCurrAnim = mTheme.random(QLatin1String( ANIM_SLEEP ) );
         break;
 
     case Waking:
-        mCurrAnim = mTheme.random( ANIM_WAKE );
+        mCurrAnim = mTheme.random(QLatin1String( ANIM_WAKE ) );
         mState = Normal;
         break;
 
@@ -421,7 +421,7 @@ void Amor::selectAnimation(State state)
         // is not the base, otherwise select the base.  This makes us
         // alternate between the base animation and a random animination.
         if( !mBubble && mCurrAnim == mBaseAnim ) {
-            mCurrAnim = mTheme.random( ANIM_NORMAL );
+            mCurrAnim = mTheme.random(QLatin1String( ANIM_NORMAL ) );
         }
         else {
             mCurrAnim = mBaseAnim;
@@ -502,15 +502,15 @@ void Amor::slotMouseClicked(const QPoint &pos)
 #ifdef __GNUC__
 #warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)
 #endif
-        helpMenu->setIcon( SmallIcon( "help-contents" ) );
+        helpMenu->setIcon( SmallIcon( QLatin1String( "help-contents" ) ) );
         helpMenu->setTitle( i18nc( "@action:inmenu Amor", "&Help" ) );
 
         mMenu = new KMenu( 0 );
-        mMenu->addTitle( "Amor" ); // I really don't want this i18n'ed
-        mMenu->addAction( SmallIcon( "configure" ), i18nc( "@action:inmenu Amor", "&Configure..." ), this, SLOT( slotConfigure() ) );
+        mMenu->addTitle( QLatin1String( "Amor" ) ); // I really don't want this i18n'ed
+        mMenu->addAction( SmallIcon( QLatin1String ("configure" ) ), i18nc( "@action:inmenu Amor", "&Configure..." ), this, SLOT( slotConfigure() ) );
         mMenu->addSeparator();
         mMenu->addMenu( helpMenu );
-        mMenu->addAction( SmallIcon( "application-exit" ), i18nc( "@action:inmenu Amor", "&Quit" ), kapp, SLOT( quit() ) );
+        mMenu->addAction( SmallIcon( QLatin1String( "application-exit" ) ), i18nc( "@action:inmenu Amor", "&Quit" ), kapp, SLOT( quit() ) );
     }
 
     mMenu->exec( pos );
