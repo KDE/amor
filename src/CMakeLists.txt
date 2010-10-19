@@ -20,6 +20,6 @@ target_link_libraries( amor ${KDE4_KDEUI_LIBS} ${X11_LIBRARIES} )
 
 install( TARGETS amor  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
-install( FILES amor.desktop     DESTINATION ${XDG_APPS_INSTALL_DIR} )
+install( PROGRAMS amor.desktop     DESTINATION ${XDG_APPS_INSTALL_DIR} )
 install( FILES org.kde.amor.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
 
