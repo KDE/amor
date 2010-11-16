@@ -39,10 +39,28 @@ int main(int argc, char *argv[])
     KAboutData about( "amor", 0, ki18n( "amor" ), AMOR_VERSION );
     about.setLicense( KAboutData::License_GPL );
     about.setShortDescription( ki18n( description ) );
-    about.setCopyrightStatement( ki18n( "Copyright 1999, Martin R. Jones" ) );
-    about.addAuthor( ki18n("Martin R. Jones"), KLocalizedString(), "mjones@kde.org" );
-    about.addAuthor( ki18n( "Gerardo Puga" ), KLocalizedString(), "gpuga@gioia.ing.unlp.edu.ar" );
-    about.addAuthor( ki18n( "Stefan Böhmann" ), ki18n("Current maintainer"), "kde@hilefoks.org" );
+    about.setCopyrightStatement( ki18n( "1999 by Martin R. Jones\n2010 by Stefan Böhmann" ) );
+
+    about.addAuthor(
+        ki18n( "Stefan Böhmann" ),
+        ki18n( "Current maintainer" ),
+        "kde@hilefoks.org",
+        "http://www.hilefoks.org",
+        "hilefoks"
+    );
+
+    about.addAuthor(
+        ki18n("Martin R. Jones"),
+        KLocalizedString(),
+        "mjones@kde.org"
+    );
+
+    about.addAuthor(
+        ki18n( "Gerardo Puga" ),
+        KLocalizedString(),
+        "gpuga@gioia.ing.unlp.edu.ar"
+    );
+
     KCmdLineArgs::init( argc, argv, &about );
 
     if( !KUniqueApplication::start() ) {
