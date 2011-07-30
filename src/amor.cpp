@@ -94,31 +94,31 @@ Amor::Amor()
     mState       = Normal;
 
     mWin = KWindowSystem::self();
-    connect( mWin, SIGNAL( activeWindowChanged(WId) ), this, SLOT( slotWindowActivate(WId) ) );
-    connect( mWin, SIGNAL( windowRemoved(WId) ), this, SLOT( slotWindowRemove(WId) ) );
-    connect( mWin, SIGNAL( stackingOrderChanged() ), this, SLOT( slotStackingChanged() ) );
-    connect( mWin, SIGNAL( windowChanged(WId, const unsigned long *) ),
-            this, SLOT( slotWindowChange(WId, const unsigned long *) ) );
-    connect( mWin, SIGNAL( currentDesktopChanged(int) ), this, SLOT( slotDesktopChange(int) ) );
+    connect( mWin, SIGNAL(activeWindowChanged(WId)), this, SLOT(slotWindowActivate(WId)) );
+    connect( mWin, SIGNAL(windowRemoved(WId)), this, SLOT(slotWindowRemove(WId)) );
+    connect( mWin, SIGNAL(stackingOrderChanged()), this, SLOT(slotStackingChanged()) );
+    connect( mWin, SIGNAL(windowChanged(WId,const ulong*)),
+            this, SLOT(slotWindowChange(WId,const ulong*)) );
+    connect( mWin, SIGNAL(currentDesktopChanged(int)), this, SLOT(slotDesktopChange(int)) );
 
     mAmor = new AmorWidget;
-    connect( mAmor, SIGNAL( mouseClicked(const QPoint &) ), SLOT( slotMouseClicked(const QPoint &) ) );
-    connect( mAmor, SIGNAL(dragged(const QPoint &, bool) ), SLOT( slotWidgetDragged(const QPoint &, bool) ) );
+    connect( mAmor, SIGNAL(mouseClicked(QPoint)), SLOT(slotMouseClicked(QPoint)) );
+    connect( mAmor, SIGNAL(dragged(QPoint,bool)), SLOT(slotWidgetDragged(QPoint,bool)) );
     mAmor->resize(mTheme.maximumSize());
 
     mTimer = new QTimer( this );
-    connect( mTimer, SIGNAL( timeout() ), SLOT( slotTimeout() ) );
+    connect( mTimer, SIGNAL(timeout()), SLOT(slotTimeout()) );
 
     mStackTimer = new QTimer( this );
-    connect( mStackTimer, SIGNAL( timeout() ), SLOT( restack() ) );
+    connect( mStackTimer, SIGNAL(timeout()), SLOT(restack()) );
 
     mBubbleTimer = new QTimer( this );
-    connect( mBubbleTimer, SIGNAL( timeout() ), SLOT( slotBubbleTimeout() ) );
+    connect( mBubbleTimer, SIGNAL(timeout()), SLOT(slotBubbleTimeout()) );
 
     std::time( &mActiveTime );
     mCursPos = QCursor::pos();
     mCursorTimer = new QTimer( this );
-    connect( mCursorTimer, SIGNAL( timeout() ), SLOT( slotCursorTimeout() ) );
+    connect( mCursorTimer, SIGNAL(timeout()), SLOT(slotCursorTimeout()) );
     mCursorTimer->start( 500 );
 
     if( mWin->activeWindow() ) {
@@ -129,13 +129,13 @@ Amor::Amor()
     }
 
     if( !QDBusConnection::sessionBus().connect( QString(), QString(), QLatin1String( "org.kde.amor" ),
-            QLatin1String( "KDE_stop_screensaver" ), this, SLOT( screenSaverStopped() ) ) )
+            QLatin1String( "KDE_stop_screensaver" ), this, SLOT(screenSaverStopped()) ) )
     {
         kDebug(10000) << "Could not attach DBus signal: KDE_stop_screensaver()";
     }
 
     if( !QDBusConnection::sessionBus().connect( QString(), QString(), QLatin1String( "org.kde.amor" ),
-            QLatin1String( "KDE_start_screensaver" ), this, SLOT( screenSaverStarted() ) ) )
+            QLatin1String( "KDE_start_screensaver" ), this, SLOT(screenSaverStarted()) ) )
     {
         kDebug(10000) << "Could not attach DBus signal: KDE_start_screensaver()";
     }
@@ -507,10 +507,10 @@ void Amor::slotMouseClicked(const QPoint &pos)
 
         mMenu = new KMenu( 0 );
         mMenu->addTitle( QLatin1String( "Amor" ) ); // I really don't want this i18n'ed
-        mMenu->addAction( SmallIcon( QLatin1String ("configure" ) ), i18nc( "@action:inmenu Amor", "&Configure..." ), this, SLOT( slotConfigure() ) );
+        mMenu->addAction( SmallIcon( QLatin1String ("configure" ) ), i18nc( "@action:inmenu Amor", "&Configure..." ), this, SLOT(slotConfigure()) );
         mMenu->addSeparator();
         mMenu->addMenu( helpMenu );
-        mMenu->addAction( SmallIcon( QLatin1String( "application-exit" ) ), i18nc( "@action:inmenu Amor", "&Quit" ), kapp, SLOT( quit() ) );
+        mMenu->addAction( SmallIcon( QLatin1String( "application-exit" ) ), i18nc( "@action:inmenu Amor", "&Quit" ), kapp, SLOT(quit()) );
     }
 
     mMenu->exec( pos );
@@ -604,8 +604,8 @@ void Amor::slotConfigure()
 {
     if( !mAmorDialog ) {
         mAmorDialog = new AmorDialog();
-        connect( mAmorDialog, SIGNAL( changed() ), SLOT( slotConfigChanged() ) );
-        connect( mAmorDialog, SIGNAL( offsetChanged(int) ), SLOT( slotOffsetChanged(int) ) );
+        connect( mAmorDialog, SIGNAL(changed()), SLOT(slotConfigChanged()) );
+        connect( mAmorDialog, SIGNAL(offsetChanged(int)), SLOT(slotOffsetChanged(int)) );
     }
 
     mAmorDialog->show();

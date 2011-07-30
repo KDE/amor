@@ -55,7 +55,7 @@ AmorDialog::AmorDialog(QWidget *parent)
     mThemeListView->setIconSize( QSize( 32, 32 ) );
     mThemeListView->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
     mThemeListView->setAlternatingRowColors( true );
-    connect( mThemeListView, SIGNAL( currentRowChanged(int) ), SLOT( slotHighlighted(int) ) );
+    connect( mThemeListView, SIGNAL(currentRowChanged(int)), SLOT(slotHighlighted(int)) );
     mThemeListView->setMinimumSize( fontMetrics().maxWidth()*20, fontMetrics().lineSpacing()*6 );
     gridLayout->addWidget( mThemeListView, 1, 0 );
 
@@ -72,32 +72,32 @@ AmorDialog::AmorDialog(QWidget *parent)
     slider->setRange( -40, 40 );
     slider->setPageStep( 5 );
     slider->setValue( mConfig.mOffset );
-    connect( slider, SIGNAL( valueChanged(int) ), SLOT( slotOffset(int) ) );
+    connect( slider, SIGNAL(valueChanged(int)), SLOT(slotOffset(int)) );
     gridLayout->addWidget( slider, 1, 1, 2, 1 );
 
     // Always on top
     QCheckBox *checkBox = new QCheckBox( i18n( "Always on top" ), mainwidget );
-    connect( checkBox, SIGNAL( toggled(bool) ), SLOT( slotOnTop(bool) ) );
+    connect( checkBox, SIGNAL(toggled(bool)), SLOT(slotOnTop(bool)) );
     checkBox->setChecked( mConfig.mOnTop );
     gridLayout->addWidget( checkBox, 3, 0, 1, 2 );
 
     checkBox = new QCheckBox( i18n( "Show random tips" ), mainwidget );
-    connect( checkBox, SIGNAL( toggled(bool) ), SLOT( slotRandomTips(bool) ) );
+    connect( checkBox, SIGNAL(toggled(bool)), SLOT(slotRandomTips(bool)) );
     checkBox->setChecked( mConfig.mTips ); // always keep this one after the connect, or the QList would not be grayed when it should
     gridLayout->addWidget( checkBox, 4, 0, 1, 2 );
 
     checkBox = new QCheckBox( i18n( "Use a random character" ), mainwidget );
-    connect( checkBox, SIGNAL( toggled(bool) ), SLOT( slotRandomTheme(bool) ) );
+    connect( checkBox, SIGNAL(toggled(bool)), SLOT(slotRandomTheme(bool)) );
     checkBox->setChecked( mConfig.mRandomTheme );
     gridLayout->addWidget( checkBox, 5, 0, 1, 2 );
 
     checkBox = new QCheckBox( i18n( "Allow application tips" ), mainwidget );
-    connect( checkBox, SIGNAL( toggled(bool) ), SLOT( slotApplicationTips(bool) ) );
+    connect( checkBox, SIGNAL(toggled(bool)), SLOT(slotApplicationTips(bool)) );
     checkBox->setChecked( mConfig.mAppTips );
     gridLayout->addWidget( checkBox, 6, 0, 1, 2 );
-    connect( this, SIGNAL( okClicked() ), SLOT( slotOk() ) );
-    connect( this, SIGNAL( applyClicked() ), SLOT( slotApply() ) );
-    connect( this, SIGNAL( cancelClicked() ), SLOT( slotCancel() ) );
+    connect( this, SIGNAL(okClicked()), SLOT(slotOk()) );
+    connect( this, SIGNAL(applyClicked()), SLOT(slotApply()) );
+    connect( this, SIGNAL(cancelClicked()), SLOT(slotCancel()) );
     readThemes();
 }
 
