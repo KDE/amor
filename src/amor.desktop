@@ -73,6 +73,7 @@ Icon=amor
 Type=Application
 X-DocPath=amor/index.html
 GenericName=On-Screen Creature
+GenericName[ar]=مخلوق على الشاشة
 GenericName[be]=Экранная жывёла
 GenericName[bg]=Усмивка за работното място
 GenericName[bn]=পর্দায় বসবাসকারী জন্তু
