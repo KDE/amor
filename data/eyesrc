@@ -5,6 +5,7 @@
 PixmapPath=pics/animated/eyes
 Description=Crazy Eyes
 Description[af]=Mal Oë
+Description[ar]=العيون المجنونة
 Description[be]=Вочы
 Description[bg]=Луди очички
 Description[bn]=পাগলা চোখ
@@ -72,6 +73,7 @@ Description[zh_CN]=疯狂双眼
 Description[zh_TW]=瘋狂的眼睛
 About=By Jean-Claude Dumas
 About[af]=Deur Jean-Claude Dumas
+About[ar]=By Jean-Claude Dumas
 About[be]=Аўтар Jean-Claude Dumas
 About[bg]=Автор Жан Клод Дюма
 About[bn]=তৈরি করেছেন জাঁ-ক্ল ডুমাস
