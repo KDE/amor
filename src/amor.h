@@ -21,9 +21,9 @@
 
 #include <ctime>
 
-#include <QtGui/QWidget>
-#include <QtCore/QQueue>
-#include <QtCore/QList>
+#include <QWidget>
+#include <QQueue>
+#include <QList>
 
 #include "amoranimation.h"
 #include "amortips.h"
@@ -36,7 +36,7 @@ class AmorWidget;
 
 class QTimer;
 class KWindowSystem;
-class KMenu;
+class QMenu;
 class KConfigBase;
 class QueueItem;
 
@@ -99,7 +99,7 @@ class Amor : public QObject
         QTimer *mStackTimer;            // Restacking timer
         QTimer *mBubbleTimer;           // Bubble tip timer (GP: I didn't create this one, it had no use when I found it)
         AmorDialog *mAmorDialog;        // Setup dialog
-        KMenu *mMenu;                   // Our menu
+        QMenu *mMenu;                   // Our menu
         std::time_t mActiveTime;        // The time an active event occurred
         QPoint mCursPos;                // The last recorded position of the pointer
         QString mTipText;               // Text to display in a bubble when possible

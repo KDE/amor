@@ -1,20 +1,38 @@
-project( amor )
+cmake_minimum_required(VERSION 3.1)
+project(amor)
+
+if (POLICY CMP0063)
+    cmake_policy(SET CMP0063 NEW)
+endif()
+
+set(ECM_VERSION "5.39.0")
+find_package(ECM ${ECM_VERSION} CONFIG REQUIRED)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+include(ECMInstallIcons)
+include(KDEInstallDirs)
+
+set(CMAKE_AUTOMOC ON)
+
+set(QT_REQUIRED_VERSION "5.8.0")
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED
+    Core
+    DBus
+    Widgets
+    X11Extras
+)
+
+set(KF5_VERSION "5.39.0")
+find_package(KF5DocTools ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5KDELibs4Support ${KF5_VERSION} CONFIG REQUIRED)
+
+find_package(X11 REQUIRED)
+
+
 # Search KDE installation
-find_package( KDE4 REQUIRED )
-include( KDE4Defaults )
-include( MacroLibrary )
-
-add_definitions( ${QT_DEFINITIONS} ${QT_QTDBUS_DEFINITIONS} ${KDE4_DEFINITIONS} )
-add_definitions( -DQT_NO_CAST_FROM_ASCII )
-add_definitions( -DQT_NO_CAST_TO_ASCII )
+add_definitions(-DQT_NO_CAST_FROM_ASCII)
+add_definitions(-DQT_NO_CAST_TO_ASCII)
 add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
-include_directories( ${KDE4_INCLUDES} )
-
-# The FindKDE4.cmake module sets _KDE4_PLATFORM_DEFINITIONS with
-# definitions like _GNU_SOURCE that are needed on each platform.
-# Put configure checks below this line.
-set( CMAKE_REQUIRED_DEFINITIONS ${_KDE4_PLATFORM_DEFINITIONS} )
-remove_definitions(-DQT3_SUPPORT_WARNINGS -DQT3_SUPPORT)
+add_definitions(-DQT_NO_DEPRECATED_BEFORE=0x060000)
 
 add_subdirectory( data )
 add_subdirectory( src )

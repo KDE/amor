@@ -21,6 +21,7 @@
 #include <QPainter>
 #include <QMouseEvent>
 #include <QX11Info>
+#include <QBuffer>
 
 #include <X11/Xlib.h>
 #include <X11/extensions/shape.h>
@@ -41,7 +42,15 @@ void AmorWidget::setPixmap(const QPixmap *pixmap)
 
     if( m_pixmap ) {
         if( !m_pixmap->mask().isNull() ) {
-            XShapeCombineMask( QX11Info::display(), winId(), ShapeBounding, 0, 0, m_pixmap->mask().handle(), ShapeSet );
+            auto mask = m_pixmap->mask();
+            QByteArray ba;
+            QBuffer buffer(&ba);
+            buffer.open(QIODevice::ReadWrite);
+            mask.save(&buffer, "XBM");
+            buffer.seek(0);
+            Pixmap p = XCreateBitmapFromData( QX11Info::display(), winId(), ba.constData(), mask.width(), mask.height());
+            XShapeCombineMask( QX11Info::display(), winId(), ShapeBounding, 0, 0, p, ShapeSet );
+            XFreePixmap(QX11Info::display(), p);
             repaint();
         }
         update();

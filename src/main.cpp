@@ -26,7 +26,7 @@
 #include <kuniqueapplication.h>
 #include <klocale.h>
 #include <kcmdlineargs.h>
-#include <kaboutdata.h>
+#include <k4aboutdata.h>
 
 
 static const char description[] = I18N_NOOP("KDE creature for your desktop");
@@ -36,8 +36,8 @@ int main(int argc, char *argv[])
 {
     QApplication::setGraphicsSystem( QLatin1String( "native" ) );
 
-    KAboutData about( "amor", 0, ki18n( "amor" ), AMOR_VERSION );
-    about.setLicense( KAboutData::License_GPL );
+    K4AboutData about( "amor", 0, ki18n( "amor" ), AMOR_VERSION );
+    about.setLicense( K4AboutData::License_GPL );
     about.setShortDescription( ki18n( description ) );
     about.setCopyrightStatement( ki18n( "1999 by Martin R. Jones\n2010 by Stefan Böhmann" ) );
 

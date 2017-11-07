@@ -31,9 +31,9 @@
 #include <unistd.h>
 #include <time.h>
 
-#include <QtDBus/QtDBus>
-#include <QtCore/QTimer>
-#include <QtGui/QCursor>
+#include <QtDBus>
+#include <QTimer>
+#include <QCursor>
 
 #include <kmenu.h>
 #include <kapplication.h>
@@ -46,11 +46,13 @@
 #include <khelpmenu.h>
 #include <kiconloader.h>
 #include <krandom.h>
+#include <kglobal.h>
+#include <k4aboutdata.h>
 
-#if defined Q_WS_X11
+//#if defined Q_OS_X11
 #include <X11/Xlib.h>
-#include <QtGui/QX11Info>
-#endif
+#include <QX11Info>
+//#endif
 
 // #define DEBUG_AMOR
 
@@ -497,16 +499,16 @@ void Amor::slotMouseClicked(const QPoint &pos)
     }
 
     if( !mMenu ) {
-        KHelpMenu* help = new KHelpMenu( 0, KGlobal::mainComponent().aboutData(), false );
-        KMenu* helpMenu = help->menu();
+        KHelpMenu* help = new KHelpMenu( 0, KGlobal::mainComponent().aboutData()->appName(), false );
+        QMenu* helpMenu = help->menu();
 #ifdef __GNUC__
 #warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)
 #endif
         helpMenu->setIcon( SmallIcon( QLatin1String( "help-contents" ) ) );
         helpMenu->setTitle( i18nc( "@action:inmenu Amor", "&Help" ) );
 
-        mMenu = new KMenu( 0 );
-        mMenu->addTitle( QLatin1String( "Amor" ) ); // I really don't want this i18n'ed
+        mMenu = new QMenu( 0 );
+        mMenu->setTitle( QLatin1String( "Amor" ) ); // I really don't want this i18n'ed
         mMenu->addAction( SmallIcon( QLatin1String ("configure" ) ), i18nc( "@action:inmenu Amor", "&Configure..." ), this, SLOT(slotConfigure()) );
         mMenu->addSeparator();
         mMenu->addMenu( helpMenu );

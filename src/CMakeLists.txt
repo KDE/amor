@@ -1,4 +1,8 @@
-set( amor_SRCS
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}
+                    ${CMAKE_CURRENT_BINARY_DIR}
+)
+
+set(amor_SRCS
   main.cpp
   queueitem.cpp
   amorsessionwidget.cpp
@@ -13,13 +17,21 @@ set( amor_SRCS
   amortips.cpp
 )
 
-qt4_add_dbus_adaptor( amor_SRCS org.kde.amor.xml amor.h Amor )
+qt5_add_dbus_adaptor(amor_SRCS org.kde.amor.xml amor.h Amor)
 
-kde4_add_executable( amor ${amor_SRCS} )
-target_link_libraries( amor ${KDE4_KDEUI_LIBS} ${X11_LIBRARIES} )
+add_executable(amor ${amor_SRCS})
+target_link_libraries(amor
+    Qt5::Core
+    Qt5::DBus
+    Qt5::Gui
+    Qt5::Widgets
+    Qt5::X11Extras
+    KF5::KDELibs4Support
+    ${X11_LIBRARIES}
+)
 
-install( TARGETS amor  ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS amor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
-install( PROGRAMS amor.desktop     DESTINATION ${XDG_APPS_INSTALL_DIR} )
-install( FILES org.kde.amor.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
+install(PROGRAMS amor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES org.kde.amor.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR})
 

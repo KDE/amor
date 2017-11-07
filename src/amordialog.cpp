@@ -17,14 +17,14 @@
  */
 #include "amordialog.h"
 
-#include <QtGui/QCheckBox>
-#include <QtGui/QLabel>
-#include <QtGui/QListWidget>
-#include <QtGui/QSlider>
+#include <QCheckBox>
+#include <QLabel>
+#include <QListWidget>
+#include <QSlider>
+#include <QPixmap>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
 #include <KTextEdit>
-#include <QtGui/QPixmap>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QVBoxLayout>
 #include <KConfig>
 #include <KIcon>
 #include <KLocale>
