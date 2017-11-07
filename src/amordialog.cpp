@@ -26,7 +26,6 @@
 #include <QVBoxLayout>
 #include <KTextEdit>
 #include <KConfig>
-#include <KIcon>
 #include <KLocale>
 #include <QStandardPaths>
 #include <QGridLayout>
@@ -155,7 +154,7 @@ void AmorDialog::addTheme(const QString& file)
     pixmapPath += pixmapName;
     QPixmap pixmap( pixmapPath );
 
-    QListWidgetItem *item = new QListWidgetItem( KIcon( pixmap ), description, mThemeListView );
+    QListWidgetItem *item = new QListWidgetItem( QIcon(pixmap), description, mThemeListView );
     mThemes.append( file );
     mThemeAbout.append( about );
 

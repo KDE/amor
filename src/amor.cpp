@@ -44,7 +44,6 @@
 #include <kstartupinfo.h>
 #include <kwindowsystem.h>
 #include <khelpmenu.h>
-#include <kiconloader.h>
 #include <krandom.h>
 #include <kaboutdata.h>
 
@@ -503,15 +502,15 @@ void Amor::slotMouseClicked(const QPoint &pos)
 #ifdef __GNUC__
 #warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)
 #endif
-        helpMenu->setIcon( SmallIcon( QLatin1String( "help-contents" ) ) );
+        helpMenu->setIcon(QIcon::fromTheme(QStringLiteral("help-contents")));
         helpMenu->setTitle( i18nc( "@action:inmenu Amor", "&Help" ) );
 
         mMenu = new QMenu( 0 );
         mMenu->setTitle( QLatin1String( "Amor" ) ); // I really don't want this i18n'ed
-        mMenu->addAction( SmallIcon( QLatin1String ("configure" ) ), i18nc( "@action:inmenu Amor", "&Configure..." ), this, SLOT(slotConfigure()) );
+        mMenu->addAction(QIcon::fromTheme(QStringLiteral("configure")), i18nc( "@action:inmenu Amor", "&Configure..." ), this, SLOT(slotConfigure()) );
         mMenu->addSeparator();
         mMenu->addMenu( helpMenu );
-        mMenu->addAction( SmallIcon( QLatin1String( "application-exit" ) ), i18nc( "@action:inmenu Amor", "&Quit" ), kapp, SLOT(quit()) );
+        mMenu->addAction(QIcon::fromTheme(QStringLiteral("application-exit")), i18nc( "@action:inmenu Amor", "&Quit" ), kapp, SLOT(quit()) );
     }
 
     mMenu->exec( pos );
