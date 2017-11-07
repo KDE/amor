@@ -23,9 +23,9 @@
 #include <KRandom>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KStandardDirs>
 #include <QtGui/QPixmap>
 
+#include <QStandardPaths>
 
 
 AmorAnimation::AmorAnimation(KConfigGroup &config)

@@ -28,11 +28,13 @@
 #include <KConfig>
 #include <KIcon>
 #include <KLocale>
-#include <KStandardDirs>
-#include <KGlobal>
+#include <QStandardPaths>
 #include <QGridLayout>
+#include <QDir>
+#include <KSharedConfigPtr>
 
 
+#include <QDebug>
 
 AmorDialog::AmorDialog(QWidget *parent)
   : KDialog( parent )
@@ -104,21 +106,21 @@ AmorDialog::AmorDialog(QWidget *parent)
 
 void AmorDialog::readThemes()
 {
-    QStringList files;
-
     // Non-recursive search for theme files, with the relative paths stored
     // in files so that absolute paths are not used.
-    KGlobal::dirs()->findAllResources( "appdata", QLatin1String( "*rc" ), KStandardDirs::NoSearchOptions, files );
-
-    for(QStringList::ConstIterator it = files.constBegin(); it != files.constEnd(); ++it) {
-        addTheme( *it );
+    QDir amorDir(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("amor"),
+                                        QStandardPaths::LocateDirectory));
+    const auto files = amorDir.entryList({ QStringLiteral("*rc") }, QDir::Files, QDir::NoSort);
+    for (const auto &file : files) {
+        addTheme(file);
     }
 }
 
 
 void AmorDialog::addTheme(const QString& file)
 {
-    KConfig config( KStandardDirs::locate( "appdata", file ) );
+    KConfig config(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                          QStringLiteral("amor/%1").arg(file)));
     KConfigGroup configGroup( &config, "Config" );
 
     QString pixmapPath = configGroup.readPathEntry( "PixmapPath", QString() );
@@ -129,7 +131,9 @@ void AmorDialog::addTheme(const QString& file)
     pixmapPath += QLatin1Char( '/' );
     if( pixmapPath[0] != QLatin1Char( '/' ) ) {
         // relative to config file. We add a / to indicate the dir
-        pixmapPath = KStandardDirs::locate("appdata", pixmapPath);
+        pixmapPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                            QStringLiteral("amor/%1").arg(pixmapPath),
+                                            QStandardPaths::LocateDirectory);
     }
 
     QString description = configGroup.readEntry( "Description" );
@@ -210,7 +214,7 @@ void AmorDialog::slotApply()
 void AmorDialog::slotCancel()
 {
     // restore offset
-    KSharedConfig::Ptr config = KGlobal::config();
+    KSharedConfig::Ptr config = KSharedConfig::openConfig();
     KConfigGroup cs( config, "General" );
     emit offsetChanged( cs.readEntry( "Offset", 0 ) );
     reject();

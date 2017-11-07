@@ -20,11 +20,11 @@
 #include "amoranimation.h"
 #include "amorpixmapmanager.h"
 
-#include <KStandardDirs>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KRandom>
 
+#include <QStandardPaths>
 
 AmorThemeManager::AmorThemeManager()
   : mConfig( 0 ),
@@ -42,7 +42,7 @@ AmorThemeManager::~AmorThemeManager()
 
 bool AmorThemeManager::setTheme(const QString & file)
 {
-    mPath = KStandardDirs::locate( "appdata", file );
+    mPath = QStandardPaths::locate(QStandardPaths::AppDataLocation, file);
 
     delete mConfig;
     mConfig = new KConfig( mPath, KConfig::SimpleConfig );

@@ -19,26 +19,26 @@
 
 #include <QtCore/QFile>
 #include <QtCore/QRegExp>
+#include <QStandardPaths>
 
 #include <stdlib.h>
 
+#define TRANSLATION_DOMAIN "ktip"
+#include <KLocalizedString>
+
 #include <krandom.h>
-#include <kstandarddirs.h>
 #include <klocale.h>
 #include <kdebug.h>
-#include <kglobal.h>
 
 
 
 AmorTips::AmorTips()
 {
-    KGlobal::locale()->insertCatalog( QLatin1String(  "ktip" ) ); // For ktip tip translations
 }
-
 
 bool AmorTips::setFile(const QString& file)
 {
-    QString path( KStandardDirs::locate( "appdata", file ) );
+    QString path(QStandardPaths::locate(QStandardPaths::AppDataLocation, file));
 
     bool rv = path.length() && read( path );
 
@@ -69,7 +69,7 @@ bool AmorTips::readKTips()
 {
     QString fname;
 
-    fname = KStandardDirs::locate("data", QLatin1String("kdewizard/tips"));
+    fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kdewizard/tips"));
 
     if( fname.isEmpty() ) {
         return false;

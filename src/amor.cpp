@@ -34,6 +34,7 @@
 #include <QtDBus>
 #include <QTimer>
 #include <QCursor>
+#include <QStandardPaths>
 
 #include <kmenu.h>
 #include <kapplication.h>
@@ -42,12 +43,10 @@
 #include <kmessagebox.h>
 #include <kstartupinfo.h>
 #include <kwindowsystem.h>
-#include <kstandarddirs.h>
 #include <khelpmenu.h>
 #include <kiconloader.h>
 #include <krandom.h>
-#include <kglobal.h>
-#include <k4aboutdata.h>
+#include <kaboutdata.h>
 
 //#if defined Q_OS_X11
 #include <X11/Xlib.h>
@@ -243,7 +242,7 @@ bool Amor::readConfig()
         QStringList files;
 
         // Store relative paths into files to avoid storing absolute pathnames.
-        KGlobal::dirs()->findAllResources( "appdata", QLatin1String( "*rc" ), KStandardDirs::NoSearchOptions, files );
+        files = QStandardPaths::locateAll(QStandardPaths::AppDataLocation, QStringLiteral("*rc"));
         int randomTheme = KRandom::random() % files.count();
         mConfig.mTheme = files.at( randomTheme );
     }
@@ -499,7 +498,7 @@ void Amor::slotMouseClicked(const QPoint &pos)
     }
 
     if( !mMenu ) {
-        KHelpMenu* help = new KHelpMenu( 0, KGlobal::mainComponent().aboutData()->appName(), false );
+        KHelpMenu* help = new KHelpMenu(0, KAboutData::applicationData(), false );
         QMenu* helpMenu = help->menu();
 #ifdef __GNUC__
 #warning the following is kinda dirty and should be done by KHelpMenu::menu() I think. (hermier)

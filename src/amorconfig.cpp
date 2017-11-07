@@ -17,7 +17,6 @@
  */
 #include "amorconfig.h"
 
-#include <KGlobal>
 #include <KConfigGroup>
 #include <KSharedConfig>
 
@@ -36,7 +35,7 @@ AmorConfig::AmorConfig()
 
 void AmorConfig::read()
 {
-    KSharedConfig::Ptr config = KGlobal::config();
+    KSharedConfig::Ptr config = KSharedConfig::openConfig();
     KConfigGroup cs( config, "General" );
 
     mOnTop = cs.readEntry( "OnTop", false );
@@ -51,7 +50,7 @@ void AmorConfig::read()
 
 void AmorConfig::write()
 {
-    KSharedConfig::Ptr config = KGlobal::config();
+    KSharedConfig::Ptr config = KSharedConfig::openConfig();
     KConfigGroup cs( config, "General" );
 
     cs.writeEntry( "OnTop", mOnTop );
