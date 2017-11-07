@@ -25,6 +25,8 @@
 #include <QQueue>
 #include <QList>
 
+#include <KWindowSystem>
+
 #include "amoranimation.h"
 #include "amortips.h"
 #include "amorconfig.h"
@@ -60,7 +62,7 @@ class Amor : public QObject
         void slotWindowActivate(WId);
         void slotWindowRemove(WId);
         void slotStackingChanged();
-        void slotWindowChange(WId, const unsigned long * properties);
+        void slotWindowChange(WId, NET::Properties, NET::Properties2);
         void slotDesktopChange(int);
 
     protected slots:

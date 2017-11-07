@@ -93,12 +93,12 @@ Amor::Amor()
     mState       = Normal;
 
     mWin = KWindowSystem::self();
-    connect( mWin, SIGNAL(activeWindowChanged(WId)), this, SLOT(slotWindowActivate(WId)) );
-    connect( mWin, SIGNAL(windowRemoved(WId)), this, SLOT(slotWindowRemove(WId)) );
-    connect( mWin, SIGNAL(stackingOrderChanged()), this, SLOT(slotStackingChanged()) );
-    connect( mWin, SIGNAL(windowChanged(WId,const ulong*)),
-            this, SLOT(slotWindowChange(WId,const ulong*)) );
-    connect( mWin, SIGNAL(currentDesktopChanged(int)), this, SLOT(slotDesktopChange(int)) );
+    connect(mWin, &KWindowSystem::activeWindowChanged, this, &Amor::slotWindowActivate);
+    connect(mWin, &KWindowSystem::windowRemoved, this, &Amor::slotWindowRemove);
+    connect(mWin, &KWindowSystem::stackingOrderChanged, this, &Amor::slotStackingChanged);
+    connect(mWin, QOverload<WId,NET::Properties,NET::Properties2>::of(&KWindowSystem::windowChanged),
+            this, &Amor::slotWindowChange);
+    connect(mWin, &KWindowSystem::currentDesktopChanged, this, &Amor::slotDesktopChange);
 
     mAmor = new AmorWidget;
     connect( mAmor, SIGNAL(mouseClicked(QPoint)), SLOT(slotMouseClicked(QPoint)) );
@@ -711,7 +711,7 @@ void Amor::slotStackingChanged()
 }
 
 
-void Amor::slotWindowChange(WId win, const unsigned long * properties)
+void Amor::slotWindowChange(WId win, NET::Properties properties, NET::Properties2 properties2)
 {
     if( win != mTargetWin ) {
         return;
@@ -733,7 +733,7 @@ void Amor::slotWindowChange(WId win, const unsigned long * properties)
         return;
     }
 
-    if( properties[0] & NET::WMGeometry ) {
+    if( properties & NET::WMGeometry ) {
         QRect newTargetRect = KWindowSystem::windowInfo( mTargetWin, NET::WMFrameExtents ).frameGeometry();
 
         // if the change in the window caused the animation to fall
