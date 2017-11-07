@@ -26,6 +26,9 @@ target_link_libraries(amor
     Qt5::Gui
     Qt5::Widgets
     Qt5::X11Extras
+    
+    KF5::DBusAddons
+    
     KF5::KDELibs4Support
     ${X11_LIBRARIES}
 )

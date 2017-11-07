@@ -19,60 +19,46 @@
 #include "amorsessionwidget.h"
 #include "version.h"
 
-#include <cstdio>
+#include <KDBusService>
+#include <KAboutData>
+#include <KLocalizedString>
 
-#include <QtDBus>
-
-#include <kuniqueapplication.h>
-#include <klocale.h>
-#include <kcmdlineargs.h>
-#include <k4aboutdata.h>
-
+#include <QApplication>
+#include <QDBusConnection>
 
 static const char description[] = I18N_NOOP("KDE creature for your desktop");
 
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-    QApplication::setGraphicsSystem( QLatin1String( "native" ) );
-
-    K4AboutData about( "amor", 0, ki18n( "amor" ), AMOR_VERSION );
-    about.setLicense( K4AboutData::License_GPL );
-    about.setShortDescription( ki18n( description ) );
-    about.setCopyrightStatement( ki18n( "1999 by Martin R. Jones\n2010 by Stefan Böhmann" ) );
+    KAboutData about(QStringLiteral("amor"), i18n( "amor" ), QStringLiteral(AMOR_VERSION));
+    about.setLicense(KAboutLicense::GPL);
+    about.setShortDescription(i18n(description));
+    about.setCopyrightStatement(i18n("1999 by Martin R. Jones\n2010 by Stefan Böhmann"));
 
     about.addAuthor(
-        ki18n( "Stefan Böhmann" ),
-        ki18n( "Current maintainer" ),
-        "kde@hilefoks.org",
-        "http://www.hilefoks.org",
-        "hilefoks"
+        i18n("Stefan Böhmann"),
+        i18n("Current maintainer"),
+        QStringLiteral("kde@hilefoks.org"),
+        QStringLiteral("http://www.hilefoks.org"),
+        QStringLiteral("hilefoks")
     );
 
-    about.addAuthor(
-        ki18n("Martin R. Jones"),
-        KLocalizedString(),
-        "mjones@kde.org"
-    );
+    about.addAuthor(i18n("Martin R. Jones"), {}, QStringLiteral("mjones@kde.org"));
+    about.addAuthor(i18n("Gerardo Puga"), {}, QStringLiteral("gpuga@gioia.ing.unlp.edu.ar"));
 
-    about.addAuthor(
-        ki18n( "Gerardo Puga" ),
-        KLocalizedString(),
-        "gpuga@gioia.ing.unlp.edu.ar"
-    );
+    QApplication app(argc, argv);
+    KAboutData::setApplicationData(about);
 
-    KCmdLineArgs::init( argc, argv, &about );
+    KDBusService service(KDBusService::Unique);
 
-    if( !KUniqueApplication::start() ) {
-        std::fprintf( stderr, "%s is already running!\n", qPrintable( about.appName() ) );
-        exit( 0 );
-    }
-
-    KUniqueApplication app;
     AmorSessionWidget *sessionWidget = new AmorSessionWidget; // session management
-    app.setTopWidget( sessionWidget );
+    // FIXME Qt5
+    //app.setTopWidget(sessionWidget);
 
-    QDBusConnection::sessionBus().registerObject( QLatin1String( "/Amor" ),new Amor() );
+    Amor amor;
+
+    QDBusConnection::sessionBus().registerObject(QStringLiteral( "/Amor" ), &amor);
     return app.exec();
 }
 

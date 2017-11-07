@@ -23,6 +23,7 @@ find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED
 
 set(KF5_VERSION "5.39.0")
 find_package(KF5DocTools ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5DBusAddons ${KF5_VERSEION} CONFIG REQUIRED)
 find_package(KF5KDELibs4Support ${KF5_VERSION} CONFIG REQUIRED)
 
 find_package(X11 REQUIRED)
