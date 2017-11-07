@@ -33,27 +33,41 @@
 #include <QDir>
 #include <KSharedConfigPtr>
 
+#include <QDialogButtonBox>
+#include <QPushButton>
 
 #include <QDebug>
 
 AmorDialog::AmorDialog(QWidget *parent)
-  : KDialog( parent )
+  : QDialog( parent )
 {
-    setCaption( i18n( "Options" ) );
-    setButtons( Ok | Apply | Cancel );
-    setDefaultButton( Ok );
+    setWindowTitle(i18n("Options"));
+
+
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel, this);
+    connect(buttonBox, &QDialogButtonBox::clicked,
+            this, [this, buttonBox](QAbstractButton *btn) {
+                if (btn == buttonBox->button(QDialogButtonBox::Ok)) {
+                    slotOk();
+                } else if (btn == buttonBox->button(QDialogButtonBox::Apply)) {
+                    slotApply();
+                } else if (btn == buttonBox->button(QDialogButtonBox::Cancel)) {
+                    slotCancel();
+                }
+            });
 
     mConfig.read();
-    QWidget *mainwidget = new QWidget( this );
-    setMainWidget( mainwidget );
-
-    QGridLayout *gridLayout = new QGridLayout( mainwidget );
+    auto l = new QVBoxLayout(this);
+    QGridLayout *gridLayout = new QGridLayout();
     gridLayout->setMargin( 0 );
+    l->addLayout(gridLayout);
+    l->addStretch(2);
+    l->addWidget(buttonBox);
 
-    QLabel *label = new QLabel( i18n( "Theme:" ), mainwidget );
+    QLabel *label = new QLabel( i18n( "Theme:" ), this);
     gridLayout->addWidget( label, 0, 0 );
 
-    mThemeListView = new QListWidget( mainwidget );
+    mThemeListView = new QListWidget(this);
     mThemeListView->setIconSize( QSize( 32, 32 ) );
     mThemeListView->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
     mThemeListView->setAlternatingRowColors( true );
@@ -61,16 +75,16 @@ AmorDialog::AmorDialog(QWidget *parent)
     mThemeListView->setMinimumSize( fontMetrics().maxWidth()*20, fontMetrics().lineSpacing()*6 );
     gridLayout->addWidget( mThemeListView, 1, 0 );
 
-    mAboutEdit = new KTextEdit( mainwidget );
+    mAboutEdit = new KTextEdit( this );
     mAboutEdit->setReadOnly( true );
     mAboutEdit->setMinimumHeight( fontMetrics().lineSpacing()*4 );
     gridLayout->addWidget( mAboutEdit, 2, 0 );
 
     // Animation offset
-    label = new QLabel( i18n("Offset:"), mainwidget );
+    label = new QLabel( i18n("Offset:"), this );
     gridLayout->addWidget( label, 0, 1 );
 
-    QSlider *slider = new QSlider( Qt::Vertical, mainwidget );
+    QSlider *slider = new QSlider( Qt::Vertical, this );
     slider->setRange( -40, 40 );
     slider->setPageStep( 5 );
     slider->setValue( mConfig.mOffset );
@@ -78,28 +92,26 @@ AmorDialog::AmorDialog(QWidget *parent)
     gridLayout->addWidget( slider, 1, 1, 2, 1 );
 
     // Always on top
-    QCheckBox *checkBox = new QCheckBox( i18n( "Always on top" ), mainwidget );
+    QCheckBox *checkBox = new QCheckBox( i18n( "Always on top" ), this );
     connect( checkBox, SIGNAL(toggled(bool)), SLOT(slotOnTop(bool)) );
     checkBox->setChecked( mConfig.mOnTop );
     gridLayout->addWidget( checkBox, 3, 0, 1, 2 );
 
-    checkBox = new QCheckBox( i18n( "Show random tips" ), mainwidget );
+    checkBox = new QCheckBox( i18n( "Show random tips" ), this );
     connect( checkBox, SIGNAL(toggled(bool)), SLOT(slotRandomTips(bool)) );
     checkBox->setChecked( mConfig.mTips ); // always keep this one after the connect, or the QList would not be grayed when it should
     gridLayout->addWidget( checkBox, 4, 0, 1, 2 );
 
-    checkBox = new QCheckBox( i18n( "Use a random character" ), mainwidget );
+    checkBox = new QCheckBox( i18n( "Use a random character" ), this );
     connect( checkBox, SIGNAL(toggled(bool)), SLOT(slotRandomTheme(bool)) );
     checkBox->setChecked( mConfig.mRandomTheme );
     gridLayout->addWidget( checkBox, 5, 0, 1, 2 );
 
-    checkBox = new QCheckBox( i18n( "Allow application tips" ), mainwidget );
+    checkBox = new QCheckBox( i18n( "Allow application tips" ), this );
     connect( checkBox, SIGNAL(toggled(bool)), SLOT(slotApplicationTips(bool)) );
     checkBox->setChecked( mConfig.mAppTips );
     gridLayout->addWidget( checkBox, 6, 0, 1, 2 );
-    connect( this, SIGNAL(okClicked()), SLOT(slotOk()) );
-    connect( this, SIGNAL(applyClicked()), SLOT(slotApply()) );
-    connect( this, SIGNAL(cancelClicked()), SLOT(slotCancel()) );
+
     readThemes();
 }
 

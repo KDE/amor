@@ -18,14 +18,14 @@
 #ifndef AMORDIALOG_H
 #define AMORDIALOG_H
 
-#include <kdialog.h>
+#include <QDialog>
 #include "amorconfig.h"
 
 class QListWidget;
 class KTextEdit;
 
 
-class AmorDialog : public KDialog
+class AmorDialog : public QDialog
 {
     Q_OBJECT
 
