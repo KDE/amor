@@ -18,8 +18,8 @@
 #ifndef AMORPIXMAPMANAGER_H
 #define AMORPIXMAPMANAGER_H
 
-#include <QtCore/QHash>
-#include <QtCore/QString>
+#include <QHash>
+#include <QString>
 
 class QPixmap;
 

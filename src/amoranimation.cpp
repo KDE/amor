@@ -23,8 +23,8 @@
 #include <KRandom>
 #include <KConfig>
 #include <KConfigGroup>
-#include <QtGui/QPixmap>
 
+#include <QPixmap>
 #include <QStandardPaths>
 
 

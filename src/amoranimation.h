@@ -19,11 +19,11 @@
 #ifndef AMORANIMATION_H
 #define AMORANIMATION_H
 
-#include <QtCore/QHash>
-#include <QtCore/QPoint>
-#include <QtCore/QSize>
-#include <QtCore/QStringList>
-#include <QtCore/QVector>
+#include <QHash>
+#include <QPoint>
+#include <QSize>
+#include <QStringList>
+#include <QVector>
 
 class QPixmap;
 class KConfigGroup;

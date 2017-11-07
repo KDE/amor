@@ -31,20 +31,20 @@
 #include <unistd.h>
 #include <time.h>
 
-#include <QtDBus>
+#include <QDBusConnection>
 #include <QTimer>
 #include <QCursor>
 #include <QStandardPaths>
 #include <QApplication>
 #include <QMenu>
 
-#include <kstartupinfo.h>
-#include <kwindowsystem.h>
-#include <khelpmenu.h>
-#include <krandom.h>
-#include <kaboutdata.h>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KStartupInfo>
+#include <KWindowSystem>
+#include <KHelpMenu>
+#include <KRandom>
+#include <KAboutData>
 
 //#if defined Q_OS_X11
 #include <X11/Xlib.h>

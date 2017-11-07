@@ -18,17 +18,15 @@
 #include "amortips.h"
 #include "amor_debug.h"
 
-#include <QtCore/QFile>
-#include <QtCore/QRegExp>
+#include <QFile>
+#include <QRegExp>
 #include <QStandardPaths>
 
 #include <stdlib.h>
 
 #define TRANSLATION_DOMAIN "ktip"
 #include <KLocalizedString>
-
-#include <krandom.h>
-#include <KLocalizedString>
+#include <KRandom>
 
 
 
