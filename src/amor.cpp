@@ -24,8 +24,8 @@
 #include "version.h"
 #include "queueitem.h"
 #include "amorthememanager.h"
-
 #include "amoradaptor.h"
+#include "amor_debug.h"
 
 #include <stdlib.h>
 #include <unistd.h>
@@ -35,17 +35,16 @@
 #include <QTimer>
 #include <QCursor>
 #include <QStandardPaths>
+#include <QApplication>
+#include <QMenu>
 
-#include <kmenu.h>
-#include <kapplication.h>
-#include <kdebug.h>
-#include <klocale.h>
-#include <kmessagebox.h>
 #include <kstartupinfo.h>
 #include <kwindowsystem.h>
 #include <khelpmenu.h>
 #include <krandom.h>
 #include <kaboutdata.h>
+#include <KLocalizedString>
+#include <KMessageBox>
 
 //#if defined Q_OS_X11
 #include <X11/Xlib.h>
@@ -131,13 +130,13 @@ Amor::Amor()
     if( !QDBusConnection::sessionBus().connect( QString(), QString(), QLatin1String( "org.kde.amor" ),
             QLatin1String( "KDE_stop_screensaver" ), this, SLOT(screenSaverStopped()) ) )
     {
-        kDebug(10000) << "Could not attach DBus signal: KDE_stop_screensaver()";
+        qCDebug(AMOR_LOG) << "Could not attach DBus signal: KDE_stop_screensaver()";
     }
 
     if( !QDBusConnection::sessionBus().connect( QString(), QString(), QLatin1String( "org.kde.amor" ),
             QLatin1String( "KDE_start_screensaver" ), this, SLOT(screenSaverStarted()) ) )
     {
-        kDebug(10000) << "Could not attach DBus signal: KDE_start_screensaver()";
+        qCDebug(AMOR_LOG) << "Could not attach DBus signal: KDE_start_screensaver()";
     }
 
     KStartupInfo::appStarted();
@@ -510,7 +509,7 @@ void Amor::slotMouseClicked(const QPoint &pos)
         mMenu->addAction(QIcon::fromTheme(QStringLiteral("configure")), i18nc( "@action:inmenu Amor", "&Configure..." ), this, SLOT(slotConfigure()) );
         mMenu->addSeparator();
         mMenu->addMenu( helpMenu );
-        mMenu->addAction(QIcon::fromTheme(QStringLiteral("application-exit")), i18nc( "@action:inmenu Amor", "&Quit" ), kapp, SLOT(quit()) );
+        mMenu->addAction(QIcon::fromTheme(QStringLiteral("application-exit")), i18nc( "@action:inmenu Amor", "&Quit" ), qApp, SLOT(quit()) );
     }
 
     mMenu->exec( pos );

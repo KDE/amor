@@ -22,7 +22,7 @@
 #include "amorconfig.h"
 
 class QListWidget;
-class KTextEdit;
+class QTextBrowser;
 
 
 class AmorDialog : public QDialog
@@ -53,7 +53,7 @@ class AmorDialog : public QDialog
 
     protected:
         QListWidget *mThemeListView;
-        KTextEdit *mAboutEdit;
+        QTextBrowser *mAboutEdit;
         QStringList mThemes;
         QStringList mThemeAbout;
         AmorConfig mConfig;

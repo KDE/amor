@@ -16,6 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 #include "amortips.h"
+#include "amor_debug.h"
 
 #include <QtCore/QFile>
 #include <QtCore/QRegExp>
@@ -27,8 +28,7 @@
 #include <KLocalizedString>
 
 #include <krandom.h>
-#include <klocale.h>
-#include <kdebug.h>
+#include <KLocalizedString>
 
 
 
@@ -96,7 +96,7 @@ bool AmorTips::readKTips()
             }
 
             if( tip.isEmpty() ) {
-                kDebug() << "Empty tip found! Skipping! " << pos;
+                qCDebug(AMOR_LOG) << "Empty tip found! Skipping! " << pos;
                 continue;
             }
 

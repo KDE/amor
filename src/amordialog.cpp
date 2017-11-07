@@ -24,18 +24,17 @@
 #include <QPixmap>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
-#include <KTextEdit>
-#include <KConfig>
-#include <KLocale>
+#include <QTextBrowser>
 #include <QStandardPaths>
 #include <QGridLayout>
 #include <QDir>
-#include <KSharedConfigPtr>
-
 #include <QDialogButtonBox>
 #include <QPushButton>
 
-#include <QDebug>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <KLocalizedString>
 
 AmorDialog::AmorDialog(QWidget *parent)
   : QDialog( parent )
@@ -74,7 +73,7 @@ AmorDialog::AmorDialog(QWidget *parent)
     mThemeListView->setMinimumSize( fontMetrics().maxWidth()*20, fontMetrics().lineSpacing()*6 );
     gridLayout->addWidget( mThemeListView, 1, 0 );
 
-    mAboutEdit = new KTextEdit( this );
+    mAboutEdit = new QTextBrowser( this );
     mAboutEdit->setReadOnly( true );
     mAboutEdit->setMinimumHeight( fontMetrics().lineSpacing()*4 );
     gridLayout->addWidget( mAboutEdit, 2, 0 );

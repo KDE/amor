@@ -18,14 +18,14 @@
  */
 #include "amorsessionwidget.h"
 
-#include <KApplication>
+#include <QApplication>
 
 
 AmorSessionWidget::AmorSessionWidget()
 {
     // the only function of this widget is to catch & forward the
     // saveYourself() signal from the session manager
-    connect( kapp, SIGNAL(saveYourself()), SLOT(wm_saveyourself()) );
+    connect( qApp, SIGNAL(saveYourself()), SLOT(wm_saveyourself()) );
 }
 
 
