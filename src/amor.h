@@ -32,6 +32,8 @@
 #include "amorconfig.h"
 #include "amorthememanager.h"
 
+#include <xcb/xcb.h>
+
 class AmorDialog;
 class AmorBubble;
 class AmorWidget;
@@ -87,9 +89,9 @@ class Amor : public QObject
 
     private:
         KWindowSystem *mWin;
-        WId mTargetWin;                 // The window that the animations sits on
+        xcb_window_t mTargetWin;                 // The window that the animations sits on
         QRect mTargetRect;              // The goemetry of the target window
-        WId mNextTarget;                // The window that will become the target
+        xcb_window_t mNextTarget;                // The window that will become the target
         AmorWidget *mAmor;              // The widget displaying the animation
         AmorThemeManager mTheme;        // Animations used by current theme
         AmorAnimation *mBaseAnim;       // The base animation

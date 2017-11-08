@@ -18,7 +18,7 @@
 #include "amorpixmapmanager.h"
 
 #include <QPixmap>
-
+#include <QBitmap>
 
 AmorPixmapManager *AmorPixmapManager::mManager = 0;
 
@@ -59,6 +59,7 @@ const QPixmap* AmorPixmapManager::load(const QString & img)
         pixmap = new QPixmap( path );
 
         if( !pixmap->isNull() ) {
+            pixmap->setMask(pixmap->createHeuristicMask(true));
             mPixmaps[img] = pixmap;
         }
         else {

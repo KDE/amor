@@ -46,10 +46,10 @@
 #include <KRandom>
 #include <KAboutData>
 
-//#if defined Q_OS_X11
-#include <X11/Xlib.h>
+#if defined Q_OS_LINUX
+#include <xcb/xcb.h>
 #include <QX11Info>
-//#endif
+#endif
 
 // #define DEBUG_AMOR
 
@@ -338,7 +338,7 @@ void Amor::selectAnimation(State state)
         }
 
         mTargetWin = mNextTarget;
-        if( mTargetWin != None ) {
+        if( mTargetWin != XCB_NONE ) {
             mTargetRect = KWindowSystem::windowInfo( mTargetWin, NET::WMFrameExtents ).frameGeometry();
 
             // if the animation falls outside of the working area,
@@ -446,7 +446,7 @@ void Amor::selectAnimation(State state)
 
 void Amor::restack()
 {
-    if( mTargetWin == None ) {
+    if( mTargetWin == XCB_NONE ) {
         return;
     }
 
@@ -456,32 +456,35 @@ void Amor::restack()
         return;
     }
 
-#if defined Q_WS_X11
-    Window sibling = mTargetWin;
-    Window dw, parent = None, *wins;
+#ifdef Q_OS_LINUX
+    xcb_window_t sibling = mTargetWin;
+    xcb_window_t dw, parent = XCB_NONE, *wins;
 
     do {
         unsigned int nwins = 0;
 
         // We must use the target window's parent as our sibling.
         // Is there a faster way to get parent window than XQueryTree?
-        if( XQueryTree( QX11Info::display(), sibling, &dw, &parent, &wins, &nwins ) ) {
-            if( nwins ) {
-                XFree(wins);
-            }
-        }
+        const auto cookie = xcb_query_tree(QX11Info::connection(), sibling);
+        const auto reply = xcb_query_tree_reply(QX11Info::connection(), cookie, nullptr);
 
-        if( parent != None && parent != dw ) {
+        nwins = xcb_query_tree_children_length(reply);
+        dw = reply->root;
+        parent = reply->parent;
+
+        free(reply);
+
+        if( parent != XCB_NONE && parent != dw ) {
             sibling = parent;
         }
-    } while( parent != None && parent != dw );
+    } while( parent != XCB_NONE && parent != dw );
 
     // Set animation's stacking order to be above the window manager's
     // decoration of target window.
-    XWindowChanges values;
-    values.sibling = sibling;
-    values.stack_mode = Above;
-    XConfigureWindow( QX11Info::display(), mAmor->winId(), CWSibling | CWStackMode, &values);
+    const uint32_t values[] = { sibling, XCB_STACK_MODE_ABOVE };
+    xcb_configure_window(QX11Info::connection(), mAmor->winId(),
+                         XCB_CONFIG_WINDOW_SIBLING | XCB_CONFIG_WINDOW_STACK_MODE,
+                         values);
 #endif
 }
 
@@ -725,7 +728,7 @@ void Amor::slotWindowChange(WId win, NET::Properties properties, NET::Properties
     if( mappingState == NET::Iconic || mappingState == NET::Withdrawn ) {
         // The target window has been iconified
         selectAnimation( Destroy );
-        mTargetWin = None;
+        mTargetWin = XCB_NONE;
         mTimer->stop();
         mTimer->setSingleShot( true );
         mTimer->start( 0 );
@@ -793,8 +796,8 @@ void Amor::slotDesktopChange(int desktop)
         return;
     }
 
-    mNextTarget = None;
-    mTargetWin = None;
+    mNextTarget = XCB_NONE;
+    mTargetWin = XCB_NONE;
     selectAnimation( Normal );
     mTimer->stop();
     mAmor->hide();

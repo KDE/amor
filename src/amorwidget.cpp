@@ -23,9 +23,9 @@
 #include <QX11Info>
 #include <QBuffer>
 
-#include <X11/Xlib.h>
-#include <X11/extensions/shape.h>
-
+#include <xcb/xcb.h>
+#include <xcb/shape.h>
+#include <xcb/xcb_image.h>
 
 AmorWidget::AmorWidget()
   : QWidget( 0, Qt::WindowTitleHint | Qt::X11BypassWindowManagerHint ),
@@ -36,21 +36,23 @@ AmorWidget::AmorWidget()
 }
 
 
+#include <iostream>
+
 void AmorWidget::setPixmap(const QPixmap *pixmap)
 {
     m_pixmap = pixmap;
 
     if( m_pixmap ) {
-        if( !m_pixmap->mask().isNull() ) {
-            auto mask = m_pixmap->mask();
-            QByteArray ba;
-            QBuffer buffer(&ba);
-            buffer.open(QIODevice::ReadWrite);
-            mask.save(&buffer, "XBM");
-            buffer.seek(0);
-            Pixmap p = XCreateBitmapFromData( QX11Info::display(), winId(), ba.constData(), mask.width(), mask.height());
-            XShapeCombineMask( QX11Info::display(), winId(), ShapeBounding, 0, 0, p, ShapeSet );
-            XFreePixmap(QX11Info::display(), p);
+        const auto mask = m_pixmap->mask();
+        if (!mask.isNull()) {
+            const auto conn = QX11Info::connection();
+            auto img = mask.toImage().convertToFormat(QImage::Format_MonoLSB);
+            auto pixmap = xcb_create_pixmap_from_bitmap_data(conn, winId(),
+                                                             (uint8_t*) img.constBits(),
+                                                             mask.width(), mask.height(), mask.depth(),
+                                                             0, 0, nullptr);
+            xcb_shape_mask(conn, XCB_SHAPE_SO_SET, XCB_SHAPE_SK_BOUNDING, winId(), 0, 0, pixmap);
+            xcb_free_pixmap(conn, pixmap);
             repaint();
         }
         update();
@@ -62,6 +64,7 @@ void AmorWidget::paintEvent(QPaintEvent *)
 {
     if( m_pixmap ) {
         QPainter p( this );
+        p.fillRect(0, 0, m_pixmap->width(), m_pixmap->height(), Qt::red);
         p.drawPixmap( 0, 0, *m_pixmap );
     }
 }

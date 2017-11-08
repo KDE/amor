@@ -37,7 +37,7 @@ target_link_libraries(amor
     KF5::WindowSystem
     KF5::XmlGui
 
-    ${X11_LIBRARIES}
+    ${XCB_LIBRARIES}
 )
 
 install(TARGETS amor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
