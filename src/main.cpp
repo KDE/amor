@@ -31,6 +31,8 @@ static const char description[] = I18N_NOOP("KDE creature for your desktop");
 
 int main(int argc, char **argv)
 {
+    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+
     KAboutData about(QStringLiteral("amor"), i18n( "amor" ), QStringLiteral(AMOR_VERSION));
     about.setLicense(KAboutLicense::GPL);
     about.setShortDescription(i18n(description));

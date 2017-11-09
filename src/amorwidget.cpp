@@ -21,7 +21,9 @@
 #include <QPainter>
 #include <QMouseEvent>
 #include <QX11Info>
-#include <QBuffer>
+#include <QApplication>
+
+#include <QDebug>
 
 #include <xcb/xcb.h>
 #include <xcb/shape.h>
@@ -42,17 +44,19 @@ void AmorWidget::setPixmap(const QPixmap *pixmap)
 {
     m_pixmap = pixmap;
 
-    if( m_pixmap ) {
-        const auto mask = m_pixmap->mask();
+    if ( pixmap ) {
+        const auto dpr = qApp->devicePixelRatio();
+        const auto mask = m_pixmap->scaled(m_pixmap->width() * dpr, m_pixmap->height() * dpr,
+                                           Qt::KeepAspectRatio, Qt::FastTransformation).mask();
         if (!mask.isNull()) {
             const auto conn = QX11Info::connection();
             auto img = mask.toImage().convertToFormat(QImage::Format_MonoLSB);
-            auto pixmap = xcb_create_pixmap_from_bitmap_data(conn, winId(),
+            auto bitmap = xcb_create_pixmap_from_bitmap_data(conn, winId(),
                                                              (uint8_t*) img.constBits(),
                                                              mask.width(), mask.height(), mask.depth(),
                                                              0, 0, nullptr);
-            xcb_shape_mask(conn, XCB_SHAPE_SO_SET, XCB_SHAPE_SK_BOUNDING, winId(), 0, 0, pixmap);
-            xcb_free_pixmap(conn, pixmap);
+            xcb_shape_mask(conn, XCB_SHAPE_SO_SET, XCB_SHAPE_SK_BOUNDING, winId(), 0, 0, bitmap);
+            xcb_free_pixmap(conn, bitmap);
             repaint();
         }
         update();
@@ -64,8 +68,7 @@ void AmorWidget::paintEvent(QPaintEvent *)
 {
     if( m_pixmap ) {
         QPainter p( this );
-        p.fillRect(0, 0, m_pixmap->width(), m_pixmap->height(), Qt::red);
-        p.drawPixmap( 0, 0, *m_pixmap );
+        p.drawPixmap( 0, 0, *m_pixmap);
     }
 }
 
