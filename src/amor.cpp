@@ -467,6 +467,9 @@ void Amor::restack()
         // Is there a faster way to get parent window than XQueryTree?
         const auto cookie = xcb_query_tree(QX11Info::connection(), sibling);
         const auto reply = xcb_query_tree_reply(QX11Info::connection(), cookie, nullptr);
+        if (!reply) {
+            return;
+        }
 
         nwins = xcb_query_tree_children_length(reply);
         dw = reply->root;
