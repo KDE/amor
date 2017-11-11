@@ -238,11 +238,16 @@ bool Amor::readConfig()
     // Select a random theme if user requested it
     if( mConfig.mRandomTheme ) {
         QStringList files;
-
         // Store relative paths into files to avoid storing absolute pathnames.
-        files = QStandardPaths::locateAll(QStandardPaths::AppDataLocation, QStringLiteral("*rc"));
-        int randomTheme = KRandom::random() % files.count();
-        mConfig.mTheme = files.at( randomTheme );
+        const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::AppDataLocation, QString(), QStandardPaths::LocateDirectory);
+        for (const QString& dir : dirs) {
+            const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*rc"));
+            for (const QString& file : fileNames) {
+                files.append(dir + QLatin1Char('/') + file);
+            }
+        }
+        const int randomTheme = KRandom::random() % files.count();
+        mConfig.mTheme = files.at(randomTheme);
     }
 
     // read selected theme
