@@ -55,9 +55,8 @@
 
 #define SLEEP_TIMEOUT   180     // Animation sleeps after SLEEP_TIMEOUT seconds
                                 // of mouse inactivity.
-#define TIPS_FILE       "tips"  // Display tips in TIP_FILE-LANG, e.g "tips-en"
-#define TIP_FREQUENCY   20      // Frequency tips are displayed small == more
-                                // often.
+#define TIPS_FILE       "tips-en"  // Display tips in TIP_FILE-LANG, e.g "tips-en" (this is then translated using i18n() at runtime)
+#define TIP_FREQUENCY   20      // Frequency tips are displayed small == more often.
 
 #define BUBBLE_TIME_STEP 250
 

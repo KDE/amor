@@ -37,76 +37,26 @@ AmorTips::AmorTips()
 bool AmorTips::setFile(const QString& file)
 {
     QString path(QStandardPaths::locate(QStandardPaths::AppDataLocation, file));
-
-    bool rv = path.length() && read( path );
-
-    rv |= readKTips();
-
-    return rv;
+    if (path.isEmpty()) {
+        qDebug() << "File not found in share/amor:" << file;
+        return false;
+    }
+    return read(path);
 }
-
 
 void AmorTips::reset()
 {
     mTips.clear();
 }
 
-
 QString AmorTips::tip()
 {
-    if( mTips.count() ) {
+    if (mTips.count()) {
         QString tip = mTips.at( KRandom::random() % mTips.count() );
         return i18n( tip.toUtf8() );
     }
-
-    return i18n( "No tip" );
+    return QString();
 }
-
-
-bool AmorTips::readKTips()
-{
-    QString fname;
-
-    fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kdewizard/tips"));
-
-    if( fname.isEmpty() ) {
-        return false;
-    }
-
-    QFile f( fname );
-    if( f.open( QIODevice::ReadOnly ) ) {
-        // Reading of tips must be exactly as in KTipDatabase::loadTips for translation
-        QString content =QLatin1String( f.readAll() );
-        const QRegExp rx( QLatin1String( "\\n+" ) );
-
-        int pos = -1;
-        while( ( pos = content.indexOf( QLatin1String( "<html>" ), pos + 1, Qt::CaseInsensitive ) ) != -1 ) {
-            QString tip = content
-                            .mid( pos + 6, content.indexOf(QLatin1String( "</html>" ), pos, Qt::CaseInsensitive) - pos - 6 )
-                            .replace( rx, QLatin1String( "\n" ) );
-
-            if( !tip.endsWith(QLatin1Char( '\n' )) ) {
-                tip += QLatin1Char( '\n' );
-            }
-
-            if( tip.startsWith( QLatin1Char( '\n' ) ) ) {
-                tip = tip.mid( 1 );
-            }
-
-            if( tip.isEmpty() ) {
-                qCDebug(AMOR_LOG) << "Empty tip found! Skipping! " << pos;
-                continue;
-            }
-
-            mTips.append( tip );
-        }
-
-        f.close();
-    }
-
-    return true;
-}
-
 
 bool AmorTips::read(const QString& path)
 {
@@ -117,6 +67,7 @@ bool AmorTips::read(const QString& path)
             readTip( file );
         }
 
+        qDebug() << "read" << mTips.count() << "tips";
         return true;
     }
 
@@ -136,12 +87,11 @@ bool AmorTips::readTip(QFile &file)
         }
     }
 
-    if( !tip.isEmpty() ) {
-        if( tip[ tip.length()-1 ] == QLatin1Char( '\n' ) ) {
-            tip.truncate( tip.length()-1 );
+    if (!tip.isEmpty()) {
+        if (tip.endsWith(QLatin1Char('\n'))) {
+            tip.chop(1);
         }
-        mTips.append( tip );
-
+        mTips.append(tip);
         return true;
     }
 
