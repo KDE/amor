@@ -80,7 +80,7 @@ Amor::Amor()
     QDBusConnection::sessionBus().registerObject( QLatin1String( "/Amor" ), this );
 
     if( !readConfig() ) {
-        qApp->quit();
+        exit(0);
     }
 
     mTargetWin   = 0;
