@@ -30,7 +30,7 @@
 #include <xcb/xcb_image.h>
 
 AmorWidget::AmorWidget()
-  : QWidget( 0, Qt::WindowTitleHint | Qt::X11BypassWindowManagerHint ),
+  : QWidget( 0, Qt::X11BypassWindowManagerHint | Qt::WindowStaysOnTopHint ),
     m_pixmap( 0 ),
     m_dragging( false )
 {
