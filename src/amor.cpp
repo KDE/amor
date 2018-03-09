@@ -41,7 +41,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KStartupInfo>
-#include <KWindowSystem>
+#include <KWindowInfo>
 #include <KHelpMenu>
 #include <KRandom>
 #include <KAboutData>
@@ -343,7 +343,8 @@ void Amor::selectAnimation(State state)
 
         mTargetWin = mNextTarget;
         if( mTargetWin != XCB_NONE ) {
-            mTargetRect = KWindowSystem::windowInfo( mTargetWin, NET::WMFrameExtents ).frameGeometry();
+            KWindowInfo windowInfo( mTargetWin, NET::WMFrameExtents );
+            mTargetRect = windowInfo.frameGeometry();
 
             // if the animation falls outside of the working area,
             // then relocate it so that is inside the desktop again
@@ -730,7 +731,8 @@ void Amor::slotWindowChange(WId win, NET::Properties properties, NET::Properties
     // This is an active event that affects the target window
     std::time( &mActiveTime );
 
-    NET::MappingState mappingState = KWindowSystem::windowInfo( mTargetWin, NET::WMFrameExtents ).mappingState();
+    KWindowInfo windowInfo( mTargetWin, NET::WMFrameExtents );
+    NET::MappingState mappingState = windowInfo.mappingState();
 
     if( mappingState == NET::Iconic || mappingState == NET::Withdrawn ) {
         // The target window has been iconified
@@ -744,7 +746,7 @@ void Amor::slotWindowChange(WId win, NET::Properties properties, NET::Properties
     }
 
     if( properties & NET::WMGeometry ) {
-        QRect newTargetRect = KWindowSystem::windowInfo( mTargetWin, NET::WMFrameExtents ).frameGeometry();
+        QRect newTargetRect = windowInfo.frameGeometry();
 
         // if the change in the window caused the animation to fall
         // out of the working area of the desktop, or if the animation
