@@ -680,7 +680,6 @@ void Amor::slotWindowActivate(WId win)
     // focus.  Initiate a blur event if there is a current active window.
     if( mTargetWin ) {
         // We are losing focus from the current window
-        selectAnimation( Blur );
         mTimer->setSingleShot( true );
         mTimer->start( 0 );
     }
