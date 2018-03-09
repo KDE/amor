@@ -21,6 +21,7 @@
 
 #include <QHash>
 #include <QSize>
+#include <QSettings>
 
 class KConfig;
 class AmorAnimation;
@@ -43,7 +44,7 @@ class AmorThemeManager
 
     protected:
         QString mPath;
-        KConfig *mConfig;
+        QSettings *mConfig;
         QSize mMaximumSize;                              // The largest pixmap used
         QHash<QString, AmorAnimationGroup*> mAnimations; // list of animation groups
         bool mStatic;	                                 // static image

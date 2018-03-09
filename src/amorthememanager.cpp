@@ -20,10 +20,10 @@
 #include "amoranimation.h"
 #include "amorpixmapmanager.h"
 
-#include <KConfig>
-#include <KConfigGroup>
 #include <KRandom>
 
+#include <QFile>
+#include <QSettings>
 #include <QStandardPaths>
 
 AmorThemeManager::AmorThemeManager()
@@ -42,14 +42,22 @@ AmorThemeManager::~AmorThemeManager()
 
 bool AmorThemeManager::setTheme(const QString & file)
 {
-    mPath = QStandardPaths::locate(QStandardPaths::AppDataLocation, file);
+    if (QFile::exists(file)) {
+        mPath = file;
+    } else {
+        mPath = QStandardPaths::locate(QStandardPaths::AppDataLocation, file);
+    }
+
+    if (mPath.isEmpty() || !QFile::exists(mPath)) {
+        return false;
+    }
 
     delete mConfig;
-    mConfig = new KConfig( mPath, KConfig::SimpleConfig );
-    KConfigGroup configGroup( mConfig, "Config" );
+    mConfig = new QSettings(mPath, QSettings::IniFormat);
+    mConfig->beginGroup("Config");
 
     // Get the directory where the pixmaps are stored and tell the pixmap manager.
-    QString pixmapPath = configGroup.readPathEntry( "PixmapPath", QString() );
+    QString pixmapPath = mConfig->value( "PixmapPath" ).toString();
     if( pixmapPath.isEmpty() ) {
         return false;
     }
@@ -62,13 +70,14 @@ bool AmorThemeManager::setTheme(const QString & file)
         mPath += pixmapPath;
     }
 
-    mStatic = configGroup.readEntry( "Static", false );
+    mStatic = mConfig->value( "Static" ).toBool();
 
     mMaximumSize.setWidth( 0 );
     mMaximumSize.setHeight( 0 );
 
     qDeleteAll( mAnimations );
     mAnimations.clear();
+    mConfig->endGroup();
 
     return true;
 }
@@ -101,27 +110,29 @@ bool AmorThemeManager::readGroup(const QString & seq)
     //animList->setAutoDelete(true);
 
     // Read the list of available animations.
-    KConfigGroup conf( mConfig, "Config" );
-    QStringList list;
-    list = conf.readEntry( seq, QStringList() );
+    mConfig->beginGroup("Config");
+    QStringList list = mConfig->value(seq).toStringList();
+    mConfig->endGroup();
 
     // Read each individual animation
     for(int i = 0; i < list.count(); ++i) {
-        KConfigGroup group( mConfig, list.at( i ) );
-        AmorAnimation *anim = new AmorAnimation( group );
+        mConfig->beginGroup(list[i]);
+        AmorAnimation *anim = new AmorAnimation( mConfig );
         animList->append( anim );
         mMaximumSize = mMaximumSize.expandedTo( anim->maximumSize() );
+        mConfig->endGroup();
     }
 
     int entries = list.count();
     if ( entries == 0) {    // If no animations were available for this group, just add the base anim
-        KConfigGroup group( mConfig, "Base" );
-        AmorAnimation *anim = new AmorAnimation( group );
+        mConfig->beginGroup("Base");
+        AmorAnimation *anim = new AmorAnimation( mConfig);
         if( anim ) {
             animList->append( anim );
             mMaximumSize = mMaximumSize.expandedTo( anim->maximumSize() );
             ++entries;
         }
+        mConfig->endGroup();
     }
 
     // Couldn't read any entries at all

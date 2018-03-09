@@ -238,12 +238,15 @@ bool Amor::readConfig()
     if( mConfig.mRandomTheme ) {
         QStringList files;
         // Store relative paths into files to avoid storing absolute pathnames.
-        const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::AppDataLocation, QString(), QStandardPaths::LocateDirectory);
+        const QStringList dirs = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation);;
         for (const QString& dir : dirs) {
             const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*rc"));
             for (const QString& file : fileNames) {
                 files.append(dir + QLatin1Char('/') + file);
             }
+        }
+        if (files.isEmpty()) {
+            return false;
         }
         const int randomTheme = KRandom::random() % files.count();
         mConfig.mTheme = files.at(randomTheme);

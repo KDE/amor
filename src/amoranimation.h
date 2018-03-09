@@ -26,13 +26,12 @@
 #include <QVector>
 
 class QPixmap;
-class KConfigGroup;
-class KConfig;
+class QSettings;
 
 class AmorAnimation
 {
     public:
-        explicit AmorAnimation(KConfigGroup &config);
+        explicit AmorAnimation(const QSettings *config);
 
         void reset();
         bool next();
@@ -48,7 +47,7 @@ class AmorAnimation
         const QPixmap *frame();
 
     protected:
-        void readConfig(KConfigGroup &config);
+        void readConfig(const QSettings *config);
 
     protected:
         int mCurrent;             // current frame in sequence
