@@ -35,6 +35,8 @@ AmorWidget::AmorWidget()
     m_dragging( false )
 {
     setAttribute( Qt::WA_NoSystemBackground, true );
+    setAttribute( Qt::WA_TranslucentBackground, true );
+    setAttribute( Qt::WA_OpaquePaintEvent, false );
 }
 
 
@@ -55,7 +57,7 @@ void AmorWidget::setPixmap(const QPixmap *pixmap)
                                                              (uint8_t*) img.constBits(),
                                                              mask.width(), mask.height(), mask.depth(),
                                                              0, 0, nullptr);
-            xcb_shape_mask(conn, XCB_SHAPE_SO_SET, XCB_SHAPE_SK_BOUNDING, winId(), 0, 0, bitmap);
+            xcb_shape_mask(conn, XCB_SHAPE_SO_UNION, XCB_SHAPE_SK_BOUNDING, winId(), 0, 0, bitmap);
             xcb_free_pixmap(conn, bitmap);
             repaint();
         }
