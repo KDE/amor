@@ -88,7 +88,7 @@ Amor::Amor()
     mAmorDialog  = 0;
     mMenu        = 0;
     mCurrAnim    = mBaseAnim;
-    mPosition    = mCurrAnim->hotspot().x();
+    mPosition    = -1;
     mState       = Normal;
 
     mWin = KWindowSystem::self();
@@ -119,12 +119,10 @@ Amor::Amor()
     connect( mCursorTimer, SIGNAL(timeout()), SLOT(slotCursorTimeout()) );
     mCursorTimer->start( 500 );
 
-    if( mWin->activeWindow() ) {
-        mNextTarget = mWin->activeWindow();
-        selectAnimation( Focus );
-        mTimer->setSingleShot( true );
-        mTimer->start( 0 );
-    }
+    mNextTarget = mWin->activeWindow();
+    selectAnimation( Focus );
+    mTimer->setSingleShot( true );
+    mTimer->start( 0 );
 
     if( !QDBusConnection::sessionBus().connect( QString(), QString(), QLatin1String( "org.kde.amor" ),
             QLatin1String( "KDE_stop_screensaver" ), this, SLOT(screenSaverStopped()) ) )
@@ -391,7 +389,7 @@ void Amor::selectAnimation(State state)
                     if( mTargetRect.width() == mCurrAnim->frame()->width() ) {
                         mPosition = mCurrAnim->hotspot().x();
                     }
-                    else if(changedLocation) {
+                    else if(changedLocation || mPosition < 0) {
                         mPosition = KRandom::random() % ( mTargetRect.width() - mCurrAnim->frame()->width() );
                         mPosition += mCurrAnim->hotspot().x();
                     }
@@ -672,6 +670,24 @@ void Amor::slotWidgetDragged(const QPoint &delta, bool release)
 
 void Amor::slotWindowActivate(WId win)
 {
+
+    // We don't fit on top of this window, see if we can find another one
+
+    KWindowInfo windowInfo( win, NET::WMFrameExtents );
+    const QRect desktopArea = mWin->workArea(KWindowSystem::currentDesktop());
+    if( windowInfo.frameGeometry().y() - mCurrAnim->hotspot().y() + mConfig.mOffset < desktopArea.y() ) {
+        for (const WId windowId : KWindowSystem::windows()) {
+            windowInfo = KWindowInfo( windowId, NET::WMFrameExtents | NET::WMGeometry );
+
+            if( windowInfo.frameGeometry().y() - mCurrAnim->hotspot().y() + mConfig.mOffset < desktopArea.y() ) {
+                continue;
+            }
+
+            win = windowId;
+            break;
+        }
+    }
+
     mTimer->stop();
     mNextTarget = win;
 
