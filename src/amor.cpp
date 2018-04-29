@@ -345,13 +345,15 @@ void Amor::selectAnimation(State state)
         }
 
         mTargetWin = mNextTarget;
+
         if( mTargetWin != XCB_NONE ) {
             KWindowInfo windowInfo( mTargetWin, NET::WMFrameExtents );
             mTargetRect = windowInfo.frameGeometry();
 
             // if the animation falls outside of the working area,
             // then relocate it so that is inside the desktop again
-            QRect desktopArea = mWin->workArea();
+            QRect desktopArea = mWin->workArea(KWindowSystem::currentDesktop());
+            KWindowSystem::setOnDesktop(mAmor->winId(), KWindowSystem::currentDesktop());
 
             if( mTargetRect.y() - mCurrAnim->hotspot().y() + mConfig.mOffset < desktopArea.y() ) {
                 if( mInDesktopBottom ) {
