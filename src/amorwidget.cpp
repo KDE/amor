@@ -20,23 +20,15 @@
 #include <QBitmap>
 #include <QPainter>
 #include <QMouseEvent>
-#include <QX11Info>
 #include <QApplication>
 
 #include <QDebug>
-
-#include <xcb/xcb.h>
-#include <xcb/shape.h>
-#include <xcb/xcb_image.h>
 
 AmorWidget::AmorWidget()
   : QWidget( 0, Qt::X11BypassWindowManagerHint | Qt::WindowStaysOnTopHint ),
     m_pixmap( 0 ),
     m_dragging( false )
 {
-    setAttribute( Qt::WA_NoSystemBackground, true );
-    setAttribute( Qt::WA_TranslucentBackground, true );
-    setAttribute( Qt::WA_OpaquePaintEvent, false );
 }
 
 
@@ -51,14 +43,7 @@ void AmorWidget::setPixmap(const QPixmap *pixmap)
         const auto mask = m_pixmap->scaled(m_pixmap->width() * dpr, m_pixmap->height() * dpr,
                                            Qt::KeepAspectRatio, Qt::FastTransformation).mask();
         if (!mask.isNull()) {
-            const auto conn = QX11Info::connection();
-            auto img = mask.toImage().convertToFormat(QImage::Format_MonoLSB);
-            auto bitmap = xcb_create_pixmap_from_bitmap_data(conn, winId(),
-                                                             (uint8_t*) img.constBits(),
-                                                             mask.width(), mask.height(), mask.depth(),
-                                                             0, 0, nullptr);
-            xcb_shape_mask(conn, XCB_SHAPE_SO_UNION, XCB_SHAPE_SK_BOUNDING, winId(), 0, 0, bitmap);
-            xcb_free_pixmap(conn, bitmap);
+            setMask(mask);
             repaint();
         }
         update();
