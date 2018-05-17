@@ -102,7 +102,6 @@ class Amor : public QObject
         QTimer *mCursorTimer;           // Cursor timer
         QTimer *mStackTimer;            // Restacking timer
         QTimer *mBubbleTimer;           // Bubble tip timer (GP: I didn't create this one, it had no use when I found it)
-        AmorDialog *mAmorDialog;        // Setup dialog
         QMenu *mMenu;                   // Our menu
         std::time_t mActiveTime;        // The time an active event occurred
         QPoint mCursPos;                // The last recorded position of the pointer

@@ -39,6 +39,7 @@
 AmorDialog::AmorDialog(QWidget *parent)
   : QDialog( parent )
 {
+    setAttribute(Qt::WA_DeleteOnClose);
     setWindowTitle(i18n("Options"));
 
 
@@ -118,28 +119,35 @@ void AmorDialog::readThemes()
 {
     // Non-recursive search for theme files, with the relative paths stored
     // in files so that absolute paths are not used.
-    QDir amorDir(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("amor"),
-                                        QStandardPaths::LocateDirectory));
-    const auto files = amorDir.entryList({ QStringLiteral("*rc") }, QDir::Files, QDir::NoSort);
-    for (const auto &file : files) {
-        addTheme(file);
+    const auto folders = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("amor"),
+                                        QStandardPaths::LocateDirectory);
+
+    for (const auto &folder : folders) {
+        QDir amorDir(folder);
+        const auto files = amorDir.entryList({ QStringLiteral("*rc") }, QDir::Files, QDir::NoSort);
+
+        for (const auto &file : files) {
+            addTheme(folder, file);
+        }
     }
 }
 
 
-void AmorDialog::addTheme(const QString& file)
+void AmorDialog::addTheme(const QString& folder, const QString& file)
 {
     KConfig config(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                                           QStringLiteral("amor/%1").arg(file)));
     KConfigGroup configGroup( &config, "Config" );
 
-    QString pixmapPath = configGroup.readPathEntry( "PixmapPath", QString() );
+    QString pixmapPath = folder
+                       + QDir::separator()
+                       + configGroup.readPathEntry( "PixmapPath", QString() );
     if( pixmapPath.isEmpty() ) {
         return;
     }
 
-    pixmapPath += QLatin1Char( '/' );
-    if( pixmapPath[0] != QLatin1Char( '/' ) ) {
+    pixmapPath += QDir::separator();
+    if( pixmapPath[0] != QDir::separator() ) {
         // relative to config file. We add a / to indicate the dir
         pixmapPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                                             QStringLiteral("amor/%1").arg(pixmapPath),

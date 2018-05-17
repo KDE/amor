@@ -85,7 +85,6 @@ Amor::Amor()
 
     mTargetWin   = 0;
     mNextTarget  = 0;
-    mAmorDialog  = 0;
     mMenu        = 0;
     mCurrAnim    = mBaseAnim;
     mPosition    = -1;
@@ -615,12 +614,9 @@ void Amor::slotTimeout()
 
 void Amor::slotConfigure()
 {
-    if( !mAmorDialog ) {
-        mAmorDialog = new AmorDialog();
-        connect( mAmorDialog, SIGNAL(changed()), SLOT(slotConfigChanged()) );
-        connect( mAmorDialog, SIGNAL(offsetChanged(int)), SLOT(slotOffsetChanged(int)) );
-    }
-
+    AmorDialog *mAmorDialog = new AmorDialog();
+    connect( mAmorDialog, SIGNAL(changed()), SLOT(slotConfigChanged()) );
+    connect( mAmorDialog, SIGNAL(offsetChanged(int)), SLOT(slotOffsetChanged(int)) );
     mAmorDialog->show();
 }
 

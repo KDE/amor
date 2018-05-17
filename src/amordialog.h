@@ -49,7 +49,7 @@ class AmorDialog : public QDialog
 
     protected:
         void readThemes();
-        void addTheme(const QString& file);
+        void addTheme(const QString& folder, const QString& file);
 
     protected:
         QListWidget *mThemeListView;
