@@ -24,7 +24,6 @@
 
 #include <stdlib.h>
 
-#define TRANSLATION_DOMAIN "ktip"
 #include <KLocalizedString>
 #include <KRandom>
 
