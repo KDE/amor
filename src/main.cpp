@@ -31,6 +31,9 @@ static const char description[] = I18N_NOOP("KDE creature for your desktop");
 
 int main(int argc, char **argv)
 {
+    QApplication app(argc, argv);
+    KLocalizedString::setApplicationDomain("amor");
+
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     KAboutData about(QStringLiteral("amor"), i18n( "amor" ), QStringLiteral(AMOR_VERSION));
@@ -52,7 +55,6 @@ int main(int argc, char **argv)
     about.setOrganizationDomain(QByteArray("kde.org"));
     about.setDesktopFileName(QStringLiteral("org.kde.amor"));
 
-    QApplication app(argc, argv);
     KAboutData::setApplicationData(about);
 
     KDBusService service(KDBusService::Unique);
