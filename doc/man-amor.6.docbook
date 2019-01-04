@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
 <!-- <!ENTITY kdeoptions SYSTEM "kdeoptions.docbook"> -->
 <!-- <!ENTITY qtoptions SYSTEM "qtoptions.docbook"> -->
 <!ENTITY % English "INCLUDE">
@@ -51,7 +51,7 @@ options.</para>
 <refsect1>
 <title>See Also</title>
 
-<para>Within &kde; you can enter
+<para>You can enter
 <userinput>help:/amor</userinput> in &konqueror; to see the
 comprehensive user manual.</para>
 

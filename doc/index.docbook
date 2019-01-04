@@ -1,7 +1,6 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
   <!ENTITY kappname "&amor;">
-  <!ENTITY package "kdetoys">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE">
 ]>
@@ -36,7 +35,6 @@
 
 <keywordset>
 <keyword>KDE</keyword>
-<keyword>kdetoys</keyword>
 <keyword>amor</keyword>
 <keyword>helper</keyword>
 <keyword>assistant</keyword>
@@ -58,8 +56,8 @@ and behavior of the animation.
 </para>
 
 <note><para>Since &amor; works with the &kde; window manager &kwin;, the
-application will only work from within &kde;.  It is possible that &amor;
-would work from within another &kde;-compliant window manager, but none are
+application will only work from within &plasma;.  It is possible that &amor;
+would work from within another &plasma;-compliant window manager, but none are
 known to work at the time of this writing.</para></note>
 </sect1>
 </chapter>
