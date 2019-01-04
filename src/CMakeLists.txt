@@ -42,6 +42,6 @@ target_link_libraries(amor
 
 install(TARGETS amor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
-install(PROGRAMS amor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(PROGRAMS org.kde.amor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.amor.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR})
 

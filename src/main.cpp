@@ -49,6 +49,9 @@ int main(int argc, char **argv)
     about.addAuthor(i18n("Martin R. Jones"), {}, QStringLiteral("mjones@kde.org"));
     about.addAuthor(i18n("Gerardo Puga"), {}, QStringLiteral("gpuga@gioia.ing.unlp.edu.ar"));
 
+    about.setOrganizationDomain(QByteArray("kde.org"));
+    about.setDesktopFileName(QStringLiteral("org.kde.amor"));
+
     QApplication app(argc, argv);
     KAboutData::setApplicationData(about);
 
