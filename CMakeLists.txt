@@ -13,6 +13,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
+include(ECMSetupVersion)
 
 set(CMAKE_AUTOMOC ON)
 
@@ -36,6 +37,9 @@ find_package(KF5WidgetsAddons ${KF5_VERSION} CONFIG REQUIRED)
 
 
 find_package(XCB REQUIRED)
+
+
+ecm_setup_version(2.4.0 VARIABLE_PREFIX AMOR VERSION_HEADER src/version.h)
 
 
 # Search KDE installation

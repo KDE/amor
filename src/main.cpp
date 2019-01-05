@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
-    KAboutData about(QStringLiteral("amor"), i18n( "amor" ), QStringLiteral(AMOR_VERSION));
+    KAboutData about(QStringLiteral("amor"), i18n( "amor" ), QStringLiteral(AMOR_VERSION_STRING));
     about.setLicense(KAboutLicense::GPL);
     about.setShortDescription(i18n(description));
     about.setCopyrightStatement(i18n("1999 by Martin R. Jones\n2010 by Stefan Böhmann"));
