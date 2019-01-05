@@ -251,7 +251,7 @@ bool Amor::readConfig()
 
     // read selected theme
     if( !mTheme.setTheme( mConfig.mTheme ) ) {
-        KMessageBox::error( 0, i18nc( "@info:status", "Error reading theme: " ) + mConfig.mTheme );
+        KMessageBox::error( 0, i18nc( "@info:status", "Error reading theme: %1", mConfig.mTheme ) );
         return false;
     }
 
@@ -261,14 +261,14 @@ bool Amor::readConfig()
         // Read all the standard animation groups
         for(int i = 0; groups[i]; ++i) {
             if( !mTheme.readGroup(QLatin1String( groups[i] ) ) ) {
-                KMessageBox::error( 0, i18nc( "@info:status", "Error reading group: " ) + QLatin1String( groups[i] ) );
+                KMessageBox::error( 0, i18nc( "@info:status", "Error reading group: %1", QLatin1String( groups[i] ) ) );
                 return false;
             }
         }
     }
     else {
         if( !mTheme.readGroup(QLatin1String( ANIM_BASE ) ) ) {
-            KMessageBox::error( 0, i18nc( "@info:status", "Error reading group: " ) + QLatin1String( ANIM_BASE ) );
+            KMessageBox::error( 0, i18nc( "@info:status", "Error reading group: %1", QLatin1String( ANIM_BASE ) ) );
             return false;
         }
     }
