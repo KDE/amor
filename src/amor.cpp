@@ -46,10 +46,8 @@
 #include <KRandom>
 #include <KAboutData>
 
-#if defined Q_OS_LINUX
 #include <xcb/xcb.h>
 #include <QX11Info>
-#endif
 
 // #define DEBUG_AMOR
 
@@ -463,7 +461,6 @@ void Amor::restack()
         return;
     }
 
-#ifdef Q_OS_LINUX
     xcb_window_t sibling = mTargetWin;
     xcb_window_t dw, parent = XCB_NONE, *wins;
 
@@ -495,7 +492,6 @@ void Amor::restack()
     xcb_configure_window(QX11Info::connection(), mAmor->winId(),
                          XCB_CONFIG_WINDOW_SIBLING | XCB_CONFIG_WINDOW_STACK_MODE,
                          values);
-#endif
 }
 
 
