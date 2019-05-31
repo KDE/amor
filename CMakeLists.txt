@@ -14,6 +14,7 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
 include(ECMSetupVersion)
+include(FeatureSummary)
 
 set(CMAKE_AUTOMOC ON)
 
@@ -49,3 +50,5 @@ add_definitions(-DQT_NO_DEPRECATED_BEFORE=0x060000)
 add_subdirectory( data )
 add_subdirectory( src )
 add_subdirectory( doc )
+
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
