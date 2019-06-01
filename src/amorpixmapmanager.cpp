@@ -44,6 +44,7 @@ void AmorPixmapManager::setPixmapDir(const QString &dir)
 void AmorPixmapManager::reset()
 {
     mPixmapDir = QLatin1Char( '.' );
+    qDeleteAll( mPixmaps );
     mPixmaps.clear();
 }
 
