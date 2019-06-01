@@ -120,16 +120,10 @@ Amor::Amor()
     mTimer->setSingleShot( true );
     mTimer->start( 0 );
 
-    if( !QDBusConnection::sessionBus().connect( QString(), QString(), QLatin1String( "org.kde.amor" ),
-            QLatin1String( "KDE_stop_screensaver" ), this, SLOT(screenSaverStopped()) ) )
+    if( !QDBusConnection::sessionBus().connect( QStringLiteral( "org.freedesktop.ScreenSaver" ), QStringLiteral( "/ScreenSaver" ), QStringLiteral( "org.freedesktop.ScreenSaver" ),
+            QStringLiteral( "ActiveChanged" ), this, SLOT(screenSaverStatusChanged(bool)) ) )
     {
-        qCDebug(AMOR_LOG) << "Could not attach DBus signal: KDE_stop_screensaver()";
-    }
-
-    if( !QDBusConnection::sessionBus().connect( QString(), QString(), QLatin1String( "org.kde.amor" ),
-            QLatin1String( "KDE_start_screensaver" ), this, SLOT(screenSaverStarted()) ) )
-    {
-        qCDebug(AMOR_LOG) << "Could not attach DBus signal: KDE_start_screensaver()";
+        qCDebug(AMOR_LOG) << "Could not attach DBus signal: org.freedesktop.ScreenSaver.ActiveChanged()";
     }
 
     KStartupInfo::appStarted();
@@ -141,6 +135,17 @@ Amor::~Amor()
     delete mMenu;
     delete mAmor;
     delete mBubble;
+}
+
+
+void Amor::screenSaverStatusChanged( bool active )
+{
+    if( active ) {
+        screenSaverStarted();
+    }
+    else {
+        screenSaverStopped();
+    }
 }
 
 

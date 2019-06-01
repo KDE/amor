@@ -77,6 +77,7 @@ class Amor : public QObject
         void slotWidgetDragged( const QPoint &delta, bool release );
         void restack();
         void hideBubble(bool forceDequeue = false);
+        void screenSaverStatusChanged(bool active);
 
         void slotBubbleTimeout();
 
