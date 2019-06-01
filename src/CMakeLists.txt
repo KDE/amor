@@ -5,7 +5,6 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}
 set(amor_SRCS
   main.cpp
   queueitem.cpp
-  amorsessionwidget.cpp
   amordialog.cpp
   amor.cpp
   amorwidget.cpp

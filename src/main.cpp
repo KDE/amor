@@ -16,7 +16,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 #include "amor.h"
-#include "amorsessionwidget.h"
 #include "version.h"
 
 #include <KDBusService>
@@ -58,10 +57,6 @@ int main(int argc, char **argv)
     KAboutData::setApplicationData(about);
 
     KDBusService service(KDBusService::Unique);
-
-    AmorSessionWidget *sessionWidget = new AmorSessionWidget; // session management
-    // FIXME Qt5
-    //app.setTopWidget(sessionWidget);
 
     Amor amor;
 
