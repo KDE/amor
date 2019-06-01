@@ -138,6 +138,7 @@ Amor::Amor()
 
 Amor::~Amor()
 {
+    delete mMenu;
     delete mAmor;
     delete mBubble;
 }
