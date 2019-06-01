@@ -46,7 +46,7 @@ class AmorThemeManager
         QString mPath;
         QSettings *mConfig;
         QSize mMaximumSize;                              // The largest pixmap used
-        QHash<QString, AmorAnimationGroup*> mAnimations; // list of animation groups
+        QHash<QString, AmorAnimationGroup> mAnimations;  // list of animation groups
         bool mStatic;	                                 // static image
 };
 

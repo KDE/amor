@@ -35,7 +35,6 @@ AmorThemeManager::AmorThemeManager()
 
 AmorThemeManager::~AmorThemeManager()
 {
-    qDeleteAll( mAnimations );
     delete mConfig;
 }
 
@@ -75,7 +74,6 @@ bool AmorThemeManager::setTheme(const QString & file)
     mMaximumSize.setWidth( 0 );
     mMaximumSize.setHeight( 0 );
 
-    qDeleteAll( mAnimations );
     mAnimations.clear();
     mConfig->endGroup();
 
@@ -87,12 +85,11 @@ AmorAnimation *AmorThemeManager::random(const QString & group)
 {
     QString grp = mStatic ? QLatin1String( "Base" ) : group;
 
-    QHash<QString, AmorAnimationGroup*>::const_iterator it = mAnimations.constFind( grp );
-    AmorAnimationGroup *animGroup = it != mAnimations.constEnd() ? *it : 0;
+    const QHash<QString, AmorAnimationGroup>::const_iterator it = mAnimations.constFind( grp );
 
-    if( animGroup ) {
-        int idx = KRandom::random() % animGroup->count();
-        return animGroup->at( idx );
+    if( it != mAnimations.constEnd() ) {
+        int idx = KRandom::random() % it->count();
+        return it->at( idx );
     }
 
     return 0;
@@ -102,12 +99,12 @@ AmorAnimation *AmorThemeManager::random(const QString & group)
 bool AmorThemeManager::readGroup(const QString & seq)
 {
     AmorPixmapManager::manager()->setPixmapDir( mPath );
-    AmorAnimationGroup *animList = new AmorAnimationGroup;
+    AmorAnimationGroup animList;
 
 #ifdef __GNUC__
 #warning "kde4: fix autodelete for animList";
 #endif
-    //animList->setAutoDelete(true);
+    //animList.setAutoDelete(true);
 
     // Read the list of available animations.
     mConfig->beginGroup("Config");
@@ -118,7 +115,7 @@ bool AmorThemeManager::readGroup(const QString & seq)
     for(int i = 0; i < list.count(); ++i) {
         mConfig->beginGroup(list[i]);
         AmorAnimation *anim = new AmorAnimation( mConfig );
-        animList->append( anim );
+        animList.append( anim );
         mMaximumSize = mMaximumSize.expandedTo( anim->maximumSize() );
         mConfig->endGroup();
     }
@@ -128,7 +125,7 @@ bool AmorThemeManager::readGroup(const QString & seq)
         mConfig->beginGroup("Base");
         AmorAnimation *anim = new AmorAnimation( mConfig);
         if( anim ) {
-            animList->append( anim );
+            animList.append( anim );
             mMaximumSize = mMaximumSize.expandedTo( anim->maximumSize() );
             ++entries;
         }
