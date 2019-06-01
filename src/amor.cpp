@@ -22,7 +22,6 @@
 #include "amorwidget.h"
 #include "amordialog.h"
 #include "version.h"
-#include "queueitem.h"
 #include "amorthememanager.h"
 #include "amoradaptor.h"
 #include "amor_debug.h"
@@ -139,8 +138,6 @@ Amor::Amor()
 
 Amor::~Amor()
 {
-    qDeleteAll( mTipsQueue );
-    mTipsQueue.clear();
     delete mAmor;
     delete mBubble;
 }
@@ -170,7 +167,7 @@ void Amor::screenSaverStarted()
 void Amor::showTip(const QString &tip)
 {
     if( mTipsQueue.count() < 5 && !mForceHideAmorWidget ) { // start dropping tips if the queue is too long
-        mTipsQueue.enqueue( new QueueItem( QueueItem::Tip, tip ) );
+        mTipsQueue.enqueue( QueueItem( QueueItem::Tip, tip ) );
     }
 
     if( mState == Sleeping ) {
@@ -188,7 +185,7 @@ void Amor::showMessage( const QString &message , int msec )
         return; // do not show messages sent while in the screensaver
     }
 
-    mTipsQueue.enqueue( new QueueItem( QueueItem::Talk, message, msec ) );
+    mTipsQueue.enqueue( QueueItem( QueueItem::Talk, message, msec ) );
 
     if( mState == Sleeping ) {
         selectAnimation( Waking );      // Set waking immediatedly
@@ -286,9 +283,9 @@ void Amor::showBubble()
         }
 
         mBubble->setOrigin( mAmor->x()+mAmor->width()/2, mAmor->y()+mAmor->height()/2 );
-        mBubble->setMessage( mTipsQueue.head()->text() );
+        mBubble->setMessage( mTipsQueue.head().text() );
 
-        // mBubbleTimer->start(mTipsQueue.head()->time(), true);
+        // mBubbleTimer->start(mTipsQueue.head().time(), true);
         mBubbleTimer->setSingleShot(true);
         mBubbleTimer->start(BUBBLE_TIME_STEP);
     }
@@ -309,7 +306,7 @@ void Amor::hideBubble(bool forceDequeue)
         // latter is to keep backwards compatibility and because
         // carrying around a tip bubble when switching windows quickly is really
         // annoyying
-        if( forceDequeue || !mBubble->isVisible() || ( mTipsQueue.head()->type() == QueueItem::Tip ) ) {
+        if( forceDequeue || !mBubble->isVisible() || ( mTipsQueue.head().type() == QueueItem::Tip ) ) {
             /* there's always an item in the queue here */
             mTipsQueue.dequeue();
         }
@@ -583,7 +580,7 @@ void Amor::slotTimeout()
             showBubble();
         }
         else if( KRandom::random()%TIP_FREQUENCY == 1 && mConfig.mTips && !mBubble && !mCurrAnim->frameNum() ) {
-            mTipsQueue.enqueue( new QueueItem( QueueItem::Tip, mTips.tip() ) );
+            mTipsQueue.enqueue( QueueItem( QueueItem::Tip, mTips.tip() ) );
             showBubble();
         }
     }
@@ -828,10 +825,10 @@ void Amor::slotDesktopChange(int desktop)
 void Amor::slotBubbleTimeout()
 {
     // has the queue item been displayed for long enough?
-    QueueItem *first = mTipsQueue.head();
+    QueueItem &first = mTipsQueue.head();
 
-    if( first->time() > BUBBLE_TIME_STEP && mBubble->isVisible() ) {
-        first->setTime( first->time() - BUBBLE_TIME_STEP );
+    if( first.time() > BUBBLE_TIME_STEP && mBubble->isVisible() ) {
+        first.setTime( first.time() - BUBBLE_TIME_STEP );
         mBubbleTimer->setSingleShot( true );
         mBubbleTimer->start( BUBBLE_TIME_STEP );
         return;
@@ -839,7 +836,7 @@ void Amor::slotBubbleTimeout()
 
     // do not do anything if the mouse pointer is in the bubble
     if( mBubble->mouseWithin() ) {
-        first->setTime( 500 );                  // show this item for another 500ms
+        first.setTime( 500 );                  // show this item for another 500ms
         mBubbleTimer->setSingleShot( true );
         mBubbleTimer->start( BUBBLE_TIME_STEP );
         return;

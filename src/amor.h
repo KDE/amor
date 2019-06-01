@@ -31,6 +31,7 @@
 #include "amortips.h"
 #include "amorconfig.h"
 #include "amorthememanager.h"
+#include "queueitem.h"
 
 #include <xcb/xcb.h>
 
@@ -42,7 +43,6 @@ class QTimer;
 class KWindowSystem;
 class QMenu;
 class KConfigBase;
-class QueueItem;
 
 
 class Amor : public QObject
@@ -112,7 +112,7 @@ class Amor : public QObject
                                         // title bar, but at the bottom of the desktop
         AmorConfig mConfig;             // Configuration parameters
         bool mForceHideAmorWidget;
-        QQueue<QueueItem*> mTipsQueue;  // GP: tips queue
+        QQueue<QueueItem> mTipsQueue;   // GP: tips queue
 };
 
 
