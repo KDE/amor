@@ -9,7 +9,5 @@
       <arg name="message" type="s" direction="in"/>
       <arg name="msec" type="i" direction="in"/>
     </method>
-    <method name="screenSaverStopped"/>
-    <method name="screenSaverStarted"/>
   </interface>
 </node>
