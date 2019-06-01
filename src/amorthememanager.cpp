@@ -35,6 +35,9 @@ AmorThemeManager::AmorThemeManager()
 
 AmorThemeManager::~AmorThemeManager()
 {
+    for( const AmorAnimationGroup &group : mAnimations ) {
+        qDeleteAll( group );
+    }
     delete mConfig;
 }
 
@@ -74,6 +77,9 @@ bool AmorThemeManager::setTheme(const QString & file)
     mMaximumSize.setWidth( 0 );
     mMaximumSize.setHeight( 0 );
 
+    for( const AmorAnimationGroup &group : mAnimations ) {
+        qDeleteAll( group );
+    }
     mAnimations.clear();
     mConfig->endGroup();
 
@@ -100,11 +106,6 @@ bool AmorThemeManager::readGroup(const QString & seq)
 {
     AmorPixmapManager::manager()->setPixmapDir( mPath );
     AmorAnimationGroup animList;
-
-#ifdef __GNUC__
-#warning "kde4: fix autodelete for animList";
-#endif
-    //animList.setAutoDelete(true);
 
     // Read the list of available animations.
     mConfig->beginGroup("Config");
