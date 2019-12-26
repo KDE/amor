@@ -687,6 +687,7 @@ void Amor::slotWindowActivate(WId win)
         // We are losing focus from the current window
         mTimer->setSingleShot( true );
         mTimer->start( 0 );
+        selectAnimation( Destroy );
     }
     else if( mNextTarget ) {
         // We are setting focus to a new window
