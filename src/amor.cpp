@@ -640,14 +640,18 @@ void Amor::slotOffsetChanged(int off)
 
 void Amor::slotWidgetDragged(const QPoint &delta, bool release)
 {
+    mTimer->stop();
+
     if( mCurrAnim->frame() ) {
         int newPosition = mPosition + delta.x();
+
         if( mCurrAnim->totalMovement() + newPosition > mTargetRect.width() ) {
             newPosition = mTargetRect.width() - mCurrAnim->totalMovement();
         }
         else if( mCurrAnim->totalMovement() + newPosition < 0 ) {
             newPosition = -mCurrAnim->totalMovement();
         }
+
         mPosition = newPosition;
         mAmor->move( mTargetRect.x() + mPosition - mCurrAnim->hotspot().x(), mAmor->y() );
 
@@ -661,29 +665,16 @@ void Amor::slotWidgetDragged(const QPoint &delta, bool release)
             mConfig.write();
         }
     }
+
+    if (release) {
+        mTimer->setSingleShot( true );
+        mTimer->start( 0 );
+    }
 }
 
 
 void Amor::slotWindowActivate(WId win)
 {
-
-    // We don't fit on top of this window, see if we can find another one
-
-    KWindowInfo windowInfo( win, NET::WMFrameExtents );
-    const QRect desktopArea = mWin->workArea(KWindowSystem::currentDesktop());
-    if( windowInfo.frameGeometry().y() - mCurrAnim->hotspot().y() + mConfig.mOffset < desktopArea.y() ) {
-        for (const WId windowId : KWindowSystem::windows()) {
-            windowInfo = KWindowInfo( windowId, NET::WMFrameExtents | NET::WMGeometry );
-
-            if( windowInfo.frameGeometry().y() - mCurrAnim->hotspot().y() + mConfig.mOffset < desktopArea.y() ) {
-                continue;
-            }
-
-            win = windowId;
-            break;
-        }
-    }
-
     mTimer->stop();
     mNextTarget = win;
 
