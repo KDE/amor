@@ -806,12 +806,6 @@ void Amor::slotWindowChange(WId win, NET::Properties properties, NET::Properties
 
 void Amor::slotDesktopChange(int desktop)
 {
-    // GP: signal currentDesktopChanged seems to be emitted even if you
-    // change to the very same desktop you are in.
-    if( mWin->currentDesktop() == desktop ) {
-        return;
-    }
-
     mNextTarget = XCB_NONE;
     mTargetWin = XCB_NONE;
     selectAnimation( Normal );
