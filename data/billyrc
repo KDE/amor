@@ -70,7 +70,6 @@ Description[uz]=Kichik Billi
 Description[uz@cyrillic]=Кичик Билли
 Description[wa]=Pitit Billy
 Description[xh]=Little Billy
-Description[x-test]=xxLittle Billyxx
 Description[zh_TW]=小比利
 About=Static window sitter\nGraphic from http://www.xbill.org/
 About[af]=Statiese venster sitter\nGraphic van http://www.xbill.org/
@@ -134,7 +133,6 @@ About[th]=นั่งเล่นบนหน้าต่าง\nกราฟ�
 About[tr]=Statik pencere bakıcısı\nGrafikler http://www.xbill.org/ 'tan
 About[uk]=Статична істота на вікні\nГрафіку запозичено з http://www.xbill.org/
 About[xh]=Isibambo sewindow esingashukumi\nUmzobo http://www.xbill.org/
-About[x-test]=xxStatic window sitter\nGraphic from http://www.xbill.org/xx
 About[zh_TW]=Static window sitter\nGraphic from http://www.xbill.org/
 Icon=../preview/billy.png
 
