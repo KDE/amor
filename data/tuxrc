@@ -68,6 +68,7 @@ Description[uz]=Animatsiyasiz Taks
 Description[uz@cyrillic]=Анимациясиз Такс
 Description[wa]=Tux nén animé
 Description[xh]=Okungaphiliswanga Tux
+Description[x-test]=xxUnanimated Tuxxx
 Description[zh_TW]=不動的 Tux
 About=Static window sitter
 About[af]=Statiese venster sitter
@@ -131,6 +132,7 @@ About[th]=นั่งเล่นบนหน้าต่าง
 About[tr]=Statik pencere bakıcı
 About[uk]=Статична істота на вікні
 About[xh]=Static window sitter
+About[x-test]=xxStatic window sitterxx
 About[zh_TW]=Static window sitter
 Icon=../preview/tux.png
 

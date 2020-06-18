@@ -67,6 +67,7 @@ Description[uz]=FreeBSD tumori
 Description[uz@cyrillic]=FreeBSD тумори
 Description[wa]=Mascote FreeBSD
 Description[xh]=FreeBSD Mascot
+Description[x-test]=xxFreeBSD Mascotxx
 Description[zh_TW]=FreeBSD Mascot
 About=Static window sitter
 About[af]=Statiese venster sitter
@@ -130,6 +131,7 @@ About[th]=นั่งเล่นบนหน้าต่าง
 About[tr]=Statik pencere bakıcı
 About[uk]=Статична істота на вікні
 About[xh]=Static window sitter
+About[x-test]=xxStatic window sitterxx
 About[zh_TW]=Static window sitter
 Icon=../preview/bsd.png
 
