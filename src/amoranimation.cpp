@@ -19,8 +19,6 @@
 #include "amoranimation.h"
 #include "amorpixmapmanager.h"
 
-#include <KRandom>
-
 #include <QPixmap>
 #include <QSettings>
 #include <QStandardPaths>

@@ -21,11 +21,11 @@
 #include <QFile>
 #include <QRegExp>
 #include <QStandardPaths>
+#include <QRandomGenerator>
 
 #include <stdlib.h>
 
 #include <KLocalizedString>
-#include <KRandom>
 
 
 
@@ -51,7 +51,7 @@ void AmorTips::reset()
 QString AmorTips::tip()
 {
     if (mTips.count()) {
-        QString tip = mTips.at( KRandom::random() % mTips.count() );
+        QString tip = mTips.at( QRandomGenerator::global()->bounded( mTips.count() ) );
         return i18n( tip.toUtf8() );
     }
     return QString();

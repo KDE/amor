@@ -36,13 +36,13 @@
 #include <QStandardPaths>
 #include <QApplication>
 #include <QMenu>
+#include <QRandomGenerator>
 
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KStartupInfo>
 #include <KWindowInfo>
 #include <KHelpMenu>
-#include <KRandom>
 #include <KAboutData>
 
 #include <xcb/xcb.h>
@@ -246,7 +246,7 @@ bool Amor::readConfig()
         if (files.isEmpty()) {
             return false;
         }
-        const int randomTheme = KRandom::random() % files.count();
+        const int randomTheme = QRandomGenerator::global()->bounded(files.count());
         mConfig.mTheme = files.at(randomTheme);
     }
 
@@ -391,7 +391,7 @@ void Amor::selectAnimation(State state)
                         mPosition = mCurrAnim->hotspot().x();
                     }
                     else if(changedLocation || mPosition < 0) {
-                        mPosition = KRandom::random() % ( mTargetRect.width() - mCurrAnim->frame()->width() );
+                        mPosition = QRandomGenerator::global()->bounded( mTargetRect.width() - mCurrAnim->frame()->width() );
                         mPosition += mCurrAnim->hotspot().x();
                     }
                 }
@@ -586,7 +586,7 @@ void Amor::slotTimeout()
         if( !mTipsQueue.isEmpty() && !mBubble &&  mConfig.mAppTips ) {
             showBubble();
         }
-        else if( KRandom::random()%TIP_FREQUENCY == 1 && mConfig.mTips && !mBubble && !mCurrAnim->frameNum() ) {
+        else if( QRandomGenerator::global()->bounded(TIP_FREQUENCY) == 1 && mConfig.mTips && !mBubble && !mCurrAnim->frameNum() ) {
             mTipsQueue.enqueue( QueueItem( QueueItem::Tip, mTips.tip() ) );
             showBubble();
         }

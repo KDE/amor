@@ -20,11 +20,10 @@
 #include "amoranimation.h"
 #include "amorpixmapmanager.h"
 
-#include <KRandom>
-
 #include <QFile>
 #include <QSettings>
 #include <QStandardPaths>
+#include <QRandomGenerator>
 
 AmorThemeManager::AmorThemeManager()
   : mConfig( 0 ),
@@ -94,7 +93,7 @@ AmorAnimation *AmorThemeManager::random(const QString & group)
     const QHash<QString, AmorAnimationGroup>::const_iterator it = mAnimations.constFind( grp );
 
     if( it != mAnimations.constEnd() ) {
-        int idx = KRandom::random() % it->count();
+        int idx = QRandomGenerator::global()->bounded(it->count());
         return it->at( idx );
     }
 
