@@ -30,7 +30,7 @@ class AmorDialog : public QDialog
     Q_OBJECT
 
     public:
-        explicit AmorDialog(QWidget *parent = 0);
+        explicit AmorDialog(QWidget *parent = nullptr);
 
     signals:
         void changed();

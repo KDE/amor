@@ -37,9 +37,9 @@ class AmorBubble : public QLabel
         bool mouseWithin() { return m_mouseWithin; }
 
     protected:
-        void enterEvent(QEvent *event) { Q_UNUSED( event ); m_mouseWithin = true; }
-        void leaveEvent(QEvent *event) { Q_UNUSED( event ); m_mouseWithin = false; }        
-        void mouseReleaseEvent(QMouseEvent *event) { Q_UNUSED( event ); hide(); }
+        void enterEvent(QEvent *event) override { Q_UNUSED( event ); m_mouseWithin = true; }
+        void leaveEvent(QEvent *event) override { Q_UNUSED( event ); m_mouseWithin = false; }
+        void mouseReleaseEvent(QMouseEvent *event) override { Q_UNUSED( event ); hide(); }
 
     protected:        
         QLabel *m_label;        // displays the message

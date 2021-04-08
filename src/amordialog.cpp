@@ -58,7 +58,7 @@ AmorDialog::AmorDialog(QWidget *parent)
     mConfig.read();
     auto l = new QVBoxLayout(this);
     QGridLayout *gridLayout = new QGridLayout();
-    gridLayout->setMargin( 0 );
+    gridLayout->setContentsMargins( 0, 0, 0, 0 );
     l->addLayout(gridLayout);
     l->addStretch(2);
     l->addWidget(buttonBox);
