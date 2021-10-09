@@ -40,7 +40,7 @@ AmorDialog::AmorDialog(QWidget *parent)
   : QDialog( parent )
 {
     setAttribute(Qt::WA_DeleteOnClose);
-    setWindowTitle(i18n("Options"));
+    setWindowTitle(i18nc("@title:window", "Options"));
 
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel, this);
