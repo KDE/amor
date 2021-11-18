@@ -3,17 +3,28 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 set(amor_SRCS
-  main.cpp
-  queueitem.cpp
-  amordialog.cpp
-  amor.cpp
-  amorwidget.cpp
-  amoranimation.cpp
-  amorthememanager.cpp
-  amorpixmapmanager.cpp
-  amorbubble.cpp
-  amorconfig.cpp
-  amortips.cpp
+    amoranimation.cpp
+    amoranimation.h
+    amorbubble.cpp
+    amorbubble.h
+    amorconfig.cpp
+    amorconfig.h
+    amor.cpp
+    amordialog.cpp
+    amordialog.h
+    amor.h
+    amorpixmapmanager.cpp
+    amorpixmapmanager.h
+    amorthememanager.cpp
+    amorthememanager.h
+    amortips.cpp
+    amortips.h
+    amorwidget.cpp
+    amorwidget.h
+    main.cpp
+    queueitem.cpp
+    queueitem.h
+
 )
 
 ecm_qt_declare_logging_category(amor_SRCS HEADER amor_debug.h IDENTIFIER AMOR_LOG CATEGORY_NAME org.kde.amor)
