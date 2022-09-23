@@ -21,9 +21,7 @@
 
 #include <ctime>
 
-#include <QWidget>
 #include <QQueue>
-#include <QList>
 
 #include <KWindowSystem>
 

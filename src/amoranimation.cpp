@@ -21,7 +21,6 @@
 
 #include <QPixmap>
 #include <QSettings>
-#include <QStandardPaths>
 
 
 AmorAnimation::AmorAnimation(const QSettings *config)

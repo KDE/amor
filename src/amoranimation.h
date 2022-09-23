@@ -19,7 +19,6 @@
 #ifndef AMORANIMATION_H
 #define AMORANIMATION_H
 
-#include <QHash>
 #include <QPoint>
 #include <QSize>
 #include <QStringList>

@@ -19,7 +19,6 @@
 #include "amor_debug.h"
 
 #include <QFile>
-#include <QRegExp>
 #include <QStandardPaths>
 #include <QRandomGenerator>
 

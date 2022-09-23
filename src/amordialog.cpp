@@ -22,7 +22,6 @@
 #include <QListWidget>
 #include <QSlider>
 #include <QPixmap>
-#include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QTextBrowser>
 #include <QStandardPaths>
