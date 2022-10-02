@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+<!ENTITY % Dutch "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>&amor; handleiding pagina</title>
+<date
+>2021-10-09</date>
+<releaseinfo
+>(KDE Gear 21.08)</releaseinfo>
+<productname
+>&amor; 2.4.0</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>Een creatuur voor uw &plasma; bureaublad</refpurpose>
+</refnamediv>
+
+<refsect1 id="description">
+<title
+>Beschrijving</title>
+
+<para
+><acronym
+>AMOR</acronym
+> staat voor <quote
+>Amusing Misuse Of Resources</quote
+>. Het levert een aantal verschillende karakters die over uw X-scherm zwerven, trucjes uithalen en tips geven.</para>
+
+</refsect1>
+
+
+<refsect1 id="options">
+<title
+>Opties</title>
+
+<para
+>&amor; is grafisch geconfigureerd en heeft geen opties op de opdrachtregel anders dan de standaard &kde; en &Qt; opties.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Zie ook</title>
+
+<para
+>Meer gedetailleerde documentatie is beschikbaar van <ulink url="help:/amor"
+>help:/amor</ulink
+> (ofwel voer deze &URL; in in &konqueror; of voer <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/amor</parameter
+></userinput
+> uit)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Fouten/bugs</title>
+
+<para
+>Op dit moment werkt &amor; alleen met de vensterbeheerder &kwin;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Auteurs</title>
+<para
+>&amor; werd geschreven door &Martin.R.Jones; &Martin.R.Jones.mail;.</para>
+<para
+>Deze handleidingpagina is gemaakt door <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> voor het &Debian; &GNU;/&Linux; systeem (maar kan gebruikt worden door anderen).</para>
+</refsect1>
+
+</refentry>

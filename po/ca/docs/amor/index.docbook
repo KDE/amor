@@ -1,0 +1,498 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&amor;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+
+<book id="amor" lang="&language;">
+<bookinfo>
+<title
+>El manual de l'&amor;</title>
+
+<authorgroup>
+<author
+>&Karl.Garrison; &Karl.Garrison.mail; </author>
+
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year>
+<holder
+>&Karl.Garrison;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>9 d'octubre de 2021</date>
+<releaseinfo
+>2.4.0 (KDE Gear 21.08)</releaseinfo>
+
+<abstract>
+<para
+>L'&amor; és una petita animació que apareix a sobre de la vostra finestra activa. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>amor</keyword>
+<keyword
+>ajudant</keyword>
+<keyword
+>assistent</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introducció</title>
+
+<sect1 id="whats-amor">
+<title
+>Què és l'&amor;?</title>
+<para
+>L'&amor; és un acrònim que significa Amusing Misuse of Resources (Malbaratament entretingut de recursos). En realitat es tracta d'una animació que se situa a sobre de la finestra activa. En la seva configuració predeterminada, l'&amor; pren la forma d'una cara groga que realitza una gran varietat de trucs. L'&amor; també té diferents temes, els quals canvien l'aparença i el comportament de l'animació. </para>
+
+<note
+><para
+>Atès que l'&amor; treballa amb el &kwin;, el gestor de finestres del &kde;, l'aplicació només funcionarà amb el &plasma;. És possible que l'&amor; funcioni amb un altre gestor de finestres compatible amb el &plasma;, però en aquest moment no se'n coneix cap.</para
+></note>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Configurar</title>
+<sect1 id="configuring-amor">
+<title
+>Configurar l'&amor;</title>
+<para
+>Per a configurar l'&amor;, feu clic sobre l'animació emprant el &BDR;. Apareixerà un menú amb tres elements: <guimenuitem
+>Configura...</guimenuitem
+>, <guisubmenu
+>Ajuda</guisubmenu
+> i <guimenuitem
+>Surt</guimenuitem
+>.</para>
+<para
+>Escolliu <guimenuitem
+>Configura...</guimenuitem
+> per a configurar l'&amor;.</para>
+</sect1>
+
+<sect1 id="general-options">
+<title
+>Opcions generals</title>
+<para
+>Es poden canviar les opcions següents de l'&amor; des del diàleg Opcions:</para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Tema:</guilabel
+></term>
+<listitem
+><para
+>Determina l'aparença i el comportament de l'&amor;. Els temes es descriuen en la secció següent.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Desplaçament:</guilabel
+></term>
+<listitem
+><para
+>Aquest control lliscant controla la distància respecte a la part superior de la finestra activa en la qual se situarà l'animació. La posició mitjana predeterminada situarà l'animació just a sobre la barra de títol de la finestra mentre que situant el control lliscant en els extrems superior i inferior provocarà que l'animació aparegui a una bona distància per sobre o per sota, respectivament, de la barra de títol.</para>
+<tip
+><para
+>Si moveu el control lliscant cap avall, l'animació serà visible fins i tot encara que la finestra activa estigui maximitzada.</para>
+</tip
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Sempre a dalt</guilabel
+></term>
+<listitem
+><para
+>Si marqueu aquesta opció, l'animació apareixerà al davant de qualsevol finestra, incloent-hi el plafó.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Mostra consells aleatoris</guilabel
+></term>
+<listitem
+><para
+>Si està marcada, l'animació mostrarà diversos consells relacionats amb el &kde; a intervals aleatoris.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Usa un caràcter aleatori</guilabel
+></term>
+<listitem
+><para
+>Si està marcada, la selecció del tema estarà desactivada i es canviarà aleatòriament.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Permet consells d'aplicació</guilabel
+></term>
+<listitem
+><para
+>Qualsevol aplicació &kde; pot estar dissenyada perquè mostri consells via l'&amor;. Si marqueu aquesta opció, i si la finestra activa pertany a una aplicació apropiada, l'animació mostrarà consells sobre aquesta aplicació.</para>
+<note
+><para
+>Al moment d'escriure aquest document, cap aplicació &kde; fa ús d'aquesta funcionalitat.</para
+></note
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="amor-themes">
+<title
+>Temes de l'&amor;</title>
+<para
+>L'&amor; ve amb una gran diversitat de temes inclosos, els quals canvien l'aparença i el comportament de l'animació. A més, és possible crear temes nous per a l'&amor;. La manera de crear-los es descriu en la taula següent.</para>
+
+<table>
+<title
+>Temes disponibles de l'&amor;</title>
+<tgroup cols="3">
+<thead>
+<row>
+<entry
+>Tema</entry>
+<entry
+>Nom</entry>
+<entry
+>Descripció</entry>
+</row>
+</thead>
+<tbody>
+
+<row>
+<entry
+><mediaobject
+><imageobject>
+          <imagedata  format="PNG" fileref="spot.png"/>
+        </imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Punt multitalent</phrase
+></entry>
+<entry
+><para
+>És el tema predeterminat de l'&amor;, i també el més <quote
+>entremaliat</quote
+>. Fou creat per en &Martin.R.Jones;. Les animacions de la motxilla a dojo i les animacions de foc foren una contribució d'en <personname
+><firstname
+>Mark</firstname
+><surname
+>Grant</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="ghost.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Fantasma misteriós</phrase
+></entry>
+<entry
+><para
+>Un tema de fantasma basat en la icona de <application
+>ghostview</application
+> del &kde;. Fou creat per en &Martin.R.Jones;.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="eyes.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Ulls bojos</phrase
+></entry>
+<entry
+><para
+>Aquest tema consisteix en un parell d'ulls en moviment, i fou creat per en <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bonhomme.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Bonhomme</phrase
+></entry>
+<entry
+><para
+>Una animació de figures de pal, creada per en <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="neko.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Neko</phrase
+></entry>
+<entry
+><para
+>Neko és un tema sobre un gat creat per en <personname
+><firstname
+>Chris</firstname
+><surname
+>Spiegel</surname
+></personname
+>. Els gràfics són originals des de l'<application
+>Oneko</application
+>, el qual fou creat per en <personname
+><firstname
+>Masayuki</firstname
+><surname
+>Koba</surname
+></personname
+>.</para>
+<note
+><para
+><application
+>Oneko</application
+> és una petita aplicació que mostra un gat perseguint al punter del ratolí. L'aplicació sembla que ja no és mantinguda, però <ulink url="http://www.daidouji.com/oneko/"
+>oneko-sakura</ulink
+> és una versió modificada.</para
+></note
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="pingus.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux</phrase
+></entry>
+<entry
+><para
+>Aquest tema mostra en Tux, la mascota de &Linux;. Els gràfics en realitat són d'un joc del tipus <application
+>Lemmings</application
+> anomenat <ulink url="https://pingus.seul.org/"
+> <application
+>Pingus</application
+></ulink
+>. El tema Tux fou creat per en <personname
+><firstname
+>Frank</firstname
+><surname
+>Pieczynski</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="worm.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Cuquet</phrase
+></entry>
+<entry
+><para
+>Un petit tema sobre un cuc. Creat per en <personname
+><firstname
+>Bartosz</firstname
+><surname
+>Trudnowski</surname
+></personname
+> per a la seva muller.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="billy.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Petit Guillem</phrase
+></entry>
+<entry
+><para
+>Una imatge estàtica presa del joc <ulink url="http://www.xbill.org/"
+><application
+>XBill</application
+> </ulink
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bsd.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Mascota de FreeBSD</phrase
+></entry>
+<entry
+><para
+>Una imatge estàtica d'en Beastie, el dimoni de FreeBSD.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tux.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux sense animació</phrase
+></entry>
+<entry
+><para
+>Una versió sense animació del tema Tux.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tao.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tao</phrase
+></entry>
+<entry
+><para
+>El tema Tao és un símbol de Yin Yang animat. Fou creat per en <personname
+><firstname
+>Daniel</firstname
+><surname
+>Pfeiffer</surname
+></personname
+> <email
+>occitan@esperanto.org</email
+> i està inspirat per la seva pràctica del Tai Chi.</para
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Crèdits i llicència</title>
+
+<para
+>&amor;</para>
+
+<para
+>Copyright del programa &copy; 1999-2001 &Martin.R.Jones; &Martin.R.Jones.mail;</para>
+
+<para
+>Copyright de la documentació &copy; 2001 &Karl.Garrison; &Karl.Garrison.mail;</para>
+
+<para
+>Traductor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

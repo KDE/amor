@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!-- <!ENTITY kdeoptions SYSTEM "kdeoptions.docbook"
+> -->
+<!-- <!ENTITY qtoptions SYSTEM "qtoptions.docbook"
+> -->
+<!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<date
+>07/03/2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>Uma criatura do &kde; para a sua área de trabalho</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>amor</command
+> <group
+><option
+>Opções genéricas do KDE</option
+></group
+> <group
+><option
+>Opções genéricas do Qt</option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descrição</title>
+
+<para
+>O <acronym
+>AMOR</acronym
+> significa <quote
+>Amusing Misuse Of Resources</quote
+> (Abuso Engraçado de Recursos). Oferece vários personagens diferentes que passeiam pela sua tela do X e lhe dão dicas.</para>
+
+<para
+>O &amor; faz parte do pacote &kde; toys.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Opções</title>
+
+<para
+>O &amor; é configurado graficamente e não tem quaisquer opções da linha de comando, além das opções padrão do &kde; e do &Qt;.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Veja também</title>
+
+<para
+>Você pode digitar <userinput
+>help:/amor</userinput
+> no &konqueror; para ver o manual do usuário.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Problemas</title>
+
+<para
+>O &amor; atualmente apenas funciona com o gerenciador de janelas &kwin;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Autores</title>
+<para
+>&amor; foi escrito por <personname
+><firstname
+>Martin</firstname
+><othername
+>R.</othername
+><surname
+>Jones</surname
+></personname
+> <email
+>mjones@kde.org</email
+>. Esta página de manual foi preparada por <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> para o sistema Debian GNU/Linux (mas pode ser utilizada nos outros).</para>
+</refsect1>
+
+</refentry>

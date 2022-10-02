@@ -1,0 +1,320 @@
+# translation of amor.po to Swedish
+# Copyright (C).
+#
+# Per Lindström <per.lindstrom@osd.privataccess.nu>, 2000.
+# Anders Widell <awl@hem.passagen.se>, 2000.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2007, 2010.
+# Stefan Asserhall <stefan.asserhall@bredband.net>, 2010, 2019, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: amor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"PO-Revision-Date: 2021-10-10 09:50+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr "Spring inte med en sax."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "Lita aldrig på bilförsäljare eller politiker."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"Riktiga programmerare kommenterar inte sin kod. Det var svårt att skriva "
+"den, så det ska vara svårt att förstå den."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr ""
+"Det är mycket lättare att föreslå lösningar när man inte vet något om "
+"problemet."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "Man kan aldrig få för mycket minne eller hårddiskutrymme."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "Svaret är 42."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "Det är inte något fel. Det är en finess som saknas."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr "Hjälp till att utrota och avskaffa överflödigheten."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr ""
+"För att maximera ett fönster vertikalt, klicka på maximeringsknappen med den "
+"mittersta musknappen."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "Du kan växla mellan program med knapparna Alt+Tab."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr "Tryck Ctrl+Esc för att visa program som körs i aktuell session."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr "Alt+F2 visar ett litet fönster där du kan skriva in ett kommando."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr ""
+"Ctrl+F1 till Ctrl+F8 kan användas för att växla mellan virtuella skrivbord."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr "Du kan flytta knapparna på panelen med den mittersta musknappen."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "Alt+F1 visar systemmenyn."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr "Ctrl+Alt+Esc kan användas för att avsluta ett program som inte svarar."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+"Om du lämnar program igång när du loggar ut kommer de att startas "
+"automatiskt när du loggar in igen."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr "KDE:s filhanterare är också en webbläsare och ett FTP-program."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+"Program kan visa meddelanden och tips i en Amor-bubbla genom att\n"
+"använda DCOP-anropen showMessage() och showTip()."
+
+#: src/amor.cpp:255
+#, kde-format
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "Fel vid läsning av tema: %1"
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, kde-format
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "Fel vid läsning av grupp: %1"
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr "&Hjälp"
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "A&npassa..."
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr "&Avsluta"
+
+#: src/amordialog.cpp:42
+#, kde-format
+msgctxt "@title:window"
+msgid "Options"
+msgstr "Alternativ"
+
+#: src/amordialog.cpp:65
+#, kde-format
+msgid "Theme:"
+msgstr "Tema:"
+
+#: src/amordialog.cpp:82
+#, kde-format
+msgid "Offset:"
+msgstr "Position:"
+
+#: src/amordialog.cpp:93
+#, kde-format
+msgid "Always on top"
+msgstr "Alltid överst"
+
+#: src/amordialog.cpp:98
+#, kde-format
+msgid "Show random tips"
+msgstr "Visa slumpmässigt tips"
+
+#: src/amordialog.cpp:103
+#, kde-format
+msgid "Use a random character"
+msgstr "Använd en slumpmässig figur"
+
+#: src/amordialog.cpp:108
+#, kde-format
+msgid "Allow application tips"
+msgstr "Tillåt programtips"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "KDE-varelse för skrivbordet"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr "Amor"
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+"1999 av Martin R. Jones\n"
+"2010 av Stefan Böhmann"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr "Stefan Böhmann"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "Nuvarande utvecklare"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr "Martin R. Jones"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr "Gerardo Puga"
+
+#~ msgid "No tip"
+#~ msgstr "Inget tips"
+
+#~ msgid "Copyright 1999, Martin R. Jones"
+#~ msgstr "Copyright 1999, Martin R. Jones"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amor Version %1\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Amor version %1\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amusing Misuse Of Resources\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Underhållande slöseri med resurser\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ msgstr ""
+#~ "Ursprunglig upphovsman: Martin R. Jones <email>mjones@kde.org</email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+#~ msgstr ""
+#~ "Nuvarande utvecklare: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "About Amor"
+#~ msgstr "Om Amor"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Anders Widell,Per Lindström"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "awl@hem.passagen.se,per.lindstrom@osd.privataccess.nu"

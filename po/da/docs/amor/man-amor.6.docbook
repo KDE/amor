@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!-- <!ENTITY kdeoptions SYSTEM "kdeoptions.docbook"
+> -->
+<!-- <!ENTITY qtoptions SYSTEM "qtoptions.docbook"
+> -->
+<!ENTITY % Danish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<date
+>7. marts, 2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>Et &kde;-væsen for din desktop</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>amor</command
+> <group
+><option
+>KDE generiske tilvalg</option
+></group
+> <group
+><option
+>Qt generiske tilvalg</option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beskrivelse</title>
+
+<para
+><acronym
+>AMOR</acronym
+> står for <quote
+>Amusing Misuse Of Resources</quote
+>. Den sørger for adskillige forskellige typer der danser rundt på din X-skærm og udfører tricks og giver dig gode råd.</para>
+
+<para
+>&amor; er en del &kde;'s toys-pakke.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Tilvalg</title>
+
+<para
+>&amor; indstilles grafisk, og har ikke nogen kommandlinjeflag udover de sædvanlige for &kde; og &Qt;.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Se også</title>
+
+<para
+>Inde i &kde; kan du skrive <userinput
+>help:/amor</userinput
+> i &konqueror; for at se en omfattende brugermanual.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Fejl</title>
+
+<para
+>&amor; virker for øjeblikket kun med vindueshåndteringen &kwin;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Forfattere</title>
+<para
+>&amor; er skrevet af <personname
+><firstname
+>Martin</firstname
+><othername
+>R.</othername
+><surname
+>Jones</surname
+></personname
+> <email
+>mjones@kde.org</email
+>. Denne manualside er lavet af  <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> for Debian GNU/Linux systemet (men må gerne  bruges af andre).</para>
+</refsect1>
+
+</refentry>

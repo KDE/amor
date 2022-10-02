@@ -1,0 +1,496 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&amor;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+
+<book id="amor" lang="&language;">
+<bookinfo>
+<title
+>Het handboek van &amor;</title>
+
+<authorgroup>
+<author
+>&Karl.Garrison; &Karl.Garrison.mail; </author>
+
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year>
+<holder
+>&Karl.Garrison;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-10-09</date>
+<releaseinfo
+>2.4.0 (KDE Gear 21.08)</releaseinfo>
+
+<abstract>
+<para
+>&amor; is een kleine animatie die zich bovenop uw actieve venster bevindt. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>amor</keyword>
+<keyword
+>helper</keyword>
+<keyword
+>assistent</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inleiding</title>
+
+<sect1 id="whats-amor">
+<title
+>Wat is &amor;?</title>
+<para
+>&amor; is een acroniem dat staat voor "Amusing Misuse of Resources". Het is in werkelijkheid een animatie die zich bovenop uw actieve venster bevindt. In zijn standaard configuratie neemt &amor; de vorm aan van een gele vlek die veel trucjes uithaalt. &amor; heeft ook veel verschillende thema's die het uiterlijk en gedrag van de animatie wijzigen. </para>
+
+<note
+><para
+>Omdat &amor; met de &kde; vensterbeheerder &kwin; werkt zal de toepassing alleen binnen &plasma; werken. Het is mogelijk dat &amor; zou werken vanuit een andere &plasma;-compliant vensterbeheerder, maar op dit moment van schrijven is dat niet een bekend.</para
+></note>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Configuratie</title>
+<sect1 id="configuring-amor">
+<title
+>&amor; configureren</title>
+<para
+>Om &amor; te configureren, klik op de animatie met uw &RMB;. Er zal een menu verschijnen met drie items: <guimenuitem
+>Configureren...</guimenuitem
+>, <guisubmenu
+>Help...</guisubmenu
+> en <guimenuitem
+>Afsluiten</guimenuitem
+>..</para>
+<para
+><guimenuitem
+>Configureren...</guimenuitem
+> kiezen om &amor; te configureren.</para>
+</sect1>
+
+<sect1 id="general-options">
+<title
+>Algemene opties</title>
+<para
+>De volgende instellingen voor &amor; kunnen gewijzigd worden vanuit de dialoog Opties:</para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Thema:</guilabel
+></term>
+<listitem
+><para
+>Dit bepaalt het uiterlijk en gedrag van &amor;. Thema's zijn beschreven in de volgende sectie.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Offset:</guilabel
+></term>
+<listitem
+><para
+>Deze schuifregelaar bestuurt waar de animatie verschijnt in relatie tot de bovenkant van het actieve venster. De standaard midden stand plaatst de animatie recht boven de titelbalk van het venster, terwijl het instellen ervan helemaal boven of onderaan zal resulteren in het verschijnen van de animatie op een redelijke afstand, respectievelijk, boven of onder de titelbalk.</para>
+<tip
+><para
+>Deze schuifregelaar instellen op een lagere stand zal de animatie toestaan om zichtbaar te zijn zelfs wanneer het actieve venster is gemaximeerd.</para>
+</tip
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Altijd op de voorgrond</guilabel
+></term>
+<listitem
+><para
+>Deze optie activeren zal de animatie altijd laten verschijnen voor elk bestaand venster op het scherm, inclusief het paneel.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Tips willekeurig tonen</guilabel
+></term>
+<listitem
+><para
+>Indien geactiveerd zal de animatie verschillende aan &kde; gerelateerde tips tonen op willekeurige tijden.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Willekeurig teken gebruiken</guilabel
+></term>
+<listitem
+><para
+>Indien geactiveerd zal de selectie van thema's uitgeschakeld zijn, deze zal willekeurig gewijzigd worden.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Tips van toepassingen toestaan</guilabel
+></term>
+<listitem
+><para
+>Elke &kde; toepassing kan ontworpen worden om behulpzame tips te tonen via &amor;. Als deze optie is geactiveerd en een van toepassing zijnde toepassing is het actieve venster, dan zal de animatie tips voor die toepassing tonen.</para>
+<note
+><para
+>Op dit moment van schrijven maakt geen &kde; toepassing gebruik van deze functionaliteit.</para
+></note
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="amor-themes">
+<title
+>Thema's van &amor;</title>
+<para
+>&amor; komt met vele ingebouwde thema's, die het uiterlijk en gedrag van de animatie wijzigen. Bovendien is het mogelijk om nieuwe &amor; thema's aan te maken. De ingebouwde thema's voor &amor; zijne beschreven in de onderstaande tabel</para>
+
+<table>
+<title
+>Beschikbare thema's van &amor;</title>
+<tgroup cols="3">
+<thead>
+<row>
+<entry
+>Thema</entry>
+<entry
+>Naam</entry>
+<entry
+>Beschrijving</entry>
+</row>
+</thead>
+<tbody>
+
+<row>
+<entry
+><mediaobject
+><imageobject>
+          <imagedata  format="PNG" fileref="spot.png"/>
+        </imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Meervoudig getalenteerde vlek</phrase
+></entry>
+<entry
+><para
+>Dit is het standaard thema voor &amor; en ook die met de meeste <quote
+>trucs</quote
+>. Dit thema is genaakt door &Martin.R.Jones;. De jet-pack, beaming en vuur animaties zijn bijgedragen door <personname
+><firstname
+>Mark</firstname
+><surname
+>Grant</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="ghost.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Spooky Ghost</phrase
+></entry>
+<entry
+><para
+>Een spookthema gebaseerd op het &kde; <application
+>ghostview</application
+> pictogram. Spooky Ghost is gemaakt door &Martin.R.Jones;.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="eyes.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Crazy Eyes</phrase
+></entry>
+<entry
+><para
+>Dit thema bestaat uit een paar bewegende ogen en is gemaakt door <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bonhomme.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Bonhomme</phrase
+></entry>
+<entry
+><para
+>Een stokjesfiguur animatie, gemaakt door <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="neko.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Neko</phrase
+></entry>
+<entry
+><para
+>Neko is een kattenthema door <personname
+><firstname
+>Chris</firstname
+><surname
+>Spiegel</surname
+></personname
+>. De illustraties komen origineel van <application
+>Oneko</application
+>, die geschreven is door <personname
+><firstname
+>Masayuki</firstname
+><surname
+>Koba</surname
+></personname
+>.</para>
+<note
+><para
+><application
+>Oneko</application
+> is een kleine toepassing die een kat laat zien die de muiscursor achtervolgt. De toepassing lijkt niet langer onderhouden te worden, maar de <ulink url="http://www.daidouji.com/oneko/"
+>oneko-sakura</ulink
+> is een gewijzigde versie.</para
+></note
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="pingus.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux</phrase
+></entry>
+<entry
+><para
+>Dit thema toont Tux, de &Linux; mascotte. De actuele illustraties komen van een <application
+>Lemmings</application
+>-stijl spel genaamd <ulink url="https://pingus.seul.org/"
+> <application
+>Pingus</application
+></ulink
+>. Het Tux thema is gemaakt door <personname
+><firstname
+>Frank</firstname
+><surname
+>Pieczynski</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="worm.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Little Worm</phrase
+></entry>
+<entry
+><para
+>Een klein inchworm-thema. Gemaakt door <personname
+><firstname
+>Bartosz</firstname
+><surname
+>Trudnowski</surname
+></personname
+> voor zijn vrouw.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="billy.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Little Billy</phrase
+></entry>
+<entry
+><para
+>Een statische afbeelding genomen uit het spel <ulink url="http://www.xbill.org/"
+><application
+>XBill</application
+> </ulink
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bsd.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>FreeBSD-mascotte</phrase
+></entry>
+<entry
+><para
+>Een statische afbeelding van Beastie, de FreeBSD-daemon.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tux.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Niet geanimeerde Tux</phrase
+></entry>
+<entry
+><para
+>Een niet geanimeerde versie van het Tux-thema.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tao.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tao</phrase
+></entry>
+<entry
+><para
+>He Tao-thema is een geanimeerd Yin Yang symbool. Dit thema is gemaakt door <personname
+><firstname
+>Daniel</firstname
+><surname
+>Pfeiffer</surname
+></personname
+> <email
+>occitan@esperanto.org</email
+> en was geïnspireerd door zijn Tai Chi oefeningen.</para
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Dankbetuigingen en licentie</title>
+
+<para
+>&amor;</para>
+
+<para
+>Programma Copyright &copy; 1999-2001 &Martin.R.Jones; &Martin.R.Jones.mail;</para>
+
+<para
+>Documentatie Copyright &copy; 2001 &Karl.Garrison; &Karl.Garrison.mail;</para>
+
+&meld.fouten;&vertaling.freek; &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

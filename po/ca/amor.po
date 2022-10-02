@@ -1,0 +1,270 @@
+# Translation of amor.po to Catalan
+# Copyright (C) 2019-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2021.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: amor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"PO-Revision-Date: 2021-11-06 17:03+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr "No corris amb unes tisores."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "Mai confiïs en els venedors de cotxers o els polítics."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"Els programadors reals no comenten llur codi. Fou difícil d'escriure, hauria "
+"de ser difícil d'entendre."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr "És molt més fàcil suggerir solucions quan no sabeu res del problema."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "Mai tindreu massa memòria o espai en disc."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "La resposta és 42."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "No és un error. És una funcionalitat estranya."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr "Ajudeu a acabar i abolir la redundància."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr ""
+"Per a maximitzar verticalment una finestra, feu clic al botó de maximitzar "
+"amb el botó del mig del ratolí."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "Podeu usar Alt+Tab per a commutar entre les aplicacions."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr ""
+"Premeu Ctrl+Esc per a mostrar les aplicacions que s'estan executant a la "
+"sessió actual."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr "Alt+F2 mostra una finestra petita que permet teclejar-hi una ordre."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr ""
+"Des de Ctrl+F1 a Ctrl+F8 es pot usar per a commutar entre escriptoris "
+"virtuals."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr "Podeu moure botons en el plafó usant el botó del mig del ratolí."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "Alt+F1 mostra el menú del sistema."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr ""
+"Ctrl+Alt+Esc es pot usar per a matar una aplicació que ha deixat de "
+"respondre."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+"Si deixeu aplicacions KDE obertes quan sortiu de la sessió, es reiniciaran "
+"automàticament quan torneu a entrar a la sessió."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr ""
+"El gestor de fitxers del KDE també és un navegador web i un client d'FTP."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+"Les aplicacions poden mostrar missatges i consells a una bombolla de l'Amor\n"
+"usant les crides DCOP «showMessage()» i «showTip()»"
+
+#: src/amor.cpp:255
+#, kde-format
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "Error en llegir el tema: %1"
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, kde-format
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "Error en llegir el grup: %1"
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr "&Ajuda"
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "&Configura..."
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr "&Surt"
+
+#: src/amordialog.cpp:42
+#, kde-format
+msgctxt "@title:window"
+msgid "Options"
+msgstr "Opcions"
+
+#: src/amordialog.cpp:65
+#, kde-format
+msgid "Theme:"
+msgstr "Tema:"
+
+#: src/amordialog.cpp:82
+#, kde-format
+msgid "Offset:"
+msgstr "Desplaçament:"
+
+#: src/amordialog.cpp:93
+#, kde-format
+msgid "Always on top"
+msgstr "Sempre a dalt"
+
+#: src/amordialog.cpp:98
+#, kde-format
+msgid "Show random tips"
+msgstr "Mostra consells aleatoris"
+
+#: src/amordialog.cpp:103
+#, kde-format
+msgid "Use a random character"
+msgstr "Usa un caràcter aleatori"
+
+#: src/amordialog.cpp:108
+#, kde-format
+msgid "Allow application tips"
+msgstr "Permet consells d'aplicació"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "Criatura del KDE per a l'escriptori"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr "amor"
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+"1999 per en Martin R. Jones\n"
+"2010 per en Stefan Böhmann"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr "Stefan Böhmann"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "Mantenidor actual"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr "Martin R. Jones"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr "Gerardo Puga"

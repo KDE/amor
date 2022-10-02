@@ -1,0 +1,311 @@
+# translation of amor.po to Persian
+# Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
+# Mahdi Foladgar <foladgar@itland.ir>, 2006.
+# Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+# Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
+# Nooshin Asiaie <asiaie@itland.ir>, 2007.
+# translation of amor.po to
+msgid ""
+msgstr ""
+"Project-Id-Version: amor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"PO-Revision-Date: 2007-08-20 18:59+0330\n"
+"Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr "با scissors اجرا نشود."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "هرگز به فروشندگان ماشین یا سیاستمداران اعتماد نکنید."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"برنامه‌نویسان واقعی کدشان را توضیح نمی‌دهند. نوشتن آن سخت است، باید یاد گرفتن "
+"آن هم مشکل باشد."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr "وقتی چیزی درباره مسأله می‌دانید، پیشنهاد راه حل خیلی آسان‌تر است."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "هرگز نمی‌توانید حافظه یا فضای دیسک خیلی زیادی داشته باشید."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "پاسخ، ۴۲ است."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "این اشکال نیست. یک ویژگی غلط است."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr "کمک در پایان دادن افزونگی."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr ""
+"برای بیشینه ساختن پنجره به صورت عمودی، دکمه بیشینه‌سازی را همراه با دکمه "
+"میانی موشی فشار دهید."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "برای سودهی بین کاربردها، از کلید دگرساز+جهش می‌توانید استفاده کنید."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr ""
+"برای نمایش اجرای کاربردها در نشست جاریتان، کلید مهار+گریز را فشار دهید."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr ""
+"کلید دگرساز+F2 پنجره کوچکی را نمایش می‌دهد، که می‌توانید فرمانی را در آن تحریر "
+"کنید."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr "مهار+F1 تا مهار+F8 برای سودهی رومیزیهای مجازی می‌تواند استفاده شود."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr "دکمه‌های روی تابلو را با استفاده از دکمه میانی موشی می‌توانید حرکت دهید."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "دگرساز+F1 گزینگان سیستم را بالا می‌پراند."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr ""
+"مهار+دگرساز+گریز می‌تواند برای کشتن کاربردی که در حال پاسخگویی متوقف‌ شده است، "
+"استفاده شود."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+"اگر هنگام خروج، باز کردن کاربردهای KDE را رها کنید، وقتی برمی‌گردید به طور "
+"خودکار باز آغاز می‌شوند."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr "مدیر پرونده KDE، یک مرورگر وب و مشتری قاپ نیز می‌باشد."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+"کاربردها می‌توانند پیامها و نکته‌ها را در یک حباب Amor با استفاده از "
+"فراخوانیهای showMessage() و showTip() DCOP نمایش دهند."
+
+#: src/amor.cpp:255
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Error reading theme: "
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "خطای خواندن چهره: "
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Error reading group: "
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "خطای خواندن گروه: "
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr "&کمک‌"
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "&پیکربندی‌..."
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr "&خارج‌"
+
+#: src/amordialog.cpp:42
+#, fuzzy, kde-format
+#| msgid "Options"
+msgctxt "@title:window"
+msgid "Options"
+msgstr "گزینه‌ها"
+
+#: src/amordialog.cpp:65
+#, kde-format
+msgid "Theme:"
+msgstr "چهره:"
+
+#: src/amordialog.cpp:82
+#, kde-format
+msgid "Offset:"
+msgstr "انحراف:"
+
+#: src/amordialog.cpp:93
+#, kde-format
+msgid "Always on top"
+msgstr "همیشه در بالا"
+
+#: src/amordialog.cpp:98
+#, kde-format
+msgid "Show random tips"
+msgstr "نمایش نکته‌های تصادفی"
+
+#: src/amordialog.cpp:103
+#, kde-format
+msgid "Use a random character"
+msgstr "استفاده از نویسه‌ای تصادفی"
+
+#: src/amordialog.cpp:108
+#, kde-format
+msgid "Allow application tips"
+msgstr "اجازه دادن نکته‌های کاربرد"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "ایجاد‌کننده KDE برای رومیزی شما"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr ""
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr ""
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "نگه‌دارنده جاری"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr ""
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr ""
+
+#~ msgid "No tip"
+#~ msgstr "نکته‌ای وجود ندارد"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amor Version %1\n"
+#~ "\n"
+#~ msgstr ""
+#~ "نسخه %1 Amor\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amusing Misuse Of Resources\n"
+#~ "\n"
+#~ msgstr ""
+#~ "سوء استفاده تفریحی از منابع\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ msgstr "نویسنده اصلی: مارتین آر جونز <email>mjones@kde.org</email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+#~ msgstr "نگه‌دارنده جاری: گراردو پوجا <gpuga@gioia.ing.unlp.edu.ar>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "About Amor"
+#~ msgstr "درباره Amor"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "نازنین کاظمی"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kazemi@itland.ir"

@@ -1,0 +1,544 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&amor;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE">
+]>
+
+<book id="amor" lang="&language;">
+<bookinfo>
+<title
+>El Manual de &amor;</title>
+
+<authorgroup>
+<author
+>&Karl.Garrison; &Karl.Garrison.mail; </author>
+
+<othercredit role="translator"
+><firstname
+>José Carlos</firstname
+> <surname
+>Santos Ruiz</surname
+> <affiliation
+><address
+><email
+>a930334@zipi.fi.upm.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Eduardo</firstname
+><surname
+>Sánchez Gauto</surname
+> <affiliation
+><address
+><email
+>kde@sombragris.org</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Javier</firstname
+> <surname
+>Viñal</surname
+> <affiliation
+><address
+> <email
+>fjvinal@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year>
+<holder
+>&Karl.Garrison;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-10-09</date>
+<releaseinfo
+>2.4.0 (KDE Gear 21.08)</releaseinfo>
+
+<abstract>
+<para
+>&amor; es una pequeña animación que aparece en lo alto de su ventana activa. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>amor</keyword>
+<keyword
+>asistente</keyword>
+<keyword
+>asistente</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introducción</title>
+
+<sect1 id="whats-amor">
+<title
+>¿Qué es &amor;?</title>
+<para
+>&amor; es una sigla que significa Amusing Misuse of Resources. (Entretenido Derroche de Recursos). En realidad se trata de una animación que se sitúa en lo alto de su ventana activa. En su configuración predeterminada, &amor; toma la forma de un punto amarillo que ejecuta varios trucos. &amor; también tiene distintos temas, los cuales cambian la forma y la conducta de la animación. </para>
+
+<note
+><para
+>Ya que &amor; trabaja con el gestor de ventanas de &kde;, &kwin;, la aplicación solo funcionará en &plasma;. Es posible que &amor; funcione con otro controlador de ventanas compatible con &plasma;, aunque en el momento de escribir esta documentación se desconoce si existe alguno.</para
+></note>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Configuración</title>
+<sect1 id="configuring-amor">
+<title
+>Configurando &amor;</title>
+<para
+>Para configurar &amor;, pulse sobre la animación usando el &RMB;. Aparecerá un menú con tres elementos: <guimenuitem
+>Configurar...</guimenuitem
+>, <guimenuitem
+>Ayuda</guimenuitem
+> y <guimenuitem
+>Salir</guimenuitem
+></para>
+<para
+>Escoja <guimenuitem
+>Configurar...</guimenuitem
+> para configurar &amor;.</para>
+</sect1>
+
+<sect1 id="general-options">
+<title
+>Opciones generales</title>
+<para
+>Las siguientes preferencias de &amor; pueden cambiarse en el diálogo Opciones:</para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Tema:</guilabel
+></term>
+<listitem
+><para
+>Determina la apariencia y el comportamiento de &amor;. Los temas se describen en la siguiente sección.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Desplazamiento:</guilabel
+></term>
+<listitem
+><para
+>Este control deslizante controla la distancia con respecto al tope de la ventana activa en la cual se ubicará la animación. La posición media predeterminada colocará la animación justo sobre la barra de título mientras que el colocar la barra en los extremos superior e inferior, la animación aparecerá a una buena distancia por encima o por debajo, respectivamente, de la barra de título.</para>
+<tip
+><para
+>Si desliza este control hacia abajo, la animación se verá aun cuando la ventana esté maximizada.</para>
+</tip
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Siempre visible</guilabel
+></term>
+<listitem
+><para
+>Si acepta esta opción la animación aparecerá delante de cualquier ventana de la pantalla, incluyendo al panel.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Mostrar consejos al azar</guilabel
+></term>
+<listitem
+><para
+>Si está marcada, esta opción mostrará diversos consejos sobre &kde; a intervalos al azar.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Utilizar personaje al azar</guilabel
+></term>
+<listitem
+><para
+>Si está marcada, se desactivará la activación de temas, pues estos serán seleccionados al azar.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Mostrar consejos sobre aplicaciones</guilabel
+></term>
+<listitem
+><para
+>Cualquier aplicación de &kde; puede ser diseñada para que muestre consejos vía &amor;. Si esta opción está marcada, y si la ventana activa pertenece a una aplicación apropiada, la animación mostrará consejos sobre esa aplicación.</para>
+<note
+><para
+>Al momento de escribir este documento, ninguna aplicación de &kde; hace uso de esta funcionalidad.</para
+></note
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="amor-themes">
+<title
+>Temas de &amor;</title>
+<para
+>&amor; viene con varios temas incorporados, los cuales cambian la apariencia y el comportamiento de la animación. Además, es posible crear nuevos temas para &amor;. La forma de crear nuevos temas para &amor; se describe en la tabla siguiente</para>
+
+<table>
+<title
+>Temas para &amor; disponibles</title>
+<tgroup cols="3">
+<thead>
+<row>
+<entry
+>Tema</entry>
+<entry
+>Nombre</entry>
+<entry
+>Descripción</entry>
+</row>
+</thead>
+<tbody>
+
+<row>
+<entry
+><mediaobject
+><imageobject>
+          <imagedata  format="PNG" fileref="spot.png"/>
+        </imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Mancha polifacética</phrase
+></entry>
+<entry
+><para
+>Es el tema predeterminado de &amor;, y también el más «travieso». Fue creado por &Martin.R.Jones;. Las animaciones de la mochila a chorro y las animaciones de fuego fueron aportadas por <personname
+><firstname
+>Mark</firstname
+><surname
+>Grant</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="ghost.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Aparición Fantasmal</phrase
+></entry>
+<entry
+><para
+>Un tema de fantasmas basado en el icono de <application
+>ghostview</application
+> de &kde;. La Aparición Fantasmal fue creada por &Martin.R.Jones;.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="eyes.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Ojos Locos</phrase
+></entry>
+<entry
+><para
+>Este tema consiste en un par de ojos móviles, y fue creado por <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bonhomme.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Bonhomme</phrase
+></entry>
+<entry
+><para
+>Una animación de figuras de palo, creada por <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="neko.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Neko</phrase
+></entry>
+<entry
+><para
+>Neko es un tema acerca de un gato creado por <personname
+><firstname
+>Chris</firstname
+><surname
+>Spiegel</surname
+></personname
+>. Los gráficos son originalmente de <application
+>Oneko</application
+>, el cual fue creado por <personname
+><firstname
+>Masayuki</firstname
+><surname
+>Koba</surname
+></personname
+>.</para>
+<note
+><para
+><application
+>Oneko</application
+>es una pequeña aplicación que presenta un gato persiguiendo al puntero del ratón. Parece que la aplicación ya no está siendo mantenida, pero <ulink url="http://www.daidouji.com/oneko/"
+>oneko-sakura</ulink
+> es una versión modificada.</para
+></note
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="pingus.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux</phrase
+></entry>
+<entry
+><para
+>Este tema presenta a Tux, la mascota de &Linux;. Los gráficos son en realidad de un juego del tipo <application
+>Lemmings</application
+> llamado <ulink url="https://pingus.seul.org/"
+> <application
+>Pingus</application
+></ulink
+>. El tema Tux fue creado por <personname
+><firstname
+>Frank</firstname
+><surname
+>Pieczynski</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="worm.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Gusanito</phrase
+></entry>
+<entry
+><para
+>Un pequeño tema de gusano. Creado por <personname
+><firstname
+>Bartosz</firstname
+><surname
+>Trudnowski</surname
+></personname
+>para su esposa.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="billy.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Pequeño Billy</phrase
+></entry>
+<entry
+><para
+>Una imagen estática tomada del juego<ulink url="http://www.xbill.org/"
+><application
+>XBill</application
+> </ulink
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bsd.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Mascota de FreeBSD</phrase
+></entry>
+<entry
+><para
+>Una imagen estática de Beastie, el demonio de FreeBSD.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tux.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux estático</phrase
+></entry>
+<entry
+><para
+>Una versión no animada del tema Tux.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tao.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tao</phrase
+></entry>
+<entry
+><para
+>El tema Tao es un símbolo Yin-Yang animado. Este tema fue creado por <personname
+><firstname
+>Daniel</firstname
+><surname
+>Pfeiffer</surname
+></personname
+> <email
+>occitan@esperanto.org</email
+>y fue inspirado por su práctica de Tai Chi.</para
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Créditos y licencia</title>
+
+<para
+>&amor;</para>
+
+<para
+>Derechos de autor del programa. 1999-2001. &Martin.R.Jones; &Martin.R.Jones.mail;.</para>
+
+<para
+>Derechos de autor de la documentación. &copy; 2001. &Karl.Garrison; &Karl.Garrison.mail;.</para>
+
+<para
+>Traducción por José Carlos Santos Ruiz<email
+>a930334@zipi.fi.upm.es</email
+></para
+> <para
+>Traducción adicional y revisión por Eduardo Sánchez Gauto <email
+>kde@sombragris.org</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

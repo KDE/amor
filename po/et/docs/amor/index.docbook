@@ -1,0 +1,516 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&amor;">
+  <!ENTITY package "kdetoys">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Estonian  "INCLUDE">
+]>
+
+<book id="amor" lang="&language;">
+<bookinfo>
+<title
+>&amor;i käsiraamat</title>
+
+<authorgroup>
+<author
+>&Karl.Garrison; &Karl.Garrison.mail; </author>
+
+<othercredit role="translator"
+><firstname
+>Marek</firstname
+><surname
+>Laane</surname
+><affiliation
+><address
+><email
+>bald@online.ee</email
+></address
+></affiliation
+><contrib
+>Tõlge eesti keelde</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year>
+<holder
+>&Karl.Garrison;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2010-02-08</date>
+<releaseinfo
+>2.3.1 (&kde; 4.4)</releaseinfo>
+
+<abstract>
+<para
+>&amor; on pisike animatsioon, mis elab parajasti aktiivse akna peal. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdetoys</keyword>
+<keyword
+>amor</keyword>
+<keyword
+>abistaja</keyword>
+<keyword
+>nõuandja</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Sissejuhatus</title>
+
+<sect1 id="whats-amor">
+<title
+>Mis on &amor;?</title>
+<para
+>&amor; on lühend sõnadest Arvutivõimsuse Mõttetult Opakas Raiskamine. See kujutab endast animatsiooni, mis elab parajasti aktiivse akna peal. Vaikimisi võtab &amor; kollase pleki kuju, mis sooritab mitmesuguseid trikke. &amor;il on küll ka hulk teemasid, mis võivad märgatavalt muuta animatsiooni välimust ja käitumist. </para>
+
+<note
+><para
+>Kuna &amor; töötab koos &kde; aknahalduriga (&kwin;), saab seda kasutada ainult &kde;s. On küll võimalik, et &amor; töötab ka mõnes &kde;ga ühilduvas aknahalduris, kuid nende sõnade kirjapanemise ajal ei olnud ühtegi sellist teada.</para
+></note>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Seadistamine</title>
+<sect1 id="configuring-amor">
+<title
+>&amor;i seadistamine</title>
+<para
+>&amor;i seadistamiseks klõpsa animatsioonil &HPNga;. Ilmub kolme käsku sisaldav menüü: <guimenuitem
+>Seadista...</guimenuitem
+>, <guimenuitem
+>Abi</guimenuitem
+> ja <guimenuitem
+>Välju</guimenuitem
+>. &amor;i seadistamiseks vali <guimenuitem
+>Seadista...</guimenuitem
+>. </para>
+</sect1>
+
+<sect1 id="general-options">
+<title
+>Üldine seadistus</title>
+<para
+>Seadistustedialoogis saab muuta järgmisi &amor;i võimalusi:</para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Teema</guilabel
+></term>
+<listitem
+><para
+>Määrab &amor;i välimuse ja käitumise. Teemasid kirjeldatakse järgmises osas.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Distants</guilabel
+></term>
+<listitem
+><para
+>Selle liuguriga saab määrata, kus animatsioon võrreldes aktiivse akna ülaosaga ilmub. Liuguri vaikeasend keskel määrab animatsiooni ilmuma otse akna tiitliriba kohal, selle liigutamine üles- või allapoole aga vastavalt tiitliribast kõrgemal või madalamal.</para>
+<tip
+><para
+>Liuguri liigutamine allapoole muudab animatsiooni nähtavaks isegi siis, kui aktiivne aken on maksimeeritud.</para>
+</tip
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Alati pealmine</guilabel
+></term>
+<listitem
+><para
+>Selle lubamine paneb animatsiooni alati ilmuma ekraanil oleva akna, ka paneeli peal.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Juhuslike nõuannete näitamine</guilabel
+></term>
+<listitem
+><para
+>Kui see on lubatud, näitab animatsioon suvaliste ajavahemike järel mitmesuguseid &kde;ga seotud nõuandeid.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Juhusliku tegelase kasutamine</guilabel
+></term>
+<listitem
+><para
+>Märkimise korral keelatakse teema valik ja seda muudetakse juhuslikult.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Rakenduse vihjete lubamine</guilabel
+></term>
+<listitem
+><para
+>Iga &kde; rakendust saab panna näitama abistavaid nõuandeid &amor;i vahendusel. Kui see kast on märgitud ning sellise võimalusega rakendus parajasti aktiivses aknas, näitab animatsioon selle rakenduse nõuandeid.</para>
+<note
+><para
+>Nende sõnade kirjapaneku ajal ei olnud veel ükski &kde; rakendus seda suurepärast võimalust ära kasutanud.</para
+></note
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="amor-themes">
+<title
+>&amor;i teemad</title>
+<para
+>&amor;il on kaasas hulk teemasid, mis muudavad animatsiooni välimust ja käitumist. Lisaks saab ka ise luua uusi &amor;i teemasid. Kaasasolevaid teemasid kirjeldab alltoodud tabel.</para>
+
+<table>
+<title
+>&amor;i saadaolevad teemad</title>
+<tgroup cols="3">
+<thead>
+<row>
+<entry
+>Teema</entry>
+<entry
+>Nimi</entry>
+<entry
+>Kirjeldus</entry>
+</row>
+</thead>
+<tbody>
+
+<row>
+<entry
+><mediaobject
+><imageobject>
+          <imagedata  format="PNG" fileref="spot.png"/>
+        </imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Väga andekas plekk</phrase
+></entry>
+<entry
+><para
+>See on &amor;i vaiketeema ning ühtlasi kõige suuremate <quote
+>trikivõimalustega</quote
+>. Teema lõi &Martin.R.Jones;, jet-pack'i, beami ja fire-animatsioonid annetas <personname
+><firstname
+>Mark</firstname
+><surname
+>Grant</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="ghost.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Jube tont</phrase
+></entry>
+<entry
+><para
+>Tonditeema, mille aluseks on &kde; <application
+>ghostview</application
+> ikoon. Jubeda tondi lõi &Martin.R.Jones;.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="eyes.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Hullud silmad</phrase
+></entry>
+<entry
+><para
+>See teema koosneb liikuvast silmapaarist ning selle lõi <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bonhomme.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Kriipsu-Juku</phrase
+></entry>
+<entry
+><para
+>Kriipsumees, mille lõi <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="neko.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Hiirepüüdja</phrase
+></entry>
+<entry
+><para
+>Hiirepüüdja ehk kassikese looja on <personname
+><firstname
+>Chris</firstname
+><surname
+>Spiegel</surname
+></personname
+>. Graafika algupärandiks oli <application
+>Oneko</application
+>, mille kirjutas <personname
+><firstname
+>Masayuki</firstname
+><surname
+>Koba</surname
+></personname
+>.</para>
+<note
+><para
+><application
+>Oneko</application
+> on väike rakendus, kus kass ajab taga hiirekursorit. Ilmselt ei hoolda seda rakendust enam keegi, kuid viimase versiooni <ulink url="ftp://sunsite.unc.edu/pub/Linux/X11/demos/oneko-1.1b.tar.gz"
+>lähtekood</ulink
+> on seniajani saadaval.</para
+></note
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="pingus.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux</phrase
+></entry>
+<entry
+><para
+>See teema kujutab &Linux;i maskotti Tuxi. Graafika on tegelikult pärit <application
+>Lemmings</application
+>-stiilis mängult <ulink url="http://pingus.seul.org/"
+><application
+>Pingus</application
+></ulink
+>. Tuxi teema lõi <personname
+><firstname
+>Frank</firstname
+><surname
+>Pieczynski</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="worm.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Ussike</phrase
+></entry>
+<entry
+><para
+>Väike vihmauss, mille lõi <personname
+><firstname
+>Bartosz</firstname
+><surname
+>Trudnowski</surname
+></personname
+> oma abikaasale.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="billy.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Pisi-Villu</phrase
+></entry>
+<entry
+><para
+>Liikumatu pilt, mille aluseks on mäng <ulink url="http://www.xbill.org/"
+><application
+>XBill</application
+></ulink
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bsd.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>FreeBSD maskott</phrase
+></entry>
+<entry
+><para
+>Liikumatu pilt FreeBSD deemonist Beastie'st.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tux.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Animeerimata Tux</phrase
+></entry>
+<entry
+><para
+>Tuxi teema animeerimata versioon.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tao.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tao</phrase
+></entry>
+<entry
+><para
+>Tao teema kujutab animeeritud yin-yangi sümbolit. Selle lõi <personname
+><firstname
+>Daniel</firstname
+><surname
+>Pfeiffer</surname
+></personname
+> <email
+>occitan@esperanto.org</email
+>, keda inspireeris tegelemine taijiga.</para
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Autorid ja litsents</title>
+
+<para
+>&amor;</para>
+
+<para
+>Rakenduse autoriõigus 1999-2001: &Martin.R.Jones; &Martin.R.Jones.mail;</para>
+
+<para
+>Dokumentatsiooni autoriõigus 2001: &Karl.Garrison; &Karl.Garrison.mail;</para>
+
+<para
+>Tõlge eesti keelde Marek Laane <email
+>bald@online.ee</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

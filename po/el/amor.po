@@ -1,0 +1,332 @@
+# translation of amor.po to greek
+# Copyright (C) 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
+#
+# Χαράλαμπος Κανιός <kaniosh@localhost.localdomain>, 2003.
+# Stergios Dramis <sdramis@egnatia.ee.auth.gr>, 2003-2004.
+# Spiros Georgaras <sng@hellug.gr>, 2005, 2007.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2007.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2012.
+# Stelios <sstavra@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: amor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"PO-Revision-Date: 2021-10-11 07:57+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr "Μην τρέχετε με το ψαλίδι."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "Μην εμπιστεύεστε ποτέ τους πωλητές αυτοκινήτων ή τους πολιτικούς."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"Οι πραγματικοί προγραμματιστές δε σχολιάζουν τον κώδικά τους. Ήταν δύσκολο "
+"να γραφτεί, πρέπει να είναι δύσκολο να κατανοηθεί."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr ""
+"Είναι πολύ ευκολότερο να προταθούν λύσεις όταν δεν ξέρεις τίποτα για το "
+"πρόβλημα."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "Δεν μπορείτε ποτέ να έχετε πάρα πολύ μνήμη ή χώρο στο δίσκο."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "Η απάντηση είναι 42."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "Δεν είναι σφάλμα. Είναι ένα λάθος χαρακτηριστικό."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr "Βοηθήστε να βρεθούν και να απομακρυνθούν οι επαναλήψεις."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr ""
+"Για να μεγιστοποιήσετε κατακόρυφα ένα παράθυρο, κάντε κλικ στο κουμπί "
+"μεγιστοποίησης με το μεσαίο πλήκτρο του ποντικιού."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "Μπορείτε να μετακινήστε μεταξύ εφαρμογών με τη χρήση του Alt+Tab."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr ""
+"Πατήστε Ctrl+Esc για να εμφανίσετε τις εφαρμογές που εκτελούνται στην "
+"τρέχουσα συνεδρία σας."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr ""
+"Το Alt+F2 εμφανίζει ένα μικρό παράθυρο όπου μπορείτε να πληκτρολογήσετε μία "
+"εντολή."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr ""
+"Τα Ctrl+F1 έως Ctrl+F8 μπορούν να χρησιμοποιηθούν για τη μετακίνηση μεταξύ "
+"εικονικών επιφανειών εργασίας."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr ""
+"Μπορείτε να μετακινήσετε κουμπιά στον πίνακα με τη χρήση του μεσαίου "
+"πλήκτρου του ποντικιού."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "Το Alt+F1 εμφανίζει το μενού συστήματος."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr ""
+"Το Ctrl+Alt+Esc μπορεί να χρησιμοποιηθεί για να σκοτώσετε μια εφαρμογή που "
+"έπαψε να ανταποκρίνεται."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+"Αν αφήσετε εφαρμογές του KDE ανοικτές κατά την αποσύνδεση, θα εκκινηθούν "
+"αυτόματα όταν θα ξανασυνδεθείτε."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr ""
+"Ο διαχειριστής αρχείων του KDE είναι επίσης περιηγητής του WEB και πελάτης "
+"FTP."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+"Οι εφαρμογές μπορούν να εμφανίζουν μηνύματα και υποδείξεις σε μία φυσαλίδα "
+"του Amor χρησιμοποιώντας τις κλήσεις DCOP showMessage() και showTip()"
+
+#: src/amor.cpp:255
+#, kde-format
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "Σφάλμα ανάγνωσης θέματος: %1"
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, kde-format
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "Σφάλμα ανάγνωσης ομάδας: %1"
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr "&Βοήθεια"
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "&Διαμόρφωση..."
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr "Έ&ξοδος"
+
+#: src/amordialog.cpp:42
+#, kde-format
+msgctxt "@title:window"
+msgid "Options"
+msgstr "Επιλογές"
+
+#: src/amordialog.cpp:65
+#, kde-format
+msgid "Theme:"
+msgstr "Θέμα:"
+
+#: src/amordialog.cpp:82
+#, kde-format
+msgid "Offset:"
+msgstr "Μετατόπιση:"
+
+#: src/amordialog.cpp:93
+#, kde-format
+msgid "Always on top"
+msgstr "Πάντα στο προσκήνιο"
+
+#: src/amordialog.cpp:98
+#, kde-format
+msgid "Show random tips"
+msgstr "Εμφάνιση τυχαίων συμβουλών"
+
+#: src/amordialog.cpp:103
+#, kde-format
+msgid "Use a random character"
+msgstr "Χρήση ενός τυχαίου χαρακτήρα"
+
+#: src/amordialog.cpp:108
+#, kde-format
+msgid "Allow application tips"
+msgstr "Επιτρέπονται συμβουλές των εφαρμογών"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "Πλάσμα του KDE για την επιφάνεια εργασίας σας"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr "amor"
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr "Stefan Böhmann"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "Τρέχων συντηρητής"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr "Martin R. Jones"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr "Gerardo Puga"
+
+#~ msgid "No tip"
+#~ msgstr "Χωρίς συμβουλή"
+
+#~ msgid "Copyright 1999, Martin R. Jones"
+#~ msgstr "Πνευματικά δικαιώματα 1999, Martin R. Jones"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amor Version %1\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Amor έκδοση %1\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amusing Misuse Of Resources\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Διασκεδαστική κατάχρηση πόρων\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Πνευματικά δικαιώματα 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ msgstr "Αρχικός συγγραφέας: Martin R. Jones <email>mjones@kde.org</email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+#~ msgstr ""
+#~ "Τρέχων συντηρητής: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "About Amor"
+#~ msgstr "Σχετικά με το Amor"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Σπύρος Γεωργαράς, Τούσης Μανώλης"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sng@hellug.gr, manolis@koppermind.homelinux.org"

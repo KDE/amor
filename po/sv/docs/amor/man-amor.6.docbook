@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+<!ENTITY % Swedish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manualsida &amor;</title>
+<date
+>2021-10-09</date>
+<releaseinfo
+>(KDE Gear 21.08)</releaseinfo>
+<productname
+>&amor; 2.4.0</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>En varelse för &plasma;-skrivbordet</refpurpose>
+</refnamediv>
+
+<refsect1 id="description">
+<title
+>Beskrivning</title>
+
+<para
+><acronym
+>AMOR</acronym
+> betyder <quote
+>Amusing Misuse Of Resources</quote
+> (underhållande slöseri med resurser). Det tillhandahåller flera olika figurer som struttar omkring på X-skärmen medan de gör trick och ger dig tips.</para>
+
+</refsect1>
+
+
+<refsect1 id="options">
+<title
+>Väljare</title>
+
+<para
+>&amor; ställs in grafiskt, och har inga andra kommandoradsväljare än de vanliga väljarna i &kde; och &Qt;.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Se också</title>
+
+<para
+>Mer detaljerad användardokumentation är tillgänglig med <ulink url="help:/amor"
+>help:/amor</ulink
+> (skriv antingen in webbadressen i &konqueror;, eller kör <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/amor</parameter
+></userinput
+>).</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Fel</title>
+
+<para
+>&amor; fungerar för närvarande bara med fönsterhanteraren &kwin;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Upphovsmän</title>
+<para
+>&amor; är skrivet av &Martin.R.Jones; &Martin.R.Jones.mail;.</para>
+<para
+>Den här manualsidan är framtagen av <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> för &Debian;s &GNU;/&Linux;-system (men kan användas av andra).</para>
+</refsect1>
+
+</refentry>

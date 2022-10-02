@@ -1,0 +1,325 @@
+# translation of amor.po to Italian
+# Copyright (C) 2004, 2005, 2008 Free Software Foundation, Inc.
+# Federico Cozzi <federicocozzi@federicocozzi.it>, 2004, 2005.
+# Nicola Ruggero <nixprog.adsl@tiscali.it>, 2005.
+# Nicola Ruggero <nicola@nxnt.org>, 2008, 2010, 2011.
+# Federico Zenith <federico.zenith@member.fsf.org>, 2009.
+# Pino Toscano <toscano.pino@tiscali.it>, 2019.
+# Paolo Zamponi <zapaolo@email.it>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: amor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"PO-Revision-Date: 2022-07-25 14:54+0200\n"
+"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr "Non correre con le forbici in mano."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "Non fidarti mai dei venditori di auto o dei politici."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"I veri programmatori non commentano il loro codice. È stato difficile "
+"scriverlo, deve essere difficile capirlo."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr "È più facile suggerire soluzioni quando non si sa nulla del problema."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "Non potrai mai avere abbastanza memoria o spazio disco."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "La risposta è 42."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "Non è un bug, è una funzionalità male ideata."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr "Aiuta l'estinzione e l'abolizione della ridondanza."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr ""
+"Per massimizzare una finestra verticalmente, fai clic sul pulsante "
+"massimizza con il tasto centrale del mouse."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "Puoi usare Alt+Tab per cambiare l'applicazione attiva."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr ""
+"Premi Ctrl+Esc per vedere quali applicazioni sono attualmente in esecuzione "
+"nella tua sessione."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr "Alt+F2 mostra una piccola finestra in cui puoi immettere un comando."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr "Le combinazioni da Ctrl+F1 a Ctrl+F8 cambiano il desktop virtuale."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr ""
+"Si possono spostare i pulsanti del pannello utilizzando il tasto centrale "
+"del mouse."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "Alt+F1 mostra il menu di sistema."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr ""
+"Ctrl+Alt+Esc può essere usato per terminare un'applicazione che non risponde "
+"più."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+"Se lasci aperte le applicazioni KDE quando chiudi la sessione, queste "
+"verranno riavviate automaticamente quando accederai nuovamente a KDE."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr "Il gestore di file di KDE è anche un browser Web e un client FTP."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+"Le applicazioni possono mostrare messaggi e suggerimenti in un fumetto di "
+"AMOR usando le chiamate DCOP\n"
+"showMessage() e showTip()"
+
+#: src/amor.cpp:255
+#, kde-format
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "Errore durante la lettura del tema: %1"
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, kde-format
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "Errore durante la lettura del gruppo: %1"
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr "&Aiuto"
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "&Configura..."
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr "&Esci"
+
+#: src/amordialog.cpp:42
+#, kde-format
+msgctxt "@title:window"
+msgid "Options"
+msgstr "Opzioni"
+
+#: src/amordialog.cpp:65
+#, kde-format
+msgid "Theme:"
+msgstr "Tema:"
+
+#: src/amordialog.cpp:82
+#, kde-format
+msgid "Offset:"
+msgstr "Scostamento:"
+
+#: src/amordialog.cpp:93
+#, kde-format
+msgid "Always on top"
+msgstr "Sempre in primo piano"
+
+#: src/amordialog.cpp:98
+#, kde-format
+msgid "Show random tips"
+msgstr "Mostra suggerimenti casuali"
+
+#: src/amordialog.cpp:103
+#, kde-format
+msgid "Use a random character"
+msgstr "Usa un personaggio a caso"
+
+#: src/amordialog.cpp:108
+#, kde-format
+msgid "Allow application tips"
+msgstr "Permetti suggerimenti sulle applicazioni"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "Creatura KDE per il desktop"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr "AMOR"
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+"1999 Martin R. Jones\n"
+"2010 Stefan Böhmann"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr "Stefan Böhmann"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "Responsabile attuale"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr "Martin R. Jones"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr "Gerardo Puga"
+
+#~ msgid "No tip"
+#~ msgstr "Nessun suggerimento"
+
+#~ msgid "Copyright 1999, Martin R. Jones"
+#~ msgstr "Copyright 1999, Martin R. Jones"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amor Version %1\n"
+#~ "\n"
+#~ msgstr ""
+#~ "AMOR versione %1\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amusing Misuse Of Resources\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Allegro Massacro di Ogni Risorsa\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ msgstr "Autore originale: Martin R. Jones <email>mjones@kde.org</email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+#~ msgstr ""
+#~ "Responsabile attuale: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "About Amor"
+#~ msgstr "Informazioni su AMOR"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Nicola Ruggero,Federico Cozzi,Andrea Rizzi"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "nicola@nxnt.org,,"

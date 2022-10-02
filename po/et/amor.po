@@ -1,0 +1,322 @@
+# Translation of amor.po to Estonian.
+# Copyright (C) 2000 Free Software Foundation, Inc.
+#
+#
+# Hasso Tepper <hasso@linux.ee>, 2000.
+# Marek Laane <bald@smail.ee>, 2010, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: amor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"PO-Revision-Date: 2020-01-22 20:09+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr "Kääridega ei ole mõtet joosta."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "Autofirmade müügimehi ja poliitikuid ei maksa kunagi usaldada."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"Tõelised programeerijad ei kommenteeri oma koodi. Seda oli raske kirjutada, "
+"järelikult peab olema see ka raskesti loetav."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr "Soovitusi on palju lihtsam jagada, kui sa probleemist midagi ei tea."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "Mälu ja kõvaketast pole kunagi liiga palju."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "Vastus on 42."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "See ei ole viga. See on lihtsalt natuke valesti programeeritud."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr "Ära pane tähele neid vihjeid, mida sulle siin näidatakse."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr ""
+"Akna vertikaalseks maksimeerimiseks klõpsa maksimeerimise nupul hiire "
+"keskmise nupuga."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "Rakenduste vahel liikumiseks kasuta klahvikombinatsiooni Alt+TAB."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr "Aktiivses seansis töötavate rakenduste vaatamiseks vajuta Ctrl+Esc."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr "Alt+F2 vajutades saad ette väikese käsurea."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr ""
+"Klahvikombinatsioone Ctrl+F1 kuni Ctrl+F8 saad kasutada virtuaalsete "
+"töölaudade vahel liikumiseks."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr "Paneelil asuvaid nuppe on võimalik liigutada hiire keskmise nupuga."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "K menüüd on võimalik avada vajutades Alt+F1."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr ""
+"Klahvikombinatsiooni Ctlr+Alt+Esc on võimalik kasutada hangunud rakenduse "
+"tapmiseks."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+"Kui lahkud KDEst nii, et mõned rakendused jäävad avatuks, taastatakse need "
+"uuel sisselogimisel automaatselt."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr "KDE failihaldur on ühtlasi ka veebilehitseja ja FTP klient."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+"Rakendused saavad AMORi mullis teateid ja vihjeid näidata\n"
+"DCOP väljakutsetega showMessage() ja showTip()"
+
+#: src/amor.cpp:255
+#, kde-format
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "Tõrge teema lugemisel: %1"
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, kde-format
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "Tõrge grupi lugemisel: %1"
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr "&Abi"
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "&Seadista..."
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr "&Välju"
+
+#: src/amordialog.cpp:42
+#, fuzzy, kde-format
+#| msgid "Options"
+msgctxt "@title:window"
+msgid "Options"
+msgstr "Valikud"
+
+#: src/amordialog.cpp:65
+#, kde-format
+msgid "Theme:"
+msgstr "Teema:"
+
+#: src/amordialog.cpp:82
+#, kde-format
+msgid "Offset:"
+msgstr "Distants:"
+
+#: src/amordialog.cpp:93
+#, kde-format
+msgid "Always on top"
+msgstr "Alati pealmine"
+
+#: src/amordialog.cpp:98
+#, kde-format
+msgid "Show random tips"
+msgstr "Juhuslike nõuannete näitamine"
+
+#: src/amordialog.cpp:103
+#, kde-format
+msgid "Use a random character"
+msgstr "Juhusliku tegelase kasutamine"
+
+#: src/amordialog.cpp:108
+#, kde-format
+msgid "Allow application tips"
+msgstr "Rakenduse vihjete lubamine"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "KDE elajas sinu töölauale"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr "amor"
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+"1999: Martin R. Jones\n"
+"2010: Stefan Böhmann"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr "Stefan Böhmann"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "Praegune hooldaja"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr "Martin R. Jones"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr "Gerardo Puga"
+
+#~ msgid "No tip"
+#~ msgstr "Nõuanne puudub"
+
+#~ msgid "Copyright 1999, Martin R. Jones"
+#~ msgstr "Autoriõigus (c) 1999: Martin R. Jones"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amor Version %1\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Amori versioon %1\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amusing Misuse Of Resources\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Arvutivõimsuse Mõttetult Opakas Raiskamine\n"
+#~ "\n"
+#~ "(Amusing Misuse Of Resources)\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Autoriõigus (c) 1999: Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ msgstr "Algne autor: Martin R. Jones <email>mjones@kde.org</email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+#~ msgstr ""
+#~ "Praegune hooldaja: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "About Amor"
+#~ msgstr "Amori info"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Hasso Tepper, Marek Laane"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "hasso@linux.ee, bald@starman.ee"

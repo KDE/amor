@@ -1,0 +1,331 @@
+# Translation of amor to Croatian
+#
+# DoDo <DoDoEntertainment@gmail.com>, 2009.
+# Andrej Dundovic <adundovi@gmail.com>, 2010.
+# Marko Dimjašević <marko@dimjasevic.net>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: amor 0\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"PO-Revision-Date: 2011-03-18 19:08+0100\n"
+"Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
+"Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.2\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr "Ne trčite sa škarama u rukama."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "Nikad ne vjeruj trgovcima automobilima ili političarima."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"Pravi programeri ne komentiraju svoj kod. Bilo ga je teško napisati, samim "
+"time morao bi biti i težak za razumijevanje."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr "Mnogo je lakše dijeliti savjete kad ne znate ništa o problemu."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "Ne možete imati previše memorije ili previše prostora na tvrdom disku."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "Odgovor je: 42."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "To nije nedostatak. To je nepovoljna karakteristika."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr "Pomozite označavanju i ukidanju suvišnosti."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr ""
+"Za uspravno povećanje prozora, gumb za povećanje kliknite srednjom tipkom "
+"miša."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "Za prebacivanje između aplikacija možete upotrijebiti tipke Alt+Tab."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr ""
+"Za prikazivanje pokrenutih aplikacije u vašoj trenutnoj sesiji pritisnite "
+"tipke Ctrl+Esc."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr ""
+"Pritisak na tipke Alt+F2 prikazuje mali prozor u koji možete unijeti naredbu."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr ""
+"Tipke Ctrl+F1 do Ctrl+F8 možete upotrebljavati za prebacivanje između "
+"virtualnih zaslona."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr "Gumbe na ploči možete premještati pomoću srednje tipke miša."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "Pritiskom na tipke Alt+F1 iskočit će izbornik sustava."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr ""
+"Pritisak na tipke Ctrl+Alt+Esc možete upotrijebiti za \"ubijanje\" "
+"aplikacije koja se prestala odzivati na naredbe."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+"Ukoliko tijekom odjavljivanja ne zatvorite KDE aplikacije, one će biti "
+"automatski pokrenute pri ponovnom prijavljivanju. "
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr "KDE upravitelja datotekama ujedno je i web-preglednik i FTP klijent."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+"Aplikacije mogu prikazati poruke i savjete unutar Amor oblaka upotrebom\n"
+"DCOP poziva showMessage() i showTip()."
+
+#: src/amor.cpp:255
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Error reading theme: "
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "Pogreška pri čitanju teme: "
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Error reading group: "
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "Pogreška pri čitanju grupe: "
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr "&Pomoć"
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "&Konfiguriraj …"
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr "&Izlaz"
+
+#: src/amordialog.cpp:42
+#, fuzzy, kde-format
+#| msgid "Options"
+msgctxt "@title:window"
+msgid "Options"
+msgstr "Opcije"
+
+#: src/amordialog.cpp:65
+#, kde-format
+msgid "Theme:"
+msgstr "Tema:"
+
+#: src/amordialog.cpp:82
+#, kde-format
+msgid "Offset:"
+msgstr "Pomak:"
+
+#: src/amordialog.cpp:93
+#, kde-format
+msgid "Always on top"
+msgstr "Uvijek na vrhu"
+
+#: src/amordialog.cpp:98
+#, kde-format
+msgid "Show random tips"
+msgstr "Prikaži nasumične savjete"
+
+#: src/amordialog.cpp:103
+#, kde-format
+msgid "Use a random character"
+msgstr "Upotrijebi nasumičan karakter"
+
+#: src/amordialog.cpp:108
+#, kde-format
+msgid "Allow application tips"
+msgstr "Dopusti savjete o aplikacijama"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "KDE kreature za vašu radnu površinu"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr "amor"
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+"1999. Martin R. Jones\n"
+"2010. Stefan Böhmann"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr "Stefan Böhmann"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "Trenutni održavatelj"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr "Martin R. Jones"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr "Gerardo Puga"
+
+#~ msgid "No tip"
+#~ msgstr "Bez savjeta"
+
+#~ msgid "Copyright 1999, Martin R. Jones"
+#~ msgstr ""
+#~ "Autorska prava (c) 1999 Martin R. Jones <email>mjones@kde.org</email>"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amor Version %1\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Amor verzija %1\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amusing Misuse Of Resources\n"
+#~ "\n"
+#~ msgstr ""
+#~ "AMOR: Amusing Misuse Of Resources (Zabavno trošenje resursa)\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Autorska prava (c) 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ msgstr "Izvorni autor: Martin R. Jones <email>mjones@kde.org</email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+#~ msgstr ""
+#~ "Trenutni održavatelj: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "About Amor"
+#~ msgstr "O aplikaciji Amor"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Renato Pavičić"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "renato@translator-shop.org"

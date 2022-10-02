@@ -1,0 +1,270 @@
+# translation of amor.po to
+# Malayalam translation of amor.
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdetoys package.
+# pR@tz/Pratheesh Prakash/പ്രതീഷ് പ്രകാശ് <royal.mexian@gmail.com>, 2008.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2008.
+# Anish A <anish.nl@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: amor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"PO-Revision-Date: 2010-12-17 13:30+0530\n"
+"Last-Translator: \n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr "കത്രിക കയ്യില്‍ പിടിച്ചുകൊണ്ട് ഓടരുത്."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "രാഷ്ട്രീയക്കാരെയോ കാര്‍ വില്‍പ്പനക്കാരെയോ വിശ്വസിക്കരുത്."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"യഥാര്‍ത്ഥ പ്രോഗ്രാമ്മര്‍മാര്‍ തങ്ങളുടെ കോഡില്‍ കമന്റ് ചെയ്യുകയില്ല. എഴുതുവാന്‍ ബുദ്ധിമുട്ടായിരുന്നുവെങ്കില്‍, "
+"മനസ്സിലാക്കുവാനും ബുദ്ധിമുട്ടായിരിക്കുണം."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr ""
+"പ്രശ്നത്തെക്കുറിച്ചൊരു ചുക്കും അറിയില്ലെങ്കില്‍ പരിഹാരങ്ങള്‍ നിര്‍ദ്ദേശിക്കുവാനെളുപ്പമായിരിക്കും."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "നിങ്ങള്‍ക്കൊരുകാലത്തും വളരെയധികം മെമ്മറിയോ ഡിസ്ക് സ്പേസോ ഉണ്ടാകുവാനിടയില്ല."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "ഉത്തരം 42 ആണു്."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "അതൊരു പിഴവല്ല. എന്നാലതൊരു അനാവശ്യ വിശേഷതയാണ്."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr "നിര്‍ബന്ധമായി പുറത്താക്കി അധികമുള്ളവയെ ഇല്ലാതാക്കാന്‍ സഹായിക്കൂ."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr ""
+"ഒരു ജാലകത്തെ നെടുകെ വലുതാക്കുവാനായി, നടുക്കുള്ള മൌസ് ബട്ടണ്‍ കൊണ്ട് മാക്സിമൈസ് ബട്ടണ്‍ അമര്‍ത്തുക."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "പ്രയോഗങ്ങള്‍ തമ്മില്‍ മാറുവാനായി Alt+Tab അമര്‍ത്തിയാല്‍ മതി."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr "നിങ്ങളുടെ സെഷനില്‍ ഏതൊക്കെ പ്രയോഗങ്ങള്‍ ഓടുന്നു എന്നറിയുവാന്‍ Ctrl+Esc അമര്‍ത്തുക."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr "Alt+F2 അമര്‍ത്തിയാല്‍ നിര്‍ദ്ദേശങ്ങള്‍ കൊടുക്കുവാനുള്ള ഒരു കൊച്ചു ജാലകം കിട്ടും."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr "Ctrl+F1 മുതല്‍ Ctrl+F8 വരെ ഉപയോഗിച്ചു് വിര്‍ച്ച്വല്‍ പണിയിടങ്ങള്‍ തമ്മില്‍ മാറാം."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr "നടുവിലെ മൌസ് ബട്ടണുപയോഗിച്ചു് പാളിയിലെ ബട്ടണുകള്‍ നീക്കാം."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "Alt+F1 സിസ്റ്റത്തിലെ മെനു പോപ്പ് അപ്പ് ചെയ്യിയ്ക്കുന്നു."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr "Ctrl+Alt+Esc ഉപയോഗിച്ചു് മറുപടി തരാത്ത പ്രയോഗങ്ങളെ ഇല്ലാതാക്കാം."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+"നിങ്ങള്‍ പുറത്തേക്ക് പോകുമ്പോള്‍ കെഡിഇ പ്രയോഗങ്ങള്‍ നിര്‍ത്തിയിട്ടില്ലായെങ്കില്‍, അടുത്ത തവണ അകത്ത് "
+"കയറുമ്പോള്‍ അവ തനിയെ തുറന്നു വരുന്നതായിരിക്കും."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr "കെഡിഇ ഫയല്‍ കാര്യക്കാരന്‍ ഒരു വെബ്ബ് ബ്രൌസറും എഫ്‌ടിപി ക്ലയന്റും കൂടിയാണു്."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+"പ്രയോഗങ്ങള്‍ക്കു showMessage() showTip() എന്നീ ഡിസിഒപി വിളികളുപയോഗിച്ചു് ആമര്‍ ബബിളില്‍ "
+"സന്ദേശങ്ങളും\n"
+"നുറുങ്ങുകളും കാണിയ്ക്കാം"
+
+#: src/amor.cpp:255
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Error reading theme: "
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "പ്രമേയം വായിയ്ക്കുന്നതില്‍ പിശകു്: "
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Error reading group: "
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "കൂട്ടം വായിയ്ക്കുന്നതില്‍ പിശകു്: "
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr "&സഹായം"
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "&ക്രമീകരിക്കുക..."
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr "&പുറത്തേക്ക്"
+
+#: src/amordialog.cpp:42
+#, fuzzy, kde-format
+#| msgid "Options"
+msgctxt "@title:window"
+msgid "Options"
+msgstr "ഐച്ഛികങ്ങള്‍"
+
+#: src/amordialog.cpp:65
+#, kde-format
+msgid "Theme:"
+msgstr "പ്രമേയം:"
+
+#: src/amordialog.cpp:82
+#, kde-format
+msgid "Offset:"
+msgstr "ഓഫ്‌സെറ്റ്:"
+
+#: src/amordialog.cpp:93
+#, kde-format
+msgid "Always on top"
+msgstr "എപ്പോഴും മുകളില്‍"
+
+#: src/amordialog.cpp:98
+#, kde-format
+msgid "Show random tips"
+msgstr "ഏതെങ്കിലുമൊക്കെ നുറുങ്ങുകള്‍ കാണിയ്ക്കുക"
+
+#: src/amordialog.cpp:103
+#, kde-format
+msgid "Use a random character"
+msgstr "ഏതെങ്കലുമൊരു അക്ഷരം ഉപയോഗിയ്ക്കുക"
+
+#: src/amordialog.cpp:108
+#, kde-format
+msgid "Allow application tips"
+msgstr "പ്രയോഗങ്ങളുടെ നുറുങ്ങുകള്‍ കാണിയ്ക്കുക"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "നിങ്ങളുടെ പണിയിടത്തിനു വേണ്ടിയുള്ളൊരു കെഡിഇ ജന്തു"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr "അമോര്‍"
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+"1999 by മാര്‍ട്ടിന്‍ ആര്‍ ജോണ്‍സ്\n"
+"2010 by സ്റ്റെഫാന്‍ ബോഹ്മാന്‍"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr "സ്റ്റെഫാന്‍ ബോഹ്മാന്‍"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "ഇപ്പോഴത്തെ പരിപാലകന്‍"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr "മാര്‍ട്ടിന്‍ ആര്‍. ജോണ്‍സ്"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr "ജെറാര്‍ഡോ പൂഗ"
+
+#~ msgid "No tip"
+#~ msgstr "നുറുങ്ങൊന്നുമില്ല"

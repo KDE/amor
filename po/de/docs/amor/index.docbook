@@ -1,0 +1,528 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&amor;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE">
+]>
+
+<book id="amor" lang="&language;">
+<bookinfo>
+<title
+>Das Handbuch zu &amor;</title>
+
+<authorgroup>
+<author
+>&Karl.Garrison; &Karl.Garrison.mail; </author>
+
+<othercredit role="translator"
+><firstname
+>Maren</firstname
+><surname
+>Pakura</surname
+><affiliation
+><address
+><email
+>maren@kde.org</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Matthias</firstname
+><surname
+>Schulz</surname
+><affiliation
+><address
+><email
+>matthias.schulz@kdemail.net</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+>  
+</authorgroup>
+
+<copyright>
+<year
+>2001</year>
+<holder
+>Karl Garrison</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2010-02-08</date>
+<releaseinfo
+>2.3.1 (&kde; 4.4)</releaseinfo>
+
+<abstract>
+<para
+>&amor; ist eine kleine Animation, die auf Ihrem aktuellen Fenster sitzt. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>amor</keyword>
+<keyword
+>Hilfe</keyword>
+<keyword
+>Assistent</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Einleitung</title>
+
+<sect1 id="whats-amor">
+<title
+>Was ist &amor;?</title>
+<para
+>&amor; ist ein Akronym, das für Amusing Misuse of Resources steht. Es ist eine Animation, die auf Ihrem aktuellen Fenster sitzt. In der Standard-Einstellung ist &amor; ein gelber Punkt, der verschiedene Tricks vorführt. &amor; hat verschiedene Designs, die das Erscheinungsbild und das Verhalten ändern. </para>
+
+<note
+><para
+>Da &amor; mit dem &kde;-Fenstermanager &kwin; zusammenarbeitet, funktioniert &amor; nur innerhalb von &plasma;. Es kann sein, dass &amor; innerhalb eines anderen &plasma;-kompatiblen Fenstermanagers arbeitet, allerdings ist dies bisher nicht bekannt.</para
+></note>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Einrichtung</title>
+<sect1 id="configuring-amor">
+<title
+>&amor; einrichten</title>
+<para
+>Um &amor; einzurichten, klicken Sie mit der rechten Maustaste auf die Animation. Es erscheint ein Menü, das die drei Objekte enthält: <guimenuitem
+>Einrichten ...</guimenuitem
+>, <guimenuitem
+>Hilfe</guimenuitem
+> und <guimenuitem
+>Beenden</guimenuitem
+>. Wählen Sie <guimenuitem
+>Einrichten ...</guimenuitem
+>, um den Einstellungsdialog für &amor; zu öffnen. </para>
+</sect1>
+
+<sect1 id="general-options">
+<title
+>Allgemeine Einstellungen</title>
+<para
+>Die folgenden Einstellungen für &amor; können im Dialog geändert werden.</para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Design</guilabel
+></term>
+<listitem
+><para
+>Dieses legt das Erscheinen und Verhalten von &amor; fest. Verschiedene Designs werden im nächsten Abschnitt beschrieben.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Verschiebung</guilabel
+></term>
+<listitem
+><para
+>Dieser Schieberegler stellt ein, wo &amor; bezogen auf das aktive Fenster erscheint. Die Standardeinstellung in der Mitte platziert &amor; direkt oberhalb der Titelleiste, die Einstellungen ganz oben oder unten platzieren &amor; weiter oberhalb oder unterhalb der Titelleiste des aktiven Fensters.</para>
+<tip
+><para
+>Wenn Sie diesen Regler niedriger einstellen, können Sie die Animation auch sehen, wenn das aktive Fenster maximiert ist.</para>
+</tip
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Immer im Vordergrund</guilabel
+></term>
+<listitem
+><para
+>Die Aktivierung dieser Einstellung bewirkt, dass &amor; immer vor allen Fenstern auf der Arbeitsfläche einschließlich der Kontrollleiste erscheint.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Zufällige Tipps anzeigen</guilabel
+></term>
+<listitem
+><para
+>Wenn dieses Feld angekreuzt ist, zeigt &amor; einige &kde;-Tipps in unregelmäßigen Abständen an.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Beliebige Figur verwenden</guilabel
+></term>
+<listitem
+><para
+>Ist diese Einstellung ausgewählt, wird die Designauswahl deaktiviert und das Design zufällig gewechselt.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Programmtipps zulassen</guilabel
+></term>
+<listitem
+><para
+>Jede Anwendung für &kde; kann so programmiert werden, dass über &amor; Tipps angezeigt werden. Wenn dieses Feld angekreuzt und das aktive Fenster eine solche Anwendung ist, dann zeigt &amor; Tipps für diese Anwendung an.</para>
+<note
+><para
+>Als diese Dokumentation erstellt wurde, hat noch keine &kde;-Anwendung diese Funktionalität genutzt.</para
+></note
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="amor-themes">
+<title
+>&amor;-Designs</title>
+<para
+>&amor; enthält standardmäßig einige Designs, die verschiedene Erscheinungsbilder und Verhaltensmuster von &amor; beinhalten. Außerdem ist es möglich, neue &amor;-Designs zu erstellen. Die eingebauten Designs sind im Folgenden beschrieben:</para>
+
+<table>
+<title
+>Verfügbare &amor;-Designs:</title>
+<tgroup cols="3">
+<thead>
+<row>
+<entry
+>Design</entry>
+<entry
+>Name</entry>
+<entry
+>Beschreibung</entry>
+</row>
+</thead>
+<tbody>
+
+<row>
+<entry
+><mediaobject
+><imageobject>
+          <imagedata  format="PNG" fileref="spot.png"/>
+        </imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Das Multitalent</phrase
+></entry>
+<entry
+><para
+>Dies ist das Standard-Design für &amor; und enthält die meisten <quote
+>Tricks</quote
+>. Dieses Design wurde von &Martin.R.Jones; entwickelt. Der Raketenrucksack, das Beamen und die Feuer-Animation wurden von <personname
+><firstname
+>Mark</firstname
+><surname
+>Grant</surname
+></personname
+> beigesteuert.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="ghost.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Kleines Gespenst</phrase
+></entry>
+<entry
+><para
+>Das Geist-Design basiert auf dem &kde;-<application
+>ghostview</application
+>-Symbol. Der spukende Geist wurde von &Martin.R.Jones; entwickelt.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="eyes.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Verrückte Augen</phrase
+></entry>
+<entry
+><para
+>Dieses Design besteht aus sich bewegenden Augen, die von <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+> entwickelt wurden.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bonhomme.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Bonhomme</phrase
+></entry>
+<entry
+><para
+>Eine Strichmännchen-Animation, entwickelt von <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="neko.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Neko</phrase
+></entry>
+<entry
+><para
+>Neko ist eine Katze, entwickelt von <personname
+><firstname
+>Chris</firstname
+><surname
+>Spiegel</surname
+></personname
+>. Die Grafik stammt ursprünglich von <application
+>Oneko</application
+>, das von <personname
+><firstname
+>Masayuki</firstname
+><surname
+>Koba</surname
+></personname
+> geschrieben wurde.</para>
+<note
+><para
+><application
+>Oneko</application
+> ist eine kleine Anwendung, in der eine Katze den Mauszeiger jagt. Es scheint, als wird diese Anwendung nicht weiterentwickelt, aber die Quelle der letzten Version ist unter <ulink url="ftp://sunsite.unc.edu/pub/Linux/X11/demos/oneko-1.1b.tar.gz"
+> dieser URL</ulink
+> noch verfügbar.</para
+></note
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="pingus.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux</phrase
+></entry>
+<entry
+><para
+>Dieses Design zeigt Tux, das &Linux;-Maskottchen. Die Grafik stammt aus einem <application
+>Lemmings</application
+>-Spiel mit Namen <ulink url="http://pingus.seul.org/"
+> <application
+>Pingus</application
+></ulink
+>. Das Tux-Design wurde von <personname
+><firstname
+>Frank</firstname
+><surname
+>Pieczynski</surname
+></personname
+> entwickelt.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="worm.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Kleiner Wurm</phrase
+></entry>
+<entry
+><para
+>Ein Design mit einem kleinen Wurm. Es wurde von <personname
+><firstname
+>Bartosz</firstname
+><surname
+>Trudnowski</surname
+></personname
+> für seine Frau entwickelt.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="billy.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Klein Billy</phrase
+></entry>
+<entry
+><para
+>Ein Bild, das vom Spiel <ulink url="http://www.xbill.org/"
+><application
+>XBill</application
+> </ulink
+> stammt.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bsd.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>FreeBSD-Maskottchen</phrase
+></entry>
+<entry
+><para
+>Ein Bild von Beastie, dem FreeBSD-Teufelchen.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tux.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux (nicht animiert)</phrase
+></entry>
+<entry
+><para
+>Eine nicht animierte Version des Tux-Designs.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tao.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tao</phrase
+></entry>
+<entry
+><para
+>Das Design Tao ist ein animiertes Yin-Yang-Symbol. Es wurde von <personname
+><firstname
+>Daniel</firstname
+><surname
+>Pfeiffer</surname
+></personname
+> <email
+>occitan@esperanto.org</email
+> entwickelt, seine Tai Chi Erfahrungen halfen Ihm dabei.</para
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Danksagungen und Lizenz</title>
+
+<para
+>&amor;</para>
+
+<para
+>Programm-Copyright &copy; 1999-2001 &Martin.R.Jones; &Martin.R.Jones.mail;</para>
+
+<para
+>Dokumentations-Copyright &copy; 2001 &Karl.Garrison; &Karl.Garrison.mail;</para>
+
+<para
+>Deutsche Übersetzung von Maren Pakura <email
+>maren@kde.org</email
+>und Matthias Schulz<email
+>matthias.schulz@kdemail.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

@@ -1,0 +1,549 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&amor;">
+  <!ENTITY package "kdetoys">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Polish "INCLUDE">
+]>
+
+<book lang="&language;">
+<bookinfo>
+<title
+>Podręcznik użytkownika programu &amor;</title>
+
+<authorgroup>
+<author
+>&Karl.Garrison;&Karl.Garrison.mail; </author>
+
+<othercredit role="translator"
+><firstname
+>Oskar</firstname
+><surname
+>Lisiecki</surname
+><affiliation
+><address
+><email
+>oskarlisiecki@gmail.com</email
+></address
+></affiliation
+><contrib
+>Polskie tłumaczenie dokumentacji</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year>
+<holder
+>&Karl.Garrison;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2003-09-16</date>
+<releaseinfo
+>2.2</releaseinfo>
+
+<abstract>
+<para
+>&amor; to mała animacja, która siedzi na szczycie Twojego aktywnego okna. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>zabawki KDE</keyword>
+<keyword
+>amor</keyword>
+<keyword
+>pomocnik</keyword>
+<keyword
+>asystent</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Wstęp</title>
+
+<sect1 id="whats-amor">
+<title
+>Czym jest &amor;?</title>
+<para
+>Amor to skrót od angielskiego "Amusing Misuse of Resources", co oznacza "zabawne marnowanie zasobów komputera". Jest to dokładniej animacja ,która "siedzi" na górze Twojego uruchomionego okna. W jego domyślnej konfiguracji ma wygląd żółtego stworka, która robi wiele sztuczek. Posiada on również wiele różnych motywów, które zmieniają wygląd i zachowanie animacji. </para>
+
+<note
+><para
+>Ponieważ &amor; współpracuje z menedżerem okien &kde; zwanym &kwin;, będzie tylko działał w środowisku &kde;. Jest możliwe, że &amor; zadziała wewnątrz innego, zgodnego z &kde; menedżera okien, lecz na dzień pisania tego tekstu żaden taki nie jest znany.</para
+></note>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Konfiguracja</title>
+<sect1 id="configuring-amor">
+<title
+>Konfiguracja &amor;</title>
+<para
+>Aby skonfigurować program &amor;, kliknij na animacji za pomocą prawego przycisku myszy. Pojawi się menu zawierające trzy pozycje: <guimenuitem
+>Opcje...</guimenuitem
+>, <guimenuitem
+>O programie...</guimenuitem
+>, i <guimenuitem
+>Wyjdź</guimenuitem
+>. Wybierz <guimenuitem
+>Opcje..</guimenuitem
+>, aby skonfigurować program &amor;. </para>
+</sect1>
+
+<sect1 id="general-options">
+<title
+>Opcje ogólne</title>
+<para
+>Następujące ustawienia programu &amor; mogą być zmienione w opcjach:</para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Motyw</guilabel
+></term>
+<listitem
+><para
+>Określa wygląd i zachowanie programu &amor;. Motywy będą opisywane w następnej sekcji.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Przesunięcie</guilabel
+></term>
+<listitem
+><para
+>To ustawienie kontroluje, gdzie animacja się pojawi względem szczytu aktywnego okna. Domyślne ustawienie "pośrodku" umieści animację zaraz nad paskiem tytułowym okna. Przesunięcie suwaka w górę lub w dół spowoduje, że animacja pojawi się w pewnej odległości, odpowiednio, nad lub pod paskiem tytułowym okna.</para>
+<tip
+><para
+>Przesunięcie suwaka w dół pozwoli uwidocznić animację nawet wtedy, gdy aktywne okno jest zmaksymalizowane.</para>
+</tip
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Zawsze na wierzchu</guilabel
+></term>
+<listitem
+><para
+>Zaznaczenie tej opcji spowoduje, że animacja będzie zawsze pojawiać się na wierzchu wszystkich okien na ekranie, włączając w to panel.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Pokaż losowe podpowiedzi</guilabel
+></term>
+<listitem
+><para
+>Jeśli ta opcja jest włączona, to animacja wyświetli różne podpowiedzi związane z &kde; w losowych odstępach czasu.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Pozwól na porady z innych programów</guilabel
+></term>
+<listitem
+><para
+>Każdy program w &kde; może być zaprojektowany, aby wyświetlał pomocne podpowiedzi poprzez program &amor;. Jeśli ta opcja jest zaznaczona i aktywne okno należy do takiego programu, to animacja wyświetli porady dla niej.</para>
+<note
+><para
+>Na dzień pisania tej dokumentacji żaden program &kde; nie używa tej funkcjonalności.</para
+></note
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="amor-themes">
+<title
+>Motywy programu &amor;</title>
+<para
+>&amor; jest dostępny z kilkoma wbudowanymi motywami, które zmieniają wygląd i zachowanie animacji. Ponadto możliwe jest tworzenie nowych motywów. Wbudowane w program &amor; motywy są przedstawione w tabeli poniżej.</para>
+
+<table>
+<title
+>Dostępne motywy programu &amor;</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry
+>Motyw</entry>
+<entry
+>Opis</entry>
+</row>
+</thead>
+<tbody>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="spot.png"/>
+</imageobject>
+<textobject
+><para
+>Utalentowana kropka</para
+></textobject>
+<caption
+><para
+>Utalentowana kropka</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>To jest domyślny motyw dla programu &amor;, jak również jeden z posiadających najwięcej <quote
+>sztuczek</quote
+>. Autorem tego motywu jest &Martin.R.Jones;. Pakiet odrzutowy, lasery i animacje ognia zostały wprowadzone przez <personname
+><firstname
+>Marka</firstname
+><surname
+>Granta</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="ghost.png"/>
+</imageobject>
+<textobject
+><para
+>Straszny duch</para
+></textobject>
+<caption
+><para
+>Straszny duch</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Motyw ducha bazujący na ikonie &kde; dla programu <application
+>ghostview</application
+>. Autorem strasznego ducha jest &Martin.R.Jones;.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="eyes.png"/>
+</imageobject>
+<textobject
+><para
+>Szalone oczy</para
+></textobject>
+<caption
+><para
+>Szalone oczy</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Ten motyw składa się z ruszającej pary oczu. Jego autorem jest <personname
+> <firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="bonhomme.png"/>
+</imageobject>
+<textobject
+><para
+>Bonhomme</para
+></textobject>
+<caption
+><para
+>Bonhomme</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Animacja w postaci składającej się z patyków. Autorem jest <personname
+> <firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="neko.png"/>
+</imageobject>
+<textobject
+><para
+>Neko</para
+></textobject>
+<caption
+><para
+>Neko</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Neko to motyw kota, stworzony przez <personname
+> <firstname
+>Chris</firstname
+><surname
+>Spiegel</surname
+></personname
+>. Grafika pochodzi z programu <application
+>Oneko</application
+>, który został napisany przez <personname
+><firstname
+>Masayuki</firstname
+><surname
+>Koba</surname
+></personname
+>.</para>
+<note
+><para
+><application
+>Oneko</application
+> to mały program, w którym kot goni kursor myszy. Program nie jest już utrzymywany, lecz <ulink url="ftp://sunsite.unc.edu/pub/Linux/X11/demos/oneko-1.1b.tar.gz"
+>jego kod źródłowy</ulink
+> jest dostępny.</para
+></note
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="pingus.png"/>
+</imageobject>
+<textobject
+><para
+>Tux</para
+></textobject>
+<caption
+><para
+>Tux</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Ten motyw przedstawia Tuksa ,maskotkę &Linux-dopelniacz; . Grafika pochodzi z podobnej do <application
+>Lemingów</application
+> gry zwanej <ulink url="http://pingus.seul.org/"
+><application
+>Pingus</application
+></ulink
+>. Autorem motywu Tux jest <personname
+><firstname
+>Frank</firstname
+><surname
+>Pieczyński</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="worm.png"/>
+</imageobject>
+<textobject
+><para
+>Mały robak</para
+></textobject>
+<caption
+><para
+>Mały robak</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Mały motyw robaka. Stworzony przez <personname
+><firstname
+>Bartosza</firstname
+><surname
+>Trudnowskiego</surname
+></personname
+> dla jego żony.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="billy.png"/>
+</imageobject>
+<textobject
+><para
+>Mały Billy</para
+></textobject>
+<caption
+><para
+>Mały Billy</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Nieruchomy obrazek wzięty z gry <ulink url="http://www.xbill.org/"
+><application
+>XBill</application
+> </ulink
+>.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="bsd.png"/>
+</imageobject>
+<textobject
+><para
+>Maskotka BSD</para
+></textobject>
+<caption
+><para
+>Maskotka BSD</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Nieruchomy obrazek diabełka, duszka systemu FreeBSD.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="tux.png"/>
+</imageobject>
+<textobject
+><para
+>Nieanimowany Tux</para
+></textobject>
+<caption
+><para
+>Nieanimowany Tux</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Nieanimowana wersja motywu Tux.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="tao.png"/>
+</imageobject>
+<textobject
+><para
+>Tao</para
+></textobject>
+<caption
+><para
+>Tao</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Motyw Tao jest animowanym symbolem Yin Yang. Ten motyw został stworzony przez <personname
+><firstname
+>Daniela</firstname
+><surname
+>Pfeiffera</surname
+></personname
+> <email
+>occitan@esperanto.org</email
+> i był zainspirowany przez jego praktykę Tai Chi.</para
+></entry>
+</row>
+
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Zasługi oraz licencje</title>
+
+<para
+>&amor;</para>
+
+<para
+>Prawa autorskie do programu: &copy; 1999-2001 &Martin.R.Jones;&Martin.R.Jones.mail;</para>
+
+<para
+>Prawa autorskie do dokumentacji: &copy; 2001 &Karl.Garrison;</para>
+
+<para
+>Polskie tłumaczenie dokumentacji: Oskar Lisiecki <email
+>oskarlisiecki@gmail.com</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

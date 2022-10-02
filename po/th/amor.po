@@ -1,0 +1,336 @@
+# translation of amor.po to Thai
+# Copyright (C) 2003, 2006 Free Software Foundation, Inc.
+#
+# Thanomsub Noppaburana <donga_n@yahoo.com>, 2003.
+# Sahachart Anukulkitch <drrider@gmail.com>, 2006.
+# Phuwanat Sakornsakolpat <narachai@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: amor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"PO-Revision-Date: 2010-12-06 14:30+0700\n"
+"Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr "อย่าวิ่งโดยถือของมีคมอยู่นะจ๊ะ"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "อย่าได้ไว้ใจเซล์แมนขายรถกับนักการเมืองเชียว"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"โปรแกรมเมอร์ที่แท้จริง จะไม่แทรกคำอธิบายเข้าไปในโค้ดด้วย มันยากนะที่จะเขียน "
+"แล้วมันก็ยากที่จะเข้าใจด้วย"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr "การเสนอทางแก้ปัญหามันง่ายกว่าเยอะ เมื่อคุณไม่รู้ว่าปัญหามันมาจากอะไร"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "คุณไม่มีทางมีหน่วยความจำ หรือพื้นที่ดิสก์ที่มากเกินไปหรอก"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "โป๊ะเชะ คำตอบคือ 42"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "นี่ไม่ใช่บักนะ แต่นี่เป็นคุณสมบัติที่ไม่ควรมีต่างหาก"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr "รักวัวให้ผูก รักลูกให้ตี"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr "เพื่อขยายหน้าต่างให้ใหญ่สุดในแนวตั้ง ให้คลิกที่ปุ่มขยายใหญ่สุด ด้วยเมาส์ปุ่มกลาง"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "คุณสามารถกดปุ่ม Alt+Tab เพื่อสลับไปมาระหว่างแอพพลิเคชันได้"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr "กดปุ่ม Ctrl+Esc เพื่อแสดงเซสชัน ของแอพพลิเคชันที่กำลังทำงานอยู่"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr "กด Alt-F2 จะแสดงหน้าต่าง ที่คุณสามารถเติมคำสั่งลงไปได้"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr "ปุ่ม Ctrl+F1 ถึง Ctrl+F8 สามารถใช้สลับเดสก์ทอปเสมือนแต่ละตัวได้"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr "คุณสามารถย้ายปุ่มบนพาเนลได้ โดยการใช้เมาส์ปุ่มกลาง"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "กดปุ่ม Alt+F1 จะแสดงเมนูป๊อบอัพของระบบ"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr "ปุ่ม Ctrl+Alt+Esc สามารถใช้ฆ่าแอพพลิเคชันดื้อๆ ที่ไม่ยอมหยุดการทำงานได้"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+"หากคุณเปิดแอพพลิเคชันของ KDE ทิ้งไว้ เมื่อตอนล็อกเอาต์ มันจะเริ่มทำงานใหม่ "
+"เมื่อคุณล็อกอินเข้ามาใหม่"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr "เครื่องมือจัดการแฟ้มของ KDE สามารถเป็นได้ทั้ง เวบบราวเซอร์ และไคลเอนต์ FTP"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+"แอพพลิเคชันต่างๆ สามารถทำการแสดงข้อความและเกร็ดต่างๆ ได้ในฟองคำพูดของ Amor โดยใช้ "
+"DCOP call ชื่อ \n"
+"showMessage() และ showTips()"
+
+#: src/amor.cpp:255
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Error reading theme: "
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "ผิดพลาดขณะอ่านชุดตกแต่ง: "
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Error reading group: "
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "ผิดพลาดขณะอ่านกลุ่ม: "
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr "ช่วยเ&หลือ"
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "&ปรับแต่ง..."
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr "&ออก"
+
+#: src/amordialog.cpp:42
+#, fuzzy, kde-format
+#| msgid "Options"
+msgctxt "@title:window"
+msgid "Options"
+msgstr "ตัวเลือก"
+
+#: src/amordialog.cpp:65
+#, kde-format
+msgid "Theme:"
+msgstr "ธีม:"
+
+#: src/amordialog.cpp:82
+#, kde-format
+msgid "Offset:"
+msgstr "ออฟเซต:"
+
+#: src/amordialog.cpp:93
+#, kde-format
+msgid "Always on top"
+msgstr "อยู่บนสุดเสมอ"
+
+#: src/amordialog.cpp:98
+#, kde-format
+msgid "Show random tips"
+msgstr "สุ่มแสดงทิป"
+
+#: src/amordialog.cpp:103
+#, kde-format
+msgid "Use a random character"
+msgstr "ใช้ตัวละครสุ่ม"
+
+#: src/amordialog.cpp:108
+#, kde-format
+msgid "Allow application tips"
+msgstr "ใช้ทิปของแอพพลิเคชันด้วย"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "สิ่งมีชีวิตของ KDE สำหรับเดสก์ทอปของคุณ"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr "amor"
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+"2542 โดย Martin R. Jones\n"
+"2553 โดย Stefan Böhmann"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr "Stefan Böhmann"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "ผู้ดูแลคนปัจจุบัน"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr "Martin R. Jones"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr "Gerardo Puga"
+
+#~ msgid "No tip"
+#~ msgstr "ไม่แสดงทิป"
+
+#~ msgid "Copyright 1999, Martin R. Jones"
+#~ msgstr "สงวนลิขสิทธิ์ 2542 โดย Martin R. Jonesฃ"
+
+#, fuzzy
+#~| msgid ""
+#~| "Amor Version %1\n"
+#~| "\n"
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amor Version %1\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Amor รุ่น %1\n"
+#~ "\n"
+
+#, fuzzy
+#~| msgid ""
+#~| "Amusing Misuse Of Resources\n"
+#~| "\n"
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amusing Misuse Of Resources\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Amusing Misuse Of Resources\n"
+#~ "ผลาญทรัพยากรไปใช้ในทางผิดเพื่อความเพลิดเพลิน\n"
+#~ "\n"
+
+#, fuzzy
+#~| msgid ""
+#~| "Copyright (c) 1999 Martin R. Jones <mjones@kde.org>\n"
+#~| "\n"
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+#~ msgstr ""
+#~ "สงวนลิขสิทธิ์ (c) 1999 Martin R. Jones <mjones@kde.org>\n"
+#~ "\n"
+
+#, fuzzy
+#~| msgid "Original Author: Martin R. Jones <mjones@kde.org>\n"
+#~ msgctxt "@label:textbox"
+#~ msgid "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ msgstr "ผู้เขียนดั้งเดิม: Martin R. Jones <mjones@kde.org>\n"
+
+#, fuzzy
+#~| msgid "Current Maintainer: Gerardo Puga <gpuga@gioia.ing.unlp.edu.ar>\n"
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+#~ msgstr "ผู้ดูแลปัจจุบัน: Gerardo Puga <gpuga@gioia.ing.unlp.edu.ar>\n"
+
+#, fuzzy
+#~| msgid "About Amor"
+#~ msgctxt "@label:textbox"
+#~ msgid "About Amor"
+#~ msgstr "เกี่ยวกับ Amor"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ถนอมทรัพย์ นพบูรณ์"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "donga_n@yahoo.com"

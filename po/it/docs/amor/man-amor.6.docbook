@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+<!ENTITY % Italian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Pagine di manuale di &amor;</title>
+<date
+>09/10/2021</date>
+<releaseinfo
+>(KDE Gear 21.08)</releaseinfo>
+<productname
+>&amor; 2.4.0</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>Una creatura per il tuo desktop &plasma;</refpurpose>
+</refnamediv>
+
+<refsect1 id="description">
+<title
+>Descrizione</title>
+
+<para
+><acronym
+>AMOR</acronym
+> sta per <quote
+>"Allegro Massacro di Ogni Risorsa"</quote
+>. Fornisce diversi personaggi che gireranno intorno al tuo schermo dandoti di volta in volta suggerimenti e trucchetti utili (Tips and Triks).</para>
+
+</refsect1>
+
+
+<refsect1 id="options">
+<title
+>Opzioni</title>
+
+<para
+>&amor; è configurabile graficamente, e non ha nessuna opzione da riga di comando, oltre alle opzioni standard di &kde; e di &Qt;.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vedi anche</title>
+
+<para
+>Ulteriore documentazione utente è disponibile presso <ulink url="help:/amor"
+>help:/amor</ulink
+> (inserisci questo come &URL; in &konqueror;, oppure esegui <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/amor</parameter
+></userinput
+>).</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Bug</title>
+
+<para
+>&amor; per ora funziona solo con il gestore di finestre &kwin;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Autori</title>
+<para
+>&amor; è stato scritto da &Martin.R.Jones; &Martin.R.Jones.mail;.</para>
+<para
+>Questa pagina di manuale è stata scritta da <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> per il sistema &GNU;/&Linux; &Debian;, ma può essere usata da altri.</para>
+</refsect1>
+
+</refentry>

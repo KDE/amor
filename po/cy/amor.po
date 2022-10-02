@@ -1,0 +1,342 @@
+# Cyfieithiad o amor.po i Cymraeg
+# translation of amor.po to Cymraeg
+# Copyright (C) 2004, 2005 Free Software Foundation, Inc.
+# KD at KGyfieithu <kyfieithu@dotmon.com>, 2004.
+# Kevin Donnelly <kevin@dotmon.com>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: amor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"PO-Revision-Date: 2005-01-28 13:57+0000\n"
+"Last-Translator: Kevin Donnelly <kevin@dotmon.com>\n"
+"Language-Team: Cymraeg\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr "Peidiwch â rhedeg efo siswrn."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "Peidiwch ac ymddiriedu gwerthwyr ceir neu gwleidyddion."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"Nid yw rhaglennwyr iawn yn rhoi sylwadau yn eu côd.  Roedd yn anodd ei "
+"ysgrifennu, dylai fo fod yn anodd ei ddeall."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr ""
+"Mae'n llawer haws awgrymu datrysiadau pan wyddoch dim byd ynglyn â'r problem."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "Ni allwch byth gael gormod o gof neu le disg."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "Yr ateb yw 42."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "Dim nam yw e.  Mae'n gam-nodwedd."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr "Helpwch ddileu a ddinistrio dianghenrwydd."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr ""
+"I ehangu ffenestr yn fertigol, cliciwch y botwm ehangu efo botwm canol y "
+"llygoden."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "Gallwch ddefnyddion Alt+Tab i newid rhwn cymhwysiadau."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr ""
+"Gwthiwch Ctrl+Esc i ddangos y cymhwysiadau sy'n rhedeg yn eich sesiwn "
+"cyfredol."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr "Dengys Alt+F2 ffenestr fychan y gallwch deipio gorchymyn i mewn iddi."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr "Gellir defnyddio Ctrl+F1 i Ctrl+F8 i symud rhwng penbyrddau rhith."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr ""
+"Gallwch symud botymau ar y panel gan ddefnyddio botwm canol y llygoden."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "Dengys Alt +F1 y ddewislen gysawd."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr "Gellir defnyddio Ctrl+Alt+Esc i ladd cymhwysiad sy'n gwrthod ymateb."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+"Os gadewch cymhwysiadau KDE ar agor wrth allgofnodi, byddant ei ailgychwyn "
+"yn ymysgogol wrth i chi fewngofnodi eto."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr "Mae'r trefnydd ffeiliau KDE hefyd yn borydd gwê a dibynnydd FTP."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+"Gall cymhwysiadau dangos negeseuon a cynghorion mewn swigen\n"
+"Amor gan ddefnyddio'r galwadau DCOP showMessage() a showTip()"
+
+#: src/amor.cpp:255
+#, fuzzy, kde-format
+#| msgid "Error reading theme: "
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "Gwall wrth ddarllen thema: "
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, fuzzy, kde-format
+#| msgid "Error reading group: "
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "Gwall wrth ddarllen grŵp: "
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr ""
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, fuzzy, kde-format
+#| msgid "&Configure..."
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "&Ffurfweddu..."
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr ""
+
+#: src/amordialog.cpp:42
+#, kde-format
+msgctxt "@title:window"
+msgid "Options"
+msgstr ""
+
+#: src/amordialog.cpp:65
+#, kde-format
+msgid "Theme:"
+msgstr "Thema:"
+
+#: src/amordialog.cpp:82
+#, kde-format
+msgid "Offset:"
+msgstr "Atred:"
+
+#: src/amordialog.cpp:93
+#, kde-format
+msgid "Always on top"
+msgstr "O Hyd yn Weladwy"
+
+#: src/amordialog.cpp:98
+#, kde-format
+msgid "Show random tips"
+msgstr "Dangos cynghorion hap"
+
+#: src/amordialog.cpp:103
+#, kde-format
+msgid "Use a random character"
+msgstr "Defnyddio nod ar hap"
+
+#: src/amordialog.cpp:108
+#, kde-format
+msgid "Allow application tips"
+msgstr "Gadael cynghorion cymhwysiad"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "Creadur KDE ar gyfer eich penbwrdd"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr "amor"
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr ""
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "Cynhaliwr cyfredol"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr ""
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr ""
+
+#~ msgid "No tip"
+#~ msgstr "Dim cynghoryn"
+
+#, fuzzy
+#~| msgid ""
+#~| "Copyright (c) 1999 Martin R. Jones <mjones@kde.org>\n"
+#~| "\n"
+#~ msgid "Copyright 1999, Martin R. Jones"
+#~ msgstr ""
+#~ "Hawlfraint (c) 1999 Martin R. Jones <mjones@kde.org>\n"
+#~ "\n"
+
+#, fuzzy
+#~| msgid ""
+#~| "Amor Version %1\n"
+#~| "\n"
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amor Version %1\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Fersiwn Amor %1\n"
+#~ "\n"
+
+#, fuzzy
+#~| msgid ""
+#~| "Amusing Misuse Of Resources\n"
+#~| "\n"
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amusing Misuse Of Resources\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Camddefnydd Difyr o Adnoddau\n"
+#~ "(Amusing Misuse Of Resources)\n"
+
+#, fuzzy
+#~| msgid ""
+#~| "Copyright (c) 1999 Martin R. Jones <mjones@kde.org>\n"
+#~| "\n"
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Hawlfraint (c) 1999 Martin R. Jones <mjones@kde.org>\n"
+#~ "\n"
+
+#, fuzzy
+#~| msgid "Original Author: Martin R. Jones <mjones@kde.org>\n"
+#~ msgctxt "@label:textbox"
+#~ msgid "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ msgstr "Awdur Gweiddiol: Martin R. Jones <mjones@kde.org>\n"
+
+#, fuzzy
+#~| msgid "Current Maintainer: Gerardo Puga <gpuga@gioia.ing.unlp.edu.ar>\n"
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+#~ msgstr "Cynhaliwr Cyfredol: Gerardo Puga <gpuga@gioia.ing.unlp.edu.ar>\n"
+
+#, fuzzy
+#~| msgid "About Amor"
+#~ msgctxt "@label:textbox"
+#~ msgid "About Amor"
+#~ msgstr "Ynglyn ac Amor"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "KD wrth KGyfieithu"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kyfieithu@dotmon.com"

@@ -1,0 +1,514 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&amor;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE">
+]>
+
+<book id="amor" lang="&language;">
+<bookinfo>
+<title
+>Handbok &amor;</title>
+
+<authorgroup>
+<author
+>&Karl.Garrison; &Karl.Garrison.mail; </author>
+
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year>
+<holder
+>&Karl.Garrison;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-10-09</date>
+<releaseinfo
+>2.4.0 (KDE Gear 21.08)</releaseinfo>
+
+<abstract>
+<para
+>&amor; är en liten animering som finns ovanpå det aktiva fönstret. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>amor</keyword>
+<keyword
+>hjälpprogram</keyword>
+<keyword
+>assistent</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inledning</title>
+
+<sect1 id="whats-amor">
+<title
+>Vad är &amor;?</title>
+<para
+>&amor; är en förkortning som betyder Amusing Misuse of Resources (underhållande slöseri med resurser). I själva verket är det en animering som syns ovanför det aktiva fönstret. Med den förvalda inställningen, ser &amor; ut som en gul punkt som utför en massa trick. &amor; har också en mängd andra teman som ändrar utseende och beteende på animeringen. </para>
+
+<note
+><para
+>Eftersom &amor; använder sig av &kde;:s fönsterhanterare &kwin;, fungerar programmet bara inifrån &plasma;. Det är möjligt att &amor; skulle fungera med en annan &plasma;-anpassad fönsterhanterare, men ingen som fungerar var känd när det här skrevs.</para
+></note>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Anpassning</title>
+<sect1 id="configuring-amor">
+<title
+>Anpassa &amor;</title>
+<para
+>För att anpassa &amor;, klicka på animeringen med höger musknapp. En meny dyker upp som innehåller tre alternativ: <guimenuitem
+>Anpassa...</guimenuitem
+>, <guimenuitem
+>Hjälp</guimenuitem
+>, och <guimenuitem
+>Avsluta</guimenuitem
+>.</para>
+<para
+>Välj <guimenuitem
+>Anpassa...</guimenuitem
+> för att anpassa &amor;.</para>
+</sect1>
+
+<sect1 id="general-options">
+<title
+>Allmänna inställningar</title>
+<para
+>Följande inställningar för &amor; kan ändras från dialogrutan Inställningar:</para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Tema:</guilabel
+></term>
+<listitem
+><para
+>Det här avgör utseendet och beteendet hos  &amor;. Teman beskrivs i nästa avsnitt.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Position:</guilabel
+></term>
+<listitem
+><para
+>Det här skjutreglaget kontrollerar var animeringen visas i förhållande till överdelen av det aktiva fönstret. Den förvalda inställningen i mitten placerar animeringen precis ovanför namnlisten, medan att flytta skjutreglaget längst upp eller längst ner gör att animeringen visas en bra bit ovanför eller under namnlisten.</para>
+<tip
+><para
+>Att ställa in skjutreglaget till ett lägre värde låter animeringen vara synlig även när det aktiva fönstret är maximerat.</para>
+</tip
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Alltid överst</guilabel
+></term>
+<listitem
+><para
+>Om det här alternativet markeras visas animeringen alltid framför alla fönster som finns på skärmen, inklusive panelen.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Visa slumpmässiga tips</guilabel
+></term>
+<listitem
+><para
+>Om markerat, visar animeringen olika &kde;-relaterade tips med slumpmässiga intervall.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Använd en slumpmässig figur</guilabel
+></term>
+<listitem
+><para
+>Om markerad, inaktiveras temavalet, och det ändras slumpmässigt.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Tillåt programtips</guilabel
+></term>
+<listitem
+><para
+>Alla &kde;-program kan konstrueras så att de visar hjälpsamma tips via &amor;. Om det här alternativet är markerat, och det aktiva fönstret är ett sådant program, visar animeringen tips för det programmet.</para>
+<note
+><para
+>När det här skrevs, fanns det inget &kde;-program som använda den här funktionen.</para
+></note
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="amor-themes">
+<title
+>&amor;-teman</title>
+<para
+>&amor; levereras med många inbyggda teman, som ändrar utseendet och beteendet på animeringen. Dessutom är det möjligt att skapa nya &amor;- teman. Inbyggda teman för &amor; beskrivs i tabellen nedan.</para>
+
+<table>
+<title
+>Tillgängliga &amor;-teman</title>
+<tgroup cols="3">
+<thead>
+<row>
+<entry
+>Tema</entry>
+<entry
+>Namn</entry>
+<entry
+>Beskrivning</entry>
+</row>
+</thead>
+<tbody>
+
+<row>
+<entry
+><mediaobject
+><imageobject>
+          <imagedata  format="PNG" fileref="spot.png"/>
+        </imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Punkt med många talanger</phrase
+></entry>
+<entry
+><para
+>Det här är det förvalda temat för &amor;, och också det med flest <quote
+>trick</quote
+>. Det här temat skapades av &Martin.R.Jones;. Jetmotor-, stråle- och eldanimering är bidrag från <personname
+><firstname
+>Mark</firstname
+> <surname
+>Grant</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="ghost.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Skrämmande spöke</phrase
+></entry>
+<entry
+><para
+>Ett spöktema baserat på ikonen från &kde;-programmet <application
+>ghostview</application
+>. Skrämmande spöke skapades av &Martin.R.Jones;.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="eyes.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Galna ögon</phrase
+></entry>
+<entry
+><para
+>Det här temat består av ett par ögon som rör sig, och skapades av <personname
+><firstname
+>Jean-Claude</firstname
+> <surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bonhomme.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Bonhomme</phrase
+></entry>
+<entry
+><para
+>Animering av en streckgubbe, skapad av <personname
+><firstname
+>Jean-Claude</firstname
+> <surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="neko.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Neko</phrase
+></entry>
+<entry
+><para
+>Neko är ett tema med en katt av <personname
+><firstname
+>Chris</firstname
+> <surname
+>Spiegel</surname
+></personname
+>. Grafiken kommer ursprungligen från <application
+>Oneko</application
+>, som är skrivet av <personname
+><firstname
+>Masayuki</firstname
+> <surname
+>Koba</surname
+></personname
+>.</para>
+<note
+><para
+><application
+>Oneko</application
+> är ett litet program som kännetecknas av en katt som jagar muspekaren. Programmet verkar inte längre underhållas, men <ulink url="http://www.daidouji.com/oneko/"
+>oneko-sakura</ulink
+> är en modifierad version.</para
+></note
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="pingus.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux</phrase
+></entry>
+<entry
+><para
+>Det här temat presenterar Tux, &Linux; maskot. Själva grafiken kommer från ett spel som liknar <application
+>Lemmings</application
+> som heter <ulink url="https://pingus.seul.org/"
+> <application
+>Pingus</application
+></ulink
+>. Tux-temat skapades av <personname
+><firstname
+>Frank</firstname
+> <surname
+>Pieczynski</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="worm.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Lilla masken</phrase
+></entry>
+<entry
+><para
+>En tema med en liten bandmask. Skapat av <personname
+><firstname
+>Bartosz</firstname
+> <surname
+>Trudnowski</surname
+></personname
+> åt hans fru.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="billy.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Lilla Billy</phrase
+></entry>
+<entry
+><para
+>En statisk bild som kommer från spelet <ulink url="http://www.xbill.org/"
+><application
+>XBill</application
+> </ulink
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bsd.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>FreeBSD-maskot</phrase
+></entry>
+<entry
+><para
+>En statisk bild av Beastie, FreeBSD-demonen.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tux.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux utan animering</phrase
+></entry>
+<entry
+><para
+>En version av Tux-temat utan animering.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tao.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tao</phrase
+></entry>
+<entry
+><para
+>Tao-temat är en animerad Yin Yang symbol. Det här temat skapades av <personname
+><firstname
+>Daniel</firstname
+> <surname
+>Pfeiffer</surname
+></personname
+> <email
+>occitan@esperanto.org</email
+>, och inspirerades av att utöva Tai Chi.</para
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Tack till och licens</title>
+
+<para
+>&amor;</para>
+
+<para
+>Program Copyright &copy; 1999-2001 &Martin.R.Jones; &Martin.R.Jones.mail;</para>
+
+<para
+>Dokumentation Copyright &copy; 2001 &Karl.Garrison; &Karl.Garrison.mail;</para>
+
+<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

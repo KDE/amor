@@ -1,0 +1,498 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&amor;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % French "INCLUDE">
+]>
+
+<book id="amor" lang="&language;">
+<bookinfo>
+<title
+>Manuel d'&amor;</title>
+
+<authorgroup>
+<author
+>&Karl.Garrison; &Karl.Garrison.mail; </author>
+
+&traducteurYvesDessertine;&traducteurXavierBesnard; 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year>
+<holder
+>&Karl.Garrison;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>09-10-2021</date>
+<releaseinfo
+>2.4.0 (KDE Gear 21.08)</releaseinfo>
+
+<abstract>
+<para
+>&amor; est une petite animation qui se place sur votre fenêtre active. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>amor</keyword>
+<keyword
+>aide</keyword>
+<keyword
+>assistant</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introduction</title>
+
+<sect1 id="whats-amor">
+<title
+>Qu'est-ce qu'&amor; ?</title>
+<para
+>&amor; est un acronyme qui signifie « Amusing Misuse of Resources » (Gaspillage amusant des ressources). C'est en fait une animation qui reste sur votre fenêtre active. Dans sa configuration par défaut, &amor; prend la forme d'un point jaune faisant des tours. &amor; comporte aussi beaucoup d'autres thèmes qui changent l'apparence et le comportement de l'animation. </para>
+
+<note
+><para
+>Comme &amor; travaille avec le gestionnaire de fenêtre de &kde;, &kwin;, l'application ne fonctionnera que dans &plasma;. Il est possible qu'&amor; puisse fonctionner dans un autre gestionnaire de fenêtres compatible &plasma;, mais aucun n'est connu pour fonctionner lors de l'écriture de cette documentation.</para
+></note>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Configuration</title>
+<sect1 id="configuring-amor">
+<title
+>Configurer &amor;</title>
+<para
+>Pour configurer &amor;, cliquez sur l'animation en utilisant le &BDS;. Un menu comportant trois entrées apparaîtra : <guimenuitem
+>Configurer...</guimenuitem
+>, <guisubmenu
+>Aide</guisubmenu
+> et <guimenuitem
+>Quitter</guimenuitem
+>.</para>
+<para
+>Sélectionnez <guimenuitem
+>Configurer...</guimenuitem
+> pour configurer &amor;.</para>
+</sect1>
+
+<sect1 id="general-options">
+<title
+>Options générales</title>
+<para
+>Les paramètres d'&amor; suivants peuvent être changés depuis la boîte de dialogue Options.</para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Thème :</guilabel
+></term>
+<listitem
+><para
+>Ceci détermine l'apparence et le comportement d'&amor;. Les thèmes sont décrits à la prochaine section.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Décalage :</guilabel
+></term>
+<listitem
+><para
+>Cette glissière contrôle l'emplacement de l'animation par rapport à la limite supérieure de la fenêtre active. Le paramètre intermédiaire par défaut placera l'animation exactement sur la barre de titre de la fenêtre, tandis que le fait d'ajuster ce curseur plus haut ou plus bas fera apparaître l'animation respectivement au-dessus ou en dessous de la barre du titre.</para>
+<tip
+><para
+>Le fait d'ajuster ce curseur sur une valeur plus basse permettra à l'animation d'être visible même si la fenêtre active est maximisée.</para>
+</tip
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Toujours dessus</guilabel
+></term>
+<listitem
+><para
+>Le fait d'activer cette option fera que l'animation apparaîtra toujours devant n'importe quelle fenêtre de votre écran, y compris le tableau de bord.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Afficher les astuces aléatoires</guilabel
+></term>
+<listitem
+><para
+>Si elle est activée, l'animation affichera différentes astuces relatives à &kde; à des intervalles aléatoires.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Utiliser une créature aléatoire</guilabel
+></term>
+<listitem
+><para
+>Si cette case est cochée, le choix du thème sera désactivé, et il sera modifié aléatoirement.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Activer les astuces d'application</guilabel
+></term>
+<listitem
+><para
+>Toute application &kde; peut être conçue pour afficher des astuces utiles via &amor;. Si cette option est activée, et qu'une application appropriée est la fenêtre active, l'animation affichera des astuces pour cette application.</para>
+<note
+><para
+>Lors de l'écriture de cette documentation, aucune application &kde; ne tire parti de cette fonctionnalité.</para
+></note
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="amor-themes">
+<title
+>Thèmes d'&amor;</title>
+<para
+>&amor; est fourni avec beaucoup de thèmes intégrés, qui changent l'apparence et le comportement de l'animation. En plus, il est possible de créer de nouveaux thèmes &amor;. Les thèmes d'&amor; intégrés sont décrits dans le tableau ci-dessous.</para>
+
+<table>
+<title
+>Thèmes &amor; disponibles</title>
+<tgroup cols="3">
+<thead>
+<row>
+<entry
+>Thème</entry>
+<entry
+>Nom</entry>
+<entry
+>Description</entry>
+</row>
+</thead>
+<tbody>
+
+<row>
+<entry
+><mediaobject
+><imageobject>
+          <imagedata  format="PNG" fileref="spot.png"/>
+        </imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Une boule aux multiples talents</phrase
+></entry>
+<entry
+><para
+>Ceci est le thème par défaut d'&amor;, et c'est aussi celui avec le plus de <quote
+>tours</quote
+>. Ce thème fut crée par &Martin.R.Jones;. Le jet-pack, le rayon et les animations de feu furent contribuées par <personname
+><firstname
+>Mark </firstname
+><surname
+>Grant</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="ghost.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Fantôme tremblant</phrase
+></entry>
+<entry
+><para
+>Un thème de fantôme, utilisant l'icône de l'application &kde; <application
+>ghostview</application
+>. Le Fantôme tremblant fut crée par &Martin.R.Jones;.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="eyes.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Yeux fous</phrase
+></entry>
+<entry
+><para
+>Ce thème se compose d'une paire d'yeux en mouvement, et fut créé par <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+> Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bonhomme.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Bonhomme</phrase
+></entry>
+<entry
+><para
+>Une animation en fil de fer créée par <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+> Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="neko.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Néko</phrase
+></entry>
+<entry
+><para
+>Néko est un thème de chat créé par <personname
+><firstname
+>Chris</firstname
+><surname
+> Spiegel</surname
+></personname
+>. Les graphismes sont à l'origine ceux de <application
+>Oneko</application
+>, qui a été écrit par <personname
+><firstname
+>Masayuki</firstname
+><surname
+> Koba</surname
+></personname
+>.</para>
+<note
+><para
+><application
+>Oneko</application
+> est une petite application mettant en scène un chat pourchassant le pointeur de la souris. L'application a l'air de ne plus être maintenue, mais le lien <ulink url="http://www.daidouji.com/oneko/"
+>oneko-sakura</ulink
+> en est une version modifiée.</para
+></note
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="pingus.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux</phrase
+></entry>
+<entry
+><para
+>Ce thème met en scène Tux, la mascotte de &Linux;. Les graphismes actuels proviennent d'un jeu dans le style de <application
+>Lemmings</application
+>, appelé <ulink url="http://pingus.seul.org/"
+> <application
+>Pingus</application
+></ulink
+>. Le thème « Tux » a été crée par <personname
+><firstname
+>Frank</firstname
+><surname
+> Pieczynski</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="worm.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Petit ver</phrase
+></entry>
+<entry
+><para
+>Un thème de petit ver. Crée par <personname
+><firstname
+>Bartosz</firstname
+><surname
+> Trudnowski</surname
+></personname
+> pour sa femme.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="billy.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Petit Billy</phrase
+></entry>
+<entry
+><para
+>Une image statique tirée du jeu <ulink url="http://www.xbill.org/"
+><application
+>XBill</application
+> </ulink
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bsd.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Mascotte FreeBSD</phrase
+></entry>
+<entry
+><para
+>Une image statique de Beastie, le démon FreeBSD.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tux.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux inanimé</phrase
+></entry>
+<entry
+><para
+>Une version sans animation du thème Tux.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tao.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tao</phrase
+></entry>
+<entry
+><para
+>Le thème Tao est un symbole Yin Yang animé. Ce thème fut créé par <personname
+><firstname
+>Daniel</firstname
+><surname
+> Pfeiffer</surname
+></personname
+> <email
+>occitan@esperanto.org</email
+>, et est inspiré par sa pratique du Tai Chi.</para
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Remerciements et licence</title>
+
+<para
+>&amor;</para>
+
+<para
+>Programme copyright &copy; 1999-2001 &Martin.R.Jones; &Martin.R.Jones.mail;</para>
+
+<para
+>Documentation copyright &copy; 2001 &Karl.Garrison; &Karl.Garrison.mail;</para>
+
+<para
+>Traduction française par &YvesDessertine;.</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

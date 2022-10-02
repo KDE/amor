@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+<!ENTITY % French "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Page de manuel de &amor;</title>
+<date
+>09-10-2021</date>
+<releaseinfo
+>(KDE Gear 21.08)</releaseinfo>
+<productname
+>&amor; 2.4.0</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>Une créature pour votre bureau &plasma;</refpurpose>
+</refnamediv>
+
+<refsect1 id="description">
+<title
+>Description</title>
+
+<para
+><acronym
+>AMOR</acronym
+> représente un <quote
+>gâchis amusant de ressources</quote
+>. Il fourni différents personnages qui se promènent sur votre écran en faisant des blagues et en vous donnant des conseils.</para>
+
+</refsect1>
+
+
+<refsect1 id="options">
+<title
+>Options</title>
+
+<para
+>&amor; se configure graphiquement et n'a aucune option en ligne de commandes autres que les options standard de &kde; et &Qt;.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Voir aussi</title>
+
+<para
+>Une documentation utilisateur plus détaillée est disponible à partir de <ulink url="help:/amor"
+>help:/amor</ulink
+> (soit en saisissant cette &URL; dans &konqueror;, soit en lançant <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/amor</parameter
+></userinput
+>).</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Problèmes</title>
+
+<para
+>Pour l'instant &amor; fonctionne uniquement avec le gestionnaire de fenêtre &kwin;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Auteurs</title>
+<para
+>Le logiciel &amor; a été développé par &Martin.R.Jones; &Martin.R.Jones.mail;.</para>
+<para
+>Cette page de manuel a été écrit par <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> pour le système &Debian; &GNU; / &Linux; (mais peut être utilisée par d'autres).</para>
+</refsect1>
+
+</refentry>

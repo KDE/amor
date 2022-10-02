@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+<!ENTITY % Catalan  "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Pàgina de manual de l'&amor;</title>
+<date
+>9 d'octubre de 2021</date>
+<releaseinfo
+>(KDE Gear 21.08)</releaseinfo>
+<productname
+>&amor; 2.4.0</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>Una criatura per al vostre escriptori &plasma;</refpurpose>
+</refnamediv>
+
+<refsect1 id="description">
+<title
+>Descripció</title>
+
+<para
+><acronym
+>AMOR</acronym
+> vol dir «Amusing Misuse of Resources (Malbaratament entretingut de recursos)». Proveeix diversos personatges diferents que volten al llarg de la vostra pantalla X realitzant trucs i oferint consells.</para>
+
+</refsect1>
+
+
+<refsect1 id="options">
+<title
+>Opcions</title>
+
+<para
+>L'&amor; es configura gràficament, i no posseeix cap opció de línia d'ordres a part de les opcions estàndards del &kde; i de les &Qt;.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vegeu també</title>
+
+<para
+>Hi ha disponible documentació d'usuari més detallada des de <ulink url="help:/amor"
+>help:/amor</ulink
+> (podeu emprar aquest &URL; al &konqueror; o bé executar <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/amor</parameter
+></userinput
+>).</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Errors</title>
+
+<para
+>Actualment, l'&amor; tan sols funciona amb el gestor de finestres &kwin;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Autors</title>
+<para
+>L'&amor; ha estat escrit per en &Martin.R.Jones; &Martin.R.Jones.mail;.</para>
+<para
+>Aquesta pàgina del manual ha estat preparada per en <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> per al sistema &Debian; &GNU;/&Linux; (però es pot usar en d'altres).</para>
+</refsect1>
+
+</refentry>

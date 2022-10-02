@@ -1,0 +1,276 @@
+# Translation of amor.po into Serbian.
+# Marko Rosic <roske@kde.org.yu>, 2003.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2004.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2010, 2012.
+# Slobodan Simic <slsimic@gmail.com>, 2008, 2010.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: amor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-12-26 03:17+0100\n"
+"PO-Revision-Date: 2012-07-06 15:24+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr "Немој да трчиш са маказама."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "Никад не вјеруј продавцима аутомобила и политичарима."
+
+# ! стил
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"Прави програмери не пишу коментаре у коду. Било га је тешко написати, треба "
+"да га је тешко и разумјети."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr "Много је лакше предлагати рјешења када не знате ништа о проблему."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "Никад не можете имати превише меморије или простора на диску."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "Одговор је 42."
+
+# well-spelled: контрамогућност
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "То није грешка. То је контрамогућност."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr "Помозите да се искорени и укине сувишност."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr ""
+"Максимизујте прозор усправно кликом на дугме за максимизовање средњим "
+"дугметом миша."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "Можете користити Alt+Tab за пребацивање између програма."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr "Притисните Ctrl+Esc да прикажете програме у раду у тренутној сесији."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr "Alt+F2 приказује мали прозор у коме можете унијети наредбу."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr "Користите Ctrl+F1 до Ctrl+F8 за пребацивање виртуелних површи."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr "Дугмад на панелу можете померати средњим дугметом миша."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "На Alt+F1 искаче системски мени."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr "Употријебите Ctrl+Alt+Esc да укинете програм који се више не одазива."
+
+# rewrite-msgid: /log back in/log in again/
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+"Ако оставите неке КДЕ програме отвореним када се одјавите, биће аутоматски "
+"покренути када се поново пријавите."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr "КДЕ‑ов менаџер фајлова је истовремено и веб прегледач и ФТП клијент."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+"Програми могу да приказују поруке и савјете у облачићу Амора помоћу ДКОП "
+"позива showMessage() и showTip()."
+
+#: src/amor.cpp:255
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Error reading theme: "
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "Грешка у читању теме: "
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Error reading group: "
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "Грешка у читању групе: "
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr "&Помоћ"
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "&Подеси..."
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr "&Напусти"
+
+#: src/amordialog.cpp:43
+#, kde-format
+msgid "Options"
+msgstr "Опције"
+
+#: src/amordialog.cpp:66
+#, kde-format
+msgid "Theme:"
+msgstr "Тема:"
+
+#: src/amordialog.cpp:83
+#, kde-format
+msgid "Offset:"
+msgstr "Помак:"
+
+# >> @option:check
+#: src/amordialog.cpp:94
+#, kde-format
+msgid "Always on top"
+msgstr "Увијек на врху"
+
+# >> @option:check
+#: src/amordialog.cpp:99
+#, kde-format
+msgid "Show random tips"
+msgstr "Насумични савјети"
+
+# >> @option:check
+# >> "character" in the sense of "fictional personality"
+#: src/amordialog.cpp:104
+#, kde-format
+msgid "Use a random character"
+msgstr "Насумични лик"
+
+# >> @option:check
+#: src/amordialog.cpp:109
+#, kde-format
+msgid "Allow application tips"
+msgstr "Савјети за програме"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "КДЕ створење на површи"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr "Амор"
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+"© 1999, Мартин Р. Џоунс\n"
+"© 2010, Штефан Беман"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr "Штефан Беман"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "Текући одржавалац"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr "Мартин Р. Џоунс"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr "Херардо Пуга"

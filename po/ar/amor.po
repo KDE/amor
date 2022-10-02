@@ -1,0 +1,322 @@
+# translation of amor.po to
+# Copyright (C) 2004, 2007 Free Software Foundation, Inc.
+# Mohammed Ibrahim Halabi <mih_flyer@hotmail.com>, 2001.
+# Ahmad M. Zawawi <azawawi@emirates.net.ae>, 2004.
+# Ahmad M. Zawawi <zawawi@arabeyes.org>, 2004.
+# Munzir Taha <munzir@kacst.edu.sa>, 2004.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: amor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"PO-Revision-Date: 2022-09-11 22:41+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr "لا تجري وأنت تحمل مقصاً."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "لا تثق أبدا برجال المبيعات أو السياسيين."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"البرمجين الحقيقيين لا يكتبوا تعليقات على شيفرتهم. لقد كانت صعبة الكتابة، "
+"فيجب أن تكون صعبة الفهم."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr "من السهل جدا اقتراح حل عندما لاتعرف شيئا عن المشكلة"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "لا يمكنك ابدا ان تحصل على ذاكرة او مساحة كبيرة"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "الجواب هو 42."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "انها ليست بقة (عيب). إنها ميزة سيئة."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr "ساعد في سحق والغاء الإطناب الزائد عن الحاجة."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr "لتكبير نافذة عاموديا. استخدم زر التكبير مع الزر الاوسط للفارة."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "يمكنك استخدام Alt+Tab للتحويل بين البرامج."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr "اضغط Ctrl+Esc لاظهار جميع البرامج التي تعمل في جلستك هذه."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr "Alt F2 تظهر نافذة صغيرة تمكنك من طباعة أمر إليها"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr "Ctrl+F1 الى Ctrl+F8 تستخدم للتحويل بين اسطح المكاتب"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr "يمكنك تحريك الازارير في الشريط باستخدام زر الفارة الاوسط"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "Alt+F1 تظهر قائمة النظام"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr "Ctrl+Alt+Esc تستخدم لاغلاق اي برنامج يتوقف عن الاستجابة"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+"عندما تترك برامج KDE مفتوحة عند خروجك. ستنفتح تلقائيا عن دخولك مرة اخرى"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr "مدير ملفات KDE هو أيضا متصفح انترنت وعميل FTP."
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+"مكن للتطبيقات عرض الرسائل والنصائح في فقاعة AMOR باستخدامShowMessage () و \n"
+"مكالمات showtip () DCOP"
+
+#: src/amor.cpp:255
+#, kde-format
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "خطا في قراءة السمة: %1"
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, kde-format
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "خطا في قراءة المجموعة: %1"
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr "&مساعدة"
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "إ&عداد..."
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr "ا&خرج"
+
+#: src/amordialog.cpp:42
+#, kde-format
+msgctxt "@title:window"
+msgid "Options"
+msgstr "خيارات"
+
+#: src/amordialog.cpp:65
+#, kde-format
+msgid "Theme:"
+msgstr "مظهر"
+
+#: src/amordialog.cpp:82
+#, kde-format
+msgid "Offset:"
+msgstr "الإزاحة:"
+
+#: src/amordialog.cpp:93
+#, kde-format
+msgid "Always on top"
+msgstr "دائما فوق الجميع"
+
+#: src/amordialog.cpp:98
+#, kde-format
+msgid "Show random tips"
+msgstr "اظهر تلميحات عشوائية"
+
+#: src/amordialog.cpp:103
+#, kde-format
+msgid "Use a random character"
+msgstr "استخدم محرفاً عشوائيًّا"
+
+#: src/amordialog.cpp:108
+#, kde-format
+msgid "Allow application tips"
+msgstr "اسمح بتلمحيات البرنامج"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "مخلوق كدي لسطح المكتب الخاص بك"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr "amor"
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr "Stefan Böhmann"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "المشرف الحالي"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr "مارتن جونز"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr "غراردو بوغا"
+
+#~ msgid "No tip"
+#~ msgstr "بدون تلميحات"
+
+#, fuzzy
+#~ msgid "Copyright 1999, Martin R. Jones"
+#~ msgstr "حقوق النسخ مارتن R جونز"
+
+#, fuzzy
+#~| msgid ""
+#~| "Amor Version %1\n"
+#~| "\n"
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amor Version %1\n"
+#~ "\n"
+#~ msgstr "amor الاصدار %1\n"
+
+#, fuzzy
+#~| msgid ""
+#~| "Amusing Misuse Of Resources\n"
+#~| "\n"
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amusing Misuse Of Resources\n"
+#~ "\n"
+#~ msgstr "تسلية سوء استعمال الموارد\n"
+
+#, fuzzy
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+#~ msgstr "حقوق النسخ مارتن R جونز<email>mjones@kde.org</email> n n"
+
+#, fuzzy
+#~ msgctxt "@label:textbox"
+#~ msgid "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ msgstr "الأصلي المؤلف مارتن R جونز<email>mjones@kde.org</email> n"
+
+#, fuzzy
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+#~ msgstr "الحالي المشرف<email>gpuga@gioia.ing.unlp.edu.ar</email> n"
+
+#, fuzzy
+#~| msgid "About Amor"
+#~ msgctxt "@label:textbox"
+#~ msgid "About Amor"
+#~ msgstr "حول امور"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "محمد ابراهيم حلبي,أحمد محمد زواوي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mih_flyer@hotmail.com,zawawi@arabeyes.org"

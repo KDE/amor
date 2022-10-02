@@ -1,0 +1,309 @@
+# translation of amor.po to Punjabi
+#
+# Amanpreet Singh Brar <aalam@redhat.com>, 2005.
+# A S Alam <aalam@users.sf.net>, 2007, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: amor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"PO-Revision-Date: 2009-01-15 09:36+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi <punjabi-l10n@users.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:1
+#, kde-format
+msgid "Don't run with scissors."
+msgstr ""
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:3
+#, kde-format
+msgid "Never trust car salesmen or politicians."
+msgstr "ਕਾਰ ਵੇਚਣ ਵਾਲੇ ਜਾਂ ਰਾਜਨੇਤਾ ਉੱਤੇ ਕਦੇ ਭਰੋਸਾ ਨਾ ਕਰੋ।"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:5
+#, kde-format
+msgid ""
+"Real programmers don't comment their code. It was hard to write, it should "
+"be hard to understand."
+msgstr ""
+"ਅਸਲੀ ਪਰੋਗਰਾਮਰ ਕਦੇਂ ਵੀ ਕੋਡ ਟਿੱਪਣੀ (comment) ਨਹੀਂ ਲਿਖਦੇ ਹਨ। ਇਸ ਨੂੰ ਲਿਖਣਾ ਔਖਾ ਸੀ, ਕਿ ਇਸ "
+"ਨੂੰ ਸਮਝਣਾ ਔਖਾ ਹੋਵੇਗਾ।"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:7
+#, kde-format
+msgid ""
+"It is much easier to suggest solutions when you know nothing about the "
+"problem."
+msgstr "ਜਦੋਂ ਤੁਸੀਂ ਸਮੱਸਿਆ ਬਾਰੇ ਕੁਝ ਵੀ ਨਹੀਂ ਜਾਣਦੇ ਹੋ ਤਾਂ ਹੱਲ਼ ਦੇਣਾ ਕਿਤੇ ਅਸਾਨ ਹੁੰਦਾ ਹੈ।"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:9
+#, kde-format
+msgid "You can never have too much memory or disk space."
+msgstr "ਤੁਹਾਡੇ ਕੋਲ ਕਦੇ ਵੀ ਬਹੁਤ ਵੱਧ ਮੈਮੋਰੀ ਜਾਂ ਡਿਸਕ ਥਾਂ ਨਹੀਂ ਹੋ ਸਕਦੀ ਹੈ।"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:11
+#, kde-format
+msgid "The answer is 42."
+msgstr "ਜਵਾਬ ਹੈ 42।"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:13
+#, kde-format
+msgid "It's not a bug. It's a misfeature."
+msgstr "ਇਹ ਬੱਗ ਨਹੀਂ ਹੈ। ਇਹ ਗਲਤ-ਫੀਚਰ ਹੈ।"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:15
+#, kde-format
+msgid "Help stamp out and abolish redundancy."
+msgstr ""
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:17
+#, kde-format
+msgid ""
+"To maximize a window vertically, click the maximize button with the middle "
+"mouse button."
+msgstr ""
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:19
+#, kde-format
+msgid "You can use Alt+Tab to switch between applications."
+msgstr "ਤੁਸੀਂ ਕਾਰਜਾਂ ਵਿੱਚ ਬਦਲਣ ਲਈ Alt+Tab ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੇ ਹੋ।"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:21
+#, kde-format
+msgid ""
+"Press Ctrl+Esc to show the applications running in your current session."
+msgstr ""
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:23
+#, kde-format
+msgid "Alt+F2 displays a small window that you can type a command into."
+msgstr ""
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:25
+#, kde-format
+msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
+msgstr "Ctrl+F1 ਤੋਂ Ctrl+F8 ਨੂੰ ਫ਼ਰਜੀ ਡੈਸਕਟਾਪਾਂ ਵਿੱਚ ਬਦਲਣ ਲਈ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:27
+#, kde-format
+msgid "You can move buttons on the panel using the middle mouse button."
+msgstr "ਤੁਸੀਂ ਬਟਨਾਂ ਨੂੰ ਪੈਨਲ ਵਿੱਚ ਏਧਰ ਓਧਰ ਕਰਨ ਲਈ ਵਿਚਲਾ ਮਾਊਸ ਬਟਨ ਵਰਤ ਸਕਦੇ ਹੋ।"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:29
+#, kde-format
+msgid "Alt+F1 pops-up the system menu."
+msgstr "Alt+F1 ਸਿਸਟਮ ਮੇਨੂ ਨੂੰ ਖੋਲਦਾ ਹੈ।"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:31
+#, kde-format
+msgid ""
+"Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
+msgstr ""
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:33
+#, kde-format
+msgid ""
+"If you leave KDE applications open when you logout, they will be restarted "
+"automatically when you log back in."
+msgstr ""
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:35
+#, kde-format
+msgid "The KDE file manager is also a web browser and an FTP client."
+msgstr "KDE ਫਾਇਲ ਮੈਨੇਜਰ ਇੱਕ ਵੈਬ-ਝਲਕਾਰਾ ਅਤੇ FTP ਕਲਾਂਇਟ ਵੀ ਹੈ।"
+
+#. i18n: ectx: @info:tipoftheday
+#: data/tips-en:37
+#, kde-format
+msgid ""
+"Applications can display messages and tips in an Amor bubble using the "
+"showMessage() and\n"
+"showTip() DCOP calls"
+msgstr ""
+
+#: src/amor.cpp:255
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Error reading theme: "
+msgctxt "@info:status"
+msgid "Error reading theme: %1"
+msgstr "ਥੀਮ ਪੜ੍ਹਨ ਦੌਰਾਨ ਗਲਤੀ:"
+
+#: src/amor.cpp:265 src/amor.cpp:272
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Error reading group: "
+msgctxt "@info:status"
+msgid "Error reading group: %1"
+msgstr "ਗਰੁੱਪ ਪੜ੍ਹਨ ਦੌਰਾਨ ਗਲਤੀ: "
+
+#: src/amor.cpp:518
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Help"
+msgstr "ਮੱਦਦ(&H)"
+
+#. i18n'ed
+#: src/amor.cpp:522
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Configure..."
+msgstr "ਸੰਰਚਨਾ(&C)..."
+
+#: src/amor.cpp:525
+#, kde-format
+msgctxt "@action:inmenu Amor"
+msgid "&Quit"
+msgstr "ਬਾਹਰ(&Q)"
+
+#: src/amordialog.cpp:42
+#, fuzzy, kde-format
+#| msgid "Options"
+msgctxt "@title:window"
+msgid "Options"
+msgstr "ਚੋਣਾਂ"
+
+#: src/amordialog.cpp:65
+#, kde-format
+msgid "Theme:"
+msgstr "ਸਰੂਪ:"
+
+#: src/amordialog.cpp:82
+#, kde-format
+msgid "Offset:"
+msgstr "ਦੂਰੀ:"
+
+#: src/amordialog.cpp:93
+#, kde-format
+msgid "Always on top"
+msgstr "ਹਮੇਸ਼ਾ ਉੱਤੇ"
+
+#: src/amordialog.cpp:98
+#, kde-format
+msgid "Show random tips"
+msgstr "ਰਲਵੇਂ ਇਸ਼ਾਰੇ ਵੇਖਾਓ"
+
+#: src/amordialog.cpp:103
+#, kde-format
+msgid "Use a random character"
+msgstr "ਇੱਕ ਰਲਵਾਂ ਅੱਖਰ ਵਰਤੋਂ"
+
+#: src/amordialog.cpp:108
+#, kde-format
+msgid "Allow application tips"
+msgstr "ਕਾਰਜ ਸੰਕੇਤ ਮਨਜ਼ੂਰ"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "KDE creature for your desktop"
+msgstr "ਆਪਣੇ ਡੈਸਕਟਾਪ ਲਈ KDE ਰਚਨਾ"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "amor"
+msgstr "ਅਮੋਰ"
+
+#: src/main.cpp:41
+#, kde-format
+msgid ""
+"1999 by Martin R. Jones\n"
+"2010 by Stefan Böhmann"
+msgstr ""
+
+#: src/main.cpp:44
+#, kde-format
+msgid "Stefan Böhmann"
+msgstr ""
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Current maintainer"
+msgstr "ਮੌਜੂਦਾ ਪਰਬੰਧਕ"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Martin R. Jones"
+msgstr "Martin R. Jones"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Gerardo Puga"
+msgstr ""
+
+#~ msgid "No tip"
+#~ msgstr "ਕੋਈ ਇਸ਼ਾਰਾ ਨਹੀਂ"
+
+#~ msgid "Copyright 1999, Martin R. Jones"
+#~ msgstr "ਕਾਪੀਰਾਈਟ (c) 1999 Martin R. Jones"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amor Version %1\n"
+#~ "\n"
+#~ msgstr ""
+#~ "ਅਮੋਰ ਵਰਜਨ %1\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Amusing Misuse Of Resources\n"
+#~ "\n"
+#~ msgstr ""
+#~ "ਸਰੋਤ ਦੀ ਗਲਤ ਵਰਤੋਂ ਬਾਰੇ ਵਿਚਾਰ\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+#~ msgstr ""
+#~ "ਕਾਪੀਰਾਈਟ (c) 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ "\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n"
+#~ msgstr "ਅਸਲੀ ਲੇਖਕ: Martin R. Jones <email>mjones@kde.org</email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
+#~ "email>\n"
+#~ msgstr ""
+#~ "ਮੌਜੂਦਾ ਪਰਬੰਧਕ: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</email>\n"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "About Amor"
+#~ msgstr "ਅਮੋਰ ਬਾਰੇ"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "aalam@users.sf.net"

@@ -1,0 +1,514 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&amor;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE">
+]>
+
+<book id="amor" lang="&language;">
+<bookinfo>
+<title
+>Manuale di &amor;</title>
+
+<authorgroup>
+<author
+>&Karl.Garrison; &Karl.Garrison.mail; </author>
+
+<othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>Cozzi</surname
+><affiliation
+><address
+><email
+>federico.cozzi@sns.it</email
+></address
+></affiliation
+><contrib
+>Traduzione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year>
+<holder
+>&Karl.Garrison;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>09/10/2021</date>
+<releaseinfo
+>2.4.0 (KDE Gear 21.08)</releaseinfo>
+
+<abstract>
+<para
+>&amor; è una piccola animazione che si piazza in cima alla finestra attiva. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>amor</keyword>
+<keyword
+>aiutante</keyword>
+<keyword
+>assistente</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introduzione</title>
+
+<sect1 id="whats-amor">
+<title
+>Che cos'è &amor;?</title>
+<para
+>&amor; è una sigla che significa Allegro Massacro di Ogni Risorsa. Si tratta di un'animazione che si piazza in cima alla finestra attiva. Nella configurazione predefinita, &amor; ha la forma di una macchia gialla che compie molti numeri. &amor; ha anche molti altri temi, che cambiano l'aspetto e il comportamento dell'animazione. </para>
+
+<note
+><para
+>Poiché &amor; funziona con &kwin;, il gestore delle finestre di &kde;, il programma funziona solo in &plasma;. È possibile che &amor; funzioni con qualche altro gestore delle finestre compatibile con &plasma; ma, al momento in cui è stata scritta questa documentazione, non è nota alcuna compatibilità.</para
+></note>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Configurazione</title>
+<sect1 id="configuring-amor">
+<title
+>Configurazione di &amor;</title>
+<para
+>Per configurare &amor;, fa clic sull'animazione usando il &RMB;. Apparirà un menu contenente tre voci: <guimenuitem
+>Configura...</guimenuitem
+>, <guisubmenu
+>Aiuto...</guisubmenu
+> e <guimenuitem
+>Esci</guimenuitem
+>.</para>
+<para
+>Scegli <guimenuitem
+>Configura...</guimenuitem
+> per configurare &amor;.</para>
+</sect1>
+
+<sect1 id="general-options">
+<title
+>Opzioni generali</title>
+<para
+>Dalla finestra Opzioni è possibile modificare le seguenti impostazioni di &amor;:</para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Tema:</guilabel
+></term>
+<listitem
+><para
+>Questa opzione determina l'aspetto e il comportamento di &amor;. I temi sono descritti nella prossima sezione.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Scostamento:</guilabel
+></term>
+<listitem
+><para
+>Questo regolatore controlla la posizione dell'animazione in relazione alla parte superiore della finestra attiva. L'impostazione centrale predefinita fa sì che appaia proprio sopra la barra del titolo della finestra; se invece sposti la barra in alto (o in basso), l'animazione apparirà sopra (o sotto) la barra del titolo.</para>
+<tip
+><para
+>Se sposti il regolatore un poco in basso, l'animazione sarà visibile anche quando la finestra attiva è massimizzata.</para>
+</tip
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Sempre in primo piano</guilabel
+></term>
+<listitem
+><para
+>Se questa opzione è marcata, l'animazione apparirà sempre davanti a tutte le finestre esistenti sullo schermo, compreso il pannello.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Mostra suggerimenti casuali</guilabel
+></term>
+<listitem
+><para
+>Se questa opzione è marcata, l'animazione mostrerà ad intervalli casuali vari suggerimenti su &kde;.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Usa personaggio casuale</guilabel
+></term>
+<listitem
+><para
+>Se selezionato, la selezione dei temi è disabilitata, e il personaggio verrà cambiato casualmente.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Permetti suggerimenti sulle applicazioni</guilabel
+></term>
+<listitem
+><para
+>Qualsiasi applicazione &kde; può essere realizzata in modo da mostrare suggerimenti utili tramite &amor;. Se questa opzione è marcata e la finestra attiva è una applicazione compatibile, l'animazione mostrerà i suggerimenti su quella applicazione.</para>
+<note
+><para
+>Al momento in cui è stata scritta questa documentazione, nessuna applicazione di &kde; sfrutta questa possibilità.</para
+></note
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="amor-themes">
+<title
+>Temi di &amor;</title>
+<para
+>&amor; dispone di molti temi, che cambiano l'aspetto e il comportamento dell'animazione; è inoltre possibile crearne di nuovi. I temi distribuiti con &amor; sono descritti nella tabella qui sotto</para>
+
+<table>
+<title
+>Temi di &amor; disponibili</title>
+<tgroup cols="3">
+<thead>
+<row>
+<entry
+>Tema</entry>
+<entry
+>Nome</entry>
+<entry
+>Descrizione</entry>
+</row>
+</thead>
+<tbody>
+
+<row>
+<entry
+><mediaobject
+><imageobject>
+          <imagedata  format="PNG" fileref="spot.png"/>
+        </imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Macchia con molte abilità</phrase
+></entry>
+<entry
+><para
+>È il tema predefinito di &amor;, e anche quello con più <quote
+>numeri</quote
+>. È stato creato da &Martin.R.Jones;. Le animazioni dello zaino-razzo, del fascio e del fuoco sono state realizzate da <personname
+><firstname
+>Mark</firstname
+><surname
+>Grant</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="ghost.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Fantasma spettrale</phrase
+></entry>
+<entry
+><para
+>Un tema spettrale basato sull'icona &kde; di <application
+>ghostview</application
+>. Fantasma spettrale è stato creato da &Martin.R.Jones;.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="eyes.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Occhi pazzi</phrase
+></entry>
+<entry
+><para
+>Questo tema consiste in una coppia di occhi mobili, ed è stato creato da <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bonhomme.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Bonhomme</phrase
+></entry>
+<entry
+><para
+>Una figurina animata, realizzata da <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="neko.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Neko</phrase
+></entry>
+<entry
+><para
+>Neko è un tema di gatti di <personname
+><firstname
+>Chris</firstname
+><surname
+>Spiegel</surname
+></personname
+>. I disegni provengono da <application
+>Oneko</application
+>, che è stato scritto da <personname
+><firstname
+>Masayuki</firstname
+><surname
+>Koba</surname
+></personname
+>.</para>
+<note
+><para
+><application
+>Oneko</application
+> è un piccolo programma in cui un gatto insegue un topo (il mouse!). Sembra che il programma non sia più mantenuto, ma <ulink url="http://www.daidouji.com/oneko/"
+>oneko-sakura</ulink
+> è una versione modificata.</para
+></note
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="pingus.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux</phrase
+></entry>
+<entry
+><para
+>Il protagonista di questo tema è Tux, la mascotte di &Linux;. I disegni utilizzati sono tratti da un gioco simile a <application
+>Lemmings</application
+>, chiamato <ulink url="https://pingus.seul.org/"
+><application
+>Pingus</application
+></ulink
+>. Il tema Tux è stato creato da <personname
+><firstname
+>Frank</firstname
+><surname
+>Pieczynski</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="worm.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Vermiciattolo</phrase
+></entry>
+<entry
+><para
+>Un piccolo vermiciattolo. Creato da <personname
+><firstname
+>Bartosz</firstname
+><surname
+>Trudnowski</surname
+></personname
+> per sua moglie.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="billy.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Piccolo Bill</phrase
+></entry>
+<entry
+><para
+>Un'immagine statica presa dal gioco <ulink url="http://www.xbill.org/"
+><application
+>XBill</application
+></ulink
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bsd.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Mascotte di FreeBSD</phrase
+></entry>
+<entry
+><para
+>Un'immagine statica di Beastie, il demone di FreeBSD.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tux.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tux immobile</phrase
+></entry>
+<entry
+><para
+>Una versione immobile del tema Tux.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tao.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Tao</phrase
+></entry>
+<entry
+><para
+>Il tema Tao è un simbolo Yin Yang animato. Questo tema è stato creato da <personname
+><firstname
+>Daniel</firstname
+><surname
+>Pfeiffer</surname
+></personname
+> <email
+>occitan@esperanto.org</email
+>, che si è ispirato alle proprie pratiche Tai Chi.</para
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Riconoscimenti e licenza</title>
+
+<para
+>&amor;</para>
+
+<para
+>Programma Copyright &copy; 1999-2001 &Martin.R.Jones; &Martin.R.Jones.mail;</para>
+
+<para
+>Documentazione Copyright &copy; 2001 &Karl.Garrison; &Karl.Garrison.mail;</para>
+
+<para
+>Traduzione Federico Cozzi <email
+>federicocozzi@federicocozzi.it</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

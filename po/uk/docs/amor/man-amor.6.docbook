@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+<!ENTITY % Ukrainian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Сторінка підручника &amor;</title>
+<date
+>9 жовтня 2021 року</date>
+<releaseinfo
+>(KDE Gear 21.08)</releaseinfo>
+<productname
+>&amor; 2.4.0</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>Створіння для вашої стільниці Плазми</refpurpose>
+</refnamediv>
+
+<refsect1 id="description">
+<title
+>Опис</title>
+
+<para
+><acronym
+>AMOR</acronym
+> це скорочення від <quote
+>Amusing Misuse Of Resources</quote
+> (витрата ресурсів для розваги). Програма показує декількох різних персонажів, що походжають вашим екраном, виконують трюки і надають вам поради.</para>
+
+</refsect1>
+
+
+<refsect1 id="options">
+<title
+>Параметри</title>
+
+<para
+>&amor; налаштовується з графічної оболонки і не має жодних параметрів командного рядка, крім стандартних параметрів &kde; і &Qt;.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Додаткові відомості</title>
+
+<para
+>Докладніша документація для користувачів доступна у <ulink url="help:/amor"
+>help:/amor</ulink
+> (або введіть цю адресу <acronym
+>URL</acronym
+> у поле адреси &konqueror;, або виконайте команду <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/amor</parameter
+></userinput
+>)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Вади</title>
+
+<para
+>Поточна версія &amor; працює лише з засобом керування вікнами &kwin;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Автори</title>
+<para
+>Автором &amor; є &Martin.R.Jones; &Martin.R.Jones.mail;.</para>
+<para
+>Цю сторінку довідника було підготовлено <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> для системи &Debian; &GNU;/&Linux; (але її можна використовувати і у інших системах).</para>
+</refsect1>
+
+</refentry>

@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!-- <!ENTITY kdeoptions SYSTEM "kdeoptions.docbook"
+> -->
+<!-- <!ENTITY qtoptions SYSTEM "qtoptions.docbook"
+> -->
+<!ENTITY % German "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<date
+>2003-03-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>Ein &kde;-Geschöpf für Ihre Arbeitsfläche</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>amor</command
+> <group
+><option
+>Allgemeine KDE-Optionen</option
+></group
+> <group
+><option
+>Allgemeine Qt-Optionen</option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschreibung</title>
+
+<para
+><acronym
+>AMOR</acronym
+> steht für Amüsanter Missbrauch von Ressourcen <quote
+>(Amusing Misuse Of Resources)</quote
+>. Es stellt ein paar verschiedene Typen bereit, die auf Ihrem Bildschirm paradieren, Tricks präsentieren und Ihnen Tipps geben.</para>
+
+<para
+>&amor; ist Teil des Paketes &kde;-Toys.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Options</title>
+
+<para
+>&amor; wird grafisch konfiguriert und hat keine Befehlszeilenoptionen außer den Standard-&kde; und &Qt;-Optionen.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Sehen Sie auch unter:</title>
+
+<para
+>Sie können <userinput
+>help:/amor</userinput
+> in ein &konqueror;-Fenster eingeben und erhalten dann das ausführliche Benutzerhandbuch angezeigt.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Bekannte Fehler</title>
+
+<para
+>&amor; funktioniert derzeit nur mit dem &kwin;-Fenstermanager.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Autoren</title>
+<para
+>&amor; wurde von <personname
+><firstname
+>Martin</firstname
+><othername
+>R.</othername
+><surname
+>Jones</surname
+></personname
+> <email
+>mjones@kde.org</email
+> geschrieben. Diese Handbuchseiten wurden von <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> für das Debian GNU/Linux-System geschrieben (können jedoch auch von anderen benutzt werden).</para>
+</refsect1>
+
+</refentry>

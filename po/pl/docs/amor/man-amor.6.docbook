@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!-- <!ENTITY kdeoptions SYSTEM "kdeoptions.docbook"
+> -->
+<!-- <!ENTITY qtoptions SYSTEM "qtoptions.docbook"
+> -->
+<!ENTITY % Polish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<date
+>Marzec 7, 2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>Potworek &kde; na Twój pulpit</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>amor</command
+> <arg choice="opt"
+>Standardowe opcje KDE</arg
+> <arg choice="opt"
+>Standardowe opcje Qt</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Opis</title>
+
+<para
+>Skrót <acronym
+>AMOR</acronym
+> oznacza <quote
+>Amusing Misuse Of Resources</quote
+> (zabawne marnotrawstwo zasobów). Udostępnia kilka różnych postaci, które spacerują po twoim ekranie wyczyniając różne sztuczki i dając podpowiedzi.</para>
+
+<para
+>&amor; jest częścią pakietu &kde; toys.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Opcje</title>
+
+<para
+>Program &amor; jest konfigurowany graficznie, i nie posiada żadnych opcji wiersza poleceń poza standardowymi opcjami &kde; oraz &Qt;.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Zobacz także</title>
+
+<para
+>W środowisku &kde; możesz wpisać <userinput
+>help:/amor</userinput
+> w programie &konqueror; aby zobaczyć obszerną dokumentację użytkownika.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Błędy</title>
+
+<para
+>Program &amor; działa obecnie tylko w menedżerze okien &kwin;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Autorzy</title>
+<para
+>Program &amor; został napisany przez: <personname
+><firstname
+>Martin</firstname
+><othername
+>R.</othername
+><surname
+>Jones</surname
+></personname
+> <email
+>mjones@kde.org</email
+>. Ten podręcznik został przygotowany przez: <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> dla społeczności systemu Debian GNU/Linux (ale może też być używany przez innych).</para>
+</refsect1>
+
+</refentry>

@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+<!ENTITY % Spanish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Página de manual de &amor;</title>
+<date
+>2021-10-09</date>
+<releaseinfo
+>(KDE Gear 21.08)</releaseinfo>
+<productname
+>&amor; 2.4.0</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>Una criatura para su escritorio &plasma;</refpurpose>
+</refnamediv>
+
+<refsect1 id="description">
+<title
+>Descripción</title>
+
+<para
+><acronym
+>AMOR</acronym
+> son las siglas en inglés de «Entretenido Derroche de Recursos». Proporciona varios personajes diferentes que vagabundean a lo largo de su pantalla X haciendo trucos y dándole sugerencias.</para>
+
+</refsect1>
+
+
+<refsect1 id="options">
+<title
+>Opciones</title>
+
+<para
+>&amor; se configura gráficamente, y no posee opciones de línea de órdenes aparte de las opciones estándares de &kde; y &Qt;.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vea también</title>
+
+<para
+>Dispone de información más detallada usando <ulink url="help:/amor"
+>help:/amor</ulink
+> (introduzca dicha &URL; en &konqueror; o ejecute <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/amor</parameter
+></userinput
+>).</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Problemas</title>
+
+<para
+>Al presente &amor; solo funciona con el gestor de ventanas &kwin;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Autores</title>
+<para
+>&amor; fue escrito por &Martin.R.Jones; &Martin.R.Jones.mail;.</para>
+<para
+>Esta página de manual fue preparada por <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> para el sistema &Debian; &GNU;/&Linux; (aunque se puede usar en otros).</para>
+</refsect1>
+
+</refentry>

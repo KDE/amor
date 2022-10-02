@@ -1,0 +1,516 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&amor;">
+  <!ENTITY package "kdetoys">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE">
+]>
+
+<book id="amor" lang="&language;">
+<bookinfo>
+<title
+>Руководство &amor;</title>
+
+<authorgroup>
+<author
+>&Karl.Garrison; &Karl.Garrison.mail; </author>
+
+<othercredit role="translator"
+><firstname
+>Антон</firstname
+><surname
+>Иванов</surname
+><affiliation
+><address
+><email
+>a-i@bk.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year>
+<holder
+>&Karl.Garrison;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>8 февраля 2010 г.</date>
+<releaseinfo
+>2.3.1 (&kde; 4.4)</releaseinfo>
+
+<abstract>
+<para
+>&amor; - это маленький анимированный персонаж, появляющийся в верхней части активного окна. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdetoys</keyword>
+<keyword
+>amor</keyword>
+<keyword
+>helper</keyword>
+<keyword
+>assistant</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Введение</title>
+
+<sect1 id="whats-amor">
+<title
+>Что такое &amor;?</title>
+<para
+>&amor; - это сокращение от слов Amusing Misuse of Resources - "весёлая растрата ресурсов". Программа показывает в верхней части активного окна анимированный персонаж. По умолчанию он принимает форму жёлтого пятна, выполняющего множество фокусов. &amor; также имеет множество различных тем, изменяющих его поведение и внешний вид. </para>
+
+<note
+><para
+>Так как &amor; работает только с оконным менеджером &kwin; из &kde;, эта программа будет работать только в &kde;. Возможно, &amor; будет работать из другого &kde;-совместимого оконного менеджера, но на момент написания этого документа такие случаи не были известны.</para
+></note>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Настройка</title>
+<sect1 id="configuring-amor">
+<title
+>Настройка &amor;</title>
+<para
+>Для того, чтобы настроить &amor;, щёлкните по персонажу правой кнопкой мыши. Появится меню, содержащее три пункта: <guimenuitem
+>Настроить...</guimenuitem
+>, <guimenuitem
+>Справка</guimenuitem
+>, и <guimenuitem
+>Выход</guimenuitem
+>. Выберите <guimenuitem
+>Настроить...</guimenuitem
+> для настройки &amor;. </para>
+</sect1>
+
+<sect1 id="general-options">
+<title
+>Основные параметры</title>
+<para
+>Из диалога Параметры могут быть изменены следующие опции &amor;:</para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Тема</guilabel
+></term>
+<listitem
+><para
+>Определяет внешний вид и поведение персонажа &amor;. Темы описываются в следующем разделе.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Смещение</guilabel
+></term>
+<listitem
+><para
+>Этот ползунок контролирует положение &amor; по отношению к верхней границе активного окна. В среднем положении (по умолчанию) &amor; располагается прямо над заголовком окна, тогда как при установке его в крайнее верхнее или нижнее положение &amor; появляется на некотором расстоянии (соответственно выше или ниже) заголовка окна.</para>
+<tip
+><para
+>Установка этого ползунка в крайнее нижнее положение позволит &amor; быть видимым, даже если активное окно развёрнуто на весь экран.</para>
+</tip
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Всегда наверху</guilabel
+></term>
+<listitem
+><para
+>Включение этой опции позволит &amor; всегда появляться поверх любых окон, включая панель.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Показывать подсказки в случайном порядке</guilabel
+></term>
+<listitem
+><para
+>Если опция включена, &amor; будет показывать различные советы, связанные с &kde; через случайно выбранные промежутки времени.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Показывать случайный персонаж</guilabel
+></term>
+<listitem
+><para
+>Если параметр включён, выбор темы будет недоступен, а использоваться будет случайная тема.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Включить подсказки</guilabel
+></term>
+<listitem
+><para
+>Любое приложение для &kde; может быть разработано так, чтобы показывать полезные советы при помощи &amor;. Если эта опция включена, и окно соответствующего приложения является активным, &amor; отобразит подсказки этого приложения.</para>
+<note
+><para
+>На момент написания этой документации ни одно приложение не использовало эту возможность.</para
+></note
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="amor-themes">
+<title
+>Темы &amor;</title>
+<para
+>&amor; поставляется со множеством встроенных тем, изменяющих внешний вид и поведение &amor;. Вдобавок можно создавать новые темы. Встроенные темы для &amor; описаны в следующей таблице.</para>
+
+<table>
+<title
+>Доступные темы для &amor;</title>
+<tgroup cols="3">
+<thead>
+<row>
+<entry
+>Тема</entry>
+<entry
+>Название</entry>
+<entry
+>Описание</entry>
+</row>
+</thead>
+<tbody>
+
+<row>
+<entry
+><mediaobject
+><imageobject>
+          <imagedata  format="PNG" fileref="spot.png"/>
+        </imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Талантливое пятнышко</phrase
+></entry>
+<entry
+><para
+>Это тема для &amor; по умолчанию содержит больше всего разных <quote
+>фокусов</quote
+>. Тему создал &Martin.R.Jones;. Эффекты "реактивного рюкзака" и огня созданы при помощи <personname
+><firstname
+>Mark</firstname
+><surname
+>Grant</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="ghost.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Призрак</phrase
+></entry>
+<entry
+><para
+>Изображает привидение, тема основана на пиктограмме приложения <application
+>ghostview</application
+>  из &kde;. Тему создал &Martin.R.Jones;.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="eyes.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Безумные глаза</phrase
+></entry>
+<entry
+><para
+>Эта тема состоит из двух вращающихся глаз. Тему создал <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bonhomme.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Добрячок</phrase
+></entry>
+<entry
+><para
+>Показывает маленького человечка, созданного <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="neko.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Неко</phrase
+></entry>
+<entry
+><para
+>Неко - это кошка, созданная <personname
+><firstname
+>Chris</firstname
+><surname
+>Spiegel</surname
+></personname
+>. Изображения взяты из программы <application
+>Oneko</application
+>, написанной <personname
+><firstname
+>Masayuki</firstname
+><surname
+>Koba</surname
+></personname
+>.</para>
+<note
+><para
+><application
+>Oneko</application
+> - это маленькая программа, изображающая кошку, следующую за курсором мыши. Программа, кажется, больше не поддерживается, но <ulink url="ftp://sunsite.unc.edu/pub/Linux/X11/demos/oneko-1.1b.tar.gz"
+>исходный код</ulink
+> последней версии все ещё доступен.</para
+></note
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="pingus.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Тукс</phrase
+></entry>
+<entry
+><para
+>Эта тема представляет собой пингвинёнка Тукса, символа &Linux;. Изображения взяты из игры в стиле <application
+>Lemmings</application
+> -- <ulink url="http://pingus.seul.org/"
+> <application
+>Pingus</application
+></ulink
+>. Тему создал <personname
+><firstname
+>Frank</firstname
+><surname
+>Pieczynski</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="worm.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Маленький червячок</phrase
+></entry>
+<entry
+><para
+>Маленький червячок. Тему создал <personname
+><firstname
+>Bartosz</firstname
+><surname
+>Trudnowski</surname
+></personname
+> для своей жены.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="billy.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Маленький Билли</phrase
+></entry>
+<entry
+><para
+>Неподвижное изображение, взятое из игры <ulink url="http://www.xbill.org/"
+> <application
+>XBill</application
+> </ulink
+>.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="bsd.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Чёртик FreeBSD</phrase
+></entry>
+<entry
+><para
+>Неподвижное изображение чертёнка Чака, символа FreeBSD.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tux.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Неподвижный Тукс</phrase
+></entry>
+<entry
+><para
+>Версия темы Тукс, но без движения.</para
+></entry>
+</row>
+
+<row>
+<entry>
+<mediaobject
+><imageobject>
+<imagedata format="PNG" fileref="tao.png"/>
+</imageobject
+></mediaobject>
+</entry>
+<entry
+><phrase
+>Дао</phrase
+></entry>
+<entry
+><para
+>Тема Дao - это анимированный символ Инь-Янь. Тема создана <personname
+><firstname
+>Daniel</firstname
+><surname
+>Pfeiffer</surname
+></personname
+> <email
+>occitan@esperanto.org</email
+>. Навеяно его практикой тайцзи.</para
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Авторские права и лицензия</title>
+
+<para
+>&amor;</para>
+
+<para
+>Авторские права на программу &copy; 1999-2001 &Martin.R.Jones; &Martin.R.Jones.mail;</para>
+
+<para
+>Авторские права на документацию &copy; 2001 &Karl.Garrison; &Karl.Garrison.mail;</para>
+
+<para
+>Перевод на русский: Антон Иванов <email
+>a-i@bk.ru</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

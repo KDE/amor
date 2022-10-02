@@ -1,0 +1,549 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&amor;">
+  <!ENTITY package "kdetoys">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Hungarian "INCLUDE">
+]>
+
+<book lang="&language;">
+<bookinfo>
+<title
+>&amor; kézikönyv</title>
+
+<authorgroup>
+<author
+>&Karl.Garrison; &Karl.Garrison.mail; </author>
+</authorgroup>
+
+<othercredit role="translator"
+><firstname
+>Tamás</firstname
+><surname
+>Szántó</surname
+><contrib
+>Magyar fordítás</contrib
+><affiliation
+><address
+><email
+>tszanto@mol.hu</email
+></address
+></affiliation
+></othercredit
+> 
+
+<copyright>
+<year
+>2001</year>
+<holder
+>&Karl.Garrison;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2003-09-16</date>
+<releaseinfo
+>2.2</releaseinfo>
+
+<abstract>
+<para
+>Az &amor; animált figurákat tud megjeleníteni az aktív ablak tetején. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdetoys</keyword>
+<keyword
+>amor</keyword>
+<keyword
+>segítő</keyword>
+<keyword
+>segéd</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Bevezető</title>
+
+<sect1 id="whats-amor">
+<title
+>Mire használható az &amor;?</title>
+<para
+>Az &amor; az "Amusing Misuse of Resources" kifejezés rövidítése. Mókás animált figurákat tud előállítani, melyek az ablak felső szélénél jelennek meg. Alapértelmezésben egy sárga gombóc alakját jeleníti meg, mely különféle mutatványok bemutatására képes. Többféle animáció közül lehet választani (témák). </para>
+
+<note
+><para
+>Az &amor; a &kde; &kwin; nevű ablakkezelőjével tud működni, ezért a program csak &kde; alatt használható. Elképzelhető, hogy a program esetleg más, a &kde;-vel kompatibilis ablakkezelővel is működik, de jelen sorok írásakor nincs ilyenről tudomásom.</para
+></note>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Beállítások</title>
+<sect1 id="configuring-amor">
+<title
+>Az &amor; beállításai</title>
+<para
+>Az &amor; beállításokhoz úgy juthat el, ha a jobb egérgombbal az animációra kattint. A megjelenő menü a következő három menüpontot tartalmazza: <guimenuitem
+>Beállítások...</guimenuitem
+>, <guimenuitem
+>Névjegy...</guimenuitem
+> és <guimenuitem
+>Kilépés</guimenuitem
+>. Kattinton a <guimenuitem
+>Beállítások...</guimenuitem
+> menüpontra a beállítások megjelenítéséhez. </para>
+</sect1>
+
+<sect1 id="general-options">
+<title
+>Általános beállítások</title>
+<para
+>A következő paramétereket lehet megváltoztatni a beállítási párbeszédablakban:</para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Téma</guilabel
+></term>
+<listitem
+><para
+>Ez határozza meg, hogy a program milyen animációt fog megjeleníteni. A témákról részletesebben a következő szakaszban olvashat.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Távolság</guilabel
+></term>
+<listitem
+><para
+>Ezzel a csúszkával lehet az animált figura és ablak felső szegélyének távolságát módosítani. Középső állásban a figura épp a címsor fölött jelenik meg. Ha a csúszkát a legfelső vagy a legalsó állásba teszi, akkor a figura messze a címsor fölött vagy jóval a címsor alatt fog megjelenni.</para>
+<tip
+><para
+>Ha a középső állástól balra tolja a csúszkát, akkor az animáció akkor is látható lesz, ha az aktív ablak maximalizált állapotú.</para>
+</tip
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Mindig felül</guilabel
+></term>
+<listitem
+><para
+>Ha ez be van jelölve, akkor az animációt nem takarhatják el ablakok (a panel sem), mert mindig legfelül marad.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Véletlenszerű tippek megjelenítése</guilabel
+></term>
+<listitem
+><para
+>Ha ez be van jelölve, akkor véletlenszerű időközönként a &kde;-vel kapcsolatos tippek, tanácsok jelennek meg.</para
+></listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Alkalmazástippek engedélyezése</guilabel
+></term>
+<listitem
+><para
+>Minden &kde; alkalmazás kiegészíthető úgy, hogy képes legyen &amor;-tippeket szolgáltatni. Ha bejelöli ezt az opciót, és az alkalmazás ablaka aktív, akkor automatikusan a programhoz tartozó tippek fognak megjelenni.</para>
+<note
+><para
+>Egyelőre még egyik &kde; alkalmazás sem használja ki ezt a lehetőséget :-(</para
+></note
+></listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="amor-themes">
+<title
+>&amor;-témák</title>
+<para
+>Az &amor; alapváltozata több választható témát tartalmaz, mindegyik különböző módon van animálva, de lehetőség van más által készített (külső) témák használatára is. Az alábbi táblázatban felsoroljuk a programhoz tartozó "beépített" témákat.</para>
+
+<table>
+<title
+>A rendelkezésre álló &amor;-témák</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry
+>Téma</entry>
+<entry
+>Leírás</entry>
+</row>
+</thead>
+<tbody>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="spot.png"/>
+</imageobject>
+<textobject
+><para
+>Multi-talented Spot</para
+></textobject>
+<caption
+><para
+>Multi-talented Spot</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Ez a program alapértelmezett témája, és ez ismeri a legtöbb <quote
+>trükköt</quote
+> is. A téma szerzője Martin R. Jones. A jet-packes, a sugaras és a tüzes animációkat <personname
+><firstname
+>Mark</firstname
+><surname
+>Grant</surname
+></personname
+> készítette.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="ghost.png"/>
+</imageobject>
+<textobject
+><para
+>Spooky Ghost</para
+></textobject>
+<caption
+><para
+>Spooky Ghost</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Egy "szellemes" téma a <application
+>ghostview</application
+> program ikonjának felhasználásával. A téma szerzője &Martin.R.Jones;.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="eyes.png"/>
+</imageobject>
+<textobject
+><para
+>Crazy Eyes</para
+></textobject>
+<caption
+><para
+>Crazy Eyes</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Ez a téma egy mozgó szempárt tartalmaz, készítette: <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="bonhomme.png"/>
+</imageobject>
+<textobject
+><para
+>Bonhomme</para
+></textobject>
+<caption
+><para
+>Bonhomme</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Pálcikaember-animáció, készítette: <personname
+><firstname
+>Jean-Claude</firstname
+><surname
+>Dumas</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="neko.png"/>
+</imageobject>
+<textobject
+><para
+>Neko</para
+></textobject>
+<caption
+><para
+>Neko</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Egy macskás téma, készítette: <personname
+><firstname
+>Chris</firstname
+><surname
+>Spiegel</surname
+></personname
+>. A grafika az <application
+>Oneko</application
+> nevű programból származik, melynek szerzője: <personname
+><firstname
+>Masayuki</firstname
+><surname
+>Koba</surname
+></personname
+>.</para>
+<note
+><para
+>Az <application
+>Oneko</application
+> egy egyszerű kis program, melyben egy macska üldözi az egérmutatót. A programnak jelenleg nincs karbantartója, de a legutóbbi változat <ulink url="ftp://sunsite.unc.edu/pub/Linux/X11/demos/oneko-1.1b.tar.gz"
+>forráskódja</ulink
+> még elérhető.</para
+></note
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="pingus.png"/>
+</imageobject>
+<textobject
+><para
+>Tux</para
+></textobject>
+<caption
+><para
+>Tux</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Ez a téma Tuxra, a &Linux; kabalafigurájára épül. A grafika a <ulink url="http://pingus.seul.org/"
+> <application
+>Pingus</application
+></ulink
+> nevű programból származik, mely egy <application
+>Lemmings</application
+>-szerű ügyességi játék. A téma szerzője: <personname
+><firstname
+>Frank</firstname
+><surname
+>Pieczynski</surname
+></personname
+>.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="worm.png"/>
+</imageobject>
+<textobject
+><para
+>Little Worm</para
+></textobject>
+<caption
+><para
+>Little Worm</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Ez egy "kukacos" téma, szerzője: <personname
+><firstname
+>Bartosz</firstname
+><surname
+>Trudnowski</surname
+></personname
+> (a felesége számára).</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="billy.png"/>
+</imageobject>
+<textobject
+><para
+>Little Billy</para
+></textobject>
+<caption
+><para
+>Little Billy</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>A téma egy statikus képre épül, mely az <ulink url="http://www.xbill.org/"
+><application
+>XBill</application
+> </ulink
+> programból származik.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="bsd.png"/>
+</imageobject>
+<textobject
+><para
+>BSD Mascot</para
+></textobject>
+<caption
+><para
+>BSD Mascot</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>Animáció nélküli kép Beastie-ről, a FreeBSD kabalafigurájáról.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="tux.png"/>
+</imageobject>
+<textobject
+><para
+>Unanimated Tux</para
+></textobject>
+<caption
+><para
+>Unanimated Tux</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>A Tux téma animáció nélküli változata.</para
+></entry>
+</row>
+
+<row>
+<entry
+><mediaobject>
+<imageobject>
+<imagedata format="PNG" fileref="tao.png"/>
+</imageobject>
+<textobject
+><para
+>Tao</para
+></textobject>
+<caption
+><para
+>Tao</para
+></caption>
+</mediaobject
+></entry>
+<entry
+><para
+>A Tao téma egy animált Yin Yang szimbólumot tartalmaz; szerzője: <personname
+><firstname
+>Daniel</firstname
+><surname
+>Pfeiffer</surname
+></personname
+> <email
+>occitan@esperanto.org</email
+> , aki az ötletet saját Tai Chi gyakorlataiból merítette.</para
+></entry>
+</row>
+
+</tbody>
+</tgroup>
+</table>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>A szerzők névsora, licenc</title>
+
+<para
+>&amor;</para>
+
+<para
+>Program copyright &copy; &Martin.R.Jones; &Martin.R.Jones.mail;, 1999-2001.</para>
+
+<para
+>Documentation copyright &copy; &Karl.Garrison; &Karl.Garrison.mail;, 2001.</para>
+
+<para
+>Magyar fordítás: Szántó Tamás <email
+>tszanto@mol.hu</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->
