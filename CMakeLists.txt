@@ -49,5 +49,5 @@ add_definitions(-DQT_NO_DEPRECATED_BEFORE=0x060000)
 add_subdirectory( data )
 add_subdirectory( src )
 add_subdirectory( doc )
-
+ki18n_install(po)
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
