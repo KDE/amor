@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-24 00:42+0000\n"
-"PO-Revision-Date: 2022-09-20 14:07+0300\n"
+"PO-Revision-Date: 2022-10-02 14:23+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -197,8 +197,7 @@ msgid "&Quit"
 msgstr "&Выход"
 
 #: src/amordialog.cpp:42
-#, fuzzy, kde-format
-#| msgid "Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Options"
 msgstr "Параметры"
