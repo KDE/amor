@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-24 00:42+0000\n"
-"PO-Revision-Date: 2022-12-01 23:25+0100\n"
+"PO-Revision-Date: 2022-12-07 07:30+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:1
@@ -37,6 +37,8 @@ msgid ""
 "Real programmers don't comment their code. It was hard to write, it should "
 "be hard to understand."
 msgstr ""
+"რეალური პროგრამისტები თავის კოდს კომენტარებს არ უწერენ. თუ მისი დაწერა ძნელი "
+"იყო, გაგებაც არ უნდა იყოს ადვილი."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:7
@@ -44,13 +46,13 @@ msgstr ""
 msgid ""
 "It is much easier to suggest solutions when you know nothing about the "
 "problem."
-msgstr ""
+msgstr "რჩევების მიცემა ადვილია, თუ პრობლემის შესახებ არაფერი იცით."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:9
 #, kde-format
 msgid "You can never have too much memory or disk space."
-msgstr ""
+msgstr "ადგილი დისკზე და მეხსიერება მეტისმეტი არასდროს არაა."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:11
@@ -68,7 +70,7 @@ msgstr "ეს შეცდომა არაა. უფრო არასწ�
 #: data/tips-en:15
 #, kde-format
 msgid "Help stamp out and abolish redundancy."
-msgstr ""
+msgstr "დაგვეხმარეთ ვიპოვოთ და აღმოვფხვრათ დამატებითობა."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:17
@@ -77,12 +79,14 @@ msgid ""
 "To maximize a window vertically, click the maximize button with the middle "
 "mouse button."
 msgstr ""
+"ფანჯრის ვერტიკალურად მთელს ეკრანზე გასაშლელად შესაბამის ღილაკს თაგუნას შუა "
+"ღილაკით დააჭირეთ."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:19
 #, kde-format
 msgid "You can use Alt+Tab to switch between applications."
-msgstr ""
+msgstr "აპლიკაციებს შორის გადასართავად Alt+Tab შეგიძლიათ გამოიყენოთ."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:21
@@ -90,12 +94,13 @@ msgstr ""
 msgid ""
 "Press Ctrl+Esc to show the applications running in your current session."
 msgstr ""
+"მიმდინარე სესიაში გაშვებული აპლიკაციების სანახავად Ctrl+Esc-ს დააწექით."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:23
 #, kde-format
 msgid "Alt+F2 displays a small window that you can type a command into."
-msgstr ""
+msgstr "Alt+F2 გამოიტანს პატარა ფანჯარას, სადაც ბრძანება შეგიძლიათ, ჩაწეროთ."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:25
@@ -110,6 +115,7 @@ msgstr ""
 #, kde-format
 msgid "You can move buttons on the panel using the middle mouse button."
 msgstr ""
+"პანელზე ღილაკების გადაადგილება მათი თაგუნას შუა ღილაკით გადათრევით შეგიძლიათ."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:29
@@ -123,6 +129,8 @@ msgstr "Alt+F1 სისტემურ მენიუს გახსნის
 msgid ""
 "Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
 msgstr ""
+"Ctrl+Alt+Esc შეგიძლიათ გამოიყენოთ აპლიკაციის მოსაკლავად, რომელიც აღარ "
+"გპასუხობთ."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:33
@@ -131,12 +139,14 @@ msgid ""
 "If you leave KDE applications open when you logout, they will be restarted "
 "automatically when you log back in."
 msgstr ""
+"თუ გასვლისას KDE-ის აპლიკაციებს გაშვებულს დატოვებთ, თავიდან შესვლისას ისინი "
+"ავტომატურად გაეშვება."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
 #, kde-format
 msgid "The KDE file manager is also a web browser and an FTP client."
-msgstr ""
+msgstr "KDE-ის ფაილების მმართველი ასევე ვებ-ბრაუზერი და FTP კლიენტიცა."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
@@ -146,6 +156,9 @@ msgid ""
 "showMessage() and\n"
 "showTip() DCOP calls"
 msgstr ""
+"აპლიკაციებს შეუძლიათ გამოიტანონ შეტყობინებები და მინიშნებები Amor-ის ბუშტით, "
+"showMessage() და\n"
+"showTip() DCOP გამოძახებებით"
 
 #: src/amor.cpp:255
 #, kde-format
