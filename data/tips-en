@@ -32,8 +32,8 @@ Ctrl+Alt+Esc can be used to kill an application that has stopped responding.
 %
 If you leave KDE applications open when you logout, they will be restarted automatically when you log back in.
 %
-The KDE file manager is also a web browser and an FTP client.
+The KDE file manager (Dolphin) is also an FTP client.
 %
 Applications can display messages and tips in an Amor bubble using the showMessage() and
-showTip() DCOP calls
+showTip() D-Bus calls.
 %
