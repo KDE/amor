@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdetoys-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"POT-Creation-Date: 2022-12-22 00:43+0000\n"
 "PO-Revision-Date: 2022-12-10 18:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -155,19 +155,24 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, kde-format
-msgid "The KDE file manager is also a web browser and an FTP client."
+#, fuzzy, kde-format
+#| msgid "The KDE file manager is also a web browser and an FTP client."
+msgid "The KDE file manager (Dolphin) is also an FTP client."
 msgstr ""
 "KDE dosya yöneticisi, aynı zamanda bir internet tarayıcısı ve FTP "
 "istemcisidir."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Applications can display messages and tips in an Amor bubble using the "
+#| "showMessage() and\n"
+#| "showTip() DCOP calls"
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
-"showTip() DCOP calls"
+"showTip() D-Bus calls."
 msgstr ""
 "Uygulamalar, showMessage() ve showTip() DCOP çağrılarını kullanarak Amor "
 "baloncuğu içerisinde mesajlar ve ipuçları gösterebilirler"

@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: amor.po 1634487 2022-09-24 01:32:48Z scripty $
+# $Id: amor.po 1640597 2022-12-22 01:39:35Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2010, 2019.
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"POT-Creation-Date: 2022-12-22 00:43+0000\n"
 "PO-Revision-Date: 2022-06-05 22:48+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -156,19 +156,24 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, kde-format
-msgid "The KDE file manager is also a web browser and an FTP client."
+#, fuzzy, kde-format
+#| msgid "The KDE file manager is also a web browser and an FTP client."
+msgid "The KDE file manager (Dolphin) is also an FTP client."
 msgstr ""
 "Файловият мениджър на KDE е браузър и има вградена поддръжка на протокола "
 "FTP."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Applications can display messages and tips in an Amor bubble using the "
+#| "showMessage() and\n"
+#| "showTip() DCOP calls"
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
-"showTip() DCOP calls"
+"showTip() D-Bus calls."
 msgstr ""
 "Програмата може да показва съвети в балончета, като използва обръщенията към "
 "функциите на DCOP showMessage() и showTip()."

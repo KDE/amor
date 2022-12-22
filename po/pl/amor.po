@@ -1,5 +1,5 @@
 # translation of amor.po to
-# Version: $Revision: 1634487 $
+# Version: $Revision: 1640597 $
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2007.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"POT-Creation-Date: 2022-12-22 00:43+0000\n"
 "PO-Revision-Date: 2021-10-10 11:41+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -144,17 +144,22 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, kde-format
-msgid "The KDE file manager is also a web browser and an FTP client."
+#, fuzzy, kde-format
+#| msgid "The KDE file manager is also a web browser and an FTP client."
+msgid "The KDE file manager (Dolphin) is also an FTP client."
 msgstr "Menedżer plików KDE jest zarazem przeglądarką WWW i klientem FTP."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Applications can display messages and tips in an Amor bubble using the "
+#| "showMessage() and\n"
+#| "showTip() DCOP calls"
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
-"showTip() DCOP calls"
+"showTip() D-Bus calls."
 msgstr ""
 "Programy mogą wyświetlać komunikaty i podpowiedzi w okienkach Amora za "
 "pomocą funkcji DCOP showMessage() i showTip()"

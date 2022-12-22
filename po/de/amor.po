@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"POT-Creation-Date: 2022-12-22 00:43+0000\n"
 "PO-Revision-Date: 2021-10-15 12:34+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -153,17 +153,22 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, kde-format
-msgid "The KDE file manager is also a web browser and an FTP client."
+#, fuzzy, kde-format
+#| msgid "The KDE file manager is also a web browser and an FTP client."
+msgid "The KDE file manager (Dolphin) is also an FTP client."
 msgstr "Der KDE-Dateimanager ist auch ein Webbrowser und ein FTP-Programm."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Applications can display messages and tips in an Amor bubble using the "
+#| "showMessage() and\n"
+#| "showTip() DCOP calls"
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
-"showTip() DCOP calls"
+"showTip() D-Bus calls."
 msgstr ""
 "Andere Programme können Nachrichten und Tipps in einer Amor-Sprechblase "
 "anzeigen.\n"
