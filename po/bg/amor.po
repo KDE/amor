@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: amor.po 1640597 2022-12-22 01:39:35Z scripty $
+# $Id: amor.po 1640682 2022-12-24 01:42:27Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2010, 2019.
@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2022-06-05 22:48+0200\n"
+"PO-Revision-Date: 2022-12-23 18:32+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: @info:tipoftheday
@@ -156,27 +156,20 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr ""
-"Файловият мениджър на KDE е браузър и има вградена поддръжка на протокола "
-"FTP."
+msgstr "Файловият мениджър на KDE (Dolphin) е също и FTP клиент."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
-"Програмата може да показва съвети в балончета, като използва обръщенията към "
-"функциите на DCOP showMessage() и showTip()."
+"Приложенията могат да показват съвети в балончета, като използва обръщенията "
+"към D-Bus  showMessage() и showTip()."
 
 #: src/amor.cpp:255
 #, kde-format

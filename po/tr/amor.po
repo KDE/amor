@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kdetoys-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2022-12-10 18:21+0300\n"
+"PO-Revision-Date: 2022-12-23 20:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,19 +23,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:1
 #, kde-format
 msgid "Don't run with scissors."
-msgstr "Makas ile koşmayın."
+msgstr "Elinizde makasla koşmayın."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:3
 #, kde-format
 msgid "Never trust car salesmen or politicians."
-msgstr "Hiçbir zaman araba satıcılarına veya politikacılara güvenme."
+msgstr "Hiçbir zaman araba satıcılarına veya politikacılara güvenmeyin."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:5
@@ -44,8 +44,8 @@ msgid ""
 "Real programmers don't comment their code. It was hard to write, it should "
 "be hard to understand."
 msgstr ""
-"Gerçek programcılar kodlarına yorum koymazlar. Çünkü Yazmak zordur, "
-"anlamakda zor olmalıdır."
+"Gerçek programcılar kodlarına yorum koymazlar. Çünkü yazmak zordur, anlamak "
+"da zor olmalıdır."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:7
@@ -54,7 +54,7 @@ msgid ""
 "It is much easier to suggest solutions when you know nothing about the "
 "problem."
 msgstr ""
-"Problem hakkında hiçbir bilginiz olmadığı zaman çözüm önerisi getirmek çok "
+"Sorun hakkında hiçbir bilginiz olmadığı zaman çözüm önerisi getirmek çok "
 "daha kolay olur."
 
 #. i18n: ectx: @info:tipoftheday
@@ -79,7 +79,7 @@ msgstr "Bu bir hata değil. Daha eklenmemiş bir özellik."
 #: data/tips-en:15
 #, kde-format
 msgid "Help stamp out and abolish redundancy."
-msgstr "Fazlalığı ortadan kaldırmaya yardım et."
+msgstr "Fazlalığı ortadan kaldırmaya yardım edin."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:17
@@ -155,27 +155,20 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr ""
-"KDE dosya yöneticisi, aynı zamanda bir internet tarayıcısı ve FTP "
-"istemcisidir."
+msgstr "KDE dosya yöneticisi (Dolphin), aynı zamanda bir FTP istemcisidir."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
-"Uygulamalar, showMessage() ve showTip() DCOP çağrılarını kullanarak Amor "
-"baloncuğu içerisinde mesajlar ve ipuçları gösterebilirler"
+"Uygulamalar, showMessage() ve showTip() D-Bus çağrılarını kullanarak Amor "
+"baloncuğu içinde iletiler ve ipuçları gösterebilirler"
 
 #: src/amor.cpp:255
 #, kde-format

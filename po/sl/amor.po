@@ -6,13 +6,13 @@
 # Gregor Rakar <gregor.rakar@kiss.si>, 2003 - 2005.
 # Jure Repinc <jlp@holodeck1.com>, 2008 - 2011.
 # Klemen Košir <klemen.kosir@gmx.com>, 2011.
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2021-10-11 05:49+0200\n"
+"PO-Revision-Date: 2022-12-23 07:29+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Translator: Klemen Košir <klemen.kosir@gmx.com>\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:1
@@ -146,26 +146,21 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr "Upravljalnik datotek KDE je tudi spletni brskalnik in odjemalec FTP."
+msgstr "KDE upravljalnik datotek (Dolphin) je tudi odjemalec FTP."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
-"Programi lahko z uporabo klicev showMessage() in showTip() v Amorju "
-"prikažejo\n"
-"sporočila in namige"
+"Aplikacije lahko prikazujejo sporočila in namige v Amorjevem mehurčku z "
+"uporabo\n"
+"klicev v D_Busu showMessage() in showTip()."
 
 #: src/amor.cpp:255
 #, kde-format
