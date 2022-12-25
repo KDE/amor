@@ -1,16 +1,16 @@
 # Translation of amor.po to Catalan (Valencian)
-# Copyright (C) 2019-2021 This_file_is_part_of_KDE
+# Copyright (C) 2019-2022 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2021, 2022.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2021-11-06 17:03+0100\n"
+"PO-Revision-Date: 2022-12-22 14:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -147,26 +147,21 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr ""
-"El gestor de fitxers de KDE també és un navegador web i un client d'FTP."
+msgstr "El gestor de fitxers (Dolphin) de KDE també és un client d'FTP."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
 "Les aplicacions poden mostrar missatges i consells a una bambolla d'Amor\n"
-"utilitzant les crides DCOP «showMessage()» i «showTip()»"
+"utilitzant les crides\n"
+"«showMessage()» i «showTip()» de D-Bus."
 
 #: src/amor.cpp:255
 #, kde-format

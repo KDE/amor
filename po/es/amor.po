@@ -6,7 +6,7 @@
 # Eduardo Sanchez <ibvm@cbvm.edu.py>, 2004.
 # Eduardo Sanchez <lists@sombragris.org>, 2005.
 # Santiago Fernandez Sancho <santi@kde-es.org>, 2006.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2010, 2013, 2019, 2021.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2010, 2013, 2019, 2021, 2022.
 # Eduardo Sanchez <sombragris@sombragris.org>, 2010.
 # Javier Vinal <fjvinal@gmail.com>, 2014.
 msgid ""
@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2021-10-10 03:50+0200\n"
+"PO-Revision-Date: 2022-12-24 20:56+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: @info:tipoftheday
@@ -151,26 +151,21 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr "El gestor de archivos de KDE es también navegador web y cliente FTP."
+msgstr "El gestor de archivos de KDE (Dolphin) también es un cliente FTP."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
 "Las aplicaciones pueden mostrar mensajes y sugerencias en una burbuja de "
-"Amor utilizando las llamadas DCOP\n"
-"showMessage() y showTip()"
+"Amor utilizando las llamadas D-Bus\n"
+"showMessage() y showTip()."
 
 #: src/amor.cpp:255
 #, kde-format
