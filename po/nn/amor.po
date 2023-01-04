@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-24 00:42+0000\n"
+"POT-Creation-Date: 2022-12-22 00:43+0000\n"
 "PO-Revision-Date: 2022-06-19 14:07+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -142,8 +142,8 @@ msgstr ""
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
 #, kde-format
-msgid "The KDE file manager is also a web browser and an FTP client."
-msgstr "Filhandsamaren i KDE er òg ein nettlesar og ein FTP-klient."
+msgid "The KDE file manager (Dolphin) is also an FTP client."
+msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
@@ -151,11 +151,8 @@ msgstr "Filhandsamaren i KDE er òg ein nettlesar og ein FTP-klient."
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
-"showTip() DCOP calls"
+"showTip() D-Bus calls."
 msgstr ""
-"Program kan visa meldingar og tips i Amor-bobler med DCOP-kalla "
-"showMessage() og\n"
-"showTip()."
 
 #: src/amor.cpp:255
 #, kde-format
