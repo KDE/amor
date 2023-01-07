@@ -1,66 +1,118 @@
 <?xml version="1.0" ?>
 <!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-
-<!ENTITY % English "INCLUDE">
+<!-- <!ENTITY kdeoptions SYSTEM "kdeoptions.docbook"
+> -->
+<!-- <!ENTITY qtoptions SYSTEM "qtoptions.docbook"
+> -->
+<!ENTITY % German "INCLUDE">
 ]>
 
 <refentry lang="&language;">
 <refentryinfo>
-<title>&amor; Manual Page</title>
-<date>2021-10-09</date>
-<releaseinfo>(KDE Gear 21.08)</releaseinfo>
-<productname>&amor; 2.4.0</productname>
+<date
+>2003-03-07</date>
 </refentryinfo>
 
 <refmeta>
-<refentrytitle><command>amor</command></refentrytitle>
-<manvolnum>6</manvolnum>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
 </refmeta>
 
 <refnamediv>
-<refname><command>amor</command></refname>
-<refpurpose>A creature for your &plasma; desktop</refpurpose>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>Ein &kde;-Geschöpf für Ihre Arbeitsfläche</refpurpose>
 </refnamediv>
 
-<refsect1 id="description">
-<title>Description</title>
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>amor</command
+> <group
+><option
+>Allgemeine KDE-Optionen</option
+></group
+> <group
+><option
+>Allgemeine Qt-Optionen</option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
 
-<para><acronym>AMOR</acronym> stands for <quote>Amusing Misuse Of
-Resources</quote>. It provides several different characters who
-prance around your X screen doing tricks and giving you tips.</para>
+<refsect1>
+<title
+>Beschreibung</title>
 
-</refsect1>
+<para
+><acronym
+>AMOR</acronym
+> steht für Amüsanter Missbrauch von Ressourcen <quote
+>(Amusing Misuse Of Resources)</quote
+>. Es stellt ein paar verschiedene Typen bereit, die auf Ihrem Bildschirm paradieren, Tricks präsentieren und Ihnen Tipps geben.</para>
 
-
-<refsect1 id="options">
-<title>Options</title>
-
-<para>&amor; is configured graphically, and does not have any
-commandline options other than the standard &kde; and &Qt;
-options.</para>
+<para
+>&amor; ist Teil des Paketes &kde;-Toys.</para>
 
 </refsect1>
 
 <refsect1>
-<title>See Also</title>
+<title
+>Options</title>
 
-<para>More detailed user documentation is available from <ulink
-url="help:/amor">help:/amor</ulink> (either enter this &URL;
-into &konqueror;, or run <userinput><command>khelpcenter</command>
-<parameter>help:/amor</parameter></userinput>).</para>
+<para
+>&amor; wird grafisch konfiguriert und hat keine Befehlszeilenoptionen außer den Standard-&kde; und &Qt;-Optionen.</para>
 
 </refsect1>
 
 <refsect1>
-<title>Bugs</title>
+<title
+>Sehen Sie auch unter:</title>
 
-<para>&amor; currently only works with the &kwin; window manager.</para>
+<para
+>Sie können <userinput
+>help:/amor</userinput
+> in ein &konqueror;-Fenster eingeben und erhalten dann das ausführliche Benutzerhandbuch angezeigt.</para>
+
 </refsect1>
 
 <refsect1>
-<title>Authors</title>
-<para>&amor; was written by &Martin.R.Jones; &Martin.R.Jones.mail;.</para>
-<para>This manual page was prepared by <personname><firstname>Ben</firstname><surname>Burton</surname></personname> <email>bab@debian.org</email> for the &Debian; &GNU;/&Linux; system (but may be used by others).</para>
+<title
+>Bekannte Fehler</title>
+
+<para
+>&amor; funktioniert derzeit nur mit dem &kwin;-Fenstermanager.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Autoren</title>
+<para
+>&amor; wurde von <personname
+><firstname
+>Martin</firstname
+><othername
+>R.</othername
+><surname
+>Jones</surname
+></personname
+> <email
+>mjones@kde.org</email
+> geschrieben. Diese Handbuchseiten wurden von <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> für das Debian GNU/Linux-System geschrieben (können jedoch auch von anderen benutzt werden).</para>
 </refsect1>
 
 </refentry>
