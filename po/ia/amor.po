@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the amor package.
 #
-# giovanni <g.sora@tiscali.it>, 2021.
+# giovanni <g.sora@tiscali.it>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2021-10-23 21:24+0200\n"
+"PO-Revision-Date: 2023-01-09 11:48+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:1
@@ -141,25 +141,20 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr "Le gerente d file de KDE es nque un navigator web e uncliente FTP."
+msgstr "Le gerente de file de KDE (Dolphin) es anque un cliente FTP."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
-"Applicationes pote monstrar messages e consiolio in un bulla  de Amor per "
-"usar le appellos (call) de DCOP showMessage() e \n"
+"Applicationes pote monstrar messages e consilios in un bulla  de Amor per "
+"usar le appellos (call) de DBUS showMessage() e \n"
 "showTip()  "
 
 #: src/amor.cpp:255
