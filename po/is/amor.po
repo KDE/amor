@@ -7,20 +7,20 @@
 # Þröstur Svanbergsson <throstur@bylur.net>, 2004.
 # Björgvin Ragnarsson <nifgraup@hotmail.com>, 2004.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
-# Sveinn í Felli <sveinki@nett.is>, 2010, 2011, 2021.
+# Sveinn í Felli <sveinki@nett.is>, 2010, 2011, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2021-12-07 21:52+0000\n"
+"PO-Revision-Date: 2023-02-02 11:35+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -74,7 +74,7 @@ msgstr "Svarið er 42."
 #: data/tips-en:13
 #, kde-format
 msgid "It's not a bug. It's a misfeature."
-msgstr "Þetta er ekki villa.  Þetta er slæmur eiginleiki forritsins."
+msgstr "Þetta er ekki villa.  Þetta er óeðli forritsins."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:15
@@ -128,7 +128,7 @@ msgstr ""
 #: data/tips-en:29
 #, kde-format
 msgid "Alt+F1 pops-up the system menu."
-msgstr "Alt+F1 gefur þér kerfisvalmynd."
+msgstr "Alt+F1 gefur þér kerfisvalmyndina."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:31
@@ -149,25 +149,20 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr "KDE-skráastjórinn er líka vafri og FTP forrit."
+msgstr "KDE-skráastjórinn (Dolphin) er líka FTP-forrit."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
-"Forrit geta birt skilaboð og ábendingar í Amor kúlu með showMessage() og "
-"showTip() DCOP köllunum"
+"Forrit geta birt skilaboð og ábendingar í Amor-blöðru með showMessage() og\n"
+"showTip() D-Bus köllum."
 
 #: src/amor.cpp:255
 #, kde-format
@@ -224,7 +219,7 @@ msgstr "Alltaf efst"
 #: src/amordialog.cpp:98
 #, kde-format
 msgid "Show random tips"
-msgstr "Sýna handahófsábendingar"
+msgstr "Birta handahófsábendingar"
 
 #: src/amordialog.cpp:103
 #, kde-format
