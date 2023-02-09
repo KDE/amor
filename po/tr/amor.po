@@ -9,13 +9,13 @@
 # Ozan Çağlayan <ozan@pardus.org.tr>, 2010.
 # obsoleteman <tulliana@gmail.com>, 2008,2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdetoys-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2022-12-23 20:38+0300\n"
+"PO-Revision-Date: 2023-02-08 20:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:1
@@ -150,8 +150,8 @@ msgid ""
 "If you leave KDE applications open when you logout, they will be restarted "
 "automatically when you log back in."
 msgstr ""
-"Çıkışta kapatmadığınız KDE uygulamaları, bir sonraki açılışta otomatik "
-"olarak başlatılacaklardır."
+"Oturumu kapattığınızda KDE uygulamalarını açık bırakırsanız yeniden oturum "
+"açtığınızda bunlar otomatik olarak yeniden başlatılacaktır."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
