@@ -6,13 +6,13 @@
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Artem Sereda <overmind88@gmail.com>, 2010.
 # Alexander Potashev <aspotashev@gmail.com>, 2010.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2022-10-02 14:23+0300\n"
+"PO-Revision-Date: 2023-02-19 13:43+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -149,26 +149,21 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr "Диспетчер файлов KDE также является веб-браузером и клиентом FTP."
+msgstr "Диспетчер файлов KDE (Dolphin) также является клиентом FTP."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
-"Приложения могут отображать сообщения и подсказки в Amor с помощью вызовов "
-"DCOP showMessage() и\n"
-"showTip() соответственно"
+"Приложения могут отображать сообщения и подсказки в Amor с помощью вызовов D-"
+"Bus showMessage() и\n"
+"showTip() соответственно."
 
 #: src/amor.cpp:255
 #, kde-format
