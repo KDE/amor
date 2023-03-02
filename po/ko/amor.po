@@ -1,12 +1,12 @@
 # Translation of amor to Korean.
 # KIM KyungHeon <tody@teoal.net>, 2001.
-# Shinjo Park <kde@peremen.name>, 2007, 2010, 2019, 2020, 2021.
+# Shinjo Park <kde@peremen.name>, 2007, 2010, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2021-11-11 23:17+0100\n"
+"PO-Revision-Date: 2023-03-01 00:34+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:1
@@ -134,24 +134,19 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr "KDE 파일 관리자는 웹 브라우저와 FTP 클라이언트 역할도 합니다."
+msgstr "KDE 파일 관리자(Dolphin)는 FTP 클라이언트 역할도 합니다."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
-"프로그램에서 Amor에 showMessage()와 showTip() DCOP 호출을 사용해서\n"
+"프로그램에서 Amor에 showMessage()와 showTip() D-Bus 호출을 사용해서\n"
 "풍선을 보여줄 수 있습니다."
 
 #: src/amor.cpp:255
