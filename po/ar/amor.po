@@ -230,7 +230,7 @@ msgstr "اسمح بتلمحيات البرنامج"
 #: src/main.cpp:28
 #, kde-format
 msgid "KDE creature for your desktop"
-msgstr "مخلوق كدي لسطح المكتب الخاص بك"
+msgstr "مخلوق كِيدِي لسطح المكتب الخاص بك"
 
 #: src/main.cpp:38
 #, kde-format
