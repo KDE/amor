@@ -2,14 +2,15 @@
 # Copyright (C) 2007 Free Software Foundation, Inc.
 # Heiko Evermann <heiko@evermann.de>, 2002.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2007-11-27 18:46+0100\n"
-"Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
+"PO-Revision-Date: 2023-03-20 22:31+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -140,42 +141,30 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr "La KDE dosieradministrilo estas samtempe foliumilo kaj FTP-programo."
+msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
-"Aplikaĵoj povas montri mesaĝojn aŭ konsilojn en Amor globeto uzante la "
-"showMessage() kaj\n"
-"showTip () DCOP vokojn"
 
 #: src/amor.cpp:255
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Error reading theme: "
+#, kde-format
 msgctxt "@info:status"
 msgid "Error reading theme: %1"
-msgstr "Eraro dum legado de etoso: "
+msgstr "Eraro legante etoson: %1"
 
 #: src/amor.cpp:265 src/amor.cpp:272
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Error reading group: "
+#, kde-format
 msgctxt "@info:status"
 msgid "Error reading group: %1"
-msgstr "Eraro dum lego de grupo: "
+msgstr "Eraro legante grupon: %1"
 
 #: src/amor.cpp:518
 #, kde-format
@@ -197,8 +186,7 @@ msgid "&Quit"
 msgstr "&Fini"
 
 #: src/amordialog.cpp:42
-#, fuzzy, kde-format
-#| msgid "Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Options"
 msgstr "Opcioj"
@@ -269,56 +257,3 @@ msgstr "Martin R. Jones"
 #, kde-format
 msgid "Gerardo Puga"
 msgstr "Gerardo Puga"
-
-#~ msgid "No tip"
-#~ msgstr "Neniu konsileto"
-
-#~ msgid "Copyright 1999, Martin R. Jones"
-#~ msgstr "Kopirajto 1999, Martin R. Jones"
-
-#~ msgctxt "@label:textbox"
-#~ msgid ""
-#~ "Amor Version %1\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Amor versio %1\n"
-#~ "\n"
-
-#~ msgctxt "@label:textbox"
-#~ msgid ""
-#~ "Amusing Misuse Of Resources\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Amuza MisuzO de Risurcoj\n"
-#~ "\n"
-
-#~ msgctxt "@label:textbox"
-#~ msgid ""
-#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Kopirajto (c) 1999 ĉe Martin R. Jones <email>mjones@kde.org</email>\n"
-#~ "\n"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n"
-#~ msgstr "Origina aŭtoro: Martin R. Jones <email>mjones@kde.org</email>\n"
-
-#~ msgctxt "@label:textbox"
-#~ msgid ""
-#~ "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
-#~ "email>\n"
-#~ msgstr ""
-#~ "Nuna fleganto: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</email>\n"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "About Amor"
-#~ msgstr "Pri Amor"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Wolfram Diestel,Pierre-Marie Pédrot"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "wolfram@steloj.de,pedrotpmx@wanadoo.fr"
