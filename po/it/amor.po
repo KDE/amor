@@ -5,7 +5,7 @@
 # Nicola Ruggero <nicola@nxnt.org>, 2008, 2010, 2011.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009.
 # Pino Toscano <toscano.pino@tiscali.it>, 2019.
-# Paolo Zamponi <zapaolo@email.it>, 2022.
+# Paolo Zamponi <feus73@gmail.com>, 2022.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2022.
 #
 msgid ""
