@@ -1,19 +1,19 @@
 # translation of amor.po to galician
 # Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
-#
 # Jorge Baz López <lussac@mundo-r.com>, 2004.
 # Marce <mvillarino@users.sourceforge.net>, 2005.
 # mvillarino <mvillarino@users.sourceforge.net>, 2006, 2007, 2008, 2009.
 # Xabi G. Feal <xabigf@gmx.net>, 2006.
 # Marce Villarino <mvillarino@gmail.com>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2019-09-29 09:04+0200\n"
+"PO-Revision-Date: 2023-04-24 07:30+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:1
@@ -146,19 +146,13 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr ""
-"O xestor de ficheiros de KDE tamén é un navegador web e un cliente de FTP."
+msgstr "O xestor de ficheiros de KDE (Dolphin) tamén é un cliente de FTP."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
@@ -166,7 +160,7 @@ msgid ""
 msgstr ""
 "As aplicacións poden mostrar mensaxes e axudas nunha burbulla de Amor "
 "usando\n"
-"as chamadas DCOP showMessage() e showTip()"
+"as chamadas D-Bus showMessage() e showTip()"
 
 #: src/amor.cpp:255
 #, kde-format
@@ -200,8 +194,7 @@ msgid "&Quit"
 msgstr "&Saír"
 
 #: src/amordialog.cpp:42
-#, fuzzy, kde-format
-#| msgid "Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Options"
 msgstr "Configuración"
