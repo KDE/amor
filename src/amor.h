@@ -24,6 +24,7 @@
 #include <QQueue>
 
 #include <KWindowSystem>
+#include <KX11Extras>
 
 #include "amoranimation.h"
 #include "amortips.h"
@@ -63,7 +64,7 @@ class Amor : public QObject
         void slotWindowRemove(WId);
         void slotStackingChanged();
         void slotWindowChange(WId, NET::Properties, NET::Properties2);
-        void slotDesktopChange(int);
+        void slotDesktopChange(int desktop);
 
     protected slots:
         void slotMouseClicked(const QPoint &pos);
@@ -88,6 +89,7 @@ class Amor : public QObject
 
     private:
         KWindowSystem *mWin;
+        KX11Extras *mX11Win;
         xcb_window_t mTargetWin;                 // The window that the animations sits on
         QRect mTargetRect;              // The goemetry of the target window
         xcb_window_t mNextTarget;                // The window that will become the target

@@ -88,12 +88,13 @@ Amor::Amor()
     mState       = Normal;
 
     mWin = KWindowSystem::self();
+    mX11Win = KX11Extras::self();
     connect(mWin, &KWindowSystem::activeWindowChanged, this, &Amor::slotWindowActivate);
     connect(mWin, &KWindowSystem::windowRemoved, this, &Amor::slotWindowRemove);
     connect(mWin, &KWindowSystem::stackingOrderChanged, this, &Amor::slotStackingChanged);
     connect(mWin, QOverload<WId,NET::Properties,NET::Properties2>::of(&KWindowSystem::windowChanged),
             this, &Amor::slotWindowChange);
-    connect(mWin, &KWindowSystem::currentDesktopChanged, this, &Amor::slotDesktopChange);
+    connect(mX11Win, &KX11Extras::currentDesktopChanged, this, &Amor::slotDesktopChange);
 
     mAmor = new AmorWidget;
     connect( mAmor, SIGNAL(mouseClicked(QPoint)), SLOT(slotMouseClicked(QPoint)) );
