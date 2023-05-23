@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:43+0000\n"
-"PO-Revision-Date: 2022-12-23 23:01+0000\n"
+"PO-Revision-Date: 2023-05-22 17:51+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -153,7 +153,7 @@ msgid ""
 "showTip() D-Bus calls."
 msgstr ""
 "As aplicações podem mostrar mensagens e dicas num balão do Amor, usando\n"
-"as chamadas DCOP showMessage() e showTip()"
+"as chamadas D-Bus showMessage() e showTip()."
 
 #: src/amor.cpp:255
 #, kde-format
