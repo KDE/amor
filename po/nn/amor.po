@@ -153,8 +153,8 @@ msgid ""
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
-"Program kan visa meldingar og tips i Amor-bobler med D-Bus-kalla showMessage"
-"() og\n"
+"Program kan visa meldingar og tips i Amor-bobler med D-Bus-kalla "
+"showMessage() og\n"
 "showTip()."
 
 #: src/amor.cpp:255
