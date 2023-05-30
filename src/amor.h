@@ -57,7 +57,7 @@ class Amor : public QObject
 
         void reset();
 
-    public slots:
+    public Q_SLOTS:
         void screenSaverStopped();
         void screenSaverStarted();
         void slotWindowActivate(WId);
@@ -66,7 +66,7 @@ class Amor : public QObject
         void slotWindowChange(WId, NET::Properties, NET::Properties2);
         void slotDesktopChange(int desktop);
 
-    protected slots:
+    protected Q_SLOTS:
         void slotMouseClicked(const QPoint &pos);
         void slotTimeout();
         void slotCursorTimeout();

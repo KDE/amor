@@ -51,7 +51,7 @@ QString AmorTips::tip()
 {
     if (mTips.count()) {
         QString tip = mTips.at( QRandomGenerator::global()->bounded( mTips.count() ) );
-        return i18n( tip.toUtf8() );
+        return i18n(tip.toUtf8().constData());
     }
     return QString();
 }

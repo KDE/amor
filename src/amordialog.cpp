@@ -184,7 +184,7 @@ void AmorDialog::slotHighlighted(int index)
 void AmorDialog::slotOffset(int off)
 {
     mConfig.mOffset = off;
-    emit offsetChanged( mConfig.mOffset );
+    Q_EMIT offsetChanged( mConfig.mOffset );
 }
 
 
@@ -216,7 +216,7 @@ void AmorDialog::slotApplicationTips(bool tips)
 void AmorDialog::slotOk()
 {
     mConfig.write();
-    emit changed();
+    Q_EMIT changed();
     accept();
 }
 
@@ -224,7 +224,7 @@ void AmorDialog::slotOk()
 void AmorDialog::slotApply()
 {
     mConfig.write();
-    emit changed();
+    Q_EMIT changed();
 }
 
 
@@ -233,7 +233,7 @@ void AmorDialog::slotCancel()
     // restore offset
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     KConfigGroup cs( config, "General" );
-    emit offsetChanged( cs.readEntry( "Offset", 0 ) );
+    Q_EMIT offsetChanged( cs.readEntry( "Offset", 0 ) );
     reject();
 }
 

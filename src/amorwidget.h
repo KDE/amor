@@ -32,7 +32,7 @@ class AmorWidget : public QWidget
 
         void setPixmap(const QPixmap *pixmap);
 
-    signals:
+    Q_SIGNALS:
         void mouseClicked(const QPoint &pos);
         void dragged(const QPoint &delta, bool release);
 

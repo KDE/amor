@@ -95,7 +95,7 @@ const QPixmap *AmorAnimation::frame()
 void AmorAnimation::readConfig(const QSettings *config)
 {
     // Read the list of frames to display and load them into the pixmap manager.
-    mSequence = config->value( "Sequence" ).toStringList();
+    mSequence = config->value(QLatin1String("Sequence")).toStringList();
     int frames = mSequence.count();
     for(QStringList::Iterator it = mSequence.begin(); it != mSequence.end(); ++it) {
         const QPixmap *pixmap = AmorPixmapManager::manager()->load( *it );
@@ -106,7 +106,7 @@ void AmorAnimation::readConfig(const QSettings *config)
 
     // Read the delays between frames.
     QStringList list;
-    list = config->value( "Delay" ).toStringList();
+    list = config->value(QLatin1String("Delay")).toStringList();
     mDelay.resize( list.count() );
     for(int i = 0; i < list.count() && i < frames; ++i) {
         mDelay[i] = list.at( i ).toInt();
@@ -114,7 +114,7 @@ void AmorAnimation::readConfig(const QSettings *config)
 
     // Read the distance to move between frames and calculate the total
     // distance that this aniamtion moves from its starting position.
-    list = config->value( "Movement" ).toStringList();
+    list = config->value(QLatin1String("Movement")).toStringList();
     mMovement.resize( frames );
     for(int i = 0; i < list.count() && i < frames; ++i) {
         mMovement[i] = list.at( i ).toInt();
@@ -122,13 +122,13 @@ void AmorAnimation::readConfig(const QSettings *config)
     }
 
     // Read the hotspot for each frame.
-    QStringList entries = config->value( "HotspotX" ).toStringList();
+    QStringList entries = config->value(QLatin1String("HotspotX")).toStringList();
     mHotspot.resize( frames );
     for(int i = 0; i < entries.count() && i < frames; ++i) {
         mHotspot[i].setX( entries.at( i ).toInt() );
     }
 
-    entries = config->value( "HotspotY" ).toStringList();
+    entries = config->value(QLatin1String("HotspotY")).toStringList();
     for(int i = 0; i < entries.count() && i < frames; ++i) {
         mHotspot[i].setY( entries.at( i ).toInt() );
     }

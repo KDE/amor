@@ -32,11 +32,11 @@ class AmorDialog : public QDialog
     public:
         explicit AmorDialog(QWidget *parent = nullptr);
 
-    signals:
+    Q_SIGNALS:
         void changed();
         void offsetChanged(int);
 
-    protected slots:
+    protected Q_SLOTS:
         void slotHighlighted(int);
         void slotOnTop(bool);
         void slotRandomTips(bool);

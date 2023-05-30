@@ -55,10 +55,10 @@ bool AmorThemeManager::setTheme(const QString & file)
 
     delete mConfig;
     mConfig = new QSettings(mPath, QSettings::IniFormat);
-    mConfig->beginGroup("Config");
+    mConfig->beginGroup(QLatin1String("Config"));
 
     // Get the directory where the pixmaps are stored and tell the pixmap manager.
-    QString pixmapPath = mConfig->value( "PixmapPath" ).toString();
+    QString pixmapPath = mConfig->value(QLatin1String("PixmapPath")).toString();
     if( pixmapPath.isEmpty() ) {
         return false;
     }
@@ -71,7 +71,7 @@ bool AmorThemeManager::setTheme(const QString & file)
         mPath += pixmapPath;
     }
 
-    mStatic = mConfig->value( "Static" ).toBool();
+    mStatic = mConfig->value(QLatin1String("Static")).toBool();
 
     mMaximumSize.setWidth( 0 );
     mMaximumSize.setHeight( 0 );
@@ -107,7 +107,7 @@ bool AmorThemeManager::readGroup(const QString & seq)
     AmorAnimationGroup animList;
 
     // Read the list of available animations.
-    mConfig->beginGroup("Config");
+    mConfig->beginGroup(QLatin1String("Config"));
     QStringList list = mConfig->value(seq).toStringList();
     mConfig->endGroup();
 
@@ -122,7 +122,7 @@ bool AmorThemeManager::readGroup(const QString & seq)
 
     int entries = list.count();
     if ( entries == 0) {    // If no animations were available for this group, just add the base anim
-        mConfig->beginGroup("Base");
+        mConfig->beginGroup(QLatin1String("Base"));
         AmorAnimation *anim = new AmorAnimation( mConfig);
         if( anim ) {
             animList.append( anim );

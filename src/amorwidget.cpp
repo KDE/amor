@@ -25,8 +25,8 @@
 #include <QDebug>
 
 AmorWidget::AmorWidget()
-  : QWidget( 0, Qt::X11BypassWindowManagerHint | Qt::WindowStaysOnTopHint ),
-    m_pixmap( 0 ),
+  : QWidget( nullptr, Qt::X11BypassWindowManagerHint | Qt::WindowStaysOnTopHint ),
+    m_pixmap( nullptr ),
     m_dragging( false )
 {
 }
@@ -73,7 +73,7 @@ void AmorWidget::mouseMoveEvent(QMouseEvent *me)
             m_dragging = true;
         }
         if( m_dragging ) {
-            emit dragged( me->globalPos() - m_clickPos, false );
+            Q_EMIT dragged( me->globalPos() - m_clickPos, false );
             m_clickPos = me->globalPos();
         }
     }
@@ -83,10 +83,10 @@ void AmorWidget::mouseMoveEvent(QMouseEvent *me)
 void AmorWidget::mouseReleaseEvent(QMouseEvent *me)
 {
     if( m_dragging ) {
-        emit dragged( me->globalPos() - m_clickPos, true );
+        Q_EMIT dragged( me->globalPos() - m_clickPos, true );
     }
     else if( me->button() == Qt::RightButton ) {
-        emit mouseClicked(me->globalPos());
+        Q_EMIT mouseClicked(me->globalPos());
     }
 
     m_clickPos = QPoint();
