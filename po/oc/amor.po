@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:43+0000\n"
+"POT-Creation-Date: 2023-05-31 00:44+0000\n"
 "PO-Revision-Date: 2008-08-05 22:28+0200\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (lengadocian) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -145,7 +145,7 @@ msgid ""
 "showTip() D-Bus calls."
 msgstr ""
 
-#: src/amor.cpp:255
+#: src/amor.cpp:256
 #, fuzzy, kde-format
 #| msgctxt "@info:status"
 #| msgid "Error reading theme: "
@@ -153,7 +153,7 @@ msgctxt "@info:status"
 msgid "Error reading theme: %1"
 msgstr "Problema al moment de legir lo tèma : "
 
-#: src/amor.cpp:265 src/amor.cpp:272
+#: src/amor.cpp:266 src/amor.cpp:273
 #, fuzzy, kde-format
 #| msgctxt "@info:status"
 #| msgid "Error reading group: "
@@ -161,20 +161,20 @@ msgctxt "@info:status"
 msgid "Error reading group: %1"
 msgstr "Problema al moment de legir lo grop : "
 
-#: src/amor.cpp:518
+#: src/amor.cpp:519
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Help"
 msgstr "&Ajuda"
 
 #. i18n'ed
-#: src/amor.cpp:522
+#: src/amor.cpp:523
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Configure..."
 msgstr "&Configurar..."
 
-#: src/amor.cpp:525
+#: src/amor.cpp:526
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Quit"

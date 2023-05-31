@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: amor.po 1640682 2022-12-24 01:42:27Z scripty $
+# $Id: amor.po 1652869 2023-05-31 01:30:08Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2010, 2019.
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:43+0000\n"
+"POT-Creation-Date: 2023-05-31 00:44+0000\n"
 "PO-Revision-Date: 2022-12-23 18:32+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -171,32 +171,32 @@ msgstr ""
 "Приложенията могат да показват съвети в балончета, като използва обръщенията "
 "към D-Bus  showMessage() и showTip()."
 
-#: src/amor.cpp:255
+#: src/amor.cpp:256
 #, kde-format
 msgctxt "@info:status"
 msgid "Error reading theme: %1"
 msgstr "Грешка при четенето на тема: %1"
 
-#: src/amor.cpp:265 src/amor.cpp:272
+#: src/amor.cpp:266 src/amor.cpp:273
 #, kde-format
 msgctxt "@info:status"
 msgid "Error reading group: %1"
 msgstr "Грешка при четенето на група: %1"
 
-#: src/amor.cpp:518
+#: src/amor.cpp:519
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Help"
 msgstr "&Помощ"
 
 #. i18n'ed
-#: src/amor.cpp:522
+#: src/amor.cpp:523
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Configure..."
 msgstr "&Настройване..."
 
-#: src/amor.cpp:525
+#: src/amor.cpp:526
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Quit"

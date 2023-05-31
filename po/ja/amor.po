@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:43+0000\n"
+"POT-Creation-Date: 2023-05-31 00:44+0000\n"
 "PO-Revision-Date: 2007-08-14 23:00+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10.2\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -165,7 +165,7 @@ msgstr ""
 "アプリケーションは showMessage() と showTip() DCOP 呼び出しを使って、\n"
 "Amor バブルの中にメッセージやヒントを表示できます。"
 
-#: src/amor.cpp:255
+#: src/amor.cpp:256
 #, fuzzy, kde-format
 #| msgctxt "@info:status"
 #| msgid "Error reading theme: "
@@ -173,7 +173,7 @@ msgctxt "@info:status"
 msgid "Error reading theme: %1"
 msgstr "テーマの読み込みでエラー: "
 
-#: src/amor.cpp:265 src/amor.cpp:272
+#: src/amor.cpp:266 src/amor.cpp:273
 #, fuzzy, kde-format
 #| msgctxt "@info:status"
 #| msgid "Error reading group: "
@@ -181,20 +181,20 @@ msgctxt "@info:status"
 msgid "Error reading group: %1"
 msgstr "グループの読み込みでエラー: "
 
-#: src/amor.cpp:518
+#: src/amor.cpp:519
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Help"
 msgstr "ヘルプ(&H)"
 
 #. i18n'ed
-#: src/amor.cpp:522
+#: src/amor.cpp:523
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Configure..."
 msgstr "設定(&C)..."
 
-#: src/amor.cpp:525
+#: src/amor.cpp:526
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Quit"

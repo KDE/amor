@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdetoys/amor.pot\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:43+0000\n"
+"POT-Creation-Date: 2023-05-31 00:44+0000\n"
 "PO-Revision-Date: 2004-09-20 15:44+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: br <LL@li.org>\n"
@@ -142,21 +142,21 @@ msgid ""
 "showTip() D-Bus calls."
 msgstr ""
 
-#: src/amor.cpp:255
+#: src/amor.cpp:256
 #, fuzzy, kde-format
 #| msgid "Error reading theme: "
 msgctxt "@info:status"
 msgid "Error reading theme: %1"
 msgstr "Fazi en ur lenn ar c'hiz :"
 
-#: src/amor.cpp:265 src/amor.cpp:272
+#: src/amor.cpp:266 src/amor.cpp:273
 #, fuzzy, kde-format
 #| msgid "Error reading group: "
 msgctxt "@info:status"
 msgid "Error reading group: %1"
 msgstr "Fazi en ur lenn ar strollad :"
 
-#: src/amor.cpp:518
+#: src/amor.cpp:519
 #, fuzzy, kde-format
 #| msgid "&Help"
 msgctxt "@action:inmenu Amor"
@@ -164,14 +164,14 @@ msgid "&Help"
 msgstr "&Skoazell"
 
 #. i18n'ed
-#: src/amor.cpp:522
+#: src/amor.cpp:523
 #, fuzzy, kde-format
 #| msgid "&Configure..."
 msgctxt "@action:inmenu Amor"
 msgid "&Configure..."
 msgstr "&Kefluniañ ..."
 
-#: src/amor.cpp:525
+#: src/amor.cpp:526
 #, fuzzy, kde-format
 #| msgid "&Quit"
 msgctxt "@action:inmenu Amor"

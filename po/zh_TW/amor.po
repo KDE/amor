@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:43+0000\n"
+"POT-Creation-Date: 2023-05-31 00:44+0000\n"
 "PO-Revision-Date: 2019-01-16 21:15+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -153,32 +153,32 @@ msgstr ""
 "應用程式可以用 showMessage() 與 showTip() 這兩個 DCOP 呼叫，來在 Amor 泡泡中"
 "顯示訊息與提示。"
 
-#: src/amor.cpp:255
+#: src/amor.cpp:256
 #, kde-format
 msgctxt "@info:status"
 msgid "Error reading theme: %1"
 msgstr "讀取佈景發生錯誤：%1"
 
-#: src/amor.cpp:265 src/amor.cpp:272
+#: src/amor.cpp:266 src/amor.cpp:273
 #, kde-format
 msgctxt "@info:status"
 msgid "Error reading group: %1"
 msgstr "讀取群組發生錯誤：%1"
 
-#: src/amor.cpp:518
+#: src/amor.cpp:519
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Help"
 msgstr "說明(&H)"
 
 #. i18n'ed
-#: src/amor.cpp:522
+#: src/amor.cpp:523
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Configure..."
 msgstr "設定(&C)..."
 
-#: src/amor.cpp:525
+#: src/amor.cpp:526
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Quit"

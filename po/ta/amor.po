@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:43+0000\n"
+"POT-Creation-Date: 2023-05-31 00:44+0000\n"
 "PO-Revision-Date: 2022-12-22 19:52+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -156,33 +156,33 @@ msgstr ""
 "showMessage() மற்றும் showTip() எனும் D-Bus அம்சங்களைப் பயன்படுத்தி, செயலிகளால் "
 "செய்திகளையும் குறிப்புகளையும் அமோரில் காட்டலாம்."
 
-#: src/amor.cpp:255
+#: src/amor.cpp:256
 #, kde-format
 msgctxt "@info:status"
 msgid "Error reading theme: %1"
 msgstr "தோற்றத்திட்டத்தைப் படிப்பதில் சிக்கல்: %1"
 
-#: src/amor.cpp:265 src/amor.cpp:272
+#: src/amor.cpp:266 src/amor.cpp:273
 #, fuzzy, kde-format
 #| msgid "Error reading group: "
 msgctxt "@info:status"
 msgid "Error reading group: %1"
 msgstr "குழுவை படிப்பதில் பிழை"
 
-#: src/amor.cpp:518
+#: src/amor.cpp:519
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Help"
 msgstr "&உதவி"
 
 #. i18n'ed
-#: src/amor.cpp:522
+#: src/amor.cpp:523
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Configure..."
 msgstr "&அமை..."
 
-#: src/amor.cpp:525
+#: src/amor.cpp:526
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Quit"

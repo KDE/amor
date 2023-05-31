@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:43+0000\n"
+"POT-Creation-Date: 2023-05-31 00:44+0000\n"
 "PO-Revision-Date: 2022-12-28 22:27+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -162,32 +162,32 @@ msgstr ""
 "showMessage() eta\n"
 "showTip() D-Bus deiak erabiliz."
 
-#: src/amor.cpp:255
+#: src/amor.cpp:256
 #, kde-format
 msgctxt "@info:status"
 msgid "Error reading theme: %1"
 msgstr "Errorea gaia irakurtzean: %1"
 
-#: src/amor.cpp:265 src/amor.cpp:272
+#: src/amor.cpp:266 src/amor.cpp:273
 #, kde-format
 msgctxt "@info:status"
 msgid "Error reading group: %1"
 msgstr "Errorea taldea irakurtzean: %1"
 
-#: src/amor.cpp:518
+#: src/amor.cpp:519
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Help"
 msgstr "&Laguntza"
 
 #. i18n'ed
-#: src/amor.cpp:522
+#: src/amor.cpp:523
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Configure..."
 msgstr "&Konfiguratu..."
 
-#: src/amor.cpp:525
+#: src/amor.cpp:526
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Quit"
