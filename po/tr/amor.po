@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kdetoys-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-31 00:44+0000\n"
-"PO-Revision-Date: 2023-02-08 20:33+0300\n"
+"PO-Revision-Date: 2023-06-04 01:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:1
@@ -96,7 +96,8 @@ msgstr ""
 #, kde-format
 msgid "You can use Alt+Tab to switch between applications."
 msgstr ""
-"Uygulamalar arasında dolaşmak için Alt+Tab düğmelerini kullanabilirsiniz."
+"Uygulamalar arasında dolaşmak için Seçenek+Sekme düğmelerini "
+"kullanabilirsiniz."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:21
@@ -104,21 +105,22 @@ msgstr ""
 msgid ""
 "Press Ctrl+Esc to show the applications running in your current session."
 msgstr ""
-"Geçerli oturumda çalışan uygulamalarınızı görmek için Ctrl+Esc düğmelerine "
-"basın."
+"Geçerli oturumda çalışan uygulamalarınızı görmek için Kontrol+Esc "
+"düğmelerine basın."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:23
 #, kde-format
 msgid "Alt+F2 displays a small window that you can type a command into."
-msgstr "Alt-F2 komut girebileceğiniz küçük bir pencere görüntüler."
+msgstr "Seçenek-F2 komut girebileceğiniz küçük bir pencere görüntüler."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:25
 #, kde-format
 msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
 msgstr ""
-"Ctrl+F1 - Ctrl+F8 arası düğmeler sanal masaüstlerinde dolaşmanızı sağlar."
+"Kontrol+F1 - Kontrol+F8 arası düğmeler sanal masaüstlerinde dolaşmanızı "
+"sağlar."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:27
@@ -132,7 +134,7 @@ msgstr ""
 #: data/tips-en:29
 #, kde-format
 msgid "Alt+F1 pops-up the system menu."
-msgstr "Alt+F1 sistem menüsünü çıkarır."
+msgstr "Seçenek+F1 sistem menüsünü çıkarır."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:31
@@ -140,8 +142,8 @@ msgstr "Alt+F1 sistem menüsünü çıkarır."
 msgid ""
 "Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
 msgstr ""
-"Ctrl+Alt+Esc, yanıt vermeyen (kilitlenmiş) bir uygulamayı öldürmek için "
-"kullanılabilir."
+"Kontrol+Seçenek+Vazgeç, yanıt vermeyen (kilitlenmiş) bir uygulamayı öldürmek "
+"için kullanılabilir."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:33
