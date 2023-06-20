@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-31 00:44+0000\n"
-"PO-Revision-Date: 2023-04-24 07:30+0200\n"
+"PO-Revision-Date: 2023-06-19 12:19+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:1
@@ -52,7 +52,7 @@ msgid ""
 "It is much easier to suggest solutions when you know nothing about the "
 "problem."
 msgstr ""
-"E moito máis fácil suxerir solucións cando non sabes nada acerca do problema."
+"E moito máis fácil suxerir solucións cando non sabes nada sobre o problema."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:9
@@ -85,7 +85,7 @@ msgid ""
 "To maximize a window vertically, click the maximize button with the middle "
 "mouse button."
 msgstr ""
-"Para maximizar verticalmente unha fiestra, prema no botón de maximizar co "
+"Para maximizar verticalmente unha xanela, prema no botón de maximizar co "
 "botón central do rato."
 
 #. i18n: ectx: @info:tipoftheday
@@ -106,7 +106,7 @@ msgstr "Prema Ctrl+Esc para ver as aplicacións en execución na sesión actual.
 #, kde-format
 msgid "Alt+F2 displays a small window that you can type a command into."
 msgstr ""
-"Se preme Alt+F2 aparecerá unha fiestra na que pode escribir unha orde para "
+"Se preme Alt+F2 aparecerá unha xanela na que pode escribir unha orde para "
 "executala."
 
 #. i18n: ectx: @info:tipoftheday
@@ -158,21 +158,20 @@ msgid ""
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
-"As aplicacións poden mostrar mensaxes e axudas nunha burbulla de Amor "
-"usando\n"
+"As aplicacións poden amosar mensaxes e axudas nunha burbulla de Amor usando\n"
 "as chamadas D-Bus showMessage() e showTip()"
 
 #: src/amor.cpp:256
 #, kde-format
 msgctxt "@info:status"
 msgid "Error reading theme: %1"
-msgstr "Erro ao ler o tema: %1"
+msgstr "Erro ao ler o tema: %1."
 
 #: src/amor.cpp:266 src/amor.cpp:273
 #, kde-format
 msgctxt "@info:status"
 msgid "Error reading group: %1"
-msgstr "Erro ao ler o grupo: %1"
+msgstr "Erro ao ler o grupo: %1."
 
 #: src/amor.cpp:519
 #, kde-format
@@ -217,7 +216,7 @@ msgstr "Sempre encima"
 #: src/amordialog.cpp:98
 #, kde-format
 msgid "Show random tips"
-msgstr "Mostrar consellos ao chou"
+msgstr "Amosar consellos ao chou"
 
 #: src/amordialog.cpp:103
 #, kde-format
