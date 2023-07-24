@@ -82,14 +82,14 @@ msgstr "창을 세로로 최대화하려면 최대화 버튼을 가운데 단추
 #: data/tips-en:19
 #, kde-format
 msgid "You can use Alt+Tab to switch between applications."
-msgstr "Alt+Tab 키를 누르면 다른 프로그램으로 전환할 수 있습니다."
+msgstr "Alt+Tab 키를 누르면 다른 앱으로 전환할 수 있습니다."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:21
 #, kde-format
 msgid ""
 "Press Ctrl+Esc to show the applications running in your current session."
-msgstr "Ctrl+Esc 키를 누르면 지금 실행 중인 프로그램을 보여 줍니다."
+msgstr "Ctrl+Esc 키를 누르면 지금 실행 중인 앱을 보여 줍니다."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:23
@@ -120,8 +120,7 @@ msgstr "Alt+F1을 누르면 시스템 메뉴가 뜹니다."
 #, kde-format
 msgid ""
 "Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
-msgstr ""
-"Ctrl+Alt+Esc 키를 누르면 응답하지 않는 프로그램을 강제로 종료할 수 있습니다."
+msgstr "Ctrl+Alt+Esc 키를 누르면 응답하지 않는 앱을 강제로 종료할 수 있습니다."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:33
@@ -129,8 +128,7 @@ msgstr ""
 msgid ""
 "If you leave KDE applications open when you logout, they will be restarted "
 "automatically when you log back in."
-msgstr ""
-"KDE 프로그램을 실행시킨 채로 세션을 끝내면 다음 로그인 때 다시 실행됩니다."
+msgstr "KDE 앱을 실행시킨 채로 세션을 끝내면 다음 로그인 때 다시 실행됩니다."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
@@ -146,7 +144,7 @@ msgid ""
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
-"프로그램에서 Amor에 showMessage()와 showTip() D-Bus 호출을 사용해서\n"
+"앱에서 Amor에 showMessage()와 showTip() D-Bus 호출을 사용해서\n"
 "풍선을 보여줄 수 있습니다."
 
 #: src/amor.cpp:256
@@ -214,7 +212,7 @@ msgstr "무작위적 캐릭터 사용"
 #: src/amordialog.cpp:108
 #, kde-format
 msgid "Allow application tips"
-msgstr "프로그램 팁 표시"
+msgstr "앱 팁 표시"
 
 #: src/main.cpp:28
 #, kde-format
