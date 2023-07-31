@@ -4,13 +4,13 @@
 # Per Lindström <per.lindstrom@osd.privataccess.nu>, 2000.
 # Anders Widell <awl@hem.passagen.se>, 2000.
 # Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2007, 2010.
-# Stefan Asserhall <stefan.asserhall@bredband.net>, 2010, 2019, 2021.
+# Stefan Asserhall <stefan.asserhall@bredband.net>, 2010, 2019, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-31 00:44+0000\n"
-"PO-Revision-Date: 2021-10-10 09:50+0200\n"
+"PO-Revision-Date: 2023-07-30 10:38+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -143,25 +143,20 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr "KDE:s filhanterare är också en webbläsare och ett FTP-program."
+msgstr "KDE:s filhanterare (Dolphin )är också ett FTP-program."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
 "Program kan visa meddelanden och tips i en Amor-bubbla genom att\n"
-"använda DCOP-anropen showMessage() och showTip()."
+"använda D-Bus-anropen showMessage() och showTip()."
 
 #: src/amor.cpp:256
 #, kde-format
