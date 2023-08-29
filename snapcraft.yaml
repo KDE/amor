@@ -2,6 +2,7 @@ name: amor
 confinement: strict
 grade: stable
 base: core22
+version: git
 summary: A fun app that bounces on top of the current window.
 description: Amusing Misuse of Resources animation that sits on top of the current window.
 icon: $CRAFT_PROJECT_DIR/snap/gui/logo.png
