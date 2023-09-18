@@ -89,7 +89,7 @@ msgstr ""
 #: data/tips-en:19
 #, kde-format
 msgid "You can use Alt+Tab to switch between applications."
-msgstr "Podeu utilitzar Alt+Tab per a canviar entre les aplicacions."
+msgstr "Podeu utilitzar «Alt+Tab» per a canviar entre les aplicacions."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:21
@@ -97,22 +97,23 @@ msgstr "Podeu utilitzar Alt+Tab per a canviar entre les aplicacions."
 msgid ""
 "Press Ctrl+Esc to show the applications running in your current session."
 msgstr ""
-"Premeu Ctrl+Esc per a mostrar les aplicacions que s'estan executant en la "
+"Premeu «Ctrl+Esc» per a mostrar les aplicacions que s'estan executant en la "
 "sessió actual."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:23
 #, kde-format
 msgid "Alt+F2 displays a small window that you can type a command into."
-msgstr "Alt+F2 mostra una finestra xicoteta que permet teclejar-hi una ordre."
+msgstr ""
+"«Alt+F2» mostra una finestra xicoteta que permet teclejar-hi una ordre."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:25
 #, kde-format
 msgid "Ctrl+F1 to Ctrl+F8 can be used to switch virtual desktops."
 msgstr ""
-"Des de Ctrl+F1 a Ctrl+F8 es pot utilitzar per a canviar entre escriptoris "
-"virtuals."
+"Des de «Ctrl+F1» a «Ctrl+F8» es pot utilitzar per a canviar entre "
+"escriptoris virtuals."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:27
@@ -124,7 +125,7 @@ msgstr "Podeu moure botons en el quadro utilitzant el botó del mig del ratolí.
 #: data/tips-en:29
 #, kde-format
 msgid "Alt+F1 pops-up the system menu."
-msgstr "Alt+F1 mostra el menú del sistema."
+msgstr "«Alt+F1» mostra el menú del sistema."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:31
@@ -132,7 +133,7 @@ msgstr "Alt+F1 mostra el menú del sistema."
 msgid ""
 "Ctrl+Alt+Esc can be used to kill an application that has stopped responding."
 msgstr ""
-"Ctrl+Alt+Esc es pot utilitzar per a matar una aplicació que ha deixat de "
+"«Ctrl+Alt+Esc» es pot utilitzar per a matar una aplicació que ha deixat de "
 "respondre."
 
 #. i18n: ectx: @info:tipoftheday
