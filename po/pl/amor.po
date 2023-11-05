@@ -1,5 +1,5 @@
 # translation of amor.po to
-# Version: $Revision: 1652869 $
+# Version: $Revision: 1664120 $
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2007.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-31 00:44+0000\n"
+"POT-Creation-Date: 2023-11-05 12:25+0000\n"
 "PO-Revision-Date: 2023-01-04 20:36+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
