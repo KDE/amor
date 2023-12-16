@@ -7,27 +7,27 @@ msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:25+0000\n"
-"PO-Revision-Date: 2007-08-14 20:22+0300\n"
-"Last-Translator: tahmar1900 <tahmar1900@gmail.com>\n"
+"PO-Revision-Date: 2023-12-15 22:30+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:1
 #, kde-format
 msgid "Don't run with scissors."
-msgstr "אל תרוץ עם מספריים."
+msgstr "לא לרוץ עם מספריים."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:3
 #, kde-format
 msgid "Never trust car salesmen or politicians."
-msgstr "לעולם אל תבטח במוכרי מכוניות או פוליטיקאים."
+msgstr "אסור לבטוח במוכרי מכוניות או פוליטיקאים."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:5
@@ -51,7 +51,7 @@ msgstr "הרבה יותר קל להציע פיתרונות כשאין לך מו�
 #: data/tips-en:9
 #, kde-format
 msgid "You can never have too much memory or disk space."
-msgstr "אף פעם לא יכול להיות לך יותר מדיי מקום בזיכרון או בדיסק."
+msgstr "אף פעם לא יכול להיות לך יותר מדי מקום בזיכרון או בכונן."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:11
@@ -63,13 +63,13 @@ msgstr "התשובה היא 42."
 #: data/tips-en:13
 #, kde-format
 msgid "It's not a bug. It's a misfeature."
-msgstr "זה לא באג. זו תכונה שלילית."
+msgstr "זו לא תקלה. זו יכולת שלילית."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:15
 #, kde-format
 msgid "Help stamp out and abolish redundancy."
-msgstr "עזרו לחסל ולעקור מהשורש את תופעת כפל הלשון."
+msgstr "חובה לחסל ולהשמיד את תופעת היתירות."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:17
@@ -77,26 +77,27 @@ msgstr "עזרו לחסל ולעקור מהשורש את תופעת כפל הל�
 msgid ""
 "To maximize a window vertically, click the maximize button with the middle "
 "mouse button."
-msgstr "כדי להגדיל חלון אנכית, לחץ על כפתור ההגדלה עם הלחצן האמצעי של העכבר."
+msgstr ""
+"כדי להגדיל חלון אנכית, יש ללחוץ על כפתור ההגדלה עם הלחצן האמצעי של העכבר."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:19
 #, kde-format
 msgid "You can use Alt+Tab to switch between applications."
-msgstr "באפשרותך להשתמש ב־Alt+Tab כדי לעבור בין יישומים."
+msgstr "אפשר להשתמש ב־Alt+Tab כדי לעבור בין יישומים."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:21
 #, kde-format
 msgid ""
 "Press Ctrl+Esc to show the applications running in your current session."
-msgstr "הקש על Ctrl+Esc כדי להציג את היישומים הפועלים בהפעלה הנוכחית שלך."
+msgstr "לחיצה על Ctrl+Esc תציג את היישומים הפועלים בהפעלה הנוכחית שלך."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:23
 #, kde-format
 msgid "Alt+F2 displays a small window that you can type a command into."
-msgstr "שילוב המקשים Alt+F2 מציג חלון קטן שבאפשרותך להקליד בו פקודה."
+msgstr "שילוב המקשים Alt+F2 מציג חלון קטן שאפשר להקליד בו פקודה."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:25
@@ -108,13 +109,13 @@ msgstr "ניתן להשתמש ב־Ctrl+F1 עד Ctrl+F8 כדי לעבור בין 
 #: data/tips-en:27
 #, kde-format
 msgid "You can move buttons on the panel using the middle mouse button."
-msgstr "באפשרותך להזיז את הכפתורים שעל הלוח באמצעות הלחצן האמצעי של העכבר."
+msgstr "אפשר להזיז את הכפתורים שעל הלוח באמצעות לחצן העכבר האמצעי."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:29
 #, kde-format
 msgid "Alt+F1 pops-up the system menu."
-msgstr "שילוב המקשים Alt+F1 מקפיץ את תפריט המערכת."
+msgstr "צירוף המקשים Alt+F1 מקפיץ את תפריט המערכת."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:31
@@ -130,69 +131,59 @@ msgid ""
 "If you leave KDE applications open when you logout, they will be restarted "
 "automatically when you log back in."
 msgstr ""
-"אם תשאיר יישומי KDE פתוחים כשתצא, הם יופעלו מחדש באופן אוטומטי כאשר תיכנס "
-"חזרה."
+"השארת יישומי KDE פתוחים בעת היציאה המערכת, תפעיל אותם מחדש אוטומטית בכניסה "
+"בחזרה."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr "מנהל הקבצים של KDE הוא גם דפדפן אינטרנט ולקוח FTP."
+msgstr "מנהל הקבצים של KDE‏ (Dolphin) הוא גם לקוח FTP."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
-"יישומים יכולים להציג הודעות ועצות בבועת Amor בעזרת הקריאות showMessage()\n"
-" ו־showTip() של DCOP"
+"יישומים יכולים להציג הודעות ועצות בבועת Amor בעזרת הקריאות showMessage()‎\n"
+" ו־showTip()‎ של D-Bus."
 
 #: src/amor.cpp:256
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Error reading theme: "
+#, kde-format
 msgctxt "@info:status"
 msgid "Error reading theme: %1"
-msgstr "שגיאה בקריאת ערכת הנושא: "
+msgstr "שגיאה בקריאת ערכת עיצוב: %1"
 
 #: src/amor.cpp:266 src/amor.cpp:273
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Error reading group: "
+#, kde-format
 msgctxt "@info:status"
 msgid "Error reading group: %1"
-msgstr "שגיאה בקריאת הקבוצה: "
+msgstr "שגיאה בקריאת הקבוצה: %1"
 
 #: src/amor.cpp:519
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Help"
-msgstr "&עזרה"
+msgstr "ע&זרה"
 
 #. i18n'ed
 #: src/amor.cpp:523
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Configure..."
-msgstr "&הגדרות..."
+msgstr "ה&גדרות…"
 
 #: src/amor.cpp:526
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Quit"
-msgstr "&יציאה"
+msgstr "י&ציאה"
 
 #: src/amordialog.cpp:42
-#, fuzzy, kde-format
-#| msgid "Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Options"
 msgstr "אפשרויות"
@@ -200,12 +191,12 @@ msgstr "אפשרויות"
 #: src/amordialog.cpp:65
 #, kde-format
 msgid "Theme:"
-msgstr "ערכת נושא:"
+msgstr "ערכת עיצוב:"
 
 #: src/amordialog.cpp:82
 #, kde-format
 msgid "Offset:"
-msgstr "מיקום:"
+msgstr "היסט:"
 
 #: src/amordialog.cpp:93
 #, kde-format
@@ -215,22 +206,22 @@ msgstr "תמיד עליון"
 #: src/amordialog.cpp:98
 #, kde-format
 msgid "Show random tips"
-msgstr "הצג עצות אקראיות"
+msgstr "הצגת עצות אקראיות"
 
 #: src/amordialog.cpp:103
 #, kde-format
 msgid "Use a random character"
-msgstr "השתמש ביצור אקראי"
+msgstr "להשתמש ביצור אקראי"
 
 #: src/amordialog.cpp:108
 #, kde-format
 msgid "Allow application tips"
-msgstr "אפשר עצות של היישום"
+msgstr "לאפשר עצות של היישום"
 
 #: src/main.cpp:28
 #, kde-format
 msgid "KDE creature for your desktop"
-msgstr "יצור KDE לשולחן העבודה שלך."
+msgstr "יצור KDE לשולחן העבודה שלך"
 
 #: src/main.cpp:38
 #, kde-format
@@ -243,11 +234,13 @@ msgid ""
 "1999 by Martin R. Jones\n"
 "2010 by Stefan Böhmann"
 msgstr ""
+"1999 מאת מרטין ר. ג׳ונס\n"
+"2010 מאת סטפן בויהמן"
 
 #: src/main.cpp:44
 #, kde-format
 msgid "Stefan Böhmann"
-msgstr ""
+msgstr "סטפן בויהמן"
 
 #: src/main.cpp:45
 #, kde-format
@@ -257,12 +250,12 @@ msgstr "מתחזק נוכחי"
 #: src/main.cpp:51
 #, kde-format
 msgid "Martin R. Jones"
-msgstr "Martin R. Jones"
+msgstr "מרטין ר. ג׳ונס"
 
 #: src/main.cpp:52
 #, kde-format
 msgid "Gerardo Puga"
-msgstr "Gerardo Puga"
+msgstr "ג׳רארדו פוגה"
 
 #~ msgid "No tip"
 #~ msgstr "אין עצה"
