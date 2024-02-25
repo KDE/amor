@@ -1,22 +1,22 @@
 # translation of amor.po to Romanian
 # Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
 # Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2011, 2020.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2011, 2020, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: amor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:25+0000\n"
-"PO-Revision-Date: 2020-09-18 23:58+0100\n"
+"PO-Revision-Date: 2024-02-18 14:50+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:1
@@ -146,25 +146,20 @@ msgstr ""
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:35
-#, fuzzy, kde-format
-#| msgid "The KDE file manager is also a web browser and an FTP client."
+#, kde-format
 msgid "The KDE file manager (Dolphin) is also an FTP client."
-msgstr "Gestionarul de fișiere KDE este și navigator de web și client de FTP."
+msgstr "Gestionarul de fișiere KDE (Dolphin) este și client de FTP."
 
 #. i18n: ectx: @info:tipoftheday
 #: data/tips-en:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applications can display messages and tips in an Amor bubble using the "
-#| "showMessage() and\n"
-#| "showTip() DCOP calls"
+#, kde-format
 msgid ""
 "Applications can display messages and tips in an Amor bubble using the "
 "showMessage() and\n"
 "showTip() D-Bus calls."
 msgstr ""
 "Aplicațiile pot afișa mesaje și sfaturi într-un balon Amor folosind apeluri "
-"de funcție DCOP showMessage() și showTip()"
+"de funcție D-Bus showMessage() și showTip()"
 
 #: src/amor.cpp:256
 #, kde-format
@@ -198,8 +193,7 @@ msgid "&Quit"
 msgstr "&Termină"
 
 #: src/amordialog.cpp:42
-#, fuzzy, kde-format
-#| msgid "Options"
+#, kde-format
 msgctxt "@title:window"
 msgid "Options"
 msgstr "Opțiuni"
@@ -272,58 +266,3 @@ msgstr "Martin R. Jones"
 #, kde-format
 msgid "Gerardo Puga"
 msgstr "Gerardo Puga"
-
-#~ msgid "No tip"
-#~ msgstr "Fără sfaturi"
-
-#~ msgid "Copyright 1999, Martin R. Jones"
-#~ msgstr "Drept de autor (c) 1999 Martin R. Jones"
-
-#~ msgctxt "@label:textbox"
-#~ msgid ""
-#~ "Amor Version %1\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Amor versiunea %1\n"
-#~ "\n"
-
-#~ msgctxt "@label:textbox"
-#~ msgid ""
-#~ "Amusing Misuse Of Resources\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Amusing Misuse Of Resources\n"
-#~ "(Risipă Amuzantă De Resurse)\n"
-#~ "\n"
-
-#~ msgctxt "@label:textbox"
-#~ msgid ""
-#~ "Copyright 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Drept de autor (c) 1999 Martin R. Jones <email>mjones@kde.org</email>\n"
-#~ "\n"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Original Author: Martin R. Jones <email>mjones@kde.org</email>\n"
-#~ msgstr "Autor original: Martin R. Jones <email>mjones@kde.org</email>\n"
-
-#~ msgctxt "@label:textbox"
-#~ msgid ""
-#~ "Current Maintainer: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
-#~ "email>\n"
-#~ msgstr ""
-#~ "Responsabil actual: Gerardo Puga <email>gpuga@gioia.ing.unlp.edu.ar</"
-#~ "email>\n"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "About Amor"
-#~ msgstr "Despre Amor"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Claudiu Costin,Sergiu Bivol"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr ",sergiu@ase.md"
