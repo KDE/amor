@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+<!ENTITY % Slovenian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>&amor; man Stran</title>
+<date
+>09.10.2021</date>
+<releaseinfo
+>(KDE Gear 21.08)</releaseinfo>
+<productname
+>&amor; 2.4.0</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>amor</command
+></refentrytitle>
+<manvolnum
+>6</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>amor</command
+></refname>
+<refpurpose
+>Bitje za vašo &plasma; namizje</refpurpose>
+</refnamediv>
+
+<refsect1 id="description">
+<title
+>Opis</title>
+
+<para
+><acronym
+>AMOR</acronym
+> pomeni <quote
+>Zabavna zloraba virov</quote
+>. Zagotavlja več različnih likov, ki skačejo po vašem zaslonu X, izvajajo trike in vam dajejo nasvete.</para>
+
+</refsect1>
+
+
+<refsect1 id="options">
+<title
+>Možnosti</title>
+
+<para
+>&amor; je konfiguriran grafično in nima drugih možnosti ukazne vrstice razen standardnega &kde; in &Qt; možnosti.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Poglejte tudi</title>
+
+<para
+>Podrobnejša uporabniška dokumentacija je na voljo na <ulink url="help:/amor"
+>help:/amor</ulink
+> (vnesite ta &URL; v &konqueror; ali zaženite <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/amor</parameter
+></userinput
+>).</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Napake</title>
+
+<para
+>&amor; trenutno deluje samo z &kwin; upravitelj oken.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Avtorji</title>
+<para
+>&amor; je napisal &Martin.R.Jones; &Martin.R.Jones.mail;.</para>
+<para
+>Ta man priročnik je pripravil <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+> za &Debian; &GNU;/&Linux; sistem (vendar ga lahko uporabljajo drugi).</para>
+</refsect1>
+
+</refentry>
