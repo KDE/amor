@@ -187,7 +187,7 @@ msgstr "&Ajuda"
 #, kde-format
 msgctxt "@action:inmenu Amor"
 msgid "&Configure..."
-msgstr "&Configura..."
+msgstr "&Configura…"
 
 #: src/amor.cpp:526
 #, kde-format
